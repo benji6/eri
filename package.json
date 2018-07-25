@@ -4,7 +4,7 @@
   "description": "A minimal design system",
   "main": "dist",
   "scripts": {
-    "build": "parcel build docs/index.html",
+    "build": "rm -rf dist && parcel build src/index.ts --no-source-maps",
     "format": "prettier --write \"src/**/*.ts*\"",
     "format:check": "prettier --list-different \"src/**/*.ts*\"",
     "start": "parcel docs/index.html",
