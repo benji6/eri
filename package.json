@@ -4,6 +4,7 @@
   "description": "A minimal design system",
   "main": "dist",
   "scripts": {
+    "build": "parcel build docs/index.html",
     "format": "prettier --write \"src/**/*.ts*\"",
     "format:check": "prettier --list-different \"src/**/*.ts*\"",
     "start": "parcel docs/index.html",
