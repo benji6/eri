@@ -1,0 +1,24 @@
+.spinner {
+  --diameter: var(--e-space-5);
+
+  animation: e-rotate var(--e-time-1) infinite linear;
+  border: calc(var(--diameter) / 6) solid var(--e-color-accent);
+  border-right-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: var(--diameter);
+  width: var(--diameter);
+}
+
+.spinner--ground {
+  border-color: var(--e-color-ground);
+  border-right-color: transparent;
+}
+
+.spinner--page {
+  --diameter: var(--e-space-7);
+
+  display: flex;
+  margin: var(--diameter) auto;
+}

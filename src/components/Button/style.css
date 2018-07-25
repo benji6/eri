@@ -1,0 +1,33 @@
+.button {
+  border-radius: var(--e-space-0);
+  border: none;
+  color: var(--e-color-ground);
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  outline: 0;
+  padding: var(--e-space-3) var(--e-space-4);
+  transition: background-color var(--e-time-0) var(--e-transition);
+  width: 100%;
+  margin-bottom: var(--e-space-4);
+}
+
+.button--primary {
+  background: var(--e-color-accent);
+}
+
+.button--primary:focus {
+  background: var(--e-color-accent-dark);
+}
+
+.button--primary:hover:not(:disabled) {
+  background: var(--e-color-accent-light);
+}
+
+.button--primary:active {
+  background: var(--e-color-accent-dark);
+}
+
+.button--primary:disabled {
+  padding: .575rem 0;
+}

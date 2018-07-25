@@ -1,17 +1,16 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Page } from '../src'
+import { Button, Spinner } from '../src'
 import Color from './components/Color'
 import Space from './components/Space'
 import Time from './components/Time'
 import Transition from './components/Transition'
-import '../src/vars.css' // DELETEME
 import './style.css'
 
 class App extends React.PureComponent {
   render() {
     return (
-      <Page>
+      <div>
         <h1>Eri</h1>
         <p>A minimal design system.</p>
         <h2>Principles</h2>
@@ -25,6 +24,10 @@ class App extends React.PureComponent {
           <li>
             Accessible - semantic markup, aria attributes, sensible contrast,
             resolution agnostic.
+          </li>
+          <li>
+            Thoughtless - Eri doesn't care about changing global styles because
+            she doesn't have to.
           </li>
         </ul>
         <h2>Space</h2>
@@ -82,16 +85,27 @@ class App extends React.PureComponent {
         <h1>{'<h1>Test</h1>'}</h1>
         <h2>{'<h2>Test</h2>'}</h2>
         <h3>{'<h3>Test</h3>'}</h3>
-        <h4>{'<h4>Test</h4>'}</h4>
         <p>{'<p>Test</p>'}</p>
         <h2>Components</h2>
-        <h3>Page</h3>
+        <h3>Spinner</h3>
+        <Spinner />
+        <Spinner variation="ground" />
+        <Spinner variation="page" />
+        <h3>Button</h3>
+        <p>Buttons are cute little things you press.</p>
         <p>
-          Eri is designed to work for the whole app, so every Eri app must be
-          wrapped in the Page component which will style the native typographic
-          elements for free.
+          This button will only ever be disabled while the app is waiting for
+          something to happen and will display a little spinner to let the user
+          know it's thinking.
         </p>
-      </Page>
+        <p>
+          Remember to wrap your buttons in ButtonGroup - even if there's only
+          one! Buttons feel cozy in ButtonGroup and fit nicely in the right
+          place!
+        </p>
+        <Button>Click me!</Button>
+        <Button disabled>Click me!</Button>
+      </div>
     )
   }
 }
