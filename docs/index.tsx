@@ -13,7 +13,7 @@ class App extends React.PureComponent {
     return (
       <Page>
         <h1>Eri</h1>
-        <p>A minimal design system</p>
+        <p>A minimal design system.</p>
         <h2>Principles</h2>
         <ul>
           <li>Minimal - nothing superfluous, less is more.</li>
@@ -76,8 +76,20 @@ class App extends React.PureComponent {
         <Color varName="--e-color-negative" />
         <h2>Typography</h2>
         <p>
-          No fonts &amp; no extra page weight. Eri is uses system fonts so it
-          becomes part of its environment.
+          No downloaded fonts means no extra page weight. Eri uses system fonts
+          and fits into a person's environment.
+        </p>
+        <h1>{'<h1>Test</h1>'}</h1>
+        <h2>{'<h2>Test</h2>'}</h2>
+        <h3>{'<h3>Test</h3>'}</h3>
+        <h4>{'<h4>Test</h4>'}</h4>
+        <p>{'<p>Test</p>'}</p>
+        <h2>Components</h2>
+        <h3>Page</h3>
+        <p>
+          Eri is designed to work for the whole app, so every Eri app must be
+          wrapped in the Page component which will style the native typographic
+          elements for free.
         </p>
       </Page>
     )
