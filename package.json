@@ -27,6 +27,7 @@
     "prettier": "^1.13.7",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "semantic-release": "^15.8.1",
     "typescript": "^2.9.2"
   },
   "peerDependencies": {
