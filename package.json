@@ -1,0 +1,35 @@
+{
+  "name": "eri",
+  "version": "0.0.0",
+  "description": "A minimal design system",
+  "main": "dist",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts*\"",
+    "format:check": "prettier --list-different \"src/**/*.ts*\"",
+    "start": "parcel docs/index.html",
+    "test": "npm run format:check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benji6/eri.git"
+  },
+  "author": "benji6",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benji6/eri/issues"
+  },
+  "homepage": "https://github.com/benji6/eri#readme",
+  "devDependencies": {
+    "@types/react": "^16.4.7",
+    "@types/react-dom": "^16.0.6",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.13.7",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "typescript": "^2.9.2"
+  },
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}

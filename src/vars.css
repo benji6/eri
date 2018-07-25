@@ -1,0 +1,24 @@
+:root {
+  --e-color-accent: #228be6;
+  --e-color-accent-dark: #1c7ed6;
+  --e-color-accent-light: #339af0;
+  --e-color-balance: #868e96;
+  --e-color-balance-dark: #495057;
+  --e-color-balance-light: #adb5bd;
+  --e-color-figure: #212529;
+  --e-color-ground: #f8f9fa;
+  --e-color-ground-dark: #f1f3f5;
+  --e-color-ground-light: #ffffff;
+  --e-color-negative: #fa5252;
+  --e-space-0: .15rem;
+  --e-space-1: .25rem;
+  --e-space-2: .5rem;
+  --e-space-3: .75rem;
+  --e-space-4: 1rem;
+  --e-space-5: 1.5rem;
+  --e-space-6: 2rem;
+  --e-space-7: 4rem;
+  --e-time-0: .2s;
+  --e-time-1: .75s;
+  --e-transition: ease-in-out;
+}

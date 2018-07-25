@@ -1,0 +1,5 @@
+.e-page {
+  background: var(--e-color-ground);
+  color: var(--e-color-figure);
+  font-family: system-ui, sans-serif;
+}

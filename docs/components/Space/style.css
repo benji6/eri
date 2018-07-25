@@ -1,0 +1,4 @@
+.d-space__visual {
+  height: var(--e-space-5);
+  background: var(--e-color-figure);
+}

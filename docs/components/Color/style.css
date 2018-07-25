@@ -1,0 +1,13 @@
+.d-color {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16rem;
+}
+
+.d-color__visual {
+  border: var(--e-space-0) solid var(--e-color-figure);
+  border-radius: var(--e-space-0);
+  height: var(--e-space-7);
+  width: var(--e-space-7);
+}

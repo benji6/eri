@@ -1,0 +1,8 @@
+.d-time__visual {
+  animation-iteration-count: infinite;
+  animation-name: d-rotate;
+  animation-timing-function: linear;
+  background: var(--e-color-figure);
+  height: var(--e-space-4);
+  width: var(--e-space-7);
+}
