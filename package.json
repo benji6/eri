@@ -4,7 +4,7 @@
   "description": "A minimal design system",
   "main": "dist",
   "scripts": {
-    "build": "rm -rf dist && tsc",
+    "build": "rm -rf dist && parcel build src/index.ts --no-source-maps && tsc",
     "format:check": "prettier --list-different \"src/**/*.ts*\"",
     "start": "parcel docs/index.html",
     "test": "run-p test:*",
