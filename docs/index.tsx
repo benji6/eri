@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Button, Main, Spinner } from '../src'
+import { Button, Main, Spinner, TextField } from '../src'
 import Color from './components/Color'
 import Space from './components/Space'
 import Time from './components/Time'
@@ -108,6 +108,10 @@ class App extends React.PureComponent {
         </p>
         <Button>Click me!</Button>
         <Button disabled>Click me!</Button>
+        <h3>TextField</h3>
+        <p>Type in me!</p>
+        <TextField label="Say something" />
+        <TextField error="Oops!" label="Say something" />
       </Main>
     )
   }
