@@ -4,3 +4,6 @@ deploy:
   skip_cleanup: true
   script:
     - npx semantic-release
+script:
+  - npm t
+  - npm run build
