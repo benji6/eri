@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Button, Spinner } from '../src'
+import { Button, Main, Spinner } from '../src'
 import Color from './components/Color'
 import Space from './components/Space'
 import Time from './components/Time'
@@ -10,7 +10,7 @@ import './style.css'
 class App extends React.PureComponent {
   render() {
     return (
-      <div>
+      <Main>
         <h1>Eri</h1>
         <p>A minimal design system.</p>
         <h2>Principles</h2>
@@ -87,7 +87,10 @@ class App extends React.PureComponent {
         <h3>{'<h3>Test</h3>'}</h3>
         <p>{'<p>Test</p>'}</p>
         <h2>Components</h2>
+        <h3>Main</h3>
+        <p>You're already looking at Main - it's wrapping this whole page!</p>
         <h3>Spinner</h3>
+        <p>Round and round and round we go.</p>
         <Spinner />
         <Spinner variation="ground" />
         <Spinner variation="page" />
@@ -105,7 +108,7 @@ class App extends React.PureComponent {
         </p>
         <Button>Click me!</Button>
         <Button disabled>Click me!</Button>
-      </div>
+      </Main>
     )
   }
 }

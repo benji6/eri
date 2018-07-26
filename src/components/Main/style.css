@@ -1,0 +1,10 @@
+.e-main {
+  margin: 0 auto;
+  max-width: 50rem;
+}
+
+@media (min-width: 650px) {
+  .e-main {
+    margin-top: var(--e-space-7);
+  }
+}

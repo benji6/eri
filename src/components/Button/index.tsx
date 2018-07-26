@@ -6,7 +6,7 @@ import './style.css'
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 class Button extends React.PureComponent<IProps> {
-  render(): React.ReactNode {
+  render() {
     const { children, disabled, type = 'submit', ...rest } = this.props
 
     return (
