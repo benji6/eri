@@ -1,4 +1,4 @@
-.button {
+.e-button {
   border-radius: var(--e-space-0);
   border: none;
   color: var(--e-color-ground);
@@ -12,22 +12,22 @@
   margin-bottom: var(--e-space-4);
 }
 
-.button--primary {
+.e-button--primary {
   background: var(--e-color-accent);
 }
 
-.button--primary:focus {
+.e-button--primary:focus {
   background: var(--e-color-accent-dark);
 }
 
-.button--primary:hover:not(:disabled) {
+.e-button--primary:hover:not(:disabled) {
   background: var(--e-color-accent-light);
 }
 
-.button--primary:active {
+.e-button--primary:active {
   background: var(--e-color-accent-dark);
 }
 
-.button--primary:disabled {
+.e-button--primary:disabled {
   padding: .575rem 0;
 }

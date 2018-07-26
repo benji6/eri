@@ -12,7 +12,7 @@ class Button extends React.PureComponent<IProps> {
     return (
       <button
         {...rest}
-        className="button button--primary"
+        className="e-button e-button--primary"
         disabled={disabled}
         type={type}
       >

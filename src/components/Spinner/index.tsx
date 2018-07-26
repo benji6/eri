@@ -10,9 +10,9 @@ class Spinner extends React.PureComponent<IProps> {
   render() {
     const { variation, ...rest } = this.props
 
-    const className = classnames('spinner', {
-      'spinner--ground': variation === 'ground',
-      'spinner--page': variation === 'page',
+    const className = classnames('e-spinner', {
+      'e-spinner--ground': variation === 'ground',
+      'e-spinner--page': variation === 'page',
     })
 
     return <span {...rest} className={className} />
