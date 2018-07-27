@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "A minimal design system",
   "main": "dist",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && parcel build src/index.ts --no-source-maps && tsc && BABEL_ENV=css babel dist --out-dir dist && dts-bundle dist/index.d.ts --main dist/index.d.ts --name eri && node scripts/removeCssImports",
     "format:check": "prettier --list-different \"src/**/*.ts*\"",
