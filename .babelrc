@@ -1,5 +1,9 @@
 {
-  "plugins": [["babel-plugin-transform-require-ignore", {
-    "extensions": [".css"]
-  }]]
+  "env": {
+    "css": {
+      "plugins": [["babel-plugin-transform-require-ignore", {
+        "extensions": [".css"]
+      }]]
+    }
+  }
 }
