@@ -6,3 +6,8 @@
     transform: rotate(360deg);
   }
 }
+
+/* The aXe plugin has issues if this is not here 🤷 */
+code {
+  background: var(--e-color-ground);
+}
