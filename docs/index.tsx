@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Button, Spinner, TextField } from '../src'
+import { Button, Select, Spinner, TextField } from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
 import Space from './components/Space'
@@ -131,6 +131,9 @@ class App extends React.PureComponent {
             <p>This is a form.</p>
             <TextField label="Text field" />
             <TextField error="Oops!" label="Text field error" />
+            <Select label="Select">
+              <option>hi</option>
+            </Select>
             <Button type="button">Submit</Button>
           </form>
         </main>

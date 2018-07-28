@@ -1,26 +1,26 @@
-.e-text-field {
+.e-select {
   display: flex;
   flex-direction: column;
   margin: var(--e-space-4) 0;
 }
 
-.e-text-field__input {
-  border-radius: var(--e-space-0);
+.e-select__input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   border: var(--e-space-0) solid var(--e-color-figure);
+  border-radius: var(--e-space-0);
+  cursor: pointer;
   font-size: inherit;
   outline: 0;
   padding: var(--e-space-2);
   transition: border-color var(--e-time-0) var(--e-transition);
 }
 
-.e-text-field__input:focus {
+.e-select__input:focus {
   border-color: var(--e-color-accent-more);
 }
 
-.e-text-field__input:hover {
+.e-select__input:hover {
   border-color: var(--e-color-accent-less);
-}
-
-.e-text-field__input[aria-invalid="true"] {
-  border-color: var(--e-color-negative);
 }
