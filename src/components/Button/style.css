@@ -3,13 +3,13 @@
   border: none;
   color: var(--e-color-ground);
   cursor: pointer;
-  display: inline-block;
+  display: block;
   font-size: inherit;
   outline: 0;
   padding: var(--e-space-3) var(--e-space-4);
   transition: background-color var(--e-time-0) var(--e-transition);
   width: 100%;
-  margin: var(--e-space-2) 0;
+  margin: var(--e-space-4) 0;
 }
 
 .e-button--primary {
