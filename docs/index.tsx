@@ -132,7 +132,12 @@ class App extends React.PureComponent {
             <TextField label="Text field" />
             <TextField error="Oops!" label="Text field error" />
             <Select label="Select">
-              <option>hi</option>
+              <option hidden>Please select</option>
+              <option>An option</option>
+            </Select>
+            <Select error="Oops!" label="Select">
+              <option hidden>Please select</option>
+              <option>An option</option>
             </Select>
             <Button type="button">Submit</Button>
           </form>

@@ -24,3 +24,7 @@
 .e-select__input:hover {
   border-color: var(--e-color-accent-less);
 }
+
+.e-select__input[aria-invalid="true"] {
+  border-color: var(--e-color-negative);
+}
