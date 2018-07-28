@@ -124,10 +124,14 @@ class App extends React.PureComponent {
           <h3>Link</h3>
           <p>Links take you places.</p>
           <a href="#">Click me!</a>
-          <h3>TextField</h3>
-          <p>Type in me!</p>
-          <TextField label="Say something" />
-          <TextField error="Oops!" label="Say something" />
+          <br />
+          <br />
+          <form>
+            <h3>Form</h3>
+            <p>This is a form.</p>
+            <TextField label="Text field" />
+            <TextField error="Oops!" label="Text field error" />
+          </form>
         </main>
       </>
     )

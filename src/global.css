@@ -29,6 +29,14 @@ main {
   padding: 0 var(--e-space-3);
 }
 
+@media (min-width: 651px) {
+  form {
+    border-radius: var(--e-space-1);
+    box-shadow: 0 0 var(--e-space-2) var(--e-color-figure);
+    padding: var(--e-space-2) var(--e-space-5) var(--e-space-5);
+  }
+}
+
 h1 {
   font-size: var(--e-space-7);
   font-weight: var(--e-heading-font-weight);
