@@ -29,5 +29,6 @@
 }
 
 .e-button--primary:disabled {
+  cursor: not-allowed;
   padding: .725rem 0;
 }
