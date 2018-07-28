@@ -2,6 +2,7 @@ body {
   background: var(--e-color-ground);
   color: var(--e-color-figure);
   font-family: system-ui, sans-serif;
+  font-size: var(--e-space-4);
   margin: 0;
 }
 
@@ -25,7 +26,6 @@ h3 {
 }
 
 p {
-  font-size: var(--e-space-4);
   margin: var(--e-space-2) 0;
 }
 
