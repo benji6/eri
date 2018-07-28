@@ -6,6 +6,16 @@ body {
   margin: 0;
 }
 
+header {
+  background: var(--e-color-figure);
+  color: var(--e-color-ground);
+  padding: var(--e-space-2) 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
 main {
   margin: 0 auto;
   max-width: 50rem;
