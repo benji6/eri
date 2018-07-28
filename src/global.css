@@ -6,6 +6,17 @@ body {
   margin: 0;
 }
 
+main {
+  margin: 0 auto;
+  max-width: 50rem;
+}
+
+@media (min-width: 650px) {
+  main {
+    margin-top: var(--e-space-7);
+  }
+}
+
 h1 {
   font-size: var(--e-space-7);
   font-weight: var(--e-heading-font-weight);
@@ -29,24 +40,24 @@ p {
   margin: var(--e-space-2) 0;
 }
 
-a {
+main a {
   color: var(--e-color-accent);
   outline: 0;
   text-decoration: none;
   transition: color var(--e-time-0) var(--e-transition);
 }
 
-a:focus {
+main a:focus {
   color: var(--e-color-accent-dark);
   text-decoration: underline;
 }
 
-a:hover {
+main a:hover {
   color: var(--e-color-accent-light);
   text-decoration: underline;
 }
 
-a:active {
+main a:active {
   color: var(--e-color-accent-dark);
   text-decoration: underline;
 }
