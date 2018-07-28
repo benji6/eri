@@ -9,7 +9,7 @@
   padding: var(--e-space-3) var(--e-space-4);
   transition: background-color var(--e-time-0) var(--e-transition);
   width: 100%;
-  margin-bottom: var(--e-space-4);
+  margin: var(--e-space-2) 0;
 }
 
 .e-button--primary {
