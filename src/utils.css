@@ -3,3 +3,7 @@
     transform: rotate(360deg);
   }
 }
+
+[e-util="center"] {
+  text-align: center;
+}

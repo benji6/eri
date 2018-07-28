@@ -25,28 +25,29 @@ class App extends React.PureComponent {
           <h1>Eri</h1>
         </header>
         <main>
-          <p>A minimal design system.</p>
+          <p e-util="center">A minimal design system.</p>
           <h2>Principles</h2>
           <ul>
-            <li>Minimal - nothing superfluous, less is more.</li>
-            <li>Simple - small and intuitive API surface.</li>
             <li>
-              Performant - no bloat, no unnecessary dependencies, fast render
-              performance.
+              Simple - nothing superfluous, small and intuitive API, less is
+              more.
+            </li>
+            <li>
+              Performant - no bloat, no unnecessary dependencies, fast render.
             </li>
             <li>
               Accessible - semantic markup, aria attributes, sensible contrast,
               resolution agnostic.
             </li>
             <li>
-              Thoughtless - Eri doesn't care about changing global styles
-              because she doesn't have to.
+              Specialized - Eri was created for my personal projects so she's
+              got free reign on breaking design system best practices.
             </li>
           </ul>
           <h2>Space</h2>
           <p>
-            Space is the final frontier, but this is where our journey begins -
-            how can we move anywhere if we don't first have space to move in?
+            Space, the final frontier... This is how our journey begins. Without
+            there is nowhere.
           </p>
           <Space varName="--e-space-0" />
           <Space varName="--e-space-1" />
@@ -112,11 +113,6 @@ class App extends React.PureComponent {
             This button will only ever be disabled while the app is waiting for
             something to happen and will display a little spinner to let the
             user know it's thinking.
-          </p>
-          <p>
-            Remember to wrap your buttons in ButtonGroup - even if there's only
-            one! Buttons feel cozy in ButtonGroup and fit nicely in the right
-            place!
           </p>
           <Button>Click me!</Button>
           <Button disabled>Click me!</Button>
