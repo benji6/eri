@@ -131,6 +131,7 @@ class App extends React.PureComponent {
             <p>This is a form.</p>
             <TextField label="Text field" />
             <TextField error="Oops!" label="Text field error" />
+            <Button type="button">Submit</Button>
           </form>
         </main>
       </>

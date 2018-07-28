@@ -29,6 +29,11 @@ main {
   padding: 0 var(--e-space-3);
 }
 
+form {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
 @media (min-width: 651px) {
   form {
     border-radius: var(--e-space-1);
