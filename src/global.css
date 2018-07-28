@@ -28,3 +28,25 @@ p {
   font-size: var(--e-space-4);
   margin: var(--e-space-2) 0;
 }
+
+a {
+  color: var(--e-color-accent);
+  outline: 0;
+  text-decoration: none;
+  transition: color var(--e-time-0) var(--e-transition);
+}
+
+a:focus {
+  color: var(--e-color-accent-dark);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--e-color-accent-light);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--e-color-accent-dark);
+  text-decoration: underline;
+}

@@ -108,6 +108,9 @@ class App extends React.PureComponent {
         </p>
         <Button>Click me!</Button>
         <Button disabled>Click me!</Button>
+        <h3>Link</h3>
+        <p>Links take you places.</p>
+        <a href="#">Click me!</a>
         <h3>TextField</h3>
         <p>Type in me!</p>
         <TextField label="Say something" />
