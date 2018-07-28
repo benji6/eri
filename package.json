@@ -5,8 +5,8 @@
   "main": "dist",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && parcel build src/index.ts --no-source-maps && tsc && BABEL_ENV=css babel dist --out-dir dist && node scripts/removeCssImports",
-    "build:style-guide": "parcel build docs/index.html -d build",
+    "build": "rm -rf dist && parcel build src/index.ts --no-minify --no-source-maps && tsc && BABEL_ENV=css babel dist --out-dir dist && node scripts/removeCssImports",
+    "build:style-guide": "rm -rf build && parcel build docs/index.html -d build --no-source-maps",
     "format:check": "prettier --list-different \"src/**/*.ts*\"",
     "start": "parcel docs/index.html",
     "test": "run-p test:*",
