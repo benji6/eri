@@ -8,6 +8,16 @@ import Transition from './components/Transition'
 import './style.css'
 
 class App extends React.PureComponent {
+  switchToDayTheme = () => {
+    document.documentElement.classList.remove('e-theme-night')
+    this.forceUpdate()
+  }
+
+  switchToNightTheme = () => {
+    document.documentElement.classList.add('e-theme-night')
+    this.forceUpdate()
+  }
+
   render() {
     return (
       <>
@@ -62,22 +72,23 @@ class App extends React.PureComponent {
             &quot;Black then white are all I see In my infancy. Red and yellow
             then came to be, Reaching out to me, Lets me see.&quot; - Tool
           </p>
-          <h3>Ground</h3>
-          <div>
-            <Color varName="--e-color-ground-light" />
-            <Color varName="--e-color-ground" />
-            <Color varName="--e-color-ground-dark" />
-          </div>
-          <h3>Figure</h3>
+          <h3>Night &amp; day</h3>
+          <p>
+            For the night theme just add the class <code>e-theme-night</code>.
+          </p>
+          <Button onClick={this.switchToNightTheme}>Night</Button>
+          <Button onClick={this.switchToDayTheme}>Day</Button>
+          <h3>Figure &amp; ground</h3>
           <Color varName="--e-color-figure" />
+          <Color varName="--e-color-ground" />
           <h3>Balance</h3>
-          <Color varName="--e-color-balance-light" />
+          <Color varName="--e-color-balance-less" />
           <Color varName="--e-color-balance" />
-          <Color varName="--e-color-balance-dark" />
+          <Color varName="--e-color-balance-more" />
           <h3>Accent</h3>
-          <Color varName="--e-color-accent-light" />
+          <Color varName="--e-color-accent-less" />
           <Color varName="--e-color-accent" />
-          <Color varName="--e-color-accent-dark" />
+          <Color varName="--e-color-accent-more" />
           <h3>Negative</h3>
           <Color varName="--e-color-negative" />
           <h2>Typography</h2>

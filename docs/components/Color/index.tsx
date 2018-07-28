@@ -5,26 +5,24 @@ import './style.css'
 interface IProps {
   varName:
     | '--e-color-accent'
-    | '--e-color-accent-dark'
-    | '--e-color-accent-light'
+    | '--e-color-accent-more'
+    | '--e-color-accent-less'
     | '--e-color-balance'
-    | '--e-color-balance-dark'
-    | '--e-color-balance-light'
+    | '--e-color-balance-more'
+    | '--e-color-balance-less'
     | '--e-color-figure'
     | '--e-color-ground'
-    | '--e-color-ground-dark'
-    | '--e-color-ground-light'
     | '--e-color-negative'
 }
 
-class Color extends React.PureComponent<IProps> {
+class Color extends React.Component<IProps> {
   render() {
     const { varName } = this.props
     const color = getStylePropValue(varName)
 
     return (
       <div className="d-color">
-        <div className="d-color__visual" style={{ backgroundColor: color }} />
+        <div className="d-color__visual" style={{ background: color }} />
         <pre>
           <code>
             {varName}: {color};

@@ -4,12 +4,19 @@ body {
   font-family: system-ui, sans-serif;
   font-size: var(--e-space-4);
   margin: 0;
+  transition-duration: var(--e-time-0);
+  transition-property: background, color;
+  transition-timing-function: var(--e-transition);
 }
 
 header {
   background: var(--e-color-figure);
   color: var(--e-color-ground);
+  margin-bottom: var(--e-space-6);
   padding: var(--e-space-2) 0;
+  transition-duration: var(--e-time-0);
+  transition-property: background, color;
+  transition-timing-function: var(--e-transition);
 }
 
 header h1 {
@@ -18,13 +25,8 @@ header h1 {
 
 main {
   margin: 0 auto;
-  max-width: 50rem;
-}
-
-@media (min-width: 650px) {
-  main {
-    margin-top: var(--e-space-7);
-  }
+  max-width: 52rem;
+  padding: 0 var(--e-space-3);
 }
 
 h1 {
@@ -43,7 +45,7 @@ h2 {
 h3 {
   font-size: var(--e-space-5);
   font-weight: var(--e-heading-font-weight);
-  margin: var(--e-space-4) 0 var(--e-space-3);
+  margin: var(--e-space-4) 0;
 }
 
 p {
@@ -58,16 +60,16 @@ main a {
 }
 
 main a:focus {
-  color: var(--e-color-accent-dark);
+  color: var(--e-color-accent-more);
   text-decoration: underline;
 }
 
 main a:hover {
-  color: var(--e-color-accent-light);
+  color: var(--e-color-accent-less);
   text-decoration: underline;
 }
 
 main a:active {
-  color: var(--e-color-accent-dark);
+  color: var(--e-color-accent-more);
   text-decoration: underline;
 }

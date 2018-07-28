@@ -10,4 +10,5 @@
 /* The aXe plugin has issues if this is not here 🤷 */
 code {
   background: var(--e-color-ground);
+  transition: background var(--e-time-0) var(--e-transition);
 }

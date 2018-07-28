@@ -2,12 +2,13 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  width: 16rem;
+  width: 17rem;
 }
 
 .d-color__visual {
   border: var(--e-space-0) solid var(--e-color-figure);
   border-radius: var(--e-space-0);
   height: var(--e-space-7);
+  transition: background var(--e-time-0) var(--e-transition);
   width: var(--e-space-7);
 }
