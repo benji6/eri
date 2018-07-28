@@ -1,7 +1,8 @@
 .d-color {
+  align-items: center;
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
+  margin: var(--e-space-1) 0;
   width: 17rem;
 }
 

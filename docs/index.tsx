@@ -2,6 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { Button, Spinner, TextField } from '../src'
 import Color from './components/Color'
+import ColorGroup from './components/ColorGroup'
 import Space from './components/Space'
 import Time from './components/Time'
 import Transition from './components/Transition'
@@ -79,19 +80,23 @@ class App extends React.PureComponent {
           </p>
           <Button onClick={this.switchToNightTheme}>Night</Button>
           <Button onClick={this.switchToDayTheme}>Day</Button>
-          <h3>Figure &amp; ground</h3>
-          <Color varName="--e-color-figure" />
-          <Color varName="--e-color-ground" />
-          <h3>Balance</h3>
-          <Color varName="--e-color-balance-less" />
-          <Color varName="--e-color-balance" />
-          <Color varName="--e-color-balance-more" />
-          <h3>Accent</h3>
-          <Color varName="--e-color-accent-less" />
-          <Color varName="--e-color-accent" />
-          <Color varName="--e-color-accent-more" />
-          <h3>Negative</h3>
-          <Color varName="--e-color-negative" />
+          <ColorGroup name="Figure &amp; ground">
+            <Color varName="--e-color-figure" />
+            <Color varName="--e-color-ground" />
+          </ColorGroup>
+          <ColorGroup name="Balance">
+            <Color varName="--e-color-balance-less" />
+            <Color varName="--e-color-balance" />
+            <Color varName="--e-color-balance-more" />
+          </ColorGroup>
+          <ColorGroup name="Accent">
+            <Color varName="--e-color-accent-less" />
+            <Color varName="--e-color-accent" />
+            <Color varName="--e-color-accent-more" />
+          </ColorGroup>
+          <ColorGroup name="Negative">
+            <Color varName="--e-color-negative" />
+          </ColorGroup>
           <h2>Typography</h2>
           <p>
             No downloaded fonts means no extra page weight. Eri uses system
