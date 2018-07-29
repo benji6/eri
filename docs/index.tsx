@@ -9,13 +9,13 @@ import Transition from './components/Transition'
 import './style.css'
 
 class App extends React.PureComponent {
-  switchToDayTheme = () => {
-    document.documentElement.classList.remove('e-theme-night')
+  switchToDarkTheme = () => {
+    document.documentElement.classList.add('e-theme-dark')
     this.forceUpdate()
   }
 
-  switchToNightTheme = () => {
-    document.documentElement.classList.add('e-theme-night')
+  switchToLightTheme = () => {
+    document.documentElement.classList.remove('e-theme-dark')
     this.forceUpdate()
   }
 
@@ -75,12 +75,12 @@ class App extends React.PureComponent {
             &quot;Black then white are all I see In my infancy. Red and yellow
             then came to be, Reaching out to me, Lets me see.&quot; - Tool
           </p>
-          <h3>Night &amp; day</h3>
+          <h3>Light &amp; dark</h3>
           <p>
-            For the night theme just add the class <code>e-theme-night</code>.
+            For the dark theme just add the class <code>e-theme-dark</code>.
           </p>
-          <Button onClick={this.switchToNightTheme}>Night</Button>
-          <Button onClick={this.switchToDayTheme}>Day</Button>
+          <Button onClick={this.switchToDarkTheme}>Dark</Button>
+          <Button onClick={this.switchToLightTheme}>Light</Button>
           <ColorGroup name="Figure &amp; ground">
             <Color varName="--e-color-figure" />
             <Color varName="--e-color-ground" />
