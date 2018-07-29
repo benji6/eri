@@ -38,11 +38,12 @@ class App extends React.PureComponent {
             </li>
             <li>
               Accessible - semantic markup, aria attributes, sensible contrast,
-              looks and feels great for everyone on all devices.
+              Eri should look and feel great for everyone on all devices.
             </li>
             <li>
-              Specialized - Eri was created for my personal projects so she's
-              got free reign on breaking design system best practices.
+              Bespoke - Eri was created for my personal projects so she's got
+              free reign on breaking design system best practices and doesn't
+              have to worry about legacy browsers.
             </li>
           </ul>
           <h2>Space</h2>
