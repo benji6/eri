@@ -5,8 +5,10 @@
 }
 
 .e-text-field__input {
+  background: var(--e-color-ground-more);
   border-radius: var(--e-space-0);
   border: var(--e-space-0) solid var(--e-color-figure);
+  color: inherit;
   font-size: inherit;
   outline: 0;
   padding: var(--e-space-2);

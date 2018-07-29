@@ -8,8 +8,10 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  background: var(--e-color-ground-more);
   border: var(--e-space-0) solid var(--e-color-figure);
   border-radius: var(--e-space-0);
+  color: inherit;
   cursor: pointer;
   font-size: inherit;
   outline: 0;
