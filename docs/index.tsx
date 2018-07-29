@@ -38,7 +38,7 @@ class App extends React.PureComponent {
             </li>
             <li>
               Accessible - semantic markup, aria attributes, sensible contrast,
-              looks and feels great on all devices.
+              looks and feels great for everyone on all devices.
             </li>
             <li>
               Specialized - Eri was created for my personal projects so she's
