@@ -107,6 +107,9 @@ class App extends React.PureComponent {
           <h2>{'<h2>Test</h2>'}</h2>
           <h3>{'<h3>Test</h3>'}</h3>
           <p>{'<p>Test</p>'}</p>
+          <p e-util="center">
+            You can center any text by setting the e-util attribute to "center"
+          </p>
           <h2>Components</h2>
           <h3>Spinner</h3>
           <p>Round and round and round we go.</p>
