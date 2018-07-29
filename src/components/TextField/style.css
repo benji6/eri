@@ -12,7 +12,9 @@
   font-size: inherit;
   outline: 0;
   padding: var(--e-space-2);
-  transition: border-color var(--e-time-0) var(--e-transition);
+  transition-duration: var(--e-time-0);
+  transition-property: background, border;
+  transition-timing-function: var(--e-transition);
 }
 
 .e-text-field__input:focus {
