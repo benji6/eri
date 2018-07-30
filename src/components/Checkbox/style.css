@@ -2,8 +2,6 @@
   --checkbox-size: var(--e-space-6);
   --checkbox-margin-right: var(--e-space-2);
 
-  display: flex;
-  flex-direction: column;
   margin: var(--e-space-4) 0;
   position: relative;
   width: 100%;
@@ -15,6 +13,7 @@
 
 .e-checkbox__label {
   cursor: pointer;
+  display: inline-flex;
 }
 
 .e-checkbox__input {
@@ -64,4 +63,9 @@
 
 .e-checkbox__input:checked ~ .e-checkbox__appearance {
   color: var(--e-color-figure);
+}
+
+.e-checkbox__label-copy {
+  align-items: center;
+  display: flex;
 }

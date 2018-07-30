@@ -21,7 +21,7 @@ class Checkbox extends React.PureComponent<IProps> {
             type="checkbox"
           />
           <span className="e-checkbox__appearance">✓</span>
-          {label}
+          <span className="e-checkbox__label-copy">{label}</span>
         </label>
         <FieldError>{error}</FieldError>
       </div>

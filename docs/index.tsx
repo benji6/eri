@@ -142,7 +142,7 @@ class App extends React.PureComponent {
               <option>An option</option>
             </Select>
             <Checkbox label="Checkbox" />
-            <Checkbox error="Oops!" label="Checkbox" />
+            <Checkbox error="Oops!" label="Checkbox with a long label so we can see how it overflows, let's go down the waterfall..." />
             <Button type="button">Submit</Button>
           </form>
         </main>
