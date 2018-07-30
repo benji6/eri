@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Button, Select, Spinner, TextField } from '../src'
+import { Button, Checkbox, Select, Spinner, TextField } from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
 import Space from './components/Space'
@@ -143,6 +143,8 @@ class App extends React.PureComponent {
               <option hidden>Please select</option>
               <option>An option</option>
             </Select>
+            <Checkbox label="Checkbox" />
+            <Checkbox error="Oops!" label="Checkbox" />
             <Button type="button">Submit</Button>
           </form>
         </main>

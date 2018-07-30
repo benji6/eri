@@ -13,16 +13,18 @@ class Select extends React.PureComponent<IProps> {
     const { error, label, ...rest } = this.props
 
     return (
-      <label className="e-select">
-        <FieldLabel>{label}</FieldLabel>
-        <select
-          aria-required
-          {...rest}
-          aria-invalid={Boolean(error)}
-          className="e-select__input"
-        />
+      <div className="e-select">
+        <label className="e-select__label">
+          <FieldLabel>{label}</FieldLabel>
+          <select
+            aria-required
+            {...rest}
+            aria-invalid={Boolean(error)}
+            className="e-select__input"
+          />
+        </label>
         <FieldError>{error}</FieldError>
-      </label>
+      </div>
     )
   }
 }

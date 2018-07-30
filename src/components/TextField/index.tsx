@@ -13,17 +13,19 @@ class TextField extends React.PureComponent<IProps> {
     const { label, error, ...rest } = this.props
 
     return (
-      <label className="e-text-field">
-        <FieldLabel>{label}</FieldLabel>
-        <input
-          aria-required
-          type="text"
-          {...rest}
-          aria-invalid={Boolean(error)}
-          className="e-text-field__input"
-        />
+      <div className="e-text-field">
+        <label className="e-text-field__label">
+          <FieldLabel>{label}</FieldLabel>
+          <input
+            aria-required
+            type="text"
+            {...rest}
+            aria-invalid={Boolean(error)}
+            className="e-text-field__input"
+          />
+        </label>
         <FieldError>{error}</FieldError>
-      </label>
+      </div>
     )
   }
 }
