@@ -12,7 +12,7 @@ body {
 header {
   background: var(--e-color-figure);
   color: var(--e-color-ground);
-  margin-bottom: var(--e-space-6);
+  margin-bottom: var(--e-space-5);
   padding: var(--e-space-2) 0;
   transition-duration: var(--e-time-0);
   transition-property: background, color;
