@@ -128,8 +128,6 @@ class App extends React.PureComponent {
           <h3>Link</h3>
           <p>Links take you places.</p>
           <a href="#">Click me!</a>
-          <br />
-          <br />
           <form>
             <h3>Form</h3>
             <p>This is a form.</p>
