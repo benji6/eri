@@ -21,12 +21,14 @@
   background: var(--e-color-accent);
 }
 
-.e-button--primary:focus {
-  background: var(--e-color-accent-more);
-}
+@media (min-width: 650px) {
+  .e-button--primary:focus {
+    background: var(--e-color-accent-more);
+  }
 
-.e-button--primary:hover:not(:disabled) {
-  background: var(--e-color-accent-less);
+  .e-button--primary:hover:not(:disabled) {
+    background: var(--e-color-accent-less);
+  }
 }
 
 .e-button--primary:active {
