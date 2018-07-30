@@ -49,7 +49,7 @@ class App extends React.PureComponent {
           <h2>Space</h2>
           <p>
             Space, the final frontier... This is how our journey begins. Without
-            there is nowhere.
+            space there is nowhere.
           </p>
           <Space varName="--e-space-0" />
           <Space varName="--e-space-1" />
