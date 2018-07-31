@@ -1,6 +1,6 @@
 .e-field-error {
   color: var(--e-color-negative);
-  font-size: var(--e-space-3);
+  font-size: var(--e-font-size-0);
   font-weight: initial;
   padding-top: var(--e-space-1);
 }

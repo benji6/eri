@@ -51,6 +51,17 @@ class App extends React.PureComponent {
             Space, the final frontier... This is how our journey begins. Without
             space there is nowhere.
           </p>
+          <h3>Font size</h3>
+          <p>
+            Fonts are sized based on a modular scale, because it's simple but
+            also conveys a sense of harmony.
+          </p>
+          <Space varName="--e-font-size-0" />
+          <Space varName="--e-font-size-1" />
+          <Space varName="--e-font-size-2" />
+          <Space varName="--e-font-size-3" />
+          <Space varName="--e-font-size-4" />
+          <h3>Space</h3>
           <Space varName="--e-space-0" />
           <Space varName="--e-space-1" />
           <Space varName="--e-space-2" />
@@ -144,7 +155,7 @@ class App extends React.PureComponent {
             <Checkbox label="Checkbox" />
             <Checkbox
               error="Oops!"
-              label="Checkbox with a long label so we can see how it overflows, let's go down the waterfall..."
+              label="Checkbox with a long label so we can see how it overflows, let's go down the waterfall"
             />
             <Button type="button">Submit</Button>
           </form>

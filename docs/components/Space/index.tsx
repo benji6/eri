@@ -4,6 +4,11 @@ import './style.css'
 
 interface IProps {
   varName:
+    | '--e-font-size-0'
+    | '--e-font-size-1'
+    | '--e-font-size-2'
+    | '--e-font-size-3'
+    | '--e-font-size-4'
     | '--e-space-0'
     | '--e-space-1'
     | '--e-space-2'
