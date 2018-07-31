@@ -22,6 +22,9 @@ class Transition extends React.PureComponent<IProps> {
             {varName}: {transition};
           </code>
         </pre>
+        <pre>
+          <code>animation-name: e-rotate;</code>
+        </pre>
       </div>
     )
   }

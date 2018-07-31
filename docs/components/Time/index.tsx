@@ -15,6 +15,9 @@ class Time extends React.PureComponent<IProps> {
       <div>
         <div className="d-time__visual" style={{ animationDuration: time }} />
         <pre>
+          <code>animation-name: e-rotate;</code>
+        </pre>
+        <pre>
           <code>
             {varName}: {time};
           </code>

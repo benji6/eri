@@ -1,6 +1,6 @@
 .d-time__visual {
   animation-iteration-count: infinite;
-  animation-name: d-rotate;
+  animation-name: e-rotate;
   animation-timing-function: linear;
   background: var(--e-color-figure);
   height: var(--e-space-4);
