@@ -114,10 +114,12 @@ class App extends React.PureComponent {
             No downloaded fonts means no extra page weight. Eri uses system
             fonts and fits into a person's environment.
           </p>
-          <h1>{'<h1>Test</h1>'}</h1>
-          <h2>{'<h2>Test</h2>'}</h2>
-          <h3>{'<h3>Test</h3>'}</h3>
-          <p>{'<p>Test</p>'}</p>
+          <h3>Examples</h3>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <p>Paragraph</p>
+          <h3>Centering text</h3>
           <p e-util="center">
             You can center any text by setting the e-util attribute to "center"
           </p>
