@@ -5,7 +5,7 @@
   cursor: pointer;
   display: block;
   font-size: inherit;
-  font-weight: bold;
+  font-weight: var(--e-font-bold);
   outline: 0;
   padding: var(--e-space-3) var(--e-space-4);
   transition: background-color var(--e-time-0) var(--e-transition);

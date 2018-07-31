@@ -1,4 +1,4 @@
 .e-field-label {
-  font-weight: bold;
+  font-weight: var(--e-font-bold);
   padding-bottom: var(--e-space-1);
 }
