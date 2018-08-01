@@ -7,6 +7,5 @@
   .e-button-group {
     border-top: var(--e-space-0) solid var(--e-color-balance);
     margin-top: var(--e-space-6);
-    padding-top: var(--e-space-4);
   }
 }
