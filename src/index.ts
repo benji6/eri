@@ -3,6 +3,7 @@ import './utils.css'
 import './global.css'
 
 export { default as Button } from './components/Button'
+export { default as ButtonGroup } from './components/ButtonGroup'
 export { default as Checkbox } from './components/Checkbox'
 export { default as TextField } from './components/TextField'
 export { default as Select } from './components/Select'

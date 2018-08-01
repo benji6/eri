@@ -1,6 +1,13 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { Button, Checkbox, Select, Spinner, TextField } from '../src'
+import {
+  Button,
+  ButtonGroup,
+  Checkbox,
+  Select,
+  Spinner,
+  TextField,
+} from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
 import Space from './components/Space'
@@ -53,8 +60,8 @@ class App extends React.PureComponent {
           </p>
           <h3>Font size</h3>
           <p>
-            Fonts are sized based on a modular scale, because it's simple but
-            also conveys a sense of harmony.
+            Fonts are sized based on a modular scale which keeps things simple
+            and conveys a sense of harmony.
           </p>
           <Space varName="--e-font-size-0" />
           <Space varName="--e-font-size-1" />
@@ -159,7 +166,9 @@ class App extends React.PureComponent {
               error="Oops!"
               label="Checkbox with a long label so we can see how it overflows, let's go down the waterfall"
             />
-            <Button type="button">Submit</Button>
+            <ButtonGroup>
+              <Button type="button">Submit</Button>
+            </ButtonGroup>
           </form>
         </main>
       </>
