@@ -21,7 +21,7 @@
   background: var(--e-color-accent);
 }
 
-@media (min-width: 650px) {
+@media (min-width: 651px) {
   .e-button--primary:focus {
     background: var(--e-color-accent-more);
   }

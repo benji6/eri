@@ -13,7 +13,13 @@
 
 .e-checkbox__label {
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
+}
+
+@media (min-width: 651px) {
+  .e-checkbox__label {
+    display: inline-flex;
+  }
 }
 
 .e-checkbox__input {
