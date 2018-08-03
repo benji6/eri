@@ -11,29 +11,6 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background: var(--e-color-ground-more);
-  border: var(--e-space-0) solid var(--e-color-figure);
-  border-radius: var(--e-space-0);
-  color: inherit;
   cursor: pointer;
-  font-size: inherit;
-  outline: 0;
   padding: var(--e-space-2);
-  transition-duration: var(--e-time-0);
-  transition-property: background, border;
-  transition-timing-function: var(--e-transition);
-}
-
-.e-select__input:focus {
-  border-color: var(--e-color-accent);
-  box-shadow: var(--e-input-box-shadow-focus);
-}
-
-.e-select__input:hover {
-  border-color: var(--e-color-accent-less);
-}
-
-.e-select__input[aria-invalid="true"] {
-  border-color: var(--e-color-negative);
-  box-shadow: none;
 }

@@ -20,7 +20,7 @@ class TextField extends React.PureComponent<IProps> {
             required
             {...rest}
             aria-invalid={Boolean(error)}
-            className="e-text-field__input"
+            className="e-input e-text-field__input"
           />
         </label>
         <FieldError>{error}</FieldError>

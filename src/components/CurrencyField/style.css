@@ -25,28 +25,5 @@
 }
 
 .e-currency-field__input {
-  background: var(--e-color-ground-more);
-  border: var(--e-space-0) solid var(--e-color-figure);
-  border-radius: var(--e-space-0);
-  color: inherit;
-  font-size: inherit;
-  outline: none;
   padding: var(--e-space-2) 0 var(--e-space-2) 1.75rem;
-  transition-duration: var(--e-time-0);
-  transition-property: background, border;
-  transition-timing-function: var(--e-transition);
-}
-
-.e-currency-field__input:focus {
-  border-color: var(--e-color-accent-less);
-  box-shadow: var(--e-input-box-shadow-focus);
-}
-
-.e-currency-field__input:hover {
-  border-color: var(--e-color-accent-less);
-}
-
-.e-currency-field__input[aria-invalid="true"] {
-  border-color: var(--e-color-negative);
-  box-shadow: none;
 }

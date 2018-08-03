@@ -56,7 +56,7 @@ class CurrencyField extends React.Component<IProps> {
               required
               {...rest}
               aria-invalid={Boolean(error)}
-              className="e-currency-field__input"
+              className="e-input e-currency-field__input"
               inputMode={integer ? 'numeric' : 'decimal'}
               onKeyPress={this.handleKeyPress}
               onPaste={this.handlePaste}
