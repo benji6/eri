@@ -50,13 +50,14 @@
   justify-content: center;
   margin-right: var(--checkbox-margin-right);
   transition-duration: var(--e-time-0);
-  transition-property: border-color, box-shadow;
+  transition-property: background, border;
   transition-timing-function: var(--e-transition);
   width: var(--checkbox-size);
 }
 
 .e-checkbox__input:focus ~ .e-checkbox__appearance {
-  border-color: var(--e-color-accent-more);
+  border-color: var(--e-color-accent);
+  box-shadow: var(--e-input-box-shadow-focus);
 }
 
 .e-checkbox__input:hover ~ .e-checkbox__appearance {
@@ -65,6 +66,7 @@
 
 .e-checkbox__input[aria-invalid="true"] ~ .e-checkbox__appearance {
   border-color: var(--e-color-negative);
+  box-shadow: none;
 }
 
 .e-checkbox__input:checked ~ .e-checkbox__appearance {

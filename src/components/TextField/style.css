@@ -21,7 +21,8 @@
 }
 
 .e-text-field__input:focus {
-  border-color: var(--e-color-accent-more);
+  border-color: var(--e-color-accent);
+  box-shadow: var(--e-input-box-shadow-focus);
 }
 
 .e-text-field__input:hover {
@@ -30,4 +31,5 @@
 
 .e-text-field__input[aria-invalid="true"] {
   border-color: var(--e-color-negative);
+  box-shadow: none;
 }

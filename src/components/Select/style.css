@@ -19,13 +19,14 @@
   font-size: inherit;
   outline: 0;
   padding: var(--e-space-2);
-  transition-property: background, border;
   transition-duration: var(--e-time-0);
+  transition-property: background, border;
   transition-timing-function: var(--e-transition);
 }
 
 .e-select__input:focus {
-  border-color: var(--e-color-accent-more);
+  border-color: var(--e-color-accent);
+  box-shadow: var(--e-input-box-shadow-focus);
 }
 
 .e-select__input:hover {
@@ -34,4 +35,5 @@
 
 .e-select__input[aria-invalid="true"] {
   border-color: var(--e-color-negative);
+  box-shadow: none;
 }

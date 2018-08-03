@@ -5,7 +5,7 @@ class FieldLabel extends React.PureComponent<
   React.HTMLAttributes<HTMLDivElement>
 > {
   render() {
-    return <div {...this.props} className="e-field-label" />
+    return <span {...this.props} className="e-field-label" />
   }
 }
 

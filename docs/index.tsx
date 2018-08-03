@@ -4,6 +4,7 @@ import {
   Button,
   ButtonGroup,
   Checkbox,
+  CurrencyField,
   Select,
   Spinner,
   TextField,
@@ -157,7 +158,7 @@ class App extends React.PureComponent {
               <option hidden>Please select</option>
               <option>An option</option>
             </Select>
-            <Select error="Oops!" label="Select">
+            <Select error="Oops!" label="Select error">
               <option hidden>Please select</option>
               <option>An option</option>
             </Select>
@@ -166,6 +167,9 @@ class App extends React.PureComponent {
               error="Oops!"
               label="Checkbox with a long label so we can see how it overflows, let's go down the waterfall"
             />
+            <CurrencyField label="Currency field" />
+            <CurrencyField integer label="Integer currency field" />
+            <CurrencyField error="Oops!" label="Currency field error" />
             <ButtonGroup>
               <Button type="button">Submit</Button>
             </ButtonGroup>
