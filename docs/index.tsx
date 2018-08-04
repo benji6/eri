@@ -43,9 +43,9 @@ class App extends React.PureComponent {
       <>
         <header>
           <h1>Eri</h1>
+          <p e-util="center">A minimal design system</p>
         </header>
         <main>
-          <p e-util="center">A minimal design system.</p>
           <h2>Principles</h2>
           <ul>
             <li>
