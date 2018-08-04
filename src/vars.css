@@ -20,7 +20,7 @@
   --e-heading-font-weight: 500;
   --e-input-box-shadow-focus: 0 0 var(--e-space-0) 0 var(--e-color-accent-less);
   --e-space-scale-ratio: 1.61803;
-  --e-space-0: .3rem;
+  --e-space-0: .31rem;
   --e-space-1: calc(var(--e-space-0) * var(--e-space-scale-ratio));
   --e-space-2: calc(var(--e-space-1) * var(--e-space-scale-ratio));
   --e-space-3: calc(var(--e-space-2) * var(--e-space-scale-ratio));
