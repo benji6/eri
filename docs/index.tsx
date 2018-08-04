@@ -14,16 +14,27 @@ import ColorGroup from './components/ColorGroup'
 import Space from './components/Space'
 import Time from './components/Time'
 import Transition from './components/Transition'
+import getStylePropValue from './utils/getStylePropValue'
 import './style.css'
+
+const metaThemeColor = document.querySelector('meta[name=theme-color]')
 
 class App extends React.PureComponent {
   switchToDarkTheme = () => {
     document.documentElement.classList.add('e-theme-dark')
+    metaThemeColor.setAttribute(
+      'content',
+      getStylePropValue('--e-color-figure'),
+    )
     this.forceUpdate()
   }
 
   switchToLightTheme = () => {
     document.documentElement.classList.remove('e-theme-dark')
+    metaThemeColor.setAttribute(
+      'content',
+      getStylePropValue('--e-color-figure'),
+    )
     this.forceUpdate()
   }
 
