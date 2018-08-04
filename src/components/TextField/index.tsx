@@ -16,12 +16,7 @@ class TextField extends React.PureComponent<IProps> {
       <div className="e-field">
         <label className="e-text-field__label">
           <FieldLabel>{label}</FieldLabel>
-          <input
-            required
-            {...rest}
-            aria-invalid={Boolean(error)}
-            className="e-text-field__input"
-          />
+          <input required {...rest} aria-invalid={Boolean(error)} />
         </label>
         <FieldError>{error}</FieldError>
       </div>

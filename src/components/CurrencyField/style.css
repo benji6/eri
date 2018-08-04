@@ -14,11 +14,11 @@
   bottom: 0;
   content: "£";
   display: flex;
-  left: 1.1rem;
+  left: var(--e-space-2);
   position: absolute;
   top: 0;
 }
 
-.e-currency-field__input {
-  padding: var(--e-space-1) 0 var(--e-space-1) 2.25rem;
+input.e-currency-field__input {
+  padding-left: calc(var(--e-space-4) - var(--e-space-0));
 }
