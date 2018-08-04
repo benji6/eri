@@ -1,10 +1,10 @@
 .e-button-group {
+  margin-top: var(--e-space-4);
   text-align: center;
 }
 
 @media (min-width: 651px) {
   .e-button-group {
     border-top: var(--e-border-size) solid var(--e-color-balance);
-    margin-top: var(--e-space-4);
   }
 }
