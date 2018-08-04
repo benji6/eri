@@ -1,7 +1,7 @@
 .d-transition {
   display: flex;
   flex-direction: column;
-  height: 12rem;
+  height: 7.5rem;
 }
 
 .d-transition__visual-container {

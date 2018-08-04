@@ -1,7 +1,7 @@
 .d-time {
   display: flex;
   flex-direction: column;
-  height: 7.75rem;
+  height: 7.5rem;
 }
 
 .d-time__visual-container {
