@@ -61,7 +61,7 @@ h1 {
 h2 {
   font-size: var(--e-font-size-3);
   font-weight: var(--e-heading-font-weight);
-  margin: var(--e-space-3) 0 var(--e-space-2);
+  margin: var(--e-space-3) 0 var(--e-space-1);
 }
 
 h3 {
