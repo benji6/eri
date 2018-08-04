@@ -7,8 +7,8 @@
 }
 
 .d-color__visual {
-  border: var(--e-space-0) solid var(--e-color-figure);
-  border-radius: var(--e-space-0);
+  border: var(--e-border-size) solid var(--e-color-figure);
+  border-radius: var(--e-border-size);
   height: var(--e-space-7);
   transition: background var(--e-time-0) var(--e-transition);
   width: var(--e-space-7);

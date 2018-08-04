@@ -40,8 +40,8 @@
   align-items: center;
   align-self: flex-start;
   background: var(--e-color-ground-more);
-  border: var(--e-space-0) solid var(--e-color-figure);
-  border-radius: var(--e-space-0);
+  border: var(--e-border-size) solid var(--e-color-figure);
+  border-radius: var(--e-border-size);
   box-sizing: border-box;
   color: transparent;
   display: inline-flex;

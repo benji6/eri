@@ -36,7 +36,7 @@ form {
 
 @media (min-width: 651px) {
   form {
-    border-radius: var(--e-space-1);
+    border-radius: var(--e-border-size);
     box-shadow: 0 0 var(--e-space-2) var(--e-color-figure);
     padding: var(--e-space-2) var(--e-space-5) var(--e-space-5);
   }
@@ -99,8 +99,8 @@ main a:active {
 input:not([type="checkbox"]),
 select {
   background: var(--e-color-ground-more);
-  border-radius: var(--e-space-0);
-  border: var(--e-space-0) solid var(--e-color-figure);
+  border-radius: var(--e-border-size);
+  border: var(--e-border-size) solid var(--e-color-figure);
   color: inherit;
   font-size: inherit;
   outline: 0;

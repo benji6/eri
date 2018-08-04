@@ -69,8 +69,13 @@ class App extends React.PureComponent {
           <Space varName="--e-font-size-2" />
           <Space varName="--e-font-size-3" />
           <Space varName="--e-font-size-4" />
+          <h3>Border size</h3>
+          <p>
+            There is one border size which is used for both border-width and
+            border-radius.
+          </p>
+          <Space varName="--e-border-size" />
           <h3>Space</h3>
-          <Space varName="--e-space-0" />
           <Space varName="--e-space-1" />
           <Space varName="--e-space-2" />
           <Space varName="--e-space-3" />

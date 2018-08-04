@@ -1,4 +1,5 @@
 :root {
+  --e-border-size: .1rem;
   --e-color-accent: #1971c2;
   --e-color-accent-less: #228be6;
   --e-color-accent-more: #1864ab;
@@ -18,7 +19,6 @@
   --e-font-size-4: calc(var(--e-font-size-3) * var(--e-font-size-scale-ratio) * var(--e-font-size-scale-ratio));
   --e-heading-font-weight: 500;
   --e-input-box-shadow-focus: 0 0 var(--e-space-1) 0 var(--e-color-accent-less);
-  --e-space-0: .1rem;
   --e-space-1: .25rem;
   --e-space-2: calc(2rem / 3);
   --e-space-3: .9rem;

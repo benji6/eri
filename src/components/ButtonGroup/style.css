@@ -5,7 +5,7 @@
 
 @media (min-width: 651px) {
   .e-button-group {
-    border-top: var(--e-space-0) solid var(--e-color-balance);
+    border-top: var(--e-border-size) solid var(--e-color-balance);
     margin-top: var(--e-space-6);
   }
 }
