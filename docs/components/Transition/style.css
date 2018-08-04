@@ -1,8 +1,20 @@
+.d-transition {
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+}
+
+.d-transition__visual-container {
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+
 .d-transition__visual {
   animation-duration: var(--e-time-1);
   animation-iteration-count: infinite;
   animation-name: e-rotate;
   background: var(--e-color-figure);
-  height: var(--e-space-3);
-  width: var(--e-space-6);
+  height: var(--e-space-2);
+  width: var(--e-space-5);
 }

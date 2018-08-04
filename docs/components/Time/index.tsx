@@ -12,8 +12,10 @@ class Time extends React.PureComponent<IProps> {
     const time = getStylePropValue(varName)
 
     return (
-      <div>
-        <div className="d-time__visual" style={{ animationDuration: time }} />
+      <div className="d-time">
+        <div className="d-time__visual-container">
+          <div className="d-time__visual" style={{ animationDuration: time }} />
+        </div>
         <pre>
           <code>animation-name: e-rotate;</code>
         </pre>

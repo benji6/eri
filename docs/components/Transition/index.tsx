@@ -12,11 +12,13 @@ class Transition extends React.PureComponent<IProps> {
     const transition = getStylePropValue(varName)
 
     return (
-      <div>
-        <div
-          className="d-transition__visual"
-          style={{ animationTimingFunction: transition }}
-        />
+      <div className="d-transition">
+        <div className="d-transition__visual-container">
+          <div
+            className="d-transition__visual"
+            style={{ animationTimingFunction: transition }}
+          />
+        </div>
         <pre>
           <code>
             {varName}: {transition};

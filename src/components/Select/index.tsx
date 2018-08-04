@@ -13,7 +13,7 @@ class Select extends React.PureComponent<IProps> {
     const { error, label, ...rest } = this.props
 
     return (
-      <div className="e-select">
+      <div className="e-field">
         <label className="e-select__label">
           <FieldLabel>{label}</FieldLabel>
           <select

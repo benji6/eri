@@ -1,8 +1,7 @@
 .e-checkbox {
-  --checkbox-size: var(--e-space-5);
-  --checkbox-margin-right: var(--e-space-1);
+  --checkbox-size: var(--e-space-4);
+  --checkbox-margin-right: var(--e-space-2);
 
-  margin: var(--e-space-3) 0;
   position: relative;
   width: 100%;
 }

@@ -16,7 +16,6 @@ interface IProps {
     | '--e-space-3'
     | '--e-space-4'
     | '--e-space-5'
-    | '--e-space-6'
 }
 
 class Space extends React.PureComponent<IProps> {

@@ -12,7 +12,7 @@ class Checkbox extends React.PureComponent<IProps> {
     const { label, error, ...rest } = this.props
 
     return (
-      <div className="e-checkbox">
+      <div className="e-checkbox e-field">
         <label className="e-checkbox__label">
           <input
             {...rest}

@@ -13,7 +13,7 @@ class TextField extends React.PureComponent<IProps> {
     const { label, error, ...rest } = this.props
 
     return (
-      <div className="e-text-field">
+      <div className="e-field">
         <label className="e-text-field__label">
           <FieldLabel>{label}</FieldLabel>
           <input

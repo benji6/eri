@@ -76,13 +76,16 @@ class App extends React.PureComponent {
           </p>
           <Space varName="--e-border-size" />
           <h3>Space</h3>
+          <p>
+            Space is also based on a modular scale, but the ratio used is the
+            golden ratio.
+          </p>
           <Space varName="--e-space-0" />
           <Space varName="--e-space-1" />
           <Space varName="--e-space-2" />
           <Space varName="--e-space-3" />
           <Space varName="--e-space-4" />
           <Space varName="--e-space-5" />
-          <Space varName="--e-space-6" />
           <h2>Time</h2>
           <p>Space is fine, but we'll also get nowhere without time.</p>
           <Time varName="--e-time-0" />
@@ -103,8 +106,10 @@ class App extends React.PureComponent {
           <p>
             For the dark theme just add the class <code>e-theme-dark</code>.
           </p>
-          <Button onClick={this.switchToDarkTheme}>Dark</Button>
-          <Button onClick={this.switchToLightTheme}>Light</Button>
+          <ButtonGroup>
+            <Button onClick={this.switchToDarkTheme}>Dark</Button>
+            <Button onClick={this.switchToLightTheme}>Light</Button>
+          </ButtonGroup>
           <ColorGroup name="Figure &amp; ground">
             <Color varName="--e-color-figure" />
             <Color varName="--e-color-ground" />
@@ -143,14 +148,19 @@ class App extends React.PureComponent {
           <Spinner variation="ground" />
           <Spinner variation="page" />
           <h3>Button</h3>
-          <p>Buttons are cute little things you press.</p>
+          <p>
+            Buttons are cute little things you press. Remember to always wrap
+            them up in a ButtonGroup.
+          </p>
           <p>
             This button will only ever be disabled while the app is waiting for
             something to happen and will display a little spinner to let the
             user know it's thinking.
           </p>
-          <Button>Click me!</Button>
-          <Button disabled>Click me!</Button>
+          <ButtonGroup>
+            <Button>Click me!</Button>
+            <Button disabled>Click me!</Button>
+          </ButtonGroup>
           <h3>Link</h3>
           <p>Links take you places.</p>
           <a href="#">Click me!</a>

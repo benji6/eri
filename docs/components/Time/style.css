@@ -1,8 +1,20 @@
+.d-time {
+  display: flex;
+  flex-direction: column;
+  height: 12rem;
+}
+
+.d-time__visual-container {
+  align-items: center;
+  display: flex;
+  flex: 1;
+}
+
 .d-time__visual {
   animation-iteration-count: infinite;
   animation-name: e-rotate;
   animation-timing-function: linear;
   background: var(--e-color-figure);
-  height: var(--e-space-3);
-  width: var(--e-space-6);
+  height: var(--e-space-2);
+  width: var(--e-space-5);
 }
