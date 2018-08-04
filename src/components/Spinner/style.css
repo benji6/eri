@@ -1,5 +1,5 @@
 .e-spinner {
-  --diameter: var(--e-space-5);
+  --diameter: var(--e-space-4);
 
   animation: e-rotate var(--e-time-1) infinite linear;
   border: calc(var(--diameter) / 6) solid var(--e-color-accent);
@@ -17,7 +17,7 @@
 }
 
 .e-spinner--page {
-  --diameter: var(--e-space-7);
+  --diameter: var(--e-space-6);
 
   display: flex;
   margin: var(--diameter) auto;

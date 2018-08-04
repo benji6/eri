@@ -1,5 +1,5 @@
 .e-currency-field {
-  margin: var(--e-space-4) 0;
+  margin: var(--e-space-3) 0;
 }
 
 .e-currency-field__label {
@@ -19,11 +19,11 @@
   content: "£";
   display: flex;
   left: 0;
-  left: var(--e-space-3);
+  left: var(--e-space-2);
   position: absolute;
   top: 0;
 }
 
 .e-currency-field__input {
-  padding: var(--e-space-2) 0 var(--e-space-2) 2rem;
+  padding: var(--e-space-1) 0 var(--e-space-1) 2rem;
 }

@@ -2,14 +2,14 @@
   align-items: center;
   display: inline-flex;
   flex-direction: column;
-  margin: var(--e-space-1) 0;
+  margin: var(--e-space-0) 0;
   width: 17rem;
 }
 
 .d-color__visual {
   border: var(--e-border-size) solid var(--e-color-figure);
   border-radius: var(--e-border-size);
-  height: var(--e-space-7);
+  height: var(--e-space-6);
   transition: background var(--e-time-0) var(--e-transition);
-  width: var(--e-space-7);
+  width: var(--e-space-6);
 }

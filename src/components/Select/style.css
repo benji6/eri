@@ -1,5 +1,5 @@
 .e-select {
-  margin: var(--e-space-4) 0;
+  margin: var(--e-space-3) 0;
 }
 
 .e-select__label {
@@ -12,5 +12,5 @@
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  padding: var(--e-space-2);
+  padding: var(--e-space-1);
 }

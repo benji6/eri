@@ -12,8 +12,8 @@ body {
 header {
   background: var(--e-color-figure);
   color: var(--e-color-ground);
-  margin-bottom: var(--e-space-5);
-  padding: var(--e-space-2) 0;
+  margin-bottom: var(--e-space-4);
+  padding: var(--e-space-1) 0;
   transition-duration: var(--e-time-0);
   transition-property: background, color;
   transition-timing-function: var(--e-transition);
@@ -26,52 +26,52 @@ header h1 {
 main {
   margin: 0 auto;
   max-width: 52rem;
-  padding: 0 var(--e-space-3);
+  padding: 0 var(--e-space-2);
 }
 
 form {
-  margin: var(--e-space-5) auto;
+  margin: var(--e-space-4) auto;
   max-width: 32rem;
 }
 
 @media (min-width: 651px) {
   form {
     border-radius: var(--e-border-size);
-    box-shadow: 0 0 var(--e-space-2) var(--e-color-figure);
-    padding: var(--e-space-2) var(--e-space-5) var(--e-space-5);
+    box-shadow: 0 0 var(--e-space-1) var(--e-color-figure);
+    padding: var(--e-space-1) var(--e-space-4) var(--e-space-4);
   }
 }
 
 ul {
-  margin: var(--e-space-4) 0;
-  padding-left: var(--e-space-6);
+  margin: var(--e-space-3) 0;
+  padding-left: var(--e-space-5);
 }
 
 li {
-  margin: var(--e-space-2) 0;
+  margin: var(--e-space-1) 0;
 }
 
 h1 {
   font-size: var(--e-font-size-4);
   font-weight: var(--e-heading-font-weight);
-  margin: var(--e-space-5) 0 var(--e-space-4);
+  margin: var(--e-space-4) 0 var(--e-space-3);
   text-align: center;
 }
 
 h2 {
   font-size: var(--e-font-size-3);
   font-weight: var(--e-heading-font-weight);
-  margin: var(--e-space-5) 0 var(--e-space-4);
+  margin: var(--e-space-4) 0 var(--e-space-3);
 }
 
 h3 {
   font-size: var(--e-font-size-2);
   font-weight: var(--e-heading-font-weight);
-  margin: var(--e-space-4) 0;
+  margin: var(--e-space-3) 0;
 }
 
 p {
-  margin: var(--e-space-3) 0;
+  margin: var(--e-space-2) 0;
 }
 
 main a {

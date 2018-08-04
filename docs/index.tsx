@@ -76,13 +76,13 @@ class App extends React.PureComponent {
           </p>
           <Space varName="--e-border-size" />
           <h3>Space</h3>
+          <Space varName="--e-space-0" />
           <Space varName="--e-space-1" />
           <Space varName="--e-space-2" />
           <Space varName="--e-space-3" />
           <Space varName="--e-space-4" />
           <Space varName="--e-space-5" />
           <Space varName="--e-space-6" />
-          <Space varName="--e-space-7" />
           <h2>Time</h2>
           <p>Space is fine, but we'll also get nowhere without time.</p>
           <Time varName="--e-time-0" />

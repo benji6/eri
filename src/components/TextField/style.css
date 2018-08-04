@@ -1,5 +1,5 @@
 .e-text-field {
-  margin: var(--e-space-4) 0;
+  margin: var(--e-space-3) 0;
 }
 
 .e-text-field__label {
@@ -8,5 +8,5 @@
 }
 
 .e-text-field__input {
-  padding: var(--e-space-2);
+  padding: var(--e-space-1);
 }

@@ -10,13 +10,13 @@ interface IProps {
     | '--e-font-size-2'
     | '--e-font-size-3'
     | '--e-font-size-4'
+    | '--e-space-0'
     | '--e-space-1'
     | '--e-space-2'
     | '--e-space-3'
     | '--e-space-4'
     | '--e-space-5'
     | '--e-space-6'
-    | '--e-space-7'
 }
 
 class Space extends React.PureComponent<IProps> {

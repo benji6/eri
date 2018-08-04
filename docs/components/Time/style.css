@@ -3,6 +3,6 @@
   animation-name: e-rotate;
   animation-timing-function: linear;
   background: var(--e-color-figure);
-  height: var(--e-space-4);
-  width: var(--e-space-7);
+  height: var(--e-space-3);
+  width: var(--e-space-6);
 }

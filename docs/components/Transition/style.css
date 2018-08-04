@@ -3,6 +3,6 @@
   animation-iteration-count: infinite;
   animation-name: e-rotate;
   background: var(--e-color-figure);
-  height: var(--e-space-4);
-  width: var(--e-space-7);
+  height: var(--e-space-3);
+  width: var(--e-space-6);
 }
