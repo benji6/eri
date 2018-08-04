@@ -18,17 +18,35 @@ interface IProps {
     | '--e-space-5'
 }
 
-class Space extends React.PureComponent<IProps> {
+interface IState {
+  value?: number
+}
+
+class Space extends React.PureComponent<IProps, IState> {
+  myRef: React.RefObject<HTMLDivElement> = React.createRef()
+  state = {}
+  componentDidMount() {
+    this.setState({
+      value: this.myRef.current.clientWidth,
+    })
+  }
   render() {
-    const { varName } = this.props
+    const {
+      props: { varName },
+      state: { value },
+    } = this
     const space = getStylePropValue(varName)
 
     return (
       <div className="d-space">
-        <div className="d-space__visual" style={{ width: space }} />
+        <div
+          className="d-space__visual"
+          ref={this.myRef}
+          style={{ width: space }}
+        />
         <pre>
           <code>
-            {varName}: {space};
+            {value !== undefined ? `${varName}: ${value}px` : varName}
           </code>
         </pre>
       </div>

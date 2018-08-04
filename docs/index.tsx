@@ -59,6 +59,10 @@ class App extends React.PureComponent {
             Space, the final frontier... This is how our journey begins. Without
             space there is nowhere.
           </p>
+          <p>
+            Most of these values are computed using rems, but for the sake of
+            simplicity the values are given in px.
+          </p>
           <h3>Font size</h3>
           <p>
             Fonts are sized based on a modular scale which keeps things simple
