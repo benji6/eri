@@ -111,7 +111,7 @@ select {
 
 input:not([type="checkbox"]):focus,
 select:focus {
-  border-color: var(--e-color-accent);
+  border-color: var(--e-color-accent-less);
   box-shadow: var(--e-input-box-shadow-focus);
 }
 
