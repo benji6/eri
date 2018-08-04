@@ -45,7 +45,7 @@ class CurrencyField extends React.Component<IProps> {
   }
 
   render() {
-    const { error, integer, label, name, ...rest } = this.props
+    const { error, integer, label, ...rest } = this.props
 
     return (
       <div className="e-field">
