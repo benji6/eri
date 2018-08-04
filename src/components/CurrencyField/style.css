@@ -19,11 +19,11 @@
   content: "£";
   display: flex;
   left: 0;
-  left: var(--e-space-2);
+  left: var(--e-space-3);
   position: absolute;
   top: 0;
 }
 
 .e-currency-field__input {
-  padding: var(--e-space-2) 0 var(--e-space-2) 1.75rem;
+  padding: var(--e-space-2) 0 var(--e-space-2) 2rem;
 }
