@@ -143,7 +143,6 @@ class App extends React.PureComponent {
           </p>
           <h2>Components</h2>
           <h3>Spinner</h3>
-          <p>Round and round and round we go.</p>
           <Spinner />
           <Spinner variation="ground" />
           <Spinner variation="page" />

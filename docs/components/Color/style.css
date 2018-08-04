@@ -2,7 +2,8 @@
   align-items: center;
   display: inline-flex;
   flex-direction: column;
-  width: 17rem;
+  margin: var(--e-space-2);
+  width: 18rem;
 }
 
 .d-color__visual {

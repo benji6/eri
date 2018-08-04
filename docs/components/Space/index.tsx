@@ -24,7 +24,7 @@ class Space extends React.PureComponent<IProps> {
     const space = getStylePropValue(varName)
 
     return (
-      <div>
+      <div className="d-space">
         <div className="d-space__visual" style={{ width: space }} />
         <pre>
           <code>

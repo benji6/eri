@@ -8,5 +8,5 @@
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  padding: var(--e-space-2);
+  padding: var(--e-space-1);
 }

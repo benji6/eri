@@ -1,3 +1,7 @@
+.d-space {
+  margin: var(--e-space-3) 0;
+}
+
 .d-space__visual {
   height: var(--e-space-2);
   background: var(--e-color-figure);

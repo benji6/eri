@@ -43,7 +43,7 @@ form {
 }
 
 ul {
-  margin: var(--e-space-3) 0;
+  margin: var(--e-space-2) 0;
   padding-left: var(--e-space-4);
 }
 
@@ -61,17 +61,17 @@ h1 {
 h2 {
   font-size: var(--e-font-size-3);
   font-weight: var(--e-heading-font-weight);
-  margin: var(--e-space-4) 0 var(--e-space-3);
+  margin: var(--e-space-3) 0 var(--e-space-2);
 }
 
 h3 {
   font-size: var(--e-font-size-2);
   font-weight: var(--e-heading-font-weight);
-  margin: var(--e-space-3) 0;
+  margin: var(--e-space-2) 0 var(--e-space-1);
 }
 
 p {
-  margin: var(--e-space-2) 0;
+  margin: var(--e-space-1) 0;
 }
 
 main a {
