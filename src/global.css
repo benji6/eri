@@ -95,3 +95,33 @@ main a:active {
   color: var(--e-color-accent-more);
   text-decoration: underline;
 }
+
+input:not([type="checkbox"]),
+select {
+  background: var(--e-color-ground-more);
+  border-radius: var(--e-space-0);
+  border: var(--e-space-0) solid var(--e-color-figure);
+  color: inherit;
+  font-size: inherit;
+  outline: 0;
+  transition-duration: var(--e-time-0);
+  transition-property: background, border;
+  transition-timing-function: var(--e-transition);
+}
+
+input:not([type="checkbox"]):focus,
+select:focus {
+  border-color: var(--e-color-accent);
+  box-shadow: var(--e-input-box-shadow-focus);
+}
+
+input:not([type="checkbox"]):hover,
+select:hover {
+  border-color: var(--e-color-accent-less);
+}
+
+input:not([type="checkbox"])[aria-invalid="true"],
+select[aria-invalid="true"] {
+  border-color: var(--e-color-negative);
+  box-shadow: none;
+}

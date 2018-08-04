@@ -20,7 +20,7 @@ class Select extends React.PureComponent<IProps> {
             required
             {...rest}
             aria-invalid={Boolean(error)}
-            className="e-input e-select__input"
+            className="e-select__input"
           />
         </label>
         <FieldError>{error}</FieldError>

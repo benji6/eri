@@ -7,29 +7,3 @@
 [e-util="center"] {
   text-align: center;
 }
-
-.e-input {
-  background: var(--e-color-ground-more);
-  border-radius: var(--e-space-0);
-  border: var(--e-space-0) solid var(--e-color-figure);
-  color: inherit;
-  font-size: inherit;
-  outline: 0;
-  transition-duration: var(--e-time-0);
-  transition-property: background, border;
-  transition-timing-function: var(--e-transition);
-}
-
-.e-input:focus {
-  border-color: var(--e-color-accent);
-  box-shadow: var(--e-input-box-shadow-focus);
-}
-
-.e-input:hover {
-  border-color: var(--e-color-accent-less);
-}
-
-.e-input[aria-invalid="true"] {
-  border-color: var(--e-color-negative);
-  box-shadow: none;
-}
