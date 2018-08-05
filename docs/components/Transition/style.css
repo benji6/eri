@@ -16,5 +16,6 @@
   animation-name: e-rotate;
   background: var(--e-color-figure);
   height: var(--e-space-2);
+  transition: background-color var(--e-time-0) var(--e-transition);
   width: var(--e-space-5);
 }

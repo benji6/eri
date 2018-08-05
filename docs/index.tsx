@@ -126,6 +126,7 @@ class App extends React.PureComponent {
             <Button onClick={this.switchToLightTheme}>Light</Button>
           </ButtonGroup>
           <ColorGroup name="Figure &amp; ground">
+            <Color varName="--e-color-figure-less" />
             <Color varName="--e-color-figure" />
             <Color varName="--e-color-ground" />
           </ColorGroup>

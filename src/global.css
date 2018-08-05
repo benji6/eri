@@ -1,6 +1,6 @@
 body {
   background: var(--e-color-ground);
-  color: var(--e-color-figure);
+  color: var(--e-color-figure-less);
   font-family: system-ui, sans-serif;
   font-size: var(--e-font-size-1);
   margin: 0;
@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background: var(--e-color-figure-more);
+  background: var(--e-color-figure);
   color: var(--e-color-ground);
   margin-bottom: var(--e-space-4);
   padding: var(--e-space-1) 0;
@@ -38,7 +38,7 @@ form {
 @media (min-width: 651px) {
   form {
     border-radius: var(--e-border-size);
-    box-shadow: 0 0 var(--e-space-1) var(--e-color-figure);
+    box-shadow: 0 0 var(--e-space-1) var(--e-color-figure-less);
     padding: var(--e-space-2) var(--e-space-4) var(--e-space-4);
   }
 }
@@ -53,7 +53,7 @@ li {
 }
 
 h1 {
-  color: var(--e-color-figure-more);
+  color: var(--e-color-figure);
   font-size: var(--e-font-size-4);
   font-weight: var(--e-heading-font-weight);
   margin: var(--e-space-5) 0 var(--e-space-4);
@@ -62,7 +62,7 @@ h1 {
 }
 
 h2 {
-  color: var(--e-color-figure-more);
+  color: var(--e-color-figure);
   font-size: var(--e-font-size-3);
   font-weight: var(--e-heading-font-weight);
   margin: var(--e-space-4) 0 var(--e-space-2);
@@ -70,7 +70,7 @@ h2 {
 }
 
 h3 {
-  color: var(--e-color-figure-more);
+  color: var(--e-color-figure);
   font-size: var(--e-font-size-2);
   font-weight: var(--e-heading-font-weight);
   margin: var(--e-space-4) 0 var(--e-space-2);
