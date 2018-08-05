@@ -4,7 +4,8 @@ import './style.css'
 
 interface IProps {
   varName:
-    | '--e-border-size'
+    | '--e-border-radius'
+    | '--e-border-width'
     | '--e-font-size-0'
     | '--e-font-size-1'
     | '--e-font-size-2'

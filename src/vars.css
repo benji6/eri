@@ -1,5 +1,6 @@
 :root {
-  --e-border-size: .1rem;
+  --e-border-radius: .2rem;
+  --e-border-width: .1rem;
   --e-color-accent: #1971c2;
   --e-color-accent-less: #228be6;
   --e-color-accent-more: #1864ab;

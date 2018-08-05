@@ -5,5 +5,6 @@
 .d-space__visual {
   height: var(--e-space-2);
   background: var(--e-color-figure);
+  border-radius: var(--e-border-radius);
   transition: background-color var(--e-time-0) var(--e-transition);
 }

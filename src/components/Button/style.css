@@ -1,5 +1,5 @@
 .e-button {
-  border-radius: var(--e-border-size);
+  border-radius: var(--e-border-radius);
   border: none;
   color: var(--e-color-ground-more);
   cursor: pointer;
