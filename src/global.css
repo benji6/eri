@@ -73,7 +73,7 @@ h3 {
   color: var(--e-color-figure);
   font-size: var(--e-font-size-2);
   font-weight: var(--e-heading-font-weight);
-  margin: var(--e-space-4) 0 var(--e-space-2);
+  margin: var(--e-space-3) 0 var(--e-space-2);
   transition: color, var(--e-time-0) var(--e-transition);
 }
 
