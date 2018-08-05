@@ -5,7 +5,11 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 class Button extends React.PureComponent<IProps> {
   render() {
-    return <button {...this.props} className="e-button e-button--primary" />
+    const { type = 'button', ...rest } = this.props
+
+    return (
+      <button {...rest} className="e-button e-button--primary" type={type} />
+    )
   }
 }
 
