@@ -7,6 +7,7 @@
   --e-color-balance-less: #adb5bd;
   --e-color-balance-more: #495057;
   --e-color-figure: #212529;
+  --e-color-figure-more: #000000;
   --e-color-ground: #f8f9fa;
   --e-color-ground-more: #ffffff;
   --e-color-negative: #c92a2a;
@@ -38,6 +39,7 @@
   --e-color-balance-less: #495057;
   --e-color-balance-more: #adb5bd;
   --e-color-figure: #f8f9fa;
+  --e-color-figure-more: #ffffff;
   --e-color-ground: #212529;
   --e-color-ground-more: #00000;
   --e-color-negative: #fa5252;
