@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background: var(--e-color-figure);
+  background: var(--e-color-figure-more);
   color: var(--e-color-ground);
   margin-bottom: var(--e-space-4);
   padding: var(--e-space-1) 0;

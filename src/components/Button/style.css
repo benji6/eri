@@ -1,7 +1,7 @@
 .e-button {
   border-radius: var(--e-border-size);
   border: none;
-  color: var(--e-color-ground);
+  color: var(--e-color-ground-more);
   cursor: pointer;
   font-size: inherit;
   font-weight: var(--e-font-bold);
