@@ -40,6 +40,5 @@
 
 .e-button--primary:disabled {
   cursor: not-allowed;
-  padding-bottom: .475rem;
-  padding-top: .475rem;
+  background: var(--e-color-balance);
 }
