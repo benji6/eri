@@ -58,6 +58,7 @@ h1 {
   font-weight: var(--e-heading-font-weight);
   margin: var(--e-space-5) 0 var(--e-space-4);
   text-align: center;
+  transition: color, var(--e-time-0) var(--e-transition);
 }
 
 h2 {
@@ -65,6 +66,7 @@ h2 {
   font-size: var(--e-font-size-3);
   font-weight: var(--e-heading-font-weight);
   margin: var(--e-space-4) 0 var(--e-space-2);
+  transition: color, var(--e-time-0) var(--e-transition);
 }
 
 h3 {
@@ -72,6 +74,7 @@ h3 {
   font-size: var(--e-font-size-2);
   font-weight: var(--e-heading-font-weight);
   margin: var(--e-space-4) 0 var(--e-space-2);
+  transition: color, var(--e-time-0) var(--e-transition);
 }
 
 p {
