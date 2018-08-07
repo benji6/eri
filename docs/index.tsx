@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom'
 import {
   Button,
   ButtonGroup,
+  Card,
   Checkbox,
   CurrencyField,
   Select,
@@ -196,6 +197,10 @@ class App extends React.PureComponent {
             <Button>Click me!</Button>
             <Button disabled>Click me!</Button>
           </ButtonGroup>
+          <h3>Card</h3>
+          <Card>
+            <p>Here's my card.</p>
+          </Card>
           <h3>Link</h3>
           <p>Links take you places.</p>
           <a href="#">Click me!</a>

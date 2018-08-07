@@ -1,6 +1,7 @@
 :root {
   --e-border-radius: .2rem;
   --e-border-width: .1rem;
+  --e-box-shadow: 0 0 var(--e-space-1) var(--e-color-figure-less);
   --e-color-accent: #1971c2;
   --e-color-accent-less: #228be6;
   --e-color-accent-more: #1864ab;

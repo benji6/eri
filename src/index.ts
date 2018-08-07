@@ -4,6 +4,7 @@ import './global.css'
 
 export { default as Button } from './components/Button'
 export { default as ButtonGroup } from './components/ButtonGroup'
+export { default as Card } from './components/Card'
 export { default as Checkbox } from './components/Checkbox'
 export { default as CurrencyField } from './components/CurrencyField'
 export { default as TextField } from './components/TextField'

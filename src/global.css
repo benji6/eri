@@ -38,7 +38,7 @@ form {
 @media (min-width: 651px) {
   form {
     border-radius: var(--e-border-radius);
-    box-shadow: 0 0 var(--e-space-1) var(--e-color-figure-less);
+    box-shadow: var(--e-box-shadow);
     padding: var(--e-space-2) var(--e-space-4) var(--e-space-4);
   }
 }
