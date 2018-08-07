@@ -199,13 +199,16 @@ class App extends React.PureComponent {
           </ButtonGroup>
           <h3>Card</h3>
           <Card>
-            <p>Card one.</p>
+            <h3>Card one</h3>
+            <p>This is card one.</p>
           </Card>
           <Card>
-            <p>Card two.</p>
+            <h3>Card two</h3>
+            <p>This is card two.</p>
           </Card>
           <Card>
-            <p>Card three.</p>
+            <h3>Card three</h3>
+            <p>This is card three.</p>
           </Card>
           <h3>Link</h3>
           <p>Links take you places.</p>
