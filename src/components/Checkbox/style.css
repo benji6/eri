@@ -25,7 +25,7 @@
   align-self: flex-start;
   bottom: 0;
   height: var(--checkbox-size);
-  left:0;
+  left: 0;
   margin: 0;
   opacity: 0;
   pointer-events: none;
@@ -63,7 +63,7 @@
   border-color: var(--e-color-accent-less);
 }
 
-.e-checkbox__input[aria-invalid="true"] ~ .e-checkbox__appearance {
+.e-checkbox__input[aria-invalid='true'] ~ .e-checkbox__appearance {
   border-color: var(--e-color-negative);
   box-shadow: none;
 }

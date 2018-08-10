@@ -7,10 +7,10 @@
   "scripts": {
     "build": "rm -rf dist && parcel build src/index.ts --no-minify --no-source-maps && tsc && BABEL_ENV=css babel dist --out-dir dist && node scripts/removeCssImports",
     "build:style-guide": "rm -rf build && parcel build docs/index.html -d build --no-source-maps",
-    "format:check": "prettier --list-different \"src/**/*.ts*\"",
+    "format": "prettier --write \"src/**/*.css\" \"src/**/*.ts*\"",
     "start": "parcel docs/index.html",
     "test": "run-p test:*",
-    "test:format": "prettier --write \"src/**/*.ts*\"",
+    "test:format": "prettier --list-different \"src/**/*.css\" \"src/**/*.ts*\"",
     "test:types": "tsc --noEmit"
   },
   "repository": {

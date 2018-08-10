@@ -1,6 +1,6 @@
 :root {
-  --e-border-radius: .2rem;
-  --e-border-width: .1rem;
+  --e-border-radius: 0.2rem;
+  --e-border-width: 0.1rem;
   --e-box-shadow: 0 0 var(--e-space-1) var(--e-color-figure-less);
   --e-color-accent: #1971c2;
   --e-color-accent-less: #228be6;
@@ -15,22 +15,25 @@
   --e-color-negative: #c92a2a;
   --e-font-bold: 600;
   --e-font-size-scale-ratio: 1.3;
-  --e-font-size-0: .9rem;
+  --e-font-size-0: 0.9rem;
   --e-font-size-1: calc(var(--e-font-size-0) * var(--e-font-size-scale-ratio));
   --e-font-size-2: calc(var(--e-font-size-1) * var(--e-font-size-scale-ratio));
   --e-font-size-3: calc(var(--e-font-size-2) * var(--e-font-size-scale-ratio));
-  --e-font-size-4: calc(var(--e-font-size-3) * var(--e-font-size-scale-ratio) * var(--e-font-size-scale-ratio));
+  --e-font-size-4: calc(
+    var(--e-font-size-3) * var(--e-font-size-scale-ratio) *
+      var(--e-font-size-scale-ratio)
+  );
   --e-heading-font-weight: 500;
   --e-input-box-shadow-focus: 0 0 var(--e-space-0) 0 var(--e-color-accent-less);
   --e-space-scale-ratio: 1.61803;
-  --e-space-0: .31rem;
+  --e-space-0: 0.31rem;
   --e-space-1: calc(var(--e-space-0) * var(--e-space-scale-ratio));
   --e-space-2: calc(var(--e-space-1) * var(--e-space-scale-ratio));
   --e-space-3: calc(var(--e-space-2) * var(--e-space-scale-ratio));
   --e-space-4: calc(var(--e-space-3) * var(--e-space-scale-ratio));
   --e-space-5: calc(var(--e-space-4) * var(--e-space-scale-ratio));
-  --e-time-0: .15s;
-  --e-time-1: .75s;
+  --e-time-0: 0.15s;
+  --e-time-1: 0.75s;
   --e-transition: ease-in-out;
 }
 

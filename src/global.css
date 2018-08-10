@@ -103,7 +103,7 @@ main a:active {
   text-decoration: underline;
 }
 
-input:not([type="checkbox"]),
+input:not([type='checkbox']),
 select {
   background: var(--e-color-ground-more);
   border-radius: var(--e-border-radius);
@@ -117,19 +117,19 @@ select {
   transition-timing-function: var(--e-transition);
 }
 
-input:not([type="checkbox"]):focus,
+input:not([type='checkbox']):focus,
 select:focus {
   border-color: var(--e-color-accent-less);
   box-shadow: var(--e-input-box-shadow-focus);
 }
 
-input:not([type="checkbox"]):hover,
+input:not([type='checkbox']):hover,
 select:hover {
   border-color: var(--e-color-accent-less);
 }
 
-input:not([type="checkbox"])[aria-invalid="true"],
-select[aria-invalid="true"] {
+input:not([type='checkbox'])[aria-invalid='true'],
+select[aria-invalid='true'] {
   border-color: var(--e-color-negative);
   box-shadow: none;
 }
