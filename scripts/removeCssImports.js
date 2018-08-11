@@ -13,9 +13,15 @@ const recursiveMapOverDefinitionFiles = (f, pathToCheck) => {
   }
 }
 
-const removeCssImports = definition => definition
-  .split('\n')
-  .filter(line => !(line.trim().startsWith('import') && line.endsWith(".css';")))
-  .join('\n')
+const removeCssImports = definition =>
+  definition
+    .split('\n')
+    .filter(
+      line => !(line.trim().startsWith('import') && line.endsWith(".css';")),
+    )
+    .join('\n')
 
-recursiveMapOverDefinitionFiles(removeCssImports, path.join(__dirname, '..', 'dist'))
+recursiveMapOverDefinitionFiles(
+  removeCssImports,
+  path.join(__dirname, '..', 'dist'),
+)
