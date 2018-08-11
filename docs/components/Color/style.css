@@ -3,7 +3,7 @@
   display: inline-flex;
   flex-direction: column;
   margin: var(--e-space-2);
-  width: 18rem;
+  width: 12rem;
 }
 
 .d-color__visual {
