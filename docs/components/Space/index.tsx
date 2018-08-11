@@ -25,21 +25,24 @@ interface IState {
 
 class Space extends React.PureComponent<IProps, IState> {
   myRef: React.RefObject<HTMLDivElement> = React.createRef()
-  state = {}
+  state = { value: undefined }
+
   componentDidMount() {
     this.setState({
       value: this.myRef.current.clientWidth,
     })
   }
+
   render() {
     const {
       props: { varName },
       state: { value },
     } = this
+
     const space = getStylePropValue(varName)
 
     return (
-      <div className="d-space">
+      <>
         <div
           className="d-space__visual"
           ref={this.myRef}
@@ -50,7 +53,7 @@ class Space extends React.PureComponent<IProps, IState> {
             {value !== undefined ? `${varName}: ${value}px` : varName}
           </code>
         </pre>
-      </div>
+      </>
     )
   }
 }

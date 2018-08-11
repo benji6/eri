@@ -1,0 +1,7 @@
+.d-space-group {
+  align-items: center;
+  display: grid;
+  grid-gap: var(--e-space-1) var(--e-space-2);
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+}

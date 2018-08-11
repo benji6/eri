@@ -12,6 +12,7 @@ import {
 } from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
+import SpaceGroup from './components/SpaceGroup'
 import Space from './components/Space'
 import Time from './components/Time'
 import Transition from './components/Transition'
@@ -80,25 +81,31 @@ class App extends React.PureComponent {
             Fonts are sized based on a modular scale which keeps things simple
             and conveys a sense of harmony.
           </p>
-          <Space varName="--e-font-size-0" />
-          <Space varName="--e-font-size-1" />
-          <Space varName="--e-font-size-2" />
-          <Space varName="--e-font-size-3" />
-          <Space varName="--e-font-size-4" />
+          <SpaceGroup>
+            <Space varName="--e-font-size-0" />
+            <Space varName="--e-font-size-1" />
+            <Space varName="--e-font-size-2" />
+            <Space varName="--e-font-size-3" />
+            <Space varName="--e-font-size-4" />
+          </SpaceGroup>
           <h3>Borders</h3>
-          <Space varName="--e-border-radius" />
-          <Space varName="--e-border-width" />
+          <SpaceGroup>
+            <Space varName="--e-border-width" />
+            <Space varName="--e-border-radius" />
+          </SpaceGroup>
           <h3>Space</h3>
           <p>
             Space is also based on a modular scale, but the ratio used is the
             golden ratio.
           </p>
-          <Space varName="--e-space-0" />
-          <Space varName="--e-space-1" />
-          <Space varName="--e-space-2" />
-          <Space varName="--e-space-3" />
-          <Space varName="--e-space-4" />
-          <Space varName="--e-space-5" />
+          <SpaceGroup>
+            <Space varName="--e-space-0" />
+            <Space varName="--e-space-1" />
+            <Space varName="--e-space-2" />
+            <Space varName="--e-space-3" />
+            <Space varName="--e-space-4" />
+            <Space varName="--e-space-5" />
+          </SpaceGroup>
           <h2>Time</h2>
           <p>Space is fine, but we'll also get nowhere without time.</p>
           <Time varName="--e-time-0" />
