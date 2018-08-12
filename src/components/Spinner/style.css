@@ -1,7 +1,8 @@
 .e-spinner {
   --diameter: var(--e-space-4);
 
-  animation: e-rotate var(--e-time-1) infinite linear;
+  animation: e-fade-in var(--e-time-1) var(--e-transition),
+    e-rotate var(--e-time-1) linear infinite;
   border: calc(var(--diameter) / 8) solid var(--e-color-accent);
   border-right-color: transparent;
   border-radius: 50%;
