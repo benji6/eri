@@ -201,8 +201,9 @@ class App extends React.PureComponent {
             user know it's thinking.
           </p>
           <ButtonGroup>
-            <Button>Click me!</Button>
-            <Button disabled>Click me!</Button>
+            <Button>Primary</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button disabled>Primary disabled</Button>
           </ButtonGroup>
           <h3>Card</h3>
           <Card>

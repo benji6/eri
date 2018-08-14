@@ -1,15 +1,17 @@
 import * as React from 'react'
 import './style.css'
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'secondary'
+}
 
 class Button extends React.PureComponent<IProps> {
   render() {
-    const { type = 'submit', ...rest } = this.props
+    const { type = 'submit', variant = 'primary', ...rest } = this.props
 
-    return (
-      <button {...rest} className="e-button e-button--primary" type={type} />
-    )
+    const className = `e-button e-button--${variant}`
+
+    return <button {...rest} className={className} type={type} />
   }
 }
 
