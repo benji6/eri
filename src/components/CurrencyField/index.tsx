@@ -53,6 +53,7 @@ class CurrencyField extends React.Component<IProps> {
           <FieldLabel>{label}</FieldLabel>
           <span className="e-currency-field__input-container">
             <input
+              autoComplete="false"
               required
               {...rest}
               aria-invalid={Boolean(error)}
