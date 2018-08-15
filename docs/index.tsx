@@ -203,6 +203,7 @@ class App extends React.PureComponent {
           <ButtonGroup>
             <Button>Primary</Button>
             <Button variant="secondary">Secondary</Button>
+            <Button to="#">Link</Button>
             <Button disabled>Primary disabled</Button>
           </ButtonGroup>
           <h3>Card</h3>
