@@ -8,7 +8,7 @@ class FieldError extends React.PureComponent<IProps> {
     const { children, ...rest } = this.props
 
     return children ? (
-      <div {...rest} className="e-field-error">
+      <div {...rest} aria-live="polite" className="e-field-error">
         {children}
       </div>
     ) : null
