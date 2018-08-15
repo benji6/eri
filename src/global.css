@@ -26,7 +26,7 @@ header h1 {
 
 main {
   margin: 0 auto;
-  max-width: 48rem;
+  max-width: calc(12 * var(--e-space-5));
   padding: 0 var(--e-space-2);
 }
 
