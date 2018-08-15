@@ -21,6 +21,9 @@ a.e-button {
   .e-button {
     display: block;
     margin: var(--e-space-3) auto;
+  }
+
+  button.e-button {
     width: 100%;
   }
 }
@@ -37,40 +40,22 @@ a.e-button {
   color: var(--e-color-ground-more);
 }
 
-.e-button--secondary {
-  background: none;
-  border-color: var(--e-color-accent);
-  color: var(--e-color-accent);
+.e-button--primary:focus {
+  background: var(--e-color-accent-more);
+  border-color: var(--e-color-accent-more);
 }
 
-@media (min-width: 651px) {
-  .e-button--primary:focus {
-    background: var(--e-color-accent-more);
-    border-color: var(--e-color-accent-more);
-  }
+a.e-button--primary:focus:not(:disabled) {
+  color: var(--e-color-ground-more);
+}
 
-  a.e-button--primary:focus:not(:disabled) {
-    color: var(--e-color-ground-more);
-  }
+.e-button--primary:hover:not(:disabled) {
+  background: var(--e-color-accent-less);
+  border-color: var(--e-color-accent-less);
+}
 
-  .e-button--secondary:focus {
-    color: var(--e-color-accent-more);
-    border-color: var(--e-color-accent-more);
-  }
-
-  .e-button--primary:hover:not(:disabled) {
-    background: var(--e-color-accent-less);
-    border-color: var(--e-color-accent-less);
-  }
-
-  a.e-button--primary:hover:not(:disabled) {
-    color: var(--e-color-ground-more);
-  }
-
-  .e-button--secondary:hover:not(:disabled) {
-    color: var(--e-color-accent-less);
-    border-color: var(--e-color-accent-less);
-  }
+a.e-button--primary:hover:not(:disabled) {
+  color: var(--e-color-ground-more);
 }
 
 .e-button--primary:active {
@@ -81,4 +66,20 @@ a.e-button {
   border-color: var(--e-color-balance);
   cursor: not-allowed;
   background: var(--e-color-balance);
+}
+
+.e-button--secondary {
+  background: none;
+  border-color: var(--e-color-accent);
+  color: var(--e-color-accent);
+}
+
+.e-button--secondary:focus {
+  color: var(--e-color-accent-more);
+  border-color: var(--e-color-accent-more);
+}
+
+.e-button--secondary:hover:not(:disabled) {
+  color: var(--e-color-accent-less);
+  border-color: var(--e-color-accent-less);
 }
