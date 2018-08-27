@@ -1,6 +1,7 @@
 .e-button-group {
   display: flex;
-  margin-top: var(--e-space-4);
+  margin: var(--e-space-4) 0;
+  padding-top: var(--e-space-3);
   text-align: center;
 }
 
@@ -8,11 +9,19 @@
   .e-button-group {
     flex-direction: column;
   }
+
+  .e-button-group > *:not(:last-child) {
+    margin-bottom: var(--e-space-3);
+  }
 }
 
 @media (min-width: 651px) {
   .e-button-group {
     border-top: var(--e-border-width) solid var(--e-color-balance);
     justify-content: center;
+  }
+
+  .e-button-group > *:not(:last-child) {
+    margin-right: var(--e-space-3);
   }
 }

@@ -5,7 +5,6 @@
   cursor: pointer;
   font-size: inherit;
   font-weight: var(--e-font-bold);
-  margin: var(--e-space-3) 0;
   outline: 0;
   padding: var(--e-space-2) var(--e-space-3);
   transition-duration: var(--e-time-0);
@@ -24,12 +23,6 @@ a.e-button {
 
   button.e-button {
     width: 100%;
-  }
-}
-
-@media (min-width: 650px) {
-  .e-button:not(:last-child) {
-    margin-right: var(--e-space-3);
   }
 }
 
