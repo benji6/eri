@@ -19,5 +19,6 @@
 }
 
 .e-dialog__dialog {
+  margin: 0 var(--e-space-3);
   max-width: var(--e-max-width-0);
 }
