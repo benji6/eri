@@ -9,6 +9,7 @@ import {
   Select,
   Spinner,
   TextField,
+  Dialog,
 } from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
@@ -22,6 +23,14 @@ import './style.css'
 const metaThemeColor = document.querySelector('meta[name=theme-color]')
 
 class App extends React.PureComponent {
+  state = {
+    isDialogOpen: false,
+  }
+
+  handleDialogClose = () => this.setState({ isDialogOpen: false })
+
+  handleDialogOpen = () => this.setState({ isDialogOpen: true })
+
   switchToDarkTheme = () => {
     document.documentElement.classList.add('e-theme-dark')
     metaThemeColor.setAttribute(
@@ -41,6 +50,8 @@ class App extends React.PureComponent {
   }
 
   render() {
+    const { isDialogOpen } = this.state
+
     return (
       <>
         <header>
@@ -219,6 +230,20 @@ class App extends React.PureComponent {
             <h3>Card three</h3>
             <p>This is card three.</p>
           </Card>
+          <h3>Dialog</h3>
+          <ButtonGroup>
+            <Button onClick={this.handleDialogOpen}>Open dialog</Button>
+          </ButtonGroup>
+          <Dialog
+            onClose={this.handleDialogClose}
+            open={isDialogOpen}
+            title="Test dialog"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </Dialog>
           <h3>Link</h3>
           <p>Links take you places.</p>
           <a href="#">Click me!</a>
@@ -238,7 +263,7 @@ class App extends React.PureComponent {
             <Checkbox label="Checkbox" />
             <Checkbox
               error="Oops!"
-              label="Checkbox with a long label so we can see how it overflows, let's go down the waterfall"
+              label="Checkbox with a long label so we can see how it overflows"
             />
             <CurrencyField label="Currency field" />
             <CurrencyField integer label="Integer currency field" />

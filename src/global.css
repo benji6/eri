@@ -26,13 +26,13 @@ header h1 {
 
 main {
   margin: 0 auto;
-  max-width: calc(12 * var(--e-space-5));
+  max-width: var(--e-max-width-1);
   padding: 0 var(--e-space-2);
 }
 
 form {
   margin: var(--e-space-4) auto;
-  max-width: 32rem;
+  max-width: var(--e-max-width-0);
 }
 
 @media (min-width: 651px) {

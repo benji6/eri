@@ -55,7 +55,7 @@ a.e-button--primary:hover:not(:disabled) {
 }
 
 .e-button--primary:disabled {
-  border-color: var(--e-color-balance);
+  border-color: transparent;
   cursor: not-allowed;
   background: var(--e-color-balance);
 }
