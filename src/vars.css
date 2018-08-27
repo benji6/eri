@@ -76,8 +76,18 @@
   --e-color-accent: #339af0;
   --e-color-accent-less: #228be6;
   --e-color-accent-more: #4dabf7;
-  --e-color-balance-less: #495057;
-  --e-color-balance-more: #adb5bd;
+  --e-color-balance-less: hsla(
+    var(--e-hue-analagous-back),
+    var(--e-saturation-0),
+    20%,
+    0.8
+  );
+  --e-color-balance-more: hsla(
+    var(--e-hue-analagous-back),
+    var(--e-saturation-0),
+    40%,
+    0.8
+  );
   --e-color-figure: #f8f9fa;
   --e-color-figure-less: #f1f3f5;
   --e-color-ground: #212529;
