@@ -2,9 +2,9 @@
   --e-border-radius: 0.2rem;
   --e-border-width: 0.1rem;
   --e-box-shadow: 0 0 var(--e-space-1) var(--e-color-figure-less);
-  --e-color-accent: #1971c2;
-  --e-color-accent-less: #228be6;
-  --e-color-accent-more: #1864ab;
+  --e-color-accent: hsl(228, 85%, 45%);
+  --e-color-accent-less: hsl(228, 85%, 53%);
+  --e-color-accent-more: hsl(228, 85%, 37%);
   --e-color-balance: #868e96;
   --e-color-balance-less: #adb5bd;
   --e-color-balance-more: #495057;
