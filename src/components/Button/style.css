@@ -20,7 +20,6 @@ a.e-button {
 @media (max-width: 649px) {
   .e-button {
     display: block;
-    margin: var(--e-space-3) auto;
   }
 
   button.e-button {

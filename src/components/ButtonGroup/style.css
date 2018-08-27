@@ -1,10 +1,18 @@
 .e-button-group {
+  display: flex;
   margin-top: var(--e-space-4);
   text-align: center;
+}
+
+@media (max-width: 650px) {
+  .e-button-group {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 651px) {
   .e-button-group {
     border-top: var(--e-border-width) solid var(--e-color-balance);
+    justify-content: center;
   }
 }
