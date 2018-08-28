@@ -10,6 +10,7 @@ import {
   Spinner,
   TextField,
   Dialog,
+  Icon,
 } from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
@@ -260,6 +261,10 @@ class App extends React.PureComponent {
               <Button type="button">Submit</Button>
             </ButtonGroup>
           </form>
+          <h3>Icons</h3>
+          <Icon name="check" />
+          <Icon name="cross" />
+          <Icon name="down" />
           <h3>Link</h3>
           <p>Links take you places.</p>
           <a href="#">Click me!</a>
