@@ -20,6 +20,7 @@
 
 .e-dialog__content {
   position: relative;
+  padding: var(--e-space-1) 0;
 }
 
 .e-dialog__content > *:first-child {
@@ -33,21 +34,26 @@
 .e-dialog__close {
   background: none;
   border-radius: var(--e-border-radius);
-  border: var(--e-border-width) solid transparent;
+  border: none;
   color: inherit;
   cursor: pointer;
-  font-size: var(--e-font-size-3);
-  line-height: 1;
   outline: 0;
-  padding: 0 var(--e-space-1);
+  padding: 0;
   position: absolute;
   right: 0;
-  top: calc(-1 * var(--e-space-1));
+  top: 0;
+  transition-duration: var(--e-time-0);
+  transition-property: background-color, color;
+  transition-timing-function: var(--e-transition);
+}
+
+.e-dialog__close:hover {
+  color: var(--e-figure-less);
 }
 
 .e-dialog__close:focus:not(:active):not(:hover) {
-  border-color: var(--e-color-accent-less);
-  box-shadow: var(--e-input-box-shadow-focus);
+  background: black;
+  color: white;
 }
 
 .e-dialog__dialog {

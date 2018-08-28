@@ -2,6 +2,7 @@ import classnames from 'classnames'
 import * as React from 'react'
 import Card from '../Card'
 import './style.css'
+import Icon from '../Icon'
 
 const documentElementClassList = document.documentElement.classList
 
@@ -74,7 +75,7 @@ class Dialog extends React.Component<IProps> {
                   disabled={!open}
                   onClick={this.handleCloseClick}
                 >
-                  ×
+                  <Icon name="cross" />
                 </button>
                 <div id="e-dialog-desc">{children}</div>
               </div>
