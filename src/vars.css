@@ -20,7 +20,7 @@
   --e-transition: ease-in-out;
 
   /* color */
-  --e-hue-accent: 228;
+  --e-hue-accent: 220;
   --e-hue-accent-analagous: calc(var(--e-hue-accent) - 30);
   --e-saturation-0: 7%;
   --e-saturation-1: 75%;
