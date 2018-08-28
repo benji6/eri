@@ -139,6 +139,7 @@ class App extends React.PureComponent {
             <Color varName="--e-color-figure-less" />
             <Color varName="--e-color-figure" />
             <Color varName="--e-color-ground" />
+            <Color varName="--e-color-ground-more" />
           </ColorGroup>
           <ColorGroup name="Balance">
             <Color varName="--e-color-balance-less" />
@@ -191,10 +192,6 @@ class App extends React.PureComponent {
             You can center any text by setting the e-util attribute to "center"
           </p>
           <h2>Components</h2>
-          <h3>Spinner</h3>
-          <Spinner />
-          <Spinner variation="ground" />
-          <Spinner variation="page" />
           <h3>Button</h3>
           <p>
             Buttons are cute little things you press. Remember to always wrap
@@ -238,9 +235,6 @@ class App extends React.PureComponent {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </Dialog>
-          <h3>Link</h3>
-          <p>Links take you places.</p>
-          <a href="#">Click me!</a>
           <form>
             <h3>Form</h3>
             <p>This is a form.</p>
@@ -266,6 +260,13 @@ class App extends React.PureComponent {
               <Button type="button">Submit</Button>
             </ButtonGroup>
           </form>
+          <h3>Link</h3>
+          <p>Links take you places.</p>
+          <a href="#">Click me!</a>
+          <h3>Spinner</h3>
+          <Spinner />
+          <Spinner variation="ground" />
+          <Spinner variation="page" />
         </main>
       </>
     )
