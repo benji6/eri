@@ -23,10 +23,11 @@
   --e-hue-accent: 228;
   --e-hue-accent-analagous: calc(var(--e-hue-accent) - 30);
   --e-saturation-0: 7%;
-  --e-saturation-1: 85%;
-  --e-color-accent: hsl(var(--e-hue-accent), var(--e-saturation-1), 45%);
-  --e-color-accent-less: hsl(var(--e-hue-accent), var(--e-saturation-1), 53%);
-  --e-color-accent-more: hsl(var(--e-hue-accent), var(--e-saturation-1), 37%);
+  --e-saturation-1: 75%;
+  --e-saturation-2: 85%;
+  --e-color-accent: hsl(var(--e-hue-accent), var(--e-saturation-2), 45%);
+  --e-color-accent-less: hsl(var(--e-hue-accent), var(--e-saturation-2), 53%);
+  --e-color-accent-more: hsl(var(--e-hue-accent), var(--e-saturation-2), 37%);
   --e-color-balance: hsla(
     var(--e-hue-accent-analagous),
     var(--e-saturation-0),
@@ -49,7 +50,7 @@
   --e-color-figure-less: #343a40;
   --e-color-ground: #f8f9fa;
   --e-color-ground-more: #ffffff;
-  --e-color-negative: hsl(14, 75%, 45%);
+  --e-color-negative: hsl(14, var(--e-saturation-1), 45%);
 
   /* typgraphy */
   --e-font-bold: 600;
