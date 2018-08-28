@@ -136,21 +136,23 @@ class App extends React.PureComponent {
             <Button onClick={this.switchToDarkTheme}>Dark</Button>
             <Button onClick={this.switchToLightTheme}>Light</Button>
           </ButtonGroup>
-          <ColorGroup name="Figure &amp; ground">
-            <Color varName="--e-color-figure-less" />
+          <ColorGroup name="Figure">
             <Color varName="--e-color-figure" />
-            <Color varName="--e-color-ground" />
-            <Color varName="--e-color-ground-more" />
+            <Color varName="--e-color-figure-less" />
           </ColorGroup>
           <ColorGroup name="Balance">
-            <Color varName="--e-color-balance-less" />
-            <Color varName="--e-color-balance" />
             <Color varName="--e-color-balance-more" />
+            <Color varName="--e-color-balance" />
+            <Color varName="--e-color-balance-less" />
+          </ColorGroup>
+          <ColorGroup name="Ground">
+            <Color varName="--e-color-ground-more" />
+            <Color varName="--e-color-ground" />
           </ColorGroup>
           <ColorGroup name="Accent">
-            <Color varName="--e-color-accent-less" />
-            <Color varName="--e-color-accent" />
             <Color varName="--e-color-accent-more" />
+            <Color varName="--e-color-accent" />
+            <Color varName="--e-color-accent-less" />
           </ColorGroup>
           <ColorGroup name="Negative">
             <Color varName="--e-color-negative" />
