@@ -32,6 +32,9 @@ class Dialog extends React.Component<IProps> {
     documentElementClassList.remove('e-overflow-hidden')
   }
 
+  handleCloseClick = (e: React.MouseEvent<HTMLButtonElement>) =>
+    this.props.onClose()
+
   handleKeyDown = (e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>) => {
     if (e.keyCode === 27) this.props.onClose()
   }
@@ -62,8 +65,19 @@ class Dialog extends React.Component<IProps> {
         >
           <div className="e-dialog__dialog">
             <Card>
-              <h4 id="e-dialog-title">{title}</h4>
-              <div id="e-dialog-desc">{children}</div>
+              <div className="e-dialog__content">
+                <h4 id="e-dialog-title">{title}</h4>
+                <button
+                  aria-hidden={!open}
+                  aria-label="close"
+                  className="e-dialog__close"
+                  disabled={!open}
+                  onClick={this.handleCloseClick}
+                >
+                  ×
+                </button>
+                <div id="e-dialog-desc">{children}</div>
+              </div>
             </Card>
           </div>
         </div>

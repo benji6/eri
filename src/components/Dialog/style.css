@@ -18,6 +18,39 @@
   pointer-events: none;
 }
 
+.e-dialog__content {
+  position: relative;
+}
+
+.e-dialog__content > *:first-child {
+  margin-top: 0;
+}
+
+.e-dialog__content > *:last-child {
+  margin-bottom: 0;
+}
+
+.e-dialog__close {
+  background: none;
+  border-radius: var(--e-border-radius);
+  border: var(--e-border-width) solid transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: var(--e-font-size-3);
+  line-height: 1;
+  margin-top: calc(-1 * var(--e-space-0));
+  outline: 0;
+  padding: 0 var(--e-space-1);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.e-dialog__close:focus:not(:active):not(:hover) {
+  border-color: var(--e-color-accent-less);
+  box-shadow: var(--e-input-box-shadow-focus);
+}
+
 .e-dialog__dialog {
   margin: 0 var(--e-space-3);
   max-width: var(--e-max-width-0);
