@@ -20,27 +20,27 @@
   --e-transition: ease-in-out;
 
   /* color */
-  --e-hue: 228;
-  --e-hue-analagous-back: calc(var(--e-hue) - 30);
+  --e-hue-accent: 228;
+  --e-hue-accent-analagous: calc(var(--e-hue-accent) - 30);
   --e-saturation-0: 7%;
   --e-saturation-1: 85%;
-  --e-color-accent: hsl(var(--e-hue), var(--e-saturation-1), 45%);
-  --e-color-accent-less: hsl(var(--e-hue), var(--e-saturation-1), 53%);
-  --e-color-accent-more: hsl(var(--e-hue), var(--e-saturation-1), 37%);
+  --e-color-accent: hsl(var(--e-hue-accent), var(--e-saturation-1), 45%);
+  --e-color-accent-less: hsl(var(--e-hue-accent), var(--e-saturation-1), 53%);
+  --e-color-accent-more: hsl(var(--e-hue-accent), var(--e-saturation-1), 37%);
   --e-color-balance: hsla(
-    var(--e-hue-analagous-back),
+    var(--e-hue-accent-analagous),
     var(--e-saturation-0),
     30%,
     0.8
   );
   --e-color-balance-less: hsla(
-    var(--e-hue-analagous-back),
+    var(--e-hue-accent-analagous),
     var(--e-saturation-0),
     40%,
     0.8
   );
   --e-color-balance-more: hsla(
-    var(--e-hue-analagous-back),
+    var(--e-hue-accent-analagous),
     var(--e-saturation-0),
     20%,
     0.8
@@ -77,13 +77,13 @@
   --e-color-accent-less: #228be6;
   --e-color-accent-more: #4dabf7;
   --e-color-balance-less: hsla(
-    var(--e-hue-analagous-back),
+    var(--e-hue-accent-analagous),
     var(--e-saturation-0),
     20%,
     0.8
   );
   --e-color-balance-more: hsla(
-    var(--e-hue-analagous-back),
+    var(--e-hue-accent-analagous),
     var(--e-saturation-0),
     40%,
     0.8
