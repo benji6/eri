@@ -38,12 +38,11 @@
   cursor: pointer;
   font-size: var(--e-font-size-3);
   line-height: 1;
-  margin-top: calc(-1 * var(--e-space-1));
   outline: 0;
   padding: 0 var(--e-space-1);
   position: absolute;
   right: 0;
-  top: 0;
+  top: calc(-1 * var(--e-space-1));
 }
 
 .e-dialog__close:focus:not(:active):not(:hover) {
