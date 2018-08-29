@@ -52,8 +52,8 @@
 }
 
 .e-dialog__close:focus:not(:active):not(:hover) {
-  background: black;
-  color: white;
+  background: var(--e-color-figure);
+  color: var(--e-color-ground);
 }
 
 .e-dialog__dialog {

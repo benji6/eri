@@ -52,35 +52,33 @@ export default class Dialog extends React.Component<IProps> {
     })
 
     return (
-      <div>
-        <div
-          {...rest}
-          aria-describedby="e-dialog-desc"
-          aria-hidden={!open}
-          aria-labelledby="e-dialog-title"
-          className={className}
-          onClick={this.handleMaskClick}
-          onKeyDown={this.handleKeyDown}
-          ref={el => (this.el = el)}
-          role="dialog"
-        >
-          <div className="e-dialog__dialog">
-            <Card>
-              <div className="e-dialog__content">
-                <h4 id="e-dialog-title">{title}</h4>
-                <button
-                  aria-hidden={!open}
-                  aria-label="close"
-                  className="e-dialog__close"
-                  disabled={!open}
-                  onClick={this.handleCloseClick}
-                >
-                  <Icon name="cross" />
-                </button>
-                <div id="e-dialog-desc">{children}</div>
-              </div>
-            </Card>
-          </div>
+      <div
+        {...rest}
+        aria-describedby="e-dialog-desc"
+        aria-hidden={!open}
+        aria-labelledby="e-dialog-title"
+        className={className}
+        onClick={this.handleMaskClick}
+        onKeyDown={this.handleKeyDown}
+        ref={el => (this.el = el)}
+        role="dialog"
+      >
+        <div className="e-dialog__dialog">
+          <Card>
+            <div className="e-dialog__content">
+              <h4 id="e-dialog-title">{title}</h4>
+              <button
+                aria-hidden={!open}
+                aria-label="close"
+                className="e-dialog__close"
+                disabled={!open}
+                onClick={this.handleCloseClick}
+              >
+                <Icon name="cross" />
+              </button>
+              <div id="e-dialog-desc">{children}</div>
+            </div>
+          </Card>
         </div>
       </div>
     )
