@@ -6,7 +6,9 @@
   font-weight: var(--e-font-bold);
   outline: 0;
   padding: var(--e-space-2) var(--e-space-3);
-  transition: border-color var(--e-time-0) var(--e-transition);
+  transition-duration: var(--e-time-0);
+  transition-property: background, border-color;
+  transition-timing-function: var(--e-transition);
 }
 
 a.e-button {
@@ -27,21 +29,13 @@ a.e-button {
 
 .e-button--primary {
   background: var(--e-color-accent);
-  background-image: linear-gradient(
-    var(--e-color-accent),
-    var(--e-color-accent-more)
-  );
   color: var(--e-color-ground-more);
   margin: calc(-1 * var(--e-border-width)) 0;
   position: relative;
 }
 
 .e-button--primary:hover {
-  background: var(--e-color-more);
-  background-image: linear-gradient(
-    var(--e-color-accent-more),
-    var(--e-color-accent)
-  );
+  background: var(--e-color-accent-less);
 }
 
 .e-button--primary:focus {
@@ -57,7 +51,7 @@ a.e-button--primary:hover {
 }
 
 .e-button--primary:active {
-  background: var(--e-color-accent);
+  background: var(--e-color-accent-more);
 }
 
 .e-button--primary:disabled {
