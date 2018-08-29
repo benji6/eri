@@ -7,7 +7,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: React.ReactNode
 }
 
-class Checkbox extends React.PureComponent<IProps> {
+export default class Checkbox extends React.PureComponent<IProps> {
   public render() {
     const { label, error, ...rest } = this.props
 
@@ -28,5 +28,3 @@ class Checkbox extends React.PureComponent<IProps> {
     )
   }
 }
-
-export default Checkbox

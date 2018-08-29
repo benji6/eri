@@ -1,12 +1,10 @@
 import * as React from 'react'
 import './style.css'
 
-class FieldLabel extends React.PureComponent<
+export default class FieldLabel extends React.PureComponent<
   React.HTMLAttributes<HTMLDivElement>
 > {
   render() {
     return <span {...this.props} className="e-field-label" />
   }
 }
-
-export default FieldLabel

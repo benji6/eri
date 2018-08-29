@@ -17,7 +17,7 @@ interface IProps {
     | '--e-color-negative'
 }
 
-class Color extends React.Component<IProps> {
+export default class Color extends React.Component<IProps> {
   render() {
     const { varName } = this.props
     const color = getStylePropValue(varName)
@@ -35,5 +35,3 @@ class Color extends React.Component<IProps> {
     )
   }
 }
-
-export default Color

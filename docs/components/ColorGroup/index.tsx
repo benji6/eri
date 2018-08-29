@@ -5,7 +5,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   name: React.ReactNode
 }
 
-class ColorGroup extends React.PureComponent<IProps> {
+export default class ColorGroup extends React.PureComponent<IProps> {
   render() {
     const { name, ...rest } = this.props
 
@@ -17,5 +17,3 @@ class ColorGroup extends React.PureComponent<IProps> {
     )
   }
 }
-
-export default ColorGroup

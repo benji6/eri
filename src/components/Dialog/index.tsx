@@ -13,7 +13,7 @@ interface IProps {
   title: React.ReactNode
 }
 
-class Dialog extends React.Component<IProps> {
+export default class Dialog extends React.Component<IProps> {
   el: HTMLDivElement | null = null
 
   componentDidMount() {
@@ -86,5 +86,3 @@ class Dialog extends React.Component<IProps> {
     )
   }
 }
-
-export default Dialog

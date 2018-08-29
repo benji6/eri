@@ -7,7 +7,7 @@ interface IProps
   variant?: 'secondary'
 }
 
-class Button extends React.PureComponent<IProps> {
+export default class Button extends React.PureComponent<IProps> {
   render() {
     const { to, type = 'submit', variant = 'primary', ...rest } = this.props
 
@@ -20,5 +20,3 @@ class Button extends React.PureComponent<IProps> {
     })
   }
 }
-
-export default Button

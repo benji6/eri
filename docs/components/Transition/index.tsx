@@ -6,7 +6,7 @@ interface IProps {
   varName: '--e-transition'
 }
 
-class Transition extends React.PureComponent<IProps> {
+export default class Transition extends React.PureComponent<IProps> {
   render() {
     const { varName } = this.props
     const transition = getStylePropValue(varName)
@@ -31,5 +31,3 @@ class Transition extends React.PureComponent<IProps> {
     )
   }
 }
-
-export default Transition

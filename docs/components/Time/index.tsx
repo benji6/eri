@@ -6,7 +6,7 @@ interface IProps {
   varName: '--e-time-0' | '--e-time-1'
 }
 
-class Time extends React.PureComponent<IProps> {
+export default class Time extends React.PureComponent<IProps> {
   render() {
     const { varName } = this.props
     const time = getStylePropValue(varName)
@@ -28,5 +28,3 @@ class Time extends React.PureComponent<IProps> {
     )
   }
 }
-
-export default Time

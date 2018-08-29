@@ -3,7 +3,7 @@ import './style.css'
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-class FieldError extends React.PureComponent<IProps> {
+export default class FieldError extends React.PureComponent<IProps> {
   render() {
     const { children, ...rest } = this.props
 
@@ -14,5 +14,3 @@ class FieldError extends React.PureComponent<IProps> {
     ) : null
   }
 }
-
-export default FieldError

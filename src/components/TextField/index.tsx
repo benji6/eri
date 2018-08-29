@@ -8,7 +8,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   readonly label: React.ReactNode
 }
 
-class TextField extends React.PureComponent<IProps> {
+export default class TextField extends React.PureComponent<IProps> {
   render() {
     const { label, error, ...rest } = this.props
 
@@ -23,5 +23,3 @@ class TextField extends React.PureComponent<IProps> {
     )
   }
 }
-
-export default TextField

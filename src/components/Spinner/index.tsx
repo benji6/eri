@@ -6,7 +6,7 @@ interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
   variation?: 'ground' | 'page'
 }
 
-class Spinner extends React.PureComponent<IProps> {
+export default class Spinner extends React.PureComponent<IProps> {
   render() {
     const { variation, ...rest } = this.props
 
@@ -18,5 +18,3 @@ class Spinner extends React.PureComponent<IProps> {
     return <span {...rest} className={className} />
   }
 }
-
-export default Spinner

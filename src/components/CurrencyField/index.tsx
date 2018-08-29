@@ -11,7 +11,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   onPaste?: any
 }
 
-class CurrencyField extends React.Component<IProps> {
+export default class CurrencyField extends React.Component<IProps> {
   shouldPreventInput = (potentialNewValue: string, event: KeyboardEvent) => {
     const potentialNewNumberValue = Number(potentialNewValue)
     const wouldBeNaN = isNaN(potentialNewNumberValue)
@@ -70,5 +70,3 @@ class CurrencyField extends React.Component<IProps> {
     )
   }
 }
-
-export default CurrencyField

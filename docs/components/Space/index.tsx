@@ -23,7 +23,7 @@ interface IState {
   value?: number
 }
 
-class Space extends React.PureComponent<IProps, IState> {
+export default class Space extends React.PureComponent<IProps, IState> {
   myRef: React.RefObject<HTMLDivElement> = React.createRef()
   state = { value: undefined }
 
@@ -57,5 +57,3 @@ class Space extends React.PureComponent<IProps, IState> {
     )
   }
 }
-
-export default Space

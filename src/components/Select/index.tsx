@@ -8,7 +8,7 @@ interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label: React.ReactNode
 }
 
-class Select extends React.PureComponent<IProps> {
+export default class Select extends React.PureComponent<IProps> {
   render() {
     const { error, label, ...rest } = this.props
 
@@ -28,5 +28,3 @@ class Select extends React.PureComponent<IProps> {
     )
   }
 }
-
-export default Select
