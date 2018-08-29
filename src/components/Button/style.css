@@ -10,6 +10,8 @@
 }
 
 a.e-button {
+  align-items: center;
+  display: inline-flex;
   text-decoration: none !important;
 }
 
