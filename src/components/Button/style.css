@@ -1,6 +1,6 @@
 .e-button {
   border-radius: var(--e-border-radius);
-  border: none;
+  border: var(--e-border-width) solid var(--e-color-accent);
   cursor: pointer;
   font-size: inherit;
   font-weight: var(--e-font-bold);
@@ -31,7 +31,6 @@ a.e-button {
 .e-button--primary {
   background: var(--e-color-accent);
   color: var(--e-color-ground-more);
-  margin: calc(-1 * var(--e-border-width)) 0;
   position: relative;
 }
 
@@ -58,20 +57,20 @@ a.e-button--primary:hover {
 .e-button--primary:disabled {
   cursor: not-allowed;
   background: var(--e-color-balance);
+  border-color: transparent;
 }
 
 .e-button--secondary {
   background: none;
-  box-shadow: 0 0 0 var(--e-border-width) var(--e-color-accent);
   color: var(--e-color-accent);
 }
 
 .e-button--secondary:focus {
-  box-shadow: 0 0 0 var(--e-border-width) var(--e-color-analagous);
+  border-color: var(--e-color-analagous);
   color: var(--e-color-analagous);
 }
 
 .e-button--secondary:hover:not(:disabled) {
-  box-shadow: 0 0 0 var(--e-border-width) var(--e-color-accent-less);
+  border-color: var(--e-color-accent-less);
   color: var(--e-color-accent-less);
 }
