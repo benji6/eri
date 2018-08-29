@@ -21,35 +21,36 @@
 
   /* color */
   --e-hue-accent: 220;
-  --e-hue-accent-analagous: calc(var(--e-hue-accent) - 30);
+  --e-hue-accent-analagous-0: calc(var(--e-hue-accent) - 30);
+  --e-hue-accent-analagous-1: calc(var(--e-hue-accent) + 30);
   --e-saturation-0: 7%;
   --e-saturation-1: 75%;
   --e-saturation-2: 85%;
   --e-color-accent: hsl(var(--e-hue-accent), var(--e-saturation-2), 45%);
   --e-color-accent-less: hsl(var(--e-hue-accent), var(--e-saturation-2), 53%);
   --e-color-accent-more: hsl(var(--e-hue-accent), var(--e-saturation-2), 37%);
+  --e-color-analagous: hsl(
+    var(--e-hue-accent-analagous-1),
+    var(--e-saturation-2),
+    35%
+  );
   --e-color-balance: hsla(
-    var(--e-hue-accent-analagous),
+    var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
     30%,
     0.8
   );
   --e-color-balance-less: hsla(
-    var(--e-hue-accent-analagous),
+    var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
     40%,
     0.8
   );
-  --e-color-balance-more: hsla(
-    var(--e-hue-accent-analagous),
-    var(--e-saturation-0),
-    20%,
-    0.8
-  );
-  --e-color-figure: hsl(var(--e-hue-accent-analagous), 11%, 15%);
-  --e-color-figure-less: hsl(var(--e-hue-accent-analagous), 10%, 23%);
-  --e-color-ground: hsl(var(--e-hue-accent-analagous), 17%, 98%);
-  --e-color-ground-more: hsl(var(--e-hue-accent-analagous), 10%, 100%);
+  --e-color-balance-more: hsla(var(-0), var(--e-saturation-0), 20%, 0.8);
+  --e-color-figure: hsl(var(--e-hue-accent-analagous-0), 11%, 15%);
+  --e-color-figure-less: hsl(var(--e-hue-accent-analagous-0), 10%, 23%);
+  --e-color-ground: hsl(var(--e-hue-accent-analagous-0), 17%, 98%);
+  --e-color-ground-more: hsl(var(--e-hue-accent-analagous-0), 10%, 100%);
   --e-color-negative: hsl(14, var(--e-saturation-1), 45%);
 
   /* typgraphy */
@@ -78,13 +79,13 @@
   --e-color-accent-less: #228be6;
   --e-color-accent-more: #4dabf7;
   --e-color-balance-less: hsla(
-    var(--e-hue-accent-analagous),
+    var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
     20%,
     0.8
   );
   --e-color-balance-more: hsla(
-    var(--e-hue-accent-analagous),
+    var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
     40%,
     0.8

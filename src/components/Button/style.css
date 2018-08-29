@@ -70,8 +70,8 @@ a.e-button {
 }
 
 .e-button--primary:focus {
-  background: var(--e-color-accent-more);
-  border-color: var(--e-color-accent-more);
+  background: var(--e-color-analagous);
+  border-color: var(--e-color-analagous);
 }
 
 a.e-button--primary:focus:not(:disabled) {
@@ -100,8 +100,8 @@ a.e-button--primary:hover:not(:disabled) {
 }
 
 .e-button--secondary:focus {
-  color: var(--e-color-accent-more);
-  border-color: var(--e-color-accent-more);
+  color: var(--e-color-analagous);
+  border-color: var(--e-color-analagous);
 }
 
 .e-button--secondary:hover:not(:disabled) {
