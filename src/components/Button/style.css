@@ -1,7 +1,6 @@
 .e-button {
   border-radius: var(--e-border-radius);
-  border-style: solid;
-  border: var(--e-border-width) solid transparent;
+  border: none;
   cursor: pointer;
   font-size: inherit;
   font-weight: var(--e-font-bold);
@@ -28,8 +27,8 @@ a.e-button {
 
 .e-button--primary {
   background: none;
-  border-color: var(--e-color-accent);
   color: var(--e-color-ground-more);
+  margin: calc(-1 * var(--e-border-width)) 0;
   position: relative;
 }
 
@@ -38,6 +37,7 @@ a.e-button {
     var(--e-color-accent),
     var(--e-color-accent-more)
   );
+  border-radius: var(--e-border-radius);
   bottom: 0;
   content: '';
   display: block;
@@ -53,6 +53,7 @@ a.e-button {
     var(--e-color-accent-more),
     var(--e-color-accent)
   );
+  border-radius: var(--e-border-radius);
   bottom: 0;
   content: '';
   display: block;
@@ -71,7 +72,6 @@ a.e-button {
 
 .e-button--primary:focus {
   background: var(--e-color-analagous);
-  border-color: var(--e-color-analagous);
 }
 
 a.e-button--primary:focus:not(:disabled) {
@@ -84,27 +84,25 @@ a.e-button--primary:hover:not(:disabled) {
 
 .e-button--primary:active {
   background: var(--e-color-accent-more);
-  border-color: var(--e-color-accent-more);
 }
 
 .e-button--primary:disabled {
-  border-color: transparent;
   cursor: not-allowed;
   background: var(--e-color-balance);
 }
 
 .e-button--secondary {
   background: none;
-  border-color: var(--e-color-accent);
+  box-shadow: 0 0 0 var(--e-border-width) var(--e-color-accent);
   color: var(--e-color-accent);
 }
 
 .e-button--secondary:focus {
+  box-shadow: 0 0 0 var(--e-border-width) var(--e-color-analagous);
   color: var(--e-color-analagous);
-  border-color: var(--e-color-analagous);
 }
 
 .e-button--secondary:hover:not(:disabled) {
+  box-shadow: 0 0 0 var(--e-border-width) var(--e-color-accent-less);
   color: var(--e-color-accent-less);
-  border-color: var(--e-color-accent-less);
 }
