@@ -1,4 +1,5 @@
 .e-icon {
   height: var(--e-font-size-2);
+  vertical-align: middle;
   width: var(--e-font-size-2);
 }
