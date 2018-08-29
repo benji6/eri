@@ -14,6 +14,7 @@
 a.e-button {
   align-items: center;
   display: inline-flex;
+  justify-content: center;
   text-decoration: none !important;
 }
 
