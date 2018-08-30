@@ -133,8 +133,8 @@ class App extends React.PureComponent {
             For the dark theme just add the class <code>e-theme-dark</code>.
           </p>
           <ButtonGroup>
-            <Button onClick={this.switchToDarkTheme}>Dark</Button>
             <Button onClick={this.switchToLightTheme}>Light</Button>
+            <Button onClick={this.switchToDarkTheme}>Dark</Button>
           </ButtonGroup>
           <ColorGroup name="Figure">
             <Color varName="--e-color-figure" />

@@ -23,7 +23,7 @@
     justify-content: center;
   }
 
-  .e-button-group > *:not(:last-child) {
+  .e-button-group > *:not(:first-child) {
     margin-right: var(--e-space-3);
   }
 }
