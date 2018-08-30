@@ -21,8 +21,14 @@
 
   /* color */
   --e-hue-accent: 220;
-  --e-hue-accent-analagous-0: calc(var(--e-hue-accent) - 30);
-  --e-hue-accent-analagous-1: calc(var(--e-hue-accent) + 30);
+  --e-hue-negative: 345;
+  --e-analagous-rotation: 30;
+  --e-hue-accent-analagous-0: calc(
+    var(--e-hue-accent) - var(--e-analagous-rotation)
+  );
+  --e-hue-accent-analagous-1: calc(
+    var(--e-hue-accent) + var(--e-analagous-rotation)
+  );
   --e-saturation-0: 7%;
   --e-saturation-1: 75%;
   --e-saturation-2: 85%;
@@ -56,7 +62,22 @@
   --e-color-figure-less: hsl(var(--e-hue-accent-analagous-0), 10%, 23%);
   --e-color-ground: hsl(var(--e-hue-accent-analagous-0), 17%, 98%);
   --e-color-ground-more: hsl(var(--e-hue-accent-analagous-0), 10%, 100%);
-  --e-color-negative: hsl(14, var(--e-saturation-1), 45%);
+  --e-color-negative: hsl(var(--e-hue-negative), var(--e-saturation-1), 45%);
+  --e-color-negative-analagous: hsl(
+    calc(var(--e-hue-negative) - var(--e-analagous-rotation)),
+    var(--e-saturation-2),
+    35%
+  );
+  --e-color-negative-less: hsl(
+    var(--e-hue-negative),
+    var(--e-saturation-1),
+    53%
+  );
+  --e-color-negative-more: hsl(
+    var(--e-hue-negative),
+    var(--e-saturation-1),
+    37%
+  );
 
   /* typgraphy */
   --e-font-bold: 600;
@@ -99,5 +120,20 @@
   --e-color-figure-less: #f1f3f5;
   --e-color-ground: #212529;
   --e-color-ground-more: #000000;
-  --e-color-negative: #fa5252;
+  --e-color-negative: hsl(var(--e-hue-negative), var(--e-saturation-1), 45%);
+  --e-color-negative-analagous: hsl(
+    calc(var(--e-hue-negative) - var(--e-analagous-rotation)),
+    var(--e-saturation-2),
+    35%
+  );
+  --e-color-negative-less: hsl(
+    var(--e-hue-negative),
+    var(--e-saturation-1),
+    37%
+  );
+  --e-color-negative-more: hsl(
+    var(--e-hue-negative),
+    var(--e-saturation-1),
+    53%
+  );
 }

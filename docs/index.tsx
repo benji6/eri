@@ -150,13 +150,16 @@ class App extends React.PureComponent {
             <Color varName="--e-color-ground" />
           </ColorGroup>
           <ColorGroup name="Accent">
-            <Color varName="--e-color-accent-analagous" />
             <Color varName="--e-color-accent-more" />
             <Color varName="--e-color-accent" />
             <Color varName="--e-color-accent-less" />
+            <Color varName="--e-color-accent-analagous" />
           </ColorGroup>
           <ColorGroup name="Negative">
+            <Color varName="--e-color-negative-more" />
             <Color varName="--e-color-negative" />
+            <Color varName="--e-color-negative-less" />
+            <Color varName="--e-color-negative-analagous" />
           </ColorGroup>
           <h2>Typography</h2>
           <p>
@@ -209,8 +212,18 @@ class App extends React.PureComponent {
           <ButtonGroup>
             <Button>Primary</Button>
             <Button variant="secondary">Secondary</Button>
+            <a href="#">Link</a>
+          </ButtonGroup>
+          <ButtonGroup>
             <Button to="#">Link</Button>
+            <Button variant="secondary">Secondary</Button>
             <Button disabled>Primary disabled</Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button sentiment="negative">Negative</Button>
+            <Button sentiment="negative" variant="secondary">
+              Negative secondary
+            </Button>
           </ButtonGroup>
           <h3>Card</h3>
           <Card>

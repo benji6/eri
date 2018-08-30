@@ -16,6 +16,9 @@ interface IProps {
     | '--e-color-ground'
     | '--e-color-ground-more'
     | '--e-color-negative'
+    | '--e-color-negative-analagous'
+    | '--e-color-negative-less'
+    | '--e-color-negative-more'
 }
 
 export default class Color extends React.Component<IProps> {

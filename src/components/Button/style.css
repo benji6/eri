@@ -1,6 +1,11 @@
 .e-button {
+  --color: var(--e-color-accent);
+  --color-active: var(--e-color-accent-more);
+  --color-focus: var(--e-color-accent-analagous);
+  --color-hover: var(--e-color-accent-less);
+
   border-radius: var(--e-border-radius);
-  border: var(--e-border-width) solid var(--e-color-accent);
+  border: var(--e-border-width) solid var(--color);
   cursor: pointer;
   font-size: inherit;
   font-weight: var(--e-font-bold);
@@ -9,6 +14,13 @@
   transition-duration: var(--e-time-0);
   transition-property: background, border-color;
   transition-timing-function: var(--e-transition);
+}
+
+.e-button--negative {
+  --color: var(--e-color-negative);
+  --color-active: var(--e-color-negative-more);
+  --color-focus: var(--e-color-negative-analagous);
+  --color-hover: var(--e-color-negative-less);
 }
 
 a.e-button {
@@ -29,19 +41,19 @@ a.e-button {
 }
 
 .e-button--primary {
-  background: var(--e-color-accent);
+  background: var(--color);
   color: var(--e-color-ground-more);
   position: relative;
 }
 
 .e-button--primary:hover {
-  background: var(--e-color-accent-less);
-  border-color: var(--e-color-accent-less);
+  background: var(--color-hover);
+  border-color: var(--color-hover);
 }
 
 .e-button--primary:focus {
-  background: var(--e-color-accent-analagous);
-  border-color: var(--e-color-accent-analagous);
+  background: var(--color-focus);
+  border-color: var(--color-focus);
 }
 
 a.e-button--primary:focus {
@@ -53,7 +65,7 @@ a.e-button--primary:hover {
 }
 
 .e-button--primary:active {
-  background: var(--e-color-accent-more);
+  background: var(--color-active);
 }
 
 .e-button--primary:disabled {
@@ -64,15 +76,15 @@ a.e-button--primary:hover {
 
 .e-button--secondary {
   background: none;
-  color: var(--e-color-accent);
+  color: var(--color);
 }
 
 .e-button--secondary:focus {
-  border-color: var(--e-color-accent-analagous);
-  color: var(--e-color-accent-analagous);
+  border-color: var(--color-focus);
+  color: var(--color-focus);
 }
 
 .e-button--secondary:hover:not(:disabled) {
-  border-color: var(--e-color-accent-less);
-  color: var(--e-color-accent-less);
+  border-color: var(--color-hover);
+  color: var(--color-hover);
 }
