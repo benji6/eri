@@ -25,7 +25,13 @@
   padding: var(--e-space-1) 0;
 }
 
-.e-dialog__content > *:first-child {
+.e-dialog__header {
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.e-dialog__header > *:first-child {
   margin-top: 0;
 }
 
@@ -39,9 +45,7 @@
   border: none;
   color: inherit;
   padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  margin-left: var(--e-space-2);
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;
   transition-timing-function: var(--e-transition);

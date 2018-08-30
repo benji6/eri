@@ -66,16 +66,18 @@ export default class Dialog extends React.Component<IProps> {
         <div className="e-dialog__dialog">
           <Card>
             <div className="e-dialog__content">
-              <h4 id="e-dialog-title">{title}</h4>
-              <button
-                aria-hidden={!open}
-                aria-label="close"
-                className="e-dialog__close"
-                disabled={!open}
-                onClick={this.handleCloseClick}
-              >
-                <Icon name="cross" />
-              </button>
+              <div className="e-dialog__header">
+                <h4 id="e-dialog-title">{title}</h4>
+                <button
+                  aria-hidden={!open}
+                  aria-label="close"
+                  className="e-dialog__close"
+                  disabled={!open}
+                  onClick={this.handleCloseClick}
+                >
+                  <Icon name="cross" />
+                </button>
+              </div>
               <div id="e-dialog-desc">{children}</div>
             </div>
           </Card>
