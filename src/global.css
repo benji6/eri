@@ -133,3 +133,12 @@ select[aria-invalid='true'] {
   border-color: var(--e-color-negative);
   box-shadow: none;
 }
+
+button {
+  cursor: pointer;
+  outline: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

@@ -6,18 +6,12 @@
 
   border-radius: var(--e-border-radius);
   border: var(--e-border-width) solid var(--color);
-  cursor: pointer;
   font-size: inherit;
   font-weight: var(--e-font-bold);
-  outline: 0;
   padding: var(--e-space-2) var(--e-space-3);
   transition-duration: var(--e-time-0);
   transition-property: background, border-color;
   transition-timing-function: var(--e-transition);
-}
-
-.e-button:disabled {
-  cursor: not-allowed;
 }
 
 .e-button--negative {

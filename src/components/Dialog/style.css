@@ -38,8 +38,6 @@
   border-radius: var(--e-border-radius);
   border: none;
   color: inherit;
-  cursor: pointer;
-  outline: 0;
   padding: 0;
   position: absolute;
   right: 0;
