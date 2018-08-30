@@ -36,10 +36,12 @@ a.e-button {
 
 .e-button--primary:hover {
   background: var(--e-color-accent-less);
+  border-color: var(--e-color-accent-less);
 }
 
 .e-button--primary:focus {
   background: var(--e-color-analagous);
+  border-color: var(--e-color-analagous);
 }
 
 a.e-button--primary:focus {
