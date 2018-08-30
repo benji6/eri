@@ -5,9 +5,9 @@ import './style.css'
 interface IProps {
   varName:
     | '--e-color-accent'
+    | '--e-color-accent-analagous'
     | '--e-color-accent-less'
     | '--e-color-accent-more'
-    | '--e-color-analagous'
     | '--e-color-balance'
     | '--e-color-balance-less'
     | '--e-color-balance-more'

@@ -89,7 +89,7 @@ main a {
 }
 
 main a:focus {
-  color: var(--e-color-analagous);
+  color: var(--e-color-accent-analagous);
   text-decoration: underline;
 }
 

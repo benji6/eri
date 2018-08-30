@@ -150,12 +150,10 @@ class App extends React.PureComponent {
             <Color varName="--e-color-ground" />
           </ColorGroup>
           <ColorGroup name="Accent">
+            <Color varName="--e-color-accent-analagous" />
             <Color varName="--e-color-accent-more" />
             <Color varName="--e-color-accent" />
             <Color varName="--e-color-accent-less" />
-          </ColorGroup>
-          <ColorGroup name="Analagous">
-            <Color varName="--e-color-analagous" />
           </ColorGroup>
           <ColorGroup name="Negative">
             <Color varName="--e-color-negative" />

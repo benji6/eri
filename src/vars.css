@@ -27,13 +27,13 @@
   --e-saturation-1: 75%;
   --e-saturation-2: 85%;
   --e-color-accent: hsl(var(--e-hue-accent), var(--e-saturation-2), 45%);
-  --e-color-accent-less: hsl(var(--e-hue-accent), var(--e-saturation-2), 53%);
-  --e-color-accent-more: hsl(var(--e-hue-accent), var(--e-saturation-2), 37%);
-  --e-color-analagous: hsl(
+  --e-color-accent-analagous: hsl(
     var(--e-hue-accent-analagous-1),
     var(--e-saturation-2),
     35%
   );
+  --e-color-accent-less: hsl(var(--e-hue-accent), var(--e-saturation-2), 53%);
+  --e-color-accent-more: hsl(var(--e-hue-accent), var(--e-saturation-2), 37%);
   --e-color-balance: hsla(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),

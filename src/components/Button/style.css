@@ -40,8 +40,8 @@ a.e-button {
 }
 
 .e-button--primary:focus {
-  background: var(--e-color-analagous);
-  border-color: var(--e-color-analagous);
+  background: var(--e-color-accent-analagous);
+  border-color: var(--e-color-accent-analagous);
 }
 
 a.e-button--primary:focus {
@@ -68,8 +68,8 @@ a.e-button--primary:hover {
 }
 
 .e-button--secondary:focus {
-  border-color: var(--e-color-analagous);
-  color: var(--e-color-analagous);
+  border-color: var(--e-color-accent-analagous);
+  color: var(--e-color-accent-analagous);
 }
 
 .e-button--secondary:hover:not(:disabled) {
