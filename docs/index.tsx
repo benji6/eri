@@ -215,14 +215,19 @@ class App extends React.PureComponent {
             <a href="#">Link</a>
           </ButtonGroup>
           <ButtonGroup>
+            <Button>Button</Button>
             <Button to="#">Link</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button disabled>Primary disabled</Button>
           </ButtonGroup>
           <ButtonGroup>
             <Button sentiment="negative">Negative</Button>
             <Button sentiment="negative" variant="secondary">
               Negative secondary
+            </Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button disabled>Primary disabled</Button>
+            <Button disabled variant="secondary">
+              Secondary disabled
             </Button>
           </ButtonGroup>
           <h3>Card</h3>

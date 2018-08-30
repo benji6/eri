@@ -16,6 +16,10 @@
   transition-timing-function: var(--e-transition);
 }
 
+.e-button:disabled {
+  cursor: not-allowed;
+}
+
 .e-button--negative {
   --color: var(--e-color-negative);
   --color-active: var(--e-color-negative-more);
@@ -69,7 +73,6 @@ a.e-button--primary:hover {
 }
 
 .e-button--primary:disabled {
-  cursor: not-allowed;
   background: var(--e-color-balance);
   border-color: transparent;
 }
@@ -87,4 +90,9 @@ a.e-button--primary:hover {
 .e-button--secondary:hover:not(:disabled) {
   border-color: var(--color-hover);
   color: var(--color-hover);
+}
+
+.e-button--secondary:disabled {
+  border-color: var(--e-color-balance);
+  color: var(--e-color-balance);
 }
