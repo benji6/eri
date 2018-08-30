@@ -1,5 +1,6 @@
 import classnames from 'classnames'
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 import './style.css'
 
 interface IProps
@@ -11,22 +12,16 @@ interface IProps
 
 export default class Button extends React.PureComponent<IProps> {
   render() {
-    const {
-      sentiment,
-      to,
-      type = 'submit',
-      variant = 'primary',
-      ...rest
-    } = this.props
+    const { sentiment, to, variant = 'primary', ...rest } = this.props
 
     const className = classnames(`e-button e-button--${variant}`, {
       'e-button--negative': sentiment === 'negative',
     })
 
-    return React.createElement(to ? 'a' : 'button', {
-      ...rest,
-      className,
-      ...(to ? { href: to } : { type }),
-    })
+    return to ? (
+      <Link {...rest} className={className} to={to} />
+    ) : (
+      <button {...rest} className={className} />
+    )
   }
 }
