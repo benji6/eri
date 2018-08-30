@@ -17,7 +17,9 @@
 
 @media (min-width: 651px) {
   .e-button-group {
+    align-items: center;
     border-top: var(--e-border-width) solid var(--e-color-balance);
+    flex-direction: row-reverse;
     justify-content: center;
   }
 
