@@ -137,6 +137,7 @@ class App extends React.PureComponent {
             <Button onClick={this.switchToDarkTheme}>Dark</Button>
           </ButtonGroup>
           <ColorGroup name="Figure">
+            <Color varName="--e-color-figure-more" />
             <Color varName="--e-color-figure" />
             <Color varName="--e-color-figure-less" />
           </ColorGroup>

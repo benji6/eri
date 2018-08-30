@@ -13,6 +13,7 @@ interface IProps {
     | '--e-color-balance-more'
     | '--e-color-figure'
     | '--e-color-figure-less'
+    | '--e-color-figure-more'
     | '--e-color-ground'
     | '--e-color-ground-more'
     | '--e-color-negative'

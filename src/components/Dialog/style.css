@@ -56,6 +56,10 @@
   color: var(--e-color-ground);
 }
 
+.e-dialog__close:active {
+  color: var(--e-figure-more);
+}
+
 .e-dialog__dialog {
   margin: 100vh var(--e-space-3) 0;
   max-width: var(--e-max-width-0);
