@@ -36,6 +36,8 @@
     "prettier": "^1.14.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "semantic-release": "^15.9.12",
     "typescript": "^3.0.3"
   },
