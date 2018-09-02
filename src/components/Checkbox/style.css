@@ -49,7 +49,7 @@
   justify-content: center;
   margin-right: var(--checkbox-margin-right);
   transition-duration: var(--e-time-0);
-  transition-property: background, border;
+  transition-property: background, border, color;
   transition-timing-function: var(--e-transition);
   width: var(--checkbox-size);
 }
