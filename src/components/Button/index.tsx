@@ -12,7 +12,13 @@ interface IProps
 
 export default class Button extends React.PureComponent<IProps> {
   render() {
-    const { sentiment, to, variant = 'primary', ...rest } = this.props
+    const {
+      sentiment,
+      to,
+      variant = 'primary',
+      type = 'submit', // Formik gets grumpy if you don't specify this
+      ...rest
+    } = this.props
 
     const className = classnames(`e-button e-button--${variant}`, {
       'e-button--negative': sentiment === 'negative',
@@ -21,7 +27,7 @@ export default class Button extends React.PureComponent<IProps> {
     return to ? (
       <Link {...rest} className={className} to={to} />
     ) : (
-      <button {...rest} className={className} />
+      <button {...rest} className={className} type={type} />
     )
   }
 }
