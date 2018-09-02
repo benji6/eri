@@ -37,6 +37,7 @@
   --e-saturation-0: 7%;
   --e-saturation-1: 75%;
   --e-saturation-2: 85%;
+
   --e-color-accent: hsl(
     var(--e-hue-accent),
     var(--e-saturation-2),
