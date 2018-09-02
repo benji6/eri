@@ -1,11 +1,47 @@
+.e-select__icon {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  pointer-events: none;
+  position: absolute;
+  right: var(--e-space-2);
+  top: 0;
+  transition: color var(--e-time-0) var(--e-transition);
+}
+
 .e-select__label {
   display: flex;
   flex-direction: column;
 }
 
-.e-select__input {
+.e-select__select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
+  padding-right: calc(var(--e-space-2) + var(--e-space-4));
+  width: 100%;
+}
+
+option {
+  overflow-x: hidden;
+  padding: var(--spacing-1) var(--spacing-2);
+  text-overflow: ellipsis;
+}
+
+.e-select__select:focus ~ .e-select__icon {
+  color: var(--e-color-accent-less);
+}
+
+.e-select__select:hover ~ .e-select__icon {
+  color: var(--e-color-accent-less);
+}
+
+.e-select__select[aria-invalid='true'] ~ .e-select__icon {
+  color: var(--e-color-negative);
+}
+
+.e-select__select-container {
+  display: block;
+  position: relative;
 }

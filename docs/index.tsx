@@ -270,6 +270,10 @@ class App extends React.PureComponent {
               <Select label="Select">
                 <option hidden>Please select</option>
                 <option>An option</option>
+                <option>
+                  A very very very very long option to see what happens when the
+                  option is super long
+                </option>
               </Select>
               <Select error="Oops!" label="Select error">
                 <option hidden>Please select</option>
