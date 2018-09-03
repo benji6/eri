@@ -25,6 +25,8 @@
   --e-hue-rotation: 30;
 
   --e-lightness: 45%;
+  --e-lightness-figure: 15%;
+  --e-lightness-ground: 98%;
   --e-lightness-analagous: 35%;
   --e-lightness-balance: 30%;
   --e-lightness-separation: 9%;
@@ -34,7 +36,7 @@
   --e-hue-accent-analagous-0: calc(var(--e-hue-accent) - var(--e-hue-rotation));
   --e-hue-accent-analagous-1: calc(var(--e-hue-accent) + var(--e-hue-rotation));
 
-  --e-saturation-0: 7%;
+  --e-saturation-0: 15%;
   --e-saturation-1: 75%;
   --e-saturation-2: 85%;
 
@@ -58,6 +60,7 @@
     var(--e-saturation-2),
     calc(var(--e-lightness) - var(--e-lightness-separation))
   );
+
   --e-color-balance: hsla(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
@@ -76,11 +79,34 @@
     calc(var(--e-lightness-balance) - var(--e-lightness-separation)),
     var(--e-alpha-balance)
   );
-  --e-color-figure: hsl(var(--e-hue-accent-analagous-0), 11%, 15%);
-  --e-color-figure-less: hsl(var(--e-hue-accent-analagous-0), 10%, 23%);
-  --e-color-figure-more: hsl(var(--e-hue-accent-analagous-0), 10%, 7%);
-  --e-color-ground: hsl(var(--e-hue-accent-analagous-0), 17%, 98%);
-  --e-color-ground-more: hsl(var(--e-hue-accent-analagous-0), 10%, 100%);
+
+  --e-color-figure: hsl(
+    var(--e-hue-accent-analagous-0),
+    var(--e-saturation-0),
+    var(--e-lightness-figure)
+  );
+  --e-color-figure-less: hsl(
+    var(--e-hue-accent-analagous-0),
+    var(--e-saturation-0),
+    calc(var(--e-lightness-figure) + var(--e-lightness-separation))
+  );
+  --e-color-figure-more: hsl(
+    var(--e-hue-accent-analagous-0),
+    var(--e-saturation-0),
+    calc(var(--e-lightness-figure) - var(--e-lightness-separation))
+  );
+
+  --e-color-ground: hsl(
+    var(--e-hue-accent-analagous-0),
+    var(--e-saturation-0),
+    var(--e-lightness-ground)
+  );
+  --e-color-ground-more: hsl(
+    var(--e-hue-accent-analagous-0),
+    var(--e-saturation-0),
+    calc(var(--e-lightness-ground) + var(--e-lightness-separation))
+  );
+
   --e-color-negative: hsl(
     var(--e-hue-negative),
     var(--e-saturation-1),
