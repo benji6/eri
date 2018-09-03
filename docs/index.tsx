@@ -64,17 +64,9 @@ class App extends React.PureComponent {
           <main>
             <h2>Principles</h2>
             <ul>
-              <li>Simple - intuitive and nothing superfluous.</li>
-              <li>Performant - no bloat and renders fast.</li>
-              <li>
-                Accessible - semantic markup, aria attributes, sensible
-                contrast, Eri should look and feel great for everyone on all
-                devices.
-              </li>
-              <li>
-                Bespoke - Eri was created for my personal projects so can do
-                things its own way and has no concern for legacy browsers.
-              </li>
+              <li>Minimal - Eri feels simple, clean and intuitive.</li>
+              <li>Snappy - Eri is fast and feels slick on all devices.</li>
+              <li>Accessible - Eri is an experience for everyone.</li>
             </ul>
             <h2>Space</h2>
             <p>
