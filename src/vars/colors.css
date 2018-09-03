@@ -3,11 +3,11 @@
   --e-hue-negative: 345;
   --e-hue-rotation: 30;
 
-  --e-lightness: 45%;
-  --e-lightness-figure: 15%;
-  --e-lightness-ground: 98%;
-  --e-lightness-analagous: 35%;
-  --e-lightness-balance: 30%;
+  --e-lightness-0: 15%;
+  --e-lightness-1: 25%;
+  --e-lightness-2: 35%;
+  --e-lightness-3: 45%;
+  --e-lightness-4: 97%;
   --e-lightness-separation: 9%;
 
   --e-alpha-balance: 0.8;
@@ -22,89 +22,89 @@
   --e-color-accent: hsl(
     var(--e-hue-accent),
     var(--e-saturation-2),
-    var(--e-lightness)
+    var(--e-lightness-3)
   );
   --e-color-accent-analagous: hsl(
     var(--e-hue-accent-analagous-1),
     var(--e-saturation-2),
-    var(--e-lightness-analagous)
+    var(--e-lightness-2)
   );
   --e-color-accent-less: hsl(
     var(--e-hue-accent),
     var(--e-saturation-2),
-    calc(var(--e-lightness) + var(--e-lightness-separation))
+    calc(var(--e-lightness-3) + var(--e-lightness-separation))
   );
   --e-color-accent-more: hsl(
     var(--e-hue-accent),
     var(--e-saturation-2),
-    calc(var(--e-lightness) - var(--e-lightness-separation))
+    calc(var(--e-lightness-3) - var(--e-lightness-separation))
   );
 
   --e-color-balance: hsla(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
-    calc(var(--e-lightness-balance) - var(--e-lightness-separation)),
+    calc(var(--e-lightness-1) - var(--e-lightness-separation)),
     var(--e-alpha-balance)
   );
   --e-color-balance-less: hsla(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
-    var(--e-lightness-balance),
+    var(--e-lightness-1),
     var(--e-alpha-balance)
   );
   --e-color-balance-more: hsla(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
-    calc(var(--e-lightness-balance) - var(--e-lightness-separation)),
+    calc(var(--e-lightness-1) - var(--e-lightness-separation)),
     var(--e-alpha-balance)
   );
 
   --e-color-figure: hsl(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
-    var(--e-lightness-figure)
+    var(--e-lightness-0)
   );
   --e-color-figure-less: hsl(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
-    calc(var(--e-lightness-figure) + var(--e-lightness-separation))
+    calc(var(--e-lightness-0) + var(--e-lightness-separation))
   );
   --e-color-figure-more: hsl(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
-    calc(var(--e-lightness-figure) - var(--e-lightness-separation))
+    calc(var(--e-lightness-0) - var(--e-lightness-separation))
   );
 
   --e-color-ground: hsl(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
-    var(--e-lightness-ground)
+    var(--e-lightness-4)
   );
   --e-color-ground-more: hsl(
     var(--e-hue-accent-analagous-0),
     var(--e-saturation-0),
-    calc(var(--e-lightness-ground) + var(--e-lightness-separation))
+    calc(var(--e-lightness-4) + var(--e-lightness-separation))
   );
 
   --e-color-negative: hsl(
     var(--e-hue-negative),
     var(--e-saturation-1),
-    var(--e-lightness)
+    var(--e-lightness-3)
   );
   --e-color-negative-analagous: hsl(
     calc(var(--e-hue-negative) - var(--e-hue-rotation)),
     var(--e-saturation-2),
-    var(--e-lightness-analagous)
+    var(--e-lightness-2)
   );
   --e-color-negative-less: hsl(
     var(--e-hue-negative),
     var(--e-saturation-1),
-    calc(var(--e-lightness) + var(--e-lightness-separation))
+    calc(var(--e-lightness-3) + var(--e-lightness-separation))
   );
   --e-color-negative-more: hsl(
     var(--e-hue-negative),
     var(--e-saturation-1),
-    calc(var(--e-lightness) - var(--e-lightness-separation))
+    calc(var(--e-lightness-3) - var(--e-lightness-separation))
   );
 }
 
