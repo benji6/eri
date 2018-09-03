@@ -1,4 +1,8 @@
-import './vars.css'
+import './vars/space.css'
+import './vars/time.css'
+import './vars/colors.css'
+import './vars/typography.css'
+import './vars/misc.css'
 import './utils.css'
 import './global.css'
 
