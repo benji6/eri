@@ -1,8 +1,12 @@
 .e-button-group {
   display: flex;
-  margin: var(--e-space-4) 0;
-  padding-top: var(--e-space-3);
+  margin: var(--e-space-3) 0 var(--e-space-4);
   text-align: center;
+}
+
+form .e-button-group {
+  padding-top: var(--e-space-3);
+  margin: var(--e-space-4) 0;
 }
 
 @media (max-width: 650px) {
@@ -18,9 +22,12 @@
 @media (min-width: 651px) {
   .e-button-group {
     align-items: center;
-    border-top: var(--e-border-width) solid var(--e-color-balance);
     flex-direction: row-reverse;
     justify-content: center;
+  }
+
+  form .e-button-group {
+    border-top: var(--e-border-width) solid var(--e-color-balance);
   }
 
   .e-button-group > *:not(:first-child) {
