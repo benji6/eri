@@ -3,6 +3,7 @@ import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
 import './style.css'
 import Icon from '../Icon'
+import Field from '../../privateComponents/Field'
 
 interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   error?: React.ReactNode
@@ -14,7 +15,7 @@ export default class Select extends React.PureComponent<IProps> {
     const { error, label, ...rest } = this.props
 
     return (
-      <div className="e-field">
+      <Field>
         <label className="e-select__label">
           <FieldLabel>{label}</FieldLabel>
           <span className="e-select__select-container">
@@ -30,7 +31,7 @@ export default class Select extends React.PureComponent<IProps> {
           </span>
         </label>
         <FieldError>{error}</FieldError>
-      </div>
+      </Field>
     )
   }
 }

@@ -2,6 +2,7 @@ import * as React from 'react'
 import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
 import './style.css'
+import Field from '../../privateComponents/Field'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: React.ReactNode
@@ -48,7 +49,7 @@ export default class CurrencyField extends React.Component<IProps> {
     const { error, integer, label, ...rest } = this.props
 
     return (
-      <div className="e-field">
+      <Field>
         <label className="e-currency-field__label">
           <FieldLabel>{label}</FieldLabel>
           <span className="e-currency-field__input-container">
@@ -66,7 +67,7 @@ export default class CurrencyField extends React.Component<IProps> {
           </span>
         </label>
         <FieldError>{error}</FieldError>
-      </div>
+      </Field>
     )
   }
 }

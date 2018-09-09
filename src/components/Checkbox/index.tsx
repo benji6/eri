@@ -2,6 +2,7 @@ import * as React from 'react'
 import FieldError from '../../privateComponents/FieldError'
 import './style.css'
 import Icon from '../Icon'
+import Field from '../../privateComponents/Field'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: React.ReactNode
@@ -13,7 +14,7 @@ export default class Checkbox extends React.PureComponent<IProps> {
     const { label, error, ...rest } = this.props
 
     return (
-      <div className="e-checkbox e-field">
+      <Field className="e-checkbox">
         <label className="e-checkbox__label">
           <input
             {...rest}
@@ -27,7 +28,7 @@ export default class Checkbox extends React.PureComponent<IProps> {
           <span className="e-checkbox__label-copy">{label}</span>
         </label>
         <FieldError>{error}</FieldError>
-      </div>
+      </Field>
     )
   }
 }

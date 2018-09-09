@@ -2,10 +2,11 @@ import * as React from 'react'
 import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
 import './style.css'
+import Field from '../../privateComponents/Field'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  readonly error?: React.ReactNode
-  readonly label: React.ReactNode
+  error?: React.ReactNode
+  label: React.ReactNode
 }
 
 export default class TextField extends React.PureComponent<IProps> {
@@ -13,13 +14,13 @@ export default class TextField extends React.PureComponent<IProps> {
     const { label, error, ...rest } = this.props
 
     return (
-      <div className="e-field">
+      <Field>
         <label className="e-text-field__label">
           <FieldLabel>{label}</FieldLabel>
           <input required {...rest} aria-invalid={Boolean(error)} />
         </label>
         <FieldError>{error}</FieldError>
-      </div>
+      </Field>
     )
   }
 }

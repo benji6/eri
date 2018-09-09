@@ -18,10 +18,6 @@
   color: var(--e-color-negative);
 }
 
-.e-field {
-  margin: var(--e-space-2) 0;
-}
-
 .e-overflow-hidden {
   overflow: hidden;
 }
