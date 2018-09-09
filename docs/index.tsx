@@ -190,10 +190,14 @@ class App extends React.PureComponent {
               cupidatat non proident, sunt in culpa qui officia deserunt mollit
               anim id est laborum.
             </p>
-            <h3>Centering text</h3>
+            <h3>Utility classes</h3>
             <p e-util="center">
-              You can center any text by setting the e-util attribute to
+              You can center any element by setting the e-util attribute to
               "center"
+            </p>
+            <p e-util="center negative">
+              You can give any element a negative sentiment by setting the
+              e-util attribute to "negative"
             </p>
             <h2>Components</h2>
             <h3>Button</h3>

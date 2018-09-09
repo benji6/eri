@@ -10,8 +10,12 @@
   }
 }
 
-[e-util='center'] {
+[e-util*='center'] {
   text-align: center;
+}
+
+[e-util*='negative'] {
+  color: var(--e-color-negative);
 }
 
 .e-field {
