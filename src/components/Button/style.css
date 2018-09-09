@@ -12,6 +12,7 @@
   transition-duration: var(--e-time-0);
   transition-property: background, border-color;
   transition-timing-function: var(--e-transition);
+  user-select: none;
 }
 
 .e-button--negative {

@@ -7,11 +7,13 @@ import {
   Card,
   Checkbox,
   CurrencyField,
+  Dialog,
+  Icon,
+  RadioButton,
+  RadioGroup,
   Select,
   Spinner,
   TextField,
-  Dialog,
-  Icon,
 } from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
@@ -263,6 +265,31 @@ class App extends React.PureComponent {
               <p>This is a form.</p>
               <TextField label="Text field" />
               <TextField error="Oops!" label="Text field error" />
+              <RadioGroup label="Radio group">
+                <RadioButton name="selector" value="one">
+                  One
+                </RadioButton>
+                <RadioButton name="selector" value="two">
+                  Two
+                </RadioButton>
+                <RadioButton name="selector" value="three">
+                  Three
+                </RadioButton>
+                <RadioButton name="selector" value="four">
+                  Four
+                </RadioButton>
+              </RadioGroup>
+              <RadioGroup error="Oops!" label="Radio group error">
+                <RadioButton name="error-state-selector" value="one">
+                  One
+                </RadioButton>
+                <RadioButton name="error-state-selector" value="two">
+                  Two
+                </RadioButton>
+                <RadioButton name="error-state-selector" value="three">
+                  Three
+                </RadioButton>
+              </RadioGroup>
               <Select label="Select">
                 <option hidden>Please select</option>
                 <option>An option</option>
