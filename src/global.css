@@ -139,6 +139,10 @@ button {
   outline: 0;
 }
 
+button::-moz-focus-inner {
+  border: none;
+}
+
 button:disabled {
   cursor: not-allowed;
 }

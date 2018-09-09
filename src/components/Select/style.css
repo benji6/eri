@@ -23,6 +23,10 @@
   width: 100%;
 }
 
+.e-select__select::-moz-focus-inner {
+  border: none;
+}
+
 option {
   overflow-x: hidden;
   padding: var(--spacing-1) var(--spacing-2);
