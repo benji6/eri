@@ -190,7 +190,7 @@ class App extends React.PureComponent {
               cupidatat non proident, sunt in culpa qui officia deserunt mollit
               anim id est laborum.
             </p>
-            <h3>Utility classes</h3>
+            <h3>CSS utilities</h3>
             <p e-util="center">
               You can center any element by setting the e-util attribute to
               "center"
