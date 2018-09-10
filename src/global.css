@@ -25,6 +25,11 @@ header h1 {
   text-shadow: var(--e-text-shadow);
 }
 
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
 main {
   margin: 0 auto;
   max-width: var(--e-max-width-1);
@@ -80,6 +85,10 @@ h3 {
 
 p {
   margin: var(--e-space-2) 0;
+}
+
+a::-moz-focus-inner {
+  border: none;
 }
 
 main a {

@@ -60,8 +60,9 @@ class App extends React.PureComponent {
       <Router>
         <>
           <header>
-            <h1>Eri</h1>
-            <p e-util="center">A minimal design system</p>
+            <h1>
+              <a href="/">Eri</a>
+            </h1>
           </header>
           <main>
             <h2>Principles</h2>
