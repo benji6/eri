@@ -11,3 +11,9 @@
   );
   --e-heading-font-weight: 500;
 }
+
+@media (max-width: 650px) {
+  :root {
+    --e-font-size-scale-ratio: 1.25;
+  }
+}
