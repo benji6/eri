@@ -14,6 +14,7 @@
 
 @media (max-width: 650px) {
   :root {
-    --e-font-size-scale-ratio: 1.25;
+    --e-font-size-0: 0.875rem;
+    --e-font-size-scale-ratio: 1.29;
   }
 }

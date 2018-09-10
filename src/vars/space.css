@@ -11,3 +11,12 @@
   --e-max-width-0: calc(9 * var(--e-space-5));
   --e-max-width-1: calc(12 * var(--e-space-5));
 }
+
+@media (max-width: 650px) {
+  :root {
+    --e-space-0: 0.3rem;
+    --e-space-scale-ratio: 1.6;
+    --e-max-width-0: 100vw;
+    --e-max-width-1: 100vw;
+  }
+}
