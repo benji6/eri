@@ -319,6 +319,8 @@ class App extends React.PureComponent {
             <Icon name="check" />
             <Icon name="cross" />
             <Icon name="down" />
+            <Icon name="left" />
+            <Icon name="right" />
             <h3>Link</h3>
             <p>Links take you places.</p>
             <a href="#">Click me!</a>

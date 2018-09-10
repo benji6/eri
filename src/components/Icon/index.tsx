@@ -10,10 +10,12 @@ const iconNameMap = {
     </>
   ),
   down: <polyline points="6 9 12 15 18 9" />,
+  left: <polyline points="15 18 9 12 15 6" />,
+  right: <polyline points="9 18 15 12 9 6" />,
 }
 
 interface IProps extends React.SVGProps<SVGSVGElement> {
-  name: 'check' | 'cross' | 'down'
+  name: 'check' | 'cross' | 'down' | 'left' | 'right'
 }
 
 export default class Icon extends React.PureComponent<IProps> {
