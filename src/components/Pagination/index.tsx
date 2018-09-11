@@ -2,6 +2,9 @@ import * as React from 'react'
 import Icon from '../Icon'
 import './style.css'
 
+const maxPageButtons = 5
+const halfMaxPageButtons = Math.floor(maxPageButtons / 2)
+
 interface IProps {
   onChange(page: number): void
   page: number
@@ -12,10 +15,18 @@ export default class Pagination extends React.PureComponent<IProps> {
   render() {
     const { page, pageCount, onChange } = this.props
 
-    const range = []
-    const pageButtonCount = Math.min(pageCount, 5)
+    const pageNumbers = []
+    const pageButtonCount = Math.min(pageCount, maxPageButtons)
 
-    for (let i = 0; i < pageButtonCount; i++) range.push(i)
+    for (let i = 0; i < pageButtonCount; i++) {
+      if (page <= halfMaxPageButtons) {
+        pageNumbers.push(i)
+      } else if (page >= pageCount - halfMaxPageButtons) {
+        pageNumbers.push(i + pageCount - maxPageButtons)
+      } else {
+        pageNumbers.push(i + page - halfMaxPageButtons)
+      }
+    }
 
     return (
       pageCount > 1 && (
@@ -30,9 +41,9 @@ export default class Pagination extends React.PureComponent<IProps> {
               <Icon name="left" />
             </button>
           )}
-          {range.map(i => (
+          {pageNumbers.map(i => (
             <button
-              aria-label={`navigate to page ${i}`}
+              aria-label={`navigate to page ${i + 1}`}
               className="pagination__button"
               disabled={i === page}
               key={i}

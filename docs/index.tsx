@@ -27,14 +27,28 @@ import './style.css'
 
 const metaThemeColor = document.querySelector('meta[name=theme-color]')
 
+interface IState {
+  isDialogOpen: boolean
+  page3: number
+  page10: number
+  page1000: number
+}
+
 class App extends React.PureComponent {
-  state = {
+  state: IState = {
     isDialogOpen: false,
+    page3: 0,
+    page10: 4,
+    page1000: 999,
   }
 
   handleDialogClose = () => this.setState({ isDialogOpen: false })
 
   handleDialogOpen = () => this.setState({ isDialogOpen: true })
+
+  handlePageChange3 = (page3: number) => this.setState({ page3 })
+  handlePageChange10 = (page10: number) => this.setState({ page10 })
+  handlePageChange1000 = (page1000: number) => this.setState({ page1000 })
 
   switchToDarkTheme = () => {
     document.documentElement.classList.add('e-theme-dark')
@@ -55,7 +69,7 @@ class App extends React.PureComponent {
   }
 
   render() {
-    const { isDialogOpen } = this.state
+    const { isDialogOpen, page3, page10, page1000 } = this.state
 
     return (
       <Router>
@@ -326,20 +340,26 @@ class App extends React.PureComponent {
             <p>Links take you places.</p>
             <a href="#">Click me!</a>
             <h3>Pagination</h3>
-            <p>0 pages (nothing renders)</p>
+            <p>Renders nothing when there are no pages</p>
             <Pagination onChange={console.log} page={0} pageCount={0} />
-            <p>Page 1 of 3 pages</p>
-            <Pagination onChange={console.log} page={0} pageCount={3} />
-            <p>Page 2 of 3 pages</p>
-            <Pagination onChange={console.log} page={1} pageCount={3} />
-            <p>Page 3 of 3 pages</p>
-            <Pagination onChange={console.log} page={2} pageCount={3} />
-            <p>Page 1 of 10 pages</p>
-            <Pagination onChange={console.log} page={0} pageCount={10} />
-            <p>Page 5 of 10 pages</p>
-            <Pagination onChange={console.log} page={4} pageCount={10} />
-            <p>Page 500 of 1000 pages</p>
-            <Pagination onChange={console.log} page={499} pageCount={1e3} />
+            <p>Page {page3 + 1} of 3 pages</p>
+            <Pagination
+              onChange={this.handlePageChange3}
+              page={page3}
+              pageCount={3}
+            />
+            <p>Page {page10 + 1} of 10 pages</p>
+            <Pagination
+              onChange={this.handlePageChange10}
+              page={page10}
+              pageCount={10}
+            />
+            <p>Page {page1000 + 1} of 1000 pages</p>
+            <Pagination
+              onChange={this.handlePageChange1000}
+              page={page1000}
+              pageCount={1e3}
+            />
             <h3>Spinner</h3>
             <Spinner />
             <Spinner variation="ground" />
