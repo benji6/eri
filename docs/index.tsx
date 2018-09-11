@@ -9,6 +9,7 @@ import {
   CurrencyField,
   Dialog,
   Icon,
+  Pagination,
   RadioButton,
   RadioGroup,
   Select,
@@ -324,6 +325,21 @@ class App extends React.PureComponent {
             <h3>Link</h3>
             <p>Links take you places.</p>
             <a href="#">Click me!</a>
+            <h3>Pagination</h3>
+            <p>0 pages (nothing renders)</p>
+            <Pagination onChange={console.log} page={0} pageCount={0} />
+            <p>Page 1 of 3 pages</p>
+            <Pagination onChange={console.log} page={0} pageCount={3} />
+            <p>Page 2 of 3 pages</p>
+            <Pagination onChange={console.log} page={1} pageCount={3} />
+            <p>Page 3 of 3 pages</p>
+            <Pagination onChange={console.log} page={2} pageCount={3} />
+            <p>Page 1 of 10 pages</p>
+            <Pagination onChange={console.log} page={0} pageCount={10} />
+            <p>Page 5 of 10 pages</p>
+            <Pagination onChange={console.log} page={4} pageCount={10} />
+            <p>Page 500 of 1000 pages</p>
+            <Pagination onChange={console.log} page={499} pageCount={1e3} />
             <h3>Spinner</h3>
             <Spinner />
             <Spinner variation="ground" />
