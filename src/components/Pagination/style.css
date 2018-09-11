@@ -13,7 +13,9 @@
   border: none;
   color: var(--e-color-accent);
   padding: var(--e-space-0) var(--e-space-2);
-  transition: color var(--e-time-0) var(--e-transition);
+  transition-duration: var(--e-time-0);
+  transition-property: background-color, color;
+  transition-timing-function: var(--e-transition);
 }
 
 .pagination__button:focus {
