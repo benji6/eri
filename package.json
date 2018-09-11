@@ -25,7 +25,7 @@
   "homepage": "https://github.com/benji6/eri#readme",
   "devDependencies": {
     "@types/classnames": "^2.2.6",
-    "@types/react": "^16.4.13",
+    "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
     "@types/react-router-dom": "^4.3.0",
     "babel-cli": "^6.26.0",
@@ -38,7 +38,7 @@
     "react-dom": "^16.5.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "semantic-release": "^15.9.14",
+    "semantic-release": "^15.9.15",
     "typescript": "^3.0.3"
   },
   "peerDependencies": {
