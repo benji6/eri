@@ -1,4 +1,5 @@
 import classnames from 'classnames'
+import { LocationDescriptor } from 'history'
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
@@ -6,7 +7,7 @@ import './style.css'
 interface IProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   sentiment?: 'negative'
-  to?: string
+  to?: LocationDescriptor
   variant?: 'secondary'
 }
 
