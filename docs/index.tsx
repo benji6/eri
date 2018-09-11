@@ -97,8 +97,8 @@ class App extends React.PureComponent {
             </p>
             <h3>Font size</h3>
             <p>
-              Fonts are sized based on a modular scale which keeps things simple
-              and conveys a sense of harmony.
+              Fonts are sized based on a responsive modular scale which keeps
+              things simple and conveys a sense of harmony.
             </p>
             <SpaceGroup>
               <Space varName="--e-font-size-0" />
@@ -114,8 +114,8 @@ class App extends React.PureComponent {
             </SpaceGroup>
             <h3>Space</h3>
             <p>
-              Space is also based on a modular scale, but the ratio used is the
-              golden ratio.
+              Space is also based on a responsive modular scale, but with a
+              different ratio.
             </p>
             <SpaceGroup>
               <Space varName="--e-space-0" />
