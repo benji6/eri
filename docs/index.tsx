@@ -30,6 +30,7 @@ const metaThemeColor = document.querySelector('meta[name=theme-color]')
 interface IState {
   isDialogOpen: boolean
   page3: number
+  page4: number
   page10: number
   page1000: number
 }
@@ -38,6 +39,7 @@ class App extends React.PureComponent {
   state: IState = {
     isDialogOpen: false,
     page3: 0,
+    page4: 0,
     page10: 4,
     page1000: 999,
   }
@@ -47,6 +49,7 @@ class App extends React.PureComponent {
   handleDialogOpen = () => this.setState({ isDialogOpen: true })
 
   handlePageChange3 = (page3: number) => this.setState({ page3 })
+  handlePageChange4 = (page4: number) => this.setState({ page4 })
   handlePageChange10 = (page10: number) => this.setState({ page10 })
   handlePageChange1000 = (page1000: number) => this.setState({ page1000 })
 
@@ -69,7 +72,7 @@ class App extends React.PureComponent {
   }
 
   render() {
-    const { isDialogOpen, page3, page10, page1000 } = this.state
+    const { isDialogOpen, page3, page4, page10, page1000 } = this.state
 
     return (
       <Router>
@@ -347,6 +350,12 @@ class App extends React.PureComponent {
               onChange={this.handlePageChange3}
               page={page3}
               pageCount={3}
+            />
+            <p>Page {page4 + 1} of 4 pages</p>
+            <Pagination
+              onChange={this.handlePageChange4}
+              page={page4}
+              pageCount={4}
             />
             <p>Page {page10 + 1} of 10 pages</p>
             <Pagination

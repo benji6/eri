@@ -22,7 +22,7 @@ export default class Pagination extends React.PureComponent<IProps> {
       if (page <= halfMaxPageButtons) {
         pageNumbers.push(i)
       } else if (page >= pageCount - halfMaxPageButtons) {
-        pageNumbers.push(i + pageCount - maxPageButtons)
+        pageNumbers.push(i + pageCount - Math.min(maxPageButtons, pageCount))
       } else {
         pageNumbers.push(i + page - halfMaxPageButtons)
       }
