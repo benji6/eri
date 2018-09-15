@@ -5,6 +5,7 @@
   justify-content: center;
   margin: var(--e-space-2) 0;
   padding: var(--e-space-2);
+  user-select: none;
 }
 
 .pagination__button {
@@ -13,9 +14,6 @@
   border: none;
   color: var(--e-color-accent);
   padding: var(--e-space-0) var(--e-space-2);
-  transition-duration: var(--e-time-0);
-  transition-property: background-color, color;
-  transition-timing-function: var(--e-transition);
 }
 
 .pagination__button:focus {
