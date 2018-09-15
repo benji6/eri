@@ -4,7 +4,7 @@ import './style.css'
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export default class FieldError extends React.PureComponent<IProps> {
-  render() {
+  public render() {
     const { children, ...rest } = this.props
 
     return children ? (

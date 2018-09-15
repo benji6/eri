@@ -1,50 +1,46 @@
 import classnames from 'classnames'
 import * as React from 'react'
 import Card from '../Card'
-import './style.css'
 import Icon from '../Icon'
+import './style.css'
 
 const documentElementClassList = document.documentElement.classList
 
 interface IProps {
   children: React.ReactNode
-  onClose(): void
   open: boolean
   title: React.ReactNode
+  onClose(): void
 }
 
 export default class Dialog extends React.Component<IProps> {
-  el: HTMLDivElement | null = null
+  private el: HTMLDivElement | null = null
 
-  componentDidMount() {
-    if (this.props.open) documentElementClassList.add('e-overflow-hidden')
+  public componentDidMount() {
+    if (this.props.open) {
+      documentElementClassList.add('e-overflow-hidden')
+    }
     window.addEventListener('keydown', this.handleKeyDown)
   }
 
-  componentWillReceiveProps(nextProps: IProps) {
-    if (this.props.open === nextProps.open) return
+  public componentWillReceiveProps(nextProps: IProps) {
+    if (this.props.open === nextProps.open) {
+      return
+    }
 
-    if (nextProps.open) documentElementClassList.add('e-overflow-hidden')
-    else documentElementClassList.remove('e-overflow-hidden')
+    if (nextProps.open) {
+      documentElementClassList.add('e-overflow-hidden')
+    } else {
+      documentElementClassList.remove('e-overflow-hidden')
+    }
   }
 
-  componentWillUnmount() {
+  public componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyDown)
     documentElementClassList.remove('e-overflow-hidden')
   }
 
-  handleCloseClick = (e: React.MouseEvent<HTMLButtonElement>) =>
-    this.props.onClose()
-
-  handleKeyDown = (e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>) => {
-    if (e.keyCode === 27) this.props.onClose()
-  }
-
-  handleMaskClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (e.target === this.el) this.props.onClose()
-  }
-
-  render() {
+  public render() {
     const { children, onClose, open, title, ...rest } = this.props
 
     const className = classnames('e-dialog', {
@@ -84,5 +80,22 @@ export default class Dialog extends React.Component<IProps> {
         </div>
       </div>
     )
+  }
+
+  private handleCloseClick = (e: React.MouseEvent<HTMLButtonElement>) =>
+    this.props.onClose()
+
+  private handleKeyDown = (
+    e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>,
+  ) => {
+    if (e.keyCode === 27) {
+      this.props.onClose()
+    }
+  }
+
+  private handleMaskClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === this.el) {
+      this.props.onClose()
+    }
   }
 }

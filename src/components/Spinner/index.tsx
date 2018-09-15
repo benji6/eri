@@ -7,7 +7,7 @@ interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
 }
 
 export default class Spinner extends React.PureComponent<IProps> {
-  render() {
+  public render() {
     const { variation, ...rest } = this.props
 
     const className = classnames('e-spinner', {

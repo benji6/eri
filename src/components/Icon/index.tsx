@@ -19,7 +19,7 @@ interface IProps extends React.SVGProps<SVGSVGElement> {
 }
 
 export default class Icon extends React.PureComponent<IProps> {
-  render() {
+  public render() {
     const { name, ...rest } = this.props
 
     return (

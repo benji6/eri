@@ -2,18 +2,18 @@ import * as React from 'react'
 import Field from '../../privateComponents/Field'
 import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
-import './style.css'
 import RadioButton from '../RadioButton'
+import './style.css'
 
 interface IProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
-  children: React.ReactElement<RadioButton>[]
+  children: Array<React.ReactElement<RadioButton>>
   disabled?: boolean
   error?: React.ReactNode
   label: React.ReactNode
 }
 
 export default class RadioGroup extends React.Component<IProps> {
-  render() {
+  public render() {
     const { error, label, children, ...rest } = this.props
 
     return (

@@ -11,6 +11,7 @@
     "start": "parcel docs/index.html",
     "test": "run-p test:*",
     "test:format": "prettier --list-different \"**/*\"",
+    "test:lint": "tslint -c tslint.json 'src/**/*.ts*'",
     "test:types": "tsc --noEmit"
   },
   "repository": {
@@ -39,6 +40,10 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "semantic-release": "^15.9.15",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
     "typescript": "^3.0.3"
   },
   "peerDependencies": {

@@ -1,8 +1,8 @@
 import * as React from 'react'
+import Field from '../../privateComponents/Field'
 import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
 import './style.css'
-import Field from '../../privateComponents/Field'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: React.ReactNode
@@ -11,7 +11,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 export default class TextField extends React.PureComponent<IProps> {
-  render() {
+  public render() {
     const { label, error, supportiveText, ...rest } = this.props
 
     return (

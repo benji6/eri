@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import { LocationDescriptor } from 'history'
+import { LocationDescriptor } from 'history' // tslint:disable-line no-implicit-dependencies
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
@@ -12,7 +12,7 @@ interface IProps
 }
 
 export default class Button extends React.PureComponent<IProps> {
-  render() {
+  public render() {
     const {
       sentiment,
       to,

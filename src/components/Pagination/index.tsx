@@ -6,13 +6,13 @@ const maxPageButtons = 5
 const halfMaxPageButtons = Math.floor(maxPageButtons / 2)
 
 interface IProps {
-  onChange(page: number): void
   page: number
   pageCount: number
+  onChange(page: number): void
 }
 
 export default class Pagination extends React.PureComponent<IProps> {
-  render() {
+  public render() {
     const { page, pageCount, onChange } = this.props
 
     const pageNumbers = []

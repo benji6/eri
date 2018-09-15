@@ -4,7 +4,7 @@ import './style.css'
 export default class FieldLabel extends React.PureComponent<
   React.HTMLAttributes<HTMLSpanElement>
 > {
-  render() {
+  public render() {
     return <span {...this.props} className="e-field-label" />
   }
 }
