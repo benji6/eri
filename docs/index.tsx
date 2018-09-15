@@ -282,7 +282,10 @@ class App extends React.PureComponent {
             <form>
               <h3>Form</h3>
               <p>This is a form.</p>
-              <TextField label="Text field" />
+              <TextField
+                label="Text field"
+                supportiveText="Some supportive text"
+              />
               <TextField error="Oops!" label="Text field error" />
               <RadioGroup label="Radio group">
                 <RadioButton name="selector" value="one">

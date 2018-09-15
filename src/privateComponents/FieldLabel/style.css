@@ -3,5 +3,5 @@
   display: block;
   font-size: var(--e-font-size-0);
   font-weight: var(--e-font-bold);
-  padding-bottom: var(--e-space-0);
+  margin-bottom: var(--e-space-0);
 }
