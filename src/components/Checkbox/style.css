@@ -1,5 +1,5 @@
 .e-checkbox {
-  --checkbox-size: var(--e-space-4);
+  --checkbox-size: var(--e-font-size-3);
   --checkbox-margin-right: var(--e-space-2);
 
   position: relative;
