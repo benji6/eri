@@ -5,7 +5,6 @@
 }
 
 form .e-button-group {
-  padding-top: var(--e-space-3);
   margin: var(--e-space-4) 0;
 }
 
@@ -28,6 +27,7 @@ form .e-button-group {
 
   form .e-button-group {
     border-top: var(--e-border-width) solid var(--e-color-balance);
+    padding-top: var(--e-space-3);
   }
 
   .e-button-group > *:not(:first-child) {
