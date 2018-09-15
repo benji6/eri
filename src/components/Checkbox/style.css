@@ -42,14 +42,16 @@
   border: var(--e-border-width) solid var(--e-color-figure);
   border-radius: var(--e-border-radius);
   box-sizing: border-box;
-  color: transparent;
+  color: var(--e-color-figure);
   display: inline-flex;
   flex-shrink: 0;
   height: var(--checkbox-size);
   justify-content: center;
   margin-right: var(--checkbox-margin-right);
+  stroke-dasharray: 30;
+  stroke-dashoffset: -30;
   transition-duration: var(--e-time-0);
-  transition-property: background, border, color;
+  transition-property: border;
   transition-timing-function: var(--e-transition);
   width: var(--checkbox-size);
 }
@@ -69,7 +71,8 @@
 }
 
 .e-checkbox__input:checked ~ .e-checkbox__appearance {
-  color: var(--e-color-figure);
+  stroke-dashoffset: 0;
+  transition-property: border, stroke-dashoffset;
 }
 
 .e-checkbox__label-copy {
