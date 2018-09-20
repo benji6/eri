@@ -3,6 +3,10 @@
   --e-hue-negative: 345;
   --e-hue-rotation: 30;
 
+  --e-saturation-0: 15%;
+  --e-saturation-1: 85%;
+  --e-saturation-ratio: 1.09;
+
   --e-lightness-0: 15%;
   --e-lightness-1: 25%;
   --e-lightness-2: 35%;
@@ -14,10 +18,7 @@
 
   --e-hue-accent-analagous-0: calc(var(--e-hue-accent) - var(--e-hue-rotation));
   --e-hue-accent-analagous-1: calc(var(--e-hue-accent) + var(--e-hue-rotation));
-
-  --e-saturation-0: 20%;
-  --e-saturation-1: 85%;
-  --e-saturation-ratio: 1.09;
+  --e-hue-complement: calc(var(--e-hue-accent) - 180);
 
   --e-color-accent: hsl(
     var(--e-hue-accent),
@@ -41,47 +42,47 @@
   );
 
   --e-color-balance: hsla(
-    var(--e-hue-accent-analagous-0),
+    var(--e-hue-complement),
     var(--e-saturation-0),
     var(--e-lightness-1),
     var(--e-alpha-balance)
   );
   --e-color-balance-less: hsla(
-    var(--e-hue-accent-analagous-0),
+    var(--e-hue-complement),
     calc(var(--e-saturation-0) * var(--e-saturation-ratio)),
     calc(var(--e-lightness-1) + var(--e-lightness-separation)),
     var(--e-alpha-balance)
   );
   --e-color-balance-more: hsla(
-    var(--e-hue-accent-analagous-0),
+    var(--e-hue-complement),
     calc(var(--e-saturation-0) / var(--e-saturation-ratio)),
     calc(var(--e-lightness-1) - var(--e-lightness-separation)),
     var(--e-alpha-balance)
   );
 
   --e-color-figure: hsl(
-    var(--e-hue-accent-analagous-0),
+    var(--e-hue-complement),
     var(--e-saturation-0),
     var(--e-lightness-0)
   );
   --e-color-figure-less: hsl(
-    var(--e-hue-accent-analagous-0),
+    var(--e-hue-complement),
     calc(var(--e-saturation-0) * var(--e-saturation-ratio)),
     calc(var(--e-lightness-0) + var(--e-lightness-separation))
   );
   --e-color-figure-more: hsl(
-    var(--e-hue-accent-analagous-0),
+    var(--e-hue-complement),
     calc(var(--e-saturation-0) / var(--e-saturation-ratio)),
     calc(var(--e-lightness-0) - var(--e-lightness-separation))
   );
 
   --e-color-ground: hsl(
-    var(--e-hue-accent-analagous-0),
+    var(--e-hue-complement),
     var(--e-saturation-0),
     var(--e-lightness-4)
   );
   --e-color-ground-more: hsl(
-    var(--e-hue-accent-analagous-0),
+    var(--e-hue-complement),
     var(--e-saturation-0),
     calc(var(--e-lightness-4) + var(--e-lightness-separation))
   );
