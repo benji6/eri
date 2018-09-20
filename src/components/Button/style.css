@@ -29,7 +29,7 @@ a.e-button {
   text-decoration: none !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
   .e-button {
     display: block;
   }

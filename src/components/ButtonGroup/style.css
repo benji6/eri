@@ -8,7 +8,7 @@ form .e-button-group {
   margin: var(--e-space-4) 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
   .e-button-group {
     flex-direction: column;
   }
@@ -18,7 +18,7 @@ form .e-button-group {
   }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 551px) {
   .e-button-group {
     align-items: center;
     flex-direction: row-reverse;

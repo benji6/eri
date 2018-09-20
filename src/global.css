@@ -41,7 +41,7 @@ form {
   max-width: var(--e-max-width-0);
 }
 
-@media (min-width: 601px) {
+@media (min-width: 551px) {
   form {
     border-radius: var(--e-border-radius);
     box-shadow: var(--e-box-shadow);
