@@ -12,7 +12,7 @@
   --e-heading-font-weight: 500;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   :root {
     --e-font-size-0: 0.875rem;
     --e-font-size-scale-ratio: 1.25;

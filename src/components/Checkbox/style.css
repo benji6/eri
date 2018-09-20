@@ -15,7 +15,7 @@
   display: flex;
 }
 
-@media (min-width: 651px) {
+@media (min-width: 601px) {
   .e-checkbox__label {
     display: inline-flex;
   }
