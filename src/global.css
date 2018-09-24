@@ -3,6 +3,7 @@ body {
   color: var(--e-color-figure-less);
   font-family: system-ui, sans-serif;
   font-size: var(--e-font-size-1);
+  line-height: 1.26;
   margin: 0;
   transition-duration: var(--e-time-0);
   transition-property: background, color;
