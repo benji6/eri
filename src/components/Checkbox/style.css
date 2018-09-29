@@ -3,7 +3,6 @@
   --checkbox-margin-right: var(--e-space-2);
 
   position: relative;
-  width: 100%;
 }
 
 .e-checkbox .e-field-error {

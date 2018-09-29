@@ -1,0 +1,78 @@
+.e-toggle {
+  --toggle-button-diameter: var(--e-space-3);
+  --toggle-width: calc(2 * var(--toggle-button-diameter));
+
+  position: relative;
+}
+
+.e-toggle__appearance {
+  background: var(--e-color-balance);
+  border-radius: var(--e-space-3);
+  border: var(--e-border-width) solid transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  height: var(--toggle-button-diameter);
+  margin-right: var(--e-space-2);
+  padding: var(--e-border-width);
+  transition-duration: var(--e-time-0);
+  transition-property: background-color, border-color, box-shadow;
+  transition-timing-function: var(--e-transition);
+  width: var(--toggle-width);
+}
+
+.e-toggle__appearance::after {
+  background: var(--e-color-ground);
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: var(--toggle-button-diameter);
+  transition: transform var(--e-time-0) var(--e-transition);
+  width: var(--toggle-button-diameter);
+}
+
+.e-toggle__input {
+  opacity: 0;
+  border-radius: var(--e-space-3);
+  pointer-events: none;
+  height: calc(var(--toggle-button-diameter) + 2 * var(--e-border-width));
+  position: absolute;
+  width: calc(var(--toggle-width) + 2 * var(--e-border-width));
+}
+
+.e-toggle__input:hover ~ .e-toggle__appearance {
+  background: var(--e-color-balance-less);
+}
+.e-toggle__input:checked ~ .e-toggle__appearance {
+  background: var(--e-color-accent);
+}
+
+.e-toggle__input:checked ~ .e-toggle__appearance::after {
+  transform: translateX(
+    calc(var(--toggle-width) - var(--toggle-button-diameter))
+  );
+}
+
+.e-toggle__input:checked:hover ~ .e-toggle__appearance {
+  background: var(--e-color-accent-less);
+}
+
+.e-toggle__input:focus ~ .e-toggle__appearance {
+  border-color: var(--e-color-accent);
+  box-shadow: var(--e-input-box-shadow-focus);
+}
+
+.e-toggle__label {
+  cursor: pointer;
+  display: flex;
+}
+
+@media (min-width: 551px) {
+  .e-toggle__label {
+    display: inline-flex;
+  }
+}
+
+.e-toggle__label-copy {
+  align-items: center;
+  display: flex;
+}

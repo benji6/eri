@@ -15,6 +15,7 @@ import {
   Select,
   Spinner,
   TextField,
+  Toggle,
 } from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
@@ -330,6 +331,8 @@ class App extends React.PureComponent {
                 error="Oops!"
                 label="Checkbox with a long label so we can see how it overflows"
               />
+              <Toggle label="Toggle" />
+              <Toggle label="Toggle with a long label so we can see how it overflows" />
               <CurrencyField label="Currency field" />
               <CurrencyField integer label="Integer currency field" />
               <CurrencyField error="Oops!" label="Currency field error" />
