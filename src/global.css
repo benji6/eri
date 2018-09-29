@@ -21,7 +21,7 @@ header {
 }
 
 header h1 {
-  color: var(--color-ground-more);
+  color: var(--e-color-ground);
   margin: 0;
 }
 
@@ -115,7 +115,7 @@ main a:active {
 
 input:not([type='checkbox']),
 select {
-  background: var(--e-color-ground-more);
+  background: var(--e-color-ground);
   border-radius: var(--e-border-radius);
   border: var(--e-border-width) solid var(--e-color-figure);
   color: inherit;

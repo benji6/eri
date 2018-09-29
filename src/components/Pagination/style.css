@@ -36,7 +36,7 @@
 }
 
 .pagination__button:disabled {
-  color: var(--e-color-ground-more) !important;
+  color: var(--e-color-ground) !important;
   background: var(--e-color-accent);
   text-decoration: none !important;
   cursor: default;

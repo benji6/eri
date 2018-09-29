@@ -16,7 +16,6 @@
 }
 
 .e-radio-button__appearance {
-  background: var(--e-color-ground-more);
   border: var(--e-border-width) solid var(--e-color-figure);
   cursor: pointer;
   display: inline-block;
@@ -64,7 +63,7 @@
 .e-radio-button__input:checked ~ .e-radio-button__appearance {
   background: var(--e-color-accent);
   border-color: var(--e-color-accent);
-  color: var(--e-color-ground-more);
+  color: var(--e-color-ground);
   z-index: var(--e-z-index-1);
 }
 

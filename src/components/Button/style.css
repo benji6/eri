@@ -41,7 +41,7 @@ a.e-button {
 
 .e-button--primary {
   background: var(--color);
-  color: var(--e-color-ground-more);
+  color: var(--e-color-ground);
   position: relative;
 }
 
@@ -56,11 +56,11 @@ a.e-button {
 }
 
 a.e-button--primary:focus {
-  color: var(--e-color-ground-more);
+  color: var(--e-color-ground);
 }
 
 a.e-button--primary:hover {
-  color: var(--e-color-ground-more);
+  color: var(--e-color-ground);
 }
 
 .e-button--primary:active {

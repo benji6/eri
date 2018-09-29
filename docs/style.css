@@ -1,7 +1,4 @@
 code {
-  /* The aXe plugin has issues if this is not here 🤷 */
-  background: var(--e-color-ground);
-
   font-size: var(--e-font-size-0);
   transition: background var(--e-time-0) var(--e-transition);
   white-space: pre-wrap;
