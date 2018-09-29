@@ -1,6 +1,7 @@
 :root {
   --e-hue-accent: 225;
   --e-hue-negative: 345;
+  --e-hue-positive: 150;
   --e-hue-rotation: 30;
 
   --e-saturation-0: 10%;
@@ -104,6 +105,17 @@
     var(--e-hue-negative),
     calc(var(--e-saturation-1) / var(--e-saturation-ratio)),
     calc(var(--e-lightness-3) - var(--e-lightness-separation))
+  );
+
+  --e-color-positive: hsl(
+    var(--e-hue-positive),
+    var(--e-saturation-1),
+    var(--e-lightness-3)
+  );
+  --e-color-positive-less: hsl(
+    var(--e-hue-positive),
+    calc(var(--e-saturation-1) * var(--e-saturation-ratio)),
+    calc(var(--e-lightness-3) + var(--e-lightness-separation))
   );
 }
 

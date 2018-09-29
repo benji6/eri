@@ -43,7 +43,7 @@
   background: var(--e-color-balance-less);
 }
 .e-toggle__input:checked ~ .e-toggle__appearance {
-  background: var(--e-color-accent);
+  background: var(--e-color-positive);
 }
 
 .e-toggle__input:checked ~ .e-toggle__appearance::after {
@@ -53,12 +53,11 @@
 }
 
 .e-toggle__input:checked:hover ~ .e-toggle__appearance {
-  background: var(--e-color-accent-less);
+  background: var(--e-color-positive-less);
 }
 
 .e-toggle__input:focus ~ .e-toggle__appearance {
-  border-color: var(--e-color-accent);
-  box-shadow: var(--e-input-box-shadow-focus);
+  border-color: var(--e-color-accent-less);
 }
 
 .e-toggle__label {

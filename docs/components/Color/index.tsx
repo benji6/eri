@@ -20,6 +20,8 @@ interface IProps {
     | '--e-color-negative-analagous'
     | '--e-color-negative-less'
     | '--e-color-negative-more'
+    | '--e-color-positive'
+    | '--e-color-positive-less'
 }
 
 export default class Color extends React.Component<IProps> {

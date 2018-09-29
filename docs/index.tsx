@@ -180,6 +180,10 @@ class App extends React.PureComponent {
               <Color varName="--e-color-negative-less" />
               <Color varName="--e-color-negative-analagous" />
             </ColorGroup>
+            <ColorGroup name="Positive">
+              <Color varName="--e-color-positive" />
+              <Color varName="--e-color-positive-less" />
+            </ColorGroup>
             <h2>Typography</h2>
             <p>
               No downloaded fonts means no extra page weight. Eri uses system
