@@ -23,7 +23,7 @@ interface IProps {
 }
 
 export default class Color extends React.Component<IProps> {
-  render() {
+  public render() {
     const { varName } = this.props
     const color = getStylePropValue(varName)
 

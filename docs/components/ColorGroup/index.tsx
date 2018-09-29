@@ -6,7 +6,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default class ColorGroup extends React.PureComponent<IProps> {
-  render() {
+  public render() {
     const { name, ...rest } = this.props
 
     return (

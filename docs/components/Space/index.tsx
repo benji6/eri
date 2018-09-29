@@ -24,20 +24,18 @@ interface IState {
 }
 
 export default class Space extends React.PureComponent<IProps, IState> {
-  myRef: React.RefObject<HTMLDivElement> = React.createRef()
-  state = { value: undefined }
+  public myRef: React.RefObject<HTMLDivElement> = React.createRef()
+  public state = { value: undefined }
 
-  componentDidMount() {
+  public componentDidMount() {
     this.setState({
       value: this.myRef.current.clientWidth,
     })
   }
 
-  render() {
-    const {
-      props: { varName },
-      state: { value },
-    } = this
+  public render() {
+    const { varName } = this.props
+    const { value } = this.state
 
     const space = getStylePropValue(varName)
 

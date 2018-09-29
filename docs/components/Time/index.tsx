@@ -7,7 +7,7 @@ interface IProps {
 }
 
 export default class Time extends React.PureComponent<IProps> {
-  render() {
+  public render() {
     const { varName } = this.props
     const time = getStylePropValue(varName)
 

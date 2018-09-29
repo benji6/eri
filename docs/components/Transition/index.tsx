@@ -7,7 +7,7 @@ interface IProps {
 }
 
 export default class Transition extends React.PureComponent<IProps> {
-  render() {
+  public render() {
     const { varName } = this.props
     const transition = getStylePropValue(varName)
 

@@ -4,7 +4,8 @@ import Card from '../Card'
 import Icon from '../Icon'
 import './style.css'
 
-const documentElementClassList = document.documentElement.classList
+const documentElementClassList = (document.documentElement as HTMLElement)
+  .classList
 
 interface IProps {
   children: React.ReactNode

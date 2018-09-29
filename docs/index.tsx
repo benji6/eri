@@ -18,12 +18,12 @@ import {
 } from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
-import SpaceGroup from './components/SpaceGroup'
 import Space from './components/Space'
+import SpaceGroup from './components/SpaceGroup'
 import Time from './components/Time'
 import Transition from './components/Transition'
-import getStylePropValue from './utils/getStylePropValue'
 import './style.css'
+import getStylePropValue from './utils/getStylePropValue'
 
 const metaThemeColor = document.querySelector('meta[name=theme-color]')
 
@@ -36,24 +36,25 @@ interface IState {
 }
 
 class App extends React.PureComponent {
-  state: IState = {
+  public state: IState = {
     isDialogOpen: false,
-    page3: 0,
-    page4: 0,
     page10: 4,
     page1000: 999,
+    page3: 0,
+    page4: 0,
   }
 
-  handleDialogClose = () => this.setState({ isDialogOpen: false })
+  public handleDialogClose = () => this.setState({ isDialogOpen: false })
 
-  handleDialogOpen = () => this.setState({ isDialogOpen: true })
+  public handleDialogOpen = () => this.setState({ isDialogOpen: true })
 
-  handlePageChange3 = (page3: number) => this.setState({ page3 })
-  handlePageChange4 = (page4: number) => this.setState({ page4 })
-  handlePageChange10 = (page10: number) => this.setState({ page10 })
-  handlePageChange1000 = (page1000: number) => this.setState({ page1000 })
+  public handlePageChange3 = (page3: number) => this.setState({ page3 })
+  public handlePageChange4 = (page4: number) => this.setState({ page4 })
+  public handlePageChange10 = (page10: number) => this.setState({ page10 })
+  public handlePageChange1000 = (page1000: number) =>
+    this.setState({ page1000 })
 
-  switchToDarkTheme = () => {
+  public switchToDarkTheme = () => {
     document.documentElement.classList.add('e-theme-dark')
     metaThemeColor.setAttribute(
       'content',
@@ -62,7 +63,7 @@ class App extends React.PureComponent {
     this.forceUpdate()
   }
 
-  switchToLightTheme = () => {
+  public switchToLightTheme = () => {
     document.documentElement.classList.remove('e-theme-dark')
     metaThemeColor.setAttribute(
       'content',
@@ -71,7 +72,7 @@ class App extends React.PureComponent {
     this.forceUpdate()
   }
 
-  render() {
+  public render() {
     const { isDialogOpen, page3, page4, page10, page1000 } = this.state
 
     return (
@@ -347,7 +348,13 @@ class App extends React.PureComponent {
             <a href="#">Click me!</a>
             <h3>Pagination</h3>
             <p>Renders nothing when there are no pages</p>
-            <Pagination onChange={console.log} page={0} pageCount={0} />
+            <Pagination
+              onChange={() => {
+                // empty
+              }}
+              page={0}
+              pageCount={0}
+            />
             <p>Page {page3 + 1} of 3 pages</p>
             <Pagination
               onChange={this.handlePageChange3}

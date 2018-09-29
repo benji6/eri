@@ -3,6 +3,7 @@
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
+    "lib": ["dom", "es2015"],
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
