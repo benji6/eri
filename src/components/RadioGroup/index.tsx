@@ -22,7 +22,7 @@ export default class RadioGroup extends React.Component<IProps> {
           <legend className="e-radio-group__legend">
             <FieldLabel>{label}</FieldLabel>
           </legend>
-          <div className="e-radio-group__children">{children}</div>
+          <div>{children}</div>
           <FieldError>{error}</FieldError>
         </fieldset>
       </Field>

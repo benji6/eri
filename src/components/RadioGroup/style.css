@@ -5,10 +5,6 @@
   padding: 0;
 }
 
-.e-radio-group__children {
-  user-select: none;
-}
-
 .e-radio-group__legend {
   padding: 0;
 }

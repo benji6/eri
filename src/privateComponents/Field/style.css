@@ -1,3 +1,4 @@
 .e-field {
   margin: var(--e-space-2) 0;
+  user-select: none;
 }
