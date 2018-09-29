@@ -23,7 +23,6 @@ header {
 header h1 {
   color: var(--color-ground-more);
   margin: 0;
-  text-shadow: var(--e-text-shadow);
 }
 
 header a {

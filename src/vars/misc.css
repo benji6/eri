@@ -6,12 +6,6 @@
   --e-z-index-1: 1;
 
   /* misc */
-  --e-text-shadow-color: var(--e-color-accent);
   --e-box-shadow: 0 0 var(--e-space-1) var(--e-color-figure-less);
-  --e-text-shadow: 0.1rem 0.1rem 0.2rem var(--e-text-shadow-color);
   --e-input-box-shadow-focus: 0 0 var(--e-space-0) 0 var(--e-color-accent-less);
-}
-
-.e-theme-dark {
-  --e-text-shadow-color: var(--e-color-negative);
 }
