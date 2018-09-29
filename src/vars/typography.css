@@ -1,5 +1,5 @@
 :root {
-  --e-font-bold: 600;
+  --e-font-bold: 700;
   --e-font-size-scale-ratio: calc(4 / 3);
   --e-font-size-0: 0.9rem;
   --e-font-size-1: calc(var(--e-font-size-0) * var(--e-font-size-scale-ratio));
@@ -9,7 +9,6 @@
     var(--e-font-size-3) * var(--e-font-size-scale-ratio) *
       var(--e-font-size-scale-ratio)
   );
-  --e-heading-font-weight: 500;
 }
 
 @media (max-width: 550px) {
