@@ -1,7 +1,4 @@
 :root {
-  /* transition */
-  --e-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
-
   /* z-index */
   --e-z-index-1: 1;
 

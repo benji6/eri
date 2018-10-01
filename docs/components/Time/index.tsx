@@ -3,7 +3,7 @@ import getStylePropValue from '../../utils/getStylePropValue'
 import './style.css'
 
 interface IProps {
-  varName: '--e-time-0' | '--e-time-1'
+  varName: '--e-time-0' | '--e-time-1' | '--e-time-2'
 }
 
 export default class Time extends React.PureComponent<IProps> {

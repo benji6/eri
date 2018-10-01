@@ -1,6 +1,7 @@
 import './global.css'
 import './utils.css'
 import './vars/colors.css'
+import './vars/easing.css'
 import './vars/misc.css'
 import './vars/space.css'
 import './vars/time.css'

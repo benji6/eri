@@ -137,12 +137,15 @@ class App extends React.PureComponent {
             <p>Space is fine, but we'll also get nowhere without time.</p>
             <Time varName="--e-time-0" />
             <Time varName="--e-time-1" />
+            <Time varName="--e-time-2" />
             <h2>Easing</h2>
             <p>
               Now we have space and time we need to define how we're going to
               move through it. Easings define how movement through space-time
               feels.
             </p>
+            <Easing varName="--e-easing-accelerate" />
+            <Easing varName="--e-easing-decelerate" />
             <Easing varName="--e-easing-standard" />
             <h2>Color</h2>
             <p>

@@ -3,7 +3,10 @@ import getStylePropValue from '../../utils/getStylePropValue'
 import './style.css'
 
 interface IProps {
-  varName: '--e-easing-standard'
+  varName:
+    | '--e-easing-accelerate'
+    | '--e-easing-decelerate'
+    | '--e-easing-standard'
 }
 
 export default class Easing extends React.PureComponent<IProps> {

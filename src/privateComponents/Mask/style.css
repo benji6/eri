@@ -8,13 +8,14 @@
 
   /* fixes issue on mobile where user can drag the mask down */
   top: -100vh;
-  transition: opacity var(--e-time-0) var(--e-easing-standard);
+  transition: opacity var(--e-time-1) var(--e-easing-decelerate);
   z-index: var(--e-z-index-1);
 }
 
 .e-mask--closed {
   opacity: 0;
   pointer-events: none;
+  transition-timing-function: var(--e-easing-decelerate);
 }
 
 .e-mask__container {
