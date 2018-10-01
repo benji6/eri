@@ -8,7 +8,7 @@
 
   /* fixes issue on mobile where user can drag the mask down */
   top: -100vh;
-  transition: opacity var(--e-time-0) var(--e-transition);
+  transition: opacity var(--e-time-0) var(--e-easing-standard);
   z-index: var(--e-z-index-1);
 }
 

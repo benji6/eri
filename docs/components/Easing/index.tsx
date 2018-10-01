@@ -3,25 +3,25 @@ import getStylePropValue from '../../utils/getStylePropValue'
 import './style.css'
 
 interface IProps {
-  varName: '--e-transition'
+  varName: '--e-easing-standard'
 }
 
-export default class Transition extends React.PureComponent<IProps> {
+export default class Easing extends React.PureComponent<IProps> {
   public render() {
     const { varName } = this.props
-    const transition = getStylePropValue(varName)
+    const animationTimingFunction = getStylePropValue(varName)
 
     return (
-      <div className="d-transition">
-        <div className="d-transition__visual-container">
+      <div className="d-easing">
+        <div className="d-easing__visual-container">
           <div
-            className="d-transition__visual"
-            style={{ animationTimingFunction: transition }}
+            className="d-easing__visual"
+            style={{ animationTimingFunction }}
           />
         </div>
         <pre>
           <code>
-            {varName}: {transition};
+            {varName}: {animationTimingFunction};
           </code>
         </pre>
         <pre>

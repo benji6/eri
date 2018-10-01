@@ -31,7 +31,7 @@
   margin-left: var(--e-space-2);
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;
-  transition-timing-function: var(--e-transition);
+  transition-timing-function: var(--e-easing-standard);
 }
 
 .e-dialog__close:hover {

@@ -25,7 +25,7 @@
   text-align: center;
   transition-duration: var(--e-time-0);
   transition-property: background-color, border-color, color;
-  transition-timing-function: var(--e-transition);
+  transition-timing-function: var(--e-easing-standard);
 }
 
 .e-radio-button:first-child .e-radio-button__appearance {

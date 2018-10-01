@@ -5,7 +5,7 @@
   padding: var(--e-space-1) var(--e-space-3);
   transition-duration: var(--e-time-0);
   transition-property: background, color;
-  transition-timing-function: var(--e-transition);
+  transition-timing-function: var(--e-easing-standard);
 }
 
 .e-header__container {

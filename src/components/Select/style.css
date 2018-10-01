@@ -6,7 +6,7 @@
   position: absolute;
   right: var(--e-space-2);
   top: 0;
-  transition: color var(--e-time-0) var(--e-transition);
+  transition: color var(--e-time-0) var(--e-easing-standard);
 }
 
 .e-select__label {

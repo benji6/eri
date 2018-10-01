@@ -21,10 +21,10 @@ import {
 } from '../src'
 import Color from './components/Color'
 import ColorGroup from './components/ColorGroup'
+import Easing from './components/Easing'
 import Space from './components/Space'
 import SpaceGroup from './components/SpaceGroup'
 import Time from './components/Time'
-import Transition from './components/Transition'
 import './style.css'
 import getStylePropValue from './utils/getStylePropValue'
 
@@ -137,13 +137,13 @@ class App extends React.PureComponent {
             <p>Space is fine, but we'll also get nowhere without time.</p>
             <Time varName="--e-time-0" />
             <Time varName="--e-time-1" />
-            <h2>Transition</h2>
+            <h2>Easing</h2>
             <p>
               Now we have space and time we need to define how we're going to
-              move through it. Transitions contribute a lot to how movement
-              through space-time feels.
+              move through it. Easings define how movement through space-time
+              feels.
             </p>
-            <Transition varName="--e-transition" />
+            <Easing varName="--e-easing-standard" />
             <h2>Color</h2>
             <p>
               &quot;Black then white are all I see In my infancy. Red and yellow

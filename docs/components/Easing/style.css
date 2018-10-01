@@ -1,24 +1,24 @@
-.d-transition {
+.d-easing {
   display: flex;
   flex-direction: column;
   height: 7.5rem;
   text-align: center;
 }
 
-.d-transition__visual-container {
+.d-easing__visual-container {
   align-items: center;
   display: flex;
   flex: 1;
   justify-content: center;
 }
 
-.d-transition__visual {
+.d-easing__visual {
   animation-duration: var(--e-time-1);
   animation-iteration-count: infinite;
   animation-name: e-rotate;
   background: var(--e-color-figure);
   border-radius: var(--e-border-radius);
   height: var(--e-space-2);
-  transition: background-color var(--e-time-0) var(--e-transition);
+  transition: background-color var(--e-time-0) var(--e-easing-standard);
   width: var(--e-space-5);
 }

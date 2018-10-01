@@ -7,7 +7,7 @@ body {
   margin: 0;
   transition-duration: var(--e-time-0);
   transition-property: background, color;
-  transition-timing-function: var(--e-transition);
+  transition-timing-function: var(--e-easing-standard);
 }
 
 main {
@@ -44,7 +44,7 @@ h1 {
   font-weight: var(--e-font-bold);
   margin: var(--e-space-5) 0 var(--e-space-4);
   text-align: center;
-  transition: color, var(--e-time-0) var(--e-transition);
+  transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
 h2 {
@@ -52,7 +52,7 @@ h2 {
   font-size: var(--e-font-size-3);
   font-weight: var(--e-font-bold);
   margin: var(--e-space-4) 0 var(--e-space-2);
-  transition: color, var(--e-time-0) var(--e-transition);
+  transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
 h3 {
@@ -60,7 +60,7 @@ h3 {
   font-size: var(--e-font-size-2);
   font-weight: var(--e-font-bold);
   margin: var(--e-space-3) 0 var(--e-space-2);
-  transition: color, var(--e-time-0) var(--e-transition);
+  transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
 p {
@@ -75,7 +75,7 @@ main a {
   color: var(--e-color-accent);
   outline: 0;
   text-decoration: none;
-  transition: color var(--e-time-0) var(--e-transition);
+  transition: color var(--e-time-0) var(--e-easing-standard);
 }
 
 main a:focus {
@@ -104,7 +104,7 @@ select {
   padding: var(--e-space-1) var(--e-space-2);
   transition-duration: var(--e-time-0);
   transition-property: background, border;
-  transition-timing-function: var(--e-transition);
+  transition-timing-function: var(--e-easing-standard);
 }
 
 input:not([type='checkbox']):focus,
