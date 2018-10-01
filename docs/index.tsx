@@ -88,8 +88,8 @@ class App extends React.PureComponent {
             <h2>Principles</h2>
             <ul>
               <li>🧘‍♀️ Simple - Eri is minimal and feels clean and intuitive.</li>
-              <li>☺️ Joyful - Eri seeks to uplift and brighten your day.</li>
               <li>🚀 Snappy - Eri is fast and feels slick.</li>
+              <li>☺️ Joyful - Eri seeks to uplift and brighten your day.</li>
             </ul>
             <h2>Space</h2>
             <p>
