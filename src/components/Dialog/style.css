@@ -40,9 +40,7 @@
 }
 
 .e-dialog__close {
-  background: none;
   border-radius: var(--e-border-radius);
-  border: none;
   color: inherit;
   padding: 0;
   margin-left: var(--e-space-2);

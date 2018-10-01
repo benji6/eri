@@ -10,26 +10,6 @@ body {
   transition-timing-function: var(--e-transition);
 }
 
-header {
-  background: var(--e-color-figure);
-  color: var(--e-color-ground);
-  margin-bottom: var(--e-space-4);
-  padding: var(--e-space-1) 0;
-  transition-duration: var(--e-time-0);
-  transition-property: background, color;
-  transition-timing-function: var(--e-transition);
-}
-
-header h1 {
-  color: var(--e-color-ground);
-  margin: 0;
-}
-
-header a {
-  color: inherit;
-  text-decoration: none;
-}
-
 main {
   margin: 0 auto;
   max-width: var(--e-max-width-1);
@@ -145,6 +125,8 @@ select[aria-invalid='true'] {
 }
 
 button {
+  background: none;
+  border: none;
   color: inherit;
   cursor: pointer;
   font-size: inherit;

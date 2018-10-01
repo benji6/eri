@@ -23,16 +23,17 @@ const iconNameMap = {
 
 interface IProps extends React.SVGProps<SVGSVGElement> {
   name: keyof typeof iconNameMap
+  size?: '3'
 }
 
 export default class Icon extends React.PureComponent<IProps> {
   public render() {
-    const { name, ...rest } = this.props
+    const { name, size = 2, ...rest } = this.props
 
     return (
       <svg
         {...rest}
-        className="e-icon"
+        className={`e-icon e-icon--size-${size}`}
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"

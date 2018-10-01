@@ -8,7 +8,9 @@ import {
   Checkbox,
   CurrencyField,
   Dialog,
+  Header,
   Icon,
+  MenuButton,
   Pagination,
   RadioButton,
   RadioGroup,
@@ -79,11 +81,12 @@ class App extends React.PureComponent {
     return (
       <Router>
         <>
-          <header>
+          <Header>
             <h1>
               <a href="/">Eri</a>
             </h1>
-          </header>
+            <MenuButton />
+          </Header>
           <main>
             <h2>Principles</h2>
             <ul>

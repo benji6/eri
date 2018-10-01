@@ -11,7 +11,6 @@
 .pagination__button {
   background: none;
   border-radius: var(--e-border-radius);
-  border: none;
   color: var(--e-color-accent);
   padding: var(--e-space-0) var(--e-space-2);
 }

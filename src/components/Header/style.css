@@ -1,0 +1,26 @@
+.e-header {
+  background: var(--e-color-figure);
+  color: var(--e-color-ground);
+  margin-bottom: var(--e-space-4);
+  padding: var(--e-space-1) var(--e-space-3);
+  transition-duration: var(--e-time-0);
+  transition-property: background, color;
+  transition-timing-function: var(--e-transition);
+}
+
+.e-header__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--e-max-width-1);
+}
+
+.e-header h1 {
+  color: var(--e-color-ground);
+  margin: 0;
+}
+
+.e-header a {
+  color: inherit;
+  text-decoration: none;
+}
