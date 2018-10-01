@@ -1,0 +1,26 @@
+.e-mask {
+  background-color: var(--e-color-balance-more);
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+
+  /* fixes issue on mobile where user can drag the mask down */
+  top: -100vh;
+  transition: opacity var(--e-time-0) var(--e-transition);
+  z-index: var(--e-z-index-1);
+}
+
+.e-mask--closed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.e-mask__container {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}

@@ -1,23 +1,8 @@
 .e-dialog {
   align-items: center;
-  background-color: var(--e-color-balance-more);
-  bottom: 0;
   display: flex;
+  height: 100vh;
   justify-content: center;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-
-  /* fixes issue on mobile where user can drag the mask down */
-  top: -100vh;
-  transition: opacity var(--e-time-0) var(--e-transition);
-  z-index: var(--e-z-index-1);
-}
-
-.e-dialog--closed {
-  opacity: 0;
-  pointer-events: none;
 }
 
 .e-dialog__content {
@@ -63,6 +48,6 @@
 }
 
 .e-dialog__dialog {
-  margin: 100vh var(--e-space-3) 0;
+  margin: 0 var(--e-space-3);
   max-width: var(--e-max-width-0);
 }

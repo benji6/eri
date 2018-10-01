@@ -1,5 +1,5 @@
-import classnames from 'classnames'
 import * as React from 'react'
+import Mask from '../../privateComponents/Mask'
 import Card from '../Card'
 import Icon from '../Icon'
 import './style.css'
@@ -44,42 +44,40 @@ export default class Dialog extends React.Component<IProps> {
   public render() {
     const { children, onClose, open, title, ...rest } = this.props
 
-    const className = classnames('e-dialog', {
-      'e-dialog--closed': !open,
-    })
-
     return (
-      <div
-        {...rest}
-        aria-describedby="e-dialog-desc"
-        aria-hidden={!open}
-        aria-labelledby="e-dialog-title"
-        className={className}
-        onClick={this.handleMaskClick}
-        onKeyDown={this.handleKeyDown}
-        ref={el => (this.el = el)}
-        role="dialog"
-      >
-        <div className="e-dialog__dialog">
-          <Card>
-            <div className="e-dialog__content">
-              <div className="e-dialog__header">
-                <h4 id="e-dialog-title">{title}</h4>
-                <button
-                  aria-hidden={!open}
-                  aria-label="close"
-                  className="e-dialog__close"
-                  disabled={!open}
-                  onClick={this.handleCloseClick}
-                >
-                  <Icon name="cross" />
-                </button>
+      <Mask open={open}>
+        <div
+          {...rest}
+          aria-describedby="e-dialog-desc"
+          aria-hidden={!open}
+          aria-labelledby="e-dialog-title"
+          className="e-dialog"
+          onClick={this.handleMaskClick}
+          onKeyDown={this.handleKeyDown}
+          ref={el => (this.el = el)}
+          role="dialog"
+        >
+          <div className="e-dialog__dialog">
+            <Card>
+              <div className="e-dialog__content">
+                <div className="e-dialog__header">
+                  <h4 id="e-dialog-title">{title}</h4>
+                  <button
+                    aria-hidden={!open}
+                    aria-label="close"
+                    className="e-dialog__close"
+                    disabled={!open}
+                    onClick={this.handleCloseClick}
+                  >
+                    <Icon name="cross" />
+                  </button>
+                </div>
+                <div id="e-dialog-desc">{children}</div>
               </div>
-              <div id="e-dialog-desc">{children}</div>
-            </div>
-          </Card>
+            </Card>
+          </div>
         </div>
-      </div>
+      </Mask>
     )
   }
 
