@@ -87,9 +87,9 @@ class App extends React.PureComponent {
           <main>
             <h2>Principles</h2>
             <ul>
-              <li>Minimal - Eri feels simple, clean and intuitive.</li>
-              <li>Snappy - Eri is fast and feels slick on all devices.</li>
-              <li>Accessible - Eri is an experience for everyone.</li>
+              <li>🧘‍♀️ Simple - Eri is minimal and feels clean and intuitive.</li>
+              <li>☺️ Joyful - Eri seeks to uplift and brighten your day.</li>
+              <li>🚀 Snappy - Eri is fast and feels slick.</li>
             </ul>
             <h2>Space</h2>
             <p>
@@ -211,7 +211,7 @@ class App extends React.PureComponent {
               nisi ut aliquip ex ea commodo consequat.
             </p>
             <p>
-              Take a look at some <strong>strong text</strong>.
+              Take a look at some <strong>strong</strong> text.
             </p>
             <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -347,11 +347,15 @@ class App extends React.PureComponent {
               </ButtonGroup>
             </form>
             <h3>Icons</h3>
+            <p>
+              ❤️ <a href="https://feathericons.com/">Feather</a>
+            </p>
             <Icon name="check" />
             <Icon name="cross" />
-            <Icon name="down" />
             <Icon name="left" />
             <Icon name="right" />
+            <Icon name="down" />
+            <Icon name="menu" />
             <h3>Link</h3>
             <p>Links take you places.</p>
             <a href="#">Click me!</a>

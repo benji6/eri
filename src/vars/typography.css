@@ -1,5 +1,5 @@
 :root {
-  --e-font-bold: 700;
+  --e-font-bold: 800;
   --e-font-size-scale-ratio: calc(4 / 3);
   --e-font-size-0: 0.9rem;
   --e-font-size-1: calc(var(--e-font-size-0) * var(--e-font-size-scale-ratio));
