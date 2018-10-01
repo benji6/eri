@@ -65,6 +65,7 @@ a.e-button--primary:hover {
 
 .e-button--primary:active {
   background: var(--color-active);
+  border-color: var(--color-active);
 }
 
 .e-button--primary:disabled {
