@@ -32,29 +32,6 @@
   margin-bottom: 0;
 }
 
-.e-dialog__close {
-  border-radius: var(--e-border-radius);
-  color: inherit;
-  padding: 0;
-  margin-left: var(--e-space-2);
-  transition-duration: var(--e-time-0);
-  transition-property: background-color, color;
-  transition-timing-function: var(--e-easing-standard);
-}
-
-.e-dialog__close:hover {
-  color: var(--e-figure-less);
-}
-
-.e-dialog__close:focus:not(:active):not(:hover) {
-  background: var(--e-color-figure);
-  color: var(--e-color-ground);
-}
-
-.e-dialog__close:active {
-  color: var(--e-figure-more);
-}
-
 .e-dialog__dialog {
   margin: 0 var(--e-space-3);
   max-width: var(--e-max-width-0);

@@ -1,5 +1,6 @@
 import classnames from 'classnames'
 import * as React from 'react'
+import CloseButton from '../../privateComponents/CloseButton'
 import Mask from '../../privateComponents/Mask'
 import './style.css'
 
@@ -10,7 +11,7 @@ interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
 
 export default class Menu extends React.PureComponent<IProps> {
   public render() {
-    const { onClose, open } = this.props
+    const { children, onClose, open, ...rest } = this.props
 
     const className = classnames('e-menu', {
       'e-menu--closed': !open,
@@ -18,11 +19,16 @@ export default class Menu extends React.PureComponent<IProps> {
 
     return (
       <Mask onClose={onClose} open={open}>
-        <nav
-          {...this.props}
-          className={className}
-          onClick={e => e.stopPropagation()}
-        />
+        <nav {...rest} className={className} onClick={e => e.stopPropagation()}>
+          <div className="e-menu__close-button">
+            <CloseButton
+              aria-hidden={!open}
+              disabled={!open}
+              onClick={onClose}
+            />
+          </div>
+          {children}
+        </nav>
       </Mask>
     )
   }

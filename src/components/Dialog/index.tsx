@@ -1,8 +1,8 @@
 import classnames from 'classnames'
 import * as React from 'react'
+import CloseButton from '../../privateComponents/CloseButton'
 import Mask from '../../privateComponents/Mask'
 import Card from '../Card'
-import Icon from '../Icon'
 import './style.css'
 
 interface IProps {
@@ -34,15 +34,11 @@ export default class Dialog extends React.Component<IProps> {
               <div className="e-dialog__content">
                 <div className="e-dialog__header">
                   <h4 id="e-dialog-title">{title}</h4>
-                  <button
+                  <CloseButton
                     aria-hidden={!open}
-                    aria-label="close"
-                    className="e-dialog__close"
                     disabled={!open}
                     onClick={this.handleCloseClick}
-                  >
-                    <Icon name="cross" />
-                  </button>
+                  />
                 </div>
                 <div id="e-dialog-desc">{children}</div>
               </div>
