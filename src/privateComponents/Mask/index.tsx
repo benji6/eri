@@ -6,8 +6,8 @@ const documentElementClassList = (document.documentElement as HTMLElement)
   .classList
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
-  onClose: () => void
   open: boolean
+  onClose(): void
 }
 
 export default class Mask extends React.PureComponent<IProps> {
