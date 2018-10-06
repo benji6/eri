@@ -19,7 +19,8 @@
 }
 
 .e-no-scroll {
-  bottom: 0;
   overflow: hidden;
   position: fixed;
+  left: 0;
+  right: 0;
 }

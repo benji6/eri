@@ -5,9 +5,7 @@
   opacity: 1;
   position: fixed;
   right: 0;
-
-  /* fixes issue on mobile where user can drag the mask down */
-  top: -100vh;
+  top: 0;
   transition: opacity var(--e-time-1) var(--e-easing-decelerate);
   z-index: var(--e-z-index-1);
 }
@@ -16,12 +14,4 @@
   opacity: 0;
   pointer-events: none;
   transition-timing-function: var(--e-easing-standard);
-}
-
-.e-mask__container {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
 }
