@@ -1,8 +1,12 @@
 .e-dialog {
   align-items: center;
+  bottom: 0;
   display: flex;
-  height: 100vh;
   justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
   transform: scale(0.9);
   transition: transform var(--e-time-2) var(--e-easing-accelerate);
 }

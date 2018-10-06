@@ -38,13 +38,12 @@ export default class Mask extends React.PureComponent<IProps> {
 
     return (
       <div
+        {...rest}
         aria-hidden={!open}
         className={className}
         onClick={onClose}
         onKeyDown={this.handleKeyDown}
-      >
-        <div {...rest} />
-      </div>
+      />
     )
   }
 
