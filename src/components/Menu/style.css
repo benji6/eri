@@ -3,6 +3,7 @@
 
   background: var(--e-color-ground);
   bottom: 0;
+  box-shadow: var(--e-box-shadow);
   box-sizing: border-box;
   padding: var(--e-space-3);
   position: fixed;

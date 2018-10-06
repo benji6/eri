@@ -3,6 +3,6 @@
   --e-z-index-1: 1;
 
   /* misc */
-  --e-box-shadow: 0 0 var(--e-space-1) var(--e-color-figure-less);
+  --e-box-shadow: 0 0 var(--e-space-1) var(--e-color-balance-more);
   --e-input-box-shadow-focus: 0 0 var(--e-space-0) 0 var(--e-color-accent-less);
 }
