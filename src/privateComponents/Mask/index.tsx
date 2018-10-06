@@ -13,7 +13,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 export default class Mask extends React.PureComponent<IProps> {
   public componentDidMount() {
     if (this.props.open) {
-      documentElementClassList.add('e-overflow-hidden')
+      documentElementClassList.add('e-no-scroll')
     }
     window.addEventListener('keydown', this.handleKeyDown)
   }
@@ -24,15 +24,15 @@ export default class Mask extends React.PureComponent<IProps> {
     }
 
     if (nextProps.open) {
-      documentElementClassList.add('e-overflow-hidden')
+      documentElementClassList.add('e-no-scroll')
     } else {
-      documentElementClassList.remove('e-overflow-hidden')
+      documentElementClassList.remove('e-no-scroll')
     }
   }
 
   public componentWillUnmount() {
     window.removeEventListener('keydown', this.handleKeyDown)
-    documentElementClassList.remove('e-overflow-hidden')
+    documentElementClassList.remove('e-no-scroll')
   }
 
   public render() {
