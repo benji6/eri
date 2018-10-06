@@ -63,6 +63,13 @@ h3 {
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
+hr {
+  border-bottom: none;
+  border-color: var(--e-color-balance-less);
+  border-width: var(--e-border-width);
+  margin: var(--e-space-3) 0;
+}
+
 p {
   margin: var(--e-space-2) 0;
 }

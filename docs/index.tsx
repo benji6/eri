@@ -320,6 +320,8 @@ class App extends React.PureComponent {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </Dialog>
+            <h3>Hr</h3>
+            <hr />
             <form>
               <h3>Form</h3>
               <p>This is a form.</p>
