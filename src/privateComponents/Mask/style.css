@@ -15,7 +15,7 @@
 .e-mask--closed {
   opacity: 0;
   pointer-events: none;
-  transition-timing-function: var(--e-easing-decelerate);
+  transition-timing-function: var(--e-easing-standard);
 }
 
 .e-mask__container {

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 import {
   Button,
   ButtonGroup,
@@ -10,6 +10,7 @@ import {
   Dialog,
   Header,
   Icon,
+  Menu,
   MenuButton,
   Pagination,
   RadioButton,
@@ -32,6 +33,7 @@ const metaThemeColor = document.querySelector('meta[name=theme-color]')
 
 interface IState {
   isDialogOpen: boolean
+  isMenuOpen: boolean
   page3: number
   page4: number
   page10: number
@@ -41,6 +43,7 @@ interface IState {
 class App extends React.PureComponent {
   public state: IState = {
     isDialogOpen: false,
+    isMenuOpen: false,
     page10: 4,
     page1000: 999,
     page3: 0,
@@ -48,9 +51,9 @@ class App extends React.PureComponent {
   }
 
   public handleDialogClose = () => this.setState({ isDialogOpen: false })
-
   public handleDialogOpen = () => this.setState({ isDialogOpen: true })
-
+  public handleMenuClose = () => this.setState({ isMenuOpen: false })
+  public handleMenuOpen = () => this.setState({ isMenuOpen: true })
   public handlePageChange3 = (page3: number) => this.setState({ page3 })
   public handlePageChange4 = (page4: number) => this.setState({ page4 })
   public handlePageChange10 = (page10: number) => this.setState({ page10 })
@@ -76,7 +79,14 @@ class App extends React.PureComponent {
   }
 
   public render() {
-    const { isDialogOpen, page3, page4, page10, page1000 } = this.state
+    const {
+      isDialogOpen,
+      isMenuOpen,
+      page3,
+      page4,
+      page10,
+      page1000,
+    } = this.state
 
     return (
       <Router>
@@ -85,8 +95,25 @@ class App extends React.PureComponent {
             <h1>
               <a href="/">Eri</a>
             </h1>
-            <MenuButton />
+            <MenuButton onClick={this.handleMenuOpen} />
           </Header>
+          <Menu onClose={this.handleMenuClose} open={isMenuOpen}>
+            <p>
+              <Link onClick={this.handleMenuClose} to="/">
+                Home
+              </Link>
+            </p>
+            <p>
+              <Link onClick={this.handleMenuClose} to="/">
+                Example link
+              </Link>
+            </p>
+            <p>
+              <Link onClick={this.handleMenuClose} to="/">
+                Another example link
+              </Link>
+            </p>
+          </Menu>
           <main>
             <h2>Principles</h2>
             <ul>

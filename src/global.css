@@ -71,7 +71,8 @@ a::-moz-focus-inner {
   border: none;
 }
 
-main a {
+main a,
+nav a {
   color: var(--e-color-accent);
   outline: 0;
   text-decoration: none;
