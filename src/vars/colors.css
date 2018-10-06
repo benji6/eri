@@ -15,7 +15,7 @@
   --e-lightness-4: 100%;
   --e-lightness-separation: 10%;
 
-  --e-alpha-balance: 0.8;
+  --e-alpha-balance: 0.85;
 
   --e-hue-accent-analagous: calc(var(--e-hue-accent) + var(--e-hue-rotation));
 
