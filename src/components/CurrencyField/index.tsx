@@ -8,8 +8,6 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: React.ReactNode
   integer?: boolean
   label: React.ReactNode
-  onKeyPress?: any
-  onPaste?: any
 }
 
 export default class CurrencyField extends React.Component<IProps> {
@@ -28,52 +26,12 @@ export default class CurrencyField extends React.Component<IProps> {
               aria-invalid={Boolean(error)}
               className="e-currency-field__input"
               inputMode={integer ? 'numeric' : 'decimal'}
-              onKeyPress={this.handleKeyPress}
-              onPaste={this.handlePaste}
-              pattern={integer ? '[0-9]*' : undefined}
+              pattern={integer ? '[0-9]*' : '[0-9]*'}
             />
           </span>
         </label>
         <FieldError>{error}</FieldError>
       </Field>
     )
-  }
-  private handleKeyPress = (event: any) => {
-    const { onKeyPress } = this.props
-    if (typeof onKeyPress === 'function') {
-      onKeyPress(event)
-    }
-    const value = (event.target as HTMLInputElement).value
-    const { key: inputChar } = event
-    this.shouldPreventInput(`${value}${inputChar}`, event)
-  }
-
-  private handlePaste = (event: any) => {
-    const { onPaste } = this.props
-    if (typeof onPaste === 'function') {
-      onPaste(event)
-    }
-    this.shouldPreventInput((event as any).clipboardData.getData('Text'), event)
-  }
-
-  private shouldPreventInput = (
-    potentialNewValue: string,
-    event: KeyboardEvent,
-  ) => {
-    const potentialNewNumberValue = Number(potentialNewValue)
-    const wouldBeNaN = isNaN(potentialNewNumberValue)
-    const isOverTwoDecimalPlaces =
-      String(potentialNewValue).length >
-      potentialNewNumberValue.toFixed(2).length
-    const isInteger =
-      String(potentialNewValue).length ===
-      potentialNewNumberValue.toFixed(0).length
-    if (
-      wouldBeNaN ||
-      isOverTwoDecimalPlaces ||
-      (this.props.integer && !isInteger)
-    ) {
-      event.preventDefault()
-    }
   }
 }
