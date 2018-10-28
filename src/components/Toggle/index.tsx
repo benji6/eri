@@ -6,7 +6,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: React.ReactNode
 }
 
-class Toggle extends React.PureComponent<IProps> {
+export default class Toggle extends React.PureComponent<IProps> {
   public render() {
     const { label, ...rest } = this.props
 
@@ -21,5 +21,3 @@ class Toggle extends React.PureComponent<IProps> {
     )
   }
 }
-
-export default Toggle
