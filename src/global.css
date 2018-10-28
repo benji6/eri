@@ -3,7 +3,7 @@ body {
   color: var(--e-color-figure-less);
   font-family: system-ui, sans-serif;
   font-size: var(--e-font-size-1);
-  line-height: calc(4 / 3);
+  line-height: var(--e-line-height);
   margin: 0;
   transition-duration: var(--e-time-0);
   transition-property: background, color;
@@ -39,27 +39,36 @@ li {
 }
 
 h1 {
+  --margin-base: var(--e-line-height) * var(--e-font-size-4);
+
   color: var(--e-color-figure);
   font-size: var(--e-font-size-4);
   font-weight: var(--e-font-bold);
-  margin: var(--e-space-5) 0 var(--e-space-4);
+  margin: calc(var(--margin-base) * var(--e-font-margin-top-ratio)) 0
+    calc(var(--margin-base) * var(--e-font-margin-bottom-ratio));
   text-align: center;
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
 h2 {
+  --margin-base: var(--e-line-height) * var(--e-font-size-3);
+
   color: var(--e-color-figure);
   font-size: var(--e-font-size-3);
   font-weight: var(--e-font-bold);
-  margin: var(--e-space-4) 0 var(--e-space-2);
+  margin: calc(var(--margin-base) * var(--e-font-margin-top-ratio)) 0
+    calc(var(--margin-base) * var(--e-font-margin-bottom-ratio));
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
 h3 {
+  --margin-base: var(--e-line-height) * var(--e-font-size-2);
+
   color: var(--e-color-figure);
   font-size: var(--e-font-size-2);
   font-weight: var(--e-font-bold);
-  margin: var(--e-space-3) 0 var(--e-space-2);
+  margin: calc(var(--margin-base) * var(--e-font-margin-top-ratio)) 0
+    calc(var(--margin-base) * var(--e-font-margin-bottom-ratio));
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
@@ -71,7 +80,14 @@ hr {
 }
 
 p {
-  margin: var(--e-space-2) 0;
+  --margin-base: var(--e-line-height) * var(--e-font-size-1);
+  --margin: calc(var(--margin-base) * var(--e-font-margin-top-ratio));
+
+  margin: 0 0 var(--margin);
+}
+
+p + p {
+  margin-top: var(--margin);
 }
 
 a::-moz-focus-inner {

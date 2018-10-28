@@ -148,10 +148,7 @@ class App extends React.PureComponent {
               <Space varName="--e-border-radius" />
             </SpaceGroup>
             <h3>Space</h3>
-            <p>
-              Space is also based on a responsive modular scale, but with a
-              different ratio.
-            </p>
+            <p>Space is also based on a responsive modular scale.</p>
             <SpaceGroup>
               <Space varName="--e-space-0" />
               <Space varName="--e-space-1" />
