@@ -1,6 +1,6 @@
 :root {
   --e-space-scale-ratio: 1.61803;
-  --e-space-0: 0.31rem;
+  --e-space-0: calc(var(--e-line-height) * calc(1em / 5));
   --e-space-1: calc(var(--e-space-0) * var(--e-space-scale-ratio));
   --e-space-2: calc(var(--e-space-1) * var(--e-space-scale-ratio));
   --e-space-3: calc(var(--e-space-2) * var(--e-space-scale-ratio));
@@ -14,7 +14,6 @@
 
 @media (max-width: 550px) {
   :root {
-    --e-space-0: 0.3rem;
     --e-space-scale-ratio: 1.5;
     --e-max-width-0: 100vw;
     --e-max-width-1: 100vw;
