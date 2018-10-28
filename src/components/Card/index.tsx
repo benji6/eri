@@ -3,8 +3,6 @@ import './style.css'
 
 interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
-export default class Card extends React.PureComponent<IProps> {
-  public render() {
-    return <div {...this.props} className="e-card" />
-  }
+export default function Card(props: IProps) {
+  return <div {...props} className="e-card" />
 }

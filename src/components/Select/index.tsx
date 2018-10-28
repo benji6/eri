@@ -10,28 +10,24 @@ interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label: React.ReactNode
 }
 
-export default class Select extends React.PureComponent<IProps> {
-  public render() {
-    const { error, label, ...rest } = this.props
-
-    return (
-      <Field>
-        <label className="e-select__label">
-          <FieldLabel>{label}</FieldLabel>
-          <span className="e-select__select-container">
-            <select
-              required
-              {...rest}
-              aria-invalid={Boolean(error)}
-              className="e-select__select"
-            />
-            <span className="e-select__icon">
-              <Icon name="down" />
-            </span>
+export default function Select({ error, label, ...rest }: IProps) {
+  return (
+    <Field>
+      <label className="e-select__label">
+        <FieldLabel>{label}</FieldLabel>
+        <span className="e-select__select-container">
+          <select
+            required
+            {...rest}
+            aria-invalid={Boolean(error)}
+            className="e-select__select"
+          />
+          <span className="e-select__icon">
+            <Icon name="down" />
           </span>
-        </label>
-        <FieldError>{error}</FieldError>
-      </Field>
-    )
-  }
+        </span>
+      </label>
+      <FieldError>{error}</FieldError>
+    </Field>
+  )
 }

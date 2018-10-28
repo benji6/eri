@@ -10,23 +10,24 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   supportiveText?: React.ReactNode
 }
 
-export default class TextField extends React.PureComponent<IProps> {
-  public render() {
-    const { label, error, supportiveText, ...rest } = this.props
-
-    return (
-      <Field>
-        <label className="e-text-field__label">
-          <FieldLabel>{label}</FieldLabel>
-          {supportiveText && (
-            <span className="e-text-field__supportive-text">
-              {supportiveText}
-            </span>
-          )}
-          <input required {...rest} aria-invalid={Boolean(error)} />
-        </label>
-        <FieldError>{error}</FieldError>
-      </Field>
-    )
-  }
+export default function TextField({
+  label,
+  error,
+  supportiveText,
+  ...rest
+}: IProps) {
+  return (
+    <Field>
+      <label className="e-text-field__label">
+        <FieldLabel>{label}</FieldLabel>
+        {supportiveText && (
+          <span className="e-text-field__supportive-text">
+            {supportiveText}
+          </span>
+        )}
+        <input required {...rest} aria-invalid={Boolean(error)} />
+      </label>
+      <FieldError>{error}</FieldError>
+    </Field>
+  )
 }

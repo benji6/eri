@@ -1,8 +1,8 @@
 import * as React from 'react'
 import './style.css'
 
-export default class ButtonGroup extends React.PureComponent {
-  public render() {
-    return <div {...this.props} className="e-button-group" />
-  }
+interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {}
+
+export default function ButtonGroup(props: IProps) {
+  return <div {...props} className="e-button-group" />
 }

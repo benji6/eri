@@ -9,27 +9,19 @@ interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
   onClose(): void
 }
 
-export default class Menu extends React.PureComponent<IProps> {
-  public render() {
-    const { children, onClose, open, ...rest } = this.props
+export default function Menu({ children, onClose, open, ...rest }: IProps) {
+  const className = classnames('e-menu', {
+    'e-menu--closed': !open,
+  })
 
-    const className = classnames('e-menu', {
-      'e-menu--closed': !open,
-    })
-
-    return (
-      <Mask onClose={onClose} open={open}>
-        <nav {...rest} className={className} onClick={e => e.stopPropagation()}>
-          <div className="e-menu__close-button">
-            <CloseButton
-              aria-hidden={!open}
-              disabled={!open}
-              onClick={onClose}
-            />
-          </div>
-          {children}
-        </nav>
-      </Mask>
-    )
-  }
+  return (
+    <Mask onClose={onClose} open={open}>
+      <nav {...rest} className={className} onClick={e => e.stopPropagation()}>
+        <div className="e-menu__close-button">
+          <CloseButton aria-hidden={!open} disabled={!open} onClick={onClose} />
+        </div>
+        {children}
+      </nav>
+    </Mask>
+  )
 }

@@ -6,26 +6,27 @@ import RadioButton from '../RadioButton'
 import './style.css'
 
 interface IProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
-  children: Array<React.ReactElement<RadioButton>>
+  children: Array<React.ReactElement<typeof RadioButton>>
   disabled?: boolean
   error?: React.ReactNode
   label: React.ReactNode
 }
 
-export default class RadioGroup extends React.PureComponent<IProps> {
-  public render() {
-    const { error, label, children, ...rest } = this.props
-
-    return (
-      <Field>
-        <fieldset {...rest} aria-invalid={!!error} className="e-radio-group">
-          <legend className="e-radio-group__legend">
-            <FieldLabel>{label}</FieldLabel>
-          </legend>
-          <div>{children}</div>
-          <FieldError>{error}</FieldError>
-        </fieldset>
-      </Field>
-    )
-  }
+export default function RadioGroup({
+  error,
+  label,
+  children,
+  ...rest
+}: IProps) {
+  return (
+    <Field>
+      <fieldset {...rest} aria-invalid={!!error} className="e-radio-group">
+        <legend className="e-radio-group__legend">
+          <FieldLabel>{label}</FieldLabel>
+        </legend>
+        <div>{children}</div>
+        <FieldError>{error}</FieldError>
+      </fieldset>
+    </Field>
+  )
 }

@@ -9,28 +9,22 @@ interface IProps {
     | '--e-easing-standard'
 }
 
-export default class Easing extends React.PureComponent<IProps> {
-  public render() {
-    const { varName } = this.props
-    const animationTimingFunction = getStylePropValue(varName)
+export default function Easing({ varName }: IProps) {
+  const animationTimingFunction = getStylePropValue(varName)
 
-    return (
-      <div className="d-easing">
-        <div className="d-easing__visual-container">
-          <div
-            className="d-easing__visual"
-            style={{ animationTimingFunction }}
-          />
-        </div>
-        <pre>
-          <code>
-            {varName}: {animationTimingFunction};
-          </code>
-        </pre>
-        <pre>
-          <code>animation-name: e-rotate;</code>
-        </pre>
+  return (
+    <div className="d-easing">
+      <div className="d-easing__visual-container">
+        <div className="d-easing__visual" style={{ animationTimingFunction }} />
       </div>
-    )
-  }
+      <pre>
+        <code>
+          {varName}: {animationTimingFunction};
+        </code>
+      </pre>
+      <pre>
+        <code>animation-name: e-rotate;</code>
+      </pre>
+    </div>
+  )
 }

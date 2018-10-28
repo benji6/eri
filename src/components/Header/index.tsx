@@ -3,12 +3,10 @@ import './style.css'
 
 interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
-export default class Header extends React.PureComponent<IProps> {
-  public render() {
-    return (
-      <header className="e-header">
-        <div className="e-header__container" {...this.props} />
-      </header>
-    )
-  }
+export default function Header(props: IProps) {
+  return (
+    <header className="e-header">
+      <div className="e-header__container" {...props} />
+    </header>
+  )
 }

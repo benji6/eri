@@ -11,59 +11,55 @@ interface IProps {
   onChange(page: number): void
 }
 
-export default class Pagination extends React.PureComponent<IProps> {
-  public render() {
-    const { page, pageCount, onChange } = this.props
+export default function({ page, pageCount, onChange }: IProps) {
+  const pageNumbers = []
+  const pageButtonCount = Math.min(pageCount, maxPageButtons)
 
-    const pageNumbers = []
-    const pageButtonCount = Math.min(pageCount, maxPageButtons)
-
-    for (let i = 0; i < pageButtonCount; i++) {
-      if (page <= halfMaxPageButtons) {
-        pageNumbers.push(i)
-      } else if (page >= pageCount - halfMaxPageButtons) {
-        pageNumbers.push(i + pageCount - Math.min(maxPageButtons, pageCount))
-      } else {
-        pageNumbers.push(i + page - halfMaxPageButtons)
-      }
+  for (let i = 0; i < pageButtonCount; i++) {
+    if (page <= halfMaxPageButtons) {
+      pageNumbers.push(i)
+    } else if (page >= pageCount - halfMaxPageButtons) {
+      pageNumbers.push(i + pageCount - Math.min(maxPageButtons, pageCount))
+    } else {
+      pageNumbers.push(i + page - halfMaxPageButtons)
     }
-
-    return (
-      pageCount > 1 && (
-        <div className="e-pagination">
-          {page !== 0 && (
-            <button
-              aria-label="navigate to previous page"
-              className="pagination__button"
-              onClick={() => onChange(page - 1)}
-              type="button"
-            >
-              <Icon name="left" />
-            </button>
-          )}
-          {pageNumbers.map(i => (
-            <button
-              aria-label={`navigate to page ${i + 1}`}
-              className="pagination__button"
-              disabled={i === page}
-              key={i}
-              onClick={() => onChange(i)}
-            >
-              {i + 1}
-            </button>
-          ))}
-          {page !== pageCount - 1 && (
-            <button
-              aria-label="navigate to next page"
-              className="pagination__button"
-              onClick={() => onChange(page + 1)}
-              type="button"
-            >
-              <Icon name="right" />
-            </button>
-          )}
-        </div>
-      )
-    )
   }
+
+  return (
+    pageCount > 1 && (
+      <div className="e-pagination">
+        {page !== 0 && (
+          <button
+            aria-label="navigate to previous page"
+            className="pagination__button"
+            onClick={() => onChange(page - 1)}
+            type="button"
+          >
+            <Icon name="left" />
+          </button>
+        )}
+        {pageNumbers.map(i => (
+          <button
+            aria-label={`navigate to page ${i + 1}`}
+            className="pagination__button"
+            disabled={i === page}
+            key={i}
+            onClick={() => onChange(i)}
+          >
+            {i + 1}
+          </button>
+        ))}
+        {page !== pageCount - 1 && (
+          <button
+            aria-label="navigate to next page"
+            className="pagination__button"
+            onClick={() => onChange(page + 1)}
+            type="button"
+          >
+            <Icon name="right" />
+          </button>
+        )}
+      </div>
+    )
+  )
 }

@@ -12,43 +12,42 @@ interface IProps {
   onClose(): void
 }
 
-export default class Dialog extends React.PureComponent<IProps> {
-  public render() {
-    const { children, onClose, open, title, ...rest } = this.props
+export default function Dialog({
+  children,
+  onClose,
+  open,
+  title,
+  ...rest
+}: IProps) {
+  const className = classnames('e-dialog', {
+    'e-dialog--open': open,
+  })
 
-    const className = classnames('e-dialog', {
-      'e-dialog--open': open,
-    })
-
-    return (
-      <Mask onClose={onClose} open={open}>
-        <div
-          {...rest}
-          aria-describedby="e-dialog-desc"
-          aria-labelledby="e-dialog-title"
-          className={className}
-          role="dialog"
-        >
-          <div className="e-dialog__dialog">
-            <Card onClick={e => e.stopPropagation()}>
-              <div className="e-dialog__content">
-                <div className="e-dialog__header">
-                  <h4 id="e-dialog-title">{title}</h4>
-                  <CloseButton
-                    aria-hidden={!open}
-                    disabled={!open}
-                    onClick={this.handleCloseClick}
-                  />
-                </div>
-                <div id="e-dialog-desc">{children}</div>
+  return (
+    <Mask onClose={onClose} open={open}>
+      <div
+        {...rest}
+        aria-describedby="e-dialog-desc"
+        aria-labelledby="e-dialog-title"
+        className={className}
+        role="dialog"
+      >
+        <div className="e-dialog__dialog">
+          <Card onClick={e => e.stopPropagation()}>
+            <div className="e-dialog__content">
+              <div className="e-dialog__header">
+                <h4 id="e-dialog-title">{title}</h4>
+                <CloseButton
+                  aria-hidden={!open}
+                  disabled={!open}
+                  onClick={onClose}
+                />
               </div>
-            </Card>
-          </div>
+              <div id="e-dialog-desc">{children}</div>
+            </div>
+          </Card>
         </div>
-      </Mask>
-    )
-  }
-
-  private handleCloseClick = (e: React.MouseEvent<HTMLButtonElement>) =>
-    this.props.onClose()
+      </div>
+    </Mask>
+  )
 }

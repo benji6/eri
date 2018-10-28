@@ -23,21 +23,18 @@ interface IProps {
     | '--e-color-positive-less'
 }
 
-export default class Color extends React.Component<IProps> {
-  public render() {
-    const { varName } = this.props
-    const color = getStylePropValue(varName)
+export default function Color({ varName }: IProps) {
+  const color = getStylePropValue(varName)
 
-    return (
-      <div className="d-color">
-        <div className="d-color__visual" style={{ background: color }} />
-        <pre>
-          <code>{varName}</code>
-        </pre>
-        <pre>
-          <code>{color}</code>
-        </pre>
-      </div>
-    )
-  }
+  return (
+    <div className="d-color">
+      <div className="d-color__visual" style={{ background: color }} />
+      <pre>
+        <code>{varName}</code>
+      </pre>
+      <pre>
+        <code>{color}</code>
+      </pre>
+    </div>
+  )
 }
