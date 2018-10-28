@@ -12,7 +12,7 @@ interface IProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
   label: React.ReactNode
 }
 
-export default class RadioGroup extends React.Component<IProps> {
+export default class RadioGroup extends React.PureComponent<IProps> {
   public render() {
     const { error, label, children, ...rest } = this.props
 

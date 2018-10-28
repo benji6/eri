@@ -10,7 +10,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: React.ReactNode
 }
 
-export default class CurrencyField extends React.Component<IProps> {
+export default class CurrencyField extends React.PureComponent<IProps> {
   public render() {
     const { error, integer, label, ...rest } = this.props
 

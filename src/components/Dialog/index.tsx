@@ -12,7 +12,7 @@ interface IProps {
   onClose(): void
 }
 
-export default class Dialog extends React.Component<IProps> {
+export default class Dialog extends React.PureComponent<IProps> {
   public render() {
     const { children, onClose, open, title, ...rest } = this.props
 

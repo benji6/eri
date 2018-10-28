@@ -7,7 +7,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   children: React.ReactNode
 }
 
-export default class RadioButton extends React.Component<IProps> {
+export default class RadioButton extends React.PureComponent<IProps> {
   public render() {
     const { children, ...rest } = this.props
 
