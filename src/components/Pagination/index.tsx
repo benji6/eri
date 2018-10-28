@@ -11,7 +11,7 @@ interface IProps {
   onChange(page: number): void
 }
 
-export default function({ page, pageCount, onChange }: IProps) {
+export default function Pagination({ page, pageCount, onChange }: IProps) {
   const pageNumbers = []
   const pageButtonCount = Math.min(pageCount, maxPageButtons)
 
