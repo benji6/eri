@@ -39,36 +39,27 @@ li {
 }
 
 h1 {
-  --margin-base: var(--e-line-height) * var(--e-font-size-4);
-
   color: var(--e-color-figure);
   font-size: var(--e-font-size-4);
   font-weight: var(--e-font-bold);
-  margin: calc(var(--margin-base) * var(--e-font-margin-top-ratio)) 0
-    calc(var(--margin-base) * var(--e-font-margin-bottom-ratio));
+  margin: var(--e-font-heading-margin);
   text-align: center;
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
 h2 {
-  --margin-base: var(--e-line-height) * var(--e-font-size-3);
-
   color: var(--e-color-figure);
   font-size: var(--e-font-size-3);
   font-weight: var(--e-font-bold);
-  margin: calc(var(--margin-base) * var(--e-font-margin-top-ratio)) 0
-    calc(var(--margin-base) * var(--e-font-margin-bottom-ratio));
+  margin: var(--e-font-heading-margin);
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
 h3 {
-  --margin-base: var(--e-line-height) * var(--e-font-size-2);
-
   color: var(--e-color-figure);
   font-size: var(--e-font-size-2);
   font-weight: var(--e-font-bold);
-  margin: calc(var(--margin-base) * var(--e-font-margin-top-ratio)) 0
-    calc(var(--margin-base) * var(--e-font-margin-bottom-ratio));
+  margin: var(--e-font-heading-margin);
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
@@ -80,14 +71,11 @@ hr {
 }
 
 p {
-  --margin-base: var(--e-line-height) * var(--e-font-size-1);
-  --margin: calc(var(--margin-base) * var(--e-font-margin-top-ratio));
-
-  margin: 0 0 var(--margin);
+  margin: 0 0 var(--e-font-margin-bottom);
 }
 
 p + p {
-  margin-top: var(--margin);
+  margin-top: var(--e-font-margin-top);
 }
 
 a::-moz-focus-inner {
