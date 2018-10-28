@@ -18,7 +18,7 @@ export default class Mask extends React.PureComponent<IProps> {
     window.addEventListener('keydown', this.handleKeyDown)
   }
 
-  public componentWillReceiveProps(nextProps: IProps) {
+  public UNSAFE_componentWillReceiveProps(nextProps: IProps) {
     if (this.props.open === nextProps.open) return
     if (nextProps.open) this.openMask()
     else this.closeMask()

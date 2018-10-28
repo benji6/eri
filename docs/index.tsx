@@ -90,7 +90,7 @@ class App extends React.PureComponent {
 
     return (
       <Router>
-        <>
+        <React.StrictMode>
           <Header>
             <h1>
               <a href="/">Eri</a>
@@ -432,7 +432,7 @@ class App extends React.PureComponent {
             <Spinner variation="ground" />
             <Spinner variation="page" />
           </main>
-        </>
+        </React.StrictMode>
       </Router>
     )
   }
