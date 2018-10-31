@@ -25,41 +25,39 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
     }
   }
 
-  return (
-    pageCount > 1 && (
-      <div className="e-pagination">
-        {page !== 0 && (
-          <button
-            aria-label="navigate to previous page"
-            className="pagination__button"
-            onClick={() => onChange(page - 1)}
-            type="button"
-          >
-            <Icon name="left" />
-          </button>
-        )}
-        {pageNumbers.map(i => (
-          <button
-            aria-label={`navigate to page ${i + 1}`}
-            className="pagination__button"
-            disabled={i === page}
-            key={i}
-            onClick={() => onChange(i)}
-          >
-            {i + 1}
-          </button>
-        ))}
-        {page !== pageCount - 1 && (
-          <button
-            aria-label="navigate to next page"
-            className="pagination__button"
-            onClick={() => onChange(page + 1)}
-            type="button"
-          >
-            <Icon name="right" />
-          </button>
-        )}
-      </div>
-    )
-  )
+  return pageCount > 1 ? (
+    <div className="e-pagination">
+      {page !== 0 && (
+        <button
+          aria-label="navigate to previous page"
+          className="pagination__button"
+          onClick={() => onChange(page - 1)}
+          type="button"
+        >
+          <Icon name="left" />
+        </button>
+      )}
+      {pageNumbers.map(i => (
+        <button
+          aria-label={`navigate to page ${i + 1}`}
+          className="pagination__button"
+          disabled={i === page}
+          key={i}
+          onClick={() => onChange(i)}
+        >
+          {i + 1}
+        </button>
+      ))}
+      {page !== pageCount - 1 && (
+        <button
+          aria-label="navigate to next page"
+          className="pagination__button"
+          onClick={() => onChange(page + 1)}
+          type="button"
+        >
+          <Icon name="right" />
+        </button>
+      )}
+    </div>
+  ) : null
 }
