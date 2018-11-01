@@ -82,10 +82,13 @@ a::-moz-focus-inner {
   border: none;
 }
 
+a {
+  outline: 0;
+}
+
 main a,
 nav a {
   color: var(--e-color-accent);
-  outline: 0;
   text-decoration: none;
   transition: color var(--e-time-0) var(--e-easing-standard);
 }
