@@ -2,8 +2,3 @@
   display: flex;
   flex-direction: column;
 }
-
-.e-text-field__supportive-text {
-  font-size: var(--e-font-size-0);
-  margin-bottom: var(--e-space-0);
-}

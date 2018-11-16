@@ -2,6 +2,7 @@ import * as React from 'react'
 import Field from '../../privateComponents/Field'
 import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
+import SupportiveText from '../../privateComponents/SupportiveText'
 import './style.css'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -20,11 +21,7 @@ export default function TextField({
     <Field>
       <label className="e-text-field__label">
         <FieldLabel>{label}</FieldLabel>
-        {supportiveText && (
-          <span className="e-text-field__supportive-text">
-            {supportiveText}
-          </span>
-        )}
+        <SupportiveText>{supportiveText}</SupportiveText>
         <input required {...rest} aria-invalid={Boolean(error)} />
       </label>
       <FieldError>{error}</FieldError>
