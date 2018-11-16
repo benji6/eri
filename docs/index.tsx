@@ -38,7 +38,6 @@ interface IState {
   page3: number
   page4: number
   page10: number
-  page1000: number
 }
 
 class App extends React.PureComponent {
@@ -46,7 +45,6 @@ class App extends React.PureComponent {
     isDialogOpen: false,
     isMenuOpen: false,
     page10: 4,
-    page1000: 999,
     page3: 0,
     page4: 0,
   }
@@ -58,8 +56,6 @@ class App extends React.PureComponent {
   public handlePageChange3 = (page3: number) => this.setState({ page3 })
   public handlePageChange4 = (page4: number) => this.setState({ page4 })
   public handlePageChange10 = (page10: number) => this.setState({ page10 })
-  public handlePageChange1000 = (page1000: number) =>
-    this.setState({ page1000 })
 
   public switchToDarkTheme = () => {
     document.documentElement.classList.add('e-theme-dark')
@@ -80,14 +76,7 @@ class App extends React.PureComponent {
   }
 
   public render() {
-    const {
-      isDialogOpen,
-      isMenuOpen,
-      page3,
-      page4,
-      page10,
-      page1000,
-    } = this.state
+    const { isDialogOpen, isMenuOpen, page3, page4, page10 } = this.state
 
     return (
       <Router>
@@ -426,12 +415,6 @@ class App extends React.PureComponent {
               onChange={this.handlePageChange10}
               page={page10}
               pageCount={10}
-            />
-            <p>Page {page1000 + 1} of 1000 pages</p>
-            <Pagination
-              onChange={this.handlePageChange1000}
-              page={page1000}
-              pageCount={1e3}
             />
             <h3>Spinner</h3>
             <Spinner />
