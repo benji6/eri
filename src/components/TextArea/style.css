@@ -1,0 +1,4 @@
+.e-text-area__label {
+  display: flex;
+  flex-direction: column;
+}

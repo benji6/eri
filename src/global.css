@@ -109,7 +109,8 @@ main a:active {
 }
 
 input:not([type='checkbox']),
-select {
+select,
+textarea {
   background: var(--e-color-ground);
   border-radius: var(--e-border-radius);
   border: var(--e-border-width) solid var(--e-color-figure);
@@ -123,18 +124,21 @@ select {
 }
 
 input:not([type='checkbox']):focus,
-select:focus {
+select:focus,
+textarea:focus {
   border-color: var(--e-color-accent-less);
   box-shadow: var(--e-input-box-shadow-focus);
 }
 
 input:not([type='checkbox']):hover,
-select:hover {
+select:hover,
+textarea:hover {
   border-color: var(--e-color-accent-less);
 }
 
 input:not([type='checkbox'])[aria-invalid='true'],
-select[aria-invalid='true'] {
+select[aria-invalid='true'],
+textarea[aria-invalid='true'] {
   border-color: var(--e-color-negative);
   box-shadow: none;
 }

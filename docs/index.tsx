@@ -17,6 +17,7 @@ import {
   RadioGroup,
   Select,
   Spinner,
+  TextArea,
   TextField,
   Toggle,
 } from '../src'
@@ -330,6 +331,11 @@ class App extends React.PureComponent {
                 supportiveText="Some supportive text"
               />
               <TextField error="Oops!" label="Text field error" />
+              <TextArea
+                label="Text area"
+                supportiveText="Some supportive text"
+              />
+              <TextArea error="Oops!" label="Text area error" />
               <RadioGroup label="Radio group">
                 <RadioButton name="selector" value="one">
                   One
