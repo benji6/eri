@@ -18,6 +18,10 @@
   color: var(--e-color-negative);
 }
 
+[e-util*='pre-line'] {
+  white-space: pre-line;
+}
+
 .e-no-scroll {
   overflow: hidden;
   position: fixed;

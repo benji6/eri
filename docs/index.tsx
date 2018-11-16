@@ -251,6 +251,11 @@ class App extends React.PureComponent {
               You can give any element a negative sentiment by setting the
               e-util attribute to "negative"
             </p>
+            <p e-util="pre-line">
+              {`You can set white-space to pre-line...
+
+              ...by setting the e-util attribute to "pre-line"`}
+            </p>
             <h2>Components</h2>
             <h3>Button</h3>
             <p>
