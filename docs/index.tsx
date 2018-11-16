@@ -350,7 +350,7 @@ class App extends React.PureComponent {
                   Three
                 </RadioButton>
               </RadioGroup>
-              <Select label="Select">
+              <Select label="Select" supportiveText="Some supportive text">
                 <option hidden>Please select</option>
                 <option>An option</option>
                 <option>
