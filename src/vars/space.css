@@ -6,7 +6,7 @@
   --e-space-3: calc(var(--e-space-2) * var(--e-space-scale-ratio));
   --e-space-4: calc(var(--e-space-3) * var(--e-space-scale-ratio));
   --e-space-5: calc(var(--e-space-4) * var(--e-space-scale-ratio));
-  --e-border-radius: 0.2rem;
+  --e-border-radius: var(--e-space-1);
   --e-border-width: 3px;
   --e-max-width-0: calc(9 * var(--e-space-5));
   --e-max-width-1: calc(12 * var(--e-space-5));
