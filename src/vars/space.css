@@ -12,7 +12,7 @@
   --e-max-width-1: calc(12 * var(--e-space-5));
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
   :root {
     --e-space-scale-ratio: 1.5;
     --e-max-width-0: 100vw;

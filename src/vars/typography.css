@@ -16,7 +16,7 @@
     var(--e-font-margin-bottom);
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
   :root {
     --e-font-size-0: 0.875rem;
     --e-font-size-scale-ratio: 1.25;
