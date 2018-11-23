@@ -61,7 +61,7 @@ class App extends React.PureComponent {
     document.documentElement.classList.add('e-theme-dark')
     metaThemeColor.setAttribute(
       'content',
-      getStylePropValue('--e-color-figure'),
+      getStylePropValue('--e-color-accent-more'),
     )
     this.forceUpdate()
   }
@@ -70,7 +70,7 @@ class App extends React.PureComponent {
     document.documentElement.classList.remove('e-theme-dark')
     metaThemeColor.setAttribute(
       'content',
-      getStylePropValue('--e-color-figure'),
+      getStylePropValue('--e-color-accent-more'),
     )
     this.forceUpdate()
   }
