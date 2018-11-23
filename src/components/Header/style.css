@@ -8,8 +8,6 @@
   color: var(--e-color-ground);
   margin-bottom: var(--e-space-4);
   padding: var(--e-space-1) var(--e-space-3);
-  position: sticky;
-  top: 0;
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;
   transition-timing-function: var(--e-easing-standard);
