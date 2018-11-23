@@ -109,7 +109,7 @@ class App extends React.PureComponent {
             <ul>
               <li>🧘‍♀️ Simple - Eri is minimal and feels clean and intuitive.</li>
               <li>🚀 Snappy - Eri is fast and feels slick.</li>
-              <li>☺️ Joyful - Eri seeks to uplift and brighten your day.</li>
+              <li>☺️ Joyful - Eri should feel good to use.</li>
             </ul>
             <h2>Space</h2>
             <p>
