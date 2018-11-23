@@ -1,11 +1,19 @@
 .e-header {
-  background: var(--e-color-figure);
+  background: linear-gradient(
+    356deg,
+    var(--e-color-figure-more),
+    var(--e-color-accent-more)
+  );
+  box-shadow: var(--e-box-shadow-2);
   color: var(--e-color-ground);
   margin-bottom: var(--e-space-4);
   padding: var(--e-space-1) var(--e-space-3);
+  position: sticky;
+  top: 0;
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;
   transition-timing-function: var(--e-easing-standard);
+  z-index: var(--e-z-index-2);
 }
 
 .e-header__container {

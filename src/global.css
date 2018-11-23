@@ -6,7 +6,7 @@ body {
   line-height: var(--e-line-height);
   margin: 0;
   transition-duration: var(--e-time-0);
-  transition-property: background, color;
+  transition-property: background-color, color;
   transition-timing-function: var(--e-easing-standard);
 }
 
@@ -24,7 +24,7 @@ form {
 @media (min-width: 501px) {
   form {
     border-radius: var(--e-border-radius);
-    box-shadow: var(--e-box-shadow);
+    box-shadow: var(--e-box-shadow-1);
     padding: var(--e-space-2) var(--e-space-4) var(--e-space-4);
   }
 }
@@ -119,7 +119,7 @@ textarea {
   outline: 0;
   padding: var(--e-space-1) var(--e-space-2);
   transition-duration: var(--e-time-0);
-  transition-property: background, border;
+  transition-property: background-color, border;
   transition-timing-function: var(--e-easing-standard);
 }
 

@@ -10,7 +10,7 @@
   font-weight: var(--e-font-bold);
   padding: var(--e-space-2) var(--e-space-3);
   transition-duration: var(--e-time-0);
-  transition-property: background, border-color;
+  transition-property: background-color, border-color;
   transition-timing-function: var(--e-easing-standard);
   user-select: none;
 }

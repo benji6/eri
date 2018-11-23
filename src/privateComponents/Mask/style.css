@@ -7,7 +7,7 @@
   right: 0;
   top: 0;
   transition: opacity var(--e-time-1) var(--e-easing-decelerate);
-  z-index: var(--e-z-index-1);
+  z-index: var(--e-z-index-3);
 }
 
 .e-mask--closed {

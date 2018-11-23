@@ -1,11 +1,12 @@
 import './global.css'
 import './utils.css'
+import './vars/box-shadow.css'
 import './vars/colors.css'
 import './vars/easing.css'
-import './vars/misc.css'
 import './vars/space.css'
 import './vars/time.css'
 import './vars/typography.css'
+import './vars/z-index.css'
 
 export { default as Button } from './components/Button'
 export { default as ButtonGroup } from './components/ButtonGroup'
