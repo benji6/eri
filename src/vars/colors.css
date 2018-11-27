@@ -1,4 +1,6 @@
 :root {
+  --e-gradient-angle: 356deg;
+
   --e-hue-accent: 210;
   --e-hue-negative: 345;
   --e-hue-positive: 150;
@@ -79,6 +81,11 @@
     var(--e-hue-accent),
     var(--e-saturation-0),
     var(--e-lightness-4)
+  );
+  --e-color-ground-less: hsl(
+    var(--e-hue-accent),
+    calc(var(--e-saturation-0) / var(--e-saturation-ratio)),
+    calc(var(--e-lightness-4) - var(--e-lightness-separation))
   );
 
   --e-color-negative: hsl(

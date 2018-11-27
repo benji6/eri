@@ -189,6 +189,7 @@ class App extends React.PureComponent {
             </ColorGroup>
             <ColorGroup name="Ground">
               <Color varName="--e-color-ground" />
+              <Color varName="--e-color-ground-less" />
             </ColorGroup>
             <ColorGroup name="Accent">
               <Color varName="--e-color-accent-more" />

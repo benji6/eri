@@ -15,6 +15,7 @@ interface IProps {
     | '--e-color-figure-less'
     | '--e-color-figure-more'
     | '--e-color-ground'
+    | '--e-color-ground-less'
     | '--e-color-negative'
     | '--e-color-negative-analagous'
     | '--e-color-negative-less'

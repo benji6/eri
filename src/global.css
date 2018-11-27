@@ -1,5 +1,11 @@
 body {
-  background: var(--e-color-ground);
+  background-attachment: fixed;
+  background-color: var(--e-color-ground-less);
+  background-image: linear-gradient(
+    var(--e-gradient-angle),
+    var(--e-color-ground-less),
+    var(--e-color-ground)
+  );
   color: var(--e-color-figure-less);
   font-family: system-ui, sans-serif;
   font-size: var(--e-font-size-1);

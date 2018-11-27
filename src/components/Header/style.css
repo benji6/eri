@@ -1,6 +1,6 @@
 .e-header {
   background: linear-gradient(
-    356deg,
+    var(--e-gradient-angle),
     var(--e-color-figure-more),
     var(--e-color-accent-more)
   );
