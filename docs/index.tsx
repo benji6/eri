@@ -10,6 +10,7 @@ import {
   Dialog,
   Header,
   Icon,
+  ImageUpload,
   Menu,
   MenuButton,
   Pagination,
@@ -378,6 +379,7 @@ class App extends React.PureComponent {
               <CurrencyField label="Currency field" />
               <CurrencyField integer label="Integer currency field" />
               <CurrencyField error="Oops!" label="Currency field error" />
+              <ImageUpload label="Image upload" />
               <ButtonGroup>
                 <Button type="button">Submit</Button>
               </ButtonGroup>

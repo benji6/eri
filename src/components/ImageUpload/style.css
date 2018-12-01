@@ -1,0 +1,12 @@
+.e-image-upload__img {
+  border-radius: var(--e-border-radius);
+  border: var(--e-border-width) solid var(--e-color-figure);
+  display: block;
+  margin: var(--e-space-3) auto;
+  max-width: 50%;
+}
+
+.e-image-upload__label {
+  display: flex;
+  flex-direction: column;
+}
