@@ -16,10 +16,13 @@ body {
   transition-timing-function: var(--e-easing-standard);
 }
 
-main {
-  margin: 0 auto;
-  max-width: var(--e-max-width-1);
-  padding: 0 var(--e-space-2);
+fieldset {
+  border-color: var(--e-color-balance);
+  border-radius: var(--e-border-radius-1);
+  border-width: var(--e-border-width-0);
+  margin: var(--e-space-2) 0;
+  padding: var(--e-space-1) var(--e-space-2);
+  user-select: none;
 }
 
 form {
@@ -30,10 +33,22 @@ form {
 @media (min-width: 501px) {
   form {
     background: var(--e-color-ground);
-    border-radius: var(--e-border-radius);
+    border-radius: var(--e-border-radius-1);
     box-shadow: var(--e-box-shadow-1);
     padding: var(--e-space-2) var(--e-space-4) var(--e-space-4);
   }
+}
+
+legend {
+  color: var(--e-color-figure);
+  font-size: var(--e-font-size-0);
+  font-weight: var(--e-font-bold);
+}
+
+main {
+  margin: 0 auto;
+  max-width: var(--e-max-width-1);
+  padding: 0 var(--e-space-2);
 }
 
 ul {
@@ -73,7 +88,7 @@ h3 {
 hr {
   border-bottom: none;
   border-color: var(--e-color-balance-less);
-  border-width: var(--e-border-width);
+  border-width: var(--e-border-width-1);
   margin: var(--e-space-3) 0;
 }
 
@@ -119,8 +134,8 @@ input:not([type='checkbox']),
 select,
 textarea {
   background: var(--e-color-ground);
-  border-radius: var(--e-border-radius);
-  border: var(--e-border-width) solid var(--e-color-figure);
+  border-radius: var(--e-border-radius-0);
+  border: var(--e-border-width-1) solid var(--e-color-figure);
   color: inherit;
   font-size: inherit;
   outline: 0;

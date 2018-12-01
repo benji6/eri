@@ -8,12 +8,12 @@
 .e-toggle__appearance {
   background: var(--e-color-balance);
   border-radius: var(--e-space-3);
-  border: var(--e-border-width) solid transparent;
+  border: var(--e-border-width-1) solid transparent;
   cursor: pointer;
   flex-shrink: 0;
   height: var(--toggle-button-diameter);
   margin-right: var(--e-space-2);
-  padding: var(--e-border-width);
+  padding: var(--e-border-width-1);
   transition-duration: var(--e-time-0);
   transition-property: background-color, border-color, box-shadow;
   transition-timing-function: var(--e-easing-standard);
@@ -34,9 +34,9 @@
   opacity: 0;
   border-radius: var(--e-space-3);
   pointer-events: none;
-  height: calc(var(--toggle-button-diameter) + 2 * var(--e-border-width));
+  height: calc(var(--toggle-button-diameter) + 2 * var(--e-border-width-1));
   position: absolute;
-  width: calc(var(--toggle-width) + 2 * var(--e-border-width));
+  width: calc(var(--toggle-width) + 2 * var(--e-border-width-1));
 }
 
 .e-toggle__input:hover ~ .e-toggle__appearance {

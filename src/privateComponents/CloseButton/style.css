@@ -1,5 +1,5 @@
 .e-close-button {
-  border-radius: var(--e-border-radius);
+  border-radius: var(--e-border-radius-0);
   color: inherit;
   padding: 0;
   margin-left: var(--e-space-2);

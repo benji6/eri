@@ -1,6 +1,6 @@
 .e-radio-button {
   display: inline-block;
-  margin-left: calc(-1 * var(--e-border-width));
+  margin-left: calc(-1 * var(--e-border-width-1));
   position: relative;
 }
 
@@ -17,7 +17,7 @@
 
 .e-radio-button__appearance {
   background: var(--e-color-ground);
-  border: var(--e-border-width) solid var(--e-color-figure);
+  border: var(--e-border-width-1) solid var(--e-color-figure);
   cursor: pointer;
   display: inline-block;
   min-width: var(--e-space-5);
@@ -30,13 +30,13 @@
 }
 
 .e-radio-button:first-child .e-radio-button__appearance {
-  border-bottom-left-radius: var(--e-border-radius);
-  border-top-left-radius: var(--e-border-radius);
+  border-bottom-left-radius: var(--e-border-radius-0);
+  border-top-left-radius: var(--e-border-radius-0);
 }
 
 .e-radio-button:last-child .e-radio-button__appearance {
-  border-bottom-right-radius: var(--e-border-radius);
-  border-top-right-radius: var(--e-border-radius);
+  border-bottom-right-radius: var(--e-border-radius-0);
+  border-top-right-radius: var(--e-border-radius-0);
 }
 
 .e-radio-button__appearance:hover {

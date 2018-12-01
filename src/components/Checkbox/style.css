@@ -6,7 +6,10 @@
 }
 
 .e-checkbox .e-field-error {
-  margin-left: calc(var(--checkbox-size) + var(--checkbox-margin-right));
+  margin-left: calc(
+    var(--checkbox-size) + var(--checkbox-margin-right) +
+      var(--e-border-width-1)
+  );
 }
 
 .e-checkbox__label {
@@ -38,8 +41,8 @@
   align-items: center;
   align-self: flex-start;
   background: var(--e-color-ground);
-  border: var(--e-border-width) solid var(--e-color-figure);
-  border-radius: var(--e-border-radius);
+  border: var(--e-border-width-1) solid var(--e-color-figure);
+  border-radius: var(--e-border-radius-0);
   box-sizing: border-box;
   color: var(--e-color-figure);
   display: inline-flex;

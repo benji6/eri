@@ -1,6 +1,6 @@
 .e-pagination {
-  border-bottom: var(--e-border-width) solid var(--e-color-figure);
-  border-top: var(--e-border-width) solid var(--e-color-figure);
+  border-bottom: var(--e-border-width-1) solid var(--e-color-figure);
+  border-top: var(--e-border-width-1) solid var(--e-color-figure);
   display: flex;
   justify-content: center;
   margin: var(--e-space-2) 0;
@@ -10,7 +10,7 @@
 
 .pagination__button {
   background: none;
-  border-radius: var(--e-border-radius);
+  border-radius: var(--e-border-radius-0);
   color: var(--e-color-accent);
   padding: var(--e-space-0) var(--e-space-2);
 }

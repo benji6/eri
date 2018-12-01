@@ -133,10 +133,15 @@ class App extends React.PureComponent {
               <Space varName="--e-font-size-3" />
               <Space varName="--e-font-size-4" />
             </SpaceGroup>
-            <h3>Borders</h3>
+            <h3>Border radius</h3>
             <SpaceGroup>
-              <Space varName="--e-border-width" />
-              <Space varName="--e-border-radius" />
+              <Space varName="--e-border-radius-0" />
+              <Space varName="--e-border-radius-1" />
+            </SpaceGroup>
+            <h3>Border width</h3>
+            <SpaceGroup>
+              <Space varName="--e-border-width-0" />
+              <Space varName="--e-border-width-1" />
             </SpaceGroup>
             <h3>Space</h3>
             <p>
@@ -369,13 +374,16 @@ class App extends React.PureComponent {
                 <option hidden>Please select</option>
                 <option>An option</option>
               </Select>
-              <Checkbox label="Checkbox" />
-              <Checkbox
-                error="Oops!"
-                label="Checkbox with a long label so we can see how it overflows"
-              />
-              <Toggle label="Toggle" />
-              <Toggle label="Toggle with a long label so we can see how it overflows" />
+              <fieldset>
+                <legend>Fieldset and legend</legend>
+                <Checkbox label="Checkbox" />
+                <Checkbox
+                  error="Oops!"
+                  label="Checkbox with a long label so we can see how it overflows"
+                />
+                <Toggle label="Toggle" />
+                <Toggle label="Toggle with a long label so we can see how it overflows" />
+              </fieldset>
               <CurrencyField label="Currency field" />
               <CurrencyField integer label="Integer currency field" />
               <CurrencyField error="Oops!" label="Currency field error" />
