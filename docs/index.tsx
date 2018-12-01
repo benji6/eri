@@ -324,7 +324,7 @@ class App extends React.PureComponent {
             </Dialog>
             <h3>Hr</h3>
             <hr />
-            <form>
+            <form noValidate>
               <h3>Form</h3>
               <p>This is a form.</p>
               <TextField
