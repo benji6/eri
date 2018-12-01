@@ -29,6 +29,7 @@ form {
 
 @media (min-width: 501px) {
   form {
+    background: var(--e-color-ground);
     border-radius: var(--e-border-radius);
     box-shadow: var(--e-box-shadow-1);
     padding: var(--e-space-2) var(--e-space-4) var(--e-space-4);
