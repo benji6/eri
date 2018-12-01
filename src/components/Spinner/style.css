@@ -12,11 +12,6 @@
   width: var(--diameter);
 }
 
-.e-spinner--ground {
-  border-color: var(--e-color-ground);
-  border-right-color: transparent;
-}
-
 .e-spinner--page {
   --diameter: var(--e-space-5);
 
