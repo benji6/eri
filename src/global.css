@@ -20,7 +20,7 @@ fieldset {
   border-color: var(--e-color-balance);
   border-radius: var(--e-border-radius-1);
   border-width: var(--e-border-width-0);
-  margin: var(--e-space-2) 0;
+  margin: var(--e-space-3) 0;
   padding: var(--e-space-1) var(--e-space-2);
   user-select: none;
 }
