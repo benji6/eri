@@ -10,8 +10,14 @@
   --e-border-radius-1: var(--e-space-2);
   --e-border-width-0: 2px;
   --e-border-width-1: 3px;
-  --e-max-width-0: calc(9 * var(--e-space-5));
-  --e-max-width-1: calc(12 * var(--e-space-5));
+  --e-max-width-0: calc(100 * var(--e-space-0));
+  --e-max-width-1: calc(4 / 3 * var(--e-max-width-0));
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --e-space-scale-ratio: 1.5;
+  }
 }
 
 @media (max-width: 500px) {
