@@ -1,8 +1,5 @@
 .e-image-upload__img {
-  border-radius: var(--e-border-radius-0);
   border: var(--e-border-width-1) solid var(--e-color-figure);
-  display: block;
-  margin: var(--e-space-3) auto;
   max-width: 50%;
 }
 
