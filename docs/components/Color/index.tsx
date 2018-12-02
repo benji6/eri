@@ -33,9 +33,6 @@ export default function Color({ varName }: IProps) {
       <pre>
         <code>{varName}</code>
       </pre>
-      <pre>
-        <code>{color}</code>
-      </pre>
     </div>
   )
 }
