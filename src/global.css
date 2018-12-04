@@ -192,5 +192,5 @@ img {
   border-radius: var(--e-border-radius-0);
   display: block;
   margin: var(--e-space-3) auto;
-  max-width: 80%;
+  max-width: calc(200% / 3);
 }
