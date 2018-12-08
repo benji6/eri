@@ -228,6 +228,9 @@ class App extends React.PureComponent {
               nisi ut aliquip ex ea commodo consequat.
             </p>
             <p>
+              Example of some <strong>strong</strong> text.
+            </p>
+            <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
               cupidatat non proident, sunt in culpa qui officia deserunt mollit
@@ -240,9 +243,7 @@ class App extends React.PureComponent {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <p>
-              Take a look at some <strong>strong</strong> text.
-            </p>
+            <h4>Heading 4</h4>
             <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat

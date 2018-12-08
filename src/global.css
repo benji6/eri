@@ -60,29 +60,31 @@ li {
   margin: var(--e-space-1) 0;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--e-color-figure);
-  font-size: var(--e-font-size-4);
   font-weight: var(--e-font-bold);
   margin: var(--e-font-heading-margin);
-  text-align: center;
   transition: color, var(--e-time-0) var(--e-easing-standard);
+}
+
+h1 {
+  font-size: var(--e-font-size-4);
+  text-align: center;
 }
 
 h2 {
-  color: var(--e-color-figure);
   font-size: var(--e-font-size-3);
-  font-weight: var(--e-font-bold);
-  margin: var(--e-font-heading-margin);
-  transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
 h3 {
-  color: var(--e-color-figure);
   font-size: var(--e-font-size-2);
-  font-weight: var(--e-font-bold);
-  margin: var(--e-font-heading-margin);
-  transition: color, var(--e-time-0) var(--e-easing-standard);
+}
+
+h4 {
+  font-size: var(--e-font-size-1);
 }
 
 hr {
