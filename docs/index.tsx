@@ -389,6 +389,7 @@ class App extends React.PureComponent {
               <CurrencyField integer label="Integer currency field" />
               <CurrencyField error="Oops!" label="Currency field error" />
               <ImageUpload label="Image upload" />
+              <ImageUpload error="Oops!" label="Image upload error" />
               <ButtonGroup>
                 <Button type="button">Submit</Button>
               </ButtonGroup>

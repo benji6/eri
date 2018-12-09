@@ -1,11 +1,13 @@
 import * as React from 'react'
 import Field from '../../privateComponents/Field'
+import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
 import './style.css'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
+  error?: React.ReactNode
   label: React.ReactNode
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 interface IState {
@@ -20,7 +22,7 @@ export default class ImageUpload extends React.PureComponent<IProps> {
   }
 
   public render() {
-    const { label, ...rest } = this.props
+    const { error, label, ...rest } = this.props
     const { imageName, imageUrl } = this.state
 
     return (
@@ -39,11 +41,13 @@ export default class ImageUpload extends React.PureComponent<IProps> {
             required
             {...rest}
             accept="image/*"
+            aria-invalid={Boolean(error)}
             className="e-image-upload__input"
             onChange={this.handleChange}
             type="file"
           />
         </label>
+        <FieldError>{error}</FieldError>
       </Field>
     )
   }
