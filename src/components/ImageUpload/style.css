@@ -3,6 +3,10 @@
   max-width: 50%;
 }
 
+.e-image-upload__input {
+  display: inline-flex;
+}
+
 .e-image-upload__label {
   display: flex;
   flex-direction: column;

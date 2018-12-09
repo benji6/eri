@@ -39,6 +39,7 @@ export default class ImageUpload extends React.PureComponent<IProps> {
             required
             {...rest}
             accept="image/*"
+            className="e-image-upload__input"
             onChange={this.handleChange}
             type="file"
           />
