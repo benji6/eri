@@ -3,12 +3,12 @@ import * as React from 'react'
 import './style.css'
 
 interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
-  variation?: 'page'
+  variant?: 'page'
 }
 
-export default function Spinner({ variation, ...rest }: IProps) {
+export default function Spinner({ variant, ...rest }: IProps) {
   const className = classnames('e-spinner', {
-    'e-spinner--page': variation === 'page',
+    'e-spinner--page': variant === 'page',
   })
 
   return <span {...rest} className={className} />

@@ -436,7 +436,7 @@ class App extends React.PureComponent {
             />
             <h3>Spinner</h3>
             <Spinner />
-            <Spinner variation="page" />
+            <Spinner variant="page" />
           </main>
         </React.StrictMode>
       </Router>
