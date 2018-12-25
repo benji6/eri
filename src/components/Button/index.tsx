@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import { History, LocationDescriptor } from 'history' // tslint:disable-line no-implicit-dependencies
+import { History, LocationDescriptorObject, Path } from 'history' // tslint:disable-line no-implicit-dependencies
 import * as React from 'react'
 import { RouteComponentProps, withRouter } from 'react-router'
 import './style.css'
@@ -8,7 +8,7 @@ type Props = RouteComponentProps &
   React.ButtonHTMLAttributes<HTMLButtonElement> & {
     history: History
     sentiment?: 'negative'
-    to?: LocationDescriptor
+    to?: LocationDescriptorObject | Path
     variant?: 'primary' | 'secondary'
   }
 
@@ -36,7 +36,7 @@ class Button extends React.Component<Props> {
         className={className}
         onClick={e => {
           if (onClick) onClick(e)
-          if (to) history.push(String(to))
+          if (to) history.push(to as Path)
         }}
         type={type}
       />
