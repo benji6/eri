@@ -282,7 +282,7 @@ class App extends React.PureComponent {
             </ButtonGroup>
             <ButtonGroup>
               <Button>Button</Button>
-              <Button to="#">Link</Button>
+              <Button to="/button-link">With to prop</Button>
             </ButtonGroup>
             <ButtonGroup>
               <Button sentiment="negative">Negative</Button>

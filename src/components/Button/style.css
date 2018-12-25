@@ -22,19 +22,9 @@
   --color-hover: var(--e-color-negative-less);
 }
 
-a.e-button {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  text-decoration: none !important;
-}
-
 @media (max-width: 500px) {
   .e-button {
     display: block;
-  }
-
-  button.e-button {
     width: 100%;
   }
 }
@@ -53,14 +43,6 @@ a.e-button {
 .e-button--primary:focus {
   background: var(--color-focus);
   border-color: var(--color-focus);
-}
-
-a.e-button--primary:focus {
-  color: var(--e-color-ground);
-}
-
-a.e-button--primary:hover {
-  color: var(--e-color-ground);
 }
 
 .e-button--primary:active {
