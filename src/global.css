@@ -8,8 +8,8 @@ html {
   );
   color: var(--e-color-figure-less);
   font-family: system-ui, sans-serif;
-  height: 100%;
   line-height: var(--e-line-height);
+  min-height: 100%;
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;
   transition-timing-function: var(--e-easing-standard);
