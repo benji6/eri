@@ -228,7 +228,10 @@ class App extends React.PureComponent {
               nisi ut aliquip ex ea commodo consequat.
             </p>
             <p>
-              Example of some <strong>strong</strong> text.
+              Example of some <strong>strong text</strong>.
+            </p>
+            <p>
+              Example of some <small>small text</small>.
             </p>
             <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse

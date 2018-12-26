@@ -188,6 +188,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
+small {
+  font-size: var(--e-font-size-0);
+}
+
 b,
 strong {
   color: var(--e-color-figure);
