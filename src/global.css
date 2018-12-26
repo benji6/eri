@@ -113,23 +113,27 @@ a {
 main a,
 nav a {
   color: var(--e-color-accent);
-  text-decoration: none;
-  transition: color var(--e-time-0) var(--e-easing-standard);
+  transition-duration: var(--e-time-0);
+  transition-property: color, text-decoration-color;
+  transition-timing-function: var(--e-easing-standard);
 }
 
-main a:focus {
+main a:focus,
+nav a:focus {
   color: var(--e-color-accent-analagous);
-  text-decoration: underline;
+  text-decoration-color: transparent;
 }
 
-main a:hover {
+main a:hover,
+nav a:hover {
   color: var(--e-color-accent-less);
-  text-decoration: underline;
+  text-decoration-color: transparent;
 }
 
-main a:active {
+main a:active,
+nav a:active {
   color: var(--e-color-accent-more);
-  text-decoration: underline;
+  text-decoration-color: transparent;
 }
 
 input:not([type='checkbox']),
