@@ -1,4 +1,4 @@
-body {
+html {
   background-attachment: fixed;
   background-color: var(--e-color-ground-less);
   background-image: linear-gradient(
@@ -8,12 +8,16 @@ body {
   );
   color: var(--e-color-figure-less);
   font-family: system-ui, sans-serif;
-  font-size: var(--e-font-size-1);
+  height: 100%;
   line-height: var(--e-line-height);
-  margin: 0;
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;
   transition-timing-function: var(--e-easing-standard);
+}
+
+body {
+  font-size: var(--e-font-size-1);
+  margin: 0;
 }
 
 fieldset {
