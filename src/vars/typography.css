@@ -1,7 +1,9 @@
 :root {
+  --e-font-size-0-min: 0.8875rem;
+
   --e-font-bold: 800;
-  --e-font-size-scale-ratio: calc(4 / 3);
-  --e-font-size-0: 0.9rem;
+  --e-font-size-scale-ratio: calc(5 / 4);
+  --e-font-size-0: var(--e-font-size-0-min);
   --e-font-size-1: calc(var(--e-font-size-0) * var(--e-font-size-scale-ratio));
   --e-font-size-2: calc(var(--e-font-size-1) * var(--e-font-size-scale-ratio));
   --e-font-size-3: calc(var(--e-font-size-2) * var(--e-font-size-scale-ratio));
@@ -13,16 +15,20 @@
     var(--e-font-margin-bottom);
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 320px) {
   :root {
-    --e-font-size-0: 0.8875rem;
+    --e-font-size-0: calc(var(--e-font-size-0-min) + 0.03vmin);
+  }
+}
+
+@media (min-width: 500px) {
+  :root {
     --e-font-size-scale-ratio: calc(31 / 24);
   }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 1024px) {
   :root {
-    --e-font-size-0: 0.875rem;
-    --e-font-size-scale-ratio: calc(5 / 4);
+    --e-font-size-scale-ratio: calc(4 / 3);
   }
 }

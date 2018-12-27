@@ -123,8 +123,10 @@ class App extends React.PureComponent {
             </p>
             <h3>Font size</h3>
             <p>
-              Fonts are sized based on a responsive modular scale which keeps
-              things simple and conveys a sense of harmony.
+              Fonts are sized based on a fluid modular scale which keeps things
+              simple and conveys a sense of harmony. You can modify the base
+              size by changing the <code>--e-font-size-0-min</code> custom
+              property.
             </p>
             <SpaceGroup>
               <Space varName="--e-font-size-0" />
