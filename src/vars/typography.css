@@ -3,7 +3,7 @@
 
   --e-font-bold: 800;
   --e-font-size-scale-ratio: calc(5 / 4);
-  --e-font-size-0: calc(var(--e-font-size-0-min) + 0.03vmin);
+  --e-font-size-0: calc(var(--e-font-size-0-min) + 0.05vmin);
   --e-font-size-1: calc(var(--e-font-size-0) * var(--e-font-size-scale-ratio));
   --e-font-size-2: calc(var(--e-font-size-1) * var(--e-font-size-scale-ratio));
   --e-font-size-3: calc(var(--e-font-size-2) * var(--e-font-size-scale-ratio));
