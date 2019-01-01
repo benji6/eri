@@ -147,6 +147,7 @@ textarea {
   border-radius: var(--e-border-radius-0);
   border: var(--e-border-width-1) solid var(--e-color-figure);
   color: inherit;
+  font-family: inherit; /* for firefox */
   font-size: inherit;
   outline: 0;
   padding: var(--e-space-1) var(--e-space-2);
