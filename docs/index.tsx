@@ -18,6 +18,7 @@ import {
   RadioGroup,
   Select,
   Spinner,
+  SubHeading,
   TextArea,
   TextField,
   Toggle,
@@ -221,8 +222,12 @@ class App extends React.PureComponent {
               fonts and fits into a person's environment.
             </p>
             <h3>Examples</h3>
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
+            <h1>
+              Heading 1 <SubHeading>With a subheading</SubHeading>
+            </h1>
+            <h2>
+              Heading 2 <SubHeading>With a subheading</SubHeading>
+            </h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -235,6 +240,7 @@ class App extends React.PureComponent {
             <p>
               Example of some <small>small text</small>.
             </p>
+            <h2>Heading 2</h2>
             <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat

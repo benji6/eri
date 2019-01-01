@@ -1,0 +1,6 @@
+.e-sub-heading {
+  display: block;
+  font-size: var(--e-font-size-0);
+  font-style: italic;
+  font-weight: normal;
+}
