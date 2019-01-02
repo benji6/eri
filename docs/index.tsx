@@ -320,6 +320,42 @@ class App extends React.PureComponent {
               <h3>Card three</h3>
               <p>This is card three.</p>
             </Card>
+            <Card>
+              <h3>Card four</h3>
+              <p>This is card four.</p>
+            </Card>
+            <Card>
+              <h3>Card five</h3>
+              <p>This is card five.</p>
+            </Card>
+            <Card>
+              <h3>Card six</h3>
+              <p>This is card six.</p>
+            </Card>
+            <Card>
+              <h3>Card seven</h3>
+              <p>This is card seven.</p>
+            </Card>
+            <Card>
+              <h3>Card eight</h3>
+              <p>This is card eight.</p>
+            </Card>
+            <Card>
+              <h3>Card nine</h3>
+              <p>This is card nine.</p>
+            </Card>
+            <Card>
+              <h3>Card ten</h3>
+              <p>This is card ten.</p>
+            </Card>
+            <Card>
+              <h3>Card eleven</h3>
+              <p>This is card eleven.</p>
+            </Card>
+            <Card>
+              <h3>Card twelve</h3>
+              <p>This is card twelve.</p>
+            </Card>
             <h3>Dialog</h3>
             <ButtonGroup>
               <Button onClick={this.handleDialogOpen}>Open dialog</Button>
