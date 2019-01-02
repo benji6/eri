@@ -1,13 +1,8 @@
 html {
-  background-attachment: fixed;
-  background-color: var(--e-color-ground-less);
-  background-image: linear-gradient(
-    var(--e-gradient-angle),
-    var(--e-color-ground-less),
-    var(--e-color-ground)
-  );
+  background-color: var(--e-color-ground);
   color: var(--e-color-figure-less);
   font-family: system-ui, sans-serif;
+  font-weight: var(--e-font-weight-normal);
   line-height: var(--e-line-height);
   min-height: 100%;
   transition-duration: var(--e-time-0);
@@ -36,7 +31,6 @@ form {
 
 @media (min-width: 501px) {
   form {
-    background: var(--e-color-ground);
     border-radius: var(--e-border-radius-1);
     box-shadow: var(--e-box-shadow-1);
     padding: var(--e-space-2) var(--e-space-4) var(--e-space-4);
@@ -46,7 +40,7 @@ form {
 legend {
   color: var(--e-color-figure);
   font-size: var(--e-font-size-0);
-  font-weight: var(--e-font-bold);
+  font-weight: var(--e-font-weight-bold);
 }
 
 main {
@@ -69,7 +63,7 @@ h2,
 h3,
 h4 {
   color: var(--e-color-figure);
-  font-weight: var(--e-font-bold);
+  font-weight: var(--e-font-weight-bold);
   margin: var(--e-font-heading-margin);
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
@@ -143,7 +137,6 @@ nav a:active {
 input:not([type='checkbox']),
 select,
 textarea {
-  background: var(--e-color-ground);
   border-radius: var(--e-border-radius-0);
   border: var(--e-border-width-1) solid var(--e-color-figure);
   color: inherit;
@@ -200,7 +193,7 @@ small {
 b,
 strong {
   color: var(--e-color-figure);
-  font-weight: var(--e-font-bold);
+  font-weight: var(--e-font-weight-bold);
 }
 
 img {

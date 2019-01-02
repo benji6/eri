@@ -2,5 +2,5 @@
   display: block;
   font-size: var(--e-font-size-0);
   font-style: italic;
-  font-weight: normal;
+  font-weight: var(--e-font-weight-normal);
 }
