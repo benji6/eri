@@ -21,6 +21,7 @@
 }
 
 .e-toggle__appearance::after {
+  background: var(--e-color-ground);
   border-radius: 50%;
   content: '';
   display: block;
