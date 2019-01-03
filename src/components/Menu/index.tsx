@@ -2,6 +2,7 @@ import classnames from 'classnames'
 import * as React from 'react'
 import CloseButton from '../../privateComponents/CloseButton'
 import Mask from '../../privateComponents/Mask'
+import Button from './Button'
 import './style.css'
 
 interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
@@ -25,3 +26,5 @@ export default function Menu({ children, onClose, open, ...rest }: IProps) {
     </Mask>
   )
 }
+
+Menu.Button = Button

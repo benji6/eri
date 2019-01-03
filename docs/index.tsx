@@ -12,7 +12,6 @@ import {
   Icon,
   ImageUpload,
   Menu,
-  MenuButton,
   Pagination,
   RadioButton,
   RadioGroup,
@@ -87,7 +86,7 @@ class App extends React.PureComponent {
             <h1>
               <a href="/">Eri</a>
             </h1>
-            <MenuButton onClick={this.handleMenuOpen} />
+            <Menu.Button onClick={this.handleMenuOpen} />
           </Header>
           <Menu onClose={this.handleMenuClose} open={isMenuOpen}>
             <p>
