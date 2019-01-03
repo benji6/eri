@@ -1,8 +1,8 @@
 import * as React from 'react'
-import Field from '../../privateComponents/Field'
-import FieldError from '../../privateComponents/FieldError'
-import FieldLabel from '../../privateComponents/FieldLabel'
-import RadioButton from '../RadioButton'
+import RadioButton from '../'
+import Field from '../../../privateComponents/Field'
+import FieldError from '../../../privateComponents/FieldError'
+import FieldLabel from '../../../privateComponents/FieldLabel'
 import './style.css'
 
 interface IProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
@@ -12,7 +12,7 @@ interface IProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
   label: React.ReactNode
 }
 
-export default function RadioGroup({
+export default function RadioButtonGroup({
   error,
   label,
   children,
@@ -20,8 +20,12 @@ export default function RadioGroup({
 }: IProps) {
   return (
     <Field>
-      <fieldset {...rest} aria-invalid={!!error} className="e-radio-group">
-        <legend className="e-radio-group__legend">
+      <fieldset
+        {...rest}
+        aria-invalid={!!error}
+        className="e-radio-button-group"
+      >
+        <legend className="e-radio-button-group__legend">
           <FieldLabel>{label}</FieldLabel>
         </legend>
         <div>{children}</div>

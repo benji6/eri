@@ -14,7 +14,6 @@ import {
   Menu,
   Pagination,
   RadioButton,
-  RadioGroup,
   Select,
   Spinner,
   SubHeading,
@@ -387,7 +386,7 @@ class App extends React.PureComponent {
                 supportiveText="Some supportive text"
               />
               <TextArea error="Oops!" label="Text area error" />
-              <RadioGroup label="Radio group">
+              <RadioButton.Group label="Radio group">
                 <RadioButton name="selector" value="one">
                   One
                 </RadioButton>
@@ -400,8 +399,8 @@ class App extends React.PureComponent {
                 <RadioButton name="selector" value="four">
                   Four
                 </RadioButton>
-              </RadioGroup>
-              <RadioGroup error="Oops!" label="Radio group error">
+              </RadioButton.Group>
+              <RadioButton.Group error="Oops!" label="Radio group error">
                 <RadioButton name="error-state-selector" value="one">
                   One
                 </RadioButton>
@@ -411,7 +410,7 @@ class App extends React.PureComponent {
                 <RadioButton name="error-state-selector" value="three">
                   Three
                 </RadioButton>
-              </RadioGroup>
+              </RadioButton.Group>
               <Select label="Select" supportiveText="Some supportive text">
                 <option hidden>Please select</option>
                 <option>An option</option>
