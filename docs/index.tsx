@@ -2,7 +2,9 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import {
   Button,
+  ButtonGroup,
   Card,
+  CardGroup,
   Checkbox,
   CurrencyField,
   Dialog,
@@ -10,8 +12,10 @@ import {
   Icon,
   ImageUpload,
   Menu,
+  MenuButton,
   Pagination,
   RadioButton,
+  RadioButtonGroup,
   Select,
   Spinner,
   SubHeading,
@@ -82,7 +86,7 @@ class App extends React.PureComponent {
           <h1>
             <a href="/">Eri</a>
           </h1>
-          <Menu.Button onClick={this.handleMenuOpen} />
+          <MenuButton onClick={this.handleMenuOpen} />
         </Header>
         <Menu onClose={this.handleMenuClose} open={isMenuOpen}>
           <p>
@@ -175,10 +179,10 @@ class App extends React.PureComponent {
           <p>
             For the dark theme just add the class <code>e-theme-dark</code>.
           </p>
-          <Button.Group>
+          <ButtonGroup>
             <Button onClick={this.switchToLightTheme}>Light</Button>
             <Button onClick={this.switchToDarkTheme}>Dark</Button>
-          </Button.Group>
+          </ButtonGroup>
           <ColorGroup name="Figure">
             <Color varName="--e-color-figure-more" />
             <Color varName="--e-color-figure" />
@@ -272,33 +276,33 @@ class App extends React.PureComponent {
           <h3>Button</h3>
           <p>
             Buttons are cute little things you press. Remember to always wrap
-            them up in a Button.Group.
+            them up in a ButtonGroup.
           </p>
           <p>
             This button will only ever be disabled while the app is waiting for
             something to happen and will display a little spinner to let the
             user know it's thinking.
           </p>
-          <Button.Group>
+          <ButtonGroup>
             <Button>Primary</Button>
             <Button variant="secondary">Secondary</Button>
             <a href="#">Link</a>
-          </Button.Group>
-          <Button.Group>
+          </ButtonGroup>
+          <ButtonGroup>
             <Button sentiment="negative">Negative</Button>
             <Button sentiment="negative" variant="secondary">
               Negative secondary
             </Button>
-          </Button.Group>
-          <Button.Group>
+          </ButtonGroup>
+          <ButtonGroup>
             <Button disabled>Primary disabled</Button>
             <Button disabled variant="secondary">
               Secondary disabled
             </Button>
-          </Button.Group>
+          </ButtonGroup>
           <h3>Card</h3>
-          <p>Wrap your Cards in a Card.Group.</p>
-          <Card.Group>
+          <p>Wrap your Cards in a CardGroup.</p>
+          <CardGroup>
             <Card>
               <h3>Card one</h3>
               <p>This is card one.</p>
@@ -347,11 +351,11 @@ class App extends React.PureComponent {
               <h3>Card twelve</h3>
               <p>This is card twelve.</p>
             </Card>
-          </Card.Group>
+          </CardGroup>
           <h3>Dialog</h3>
-          <Button.Group>
+          <ButtonGroup>
             <Button onClick={this.handleDialogOpen}>Open dialog</Button>
-          </Button.Group>
+          </ButtonGroup>
           <Dialog
             onClose={this.handleDialogClose}
             open={isDialogOpen}
@@ -374,7 +378,7 @@ class App extends React.PureComponent {
             <TextField error="Oops!" label="Text field error" />
             <TextArea label="Text area" supportiveText="Some supportive text" />
             <TextArea error="Oops!" label="Text area error" />
-            <RadioButton.Group label="Radio group">
+            <RadioButtonGroup label="Radio group">
               <RadioButton name="selector" value="one">
                 One
               </RadioButton>
@@ -387,8 +391,8 @@ class App extends React.PureComponent {
               <RadioButton name="selector" value="four">
                 Four
               </RadioButton>
-            </RadioButton.Group>
-            <RadioButton.Group error="Oops!" label="Radio group error">
+            </RadioButtonGroup>
+            <RadioButtonGroup error="Oops!" label="Radio group error">
               <RadioButton name="error-state-selector" value="one">
                 One
               </RadioButton>
@@ -398,7 +402,7 @@ class App extends React.PureComponent {
               <RadioButton name="error-state-selector" value="three">
                 Three
               </RadioButton>
-            </RadioButton.Group>
+            </RadioButtonGroup>
             <Select label="Select" supportiveText="Some supportive text">
               <option hidden>Please select</option>
               <option>An option</option>
@@ -426,9 +430,9 @@ class App extends React.PureComponent {
             <CurrencyField error="Oops!" label="Currency field error" />
             <ImageUpload label="Image upload" />
             <ImageUpload error="Oops!" label="Image upload error" />
-            <Button.Group>
+            <ButtonGroup>
               <Button type="button">Submit</Button>
-            </Button.Group>
+            </ButtonGroup>
           </form>
           <h3>Icons</h3>
           <p>

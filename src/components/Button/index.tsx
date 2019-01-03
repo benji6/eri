@@ -1,6 +1,5 @@
 import classnames from 'classnames'
 import * as React from 'react'
-import Group from './Group'
 import './style.css'
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -9,11 +8,8 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default class Button extends React.Component<IProps> {
-  public static Group = Group
-
   public render() {
     const {
-      onClick,
       sentiment,
       variant = 'primary',
       type = 'submit', // Formik gets grumpy if you don't specify this

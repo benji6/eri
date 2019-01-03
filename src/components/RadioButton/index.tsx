@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Group from './Group'
 import './style.css'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -16,5 +15,3 @@ export default function RadioButton({ children, ...rest }: IProps) {
     </label>
   )
 }
-
-RadioButton.Group = Group
