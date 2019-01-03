@@ -2,7 +2,6 @@ import classnames from 'classnames'
 import * as React from 'react'
 import CloseButton from '../../privateComponents/CloseButton'
 import Mask from '../../privateComponents/Mask'
-import Card from '../Card'
 import './style.css'
 
 interface IProps {
@@ -32,20 +31,18 @@ export default function Dialog({
         className={className}
         role="dialog"
       >
-        <div className="e-dialog__dialog">
-          <Card onClick={e => e.stopPropagation()}>
-            <div className="e-dialog__content">
-              <div className="e-dialog__header">
-                <h4 id="e-dialog-title">{title}</h4>
-                <CloseButton
-                  aria-hidden={!open}
-                  disabled={!open}
-                  onClick={onClose}
-                />
-              </div>
-              <div id="e-dialog-desc">{children}</div>
+        <div className="e-dialog__dialog" onClick={e => e.stopPropagation()}>
+          <div className="e-dialog__content">
+            <div className="e-dialog__header">
+              <h4 id="e-dialog-title">{title}</h4>
+              <CloseButton
+                aria-hidden={!open}
+                disabled={!open}
+                onClick={onClose}
+              />
             </div>
-          </Card>
+            <div id="e-dialog-desc">{children}</div>
+          </div>
         </div>
       </div>
     </Mask>
