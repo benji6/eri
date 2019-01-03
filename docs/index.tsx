@@ -2,7 +2,6 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import {
   Button,
-  ButtonGroup,
   Card,
   Checkbox,
   CurrencyField,
@@ -176,10 +175,10 @@ class App extends React.PureComponent {
           <p>
             For the dark theme just add the class <code>e-theme-dark</code>.
           </p>
-          <ButtonGroup>
+          <Button.Group>
             <Button onClick={this.switchToLightTheme}>Light</Button>
             <Button onClick={this.switchToDarkTheme}>Dark</Button>
-          </ButtonGroup>
+          </Button.Group>
           <ColorGroup name="Figure">
             <Color varName="--e-color-figure-more" />
             <Color varName="--e-color-figure" />
@@ -273,30 +272,30 @@ class App extends React.PureComponent {
           <h3>Button</h3>
           <p>
             Buttons are cute little things you press. Remember to always wrap
-            them up in a ButtonGroup.
+            them up in a Button.Group.
           </p>
           <p>
             This button will only ever be disabled while the app is waiting for
             something to happen and will display a little spinner to let the
             user know it's thinking.
           </p>
-          <ButtonGroup>
+          <Button.Group>
             <Button>Primary</Button>
             <Button variant="secondary">Secondary</Button>
             <a href="#">Link</a>
-          </ButtonGroup>
-          <ButtonGroup>
+          </Button.Group>
+          <Button.Group>
             <Button sentiment="negative">Negative</Button>
             <Button sentiment="negative" variant="secondary">
               Negative secondary
             </Button>
-          </ButtonGroup>
-          <ButtonGroup>
+          </Button.Group>
+          <Button.Group>
             <Button disabled>Primary disabled</Button>
             <Button disabled variant="secondary">
               Secondary disabled
             </Button>
-          </ButtonGroup>
+          </Button.Group>
           <h3>Card</h3>
           <p>Wrap your Cards in a Card.Group.</p>
           <Card.Group>
@@ -350,9 +349,9 @@ class App extends React.PureComponent {
             </Card>
           </Card.Group>
           <h3>Dialog</h3>
-          <ButtonGroup>
+          <Button.Group>
             <Button onClick={this.handleDialogOpen}>Open dialog</Button>
-          </ButtonGroup>
+          </Button.Group>
           <Dialog
             onClose={this.handleDialogClose}
             open={isDialogOpen}
@@ -427,9 +426,9 @@ class App extends React.PureComponent {
             <CurrencyField error="Oops!" label="Currency field error" />
             <ImageUpload label="Image upload" />
             <ImageUpload error="Oops!" label="Image upload error" />
-            <ButtonGroup>
+            <Button.Group>
               <Button type="button">Submit</Button>
-            </ButtonGroup>
+            </Button.Group>
           </form>
           <h3>Icons</h3>
           <p>

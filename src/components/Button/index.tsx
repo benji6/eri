@@ -1,5 +1,6 @@
 import classnames from 'classnames'
 import * as React from 'react'
+import Group from './Group'
 import './style.css'
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -7,7 +8,9 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary'
 }
 
-class Button extends React.Component<IProps> {
+export default class Button extends React.Component<IProps> {
+  public static Group = Group
+
   public render() {
     const {
       onClick,
@@ -23,5 +26,3 @@ class Button extends React.Component<IProps> {
     return <button {...rest} className={className} type={type} />
   }
 }
-
-export default Button
