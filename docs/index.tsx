@@ -158,7 +158,10 @@ class App extends React.PureComponent {
             <Space varName="--e-space-5" />
           </SpaceGroup>
           <h2>Time</h2>
-          <p>Space is fine, but we'll also get nowhere without time.</p>
+          <p>
+            Time is responsive, things take more time on larger screens so
+            velocity feels more constant.
+          </p>
           <Time varName="--e-time-0" />
           <Time varName="--e-time-1" />
           <Time varName="--e-time-2" />
