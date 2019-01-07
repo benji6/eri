@@ -1,5 +1,6 @@
 import './global.css'
 import './utils.css'
+import './vars/animation.css'
 import './vars/box-shadow.css'
 import './vars/colors.css'
 import './vars/easing.css'

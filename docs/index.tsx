@@ -170,6 +170,16 @@ class App extends React.PureComponent {
           <Easing varName="--e-easing-accelerate" />
           <Easing varName="--e-easing-decelerate" />
           <Easing varName="--e-easing-standard" />
+          <h2>Animation</h2>
+          <p>Here are the custom properties you can use for animation:</p>
+          <ul>
+            <li>
+              <code>--e-animation-fade-in</code>
+            </li>
+            <li>
+              <code>--e-animation-spin</code>
+            </li>
+          </ul>
           <h2>Color</h2>
           <p>
             &quot;Black then white are all I see In my infancy. Red and yellow

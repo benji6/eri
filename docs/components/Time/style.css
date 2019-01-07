@@ -13,9 +13,7 @@
 }
 
 .d-time__visual {
-  animation-iteration-count: infinite;
-  animation-name: e-rotate;
-  animation-timing-function: linear;
+  animation: var(--e-animation-spin);
   background: var(--e-color-figure);
   border-radius: var(--e-border-radius-0);
   height: var(--e-space-2);

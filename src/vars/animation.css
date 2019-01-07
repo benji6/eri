@@ -1,0 +1,16 @@
+:root {
+  --e-animation-fade-in: e-fade-in var(--e-time-2) var(--e-easing-standard);
+  --e-animation-spin: e-rotate var(--e-time-2) linear infinite;
+}
+
+@keyframes e-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes e-fade-in {
+  from {
+    opacity: 0;
+  }
+}

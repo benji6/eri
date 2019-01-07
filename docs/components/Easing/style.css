@@ -13,9 +13,7 @@
 }
 
 .d-easing__visual {
-  animation-duration: var(--e-time-2);
-  animation-iteration-count: infinite;
-  animation-name: e-rotate;
+  animation: var(--e-animation-spin);
   background: var(--e-color-figure);
   border-radius: var(--e-border-radius-0);
   height: var(--e-space-2);
