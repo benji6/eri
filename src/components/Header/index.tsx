@@ -5,7 +5,7 @@ interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
 export default function Header(props: IProps) {
   return (
-    <header className="e-header">
+    <header>
       <div className="e-header__container" {...props} />
     </header>
   )
