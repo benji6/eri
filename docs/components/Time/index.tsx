@@ -1,5 +1,5 @@
 import * as React from 'react'
-import getStylePropValue from '../../utils/getStylePropValue'
+import { getCssVar } from '../../../src'
 import './style.css'
 
 interface IProps {
@@ -7,7 +7,7 @@ interface IProps {
 }
 
 export default function Time({ varName }: IProps) {
-  const time = getStylePropValue(varName)
+  const time = getCssVar(varName)
 
   return (
     <div className="d-time">

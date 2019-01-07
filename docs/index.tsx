@@ -8,6 +8,7 @@ import {
   Checkbox,
   CurrencyField,
   Dialog,
+  getCssVar,
   Header,
   Icon,
   ImageUpload,
@@ -30,7 +31,6 @@ import Space from './components/Space'
 import SpaceGroup from './components/SpaceGroup'
 import Time from './components/Time'
 import './style.css'
-import getStylePropValue from './utils/getStylePropValue'
 
 const metaThemeColor = document.querySelector('meta[name=theme-color]')
 
@@ -61,19 +61,13 @@ class App extends React.PureComponent {
 
   public switchToDarkTheme = () => {
     document.documentElement.classList.add('e-theme-dark')
-    metaThemeColor.setAttribute(
-      'content',
-      getStylePropValue('--e-color-accent-more'),
-    )
+    metaThemeColor.setAttribute('content', getCssVar('--e-color-accent-more'))
     this.forceUpdate()
   }
 
   public switchToLightTheme = () => {
     document.documentElement.classList.remove('e-theme-dark')
-    metaThemeColor.setAttribute(
-      'content',
-      getStylePropValue('--e-color-accent-more'),
-    )
+    metaThemeColor.setAttribute('content', getCssVar('--e-color-accent-more'))
     this.forceUpdate()
   }
 

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import getStylePropValue from '../../utils/getStylePropValue'
+import { getCssVar } from '../../../src'
 import './style.css'
 
 interface IProps {
@@ -10,7 +10,7 @@ interface IProps {
 }
 
 export default function Easing({ varName }: IProps) {
-  const animationTimingFunction = getStylePropValue(varName)
+  const animationTimingFunction = getCssVar(varName)
 
   return (
     <div className="d-easing">

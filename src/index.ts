@@ -30,3 +30,5 @@ export { default as SubHeading } from './components/SubHeading'
 export { default as TextArea } from './components/TextArea'
 export { default as TextField } from './components/TextField'
 export { default as Toggle } from './components/Toggle'
+
+export { default as getCssVar } from './utils/getCssVar'

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import getStylePropValue from '../../utils/getStylePropValue'
+import { getCssVar } from '../../../src'
 import './style.css'
 
 interface IProps {
@@ -39,7 +39,7 @@ export default class Space extends React.PureComponent<IProps, IState> {
     const { varName } = this.props
     const { value } = this.state
 
-    const space = getStylePropValue(varName)
+    const space = getCssVar(varName)
 
     return (
       <>

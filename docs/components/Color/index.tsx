@@ -1,5 +1,5 @@
 import * as React from 'react'
-import getStylePropValue from '../../utils/getStylePropValue'
+import { getCssVar } from '../../../src'
 import './style.css'
 
 interface IProps {
@@ -25,7 +25,7 @@ interface IProps {
 }
 
 export default function Color({ varName }: IProps) {
-  const color = getStylePropValue(varName)
+  const color = getCssVar(varName)
 
   return (
     <div className="d-color">
