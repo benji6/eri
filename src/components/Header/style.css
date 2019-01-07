@@ -14,7 +14,7 @@ header {
   z-index: var(--e-z-index-2);
 }
 
-.e-header__container {
+header div {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
