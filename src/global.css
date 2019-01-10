@@ -137,6 +137,7 @@ nav a:active {
 input:not([type='checkbox']),
 select,
 textarea {
+  background-color: var(--e-color-ground);
   border-radius: var(--e-border-radius-0);
   border: var(--e-border-width-1) solid var(--e-color-figure);
   color: inherit;
