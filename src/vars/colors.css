@@ -119,6 +119,13 @@
     calc(var(--e-saturation-1) * var(--e-saturation-ratio)),
     calc(var(--e-lightness-3) + var(--e-lightness-separation))
   );
+
+  --e-color-highlight-0: hsl(184, 100%, 48%);
+  --e-color-highlight-1: hsl(270, 100%, 67%);
+  --e-color-highlight-2: hsl(300, 90%, 65%);
+  --e-color-highlight-3: hsl(32, 100%, 60%);
+  --e-color-highlight-4: hsl(70, 100%, 45%);
+  --e-color-highlight-5: hsl(148, 100%, 45%);
 }
 
 .e-theme-dark {

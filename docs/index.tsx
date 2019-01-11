@@ -220,6 +220,14 @@ class App extends React.PureComponent {
             <Color varName="--e-color-positive" />
             <Color varName="--e-color-positive-less" />
           </ColorGroup>
+          <ColorGroup name="Highlight">
+            <Color varName="--e-color-highlight-0" />
+            <Color varName="--e-color-highlight-1" />
+            <Color varName="--e-color-highlight-2" />
+            <Color varName="--e-color-highlight-3" />
+            <Color varName="--e-color-highlight-4" />
+            <Color varName="--e-color-highlight-5" />
+          </ColorGroup>
           <h2>Typography</h2>
           <p>
             No downloaded fonts means no extra page weight. Eri uses system
