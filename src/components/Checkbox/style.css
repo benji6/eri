@@ -40,6 +40,7 @@
 .e-checkbox__appearance {
   align-items: center;
   align-self: flex-start;
+  background-color: var(--e-color-ground-more);
   border: var(--e-border-width-1) solid var(--e-color-figure);
   border-radius: var(--e-border-radius-0);
   box-sizing: border-box;

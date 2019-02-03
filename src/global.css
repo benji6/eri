@@ -25,6 +25,7 @@ fieldset {
 }
 
 form {
+  background-color: var(--e-color-ground-more);
   margin: var(--e-space-4) auto;
   max-width: var(--e-max-width-0);
 }
@@ -137,7 +138,7 @@ nav a:active {
 input:not([type='checkbox']),
 select,
 textarea {
-  background-color: var(--e-color-ground);
+  background-color: var(--e-color-ground-more);
   border-radius: var(--e-border-radius-0);
   border: var(--e-border-width-1) solid var(--e-color-figure);
   color: inherit;

@@ -201,6 +201,7 @@ class App extends React.PureComponent {
             <Color varName="--e-color-balance-less" />
           </ColorGroup>
           <ColorGroup name="Ground">
+            <Color varName="--e-color-ground-more" />
             <Color varName="--e-color-ground" />
             <Color varName="--e-color-ground-less" />
           </ColorGroup>
