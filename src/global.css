@@ -25,13 +25,13 @@ fieldset {
 }
 
 form {
-  background-color: var(--e-color-ground-more);
   margin: var(--e-space-4) auto;
   max-width: var(--e-max-width-0);
 }
 
 @media (min-width: 501px) {
   form {
+    background-color: var(--e-color-ground-more);
     border-radius: var(--e-border-radius-1);
     box-shadow: var(--e-box-shadow-1);
     padding: var(--e-space-2) var(--e-space-4) var(--e-space-4);
