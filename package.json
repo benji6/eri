@@ -10,7 +10,7 @@
     "format": "prettier --write \"**/*\"",
     "start": "parcel docs/index.html",
     "test": "run-p test:*",
-    "test:format": "prettier --list-different \"**/*\"",
+    "test:format": "prettier --check \"**/*\"",
     "test:lint": "tslint -c tslint.json 'docs/**/*.ts*' 'src/**/*.ts*'",
     "test:types": "tsc --noEmit"
   },
