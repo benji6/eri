@@ -1,6 +1,6 @@
 html {
   background-color: var(--e-color-ground);
-  color: var(--e-color-figure-less);
+  color: var(--e-color-figure);
   font-family: system-ui, sans-serif;
   font-weight: var(--e-font-weight-normal);
   line-height: var(--e-line-height);
@@ -39,7 +39,7 @@ form {
 }
 
 legend {
-  color: var(--e-color-figure);
+  color: var(--e-color-figure-more);
   font-size: var(--e-font-size-0);
   font-weight: var(--e-font-weight-bold);
 }
@@ -63,7 +63,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--e-color-figure);
+  color: var(--e-color-figure-more);
   font-weight: var(--e-font-weight-bold);
   margin: var(--e-font-heading-margin);
   transition: color, var(--e-time-0) var(--e-easing-standard);
@@ -140,7 +140,7 @@ select,
 textarea {
   background-color: var(--e-color-ground-more);
   border-radius: var(--e-border-radius-0);
-  border: var(--e-border-width-1) solid var(--e-color-figure);
+  border: var(--e-border-default);
   color: inherit;
   font-family: inherit; /* for firefox */
   font-size: inherit;
@@ -190,12 +190,13 @@ button:disabled {
 }
 
 small {
+  color: var(--e-color-figure-less);
   font-size: var(--e-font-size-0);
 }
 
 b,
 strong {
-  color: var(--e-color-figure);
+  color: var(--e-color-figure-more);
   font-weight: var(--e-font-weight-bold);
 }
 

@@ -112,8 +112,9 @@ class App extends React.PureComponent {
             space there is nowhere.
           </p>
           <p>
-            Most of these values are computed using rems, but for the sake of
-            simplicity the values are given in px.
+            Most of these values are computed using rems, but due to heavy use
+            of CSS <code>calc()</code> it is much easier to display them in px
+            here.
           </p>
           <h3>Font size</h3>
           <p>
@@ -128,16 +129,6 @@ class App extends React.PureComponent {
             <Space varName="--e-font-size-3" />
             <Space varName="--e-font-size-4" />
           </SpaceGroup>
-          <h3>Border radius</h3>
-          <SpaceGroup>
-            <Space varName="--e-border-radius-0" />
-            <Space varName="--e-border-radius-1" />
-          </SpaceGroup>
-          <h3>Border width</h3>
-          <SpaceGroup>
-            <Space varName="--e-border-width-0" />
-            <Space varName="--e-border-width-1" />
-          </SpaceGroup>
           <h3>Space</h3>
           <p>
             Space is based on a responsive modular scale and linked to font-size
@@ -150,6 +141,21 @@ class App extends React.PureComponent {
             <Space varName="--e-space-3" />
             <Space varName="--e-space-4" />
             <Space varName="--e-space-5" />
+          </SpaceGroup>
+          <h2>Border</h2>
+          <p>
+            Borders define the boundary between inside and outside. Border
+            radius is responsive and linked to space, but border width is fixed.
+          </p>
+          <h3>Border radius</h3>
+          <SpaceGroup>
+            <Space varName="--e-border-radius-0" />
+            <Space varName="--e-border-radius-1" />
+          </SpaceGroup>
+          <h3>Border width</h3>
+          <SpaceGroup>
+            <Space varName="--e-border-width-0" />
+            <Space varName="--e-border-width-1" />
           </SpaceGroup>
           <h2>Time</h2>
           <p>

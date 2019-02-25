@@ -1,7 +1,8 @@
 .e-card {
   --color: ;
 
-  border: var(--e-border-width-1) solid var(--color);
+  border: var(--e-border-default);
+  border-color: var(--color);
   border-radius: var(--e-border-radius-1);
   box-shadow: var(--e-box-shadow-1-no-color) var(--color);
   padding: var(--e-space-3);

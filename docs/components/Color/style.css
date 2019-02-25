@@ -7,7 +7,7 @@
 }
 
 .d-color__visual {
-  border: var(--e-border-width-1) solid var(--e-color-figure);
+  border: var(--e-border-default);
   border-radius: var(--e-border-radius-0);
   height: var(--e-space-5);
   transition: background-color var(--e-time-0) var(--e-easing-standard);

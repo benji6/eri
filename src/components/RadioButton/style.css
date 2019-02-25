@@ -17,7 +17,7 @@
 
 .e-radio-button__appearance {
   background-color: var(--e-color-ground-more);
-  border: var(--e-border-width-1) solid var(--e-color-figure);
+  border: var(--e-border-default);
   cursor: pointer;
   display: inline-block;
   min-width: var(--e-space-5);

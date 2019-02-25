@@ -14,7 +14,7 @@
 
 .d-easing__visual {
   animation: var(--e-animation-spin);
-  background: var(--e-color-figure);
+  background: var(--e-color-figure-more);
   border-radius: var(--e-border-radius-0);
   height: var(--e-space-2);
   transition: background-color var(--e-time-0) var(--e-easing-standard);

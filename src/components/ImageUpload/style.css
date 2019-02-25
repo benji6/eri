@@ -1,5 +1,5 @@
 .e-image-upload__img {
-  border: var(--e-border-width-1) solid var(--e-color-figure);
+  border: var(--e-border-default);
   max-width: 50%;
 }
 

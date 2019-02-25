@@ -1,0 +1,7 @@
+:root {
+  --e-border-radius-0: var(--e-space-1);
+  --e-border-radius-1: var(--e-space-2);
+  --e-border-width-0: 2px;
+  --e-border-width-1: 3px;
+  --e-border-default: var(--e-border-width-1) solid var(--e-color-figure-more);
+}

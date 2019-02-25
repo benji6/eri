@@ -4,8 +4,9 @@
   --color-focus: var(--e-color-accent-analagous);
   --color-hover: var(--e-color-accent-less);
 
+  border: var(--e-border-default);
+  border-color: var(--color);
   border-radius: var(--e-border-radius-0);
-  border: var(--e-border-width-1) solid var(--color);
   font-size: inherit;
   font-weight: var(--e-font-weight-bold);
   padding: var(--e-space-2) var(--e-space-3);
