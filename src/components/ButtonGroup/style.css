@@ -26,7 +26,7 @@ form .e-button-group {
   }
 
   form .e-button-group {
-    border-top: var(--e-border-width-1) solid var(--e-color-balance);
+    border-top: var(--e-border-width-1) solid var(--e-color-figure-less);
     padding-top: var(--e-space-3);
   }
 
