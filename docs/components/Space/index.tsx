@@ -21,39 +21,18 @@ interface IProps {
     | '--e-space-5'
 }
 
-interface IState {
-  value?: number
-}
+export default function Space({ varName }: IProps) {
+  const [value, setValue] = React.useState<number | undefined>(undefined)
+  const divRef = React.useRef(undefined)
+  const space = getCssVar(varName)
+  React.useEffect(() => setValue(divRef.current.clientWidth), [])
 
-export default class Space extends React.PureComponent<IProps, IState> {
-  public myRef: React.RefObject<HTMLDivElement> = React.createRef()
-  public state = { value: undefined }
-
-  public componentDidMount() {
-    this.setState({
-      value: this.myRef.current.clientWidth,
-    })
-  }
-
-  public render() {
-    const { varName } = this.props
-    const { value } = this.state
-
-    const space = getCssVar(varName)
-
-    return (
-      <>
-        <div
-          className="d-space__visual"
-          ref={this.myRef}
-          style={{ width: space }}
-        />
-        <pre>
-          <code>
-            {value !== undefined ? `${varName}: ${value}px` : varName}
-          </code>
-        </pre>
-      </>
-    )
-  }
+  return (
+    <>
+      <div className="d-space__visual" ref={divRef} style={{ width: space }} />
+      <pre>
+        <code>{value !== undefined ? `${varName}: ${value}px` : varName}</code>
+      </pre>
+    </>
+  )
 }
