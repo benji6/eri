@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist esm && run-p build:*",
-    "build:css": "parcel build src/index.ts --no-minify --no-source-maps -d css-build && mkdir -p dist && mv css-build/index.css $_ && rm -r css-build",
+    "build:css": "parcel build src/index.ts --no-minify --no-source-maps -d css-build && mkdir -p dist && mv css-build/index.css dist && rm -r css-build",
     "build:js": "run-p build:js:compile:* && run-p build:js:clean:**",
     "build:js:compile:cjs": "tsc",
     "build:js:compile:esm": "tsc -m es6 --outDir esm",
