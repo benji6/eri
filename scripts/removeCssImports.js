@@ -25,3 +25,8 @@ recursiveMapOverDefinitionFiles(
   removeCssImports,
   path.join(__dirname, '..', 'dist'),
 )
+
+recursiveMapOverDefinitionFiles(
+  removeCssImports,
+  path.join(__dirname, '..', 'esm'),
+)

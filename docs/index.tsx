@@ -103,8 +103,12 @@ class App extends React.PureComponent {
           <h2>Principles</h2>
           <ul>
             <li>🧘‍♀️ Simple - Eri is minimal and feels clean and intuitive.</li>
-            <li>🚀 Snappy - Eri is fast and feels slick.</li>
-            <li>☺️ Joyful - Eri should feel good to use.</li>
+            <li>
+              🚀 Lightweight - Eri is performance focussed and will not bloat or
+              slow down your app. Components are lightweight and tree-shaking is
+              supported out the box.
+            </li>
+            <li>☺️ Joyful - Eri is simple and should feel good to use.</li>
           </ul>
           <h2>Space</h2>
           <p>

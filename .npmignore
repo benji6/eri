@@ -1,5 +1,6 @@
 **/*
 !dist/**/*
+!esm/**/*
 !package-lock.json
 !package.json
 !README.md
