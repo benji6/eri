@@ -1,14 +1,15 @@
-const fs = require('fs')
+const fs = require('fs').promises
 const path = require('path')
 
-const recursiveMapOverDefinitionFiles = (f, pathToCheck) => {
-  for (const name of fs.readdirSync(pathToCheck)) {
+const recursiveMapOverDefinitionFiles = async (f, pathToCheck) => {
+  for (const name of await fs.readdir(pathToCheck)) {
     const nextPath = path.join(pathToCheck, name)
 
-    if (fs.lstatSync(nextPath).isDirectory()) {
+    if ((await fs.lstat(nextPath)).isDirectory()) {
       recursiveMapOverDefinitionFiles(f, nextPath)
     } else if (nextPath.endsWith('.d.ts')) {
-      fs.writeFileSync(nextPath, f(fs.readFileSync(nextPath, 'utf-8')))
+      const file = await fs.readFile(nextPath, 'utf8')
+      fs.writeFile(nextPath, f(file))
     }
   }
 }
@@ -21,12 +22,10 @@ const removeCssImports = definition =>
     )
     .join('\n')
 
-recursiveMapOverDefinitionFiles(
+const recursiveRemoveCssImports = recursiveMapOverDefinitionFiles.bind(
+  null,
   removeCssImports,
-  path.join(__dirname, '..', 'dist'),
 )
 
-recursiveMapOverDefinitionFiles(
-  removeCssImports,
-  path.join(__dirname, '..', 'esm'),
-)
+recursiveRemoveCssImports(path.join(__dirname, '..', 'dist'))
+recursiveRemoveCssImports(path.join(__dirname, '..', 'esm'))
