@@ -6,9 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && parcel build src/index.ts --no-minify --no-source-maps && tsc && BABEL_ENV=css babel dist --out-dir dist && node scripts/removeCssImports",
-    "build:style-guide": "rm -rf build && parcel build docs/index.html -d build --no-source-maps",
     "format": "prettier --write \"**/*\"",
     "start": "parcel docs/index.html",
+    "style-guide:build": "rm -rf build && parcel build docs/index.html -d build --no-source-maps",
     "test": "run-p test:*",
     "test:format": "prettier --check \"**/*\"",
     "test:lint": "tslint -c tslint.json 'docs/**/*.ts*' 'src/**/*.ts*'",
