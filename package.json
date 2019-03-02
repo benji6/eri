@@ -5,7 +5,11 @@
   "main": "dist",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf dist && parcel build src/index.ts --no-minify --no-source-maps && tsc && BABEL_ENV=css babel dist --out-dir dist && node scripts/removeCssImports",
+    "build": "rm -rf dist && run-p build:*",
+    "build:css": "parcel build src/index.ts --no-minify --no-source-maps -d css-build && mkdir -p dist && mv css-build/index.css $_ && rm -r css-build",
+    "build:js": "tsc && run-p build:js:*",
+    "build:js:remove-css-imports": "node scripts/removeCssImports",
+    "build:js:remove-css-requires": "BABEL_ENV=css babel dist --out-dir dist",
     "format": "prettier --write \"**/*\"",
     "start": "parcel docs/index.html",
     "style-guide:build": "rm -rf build && parcel build docs/index.html -d build --no-source-maps",
