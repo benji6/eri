@@ -10,61 +10,51 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   onClose(): void
 }
 
-export default class Mask extends React.PureComponent<IProps> {
-  public scrollY: number = 0
+const handleKeyDown = (onClose: IProps['onClose']) => (
+  e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>,
+) => {
+  if (e.keyCode === 27) onClose()
+}
 
-  public componentDidMount() {
-    if (this.props.open) this.openMask()
-    window.addEventListener('keydown', this.handleKeyDown)
-  }
+export default function Mask({ onClose, open, ...rest }: IProps) {
+  const [scrollY, setScrollY] = React.useState(0)
 
-  public UNSAFE_componentWillReceiveProps(nextProps: IProps) {
-    if (this.props.open === nextProps.open) return
-    if (nextProps.open) this.openMask()
-    else this.closeMask()
-  }
+  const className = classnames('e-mask', {
+    'e-mask--closed': !open,
+  })
 
-  public componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleKeyDown)
-    documentElementClassList.remove('e-no-scroll')
-  }
-
-  public render() {
-    const { onClose, open, ...rest } = this.props
-
-    const className = classnames('e-mask', {
-      'e-mask--closed': !open,
-    })
-
-    return (
-      <div
-        {...rest}
-        aria-hidden={!open}
-        className={className}
-        onClick={onClose}
-        onKeyDown={this.handleKeyDown}
-      />
-    )
-  }
-
-  private closeMask() {
-    documentElementClassList.remove('e-no-scroll')
-    window.scrollTo(0, this.scrollY)
-    documentElement.style.top = null
-  }
-
-  private openMask() {
-    const { scrollY } = window
-    this.scrollY = scrollY
-    documentElement.style.top = `${-scrollY}px`
+  const openMask = () => {
+    setScrollY(window.scrollY)
+    documentElement.style.top = `${-window.scrollY}px`
     documentElementClassList.add('e-no-scroll')
   }
 
-  private handleKeyDown = (
-    e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>,
-  ) => {
-    if (e.keyCode === 27) {
-      this.props.onClose()
+  React.useEffect(() => {
+    const keyDownListener = handleKeyDown(onClose)
+    if (open) openMask()
+    window.addEventListener('keydown', keyDownListener)
+    return () => {
+      window.removeEventListener('keydown', keyDownListener)
+      documentElementClassList.remove('e-no-scroll')
     }
-  }
+  }, [])
+
+  React.useEffect(() => {
+    if (open) openMask()
+    else {
+      documentElementClassList.remove('e-no-scroll')
+      window.scrollTo(0, scrollY)
+      documentElement.style.top = null
+    }
+  }, [open])
+
+  return (
+    <div
+      {...rest}
+      aria-hidden={!open}
+      className={className}
+      onClick={onClose}
+      onKeyDown={handleKeyDown(onClose)}
+    />
+  )
 }
