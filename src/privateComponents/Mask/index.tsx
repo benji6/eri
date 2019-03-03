@@ -19,8 +19,8 @@ const handleKeyDown = (onClose: IProps['onClose']) => (
 export default function Mask({ onClose, open, ...rest }: IProps) {
   const [scrollY, setScrollY] = React.useState(0)
 
-  const className = classnames('e-mask', {
-    'e-mask--closed': !open,
+  const maskClassName = classnames('e-mask__mask', {
+    'e-mask__mask--closed': !open,
   })
 
   const openMask = () => {
@@ -49,12 +49,9 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
   }, [open])
 
   return (
-    <div
-      {...rest}
-      aria-hidden={!open}
-      className={className}
-      onClick={onClose}
-      onKeyDown={handleKeyDown(onClose)}
-    />
+    <div aria-hidden={!open} onKeyDown={handleKeyDown(onClose)}>
+      <div className={maskClassName} onClick={onClose} />
+      <div {...rest} className="e-mask__container" />
+    </div>
   )
 }

@@ -19,7 +19,7 @@ export default function Dialog({
   ...rest
 }: IProps) {
   const className = classnames('e-dialog', {
-    'e-dialog--open': open,
+    'e-dialog--closed': !open,
   })
 
   return (
@@ -29,17 +29,14 @@ export default function Dialog({
         aria-describedby="e-dialog-desc"
         aria-labelledby="e-dialog-title"
         className={className}
+        onClick={onClose}
         role="dialog"
       >
         <div className="e-dialog__dialog" onClick={e => e.stopPropagation()}>
           <div className="e-dialog__content">
             <div className="e-dialog__header">
               <h4 id="e-dialog-title">{title}</h4>
-              <CloseButton
-                aria-hidden={!open}
-                disabled={!open}
-                onClick={onClose}
-              />
+              <CloseButton disabled={!open} onClick={onClose} />
             </div>
             <div id="e-dialog-desc">{children}</div>
           </div>

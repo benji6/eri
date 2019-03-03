@@ -18,7 +18,7 @@ export default function Menu({ children, onClose, open, ...rest }: IProps) {
     <Mask onClose={onClose} open={open}>
       <nav {...rest} className={className} onClick={e => e.stopPropagation()}>
         <div className="e-menu__close-button">
-          <CloseButton aria-hidden={!open} disabled={!open} onClick={onClose} />
+          <CloseButton disabled={!open} onClick={onClose} />
         </div>
         {children}
       </nav>

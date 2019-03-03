@@ -1,4 +1,9 @@
-.e-mask {
+.e-mask__container {
+  position: relative;
+  z-index: var(--e-z-index-3);
+}
+
+.e-mask__mask {
   background-color: var(--e-color-balance-more);
   bottom: 0;
   left: 0;
@@ -10,8 +15,9 @@
   z-index: var(--e-z-index-3);
 }
 
-.e-mask--closed {
+.e-mask__mask--closed {
   opacity: 0;
   pointer-events: none;
+  transition-duration: var(--e-time-2);
   transition-timing-function: var(--e-easing-standard);
 }
