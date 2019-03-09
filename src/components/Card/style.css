@@ -1,6 +1,7 @@
 .e-card {
   --color: ;
 
+  background-color: var(--e-color-ground-more);
   border: var(--e-border-default);
   border-color: var(--color);
   border-radius: var(--e-border-radius-1);
