@@ -32,7 +32,7 @@
 }
 
 .e-menu--closed {
-  transform: translateX(var(--width));
+  transform: translateX(calc(var(--width) + var(--e-space-5)));
   transition-timing-function: var(--e-easing-accelerate);
 }
 
