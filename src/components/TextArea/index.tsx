@@ -5,7 +5,7 @@ import FieldLabel from '../../privateComponents/FieldLabel'
 import SupportiveText from '../../privateComponents/SupportiveText'
 import './style.css'
 
-interface IProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
+interface IProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   error?: React.ReactNode
   label: React.ReactNode
   supportiveText?: React.ReactNode
