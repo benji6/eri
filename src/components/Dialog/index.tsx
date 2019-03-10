@@ -6,6 +6,7 @@ import './style.css'
 
 interface IProps {
   children: React.ReactNode
+  disableClose?: boolean
   open: boolean
   title: React.ReactNode
   onClose(): void
@@ -13,6 +14,7 @@ interface IProps {
 
 export default function Dialog({
   children,
+  disableClose,
   onClose,
   open,
   title,
@@ -23,20 +25,20 @@ export default function Dialog({
   })
 
   return (
-    <Mask onClose={onClose} open={open}>
+    <Mask onClose={disableClose ? undefined : onClose} open={open}>
       <div
         {...rest}
         aria-describedby="e-dialog-desc"
         aria-labelledby="e-dialog-title"
         className={className}
-        onClick={onClose}
+        onClick={disableClose ? undefined : onClose}
         role="dialog"
       >
         <div className="e-dialog__dialog" onClick={e => e.stopPropagation()}>
           <div className="e-dialog__content">
             <div className="e-dialog__header">
               <h4 id="e-dialog-title">{title}</h4>
-              <CloseButton disabled={!open} onClick={onClose} />
+              <CloseButton disabled={disableClose || !open} onClick={onClose} />
             </div>
             <div id="e-dialog-desc">{children}</div>
           </div>
