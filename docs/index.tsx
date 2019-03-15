@@ -8,6 +8,7 @@ import {
   Checkbox,
   CurrencyField,
   Dialog,
+  Fab,
   getCssVar,
   Header,
   Icon,
@@ -36,6 +37,7 @@ const metaThemeColor = document.querySelector('meta[name=theme-color]')
 
 function App() {
   const [isDialogOpen, setIsDialogOpen] = React.useState(false)
+  const [isFabVisible, setIsFabVisible] = React.useState(false)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [page3, setPage3] = React.useState(0)
   const [page4, setPage4] = React.useState(0)
@@ -384,6 +386,19 @@ function App() {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </Dialog>
+        <h3>Fab</h3>
+        <p>The floating action button.</p>
+        <Toggle
+          label={isFabVisible ? 'Fab on' : 'Fab off'}
+          onChange={({ target }) =>
+            target.checked ? setIsFabVisible(true) : setIsFabVisible(false)
+          }
+        />
+        {isFabVisible && (
+          <Fab>
+            <Icon name="check" size="4" />
+          </Fab>
+        )}
         <h3>Hr</h3>
         <hr />
         <form noValidate>

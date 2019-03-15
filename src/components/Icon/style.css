@@ -11,3 +11,8 @@
   height: var(--e-font-size-3);
   width: var(--e-font-size-3);
 }
+
+.e-icon--size-4 {
+  height: var(--e-font-size-4);
+  width: var(--e-font-size-4);
+}

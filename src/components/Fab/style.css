@@ -1,0 +1,35 @@
+.e-fab {
+  --color: var(--e-color-accent);
+  --color-active: var(--e-color-accent-more);
+  --color-focus: var(--e-color-accent-analagous);
+  --color-hover: var(--e-color-accent-less);
+
+  background: var(--color);
+  border-radius: 50%;
+  bottom: var(--e-space-2);
+  box-shadow: var(--e-box-shadow-0);
+  color: var(--e-color-ground-more);
+  padding: var(--e-space-2);
+  position: fixed;
+  right: var(--e-space-2);
+  transition-duration: var(--e-time-0);
+  transition-property: background-color, box-shadow;
+  transition-timing-function: var(--e-easing-standard);
+  z-index: var(--e-z-index-1);
+}
+
+.e-fab:hover {
+  background: var(--color-hover);
+  border-color: var(--color-hover);
+}
+
+.e-fab:focus {
+  background: var(--color-focus);
+  border-color: var(--color-focus);
+}
+
+.e-fab:active {
+  box-shadow: none;
+  background: var(--color-active);
+  border-color: var(--color-active);
+}
