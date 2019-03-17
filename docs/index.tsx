@@ -396,7 +396,7 @@ function App() {
         />
         {isFabVisible && (
           <Fab>
-            <Icon name="check" size="4" />
+            <Icon name="plus" size="4" />
           </Fab>
         )}
         <h3>Hr</h3>
@@ -470,10 +470,11 @@ function App() {
         </p>
         <Icon name="check" />
         <Icon name="cross" />
-        <Icon name="left" />
-        <Icon name="right" />
         <Icon name="down" />
+        <Icon name="left" />
         <Icon name="menu" />
+        <Icon name="plus" />
+        <Icon name="right" />
         <h3>Link</h3>
         <p>Links take you places.</p>
         <a href="#">Click me!</a>
