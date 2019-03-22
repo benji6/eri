@@ -39,10 +39,10 @@ function App() {
   const [isDialogOpen, setIsDialogOpen] = React.useState(false)
   const [isFabVisible, setIsFabVisible] = React.useState(false)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isLightThemeOn, setIsLightThemeOn] = React.useState(true)
   const [page3, setPage3] = React.useState(0)
   const [page4, setPage4] = React.useState(0)
   const [page10, setPage10] = React.useState(4)
-  const [_, forceUpdate] = React.useReducer(n => n + 1, 0)
 
   const handleDialogClose = () => setIsDialogOpen(false)
   const handleDialogOpen = () => setIsDialogOpen(true)
@@ -52,16 +52,12 @@ function App() {
   const handlePageChange4 = (page: number) => setPage4(page)
   const handlePageChange10 = (page: number) => setPage10(page)
 
-  const switchToDarkTheme = () => {
-    document.documentElement.classList.add('e-theme-dark')
-    metaThemeColor.setAttribute('content', getCssVar('--e-color-accent-more'))
-    forceUpdate(undefined)
-  }
+  const toggleTheme = () => {
+    if (isLightThemeOn) document.documentElement.classList.add('e-theme-dark')
+    else document.documentElement.classList.remove('e-theme-dark')
 
-  const switchToLightTheme = () => {
-    document.documentElement.classList.remove('e-theme-dark')
     metaThemeColor.setAttribute('content', getCssVar('--e-color-accent-more'))
-    forceUpdate(undefined)
+    setIsLightThemeOn(!isLightThemeOn)
   }
 
   return (
@@ -185,10 +181,11 @@ function App() {
         <p>
           For the dark theme just add the class <code>e-theme-dark</code>.
         </p>
-        <ButtonGroup>
-          <Button onClick={switchToLightTheme}>Light</Button>
-          <Button onClick={switchToDarkTheme}>Dark</Button>
-        </ButtonGroup>
+        <Toggle
+          checked={isLightThemeOn}
+          label={isLightThemeOn ? 'Light theme on' : 'Dark theme on'}
+          onChange={toggleTheme}
+        />
         <ColorGroup name="Figure">
           <Color varName="--e-color-figure-more" />
           <Color varName="--e-color-figure" />
