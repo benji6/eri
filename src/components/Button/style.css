@@ -4,8 +4,6 @@
   --color-focus: var(--e-color-accent-analagous);
   --color-hover: var(--e-color-accent-less);
 
-  border: var(--e-border-default);
-  border-color: var(--color);
   border-radius: var(--e-border-radius-0);
   font-size: inherit;
   font-weight: var(--e-font-weight-bold);
@@ -33,6 +31,8 @@
 .e-button--primary {
   background: var(--color);
   color: var(--e-color-ground);
+  padding: calc(var(--e-space-2) + 2 * var(--e-border-width-0))
+    calc(var(--e-space-3) + 2 * var(--e-border-width-0));
   position: relative;
 }
 
@@ -58,6 +58,8 @@
 
 .e-button--secondary {
   background: none;
+  border: var(--e-border-default);
+  border-color: var(--color);
   color: var(--color);
 }
 

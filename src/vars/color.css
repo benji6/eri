@@ -2,128 +2,67 @@
   --e-gradient-angle: 356deg;
 
   --e-hue-accent: 210;
+  --e-hue-accent-analagous: calc(var(--e-hue-accent) + var(--e-hue-rotate));
   --e-hue-negative: 345;
+  --e-hue-negative-analagous: calc(var(--e-hue-negative) - var(--e-hue-rotate));
   --e-hue-positive: 150;
-  --e-hue-rotation: 30;
+  --e-hue-rotate: 30;
 
-  --e-saturation-0: 10%;
-  --e-saturation-1: 90%;
-  --e-saturation-ratio: 1.09;
+  --e-lightness-0: 10%;
+  --e-lightness-1: 40%;
+  --e-lightness-2: 97%;
 
-  --e-lightness-0: 23%;
-  --e-lightness-1: 25%;
-  --e-lightness-2: 35%;
-  --e-lightness-3: 45%;
-  --e-lightness-4: 97%;
-  --e-lightness-separation: 10%;
+  --e-alpha-separation: 0.1;
+  --e-alpha-0: 0.2;
+  --e-alpha-0-less: calc(var(--e-alpha-0) - var(--e-alpha-separation));
+  --e-alpha-0-more: calc(var(--e-alpha-0) + var(--e-alpha-separation));
+  --e-alpha-1: 0.7;
+  --e-alpha-1-less: calc(var(--e-alpha-1) - var(--e-alpha-separation));
+  --e-alpha-1-more: calc(var(--e-alpha-1) + var(--e-alpha-separation));
+  --e-alpha-2: 0.9;
+  --e-alpha-2-less: calc(var(--e-alpha-2) - var(--e-alpha-separation));
+  --e-alpha-2-more: calc(var(--e-alpha-2) + var(--e-alpha-separation));
 
-  --e-alpha-balance: 0.85;
+  --e-sl-default: 100%, var(--e-lightness-1);
 
-  --e-hue-accent-analagous: calc(var(--e-hue-accent) + var(--e-hue-rotation));
+  --e-hsl-accent: var(--e-hue-accent), var(--e-sl-default);
+  --e-hsl-figure: var(--e-hue-accent), 10%, var(--e-lightness-0);
+  --e-hsl-ground: var(--e-hue-accent), 10%, var(--e-lightness-2);
+  --e-hsl-negative: var(--e-hue-negative), var(--e-sl-default);
+  --e-hsl-positive: var(--e-hue-positive), var(--e-sl-default);
 
-  --e-color-accent: hsl(
-    var(--e-hue-accent),
-    var(--e-saturation-1),
-    var(--e-lightness-3)
-  );
-  --e-color-accent-analagous: hsl(
+  --e-color-accent: hsla(var(--e-hsl-accent), var(--e-alpha-2));
+  --e-color-accent-less: hsla(var(--e-hsl-accent), var(--e-alpha-2-less));
+  --e-color-accent-more: hsla(var(--e-hsl-accent), var(--e-alpha-2-more));
+  --e-color-accent-analagous: hsla(
     var(--e-hue-accent-analagous),
-    var(--e-saturation-1),
-    var(--e-lightness-2)
-  );
-  --e-color-accent-less: hsl(
-    var(--e-hue-accent),
-    calc(var(--e-saturation-1) * var(--e-saturation-ratio)),
-    calc(var(--e-lightness-3) + var(--e-lightness-separation))
-  );
-  --e-color-accent-more: hsl(
-    var(--e-hue-accent),
-    calc(var(--e-saturation-1) / var(--e-saturation-ratio)),
-    calc(var(--e-lightness-3) - var(--e-lightness-separation))
+    var(--e-sl-default),
+    var(--e-alpha-2)
   );
 
-  --e-color-balance: hsla(
-    var(--e-hue-accent),
-    var(--e-saturation-0),
-    var(--e-lightness-1),
-    var(--e-alpha-balance)
-  );
-  --e-color-balance-less: hsla(
-    var(--e-hue-accent),
-    calc(var(--e-saturation-0) * var(--e-saturation-ratio)),
-    calc(var(--e-lightness-1) + var(--e-lightness-separation)),
-    var(--e-alpha-balance)
-  );
-  --e-color-balance-more: hsla(
-    var(--e-hue-accent),
-    calc(var(--e-saturation-0) / var(--e-saturation-ratio)),
-    calc(var(--e-lightness-1) - var(--e-lightness-separation)),
-    var(--e-alpha-balance)
+  --e-color-balance: hsla(var(--e-hsl-figure), var(--e-alpha-1));
+  --e-color-balance-less: hsla(var(--e-hsl-figure), var(--e-alpha-1-less));
+  --e-color-balance-more: hsla(var(--e-hsl-figure), var(--e-alpha-1-more));
+
+  --e-color-figure: hsla(var(--e-hsl-figure), var(--e-alpha-2));
+  --e-color-figure-less: hsla(var(--e-hsl-figure), var(--e-alpha-2-less));
+  --e-color-figure-more: hsla(var(--e-hsl-figure), var(--e-alpha-2-more));
+
+  --e-color-ground: hsl(var(--e-hsl-ground));
+  --e-color-ground-less: hsla(var(--e-hsl-ground), var(--e-alpha-2-less));
+  --e-color-ground-more: #fff;
+
+  --e-color-negative: hsla(var(--e-hsl-negative), var(--e-alpha-2));
+  --e-color-negative-less: hsla(var(--e-hsl-negative), var(--e-alpha-2-less));
+  --e-color-negative-more: hsla(var(--e-hsl-negative), var(--e-alpha-2-more));
+  --e-color-negative-analagous: hsla(
+    var(--e-hue-negative-analagous),
+    var(--e-sl-default),
+    var(--e-alpha-2)
   );
 
-  --e-color-figure: hsl(
-    var(--e-hue-accent),
-    var(--e-saturation-0),
-    var(--e-lightness-0)
-  );
-  --e-color-figure-less: hsl(
-    var(--e-hue-accent),
-    calc(var(--e-saturation-0) * var(--e-saturation-ratio)),
-    calc(var(--e-lightness-0) + var(--e-lightness-separation))
-  );
-  --e-color-figure-more: hsl(
-    var(--e-hue-accent),
-    calc(var(--e-saturation-0) / var(--e-saturation-ratio)),
-    calc(var(--e-lightness-0) - var(--e-lightness-separation))
-  );
-
-  --e-color-ground: hsl(
-    var(--e-hue-accent),
-    var(--e-saturation-0),
-    var(--e-lightness-4)
-  );
-  --e-color-ground-less: hsl(
-    var(--e-hue-accent),
-    calc(var(--e-saturation-0) / var(--e-saturation-ratio)),
-    calc(var(--e-lightness-4) - var(--e-lightness-separation))
-  );
-  --e-color-ground-more: hsl(
-    var(--e-hue-accent),
-    calc(var(--e-saturation-0) * var(--e-saturation-ratio)),
-    calc(var(--e-lightness-4) + var(--e-lightness-separation))
-  );
-
-  --e-color-negative: hsl(
-    var(--e-hue-negative),
-    var(--e-saturation-1),
-    var(--e-lightness-3)
-  );
-  --e-color-negative-analagous: hsl(
-    calc(var(--e-hue-negative) - var(--e-hue-rotation)),
-    var(--e-saturation-1),
-    var(--e-lightness-2)
-  );
-  --e-color-negative-less: hsl(
-    var(--e-hue-negative),
-    calc(var(--e-saturation-1) * var(--e-saturation-ratio)),
-    calc(var(--e-lightness-3) + var(--e-lightness-separation))
-  );
-  --e-color-negative-more: hsl(
-    var(--e-hue-negative),
-    calc(var(--e-saturation-1) / var(--e-saturation-ratio)),
-    calc(var(--e-lightness-3) - var(--e-lightness-separation))
-  );
-
-  --e-color-positive: hsl(
-    var(--e-hue-positive),
-    var(--e-saturation-1),
-    var(--e-lightness-3)
-  );
-  --e-color-positive-less: hsl(
-    var(--e-hue-positive),
-    calc(var(--e-saturation-1) * var(--e-saturation-ratio)),
-    calc(var(--e-lightness-3) + var(--e-lightness-separation))
-  );
+  --e-color-positive: hsla(var(--e-hsl-positive), var(--e-alpha-2));
+  --e-color-positive-less: hsla(var(--e-hsl-positive), var(--e-alpha-2-less));
 
   --e-color-highlight-0: hsl(184, 100%, 48%);
   --e-color-highlight-1: hsl(270, 100%, 67%);
@@ -134,12 +73,10 @@
 }
 
 .e-theme-dark {
+  --e-color-ground-more: #000;
   --e-hue-accent: 185;
   --e-hue-negative: 310;
-  --e-lightness-0: 91%;
-  --e-lightness-1: 75%;
-  --e-lightness-2: 70%;
-  --e-lightness-3: 60%;
-  --e-lightness-4: 10%;
-  --e-lightness-separation: -9%;
+  --e-lightness-0: 97%;
+  --e-lightness-1: 60%;
+  --e-lightness-2: 10%;
 }
