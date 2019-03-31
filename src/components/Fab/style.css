@@ -28,8 +28,13 @@
   border-color: var(--color-focus);
 }
 
-.e-fab:active {
+.e-fab:active:not(:disabled) {
   box-shadow: none;
   background: var(--color-active);
   border-color: var(--color-active);
+}
+
+.e-fab:disabled {
+  background: var(--e-color-balance);
+  border-color: transparent;
 }
