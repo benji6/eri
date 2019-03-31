@@ -392,7 +392,7 @@ function App() {
           }
         />
         {isFabVisible && (
-          <Fab>
+          <Fab aria-label="example FAB">
             <Icon name="plus" size="4" />
           </Fab>
         )}
@@ -472,6 +472,7 @@ function App() {
         <Icon name="menu" />
         <Icon name="plus" />
         <Icon name="right" />
+        <Icon name="save" />
         <h3>Link</h3>
         <p>Links take you places.</p>
         <a href="#">Click me!</a>
