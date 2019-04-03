@@ -4,11 +4,11 @@
   --color-focus: var(--e-color-accent-analagous);
   --color-hover: var(--e-color-accent-less);
 
-  background: var(--color);
   border-radius: 50%;
   bottom: var(--e-space-2);
   box-shadow: var(--e-box-shadow-0);
   color: var(--e-color-ground-more);
+  overflow: hidden;
   padding: var(--e-space-2);
   position: fixed;
   right: var(--e-space-2);
@@ -16,6 +16,26 @@
   transition-property: background-color, box-shadow;
   transition-timing-function: var(--e-easing-standard);
   z-index: var(--e-z-index-1);
+}
+
+.e-fab::after,
+.e-fab::before {
+  bottom: 0;
+  content: '';
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--e-z-index--1);
+}
+
+.e-fab::after {
+  background: var(--color);
+}
+
+.e-fab::before {
+  background: var(--e-color-ground);
 }
 
 .e-fab:hover {
