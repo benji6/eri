@@ -16,7 +16,7 @@
   --e-alpha-0: 0.2;
   --e-alpha-0-less: calc(var(--e-alpha-0) - var(--e-alpha-separation));
   --e-alpha-0-more: calc(var(--e-alpha-0) + var(--e-alpha-separation));
-  --e-alpha-1: 0.7;
+  --e-alpha-1: 0.6;
   --e-alpha-1-less: calc(var(--e-alpha-1) - var(--e-alpha-separation));
   --e-alpha-1-more: calc(var(--e-alpha-1) + var(--e-alpha-separation));
   --e-alpha-2: 0.9;
