@@ -12,9 +12,7 @@
   padding: var(--e-space-2);
   position: fixed;
   right: var(--e-space-2);
-  transition-duration: var(--e-time-0);
-  transition-property: background-color, box-shadow;
-  transition-timing-function: var(--e-easing-standard);
+  transition: box-shadow var(--e-time-0) var(--e-easing-standard);
   z-index: var(--e-z-index-1);
 }
 
@@ -27,6 +25,7 @@
   position: absolute;
   right: 0;
   top: 0;
+  transition: background-color var(--e-time-0) var(--e-easing-standard);
   z-index: var(--e-z-index--1);
 }
 
@@ -38,23 +37,22 @@
   background: var(--e-color-ground);
 }
 
-.e-fab:hover {
+.e-fab:hover::after {
   background: var(--color-hover);
-  border-color: var(--color-hover);
 }
 
-.e-fab:focus {
+.e-fab:focus::after {
   background: var(--color-focus);
-  border-color: var(--color-focus);
 }
 
 .e-fab:active:not(:disabled) {
   box-shadow: none;
-  background: var(--color-active);
-  border-color: var(--color-active);
 }
 
-.e-fab:disabled {
+.e-fab:active:not(:disabled)::after {
+  background: var(--color-active);
+}
+
+.e-fab:disabled::after {
   background: var(--e-color-balance);
-  border-color: transparent;
 }
