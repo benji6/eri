@@ -201,6 +201,12 @@ function App() {
           <Color varName="--e-color-ground" />
           <Color varName="--e-color-ground-less" />
         </ColorGroup>
+        <ColorGroup
+          description="Useful for web app manifest or theme_color meta tag"
+          name="Theme"
+        >
+          <Color varName="--e-color-theme" />
+        </ColorGroup>
         <ColorGroup name="Accent">
           <Color varName="--e-color-accent-more" />
           <Color varName="--e-color-accent" />

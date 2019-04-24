@@ -29,6 +29,7 @@ interface IProps {
     | '--e-color-negative-more'
     | '--e-color-positive'
     | '--e-color-positive-less'
+    | '--e-color-theme'
 }
 
 export default function Color({ varName }: IProps) {

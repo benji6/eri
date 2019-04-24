@@ -52,6 +52,13 @@
   --e-color-ground-less: hsla(var(--e-hsl-ground), var(--e-alpha-2-less));
   --e-color-ground-more: #fff;
 
+  --e-color-highlight-0: hsl(184, 100%, 48%);
+  --e-color-highlight-1: hsl(270, 100%, 67%);
+  --e-color-highlight-2: hsl(300, 90%, 65%);
+  --e-color-highlight-3: hsl(32, 100%, 60%);
+  --e-color-highlight-4: hsl(70, 100%, 45%);
+  --e-color-highlight-5: hsl(148, 100%, 45%);
+
   --e-color-negative: hsla(var(--e-hsl-negative), var(--e-alpha-2));
   --e-color-negative-less: hsla(var(--e-hsl-negative), var(--e-alpha-2-less));
   --e-color-negative-more: hsla(var(--e-hsl-negative), var(--e-alpha-2-more));
@@ -64,16 +71,12 @@
   --e-color-positive: hsla(var(--e-hsl-positive), var(--e-alpha-2));
   --e-color-positive-less: hsla(var(--e-hsl-positive), var(--e-alpha-2-less));
 
-  --e-color-highlight-0: hsl(184, 100%, 48%);
-  --e-color-highlight-1: hsl(270, 100%, 67%);
-  --e-color-highlight-2: hsl(300, 90%, 65%);
-  --e-color-highlight-3: hsl(32, 100%, 60%);
-  --e-color-highlight-4: hsl(70, 100%, 45%);
-  --e-color-highlight-5: hsl(148, 100%, 45%);
+  --e-color-theme: #001e3c;
 }
 
 .e-theme-dark {
   --e-color-ground-more: #000;
+  --e-color-theme: #001e21;
   --e-hue-accent: 185;
   --e-hue-negative: 310;
   --e-lightness-0: 97%;
