@@ -1,3 +1,5 @@
 const styles = getComputedStyle(document.documentElement)
 
-export default (prop: string) => styles.getPropertyValue(prop).trim()
+export default function getCssVar(prop: string) {
+  return styles.getPropertyValue(prop).trim()
+}

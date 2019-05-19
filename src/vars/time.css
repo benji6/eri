@@ -1,7 +1,8 @@
 :root {
+  --e-time-scale-ratio: 2.5;
   --e-time-0: 0.125s;
-  --e-time-1: calc(2 * var(--e-time-0));
-  --e-time-2: calc(6 * var(--e-time-0));
+  --e-time-1: calc(var(--e-time-0) * var(--e-time-scale-ratio));
+  --e-time-2: calc(var(--e-time-1) * var(--e-time-scale-ratio));
 }
 
 @media (min-width: 500px) {

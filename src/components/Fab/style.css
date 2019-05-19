@@ -12,7 +12,9 @@
   padding: var(--e-space-2);
   position: fixed;
   right: var(--e-space-2);
-  transition: box-shadow var(--e-time-0) var(--e-easing-standard);
+  transition-duration: var(--e-time-0);
+  transition-property: box-shadow, opacity, transform;
+  transition-timing-function: var(--e-easing-standard);
   z-index: var(--e-z-index-1);
 }
 
@@ -55,4 +57,10 @@
 
 .e-fab:disabled::after {
   background: var(--e-color-balance);
+}
+
+.e-fab--enter,
+.e-fab--exit-active {
+  opacity: 0;
+  transform: scale(0);
 }
