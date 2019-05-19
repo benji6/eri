@@ -63,4 +63,5 @@
 .e-fab--exit-active {
   opacity: 0;
   transform: scale(0);
+  transition-timing-function: var(--e-easing-accelerate);
 }
