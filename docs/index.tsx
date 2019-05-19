@@ -392,16 +392,15 @@ function App() {
         <h3>Fab</h3>
         <p>The floating action button.</p>
         <Toggle
-          label={isFabVisible ? 'Fab on' : 'Fab off'}
+          checked={isFabVisible}
+          label={isFabVisible ? 'Fab visible' : 'Fab hidden'}
           onChange={({ target }) =>
             target.checked ? setIsFabVisible(true) : setIsFabVisible(false)
           }
         />
-        {isFabVisible && (
-          <Fab aria-label="example FAB">
-            <Icon name="plus" size="4" />
-          </Fab>
-        )}
+        <Fab aria-label="example FAB" hide={!isFabVisible}>
+          <Icon name="plus" size="4" />
+        </Fab>
         <h3>Hr</h3>
         <hr />
         <form noValidate>
