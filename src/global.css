@@ -65,7 +65,7 @@ h3,
 h4 {
   color: var(--e-color-figure-more);
   font-weight: var(--e-font-weight-bold);
-  margin: var(--e-font-heading-margin);
+  margin: var(--e-font-margin);
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
@@ -94,11 +94,12 @@ hr {
 }
 
 p {
-  margin: 0 0 var(--e-font-margin-bottom);
+  margin: var(--e-font-margin);
+  margin-top: 0;
 }
 
 p + p {
-  margin-top: var(--e-font-margin-top);
+  margin: var(--e-font-margin);
 }
 
 a::-moz-focus-inner {
