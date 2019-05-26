@@ -12,7 +12,8 @@
   transition-timing-function: var(--e-easing-decelerate);
 }
 
-.e-dialog--closed {
+.e-dialog--enter,
+.e-dialog--exit-active {
   opacity: 0;
   pointer-events: none;
   transform: scale(0.9);
