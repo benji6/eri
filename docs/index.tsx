@@ -31,8 +31,8 @@ import Easing from './components/Easing'
 import Space from './components/Space'
 import SpaceGroup from './components/SpaceGroup'
 import Time from './components/Time'
-import './style.css'
 import TimeGroup from './components/TimeGroup'
+import './style.css'
 
 const metaThemeColor = document.querySelector('meta[name=theme-color]')
 
