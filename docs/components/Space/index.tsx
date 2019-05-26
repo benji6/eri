@@ -17,7 +17,6 @@ interface IProps {
     | '--e-space-2'
     | '--e-space-3'
     | '--e-space-4'
-    | '--e-space-5'
 }
 
 export default function Space({ varName }: IProps) {

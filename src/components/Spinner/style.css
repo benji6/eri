@@ -12,8 +12,6 @@
 }
 
 .e-spinner--page {
-  --diameter: var(--e-space-5);
-
   display: flex;
   margin: var(--diameter) auto;
 }

@@ -18,5 +18,5 @@
   border-radius: var(--e-border-radius-0);
   height: var(--e-space-2);
   transition: background-color var(--e-time-0) var(--e-easing-standard);
-  width: var(--e-space-5);
+  width: var(--e-space-4);
 }

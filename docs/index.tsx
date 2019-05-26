@@ -126,7 +126,6 @@ function App() {
           <Space varName="--e-space-2" />
           <Space varName="--e-space-3" />
           <Space varName="--e-space-4" />
-          <Space varName="--e-space-5" />
         </SpaceGroup>
         <h2>Border</h2>
         <p>

@@ -20,7 +20,7 @@
   border: var(--e-border-default);
   cursor: pointer;
   display: inline-block;
-  min-width: var(--e-space-5);
+  min-width: var(--e-space-4);
   padding: var(--e-space-1);
   position: relative;
   text-align: center;
