@@ -1,5 +1,6 @@
-import classnames from 'classnames'
 import * as React from 'react'
+import { CSSTransition } from 'react-transition-group'
+import { getCssTime1 } from '../../utils/getCssVar'
 import './style.css'
 
 const documentElement = document.documentElement as HTMLElement
@@ -18,10 +19,6 @@ const handleKeyDown = (onClose: IProps['onClose']) => (
 
 export default function Mask({ onClose, open, ...rest }: IProps) {
   const [scrollY, setScrollY] = React.useState(0)
-
-  const maskClassName = classnames('e-mask__mask', {
-    'e-mask__mask--closed': !open,
-  })
 
   const openMask = () => {
     setScrollY(window.scrollY)
@@ -49,8 +46,16 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
   }, [open])
 
   return (
-    <div aria-hidden={!open} onKeyDown={handleKeyDown(onClose)}>
-      <div className={maskClassName} onClick={onClose} />
+    <div onKeyDown={handleKeyDown(onClose)}>
+      <CSSTransition
+        classNames="e-mask__mask-"
+        in={open}
+        mountOnEnter
+        timeout={{ exit: getCssTime1() }}
+        unmountOnExit
+      >
+        <div className="e-mask__mask" onClick={onClose} />
+      </CSSTransition>
       <div {...rest} className="e-mask__container" />
     </div>
   )

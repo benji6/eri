@@ -15,9 +15,9 @@
   z-index: var(--e-z-index-3);
 }
 
-.e-mask__mask--closed {
+.e-mask__mask--enter,
+.e-mask__mask--exit-active {
   opacity: 0;
-  pointer-events: none;
   transition-duration: var(--e-time-2);
   transition-timing-function: var(--e-easing-standard);
 }
