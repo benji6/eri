@@ -3,15 +3,11 @@
 
   animation: var(--e-animation-fade-in), var(--e-animation-spin);
   border: calc(var(--diameter) / 8) solid var(--e-color-accent);
-  border-right-color: transparent;
   border-radius: 50%;
+  border-right-color: transparent;
   box-sizing: border-box;
-  display: inline-flex;
-  height: var(--diameter);
-  width: var(--diameter);
-}
-
-.e-spinner--page {
   display: flex;
+  height: var(--diameter);
   margin: var(--diameter) auto;
+  width: var(--diameter);
 }

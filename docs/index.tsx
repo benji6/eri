@@ -502,7 +502,6 @@ function App() {
         />
         <h3>Spinner</h3>
         <Spinner />
-        <Spinner variant="page" />
       </main>
     </React.StrictMode>
   )

@@ -1,15 +1,8 @@
-import classnames from 'classnames'
 import * as React from 'react'
 import './style.css'
 
-interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
-  variant?: 'page'
-}
+interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
-export default function Spinner({ variant, ...rest }: IProps) {
-  const className = classnames('e-spinner', {
-    'e-spinner--page': variant === 'page',
-  })
-
-  return <span {...rest} className={className} />
+export default function Spinner(props: IProps) {
+  return <span {...props} className="e-spinner" />
 }
