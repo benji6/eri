@@ -9,7 +9,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  transition: transform var(--e-time-1) var(--e-easing-decelerate);
+  transition: transform var(--e-time-1) var(--e-easing-standard);
   width: var(--width);
 }
 
@@ -31,8 +31,9 @@
   }
 }
 
-.e-menu--closed {
-  transform: translateX(calc(var(--width) + var(--e-space-5)));
+.e-menu--enter,
+.e-menu--exit-active {
+  transform: translateX(var(--width));
   transition-timing-function: var(--e-easing-accelerate);
 }
 

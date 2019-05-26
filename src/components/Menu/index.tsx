@@ -1,7 +1,8 @@
-import classnames from 'classnames'
 import * as React from 'react'
+import { CSSTransition } from 'react-transition-group'
 import CloseButton from '../../privateComponents/CloseButton'
 import Mask from '../../privateComponents/Mask'
+import { getCssTime1 } from '../../utils/getCssVar'
 import './style.css'
 
 interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
@@ -10,18 +11,22 @@ interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
 }
 
 export default function Menu({ children, onClose, open, ...rest }: IProps) {
-  const className = classnames('e-menu', {
-    'e-menu--closed': !open,
-  })
-
   return (
     <Mask onClose={onClose} open={open}>
-      <nav {...rest} className={className} onClick={e => e.stopPropagation()}>
-        <div className="e-menu__close-button">
-          <CloseButton disabled={!open} onClick={onClose} />
-        </div>
-        {children}
-      </nav>
+      <CSSTransition
+        classNames="e-menu-"
+        in={open}
+        mountOnEnter
+        timeout={{ exit: getCssTime1() }}
+        unmountOnExit
+      >
+        <nav {...rest} className="e-menu" onClick={e => e.stopPropagation()}>
+          <div className="e-menu__close-button">
+            <CloseButton onClick={onClose} />
+          </div>
+          {children}
+        </nav>
+      </CSSTransition>
     </Mask>
   )
 }
