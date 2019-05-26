@@ -32,6 +32,7 @@ import Space from './components/Space'
 import SpaceGroup from './components/SpaceGroup'
 import Time from './components/Time'
 import './style.css'
+import TimeGroup from './components/TimeGroup'
 
 const metaThemeColor = document.querySelector('meta[name=theme-color]')
 
@@ -101,10 +102,6 @@ function App() {
           Space, the final frontier... This is how our journey begins. Without
           space there is nowhere.
         </p>
-        <p>
-          Most of these values are computed using rems, but due to heavy use of
-          CSS <code>calc()</code> it is much easier to display them in px here.
-        </p>
         <h3>Font size</h3>
         <p>
           Fonts are sized based on a fluid modular scale which keeps things
@@ -151,17 +148,21 @@ function App() {
           Time is responsive, things take more time on larger screens so
           velocity feels more constant.
         </p>
-        <Time varName="--e-time-0" />
-        <Time varName="--e-time-1" />
-        <Time varName="--e-time-2" />
+        <TimeGroup>
+          <Time varName="--e-time-0" />
+          <Time varName="--e-time-1" />
+          <Time varName="--e-time-2" />
+        </TimeGroup>
         <h2>Easing</h2>
         <p>
           Now we have space and time we need to define how we're going to move
           through it. Easings define how movement through space-time feels.
         </p>
-        <Easing varName="--e-easing-accelerate" />
-        <Easing varName="--e-easing-decelerate" />
-        <Easing varName="--e-easing-standard" />
+        <TimeGroup>
+          <Easing varName="--e-easing-accelerate" />
+          <Easing varName="--e-easing-decelerate" />
+          <Easing varName="--e-easing-standard" />
+        </TimeGroup>
         <h2>Animation</h2>
         <p>Here are the custom properties you can use for animation:</p>
         <ul>

@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { getCssVar } from '../../../src'
 import './style.css'
 
 interface IProps {
@@ -10,20 +9,16 @@ interface IProps {
 }
 
 export default function Easing({ varName }: IProps) {
-  const animationTimingFunction = getCssVar(varName)
-
   return (
     <div className="d-easing">
       <div className="d-easing__visual-container">
-        <div className="d-easing__visual" style={{ animationTimingFunction }} />
+        <div
+          className="d-easing__visual"
+          style={{ animationTimingFunction: `var(${varName})` }}
+        />
       </div>
       <pre>
-        <code>
-          {varName}: {animationTimingFunction};
-        </code>
-      </pre>
-      <pre>
-        <code>animation-name: e-rotate;</code>
+        <code>{varName}</code>
       </pre>
     </div>
   )

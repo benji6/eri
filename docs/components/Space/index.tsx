@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { getCssVar } from '../../../src'
 import './style.css'
 
 interface IProps {
@@ -22,16 +21,11 @@ interface IProps {
 }
 
 export default function Space({ varName }: IProps) {
-  const [value, setValue] = React.useState<number | undefined>(undefined)
-  const divRef = React.useRef(undefined)
-  const space = getCssVar(varName)
-  React.useEffect(() => setValue(divRef.current.clientWidth), [])
-
   return (
     <>
-      <div className="d-space__visual" ref={divRef} style={{ width: space }} />
+      <div className="d-space__visual" style={{ width: `var(${varName})` }} />
       <pre>
-        <code>{value !== undefined ? `${varName}: ${value}px` : varName}</code>
+        <code>{varName}</code>
       </pre>
     </>
   )

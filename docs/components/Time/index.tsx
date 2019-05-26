@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { getCssVar } from '../../../src'
 import './style.css'
 
 interface IProps {
@@ -7,20 +6,16 @@ interface IProps {
 }
 
 export default function Time({ varName }: IProps) {
-  const time = getCssVar(varName)
-
   return (
     <div className="d-time">
       <div className="d-time__visual-container">
-        <div className="d-time__visual" style={{ animationDuration: time }} />
+        <div
+          className="d-time__visual"
+          style={{ animationDuration: `var(${varName})` }}
+        />
       </div>
       <pre>
-        <code>animation-name: e-rotate;</code>
-      </pre>
-      <pre>
-        <code>
-          {varName}: {time};
-        </code>
+        <code>{varName}</code>
       </pre>
     </div>
   )
