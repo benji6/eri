@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { CSSTransition } from 'react-transition-group'
-import getCssVar from '../../utils/getCssVar'
+import { getCssTime0 } from '../../utils/getCssVar'
 import './style.css'
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -17,7 +17,7 @@ export default function Fab({
       classNames="e-fab-"
       in={!hide}
       mountOnEnter
-      timeout={parseFloat(getCssVar('--e-time-0')) * 1e3}
+      timeout={{ exit: getCssTime0() }}
       unmountOnExit
     >
       <button {...rest} className="e-fab" type={type} />
