@@ -1,5 +1,5 @@
 .e-toggle {
-  --toggle-button-diameter: var(--e-space-3);
+  --toggle-button-diameter: var(--e-space-2);
   --toggle-width: calc(2 * var(--toggle-button-diameter));
 
   position: relative;

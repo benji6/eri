@@ -1,6 +1,6 @@
 :root {
   --e-space-scale-ratio: 1.61803;
-  --e-space-0: calc(var(--e-line-height) * calc(1em / 5));
+  --e-space-0: calc(0.2em + 0.25vmin);
   --e-space-1: calc(var(--e-space-0) * var(--e-space-scale-ratio));
   --e-space-2: calc(var(--e-space-1) * var(--e-space-scale-ratio));
   --e-space-3: calc(var(--e-space-2) * var(--e-space-scale-ratio));
@@ -10,15 +10,8 @@
   --e-max-width-1: calc(4 / 3 * var(--e-max-width-0));
 }
 
-@media (max-width: 1024px) {
-  :root {
-    --e-space-scale-ratio: 1.5;
-  }
-}
-
 @media (max-width: 500px) {
   :root {
-    --e-space-scale-ratio: 1.5;
     --e-max-width-0: 100vw;
     --e-max-width-1: 100vw;
   }
