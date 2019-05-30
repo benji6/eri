@@ -146,7 +146,7 @@ textarea {
   font-family: inherit; /* for firefox */
   font-size: inherit;
   outline: 0;
-  padding: var(--e-space-1) var(--e-space-2);
+  padding: var(--e-space-1) var(--e-space-1);
   transition-duration: var(--e-time-0);
   transition-property: background-color, border;
   transition-timing-function: var(--e-easing-standard);

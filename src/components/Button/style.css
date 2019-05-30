@@ -7,7 +7,7 @@
   box-shadow: var(--e-box-shadow-0);
   font-size: inherit;
   font-weight: var(--e-font-weight-bold);
-  padding: var(--e-space-2) var(--e-space-3);
+  padding: var(--e-space-1) var(--e-space-3);
   transition-duration: var(--e-time-0);
   transition-property: background-color, border-color, box-shadow, transform;
   transition-timing-function: var(--e-easing-standard);
@@ -40,7 +40,7 @@
 .e-button--primary {
   background: var(--color);
   color: var(--e-color-ground);
-  padding: calc(var(--e-space-2) + 2 * var(--e-border-width-0))
+  padding: calc(var(--e-space-1) + 2 * var(--e-border-width-0))
     calc(var(--e-space-3) + 2 * var(--e-border-width-0));
   position: relative;
 }

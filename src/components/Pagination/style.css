@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   margin: var(--e-space-2) 0;
-  padding: var(--e-space-2);
+  padding: var(--e-space-1);
   user-select: none;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .pagination__button:not(:last-child) {
-  margin-right: var(--e-space-1);
+  margin-right: var(--e-space-0);
 }
 
 .pagination__button:disabled {

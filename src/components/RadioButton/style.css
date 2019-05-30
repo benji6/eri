@@ -21,7 +21,7 @@
   cursor: pointer;
   display: inline-block;
   min-width: var(--e-space-4);
-  padding: var(--e-space-1);
+  padding: var(--e-space-0);
   position: relative;
   text-align: center;
   transition-duration: var(--e-time-0);
