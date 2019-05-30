@@ -10,16 +10,14 @@ interface IProps {
 
 export default function Easing({ varName }: IProps) {
   return (
-    <div className="d-easing">
-      <div className="d-easing__visual-container">
-        <div
-          className="d-easing__visual"
-          style={{ animationTimingFunction: `var(${varName})` }}
-        />
-      </div>
+    <>
+      <div
+        className="d-easing__visual"
+        style={{ animationTimingFunction: `var(${varName})` }}
+      />
       <pre>
         <code>{varName}</code>
       </pre>
-    </div>
+    </>
   )
 }

@@ -7,16 +7,14 @@ interface IProps {
 
 export default function Time({ varName }: IProps) {
   return (
-    <div className="d-time">
-      <div className="d-time__visual-container">
-        <div
-          className="d-time__visual"
-          style={{ animationDuration: `var(${varName})` }}
-        />
-      </div>
+    <>
+      <div
+        className="d-time__visual"
+        style={{ animationDuration: `var(${varName})` }}
+      />
       <pre>
         <code>{varName}</code>
       </pre>
-    </div>
+    </>
   )
 }

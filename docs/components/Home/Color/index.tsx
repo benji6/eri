@@ -33,7 +33,7 @@ interface IProps {
 
 export default function Color({ varName }: IProps) {
   return (
-    <div className="d-color">
+    <>
       <div
         className="d-color__visual"
         style={{ background: `var(${varName})` }}
@@ -41,6 +41,6 @@ export default function Color({ varName }: IProps) {
       <pre>
         <code>{varName}</code>
       </pre>
-    </div>
+    </>
   )
 }
