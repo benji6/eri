@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { getCssVar } from '../../../src'
 import './style.css'
 
 interface IProps {
@@ -33,11 +32,12 @@ interface IProps {
 }
 
 export default function Color({ varName }: IProps) {
-  const color = getCssVar(varName)
-
   return (
     <div className="d-color">
-      <div className="d-color__visual" style={{ background: color }} />
+      <div
+        className="d-color__visual"
+        style={{ background: `var(${varName})` }}
+      />
       <pre>
         <code>{varName}</code>
       </pre>
