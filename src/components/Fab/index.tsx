@@ -17,7 +17,7 @@ export default function Fab({
       classNames="e-fab-"
       in={!hide}
       mountOnEnter
-      timeout={{ exit: getCssTime0() }}
+      timeout={{ exit: getCssTime0() + 100 }}
       unmountOnExit
     >
       <button {...rest} className="e-fab" type={type} />

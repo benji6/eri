@@ -51,7 +51,7 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
         classNames="e-mask__mask-"
         in={open}
         mountOnEnter
-        timeout={{ exit: getCssTime1() }}
+        timeout={{ exit: getCssTime1() + 100 }}
         unmountOnExit
       >
         <div className="e-mask__mask" onClick={onClose} />

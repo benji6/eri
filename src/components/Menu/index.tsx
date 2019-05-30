@@ -17,7 +17,7 @@ export default function Menu({ children, onClose, open, ...rest }: IProps) {
         classNames="e-menu-"
         in={open}
         mountOnEnter
-        timeout={{ exit: getCssTime1() }}
+        timeout={{ exit: getCssTime1() + 100 }}
         unmountOnExit
       >
         <nav {...rest} className="e-menu" onClick={e => e.stopPropagation()}>

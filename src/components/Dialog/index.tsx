@@ -27,7 +27,7 @@ export default function Dialog({
         classNames="e-dialog-"
         in={open}
         mountOnEnter
-        timeout={{ exit: getCssTime1() }}
+        timeout={{ exit: getCssTime1() + 100 }}
         unmountOnExit
       >
         <div
