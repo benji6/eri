@@ -34,5 +34,5 @@
 
 .header a:focus,
 .header a:hover {
-  color: var(--e-color-ground-less);
+  text-decoration: underline;
 }
