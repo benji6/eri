@@ -89,19 +89,18 @@ function App() {
       <main>
         <h2>Principles</h2>
         <ul>
-          <li>🧘‍♀️ Simple - Eri is minimal and feels clean and intuitive.</li>
+          <li>
+            🧘‍♀️ Simple - Eri aims to be minimal and should feel clean and
+            intuitive.
+          </li>
           <li>
             🚀 Lightweight - Eri is performance focussed and will not bloat or
             slow down your app. Components are lightweight and tree-shaking is
             supported out the box.
           </li>
-          <li>☺️ Joyful - Eri is simple and should feel good to use.</li>
+          <li>😌 Easy - Eri should be straightforward and easy to use.</li>
         </ul>
-        <h2>Space</h2>
-        <p>
-          Space, the final frontier... This is how our journey begins. Without
-          space there is nowhere.
-        </p>
+        <h2>Design elements</h2>
         <h3>Font size</h3>
         <p>
           Fonts are sized based on a fluid modular scale which keeps things
@@ -116,8 +115,7 @@ function App() {
         </SpaceGroup>
         <h3>Space</h3>
         <p>
-          Space is based on a responsive modular scale and linked to font-size
-          and line-height.
+          Space is based on a fluid modular scale and is linked to font-size.
         </p>
         <SpaceGroup>
           <Space varName="--e-space-0" />
@@ -126,22 +124,19 @@ function App() {
           <Space varName="--e-space-3" />
           <Space varName="--e-space-4" />
         </SpaceGroup>
-        <h2>Border</h2>
-        <p>
-          Borders define the boundary between inside and outside. Border radius
-          is responsive and linked to space, but border width is fixed.
-        </p>
         <h3>Border radius</h3>
+        <p>Border radius is responsive and linked to space.</p>
         <SpaceGroup>
           <Space varName="--e-border-radius-0" />
           <Space varName="--e-border-radius-1" />
         </SpaceGroup>
         <h3>Border width</h3>
+        <p>Border width is fixed for all devices.</p>
         <SpaceGroup>
           <Space varName="--e-border-width-0" />
           <Space varName="--e-border-width-1" />
         </SpaceGroup>
-        <h2>Time</h2>
+        <h3>Time</h3>
         <p>
           Time is responsive, things take more time on larger screens so
           velocity feels more constant.
@@ -151,7 +146,7 @@ function App() {
           <Time varName="--e-time-1" />
           <Time varName="--e-time-2" />
         </TimeGroup>
-        <h2>Easing</h2>
+        <h3>Easing</h3>
         <p>
           Now we have space and time we need to define how we're going to move
           through it. Easings define how movement through space-time feels.
@@ -161,7 +156,7 @@ function App() {
           <Easing varName="--e-easing-decelerate" />
           <Easing varName="--e-easing-standard" />
         </TimeGroup>
-        <h2>Animation</h2>
+        <h3>Animation</h3>
         <p>Here are the custom properties you can use for animation:</p>
         <ul>
           <li>
@@ -171,20 +166,7 @@ function App() {
             <code>--e-animation-spin</code>
           </li>
         </ul>
-        <h2>Color</h2>
-        <p>
-          &quot;Black then white are all I see In my infancy. Red and yellow
-          then came to be, Reaching out to me, Lets me see.&quot; - Tool
-        </p>
-        <h3>Light &amp; dark</h3>
-        <p>
-          For the dark theme just add the class <code>e-theme-dark</code>.
-        </p>
-        <Toggle
-          checked={isLightThemeOn}
-          label={isLightThemeOn ? 'Light theme on' : 'Dark theme on'}
-          onChange={toggleTheme}
-        />
+        <h3>Color</h3>
         <ColorGroup name="Figure">
           <Color varName="--e-color-figure-more" />
           <Color varName="--e-color-figure" />
@@ -230,12 +212,20 @@ function App() {
           <Color varName="--e-color-highlight-4" />
           <Color varName="--e-color-highlight-5" />
         </ColorGroup>
-        <h2>Typography</h2>
+        <h4>Light &amp; dark themes</h4>
+        <p>
+          For the dark theme just add the class <code>e-theme-dark</code>.
+        </p>
+        <Toggle
+          checked={isLightThemeOn}
+          label={isLightThemeOn ? 'Light theme on' : 'Dark theme on'}
+          onChange={toggleTheme}
+        />
+        <h3>Typography</h3>
         <p>
           No downloaded fonts means no extra page weight. Eri uses system fonts
           and fits into a person's environment.
         </p>
-        <h3>Examples</h3>
         <h1>
           Heading 1 <SubHeading>With a subheading</SubHeading>
         </h1>

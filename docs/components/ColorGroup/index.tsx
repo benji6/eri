@@ -9,7 +9,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function ColorGroup({ name, description, ...rest }: IProps) {
   return (
     <>
-      <h3>{name}</h3>
+      <h4>{name}</h4>
       {description && <p>{description}</p>}
       <div {...rest} className="d-color-group__color-container" />
     </>
