@@ -1,4 +1,3 @@
-import classnames from 'classnames'
 import * as React from 'react'
 import './style.css'
 
@@ -13,9 +12,9 @@ export default function Button({
   type = 'submit', // Formik gets grumpy if you don't specify this
   ...rest
 }: IProps) {
-  const className = classnames(`e-button e-button--${variant}`, {
-    'e-button--negative': sentiment === 'negative',
-  })
+  const className = `e-button e-button--${variant}${
+    sentiment === 'negative' ? ' e-button--negative' : ''
+  }`
 
   return <button {...rest} className={className} type={type} />
 }
