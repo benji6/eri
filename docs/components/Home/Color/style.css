@@ -1,15 +1,16 @@
 .d-color {
   align-items: center;
-  display: inline-flex;
-  flex-direction: column;
-  margin: var(--e-space-2);
-  width: 16rem;
+  display: flex;
+  margin: var(--e-space-1) 0;
 }
 
 .d-color__visual {
+  --size: var(--e-space-3);
+
   border: var(--e-border-default);
   border-radius: var(--e-border-radius-0);
-  height: var(--e-space-4);
+  height: var(--size);
+  margin: 0 var(--e-space-2);
   transition: background-color var(--e-time-0) var(--e-easing-standard);
-  width: var(--e-space-4);
+  width: var(--size);
 }

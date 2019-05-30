@@ -1,5 +1,4 @@
 import * as React from 'react'
-import './style.css'
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   description?: string
