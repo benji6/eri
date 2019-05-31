@@ -4,7 +4,6 @@ import { getCssTime1 } from '../../utils/getCssVar'
 import './style.css'
 
 const documentElement = document.documentElement as HTMLElement
-const documentElementClassList = documentElement.classList
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean
@@ -23,7 +22,7 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
   const openMask = () => {
     setScrollY(window.scrollY)
     documentElement.style.top = `${-window.scrollY}px`
-    documentElementClassList.add('e-no-scroll')
+    documentElement.setAttribute('e-util', 'no-scroll')
   }
 
   React.useEffect(() => {
@@ -32,14 +31,14 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
     window.addEventListener('keydown', keyDownListener)
     return () => {
       window.removeEventListener('keydown', keyDownListener)
-      documentElementClassList.remove('e-no-scroll')
+      documentElement.removeAttribute('e-util')
     }
   }, [])
 
   React.useEffect(() => {
     if (open) openMask()
     else {
-      documentElementClassList.remove('e-no-scroll')
+      documentElement.removeAttribute('e-util')
       window.scrollTo(0, scrollY)
       documentElement.style.top = null
     }

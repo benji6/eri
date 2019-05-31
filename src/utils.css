@@ -6,13 +6,13 @@
   color: var(--e-color-negative);
 }
 
-[e-util*='pre-line'] {
-  white-space: pre-line;
-}
-
-.e-no-scroll {
+[e-util*='no-scroll'] {
   overflow: hidden;
   position: fixed;
   left: 0;
   right: 0;
+}
+
+[e-util*='pre-line'] {
+  white-space: pre-line;
 }
