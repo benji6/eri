@@ -16,5 +16,5 @@ export default function Button({
     sentiment === 'negative' ? ' e-button--negative' : ''
   }`
 
-  return <button {...rest} className={className} type={type} />
+  return <button {...rest} className={className} e-util="ripple" type={type} />
 }

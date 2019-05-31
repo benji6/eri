@@ -10,6 +10,7 @@ export default function CloseButton(props: IProps) {
       {...props}
       aria-label="close"
       className="e-close-button"
+      e-util="ripple"
       type="button"
     >
       <Icon name="cross" />

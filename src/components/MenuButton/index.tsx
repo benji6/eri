@@ -6,7 +6,12 @@ interface IProps extends React.HtmlHTMLAttributes<HTMLButtonElement> {}
 
 export default function MenuButton(props: IProps) {
   return (
-    <button {...props} aria-label="open menu" className="e-menu-button">
+    <button
+      {...props}
+      aria-label="open menu"
+      className="e-menu-button"
+      e-util="ripple"
+    >
       <Icon name="menu" size="3" />
     </button>
   )

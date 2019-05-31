@@ -31,6 +31,7 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
         <button
           aria-label="navigate to previous page"
           className="pagination__button"
+          e-util="ripple"
           onClick={() => onChange(page - 1)}
           type="button"
         >
@@ -52,6 +53,7 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
         <button
           aria-label="navigate to next page"
           className="pagination__button"
+          e-util="ripple"
           onClick={() => onChange(page + 1)}
           type="button"
         >
