@@ -16,5 +16,7 @@ export default function Button({
     sentiment === 'negative' ? ' e-button--negative' : ''
   }`
 
-  return <button {...rest} className={className} e-util="ripple" type={type} />
+  const rippleProp = rest.disabled ? undefined : { 'e-util': 'ripple' }
+
+  return <button {...rest} {...rippleProp} className={className} type={type} />
 }
