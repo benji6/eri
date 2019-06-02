@@ -1,4 +1,6 @@
 :root {
+  --e-time-root: 0.15s;
+
   --e-time-scale-ratio: 2.5;
   --e-time-0: 0.125s;
   --e-time-1: calc(var(--e-time-0) * var(--e-time-scale-ratio));
@@ -7,12 +9,12 @@
 
 @media (min-width: 500px) {
   :root {
-    --e-time-0: 0.1275s;
+    --e-time-0: calc(var(--e-time-root) * 1.1);
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --e-time-0: 0.13s;
+    --e-time-0: calc(var(--e-time-root) * 1.2);
   }
 }
