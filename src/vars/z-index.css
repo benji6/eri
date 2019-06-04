@@ -7,5 +7,5 @@
 
   /* misc */
   --e-box-shadow-1: 0 0 var(--e-space-1) var(--e-color-balance-more);
-  --e-input-box-shadow-focus: 0 0 var(--e-space-0) 0 var(--e-color-accent-less);
+  --e-input-box-shadow-focus: 0 0 var(--e-space-0) 0 var(--e-color-theme-less);
 }

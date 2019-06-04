@@ -110,23 +110,21 @@ export default function Home(_: RouteComponentProps) {
         <Color varName="--e-color-ground-less" />
       </DisplayGroup>
       <h4>Theme</h4>
-      <p>Useful for web app manifest or theme_color meta tag</p>
+      <p>
+        Use <code>--e-color-theme-app</code> for web app manifest or{' '}
+        <code>theme_color</code> meta tag
+      </p>
       <DisplayGroup>
+        <Color varName="--e-color-theme-app" />
+        <Color varName="--e-color-theme-more" />
         <Color varName="--e-color-theme" />
-      </DisplayGroup>
-      <h4>Accent</h4>
-      <DisplayGroup>
-        <Color varName="--e-color-accent-more" />
-        <Color varName="--e-color-accent" />
-        <Color varName="--e-color-accent-less" />
-        <Color varName="--e-color-accent-analagous" />
+        <Color varName="--e-color-theme-less" />
       </DisplayGroup>
       <h4>Negative</h4>
       <DisplayGroup>
         <Color varName="--e-color-negative-more" />
         <Color varName="--e-color-negative" />
         <Color varName="--e-color-negative-less" />
-        <Color varName="--e-color-negative-analagous" />
       </DisplayGroup>
       <h4>Positive</h4>
       <DisplayGroup>

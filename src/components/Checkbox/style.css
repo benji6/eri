@@ -59,12 +59,12 @@
 }
 
 .e-checkbox__input:focus ~ .e-checkbox__appearance {
-  border-color: var(--e-color-accent);
+  border-color: var(--e-color-theme);
   box-shadow: var(--e-input-box-shadow-focus);
 }
 
 .e-checkbox__input:hover ~ .e-checkbox__appearance {
-  border-color: var(--e-color-accent-less);
+  border-color: var(--e-color-theme-less);
 }
 
 .e-checkbox__input[aria-invalid='true'] ~ .e-checkbox__appearance {

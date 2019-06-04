@@ -2,7 +2,7 @@
   --diameter: var(--e-space-4);
 
   animation: var(--e-animation-fade-in), var(--e-animation-spin);
-  border: calc(var(--diameter) / 8) solid var(--e-color-accent);
+  border: calc(var(--diameter) / 8) solid var(--e-color-theme);
   border-radius: 50%;
   border-right-color: transparent;
   box-sizing: border-box;

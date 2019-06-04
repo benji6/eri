@@ -1,9 +1,5 @@
 .header {
-  background: linear-gradient(
-    var(--e-gradient-angle),
-    var(--e-color-figure-more),
-    var(--e-color-accent-more)
-  );
+  background: var(--e-color-theme-more);
   box-shadow: var(--e-box-shadow-2);
   color: var(--e-color-ground);
   margin-bottom: var(--e-space-4);

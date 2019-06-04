@@ -34,11 +34,11 @@ option {
 }
 
 .e-select__select:focus ~ .e-select__icon {
-  color: var(--e-color-accent-less);
+  color: var(--e-color-theme-less);
 }
 
 .e-select__select:hover ~ .e-select__icon {
-  color: var(--e-color-accent-less);
+  color: var(--e-color-theme-less);
 }
 
 .e-select__select[aria-invalid='true'] ~ .e-select__icon {

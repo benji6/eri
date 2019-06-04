@@ -5,5 +5,5 @@
   --e-box-shadow-1-no-color: 0 0 var(--e-space-0);
   --e-box-shadow-2: var(--e-box-shadow-2-no-color) var(--e-color-figure-more);
   --e-box-shadow-2-no-color: 0 0 var(--e-space-2);
-  --e-input-box-shadow-focus: 0 0 var(--e-space-0) 0 var(--e-color-accent-less);
+  --e-input-box-shadow-focus: 0 0 var(--e-space-0) 0 var(--e-color-theme-less);
 }

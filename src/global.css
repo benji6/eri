@@ -15,6 +15,11 @@ body {
   margin: 0;
 }
 
+a,
+button {
+  outline-color: var(--e-color-highlight-1);
+}
+
 fieldset {
   border-color: var(--e-color-balance);
   border-radius: var(--e-border-radius-1);
@@ -114,7 +119,7 @@ a::-moz-focus-inner {
 
 main a,
 nav a {
-  color: var(--e-color-accent);
+  color: var(--e-color-theme);
   transition-duration: var(--e-time-0);
   transition-property: color, text-decoration-color;
   transition-timing-function: var(--e-easing-standard);
@@ -122,19 +127,19 @@ nav a {
 
 main a:focus,
 nav a:focus {
-  color: var(--e-color-accent-analagous);
+  color: var(--e-color-theme-less);
   text-decoration-color: transparent;
 }
 
 main a:hover,
 nav a:hover {
-  color: var(--e-color-accent-less);
+  color: var(--e-color-theme-less);
   text-decoration-color: transparent;
 }
 
 main a:active,
 nav a:active {
-  color: var(--e-color-accent-more);
+  color: var(--e-color-theme-more);
   text-decoration-color: transparent;
 }
 
@@ -157,14 +162,14 @@ textarea {
 input:not([type='checkbox']):focus,
 select:focus,
 textarea:focus {
-  border-color: var(--e-color-accent-less);
+  border-color: var(--e-color-theme-less);
   box-shadow: var(--e-input-box-shadow-focus);
 }
 
 input:not([type='checkbox']):hover,
 select:hover,
 textarea:hover {
-  border-color: var(--e-color-accent-less);
+  border-color: var(--e-color-theme-less);
 }
 
 input:not([type='checkbox'])[aria-invalid='true'],
@@ -180,7 +185,6 @@ button {
   color: inherit;
   cursor: pointer;
   font-size: inherit;
-  outline: 0;
   padding: 0;
 }
 

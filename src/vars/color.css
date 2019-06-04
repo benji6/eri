@@ -1,12 +1,7 @@
 :root {
-  --e-gradient-angle: 356deg;
-
   --e-hue-accent: 210;
-  --e-hue-accent-analagous: calc(var(--e-hue-accent) + var(--e-hue-rotate));
   --e-hue-negative: 345;
-  --e-hue-negative-analagous: calc(var(--e-hue-negative) - var(--e-hue-rotate));
   --e-hue-positive: 150;
-  --e-hue-rotate: 30;
 
   --e-lightness-0: 10%;
   --e-lightness-1: 40%;
@@ -25,20 +20,10 @@
 
   --e-sl-default: 100%, var(--e-lightness-1);
 
-  --e-hsl-accent: var(--e-hue-accent), var(--e-sl-default);
   --e-hsl-figure: var(--e-hue-accent), 10%, var(--e-lightness-0);
   --e-hsl-ground: var(--e-hue-accent), 10%, var(--e-lightness-2);
   --e-hsl-negative: var(--e-hue-negative), var(--e-sl-default);
   --e-hsl-positive: var(--e-hue-positive), var(--e-sl-default);
-
-  --e-color-accent: hsla(var(--e-hsl-accent), var(--e-alpha-2));
-  --e-color-accent-less: hsla(var(--e-hsl-accent), var(--e-alpha-2-less));
-  --e-color-accent-more: hsla(var(--e-hsl-accent), var(--e-alpha-2-more));
-  --e-color-accent-analagous: hsla(
-    var(--e-hue-accent-analagous),
-    var(--e-sl-default),
-    var(--e-alpha-2)
-  );
 
   --e-color-balance: hsla(var(--e-hsl-figure), var(--e-alpha-1));
   --e-color-balance-less: hsla(var(--e-hsl-figure), var(--e-alpha-1-less));
@@ -62,21 +47,19 @@
   --e-color-negative: hsla(var(--e-hsl-negative), var(--e-alpha-2));
   --e-color-negative-less: hsla(var(--e-hsl-negative), var(--e-alpha-2-less));
   --e-color-negative-more: hsla(var(--e-hsl-negative), var(--e-alpha-2-more));
-  --e-color-negative-analagous: hsla(
-    var(--e-hue-negative-analagous),
-    var(--e-sl-default),
-    var(--e-alpha-2)
-  );
 
   --e-color-positive: hsla(var(--e-hsl-positive), var(--e-alpha-2));
   --e-color-positive-less: hsla(var(--e-hsl-positive), var(--e-alpha-2-less));
 
-  --e-color-theme: #001e3c;
+  --e-color-theme-less: #004892;
+  --e-color-theme: #00376f;
+  --e-color-theme-more: #002448;
+  --e-color-theme-app: #001e3c;
 }
 
 .e-theme-dark {
   --e-color-ground-more: #000;
-  --e-color-theme: #001e21;
+  --e-color-theme-dark: #001e21;
   --e-hue-accent: 185;
   --e-hue-negative: 310;
   --e-lightness-0: 97%;

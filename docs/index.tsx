@@ -20,7 +20,7 @@ function App() {
     if (isLightThemeOn) document.documentElement.classList.add('e-theme-dark')
     else document.documentElement.classList.remove('e-theme-dark')
 
-    metaThemeColor.setAttribute('content', getCssVar('--e-color-accent-more'))
+    metaThemeColor.setAttribute('content', getCssVar('--e-color-theme-app'))
     setIsLightThemeOn(!isLightThemeOn)
   }
 

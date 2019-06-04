@@ -57,7 +57,7 @@
 }
 
 .e-toggle__input:focus ~ .e-toggle__appearance {
-  border-color: var(--e-color-accent-less);
+  border-color: var(--e-color-theme-less);
 }
 
 .e-toggle__label {

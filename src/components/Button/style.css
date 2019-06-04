@@ -1,7 +1,7 @@
 .e-button {
-  --color: var(--e-color-accent);
-  --color-active: var(--e-color-accent-more);
-  --color-focus: var(--e-color-accent-analagous);
+  --color: var(--e-color-theme);
+  --color-active: var(--e-color-theme-more);
+  --color-hover: var(--e-color-theme-less);
 
   border-radius: var(--e-border-radius-0);
   box-shadow: var(--e-box-shadow-0);
@@ -27,7 +27,7 @@
 .e-button--negative {
   --color: var(--e-color-negative);
   --color-active: var(--e-color-negative-more);
-  --color-focus: var(--e-color-negative-analagous);
+  --color-hover: var(--e-color-negative-less);
 }
 
 @media (max-width: 500px) {
@@ -45,9 +45,9 @@
   position: relative;
 }
 
-.e-button--primary:focus {
-  background: var(--color-focus);
-  border-color: var(--color-focus);
+.e-button--primary:hover {
+  background: var(--color-hover);
+  border-color: var(--color-hover);
 }
 
 .e-button--primary:active {
@@ -67,9 +67,9 @@
   color: var(--color);
 }
 
-.e-button--secondary:focus {
-  border-color: var(--color-focus);
-  color: var(--color-focus);
+.e-button--secondary:hover {
+  border-color: var(--color-hover);
+  color: var(--color-hover);
 }
 
 .e-button--secondary:active {
