@@ -27,8 +27,3 @@
   color: inherit;
   text-decoration: none;
 }
-
-.header a:focus,
-.header a:hover {
-  text-decoration: underline;
-}

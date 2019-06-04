@@ -112,10 +112,6 @@ a::-moz-focus-inner {
   border: none;
 }
 
-a {
-  outline: 0;
-}
-
 main a,
 nav a {
   color: var(--e-color-accent);
