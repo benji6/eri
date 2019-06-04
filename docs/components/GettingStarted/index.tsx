@@ -12,7 +12,7 @@ export default function GettingStarted(_: RouteComponentProps) {
       </p>
       <p>
         To get the styles working you will need to include the CSS in your app
-        which can be found here at <code>eri/dist/index.css</code> in your{' '}
+        which can be found at <code>eri/dist/index.css</code> in your{' '}
         <code>node_modules</code>.
       </p>
       <p>
