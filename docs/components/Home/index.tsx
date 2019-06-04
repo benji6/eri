@@ -143,10 +143,6 @@ export default function Home(_: RouteComponentProps) {
         <Color varName="--e-color-highlight-5" />
       </DisplayGroup>
       <h3>Typography</h3>
-      <p>
-        No downloaded fonts means no extra page weight. Eri uses system fonts
-        and fits into a person's environment.
-      </p>
       <h1>
         Heading 1 <SubHeading>With a subheading</SubHeading>
       </h1>

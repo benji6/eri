@@ -1,13 +1,13 @@
 :root {
-  --e-font-size-scale-ratio: calc(5 / 4);
-  --e-font-size-0: calc(0.85rem + 0.25vmin);
+  --e-font-size-scale-ratio: calc(4 / 3);
+  --e-font-size-0: calc(0.79rem + 0.25vmin);
   --e-font-size-1: calc(var(--e-font-size-0) * var(--e-font-size-scale-ratio));
   --e-font-size-2: calc(var(--e-font-size-1) * var(--e-font-size-scale-ratio));
   --e-font-size-3: calc(var(--e-font-size-2) * var(--e-font-size-scale-ratio));
   --e-font-size-4: calc(var(--e-font-size-3) * var(--e-font-size-scale-ratio));
-  --e-font-weight-bold: 900;
+  --e-font-weight-bold: 700;
   --e-font-weight-normal: 400;
-  --e-line-height: calc(4 / 3);
-  --e-font-margin: calc(var(--e-line-height) * calc(2em / 3)) 0
-    calc(var(--e-line-height) * calc(1em / 3));
+  --e-line-height: 1.25;
+  --e-font-margin-heading: var(--e-space-3) 0 var(--e-space-0);
+  --e-font-margin-paragraph: var(--e-space-2) 0;
 }

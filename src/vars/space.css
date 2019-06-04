@@ -1,11 +1,11 @@
 :root {
-  --e-space-scale-ratio: 1.61803;
+  --e-space-scale-ratio: 1.5;
   --e-space-0: calc(1em / 3);
   --e-space-1: calc(var(--e-space-0) * var(--e-space-scale-ratio));
   --e-space-2: calc(var(--e-space-1) * var(--e-space-scale-ratio));
   --e-space-3: calc(var(--e-space-2) * var(--e-space-scale-ratio));
   --e-space-4: calc(var(--e-space-3) * var(--e-space-scale-ratio));
-  --e-max-width-0: calc(75 * var(--e-space-0));
+  --e-max-width-0: calc(70 * var(--e-space-0));
   --e-max-width-1: calc(4 / 3 * var(--e-max-width-0));
 }
 

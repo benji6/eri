@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom'
 import { getCssVar, Header, Menu, MenuButton, Toggle } from '../src'
 import _404 from './components/_404'
 import Components from './components/Components'
+import GettingStarted from './components/GettingStarted'
 import Home from './components/Home'
 import './style.css'
 
@@ -43,6 +44,11 @@ function App() {
           </Link>
         </p>
         <p>
+          <Link onClick={handleMenuClose} to="/getting-started">
+            Getting started
+          </Link>
+        </p>
+        <p>
           <Link onClick={handleMenuClose} to="/components">
             Components
           </Link>
@@ -53,6 +59,7 @@ function App() {
           <_404 default />
           <Home path="/" />
           <Components path="components" />
+          <GettingStarted path="getting-started" />
         </Router>
       </main>
     </React.StrictMode>

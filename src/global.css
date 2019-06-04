@@ -1,7 +1,7 @@
 html {
   background-color: var(--e-color-ground);
   color: var(--e-color-figure);
-  font-family: system-ui, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: var(--e-font-weight-normal);
   line-height: var(--e-line-height);
   min-height: 100%;
@@ -65,8 +65,14 @@ h3,
 h4 {
   color: var(--e-color-figure-more);
   font-weight: var(--e-font-weight-bold);
-  margin: var(--e-font-margin);
+  margin: var(--e-font-margin-heading);
   transition: color, var(--e-time-0) var(--e-easing-standard);
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4 {
+  margin-top: 0;
 }
 
 h1 {
@@ -94,12 +100,12 @@ hr {
 }
 
 p {
-  margin: var(--e-font-margin);
+  margin: var(--e-font-margin-paragraph);
   margin-top: 0;
 }
 
 p + p {
-  margin: var(--e-font-margin);
+  margin: var(--e-font-margin-paragraph);
 }
 
 a::-moz-focus-inner {
