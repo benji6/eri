@@ -1,6 +1,10 @@
 [build]
   command = "npm run style-guide:build"
   publish = "build"
+[[headers]]
+  for = "docs.*.(css|js)"
+  [headers.values]
+    Cache-Control = "public,max-age=31536000,immutable"
 [[redirects]]
   from = "/*"
   status = 200
