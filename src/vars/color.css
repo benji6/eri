@@ -45,10 +45,10 @@
   --e-color-positive: hsla(var(--e-hsl-positive), var(--e-alpha-2));
   --e-color-positive-less: hsla(var(--e-hsl-positive), var(--e-alpha-2-less));
 
-  --e-color-theme-less: #004892;
-  --e-color-theme: #00376f;
-  --e-color-theme-more: #002448;
-  --e-color-theme-app: #001e3c;
+  --e-color-theme-less: hsl(var(--e-hue-theme), 100%, 29%);
+  --e-color-theme: hsl(var(--e-hue-theme), 100%, 22%);
+  --e-color-theme-more: hsl(var(--e-hue-theme), 100%, 15%);
+  --e-color-theme-app: hsl(var(--e-hue-theme), 100%, 12%);
 }
 
 .e-theme-dark {
