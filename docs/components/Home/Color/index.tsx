@@ -18,6 +18,7 @@ interface IProps {
     | '--e-color-highlight-3'
     | '--e-color-highlight-4'
     | '--e-color-highlight-5'
+    | '--e-color-mask'
     | '--e-color-negative-less'
     | '--e-color-negative-more'
     | '--e-color-negative'

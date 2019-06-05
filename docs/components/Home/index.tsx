@@ -109,6 +109,10 @@ export default function Home(_: RouteComponentProps) {
         <Color varName="--e-color-ground" />
         <Color varName="--e-color-ground-less" />
       </DisplayGroup>
+      <h4>Mask</h4>
+      <DisplayGroup>
+        <Color varName="--e-color-mask" />
+      </DisplayGroup>
       <h4>Theme</h4>
       <p>
         Use <code>--e-color-theme-app</code> for web app manifest or{' '}
