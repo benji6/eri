@@ -7,6 +7,7 @@ import Components from './components/Components'
 import ComponentsHome from './components/Components/ComponentsHome'
 import GettingStarted from './components/GettingStarted'
 import Home from './components/Home'
+import Typography from './components/Typography'
 import './style.css'
 
 const metaThemeColor = document.querySelector('meta[name=theme-color]')
@@ -50,6 +51,11 @@ function App() {
           </Link>
         </p>
         <p>
+          <Link onClick={handleMenuClose} to="/typography">
+            Typography
+          </Link>
+        </p>
+        <p>
           <Link onClick={handleMenuClose} to="/components">
             Components
           </Link>
@@ -64,6 +70,7 @@ function App() {
             <ComponentsHome path="/" />
           </Components>
           <GettingStarted path="getting-started" />
+          <Typography path="typography" />
         </Router>
       </main>
     </React.StrictMode>

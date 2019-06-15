@@ -2,7 +2,7 @@ import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 
 interface IProps extends RouteComponentProps {
-  children: React.ReactElement
+  children: React.ReactElement[]
 }
 
 export default function Components({ children }: IProps) {

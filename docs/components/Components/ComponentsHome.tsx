@@ -146,8 +146,6 @@ export default function ComponentsHome(_: RouteComponentProps) {
       <Fab aria-label="example FAB" hide={!isFabVisible}>
         <Icon name="plus" size="4" />
       </Fab>
-      <h3>Hr</h3>
-      <hr />
       <form noValidate>
         <h3>Form</h3>
         <p>This is a form.</p>
