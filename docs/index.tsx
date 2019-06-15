@@ -5,7 +5,7 @@ import { getCssVar, Header, Menu, MenuButton, Toggle } from '../src'
 import _404 from './components/_404'
 import Components from './components/Components'
 import ComponentsHome from './components/Components/ComponentsHome'
-import GettingStarted from './components/GettingStarted'
+import DesignElements from './components/DesignElements'
 import Home from './components/Home'
 import Typography from './components/Typography'
 import './style.css'
@@ -46,8 +46,8 @@ function App() {
           </Link>
         </p>
         <p>
-          <Link onClick={handleMenuClose} to="/getting-started">
-            Getting started
+          <Link onClick={handleMenuClose} to="/design-elements">
+            Design elements
           </Link>
         </p>
         <p>
@@ -69,7 +69,7 @@ function App() {
             <_404 default />
             <ComponentsHome path="/" />
           </Components>
-          <GettingStarted path="getting-started" />
+          <DesignElements path="design-elements" />
           <Typography path="typography" />
         </Router>
       </main>
