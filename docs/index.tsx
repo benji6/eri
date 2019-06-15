@@ -4,7 +4,16 @@ import * as ReactDOM from 'react-dom'
 import { getCssVar, Header, Menu, MenuButton, Toggle } from '../src'
 import _404 from './components/_404'
 import Components from './components/Components'
+import ButtonDocs from './components/Components/ButtonDocs'
+import CardDocs from './components/Components/CardDocs'
 import ComponentsHome from './components/Components/ComponentsHome'
+import DialogDocs from './components/Components/DialogDocs'
+import FabDocs from './components/Components/FabDocs'
+import FormDocs from './components/Components/FormDocs'
+import IconDocs from './components/Components/IconDocs'
+import LinkDocs from './components/Components/LinkDocs'
+import PaginationDocs from './components/Components/PaginationDocs'
+import SpinnerDocs from './components/Components/SpinnerDocs'
 import DesignElements from './components/DesignElements'
 import Home from './components/Home'
 import Typography from './components/Typography'
@@ -68,6 +77,15 @@ function App() {
           <Components path="components">
             <_404 default />
             <ComponentsHome path="/" />
+            <ButtonDocs path="button" />
+            <CardDocs path="card" />
+            <DialogDocs path="dialog" />
+            <FabDocs path="fab" />
+            <FormDocs path="form" />
+            <IconDocs path="icon" />
+            <LinkDocs path="link" />
+            <PaginationDocs path="pagination" />
+            <SpinnerDocs path="spinner" />
           </Components>
           <DesignElements path="design-elements" />
           <Typography path="typography" />
