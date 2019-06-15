@@ -40,7 +40,7 @@ function App() {
     <React.StrictMode>
       <Header>
         <h1>
-          <a href="/">Eri</a>
+          <Link to="/">Eri</Link>
         </h1>
         <MenuButton onClick={handleMenuOpen} />
       </Header>
