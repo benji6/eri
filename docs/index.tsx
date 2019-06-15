@@ -3,6 +3,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { getCssVar, Header, Menu, MenuButton, Toggle } from '../src'
 import _404 from './components/_404'
+import ComponentLinks from './components/ComponentLinks'
 import Components from './components/Components'
 import ButtonDocs from './components/Components/ButtonDocs'
 import CardDocs from './components/Components/CardDocs'
@@ -69,6 +70,7 @@ function App() {
             Components
           </Link>
         </p>
+        <ComponentLinks onClick={handleMenuClose} />
       </Menu>
       <main>
         <Router>
