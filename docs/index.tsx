@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom'
 import { getCssVar, Header, Menu, MenuButton, Toggle } from '../src'
 import _404 from './components/_404'
 import Components from './components/Components'
+import ComponentsHome from './components/Components/ComponentsHome'
 import GettingStarted from './components/GettingStarted'
 import Home from './components/Home'
 import './style.css'
@@ -58,7 +59,10 @@ function App() {
         <Router>
           <_404 default />
           <Home path="/" />
-          <Components path="components" />
+          <Components path="components">
+            <_404 default />
+            <ComponentsHome path="/" />
+          </Components>
           <GettingStarted path="getting-started" />
         </Router>
       </main>
