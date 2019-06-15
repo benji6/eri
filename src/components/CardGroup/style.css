@@ -1,3 +1,39 @@
-.e-card-group > .e-card {
+.e-card-group > * {
+  animation: var(--e-animation-slide-up);
   margin: var(--e-space-4) 0;
+  opacity: 0;
+}
+
+.e-card-group > *:nth-child(2) {
+  animation-delay: var(--e-time-0);
+}
+.e-card-group > *:nth-child(3) {
+  animation-delay: calc(var(--e-time-0) * 2);
+}
+.e-card-group > *:nth-child(4) {
+  animation-delay: calc(var(--e-time-0) * 3);
+}
+.e-card-group > *:nth-child(5) {
+  animation-delay: calc(var(--e-time-0) * 4);
+}
+.e-card-group > *:nth-child(6) {
+  animation-delay: calc(var(--e-time-0) * 5);
+}
+.e-card-group > *:nth-child(7) {
+  animation-delay: calc(var(--e-time-0) * 6);
+}
+.e-card-group > *:nth-child(8) {
+  animation-delay: calc(var(--e-time-0) * 7);
+}
+.e-card-group > *:nth-child(9) {
+  animation-delay: calc(var(--e-time-0) * 8);
+}
+.e-card-group > *:nth-child(10) {
+  animation-delay: calc(var(--e-time-0) * 9);
+}
+.e-card-group > *:nth-child(11) {
+  animation-delay: calc(var(--e-time-0) * 10);
+}
+.e-card-group > *:nth-child(12) {
+  animation-delay: calc(var(--e-time-0) * 11);
 }
