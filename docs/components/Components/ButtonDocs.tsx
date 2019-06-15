@@ -4,7 +4,7 @@ import { Button, ButtonGroup } from '../../../src'
 
 export default function ButtonDocs(_: RouteComponentProps) {
   return (
-    <>
+    <div e-util="slide-in">
       <h3>Button</h3>
       <p>
         Buttons are cute little things you press. Remember to always wrap them
@@ -27,6 +27,6 @@ export default function ButtonDocs(_: RouteComponentProps) {
           Secondary disabled
         </Button>
       </ButtonGroup>
-    </>
+    </div>
   )
 }

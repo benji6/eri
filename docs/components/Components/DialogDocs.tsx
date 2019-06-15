@@ -8,7 +8,7 @@ export default function DialogDocs(_: RouteComponentProps) {
   const handleDialogOpen = () => setIsDialogOpen(true)
 
   return (
-    <>
+    <div e-util="slide-in">
       <h3>Dialog</h3>
       <ButtonGroup>
         <Button onClick={handleDialogOpen}>Open dialog</Button>
@@ -23,6 +23,6 @@ export default function DialogDocs(_: RouteComponentProps) {
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
       </Dialog>
-    </>
+    </div>
   )
 }

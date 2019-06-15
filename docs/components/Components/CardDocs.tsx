@@ -4,7 +4,7 @@ import { Card, CardGroup } from '../../../src'
 
 export default function CardDocs(_: RouteComponentProps) {
   return (
-    <>
+    <div e-util="slide-in">
       <h3>Card</h3>
       <p>Wrap your Cards in a CardGroup.</p>
       <CardGroup>
@@ -51,6 +51,6 @@ export default function CardDocs(_: RouteComponentProps) {
           <p>A card can also be a button like this one.</p>
         </Card>
       </CardGroup>
-    </>
+    </div>
   )
 }

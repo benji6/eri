@@ -8,7 +8,7 @@ interface IProps extends RouteComponentProps {
 export default function Components({ children }: IProps) {
   return (
     <>
-      <h2>Components</h2>
+      <h2 e-util="fade-in">Components</h2>
       {children}
     </>
   )

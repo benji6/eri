@@ -12,7 +12,7 @@ export default function PaginationDocs(_: RouteComponentProps) {
   const handlePageChange10 = (page: number) => setPage10(page)
 
   return (
-    <>
+    <div e-util="slide-in">
       <h3>Pagination</h3>
       <p>Renders nothing when there are no pages</p>
       <Pagination
@@ -28,6 +28,6 @@ export default function PaginationDocs(_: RouteComponentProps) {
       <Pagination onChange={handlePageChange4} page={page4} pageCount={4} />
       <p>Page {page10 + 1} of 10 pages</p>
       <Pagination onChange={handlePageChange10} page={page10} pageCount={10} />
-    </>
+    </div>
   )
 }

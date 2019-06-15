@@ -16,7 +16,7 @@ import {
 
 export default function FormDocs(_: RouteComponentProps) {
   return (
-    <>
+    <div e-util="slide-in">
       <form noValidate>
         <h3>Form</h3>
         <p>This is a form.</p>
@@ -80,6 +80,6 @@ export default function FormDocs(_: RouteComponentProps) {
           <Button type="button">Submit</Button>
         </ButtonGroup>
       </form>
-    </>
+    </div>
   )
 }

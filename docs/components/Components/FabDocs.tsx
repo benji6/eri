@@ -6,7 +6,7 @@ export default function FabDocs(_: RouteComponentProps) {
   const [isFabVisible, setIsFabVisible] = React.useState(false)
 
   return (
-    <>
+    <div e-util="slide-in">
       <h3>Fab</h3>
       <p>The floating action button.</p>
       <Toggle
@@ -19,6 +19,6 @@ export default function FabDocs(_: RouteComponentProps) {
       <Fab aria-label="example FAB" hide={!isFabVisible}>
         <Icon name="plus" size="4" />
       </Fab>
-    </>
+    </div>
   )
 }
