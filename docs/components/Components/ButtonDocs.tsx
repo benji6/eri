@@ -1,68 +1,8 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Button, ButtonGroup, Select, TextField, Toggle } from '../../../src'
+import { Button, ButtonGroup } from '../../../src'
 import { IProps } from '../../../src/components/Button'
-
-const PropControlBoolean = ({
-  name,
-  props,
-  setProps,
-}: {
-  name: string
-  props: object
-  setProps: React.Dispatch<React.SetStateAction<typeof props>>
-}) => (
-  <Toggle
-    checked={props[name]}
-    label={name}
-    onChange={e => setProps({ ...props, [name]: e.target.checked })}
-  />
-)
-
-const PropControlEnum = ({
-  name,
-  options,
-  props,
-  setProps,
-}: {
-  name: string
-  options: Array<string | undefined>
-  props: object
-  setProps: React.Dispatch<React.SetStateAction<typeof props>>
-}) => (
-  <Select
-    label={name}
-    onChange={e =>
-      setProps({
-        ...props,
-        [name]: e.target.value ? e.target.value : undefined,
-      })
-    }
-    value={props[name]}
-  >
-    {options.map((option, i) => (
-      <option key={i} value={option}>
-        {option}
-      </option>
-    ))}
-  </Select>
-)
-
-const PropControlString = ({
-  name,
-  props,
-  setProps,
-}: {
-  name: string
-  props: object
-  setProps: React.Dispatch<React.SetStateAction<typeof props>>
-}) => (
-  <TextField
-    label={name}
-    onChange={e => setProps({ ...props, [name]: e.target.value })}
-    value={props[name]}
-  />
-)
+import { PropControlBoolean, PropControlEnum, PropControlString } from './utils'
 
 export default function ButtonDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({

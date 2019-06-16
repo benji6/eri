@@ -1,7 +1,7 @@
 import * as React from 'react'
 import './style.css'
 
-const iconNameMap = {
+export const iconNameMap = {
   check: <polyline points="20 6 9 17 4 12" />,
   cross: (
     <>
@@ -34,7 +34,7 @@ const iconNameMap = {
   ),
 }
 
-interface IProps extends React.SVGProps<SVGSVGElement> {
+export interface IProps extends React.SVGProps<SVGSVGElement> {
   name: keyof typeof iconNameMap
   size?: '2' | '3' | '4'
 }
