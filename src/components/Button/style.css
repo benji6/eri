@@ -24,7 +24,7 @@
   box-shadow: none;
 }
 
-.e-button--negative {
+.e-button--danger {
   --color: var(--e-color-negative);
   --color-active: var(--e-color-negative-more);
   --color-hover: var(--e-color-negative-less);

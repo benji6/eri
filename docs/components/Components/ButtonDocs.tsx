@@ -67,8 +67,8 @@ const PropControlString = ({
 export default function ButtonDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({
     children: 'Click me!',
+    danger: false,
     disabled: false,
-    sentiment: undefined,
     variant: 'primary',
   })
 
@@ -86,9 +86,9 @@ export default function ButtonDocs(_: RouteComponentProps) {
           <a href="#">Link</a>
         </ButtonGroup>
         <ButtonGroup>
-          <Button sentiment="negative">Negative</Button>
-          <Button sentiment="negative" variant="secondary">
-            Negative secondary
+          <Button danger>Danger</Button>
+          <Button danger variant="secondary">
+            Danger secondary
           </Button>
         </ButtonGroup>
         <ButtonGroup>
@@ -110,22 +110,17 @@ export default function ButtonDocs(_: RouteComponentProps) {
             props={props}
             setProps={setProps}
           />
-          <PropControlEnum
-            name="sentiment"
-            options={[undefined, 'negative']}
+          <PropControlBoolean name="danger" props={props} setProps={setProps} />
+          <PropControlBoolean
             props={props}
             setProps={setProps}
+            name="disabled"
           />
           <PropControlEnum
             name="variant"
             options={['primary', 'secondary']}
             props={props}
             setProps={setProps}
-          />
-          <PropControlBoolean
-            props={props}
-            setProps={setProps}
-            name="disabled"
           />
         </form>
       </section>

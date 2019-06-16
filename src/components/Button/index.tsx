@@ -2,18 +2,18 @@ import * as React from 'react'
 import './style.css'
 
 export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  sentiment?: 'negative'
+  danger?: boolean
   variant?: 'primary' | 'secondary'
 }
 
 export default function Button({
-  sentiment,
+  danger = false,
   variant = 'primary',
   type = 'submit', // Formik gets grumpy if you don't specify this
   ...rest
 }: IProps) {
   const className = `e-button e-button--${variant}${
-    sentiment === 'negative' ? ' e-button--negative' : ''
+    danger ? ' e-button--danger' : ''
   }`
 
   const rippleProp = rest.disabled ? undefined : { 'e-util': 'ripple' }
