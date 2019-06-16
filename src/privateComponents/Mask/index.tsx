@@ -1,9 +1,11 @@
 import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 import { CSSTransition } from 'react-transition-group'
 import { getCssTime1 } from '../../utils/getCssVar'
 import './style.css'
 
 const documentElement = document.documentElement as HTMLElement
+const portalEl = document.body.appendChild(document.createElement('div'))
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean
@@ -44,7 +46,7 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
     }
   }, [open])
 
-  return (
+  return ReactDOM.createPortal(
     <div onKeyDown={handleKeyDown(onClose)}>
       <CSSTransition
         classNames="e-mask__mask-"
@@ -56,6 +58,7 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
         <div className="e-mask__mask" onClick={onClose} />
       </CSSTransition>
       <div {...rest} className="e-mask__container" />
-    </div>
+    </div>,
+    portalEl,
   )
 }
