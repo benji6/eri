@@ -2,7 +2,7 @@ import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Icon } from '../../../src'
 import { iconNameMap, IProps } from '../../../src/components/Icon'
-import { PropControlEnum } from './utils'
+import ConfigurableExample, { PropControlEnum } from './_ConfigurableExample'
 
 const iconNames = Object.keys(iconNameMap)
 
@@ -28,25 +28,20 @@ export default function IconDocs(_: RouteComponentProps) {
         <Icon name="right" />
         <Icon name="save" />
       </section>
-      <hr />
-      <section>
-        <h3>Configurable example</h3>
-        <Icon {...props} />
-        <form noValidate>
-          <PropControlEnum
-            name="name"
-            options={iconNames}
-            props={props}
-            setProps={setProps}
-          />
-          <PropControlEnum
-            name="size"
-            options={['2', '3', '4']}
-            props={props}
-            setProps={setProps}
-          />
-        </form>
-      </section>
+      <ConfigurableExample example={<Icon {...props} />}>
+        <PropControlEnum
+          name="name"
+          options={iconNames}
+          props={props}
+          setProps={setProps}
+        />
+        <PropControlEnum
+          name="size"
+          options={['2', '3', '4']}
+          props={props}
+          setProps={setProps}
+        />
+      </ConfigurableExample>
     </div>
   )
 }

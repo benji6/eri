@@ -2,7 +2,11 @@ import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Button, ButtonGroup } from '../../../src'
 import { IProps } from '../../../src/components/Button'
-import { PropControlBoolean, PropControlEnum, PropControlString } from './utils'
+import ConfigurableExample, {
+  PropControlBoolean,
+  PropControlEnum,
+  PropControlString,
+} from './_ConfigurableExample'
 
 export default function ButtonDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({
@@ -38,32 +42,23 @@ export default function ButtonDocs(_: RouteComponentProps) {
           </Button>
         </ButtonGroup>
       </section>
-      <hr />
-      <section>
-        <h3>Configurable example</h3>
-        <ButtonGroup>
-          <Button {...props} />
-        </ButtonGroup>
-        <form noValidate>
-          <PropControlString
-            name="children"
-            props={props}
-            setProps={setProps}
-          />
-          <PropControlBoolean name="danger" props={props} setProps={setProps} />
-          <PropControlBoolean
-            props={props}
-            setProps={setProps}
-            name="disabled"
-          />
-          <PropControlEnum
-            name="variant"
-            options={['primary', 'secondary']}
-            props={props}
-            setProps={setProps}
-          />
-        </form>
-      </section>
+      <ConfigurableExample
+        example={
+          <ButtonGroup>
+            <Button {...props} />
+          </ButtonGroup>
+        }
+      >
+        <PropControlString name="children" props={props} setProps={setProps} />
+        <PropControlBoolean name="danger" props={props} setProps={setProps} />
+        <PropControlBoolean props={props} setProps={setProps} name="disabled" />
+        <PropControlEnum
+          name="variant"
+          options={['primary', 'secondary']}
+          props={props}
+          setProps={setProps}
+        />
+      </ConfigurableExample>
     </div>
   )
 }

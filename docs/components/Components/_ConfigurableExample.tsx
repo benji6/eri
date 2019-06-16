@@ -1,6 +1,25 @@
 import * as React from 'react'
 import { Select, TextField, Toggle } from '../../../src'
 
+export default function ConfigurableExample({
+  example,
+  children,
+}: {
+  example: React.ReactNode
+  children: React.ReactNode
+}) {
+  return (
+    <>
+      <hr />
+      <section>
+        <h3>Configurable example</h3>
+        {example}
+        <form noValidate>{children}</form>
+      </section>
+    </>
+  )
+}
+
 export const PropControlBoolean = ({
   name,
   props,
@@ -44,6 +63,25 @@ export const PropControlEnum = ({
       </option>
     ))}
   </Select>
+)
+
+export const PropControlNumber = ({
+  name,
+  props,
+  setProps,
+}: {
+  name: string
+  props: object
+  setProps: React.Dispatch<React.SetStateAction<typeof props>>
+}) => (
+  <TextField
+    label={name}
+    onChange={({ target: { value } }) => {
+      const n = Number(value)
+      if (!Number.isNaN(n)) setProps({ ...props, [name]: n })
+    }}
+    value={props[name]}
+  />
 )
 
 export const PropControlString = ({

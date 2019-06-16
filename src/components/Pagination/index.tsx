@@ -5,7 +5,7 @@ import './style.css'
 const maxPageButtons = 5
 const halfMaxPageButtons = Math.floor(maxPageButtons / 2)
 
-interface IProps {
+export interface IProps {
   page: number
   pageCount: number
   onChange(page: number): void
