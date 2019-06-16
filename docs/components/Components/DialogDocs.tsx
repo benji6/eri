@@ -9,7 +9,7 @@ export default function DialogDocs(_: RouteComponentProps) {
 
   return (
     <div e-util="slide-in">
-      <h3>Dialog</h3>
+      <h2>Dialog</h2>
       <ButtonGroup>
         <Button onClick={handleDialogOpen}>Open dialog</Button>
       </ButtonGroup>

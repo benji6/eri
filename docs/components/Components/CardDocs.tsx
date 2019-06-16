@@ -5,7 +5,7 @@ import { Card, CardGroup } from '../../../src'
 export default function CardDocs(_: RouteComponentProps) {
   return (
     <div e-util="slide-in">
-      <h3>Card</h3>
+      <h2>Card</h2>
       <p>Wrap your Cards in a CardGroup.</p>
       <CardGroup>
         <Card>

@@ -5,7 +5,7 @@ import { Button, ButtonGroup } from '../../../src'
 export default function ButtonDocs(_: RouteComponentProps) {
   return (
     <div e-util="slide-in">
-      <h3>Button</h3>
+      <h2>Button</h2>
       <p>
         Buttons are cute little things you press. Remember to always wrap them
         up in a ButtonGroup.

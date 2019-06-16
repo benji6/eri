@@ -7,7 +7,7 @@ export default function FabDocs(_: RouteComponentProps) {
 
   return (
     <div e-util="slide-in">
-      <h3>Fab</h3>
+      <h2>Fab</h2>
       <p>The floating action button.</p>
       <Toggle
         checked={isFabVisible}

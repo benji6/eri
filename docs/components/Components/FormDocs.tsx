@@ -18,7 +18,7 @@ export default function FormDocs(_: RouteComponentProps) {
   return (
     <div e-util="slide-in">
       <form noValidate>
-        <h3>Form</h3>
+        <h2>Form</h2>
         <p>This is a form.</p>
         <TextField label="Text field" supportiveText="Some supportive text" />
         <TextField error="Oops!" label="Text field error" />

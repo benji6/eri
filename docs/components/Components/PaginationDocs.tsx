@@ -13,7 +13,7 @@ export default function PaginationDocs(_: RouteComponentProps) {
 
   return (
     <div e-util="slide-in">
-      <h3>Pagination</h3>
+      <h2>Pagination</h2>
       <p>Renders nothing when there are no pages</p>
       <Pagination
         onChange={() => {

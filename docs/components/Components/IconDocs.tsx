@@ -5,7 +5,7 @@ import { Icon } from '../../../src'
 export default function IconDocs(_: RouteComponentProps) {
   return (
     <div e-util="slide-in">
-      <h3>Icon</h3>
+      <h2>Icon</h2>
       <p>
         ❤️ <a href="https://feathericons.com/">Feather</a>
       </p>
