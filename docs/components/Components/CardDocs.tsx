@@ -6,7 +6,9 @@ export default function CardDocs(_: RouteComponentProps) {
   return (
     <div e-util="slide-in">
       <h2>Card</h2>
-      <p>Wrap your Cards in a CardGroup.</p>
+      <p>
+        Wrap your Cards in a <code>CardGroup</code>.
+      </p>
       <CardGroup>
         <Card>
           <h3>Card one</h3>

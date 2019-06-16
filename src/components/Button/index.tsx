@@ -1,7 +1,7 @@
 import * as React from 'react'
 import './style.css'
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   sentiment?: 'negative'
   variant?: 'primary' | 'secondary'
 }
