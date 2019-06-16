@@ -4,5 +4,5 @@ import './style.css'
 interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {}
 
 export default function CardGroup(props: IProps) {
-  return <div {...props} className="e-card-group" e-util="slide-in-children" />
+  return <div {...props} className="e-card-group" e-util="slide-children-in" />
 }

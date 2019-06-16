@@ -8,7 +8,7 @@ import Time from './Time'
 
 export default function DesignElements(_: RouteComponentProps) {
   return (
-    <div e-util="slide-in-children">
+    <div e-util="slide-children-in">
       <section>
         <h2>Design elements</h2>
       </section>
@@ -91,7 +91,7 @@ export default function DesignElements(_: RouteComponentProps) {
         <p>
           If you want to slide in a group of elements one by one then set the{' '}
           <code>e-util</code> attribute on the parent element to{' '}
-          <code>"slide-in-children"</code>.
+          <code>"slide-children-in"</code>.
         </p>
       </section>
       <section>

@@ -3,7 +3,7 @@ import * as React from 'react'
 
 export default function Home(_: RouteComponentProps) {
   return (
-    <div e-util="slide-in-children">
+    <div e-util="slide-children-in">
       <section>
         <h2>Principles</h2>
         <ul>

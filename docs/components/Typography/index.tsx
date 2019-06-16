@@ -4,7 +4,7 @@ import { SubHeading } from '../../../src'
 
 export default function Typography(_: RouteComponentProps) {
   return (
-    <div e-util="slide-in-children">
+    <div e-util="slide-children-in">
       <h2>Typography</h2>
       <div>
         <h1>
