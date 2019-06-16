@@ -4,5 +4,5 @@
 
 .e-menu-button:focus,
 .e-menu-button:hover {
-  color: var(--e-color-ground-less);
+  color: var(--e-color-highlight-3);
 }
