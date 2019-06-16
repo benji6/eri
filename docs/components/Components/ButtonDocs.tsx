@@ -42,6 +42,7 @@ export default function ButtonDocs(_: RouteComponentProps) {
           </Button>
         </ButtonGroup>
       </section>
+      <hr />
       <ConfigurableExample
         example={
           <ButtonGroup>

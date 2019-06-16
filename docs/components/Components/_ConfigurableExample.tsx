@@ -10,7 +10,6 @@ export default function ConfigurableExample({
 }) {
   return (
     <>
-      <hr />
       <section>
         <h3>Configurable example</h3>
         {example}
@@ -66,10 +65,12 @@ export const PropControlEnum = ({
 )
 
 export const PropControlNumber = ({
+  max = Infinity,
   name,
   props,
   setProps,
 }: {
+  max?: number
   name: string
   props: object
   setProps: React.Dispatch<React.SetStateAction<typeof props>>
@@ -78,7 +79,7 @@ export const PropControlNumber = ({
     label={name}
     onChange={({ target: { value } }) => {
       const n = Number(value)
-      if (!Number.isNaN(n)) setProps({ ...props, [name]: n })
+      if (!Number.isNaN(n) && n <= max) setProps({ ...props, [name]: n })
     }}
     value={props[name]}
   />

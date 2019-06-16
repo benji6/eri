@@ -28,6 +28,7 @@ export default function IconDocs(_: RouteComponentProps) {
         <Icon name="right" />
         <Icon name="save" />
       </section>
+      <hr />
       <ConfigurableExample example={<Icon {...props} />}>
         <PropControlEnum
           name="name"
