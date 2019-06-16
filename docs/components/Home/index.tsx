@@ -55,6 +55,15 @@ export default function Home(_: RouteComponentProps) {
           </a>
           .
         </p>
+        <p>
+          Documentation is a little sparse because to my knowledge I'm the only
+          person who uses this, but it should be fairly straightforward to use,
+          especially if you're using TypeScript.
+        </p>
+        <p>
+          If you want to see one of my projects that uses Eri check out{' '}
+          <a href="https://github.com/benji6/webnotes">Webnotes</a>.
+        </p>
       </section>
     </div>
   )
