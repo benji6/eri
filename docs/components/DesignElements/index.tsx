@@ -29,7 +29,8 @@ export default function DesignElements(_: RouteComponentProps) {
       <section>
         <h3>Space</h3>
         <p>
-          Space is based on a fluid modular scale and is linked to font-size.
+          Space is based on a fluid modular scale and is defined with{' '}
+          <code>em</code> units to keep it responsive to font-size.
         </p>
         <DisplayGroup>
           <Space varName="--e-space-0" />
