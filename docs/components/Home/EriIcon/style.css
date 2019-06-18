@@ -1,0 +1,8 @@
+.d-eri-icon {
+  --size: 4em;
+
+  display: block;
+  height: var(--size);
+  margin: 0 auto;
+  width: var(--size);
+}
