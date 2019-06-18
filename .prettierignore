@@ -1,6 +1,8 @@
 .*
-*.lock
 *.html
+*.ico
+*.lock
+*.svg
 *.toml
 build
 dist

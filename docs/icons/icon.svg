@@ -1,10 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width=".1" viewBox="0 0 5 5" >
-  <rect height="5" stroke="none" width="5" fill="#ffffff"/>
-  <rect height="1" width="1" x="1" y="1" fill="#2575d0" />
-  <rect height="1" width="1" x="1" y="2" fill="#3bd075" />
-  <rect height="1" width="1" x="1" y="3" fill="#00e4f5" />
-  <rect height="1" width="1" x="2" y="1" fill="#f655f6" />
-  <rect height="1" width="1" x="3" y="1" fill="#ffa033" />
-  <rect height="1" width="1" x="3" y="2" fill="#bfe602" />
-  <rect height="1" width="1" x="3" y="3" fill="#ab58ff" />
+<svg xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75" viewBox="0 0 8 8" >
+  <!-- E -->
+  <line x1="1.5" y1="1.5" x2="1.5" y2="6.5" />
+  <line x1="1.5" y1="1.5" x2="3.5" y2="1.5" />
+  <line x1="1.5" y1="4" x2="2.5" y2="4" />
+  <line x1="1.5" y1="6.5" x2="3.5" y2="6.5" />
+  <!-- r -->
+  <line x1="4.5" y1="4" x2="4.5" y2="6.5" />
+  <line x1="4.5" y1="4" x2="5.5" y2="4" />
+  <!-- i -->
+  <line x1="6.5" y1="4" x2="6.5" y2="6.5" />
+  <line x1="6.5" y1="2.75" x2="6.5" y2="2.75" />
 </svg>
