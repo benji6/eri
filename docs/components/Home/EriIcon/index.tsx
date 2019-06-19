@@ -5,7 +5,7 @@ export default function EriIcon() {
   return (
     <svg
       className="d-eri-icon"
-      stroke="#000000"
+      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width=".75"
