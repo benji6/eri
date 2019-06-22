@@ -1,24 +1,6 @@
-.header {
-  background: var(--e-color-theme-more);
-  box-shadow: var(--e-box-shadow-2);
-  color: var(--e-color-ground);
-  padding: var(--e-space-1) var(--e-space-2);
-  z-index: var(--e-z-index-2);
-}
-
 .header__container {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   max-width: var(--e-max-width-1);
-}
-
-.header h1 {
-  color: inherit;
-  margin: 0;
-}
-
-.header a {
-  color: inherit;
-  text-decoration: none;
 }

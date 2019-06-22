@@ -15,6 +15,31 @@ body {
   margin: 0;
 }
 
+header {
+  background: var(--e-color-theme-more);
+  box-shadow: var(--e-box-shadow-2);
+  color: var(--e-color-ground);
+  padding: var(--e-space-1) var(--e-space-2);
+  z-index: var(--e-z-index-2);
+}
+
+header h1 {
+  color: inherit;
+  margin: 0;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  margin: 0 auto var(--e-space-3);
+  max-width: var(--e-max-width-1);
+  overflow: hidden; /* prevents scrollbar issues on sliding transitions */
+  padding: 0 var(--e-space-2);
+}
+
 a,
 button {
   outline-color: var(--e-color-highlight-1);
@@ -47,13 +72,6 @@ legend {
   color: var(--e-color-figure-more);
   font-size: var(--e-font-size-0);
   font-weight: var(--e-font-weight-bold);
-}
-
-main {
-  margin: 0 auto var(--e-space-3);
-  max-width: var(--e-max-width-1);
-  overflow: hidden; /* prevents scrollbar issues on sliding transitions */
-  padding: 0 var(--e-space-2);
 }
 
 ul {
