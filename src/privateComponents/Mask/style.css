@@ -1,6 +1,6 @@
 .e-mask__container {
   position: relative;
-  z-index: var(--e-z-index-3);
+  z-index: var(--e-z-index-2);
 }
 
 .e-mask__mask {
@@ -12,7 +12,7 @@
   right: 0;
   top: 0;
   transition: opacity var(--e-time-1) var(--e-easing-decelerate);
-  z-index: var(--e-z-index-3);
+  z-index: var(--e-z-index-2);
 }
 
 .e-mask__mask--enter,

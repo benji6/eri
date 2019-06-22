@@ -22,7 +22,6 @@ header {
   display: flex;
   justify-content: space-between;
   padding: var(--e-space-1) calc((100% - var(--e-max-width-1)) / 2);
-  z-index: var(--e-z-index-2);
 }
 
 header h1 {
