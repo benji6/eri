@@ -16,6 +16,7 @@ body {
 }
 
 header {
+  align-items: center;
   background: var(--e-color-theme-more);
   box-shadow: var(--e-box-shadow-2);
   color: var(--e-color-ground);
