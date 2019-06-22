@@ -22,12 +22,18 @@ header {
   color: var(--e-color-ground);
   display: flex;
   justify-content: space-between;
-  padding: var(--e-space-1) calc((100% - var(--e-max-width-1)) / 2);
+  padding: var(--e-space-1)
+    calc((100% - var(--e-max-width-1)) / 2 - var(--e-space-2));
 }
 
 header h1 {
   color: inherit;
   margin: 0;
+}
+header h1::before {
+  content: '';
+  font-size: var(--e-font-size-1);
+  margin-left: var(--e-space-2);
 }
 
 header a {

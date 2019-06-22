@@ -1,4 +1,5 @@
 .e-menu-button {
+  margin-right: var(--e-space-2);
   transition: color var(--e-time-1) var(--e-easing-standard);
 }
 
