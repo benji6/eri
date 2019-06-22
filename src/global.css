@@ -52,6 +52,7 @@ legend {
 main {
   margin: 0 auto var(--e-space-3);
   max-width: var(--e-max-width-1);
+  overflow: hidden; /* prevents scrollbar issues on sliding transitions */
   padding: 0 var(--e-space-2);
 }
 
