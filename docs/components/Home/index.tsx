@@ -1,15 +1,11 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import EriIcon from './EriIcon'
+import Banner from './Banner'
 
 export default function Home(_: RouteComponentProps) {
   return (
     <div e-util="slide-children-in">
-      <div>
-        <hr />
-        <EriIcon />
-        <hr />
-      </div>
+      <Banner />
       <section>
         <h2>Principles</h2>
         <ul>

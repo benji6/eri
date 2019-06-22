@@ -2,7 +2,6 @@
   background: var(--e-color-theme-more);
   box-shadow: var(--e-box-shadow-2);
   color: var(--e-color-ground);
-  margin-bottom: var(--e-space-4);
   padding: var(--e-space-1) var(--e-space-2);
   z-index: var(--e-z-index-2);
 }
