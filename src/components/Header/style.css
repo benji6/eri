@@ -1,6 +1,0 @@
-.e-header__container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: var(--e-max-width-1);
-}
