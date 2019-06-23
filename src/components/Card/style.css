@@ -32,11 +32,13 @@ button.e-card:active {
   transform: scale(1);
 }
 
-.e-card > *:first-child {
+.e-card > *:first-child,
+.e-card > *:first-child > *:first-child {
   margin-top: 0;
 }
 
-.e-card > *:last-child {
+.e-card > *:last-child,
+.e-card > *:last-child > *:last-child {
   margin-bottom: 0;
 }
 
