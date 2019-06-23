@@ -133,6 +133,8 @@ h4 {
 hr {
   border-bottom: none;
   border-color: var(--e-color-balance-less);
+  border-left: none;
+  border-right: none;
   border-width: var(--e-border-width-1);
   margin: var(--e-space-3) 0;
 }
