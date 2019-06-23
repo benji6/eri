@@ -44,7 +44,14 @@ main {
   margin: 0 auto var(--e-space-3);
   max-width: var(--e-max-width-1);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
-  padding: 0 var(--e-space-2);
+  padding: var(--e-space-4) var(--e-space-2) 0;
+}
+
+main > *:first-child,
+main > *:first-child > *:first-child,
+main > *:first-child > *:first-child > *:first-child,
+main > *:first-child > *:first-child > *:first-child > *:first-child {
+  margin-top: 0;
 }
 
 a,
