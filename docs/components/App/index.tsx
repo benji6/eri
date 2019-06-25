@@ -1,6 +1,6 @@
 import { Link, Router } from '@reach/router'
 import * as React from 'react'
-import { getCssVar, Header, Menu, MenuButton, Toggle } from '../../../src'
+import { Header, Menu, MenuButton, ThemeToggle } from '../../../src'
 import _404 from '../_404'
 import ComponentLinks from '../ComponentLinks'
 import ButtonDocs from '../Components/ButtonDocs'
@@ -18,21 +18,10 @@ import Home from '../Home'
 import Typography from '../Typography'
 import './style.css'
 
-const metaThemeColor = document.querySelector('meta[name=theme-color]')
-
 export default function App() {
-  const [isLightThemeOn, setIsLightThemeOn] = React.useState(true)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const handleMenuClose = () => setIsMenuOpen(false)
   const handleMenuOpen = () => setIsMenuOpen(true)
-
-  const toggleTheme = () => {
-    if (isLightThemeOn) document.documentElement.classList.add('e-theme-dark')
-    else document.documentElement.classList.remove('e-theme-dark')
-
-    metaThemeColor.setAttribute('content', getCssVar('--e-color-theme-app'))
-    setIsLightThemeOn(!isLightThemeOn)
-  }
 
   return (
     <React.StrictMode>
@@ -43,11 +32,7 @@ export default function App() {
         <MenuButton onClick={handleMenuOpen} />
       </Header>
       <Menu onClose={handleMenuClose} open={isMenuOpen}>
-        <Toggle
-          checked={isLightThemeOn}
-          label={isLightThemeOn ? 'Light theme on' : 'Dark theme on'}
-          onChange={toggleTheme}
-        />
+        <ThemeToggle />
         <p>
           <Link onClick={handleMenuClose} to="/">
             Home
