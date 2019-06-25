@@ -8,9 +8,9 @@ export default function Banner() {
       <svg
         className="d-banner__icon"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width=".75"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth=".75"
         viewBox="0 0 8 8"
       >
         <line x1="1.5" y1="4" x2="1.5" y2="1.5" />
