@@ -32,7 +32,7 @@ export default function ThemeToggle() {
   return (
     <Toggle
       checked={isDarkThemeOn}
-      label={isDarkThemeOn ? 'Dark theme on' : 'Light theme on'}
+      label="Toggle dark theme"
       onChange={handleChange}
     />
   )
