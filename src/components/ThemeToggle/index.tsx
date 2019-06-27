@@ -3,10 +3,6 @@ import { Toggle } from '../..'
 import getCssVar from '../../utils/getCssVar'
 import './style.css'
 
-// This is a local storage migration.
-// Can be removed once propagated everywhere.
-localStorage.removeItem('e-is-dark-theme-on')
-
 const DARK = 'dark'
 const LIGHT = 'light'
 const localStorageKey = 'eri-theme'
