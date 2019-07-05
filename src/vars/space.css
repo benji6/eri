@@ -5,8 +5,8 @@
   --e-space-2: calc(var(--e-space-1) * var(--e-space-scale-ratio));
   --e-space-3: calc(var(--e-space-2) * var(--e-space-scale-ratio));
   --e-space-4: calc(var(--e-space-3) * var(--e-space-scale-ratio));
-  --e-max-width-0: calc(70 * var(--e-space-0));
-  --e-max-width-1: calc(4 / 3 * var(--e-max-width-0));
+  --e-max-width-0: 28rem;
+  --e-max-width-1: 38rem;
 }
 
 @media (max-width: 500px) {

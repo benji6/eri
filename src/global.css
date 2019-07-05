@@ -51,10 +51,21 @@ header button:hover {
 }
 
 main {
-  margin: 0 auto var(--e-space-3);
-  max-width: var(--e-max-width-1);
+  background: var(--e-color-ground-more);
+  box-shadow: var(--e-box-shadow-0);
+  box-sizing: border-box;
+  margin: auto;
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
-  padding: var(--e-space-4) var(--e-space-2) 0;
+  padding: var(--e-space-3);
+}
+
+/* min width is just above --e-max-width-1 */
+@media (min-width: 40rem) {
+  main {
+    border-radius: var(--e-border-radius-0);
+    margin: var(--e-space-3) auto;
+    max-width: var(--e-max-width-1);
+  }
 }
 
 main > *:first-child,
@@ -62,6 +73,12 @@ main > *:first-child > *:first-child,
 main > *:first-child > *:first-child > *:first-child,
 main > *:first-child > *:first-child > *:first-child > *:first-child {
   margin-top: 0;
+}
+main > *:last-child,
+main > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child,
+main > *:last-child > *:last-child > *:last-child > *:last-child {
+  margin-bottom: 0;
 }
 
 a,
@@ -78,17 +95,9 @@ fieldset {
   user-select: none;
 }
 
-form {
-  margin: var(--e-space-4) auto;
-  max-width: var(--e-max-width-0);
-}
-
 @media (min-width: 501px) {
   form {
-    background-color: var(--e-color-ground-more);
-    border-radius: var(--e-border-radius-1);
-    box-shadow: var(--e-box-shadow-1);
-    padding: var(--e-space-2) var(--e-space-4) var(--e-space-4);
+    margin: var(--e-space-4);
   }
 }
 

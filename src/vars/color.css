@@ -12,8 +12,8 @@
   --e-color-figure-less: hsl(var(--e-hue-theme), var(--e-saturation-0), 20%);
   --e-color-figure-more: hsl(var(--e-hue-theme), var(--e-saturation-0), 0%);
 
-  --e-color-ground: hsl(var(--e-hue-theme), var(--e-saturation-0), 97%);
-  --e-color-ground-less: hsl(var(--e-hue-theme), var(--e-saturation-0), 94%);
+  --e-color-ground: hsl(var(--e-hue-theme), var(--e-saturation-0), 96%);
+  --e-color-ground-less: hsl(var(--e-hue-theme), var(--e-saturation-0), 92%);
   --e-color-ground-more: hsl(var(--e-hue-theme), var(--e-saturation-0), 100%);
 
   --e-color-highlight-0: hsl(184, 100%, 48%);
@@ -50,8 +50,8 @@
   --e-color-figure-less: hsl(var(--e-hue-theme), var(--e-saturation-0), 80%);
   --e-color-figure-more: hsl(var(--e-hue-theme), var(--e-saturation-0), 100%);
 
-  --e-color-ground: hsl(var(--e-hue-theme), var(--e-saturation-0), 3%);
-  --e-color-ground-less: hsl(var(--e-hue-theme), var(--e-saturation-0), 6%);
+  --e-color-ground: hsl(var(--e-hue-theme), var(--e-saturation-0), 4%);
+  --e-color-ground-less: hsl(var(--e-hue-theme), var(--e-saturation-0), 8%);
   --e-color-ground-more: hsl(var(--e-hue-theme), var(--e-saturation-0), 0%);
 
   --e-color-mask: hsla(var(--e-hue-theme), var(--e-saturation-0), 20%, 0.95);
