@@ -98,7 +98,7 @@ fieldset {
 
 @media (min-width: 501px) {
   form {
-    margin: var(--e-space-4);
+    margin: var(--e-space-1);
   }
 }
 
