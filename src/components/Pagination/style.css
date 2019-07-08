@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   margin: var(--e-space-2) 0;
-  padding: var(--e-space-1);
+  padding: var(--e-space-1) 0;
   user-select: none;
 }
 
@@ -12,7 +12,20 @@
   background: none;
   border-radius: var(--e-border-radius-0);
   color: var(--e-color-theme);
-  padding: var(--e-space-0) var(--e-space-2);
+  padding: var(--e-space-0) var(--e-space-1);
+}
+
+@media (min-width: 501px) {
+  .pagination__button {
+    padding-left: var(--e-space-2);
+    padding-right: var(--e-space-2);
+  }
+}
+
+.pagination__button:first-child,
+.pagination__button:last-child {
+  padding-left: var(--e-space-0);
+  padding-right: var(--e-space-0);
 }
 
 .pagination__button:focus {
