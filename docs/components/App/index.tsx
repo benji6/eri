@@ -1,6 +1,6 @@
 import { Link, Router } from '@reach/router'
 import * as React from 'react'
-import { Header, Menu, MenuButton, ThemeToggle } from '../../../src'
+import { Header, Menu, MenuButton, Paper, ThemeToggle } from '../../../src'
 import _404 from '../_404'
 import ComponentLinks from '../ComponentLinks'
 import ButtonDocs from '../Components/ButtonDocs'
@@ -56,22 +56,24 @@ export default function App() {
         <ComponentLinks onClick={handleMenuClose} />
       </Menu>
       <main>
-        <Router>
-          <_404 default />
-          <Home path="/" />
-          <ComponentsHome path="components" />
-          <ButtonDocs path="components/button" />
-          <CardDocs path="components/card" />
-          <DialogDocs path="components/dialog" />
-          <FabDocs path="components/fab" />
-          <FormDocs path="components/form" />
-          <IconDocs path="components/icon" />
-          <LinkDocs path="components/link" />
-          <PaginationDocs path="components/pagination" />
-          <SpinnerDocs path="components/spinner" />
-          <DesignElements path="design-elements" />
-          <Typography path="typography" />
-        </Router>
+        <Paper>
+          <Router>
+            <_404 default />
+            <Home path="/" />
+            <ComponentsHome path="components" />
+            <ButtonDocs path="components/button" />
+            <CardDocs path="components/card" />
+            <DialogDocs path="components/dialog" />
+            <FabDocs path="components/fab" />
+            <FormDocs path="components/form" />
+            <IconDocs path="components/icon" />
+            <LinkDocs path="components/link" />
+            <PaginationDocs path="components/pagination" />
+            <SpinnerDocs path="components/spinner" />
+            <DesignElements path="design-elements" />
+            <Typography path="typography" />
+          </Router>
+        </Paper>
       </main>
     </React.StrictMode>
   )
