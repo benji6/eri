@@ -1,5 +1,6 @@
 import { Link, LinkProps, RouteComponentProps } from '@reach/router'
 import * as React from 'react'
+import { Paper } from '../../../src'
 
 export default function ComponentLinks(
   props: RouteComponentProps & React.HTMLAttributes<HTMLAnchorElement>,
@@ -45,6 +46,11 @@ export default function ComponentLinks(
         <li>
           <Link {...props} to="/components/pagination">
             Pagination
+          </Link>
+        </li>
+        <li>
+          <Link {...props} to="/components/paper">
+            Paper
           </Link>
         </li>
         <li>

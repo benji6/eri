@@ -1,6 +1,6 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Button, ButtonGroup, Dialog } from '../../../src'
+import { Button, ButtonGroup, Dialog, Paper } from '../../../src'
 
 export default function DialogDocs(_: RouteComponentProps) {
   const [isDialogOpen, setIsDialogOpen] = React.useState(false)
@@ -8,7 +8,7 @@ export default function DialogDocs(_: RouteComponentProps) {
   const handleDialogOpen = () => setIsDialogOpen(true)
 
   return (
-    <div e-util="slide-in">
+    <Paper e-util="slide-in">
       <h2>Dialog</h2>
       <ButtonGroup>
         <Button onClick={handleDialogOpen}>Open dialog</Button>
@@ -23,6 +23,6 @@ export default function DialogDocs(_: RouteComponentProps) {
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
       </Dialog>
-    </div>
+    </Paper>
   )
 }

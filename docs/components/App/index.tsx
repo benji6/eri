@@ -12,6 +12,7 @@ import FormDocs from '../Components/FormDocs'
 import IconDocs from '../Components/IconDocs'
 import LinkDocs from '../Components/LinkDocs'
 import PaginationDocs from '../Components/PaginationDocs'
+import PaperDocs from '../Components/PaperDocs'
 import SpinnerDocs from '../Components/SpinnerDocs'
 import DesignElements from '../DesignElements'
 import Home from '../Home'
@@ -56,24 +57,23 @@ export default function App() {
         <ComponentLinks onClick={handleMenuClose} />
       </Menu>
       <main>
-        <Paper>
-          <Router>
-            <_404 default />
-            <Home path="/" />
-            <ComponentsHome path="components" />
-            <ButtonDocs path="components/button" />
-            <CardDocs path="components/card" />
-            <DialogDocs path="components/dialog" />
-            <FabDocs path="components/fab" />
-            <FormDocs path="components/form" />
-            <IconDocs path="components/icon" />
-            <LinkDocs path="components/link" />
-            <PaginationDocs path="components/pagination" />
-            <SpinnerDocs path="components/spinner" />
-            <DesignElements path="design-elements" />
-            <Typography path="typography" />
-          </Router>
-        </Paper>
+        <Router>
+          <_404 default />
+          <Home path="/" />
+          <ComponentsHome path="components" />
+          <ButtonDocs path="components/button" />
+          <CardDocs path="components/card" />
+          <DialogDocs path="components/dialog" />
+          <FabDocs path="components/fab" />
+          <FormDocs path="components/form" />
+          <IconDocs path="components/icon" />
+          <LinkDocs path="components/link" />
+          <PaginationDocs path="components/pagination" />
+          <PaperDocs path="components/paper" />
+          <SpinnerDocs path="components/spinner" />
+          <DesignElements path="design-elements" />
+          <Typography path="typography" />
+        </Router>
       </main>
     </React.StrictMode>
   )

@@ -6,6 +6,7 @@ import {
   Checkbox,
   CurrencyField,
   ImageUpload,
+  Paper,
   RadioButton,
   RadioButtonGroup,
   Select,
@@ -16,7 +17,7 @@ import {
 
 export default function FormDocs(_: RouteComponentProps) {
   return (
-    <div e-util="slide-in">
+    <Paper e-util="slide-in">
       <form noValidate>
         <h2>Form</h2>
         <p>This is a form.</p>
@@ -80,6 +81,6 @@ export default function FormDocs(_: RouteComponentProps) {
           <Button type="button">Submit</Button>
         </ButtonGroup>
       </form>
-    </div>
+    </Paper>
   )
 }

@@ -1,10 +1,10 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Card, CardGroup } from '../../../src'
+import { Card, CardGroup, Paper } from '../../../src'
 
 export default function CardDocs(_: RouteComponentProps) {
   return (
-    <div e-util="slide-in">
+    <Paper e-util="slide-in">
       <h2>Card</h2>
       <p>
         Wrap your Cards in a <code>CardGroup</code>.
@@ -53,6 +53,6 @@ export default function CardDocs(_: RouteComponentProps) {
           <p>A card can also be a button like this one.</p>
         </Card>
       </CardGroup>
-    </div>
+    </Paper>
   )
 }

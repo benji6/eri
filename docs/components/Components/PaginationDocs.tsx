@@ -1,6 +1,6 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Pagination } from '../../../src'
+import { Pagination, Paper } from '../../../src'
 import { IProps } from '../../../src/components/Pagination'
 import ConfigurableExample, { PropControlNumber } from './_ConfigurableExample'
 
@@ -14,7 +14,7 @@ export default function PaginationDocs(_: RouteComponentProps) {
   })
 
   return (
-    <div e-util="slide-children-in">
+    <Paper e-util="slide-children-in">
       <section>
         <h2>Pagination</h2>
       </section>
@@ -27,6 +27,6 @@ export default function PaginationDocs(_: RouteComponentProps) {
         />
         <PropControlNumber name="pageCount" props={props} setProps={setProps} />
       </ConfigurableExample>
-    </div>
+    </Paper>
   )
 }

@@ -1,12 +1,12 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Fab, Icon, Toggle } from '../../../src'
+import { Fab, Icon, Paper, Toggle } from '../../../src'
 
 export default function FabDocs(_: RouteComponentProps) {
   const [isFabVisible, setIsFabVisible] = React.useState(false)
 
   return (
-    <div e-util="slide-in">
+    <Paper e-util="slide-in">
       <h2>Fab</h2>
       <p>The floating action button.</p>
       <Toggle
@@ -19,6 +19,6 @@ export default function FabDocs(_: RouteComponentProps) {
       <Fab aria-label="example FAB" hide={!isFabVisible}>
         <Icon name="plus" size="4" />
       </Fab>
-    </div>
+    </Paper>
   )
 }

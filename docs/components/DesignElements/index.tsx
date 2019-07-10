@@ -1,5 +1,6 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
+import { Paper } from '../../../src'
 import Color from './Color'
 import DisplayGroup from './DisplayGroup'
 import Easing from './Easing'
@@ -8,7 +9,7 @@ import Time from './Time'
 
 export default function DesignElements(_: RouteComponentProps) {
   return (
-    <div e-util="slide-children-in">
+    <Paper e-util="slide-children-in">
       <section>
         <h2>Design elements</h2>
       </section>
@@ -151,6 +152,6 @@ export default function DesignElements(_: RouteComponentProps) {
           <Color varName="--e-color-highlight-5" />
         </DisplayGroup>
       </section>
-    </div>
+    </Paper>
   )
 }

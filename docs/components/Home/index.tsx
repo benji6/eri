@@ -1,10 +1,11 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
+import { Paper } from '../../../src'
 import Banner from './Banner'
 
 export default function Home(_: RouteComponentProps) {
   return (
-    <div e-util="slide-children-in">
+    <Paper e-util="slide-children-in">
       <Banner />
       <section>
         <h2>Principles</h2>
@@ -67,6 +68,6 @@ export default function Home(_: RouteComponentProps) {
           <a href="https://github.com/benji6/webnotes">Webnotes</a>.
         </p>
       </section>
-    </div>
+    </Paper>
   )
 }

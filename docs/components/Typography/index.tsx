@@ -1,10 +1,10 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { SubHeading } from '../../../src'
+import { Paper, SubHeading } from '../../../src'
 
 export default function Typography(_: RouteComponentProps) {
   return (
-    <div e-util="slide-children-in">
+    <Paper e-util="slide-children-in">
       <h2>Typography</h2>
       <div>
         <h1>
@@ -68,6 +68,6 @@ export default function Typography(_: RouteComponentProps) {
 ...by setting the e-util attribute to "pre-line"`}
         </p>
       </div>
-    </div>
+    </Paper>
   )
 }
