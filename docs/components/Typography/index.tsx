@@ -1,12 +1,14 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Paper, SubHeading } from '../../../src'
+import { Paper, PaperGroup, SubHeading } from '../../../src'
 
 export default function Typography(_: RouteComponentProps) {
   return (
-    <Paper e-util="slide-children-in">
-      <h2>Typography</h2>
-      <div>
+    <PaperGroup>
+      <Paper>
+        <h2>Typography</h2>
+      </Paper>
+      <Paper>
         <h1>
           Heading 1 <SubHeading>With a subheading</SubHeading>
         </h1>
@@ -25,8 +27,8 @@ export default function Typography(_: RouteComponentProps) {
         <p>
           Example of some <small>small text</small>.
         </p>
-      </div>
-      <div>
+      </Paper>
+      <Paper>
         <h2>Heading 2</h2>
         <p>
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -48,12 +50,12 @@ export default function Typography(_: RouteComponentProps) {
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
-      </div>
-      <div>
+      </Paper>
+      <Paper>
         <h3>Hr</h3>
         <hr />
-      </div>
-      <div>
+      </Paper>
+      <Paper>
         <h3>CSS utilities</h3>
         <p e-util="center">
           You can center any element by setting the e-util attribute to "center"
@@ -67,7 +69,7 @@ export default function Typography(_: RouteComponentProps) {
 
 ...by setting the e-util attribute to "pre-line"`}
         </p>
-      </div>
-    </Paper>
+      </Paper>
+    </PaperGroup>
   )
 }

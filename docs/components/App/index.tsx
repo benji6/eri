@@ -1,6 +1,13 @@
 import { Link, Router } from '@reach/router'
 import * as React from 'react'
-import { Header, Menu, MenuButton, Paper, ThemeToggle } from '../../../src'
+import {
+  Header,
+  Menu,
+  MenuButton,
+  Paper,
+  PaperGroup,
+  ThemeToggle,
+} from '../../../src'
 import _404 from '../_404'
 import ComponentLinks from '../ComponentLinks'
 import ButtonDocs from '../Components/ButtonDocs'

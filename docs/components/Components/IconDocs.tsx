@@ -1,6 +1,6 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Icon, Paper } from '../../../src'
+import { Icon, Paper, PaperGroup } from '../../../src'
 import { iconNameMap, IProps } from '../../../src/components/Icon'
 import ConfigurableExample, { PropControlEnum } from './_ConfigurableExample'
 
@@ -13,8 +13,8 @@ export default function IconDocs(_: RouteComponentProps) {
   })
 
   return (
-    <Paper e-util="slide-children-in">
-      <section>
+    <PaperGroup>
+      <Paper>
         <h2>Icon</h2>
         <p>
           ❤️ <a href="https://feathericons.com/">Feather</a>
@@ -29,8 +29,7 @@ export default function IconDocs(_: RouteComponentProps) {
         <Icon name="right" />
         <Icon name="save" />
         <Icon name="sun" />
-      </section>
-      <hr />
+      </Paper>
       <ConfigurableExample example={<Icon {...props} />}>
         <PropControlEnum
           name="name"
@@ -45,6 +44,6 @@ export default function IconDocs(_: RouteComponentProps) {
           setProps={setProps}
         />
       </ConfigurableExample>
-    </Paper>
+    </PaperGroup>
   )
 }

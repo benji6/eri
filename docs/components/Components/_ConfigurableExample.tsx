@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Select, TextField, Toggle } from '../../../src'
+import { Paper, Select, TextField, Toggle } from '../../../src'
 
 export default function ConfigurableExample({
   example,
@@ -9,13 +9,11 @@ export default function ConfigurableExample({
   children: React.ReactNode
 }) {
   return (
-    <>
-      <section>
-        <h3>Configurable example</h3>
-        {example}
-        <form noValidate>{children}</form>
-      </section>
-    </>
+    <Paper>
+      <h3>Configurable example</h3>
+      {example}
+      <form noValidate>{children}</form>
+    </Paper>
   )
 }
 

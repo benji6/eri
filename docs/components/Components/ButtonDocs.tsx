@@ -1,6 +1,6 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Button, ButtonGroup, Paper } from '../../../src'
+import { Button, ButtonGroup, Paper, PaperGroup } from '../../../src'
 import { IProps } from '../../../src/components/Button'
 import ConfigurableExample, {
   PropControlBoolean,
@@ -17,8 +17,8 @@ export default function ButtonDocs(_: RouteComponentProps) {
   })
 
   return (
-    <Paper e-util="slide-children-in">
-      <section>
+    <PaperGroup>
+      <Paper>
         <h2>Button</h2>
         <p>
           Buttons are cute little things you press. Remember to always wrap them
@@ -41,8 +41,7 @@ export default function ButtonDocs(_: RouteComponentProps) {
             Secondary disabled
           </Button>
         </ButtonGroup>
-      </section>
-      <hr />
+      </Paper>
       <ConfigurableExample
         example={
           <ButtonGroup>
@@ -60,6 +59,6 @@ export default function ButtonDocs(_: RouteComponentProps) {
           setProps={setProps}
         />
       </ConfigurableExample>
-    </Paper>
+    </PaperGroup>
   )
 }

@@ -1,13 +1,15 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Paper } from '../../../src'
+import { Paper, PaperGroup } from '../../../src'
 import Banner from './Banner'
 
 export default function Home(_: RouteComponentProps) {
   return (
-    <Paper e-util="slide-children-in">
-      <Banner />
-      <section>
+    <PaperGroup>
+      <Paper>
+        <Banner />
+      </Paper>
+      <Paper>
         <h2>Principles</h2>
         <ul>
           <li>
@@ -24,8 +26,8 @@ export default function Home(_: RouteComponentProps) {
             use.
           </li>
         </ul>
-      </section>
-      <section>
+      </Paper>
+      <Paper>
         <h2>Getting Started</h2>
         <p>
           The <code>eri</code> package is published on npm so you can install it
@@ -47,8 +49,8 @@ export default function Home(_: RouteComponentProps) {
           </code>
           .
         </p>
-      </section>
-      <section>
+      </Paper>
+      <Paper>
         <h2>About</h2>
         <p>
           Eri is a design system that I created for my personal projects, but it
@@ -67,7 +69,7 @@ export default function Home(_: RouteComponentProps) {
           If you want to see one of my projects that uses Eri check out{' '}
           <a href="https://github.com/benji6/webnotes">Webnotes</a>.
         </p>
-      </section>
-    </Paper>
+      </Paper>
+    </PaperGroup>
   )
 }

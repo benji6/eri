@@ -1,6 +1,6 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Paper } from '../../../src'
+import { Paper, PaperGroup } from '../../../src'
 import Color from './Color'
 import DisplayGroup from './DisplayGroup'
 import Easing from './Easing'
@@ -9,11 +9,11 @@ import Time from './Time'
 
 export default function DesignElements(_: RouteComponentProps) {
   return (
-    <Paper e-util="slide-children-in">
-      <section>
+    <PaperGroup>
+      <Paper>
         <h2>Design elements</h2>
-      </section>
-      <section>
+      </Paper>
+      <Paper>
         <h3>Font size</h3>
         <p>
           Fonts are sized based on a fluid modular scale which keeps things
@@ -26,8 +26,8 @@ export default function DesignElements(_: RouteComponentProps) {
           <Space varName="--e-font-size-3" />
           <Space varName="--e-font-size-4" />
         </DisplayGroup>
-      </section>
-      <section>
+      </Paper>
+      <Paper>
         <h3>Space</h3>
         <p>
           Space is based on a fluid modular scale and is defined with{' '}
@@ -52,8 +52,8 @@ export default function DesignElements(_: RouteComponentProps) {
           <Space varName="--e-border-width-0" />
           <Space varName="--e-border-width-1" />
         </DisplayGroup>
-      </section>
-      <section>
+      </Paper>
+      <Paper>
         <h3>Time</h3>
         <p>
           Time is responsive, things take more time on larger screens so
@@ -77,8 +77,8 @@ export default function DesignElements(_: RouteComponentProps) {
           <Easing varName="--e-easing-decelerate" />
           <Easing varName="--e-easing-standard" />
         </DisplayGroup>
-      </section>
-      <section>
+      </Paper>
+      <Paper>
         <h3>Animation</h3>
         <h4>Fade in</h4>
         <p>
@@ -95,8 +95,8 @@ export default function DesignElements(_: RouteComponentProps) {
           <code>e-util</code> attribute on the parent element to{' '}
           <code>"slide-children-in"</code>.
         </p>
-      </section>
-      <section>
+      </Paper>
+      <Paper>
         <h3>Color</h3>
         <h4>Figure</h4>
         <DisplayGroup>
@@ -151,7 +151,7 @@ export default function DesignElements(_: RouteComponentProps) {
           <Color varName="--e-color-highlight-4" />
           <Color varName="--e-color-highlight-5" />
         </DisplayGroup>
-      </section>
-    </Paper>
+      </Paper>
+    </PaperGroup>
   )
 }

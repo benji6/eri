@@ -2,21 +2,14 @@
   background: var(--e-color-ground-more);
   border-radius: var(--e-border-radius-0);
   box-shadow: var(--e-box-shadow-0);
-  box-sizing: border-box;
-  display: inline-block;
-  margin: var(--e-space-2);
-  max-width: var(--e-max-width-1);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
   padding: var(--e-space-2);
-  width: 100%;
 }
 
 /* min width is just above e-max-width-1 */
 @media (min-width: 38rem) {
   .e-paper {
     min-width: var(--e-max-width-0);
-    padding: var(--e-space-3);
-    width: auto;
   }
 }
 
