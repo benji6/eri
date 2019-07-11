@@ -20,5 +20,5 @@
 }
 
 input.e-currency-field__input {
-  padding-left: calc(var(--e-space-4) - var(--e-space-1));
+  padding-left: calc(var(--e-space-4) - var(--e-space-0));
 }
