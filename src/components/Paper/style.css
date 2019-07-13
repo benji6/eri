@@ -6,13 +6,6 @@
   padding: var(--e-space-2);
 }
 
-/* min width is just above e-max-width-1 */
-@media (min-width: 38rem) {
-  .e-paper {
-    min-width: var(--e-max-width-0);
-  }
-}
-
 .e-paper > *:first-child,
 .e-paper > *:first-child > *:first-child,
 .e-paper > *:first-child > *:first-child > *:first-child,
