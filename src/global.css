@@ -176,9 +176,6 @@ textarea {
   background-color: var(--e-color-ground-more);
   border-radius: var(--e-border-radius-0);
   border: var(--e-border-default);
-  color: inherit;
-  font-family: inherit; /* for firefox */
-  font-size: inherit;
   outline: 0;
   padding: var(--e-space-1);
   transition-duration: var(--e-time-0);
@@ -209,9 +206,7 @@ textarea[aria-invalid='true'] {
 button {
   background: none;
   border: none;
-  color: inherit;
   cursor: pointer;
-  font-size: inherit;
   padding: 0;
 }
 

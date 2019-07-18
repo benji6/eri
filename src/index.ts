@@ -1,3 +1,5 @@
+import './reset.css'
+
 import './global.css'
 import './utils.css'
 import './vars/animation.css'

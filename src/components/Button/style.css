@@ -5,7 +5,6 @@
 
   border-radius: var(--e-border-radius-0);
   box-shadow: var(--e-box-shadow-0);
-  font-size: inherit;
   font-weight: var(--e-font-weight-bold);
   padding: var(--e-space-1) var(--e-space-3);
   transition-duration: var(--e-time-0);
