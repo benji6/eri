@@ -33,8 +33,9 @@
 }
 
 button.e-paper {
-  text-align: initial;
   outline: 0;
+  position: relative;
+  text-align: initial;
 }
 
 button.e-paper::before {
