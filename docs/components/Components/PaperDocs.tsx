@@ -20,14 +20,23 @@ export default function PaperDocs(_: RouteComponentProps) {
       <Paper>
         <h3>Paper three</h3>
       </Paper>
-      <Paper>
+      <Paper onClick={() => {}}>
         <h3>Paper four</h3>
+        <p>
+          Add an <code>onClick</code> property to make the paper clickable.
+        </p>
       </Paper>
-      <Paper>
+      <Paper onClick={() => {}}>
         <h3>Paper five</h3>
+        <p>
+          Add an <code>onClick</code> property to make the paper clickable.
+        </p>
       </Paper>
-      <Paper>
+      <Paper onClick={() => {}}>
         <h3>Paper six</h3>
+        <p>
+          Add an <code>onClick</code> property to make the paper clickable.
+        </p>
       </Paper>
     </PaperGroup>
   )

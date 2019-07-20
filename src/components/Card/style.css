@@ -11,7 +11,7 @@
 
 button.e-card {
   display: block;
-  text-align: start;
+  text-align: initial;
   transition-duration: var(--e-time-0);
   transition-property: box-shadow, transform;
   transition-timing-function: var(--e-easing-standard);

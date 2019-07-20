@@ -31,3 +31,26 @@
   > *:last-child {
   margin-bottom: 0;
 }
+
+button.e-paper {
+  text-align: initial;
+  outline: 0;
+}
+
+button.e-paper::before {
+  background: var(--e-color-figure-more);
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity var(--e-time-0) var(--e-easing-standard);
+  z-index: 1;
+}
+
+button.e-paper:hover::before,
+button.e-paper:focus::before {
+  opacity: 0.07;
+}
