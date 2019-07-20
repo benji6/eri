@@ -5,5 +5,5 @@ deploy:
   script:
     - npx semantic-release
 script:
-  - npm t
-  - npm run build
+  - yarn t
+  - yarn build
