@@ -3,7 +3,6 @@ import './style.css'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string
-  value: string
   children: React.ReactNode
 }
 
