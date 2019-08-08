@@ -1,4 +1,6 @@
 .e-dialog {
+  --content-vertical-padding: var(--e-space-1);
+
   align-items: center;
   bottom: 0;
   display: flex;
@@ -20,9 +22,13 @@
   transition-timing-function: var(--e-easing-accelerate);
 }
 
+.e-dialog__close-button-container {
+  margin-top: calc(var(--content-vertical-padding) * -1);
+}
+
 .e-dialog__content {
   position: relative;
-  padding: var(--e-space-1) 0;
+  padding: var(--content-vertical-padding) 0;
 }
 
 .e-dialog__header {

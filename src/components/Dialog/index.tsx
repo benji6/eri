@@ -42,10 +42,12 @@ export default function Dialog({
             <div className="e-dialog__content">
               <div className="e-dialog__header">
                 <h4 id="e-dialog-title">{title}</h4>
-                <CloseButton
-                  disabled={disableClose || !open}
-                  onClick={onClose}
-                />
+                <div className="e-dialog__close-button-container">
+                  <CloseButton
+                    disabled={disableClose || !open}
+                    onClick={onClose}
+                  />
+                </div>
               </div>
               <div id="e-dialog-desc">{children}</div>
             </div>
