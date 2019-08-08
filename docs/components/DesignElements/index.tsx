@@ -31,7 +31,7 @@ export default function DesignElements(_: RouteComponentProps) {
         <h3>Space</h3>
         <p>
           Space is based on a fluid modular scale and is defined with{' '}
-          <code>em</code> units to keep it responsive to font-size.
+          <code>em</code> units to keep it responsive to font size.
         </p>
         <DisplayGroup>
           <Space varName="--e-space-0" />
@@ -41,7 +41,7 @@ export default function DesignElements(_: RouteComponentProps) {
           <Space varName="--e-space-4" />
         </DisplayGroup>
         <h3>Border radius</h3>
-        <p>Border radius is responsive and linked to space.</p>
+        <p>Border radius is responsive to font size.</p>
         <DisplayGroup>
           <Space varName="--e-border-radius-0" />
           <Space varName="--e-border-radius-1" />

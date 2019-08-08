@@ -1,6 +1,6 @@
 :root {
-  --e-border-radius-0: var(--e-space-0);
-  --e-border-radius-1: var(--e-space-1);
+  --e-border-radius-0: 0.5em;
+  --e-border-radius-1: 0.75em;
   --e-border-width-0: 2px;
   --e-border-width-1: 3px;
   --e-border-default: var(--e-border-width-1) solid var(--e-color-figure-more);
