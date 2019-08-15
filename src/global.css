@@ -54,6 +54,7 @@ header button:hover {
 main {
   display: flex;
   justify-content: center;
+  overflow: hidden; /* prevents scrollbar issues on sliding transitions */
 }
 
 a,
