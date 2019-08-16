@@ -30,6 +30,7 @@ export default function Dialog({
         timeout={{ exit: getCssTime1() + 100 }}
         unmountOnExit
       >
+        {/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
         <div
           {...rest}
           aria-describedby="e-dialog-desc"

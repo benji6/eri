@@ -13,16 +13,25 @@ export default function Home(_: RouteComponentProps) {
         <h2>Principles</h2>
         <ul>
           <li>
-            🧘‍♀️ <strong>Simple</strong> - Eri aims to be minimal and should feel
+            <span aria-label="Yoga" role="img">
+              🧘‍♀️
+            </span>{' '}
+            <strong>Simple</strong> - Eri aims to be minimal and should feel
             clean and intuitive.
           </li>
           <li>
-            🚀 <strong>Lightweight</strong> - Eri is performance focussed and
-            will not bloat or slow down your app. Components are lightweight and
+            <span aria-label="Rocket" role="img">
+              🚀
+            </span>{' '}
+            <strong>Lightweight</strong> - Eri is performance focussed and will
+            not bloat or slow down your app. Components are lightweight and
             tree-shaking is supported out the box.
           </li>
           <li>
-            😌 <strong>Easy</strong> - Eri should be straightforward and easy to
+            <span aria-label="Smile" role="img">
+              😌
+            </span>{' '}
+            <strong>Easy</strong> - Eri should be straightforward and easy to
             use.
           </li>
         </ul>
@@ -61,9 +70,9 @@ export default function Home(_: RouteComponentProps) {
           .
         </p>
         <p>
-          Documentation is a little sparse because to my knowledge I'm the only
-          person who uses this, but it should be fairly straightforward to use,
-          especially if you're using TypeScript.
+          Documentation is a little sparse because to my knowledge I&apos;m the
+          only person who uses this, but it should be fairly straightforward to
+          use, especially if you&apos;re using TypeScript.
         </p>
         <p>
           If you want to see one of my projects that uses Eri check out{' '}

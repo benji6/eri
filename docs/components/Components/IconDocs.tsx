@@ -17,7 +17,10 @@ export default function IconDocs(_: RouteComponentProps) {
       <Paper>
         <h2>Icon</h2>
         <p>
-          ❤️ <a href="https://feathericons.com/">Feather</a>
+          <span aria-label="Heart" role="img">
+            ❤️
+          </span>{' '}
+          <a href="https://feathericons.com/">Feather</a>
         </p>
         <Icon name="check" />
         <Icon name="cross" />

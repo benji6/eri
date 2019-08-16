@@ -35,7 +35,7 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
       window.removeEventListener('keydown', keyDownListener)
       documentElement.removeAttribute('e-util')
     }
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   React.useEffect(() => {
     if (open) openMask()
@@ -44,9 +44,10 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
       window.scrollTo(0, scrollY)
       documentElement.style.top = null
     }
-  }, [open])
+  }, [open, scrollY])
 
   return ReactDOM.createPortal(
+    /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
     <div onKeyDown={handleKeyDown(onClose)}>
       <CSSTransition
         classNames="e-mask__mask-"
@@ -59,6 +60,7 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
       </CSSTransition>
       <div {...rest} className="e-mask__container" />
     </div>,
+    /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
     portalEl,
   )
 }

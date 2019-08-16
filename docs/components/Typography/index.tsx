@@ -58,11 +58,12 @@ export default function Typography(_: RouteComponentProps) {
       <Paper>
         <h3>CSS utilities</h3>
         <p e-util="center">
-          You can center any element by setting the e-util attribute to "center"
+          You can center any element by setting the e-util attribute to
+          &quot;center&quot;
         </p>
         <p e-util="center negative">
           You can give any element a negative sentiment by setting the e-util
-          attribute to "negative"
+          attribute to &quot;negative&quot;
         </p>
         <p e-util="pre-line">
           {`You can set white-space to pre-line...

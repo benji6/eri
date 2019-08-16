@@ -83,17 +83,17 @@ export default function DesignElements(_: RouteComponentProps) {
         <h4>Fade in</h4>
         <p>
           Set the <code>e-util</code> attribute on an element to{' '}
-          <code>"fade-in"</code> to get a fade in animation.
+          <code>&quot;fade-in&quot;</code> to get a fade in animation.
         </p>
         <h4>Slide in</h4>
         <p>
           Set the <code>e-util</code> attribute on an element to{' '}
-          <code>"slide-in"</code> to get a slide in animation.
+          <code>&quot;slide-in&quot;</code> to get a slide in animation.
         </p>
         <p>
           If you want to slide in a group of elements one by one then set the{' '}
           <code>e-util</code> attribute on the parent element to{' '}
-          <code>"slide-children-in"</code>.
+          <code>&quot;slide-children-in&quot;</code>.
         </p>
       </Paper>
       <Paper>

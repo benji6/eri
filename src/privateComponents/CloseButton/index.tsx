@@ -2,9 +2,9 @@ import * as React from 'react'
 import { Icon } from '../..'
 import './style.css'
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
-
-export default function CloseButton(props: IProps) {
+export default function CloseButton(
+  props: React.ButtonHTMLAttributes<HTMLButtonElement>,
+) {
   return (
     <button
       {...props}

@@ -27,7 +27,7 @@ export default function ButtonDocs(_: RouteComponentProps) {
         <ButtonGroup>
           <Button>Primary</Button>
           <Button variant="secondary">Secondary</Button>
-          <a href="#">Link</a>
+          <a href="/#">Link</a>
         </ButtonGroup>
         <ButtonGroup>
           <Button danger>Danger</Button>

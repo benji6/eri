@@ -5,11 +5,11 @@ import { IProps } from '../../../src/components/Pagination'
 import ConfigurableExample, { PropControlNumber } from './_ConfigurableExample'
 
 export default function PaginationDocs(_: RouteComponentProps) {
-  const [props, setProps] = React.useState<IProps>({
+  const [childProps, setChildProps] = React.useState<IProps>({
     page: 4,
     pageCount: 64,
     onChange(page) {
-      setProps(currentProps => ({ ...currentProps, page }))
+      setChildProps(currentProps => ({ ...currentProps, page }))
     },
   })
 
@@ -18,14 +18,18 @@ export default function PaginationDocs(_: RouteComponentProps) {
       <Paper>
         <h2>Pagination</h2>
       </Paper>
-      <ConfigurableExample example={<Pagination {...props} />}>
+      <ConfigurableExample example={<Pagination {...childProps} />}>
         <PropControlNumber
-          max={props.pageCount - 1}
+          max={childProps.pageCount - 1}
           name="page"
-          props={props}
-          setProps={setProps}
+          props={childProps}
+          setProps={setChildProps}
         />
-        <PropControlNumber name="pageCount" props={props} setProps={setProps} />
+        <PropControlNumber
+          name="pageCount"
+          props={childProps}
+          setProps={setChildProps}
+        />
       </ConfigurableExample>
     </PaperGroup>
   )

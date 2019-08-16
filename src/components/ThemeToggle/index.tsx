@@ -23,7 +23,7 @@ export default function ThemeToggle() {
     const storedIsDarkThemeOn = storedThemeVal === DARK
     if (storedIsDarkThemeOn === isDarkThemeOn) return
     setIsDarkThemeOn(storedIsDarkThemeOn)
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleChange = () => {
     if (isDarkThemeOn) {

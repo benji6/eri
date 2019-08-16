@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {}
-
-export default function Header(props: IProps) {
+export default function Header(
+  props: React.HtmlHTMLAttributes<HTMLDivElement>,
+) {
   return (
     <header>
       <div {...props} />

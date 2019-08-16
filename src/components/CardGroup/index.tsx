@@ -1,8 +1,8 @@
 import * as React from 'react'
 import './style.css'
 
-interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {}
-
-export default function CardGroup(props: IProps) {
+export default function CardGroup(
+  props: React.HtmlHTMLAttributes<HTMLDivElement>,
+) {
   return <div {...props} className="e-card-group" e-util="slide-children-in" />
 }

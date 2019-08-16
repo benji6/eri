@@ -20,6 +20,7 @@ export default function Menu({ children, onClose, open, ...rest }: IProps) {
         timeout={{ exit: getCssTime1() + 100 }}
         unmountOnExit
       >
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
         <nav {...rest} className="e-menu" onClick={e => e.stopPropagation()}>
           <div className="e-menu__close-button">
             <CloseButton onClick={onClose} />

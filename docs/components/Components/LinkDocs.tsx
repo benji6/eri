@@ -8,7 +8,7 @@ export default function LinkDocs(_: RouteComponentProps) {
       <Paper>
         <h2>Link</h2>
         <p>Links take you places.</p>
-        <a href="#">Click me!</a>
+        <a href="/#">Click me!</a>
       </Paper>
     </PaperGroup>
   )

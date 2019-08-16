@@ -1,8 +1,8 @@
 import * as React from 'react'
 import './style.css'
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export default function DisplayGroup({ children }: IProps) {
+export default function DisplayGroup({
+  children,
+}: React.HTMLAttributes<HTMLDivElement>) {
   return <div className="d-display-group">{children}</div>
 }

@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Icon from '../Icon'
 
-interface IProps extends React.HtmlHTMLAttributes<HTMLButtonElement> {}
-
-export default function MenuButton(props: IProps) {
+export default function MenuButton(
+  props: React.HtmlHTMLAttributes<HTMLButtonElement>,
+) {
   return (
     <button
       {...props}
