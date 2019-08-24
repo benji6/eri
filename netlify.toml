@@ -1,6 +1,10 @@
 [build]
-  command = "npm run style-guide:build"
+  command = "yarn style-guide:build"
   publish = "build"
+[[headers]]
+  for = "*"
+  [headers.values]
+    Content-Security-Policy = "frame-ancestors 'none'"
 [[headers]]
   for = "docs.*.(css|js)"
   [headers.values]
