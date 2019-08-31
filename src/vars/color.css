@@ -24,7 +24,7 @@
   --e-color-highlight-4: hsl(70, 100%, 45%);
   --e-color-highlight-5: hsl(148, 100%, 45%);
 
-  --e-color-mask: hsla(var(--e-hs-neutral), 10%, 0.95);
+  --e-color-mask: hsla(var(--e-hs-neutral), 10%, 0.75);
 
   --e-color-negative: hsl(var(--e-hue-negative), 75%, 48%);
   --e-color-negative-less: hsl(var(--e-hue-negative), 70%, 57%);
@@ -55,7 +55,7 @@
   --e-color-ground-less: hsl(var(--e-hs-neutral), 8%);
   --e-color-ground-more: hsl(var(--e-hs-neutral), 0%);
 
-  --e-color-mask: hsla(var(--e-hs-neutral), 20%, 0.95);
+  --e-color-mask: hsla(var(--e-hs-neutral), 20%, 0.75);
 
   --e-color-theme: hsl(var(--e-hue-theme), 100%, 78%);
   --e-color-theme-less: hsl(var(--e-hue-theme), 100%, 71%);
