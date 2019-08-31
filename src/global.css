@@ -55,6 +55,7 @@ main {
   display: flex;
   justify-content: center;
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
+  position: relative; /* used by Paper with side */
 }
 
 a,

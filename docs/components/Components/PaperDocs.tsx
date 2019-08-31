@@ -14,8 +14,12 @@ export default function PaperDocs(_: RouteComponentProps) {
       <Paper>
         <h3>Paper one</h3>
       </Paper>
-      <Paper>
+      <Paper side>
         <h3>Paper two</h3>
+        <p>
+          Give Paper a <code>side</code> prop to move it to the side on wider
+          screens.
+        </p>
       </Paper>
       <Paper>
         <h3>Paper three</h3>

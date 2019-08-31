@@ -6,6 +6,18 @@
   padding: var(--e-space-2);
 }
 
+@media (min-width: 1024px) {
+  .e-paper--side {
+    box-sizing: border-box;
+    left: var(--paper-group-margin);
+    max-width: calc(
+      (100% - var(--e-max-width-1)) / 2 - 2 * var(--paper-group-margin)
+    );
+    position: absolute;
+    top: var(--paper-group-margin);
+  }
+}
+
 .e-paper > *:first-child,
 .e-paper > *:first-child > *:first-child,
 .e-paper > *:first-child > *:first-child > *:first-child,

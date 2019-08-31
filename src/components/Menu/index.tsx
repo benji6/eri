@@ -5,7 +5,7 @@ import Mask from '../../privateComponents/Mask'
 import { getCssTime1 } from '../../utils/getCssVar'
 import './style.css'
 
-interface IProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean
   onClose(): void
 }

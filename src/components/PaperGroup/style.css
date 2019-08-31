@@ -1,11 +1,11 @@
 .e-paper-group {
-  --margin: var(--e-space-2);
+  --paper-group-margin: var(--e-space-2); /* used by Paper */
 
   display: grid;
   grid-gap: var(--e-space-3);
-  margin: var(--margin);
+  margin: var(--paper-group-margin);
   max-width: var(--e-max-width-1);
-  min-width: calc(100vw - 2 * var(--margin));
+  min-width: calc(100vw - 2 * var(--paper-group-margin));
 }
 
 @media (min-width: 501px) {
