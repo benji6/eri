@@ -5,7 +5,6 @@
     "jsx": "react",
     "lib": ["dom", "es2015"],
     "moduleResolution": "node",
-    "noImplicitReturns": true,
     "noUnusedLocals": true,
     "outDir": "dist",
     "strict": true,
