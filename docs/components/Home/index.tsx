@@ -45,8 +45,7 @@ export default function Home(_: RouteComponentProps) {
         </p>
         <p>
           To get the styles working you will need to include the CSS in your app
-          which can be found at <code>eri/dist/index.css</code> in your{' '}
-          <code>node_modules</code>.
+          which can be found at <code>eri/dist/index.css</code>.
         </p>
         <p>
           To get the font working you should include the following tag in your
