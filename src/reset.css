@@ -7,3 +7,16 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+button::-moz-focus-inner {
+  border: none;
+}
+button:disabled {
+  cursor: not-allowed;
+}

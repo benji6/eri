@@ -205,21 +205,6 @@ textarea[aria-invalid='true'] {
   box-shadow: none;
 }
 
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-button::-moz-focus-inner {
-  border: none;
-}
-
-button:disabled {
-  cursor: not-allowed;
-}
-
 small {
   color: var(--e-color-figure-less);
   font-size: var(--e-font-size-0);
