@@ -17,9 +17,12 @@ const recursiveMapOverDefinitionFiles = async (f, pathToCheck) => {
 const removeCssImports = definition =>
   definition
     .split('\n')
-    .filter(
-      line => !(line.trim().startsWith('import') && line.endsWith(".css';")),
-    )
+    .filter(line => {
+      const trimmedLine = line.trim()
+      return !(
+        trimmedLine.startsWith('import') && trimmedLine.endsWith(".css';")
+      )
+    })
     .join('\n')
 
 const recursiveRemoveCssImports = recursiveMapOverDefinitionFiles.bind(
