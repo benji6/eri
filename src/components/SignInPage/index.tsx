@@ -1,0 +1,109 @@
+import { Button, TextField, ButtonGroup, PaperGroup, Paper } from '../..'
+import { Formik, FormikProps, Form, Field, FieldProps } from 'formik'
+import * as React from 'react'
+import {
+  composeValidators,
+  emailValidator,
+  passwordValidator,
+  requiredValidator,
+} from '../../validators'
+
+interface IFormValues {
+  email: string
+  password: string
+}
+
+const initialValues = {
+  email: '',
+  password: '',
+}
+
+interface IProps {
+  onSubmit({
+    email,
+    password,
+    setSubmitError,
+  }: {
+    email: string
+    password: string
+    setSubmitError: (r: React.ReactNode) => void
+  }): Promise<void>
+  signUpLink: React.ReactNode
+}
+
+export default function SignInPage({ onSubmit, signUpLink }: IProps) {
+  const [submitError, setSubmitError] = React.useState<React.ReactNode>()
+
+  return (
+    <PaperGroup>
+      <Paper>
+        <h2>Sign in</h2>
+        <Formik
+          initialValues={initialValues}
+          onSubmit={async ({ email, password }, { setSubmitting }) => {
+            try {
+              await onSubmit({ email, password, setSubmitError })
+            } finally {
+              setSubmitting(false)
+            }
+          }}
+        >
+          {({ isSubmitting }: FormikProps<IFormValues>) => (
+            <Form noValidate>
+              <Field
+                name="email"
+                validate={composeValidators(requiredValidator, emailValidator)}
+              >
+                {({ field, form }: FieldProps<IFormValues>) => (
+                  <TextField
+                    {...field}
+                    autoComplete="email"
+                    error={
+                      form.submitCount &&
+                      form.touched.email &&
+                      form.errors.email
+                    }
+                    label="Email"
+                    type="email"
+                  />
+                )}
+              </Field>
+              <Field
+                name="password"
+                validate={composeValidators(
+                  requiredValidator,
+                  passwordValidator,
+                )}
+              >
+                {({ field, form }: FieldProps<IFormValues>) => (
+                  <TextField
+                    {...field}
+                    autoComplete="current-password"
+                    error={
+                      form.submitCount &&
+                      form.touched.password &&
+                      form.errors.password
+                    }
+                    label="Password"
+                    type="password"
+                  />
+                )}
+              </Field>
+              {submitError && (
+                <p e-util="center">
+                  <small e-util="negative">{submitError}</small>
+                </p>
+              )}
+              <ButtonGroup>
+                <Button disabled={isSubmitting}>Sign in</Button>
+              </ButtonGroup>
+              <p e-util="center">
+                <small>Don&apos;t have an account? {signUpLink}!</small>
+              </p>
+            </Form>
+          )}
+        </Formik>
+      </Paper>
+    </PaperGroup>
+  )
+}
