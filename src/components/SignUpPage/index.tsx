@@ -31,7 +31,7 @@ interface IProps {
   signInLink: React.ReactNode
 }
 
-export default function SignUp({ onSubmit, signInLink }: IProps) {
+export default function SignUpPage({ onSubmit, signInLink }: IProps) {
   const [submitError, setSubmitError] = React.useState<React.ReactNode>()
 
   return (
