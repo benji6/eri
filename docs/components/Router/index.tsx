@@ -14,6 +14,7 @@ import LinkDocs from '../Components/LinkDocs'
 import PagesHome from '../Components/PagesHome'
 import PaginationDocs from '../Components/PaginationDocs'
 import PaperDocs from '../Components/PaperDocs'
+import ResendVerificationPageDocs from '../Components/ResendVerificationPageDocs'
 import SignInPageDocs from '../Components/SignInPageDocs'
 import SignUpPageDocs from '../Components/SignUpPageDocs'
 import SpinnerDocs from '../Components/SpinnerDocs'
@@ -39,6 +40,7 @@ export default function Router() {
       <PaperDocs path="components/paper" />
       <SpinnerDocs path="components/spinner" />
       <PagesHome path="pages" />
+      <ResendVerificationPageDocs path="pages/resend-verification" />
       <SignInPageDocs path="pages/sign-in" />
       <SignUpPageDocs path="pages/sign-up" />
       <VerifyPageDocs path="pages/verify" />

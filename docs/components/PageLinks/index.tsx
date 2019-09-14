@@ -8,6 +8,11 @@ export default function PageLinks(
     <nav>
       <ul>
         <li>
+          <Link {...props} to="/pages/resend-verification">
+            Resend Verification
+          </Link>
+        </li>
+        <li>
           <Link {...props} to="/pages/sign-in">
             Sign in
           </Link>

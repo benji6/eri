@@ -30,6 +30,9 @@ export { default as Paper } from './components/Paper'
 export { default as PaperGroup } from './components/PaperGroup'
 export { default as RadioButton } from './components/RadioButton'
 export { default as RadioButtonGroup } from './components/RadioButtonGroup'
+export {
+  default as ResendVerificationPage,
+} from './components/ResendVerificationPage'
 export { default as Select } from './components/Select'
 export { default as SignInPage } from './components/SignInPage'
 export { default as SignUpPage } from './components/SignUpPage'
