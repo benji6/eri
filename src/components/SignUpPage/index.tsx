@@ -5,7 +5,7 @@ import {
   passwordValidator,
   composeValidators,
   requiredValidator,
-} from '../../validators'
+} from '../../utils/validators'
 import { PaperGroup, Paper, ButtonGroup, Button, TextField } from '../..'
 
 interface IFormValues {

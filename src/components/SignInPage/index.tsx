@@ -6,7 +6,7 @@ import {
   emailValidator,
   passwordValidator,
   requiredValidator,
-} from '../../validators'
+} from '../../utils/validators'
 
 interface IFormValues {
   email: string

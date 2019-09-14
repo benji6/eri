@@ -45,3 +45,4 @@ export { default as Toggle } from './components/Toggle'
 export { default as VerifyPage } from './components/VerifyPage'
 
 export { default as getCssVar } from './utils/getCssVar'
+export * from './utils/validators'
