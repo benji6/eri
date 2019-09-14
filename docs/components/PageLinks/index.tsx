@@ -17,6 +17,11 @@ export default function PageLinks(
             Sign up
           </Link>
         </li>
+        <li>
+          <Link {...props} to="/pages/verify">
+            Verify
+          </Link>
+        </li>
       </ul>
     </nav>
   )

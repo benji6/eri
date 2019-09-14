@@ -18,6 +18,7 @@ import SignInPageDocs from '../Components/SignInPageDocs'
 import SignUpPageDocs from '../Components/SignUpPageDocs'
 import SpinnerDocs from '../Components/SpinnerDocs'
 import Typography from '../Typography'
+import VerifyPageDocs from '../Components/VerifyPageDocs'
 
 export default function Router() {
   return (
@@ -40,6 +41,7 @@ export default function Router() {
       <PagesHome path="pages" />
       <SignInPageDocs path="pages/sign-in" />
       <SignUpPageDocs path="pages/sign-up" />
+      <VerifyPageDocs path="pages/verify" />
     </ReachRouter>
   )
 }
