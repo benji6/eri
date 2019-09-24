@@ -2,7 +2,7 @@ import * as React from 'react'
 import Icon from '../Icon'
 
 export default function MenuButton(
-  props: React.HTMLAttributes<HTMLButtonElement>,
+  props: React.ButtonHTMLAttributes<HTMLButtonElement>,
 ) {
   return (
     <button
