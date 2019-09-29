@@ -1,8 +1,18 @@
 :root {
-  --e-box-shadow-0: 0 0 0.25rem var(--e-color-balance-more);
-  --e-box-shadow-1: var(--e-box-shadow-1-no-color) var(--e-color-balance-more);
+  --e-box-shadow-color-0: hsla(var(--e-hsl-figure), 0.15);
+  --e-box-shadow-color-1: hsla(var(--e-hsl-figure), 0.18);
+  --e-box-shadow-color-2: hsla(var(--e-hsl-figure), 0.21);
+
+  --e-box-shadow-0: 0 0 2px var(--e-box-shadow-color-0),
+    0 1px 3px var(--e-box-shadow-color-0), 0 2px 4px var(--e-box-shadow-color-0),
+    0 3px 5px var(--e-box-shadow-color-0);
+  --e-box-shadow-1: 0 0 3px var(--e-box-shadow-color-1),
+    0 2px 4px var(--e-box-shadow-color-1), 0 4px 5px var(--e-box-shadow-color-1),
+    0 6px 6px var(--e-box-shadow-color-1);
   --e-box-shadow-1-no-color: 0 0 0.35rem;
-  --e-box-shadow-2: var(--e-box-shadow-2-no-color) var(--e-color-figure-more);
+  --e-box-shadow-2: 0 0 4px var(--e-box-shadow-color-2),
+    0 3px 5px var(--e-box-shadow-color-2), 0 5px 6px var(--e-box-shadow-color-2),
+    0 7px 7px var(--e-box-shadow-color-2);
   --e-box-shadow-2-no-color: 0 0 0.5rem;
   --e-input-box-shadow-focus: 0 0 var(--e-space-0) 0 var(--e-color-theme-less);
 }

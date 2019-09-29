@@ -4,12 +4,13 @@
   --e-hue-positive: 150;
   --e-saturation-0: 5%;
   --e-hs-neutral: var(--e-hue-theme), var(--e-saturation-0);
+  --e-hsl-figure: var(--e-hs-neutral), 10%;
 
   --e-color-balance: hsl(var(--e-hs-neutral), 45%);
   --e-color-balance-less: hsl(var(--e-hs-neutral), 55%);
   --e-color-balance-more: hsl(var(--e-hs-neutral), 35%);
 
-  --e-color-figure: hsl(var(--e-hs-neutral), 10%);
+  --e-color-figure: hsl(var(--e-hsl-figure));
   --e-color-figure-less: hsl(var(--e-hs-neutral), 20%);
   --e-color-figure-more: hsl(var(--e-hs-neutral), 0%);
 
@@ -42,12 +43,12 @@
 .e-theme-dark {
   --e-hue-theme: 185;
   --e-hue-negative: 310;
+  --e-hsl-figure: var(--e-hs-neutral), 90%;
 
   --e-color-balance: hsl(var(--e-hs-neutral), 60%);
   --e-color-balance-less: hsl(var(--e-hs-neutral), 50%);
   --e-color-balance-more: hsl(var(--e-hs-neutral), 70%);
 
-  --e-color-figure: hsl(var(--e-hs-neutral), 90%);
   --e-color-figure-less: hsl(var(--e-hs-neutral), 80%);
   --e-color-figure-more: hsl(var(--e-hs-neutral), 100%);
 

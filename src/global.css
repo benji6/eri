@@ -17,7 +17,7 @@ body {
 
 header {
   background: var(--e-color-theme-more);
-  box-shadow: var(--e-box-shadow-2);
+  box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground);
   padding: var(--e-space-1)
     calc((100% - var(--e-max-width-1)) / 2 - var(--e-space-2));
