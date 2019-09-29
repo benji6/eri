@@ -6,6 +6,7 @@ import DisplayGroup from './DisplayGroup'
 import Easing from './Easing'
 import Space from './Space'
 import Time from './Time'
+import BoxShadow from './BoxShadow'
 
 export default function DesignElements(_: RouteComponentProps) {
   return (
@@ -51,6 +52,14 @@ export default function DesignElements(_: RouteComponentProps) {
         <DisplayGroup>
           <Space varName="--e-border-width-0" />
           <Space varName="--e-border-width-1" />
+        </DisplayGroup>
+      </Paper>
+      <Paper>
+        <h3>Box shadow</h3>
+        <DisplayGroup>
+          <BoxShadow varName="--e-box-shadow-0" />
+          <BoxShadow varName="--e-box-shadow-1" />
+          <BoxShadow varName="--e-box-shadow-2" />
         </DisplayGroup>
       </Paper>
       <Paper>
