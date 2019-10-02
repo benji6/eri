@@ -3,9 +3,10 @@
 
   display: grid;
   grid-gap: var(--e-space-3);
-  margin: var(--paper-group-margin);
   max-width: var(--e-max-width-1);
   min-width: calc(100vw - 2 * var(--paper-group-margin));
+  overflow: hidden; /* prevents scrollbar issues on sliding transitions */
+  padding: var(--paper-group-margin);
 }
 
 @media (min-width: 501px) {
