@@ -2,10 +2,16 @@ import * as React from 'react'
 import { PaperGroup, Paper } from '../..'
 
 interface IProps {
+  appName: React.ReactNode
   resendVerificationLink: React.ReactNode
+  signInLink: React.ReactNode
 }
 
-export default function VerifyPage({ resendVerificationLink }: IProps) {
+export default function VerifyPage({
+  appName,
+  resendVerificationLink,
+  signInLink,
+}: IProps) {
   return (
     <PaperGroup>
       <Paper>
@@ -14,8 +20,8 @@ export default function VerifyPage({ resendVerificationLink }: IProps) {
           Check your email and click the link to confirm your email address.
         </p>
         <p>
-          When you&apos;re finished come back to Omniboard to sign in and get
-          started!
+          When you&apos;re finished come back to {appName} to {signInLink} and
+          get started!
         </p>
         <p e-util="center">
           <small>
