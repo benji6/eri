@@ -1,8 +1,16 @@
 import * as React from 'react'
 import './style.css'
 
-export default function PaperGroup(
-  props: React.HTMLAttributes<HTMLDivElement>,
-) {
-  return <div {...props} className="e-paper-group" e-util="slide-children-in" />
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+  noSlide?: boolean
+}
+
+export default function PaperGroup({ noSlide, ...rest }: IProps) {
+  return (
+    <div
+      {...rest}
+      className="e-paper-group"
+      {...(noSlide ? undefined : { 'e-util': 'slide-children-in' })}
+    />
+  )
 }
