@@ -27,7 +27,6 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const isShareApiAvailable = Boolean(nav.share)
 
 export default function ShareButton({
-  onClick,
   text,
   title = document.title,
   url = location.origin,
@@ -37,10 +36,7 @@ export default function ShareButton({
     <ButtonGroup>
       <Button
         {...rest}
-        onClick={e => {
-          nav.share!({ text, title, url })
-          if (onClick) onClick(e)
-        }}
+        onClick={() => nav.share!({ text, title, url })}
         variant="secondary"
       >
         Share <Icon name="share" />
