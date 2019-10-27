@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Formik, FormikProps, Form, Field, FieldProps } from 'formik'
 import {
   emailValidator,
   passwordValidator,
@@ -8,14 +7,12 @@ import {
 } from '../../utils/validators'
 import { PaperGroup, Paper, ButtonGroup, Button, TextField } from '../..'
 
-interface IFormValues {
-  email: string
-  password: string
-}
+const validateEmail = composeValidators(requiredValidator, emailValidator)
+const validatePassword = composeValidators(requiredValidator, passwordValidator)
 
-const initialValues = {
-  email: '',
-  password: '',
+interface IFormElement extends HTMLFormElement {
+  email: HTMLInputElement
+  password: HTMLInputElement
 }
 
 interface IProps {
@@ -32,77 +29,64 @@ interface IProps {
 }
 
 export default function SignUpPage({ onSubmit, signInLink }: IProps) {
+  const [emailError, setEmailError] = React.useState('')
+  const [passwordError, setPasswordError] = React.useState('')
+  const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [submitError, setSubmitError] = React.useState<React.ReactNode>()
 
   return (
     <PaperGroup>
       <Paper>
         <h2>Sign up</h2>
-        <Formik
-          initialValues={initialValues}
-          onSubmit={async ({ email, password }, { setSubmitting }) => {
+        <form
+          noValidate
+          onSubmit={async e => {
+            e.preventDefault()
+            const email = (e.target as IFormElement).email.value
+            const password = (e.target as IFormElement).password.value
+            const emailErrorMessage = validateEmail(email)
+            const passwordErrorMessage = validatePassword(password)
+            if (emailErrorMessage || passwordErrorMessage) {
+              setEmailError(emailErrorMessage || '')
+              setPasswordError(passwordErrorMessage || '')
+              return
+            }
+            if (emailError) setEmailError('')
+            if (passwordError) setPasswordError('')
+            setIsSubmitting(true)
             try {
               await onSubmit({ email, password, setSubmitError })
             } finally {
-              setSubmitting(false)
+              setIsSubmitting(false)
             }
           }}
         >
-          {({ isSubmitting }: FormikProps<IFormValues>) => (
-            <Form noValidate>
-              <Field
-                name="email"
-                validate={composeValidators(requiredValidator, emailValidator)}
-              >
-                {({ field, form }: FieldProps<IFormValues>) => (
-                  <TextField
-                    {...field}
-                    autoComplete="email"
-                    error={
-                      form.submitCount &&
-                      form.touched.email &&
-                      form.errors.email
-                    }
-                    label="Email"
-                    type="email"
-                  />
-                )}
-              </Field>
-              <Field
-                name="password"
-                validate={composeValidators(
-                  requiredValidator,
-                  passwordValidator,
-                )}
-              >
-                {({ field, form }: FieldProps<IFormValues>) => (
-                  <TextField
-                    {...field}
-                    autoComplete="new-password"
-                    error={
-                      form.submitCount &&
-                      form.touched.password &&
-                      form.errors.password
-                    }
-                    label="Password"
-                    type="password"
-                  />
-                )}
-              </Field>
-              {submitError && (
-                <p e-util="center">
-                  <small e-util="negative">{submitError}</small>
-                </p>
-              )}
-              <ButtonGroup>
-                <Button disabled={isSubmitting}>Sign up</Button>
-              </ButtonGroup>
-              <p e-util="center">
-                <small>Already have an account? {signInLink}!</small>
-              </p>
-            </Form>
+          <TextField
+            autoComplete="email"
+            error={emailError}
+            label="Email"
+            name="email"
+            type="email"
+          />
+          <TextField
+            autoComplete="new-password"
+            error={passwordError}
+            label="Password"
+            name="password"
+            type="password"
+          />
+          {submitError && (
+            <p e-util="center">
+              <small e-util="negative">{submitError}</small>
+            </p>
           )}
-        </Formik>
+          <ButtonGroup>
+            <Button disabled={isSubmitting}>Sign up</Button>
+          </ButtonGroup>
+          <p e-util="center">
+            <small>Already have an account? {signInLink}!</small>
+          </p>
+        </form>
       </Paper>
     </PaperGroup>
   )
