@@ -30,7 +30,7 @@ export default function ShareButton({
   onClick,
   text,
   title = document.title,
-  url = location.host,
+  url = location.origin,
   ...rest
 }: IProps) {
   return (
@@ -46,7 +46,6 @@ export default function ShareButton({
               document.documentElement.appendChild(inputElement).select()
               document.execCommand('copy')
               document.documentElement.removeChild(inputElement)
-              alert('Copied!')
             } catch (e) {
               prompt('Copy this link: ', url)
             } finally {
