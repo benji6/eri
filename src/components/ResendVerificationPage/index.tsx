@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Formik, FormikProps, Form, Field, FieldProps } from 'formik'
 import {
   composeValidators,
   emailValidator,
@@ -7,12 +6,10 @@ import {
 } from '../../utils/validators'
 import { PaperGroup, Paper, ButtonGroup, Button, TextField } from '../..'
 
-interface IFormValues {
-  email: string
-}
+const validateEmail = composeValidators(requiredValidator, emailValidator)
 
-const initialValues = {
-  email: '',
+interface IFormElement extends HTMLFormElement {
+  email: HTMLInputElement
 }
 
 interface IProps {
@@ -32,58 +29,51 @@ export default function ResendVerificationPage({
   signInLink,
   signUpLink,
 }: IProps) {
+  const [emailError, setEmailError] = React.useState('')
+  const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [submitError, setSubmitError] = React.useState<React.ReactNode>()
 
   return (
     <PaperGroup>
       <Paper>
         <h2>Resend verification email</h2>
-        <Formik
-          initialValues={initialValues}
-          onSubmit={async ({ email }, { setSubmitting }) => {
+        <form
+          noValidate
+          onSubmit={async (e: React.FormEvent<IFormElement>) => {
+            e.preventDefault()
+            const email = (e.target as IFormElement).email.value
+            const emailErrorMessage = validateEmail(email)
+            if (emailErrorMessage) return setEmailError(emailErrorMessage)
+            if (emailError) setEmailError('')
+            setIsSubmitting(true)
             try {
               await onSubmit({ email, setSubmitError })
             } finally {
-              setSubmitting(false)
+              setIsSubmitting(false)
             }
           }}
         >
-          {({ isSubmitting }: FormikProps<IFormValues>) => (
-            <Form noValidate>
-              <Field
-                name="email"
-                validate={composeValidators(requiredValidator, emailValidator)}
-              >
-                {({ field, form }: FieldProps<IFormValues>) => (
-                  <TextField
-                    {...field}
-                    autoComplete="email"
-                    error={
-                      form.submitCount &&
-                      form.touched.email &&
-                      form.errors.email
-                    }
-                    label="Email"
-                    type="email"
-                  />
-                )}
-              </Field>
-              {submitError && (
-                <p e-util="center">
-                  <small e-util="negative">{submitError}</small>
-                </p>
-              )}
-              <ButtonGroup>
-                <Button disabled={isSubmitting}>Resend</Button>
-              </ButtonGroup>
-              <p e-util="center">
-                <small>
-                  Looking for the {signInLink} or {signUpLink} pages?
-                </small>
-              </p>
-            </Form>
+          <TextField
+            autoComplete="email"
+            error={emailError}
+            label="Email"
+            name="email"
+            type="email"
+          />
+          {submitError && (
+            <p e-util="center">
+              <small e-util="negative">{submitError}</small>
+            </p>
           )}
-        </Formik>
+          <ButtonGroup>
+            <Button disabled={isSubmitting}>Resend</Button>
+          </ButtonGroup>
+          <p e-util="center">
+            <small>
+              Looking for the {signInLink} or {signUpLink} pages?
+            </small>
+          </p>
+        </form>
       </Paper>
     </PaperGroup>
   )
