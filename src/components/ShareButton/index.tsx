@@ -33,30 +33,28 @@ export default function ShareButton({
   url = location.origin,
   ...rest
 }: IProps) {
-  return (
-    isShareApiAvailable && (
-      <ButtonGroup>
-        <Button
-          {...rest}
-          onClick={e => {
-            if (nav.share) return nav.share({ text, title, url })
-            try {
-              const inputElement = document.createElement('input')
-              inputElement.value = url
-              document.documentElement.appendChild(inputElement).select()
-              document.execCommand('copy')
-              document.documentElement.removeChild(inputElement)
-            } catch (e) {
-              prompt('Copy this link: ', url)
-            } finally {
-              if (onClick) onClick(e)
-            }
-          }}
-          variant="secondary"
-        >
-          Share <Icon name="share" />
-        </Button>
-      </ButtonGroup>
-    )
-  )
+  return isShareApiAvailable ? (
+    <ButtonGroup>
+      <Button
+        {...rest}
+        onClick={e => {
+          if (nav.share) return nav.share({ text, title, url })
+          try {
+            const inputElement = document.createElement('input')
+            inputElement.value = url
+            document.documentElement.appendChild(inputElement).select()
+            document.execCommand('copy')
+            document.documentElement.removeChild(inputElement)
+          } catch (e) {
+            prompt('Copy this link: ', url)
+          } finally {
+            if (onClick) onClick(e)
+          }
+        }}
+        variant="secondary"
+      >
+        Share <Icon name="share" />
+      </Button>
+    </ButtonGroup>
+  ) : null
 }
