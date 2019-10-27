@@ -31,6 +31,7 @@ export default function IconDocs(_: RouteComponentProps) {
         <Icon name="plus" />
         <Icon name="right" />
         <Icon name="save" />
+        <Icon name="share" />
         <Icon name="sun" />
       </Paper>
       <ConfigurableExample example={<Icon {...props} />}>
