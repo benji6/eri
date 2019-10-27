@@ -38,18 +38,8 @@ export default function ShareButton({
       <Button
         {...rest}
         onClick={e => {
-          if (nav.share) return nav.share({ text, title, url })
-          try {
-            const inputElement = document.createElement('input')
-            inputElement.value = url
-            document.documentElement.appendChild(inputElement).select()
-            document.execCommand('copy')
-            document.documentElement.removeChild(inputElement)
-          } catch (e) {
-            prompt('Copy this link: ', url)
-          } finally {
-            if (onClick) onClick(e)
-          }
+          nav.share!({ text, title, url })
+          if (onClick) onClick(e)
         }}
         variant="secondary"
       >
