@@ -34,6 +34,7 @@ export {
   default as ResendVerificationPage,
 } from './components/ResendVerificationPage'
 export { default as Select } from './components/Select'
+export { default as ShareButton } from './components/ShareButton'
 export { default as SignInPage } from './components/SignInPage'
 export { default as SignUpPage } from './components/SignUpPage'
 export { default as Spinner } from './components/Spinner'

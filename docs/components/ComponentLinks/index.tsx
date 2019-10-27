@@ -53,6 +53,11 @@ export default function ComponentLinks(
           </Link>
         </li>
         <li>
+          <Link {...props} to="/components/share-button">
+            ShareButton
+          </Link>
+        </li>
+        <li>
           <Link {...props} to="/components/spinner">
             Spinner
           </Link>

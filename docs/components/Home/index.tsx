@@ -1,6 +1,6 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Paper, PaperGroup } from '../../../src'
+import { Paper, PaperGroup, ShareButton } from '../../../src'
 import Banner from './Banner'
 
 export default function Home(_: RouteComponentProps) {
@@ -77,6 +77,7 @@ export default function Home(_: RouteComponentProps) {
           If you want to see one of my projects that uses Eri check out{' '}
           <a href="https://github.com/benji6/webnotes">Webnotes</a>.
         </p>
+        <ShareButton />
       </Paper>
     </PaperGroup>
   )

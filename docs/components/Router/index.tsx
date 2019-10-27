@@ -15,6 +15,7 @@ import PagesHome from '../Components/PagesHome'
 import PaginationDocs from '../Components/PaginationDocs'
 import PaperDocs from '../Components/PaperDocs'
 import ResendVerificationPageDocs from '../Components/ResendVerificationPageDocs'
+import ShareButtonDocs from '../Components/ShareButtonDocs'
 import SignInPageDocs from '../Components/SignInPageDocs'
 import SignUpPageDocs from '../Components/SignUpPageDocs'
 import SpinnerDocs from '../Components/SpinnerDocs'
@@ -38,6 +39,7 @@ export default function Router() {
       <LinkDocs path="components/link" />
       <PaginationDocs path="components/pagination" />
       <PaperDocs path="components/paper" />
+      <ShareButtonDocs path="components/share-button" />
       <SpinnerDocs path="components/spinner" />
       <PagesHome path="pages" />
       <ResendVerificationPageDocs path="pages/resend-verification" />
