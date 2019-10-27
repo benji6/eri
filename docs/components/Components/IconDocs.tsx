@@ -22,6 +22,7 @@ export default function IconDocs(_: RouteComponentProps) {
           </span>{' '}
           <a href="https://feathericons.com/">Feather</a>
         </p>
+        <Icon name="copy" />
         <Icon name="check" />
         <Icon name="cross" />
         <Icon name="down" />
