@@ -12,6 +12,9 @@ import './vars/time.css'
 import './vars/typography.css'
 import './vars/z-index.css'
 
+import './migrations'
+import './metaThemeColor'
+
 export { default as Button } from './components/Button'
 export { default as ButtonGroup } from './components/ButtonGroup'
 export { default as Card } from './components/Card'
@@ -41,7 +44,6 @@ export { default as Spinner } from './components/Spinner'
 export { default as SubHeading } from './components/SubHeading'
 export { default as TextArea } from './components/TextArea'
 export { default as TextField } from './components/TextField'
-export { default as ThemeToggle } from './components/ThemeToggle'
 export { default as Toggle } from './components/Toggle'
 export { default as VerifyPage } from './components/VerifyPage'
 

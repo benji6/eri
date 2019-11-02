@@ -40,26 +40,28 @@
   --e-color-theme-app: hsl(var(--e-hue-theme), 100%, 8%);
 }
 
-.e-theme-dark {
-  --e-hue-theme: 185;
-  --e-hue-negative: 310;
-  --e-hsl-figure: var(--e-hs-neutral), 90%;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --e-hue-theme: 185;
+    --e-hue-negative: 310;
+    --e-hsl-figure: var(--e-hs-neutral), 90%;
 
-  --e-color-balance: hsl(var(--e-hs-neutral), 60%);
-  --e-color-balance-less: hsl(var(--e-hs-neutral), 50%);
-  --e-color-balance-more: hsl(var(--e-hs-neutral), 70%);
+    --e-color-balance: hsl(var(--e-hs-neutral), 60%);
+    --e-color-balance-less: hsl(var(--e-hs-neutral), 50%);
+    --e-color-balance-more: hsl(var(--e-hs-neutral), 70%);
 
-  --e-color-figure-less: hsl(var(--e-hs-neutral), 80%);
-  --e-color-figure-more: hsl(var(--e-hs-neutral), 100%);
+    --e-color-figure-less: hsl(var(--e-hs-neutral), 80%);
+    --e-color-figure-more: hsl(var(--e-hs-neutral), 100%);
 
-  --e-color-ground: hsl(var(--e-hs-neutral), 7%);
-  --e-color-ground-less: hsl(var(--e-hs-neutral), 11%);
-  --e-color-ground-more: hsl(var(--e-hs-neutral), 3%);
+    --e-color-ground: hsl(var(--e-hs-neutral), 7%);
+    --e-color-ground-less: hsl(var(--e-hs-neutral), 11%);
+    --e-color-ground-more: hsl(var(--e-hs-neutral), 3%);
 
-  --e-color-mask: hsla(var(--e-hs-neutral), 20%, 0.75);
+    --e-color-mask: hsla(var(--e-hs-neutral), 20%, 0.75);
 
-  --e-color-theme: hsl(var(--e-hue-theme), 100%, 78%);
-  --e-color-theme-less: hsl(var(--e-hue-theme), 100%, 71%);
-  --e-color-theme-more: hsl(var(--e-hue-theme), 100%, 85%);
-  --e-color-theme-app: hsl(var(--e-hue-theme), 100%, 92%);
+    --e-color-theme: hsl(var(--e-hue-theme), 100%, 78%);
+    --e-color-theme-less: hsl(var(--e-hue-theme), 100%, 71%);
+    --e-color-theme-more: hsl(var(--e-hue-theme), 100%, 85%);
+    --e-color-theme-app: hsl(var(--e-hue-theme), 100%, 92%);
+  }
 }

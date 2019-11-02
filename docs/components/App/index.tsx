@@ -1,6 +1,6 @@
 import { Link } from '@reach/router'
 import * as React from 'react'
-import { Header, Menu, MenuButton, ThemeToggle } from '../../../src'
+import { Header, Menu, MenuButton } from '../../../src'
 import ComponentLinks from '../ComponentLinks'
 import PageLinks from '../PageLinks'
 import Router from '../Router'
@@ -20,7 +20,6 @@ export default function App() {
         <MenuButton onClick={handleMenuOpen} />
       </Header>
       <Menu onClose={handleMenuClose} open={isMenuOpen}>
-        <ThemeToggle />
         <p>
           <Link onClick={handleMenuClose} to="/">
             Home
