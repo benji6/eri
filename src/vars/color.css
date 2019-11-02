@@ -52,9 +52,9 @@
   --e-color-figure-less: hsl(var(--e-hs-neutral), 80%);
   --e-color-figure-more: hsl(var(--e-hs-neutral), 100%);
 
-  --e-color-ground: hsl(var(--e-hs-neutral), 4%);
-  --e-color-ground-less: hsl(var(--e-hs-neutral), 8%);
-  --e-color-ground-more: hsl(var(--e-hs-neutral), 0%);
+  --e-color-ground: hsl(var(--e-hs-neutral), 6%);
+  --e-color-ground-less: hsl(var(--e-hs-neutral), 10%);
+  --e-color-ground-more: hsl(var(--e-hs-neutral), 2%);
 
   --e-color-mask: hsla(var(--e-hs-neutral), 20%, 0.75);
 
