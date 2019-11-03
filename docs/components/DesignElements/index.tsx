@@ -107,6 +107,17 @@ export default function DesignElements(_: RouteComponentProps) {
       </Paper>
       <Paper>
         <h3>Color</h3>
+        <p>
+          Eri uses the{' '}
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <code>prefers-color-scheme</code>
+          </a>{' '}
+          media feature to display a dark theme to users who prefer it.
+        </p>
         <h4>Figure</h4>
         <DisplayGroup>
           <Color varName="--e-color-figure-more" />
