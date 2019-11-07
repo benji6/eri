@@ -12,7 +12,6 @@ import './vars/time.css'
 import './vars/typography.css'
 import './vars/z-index.css'
 
-import './migrations'
 import './metaThemeColor'
 
 export { default as Button } from './components/Button'
