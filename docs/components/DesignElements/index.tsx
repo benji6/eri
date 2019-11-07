@@ -116,7 +116,10 @@ export default function DesignElements(_: RouteComponentProps) {
           >
             <code>prefers-color-scheme</code>
           </a>{' '}
-          media feature to display a dark theme to users who prefer it.
+          media feature to display a dark theme to users who prefer it. If you
+          want to disable this automatic behavior you can add{' '}
+          <code>e-util&quot;no-dark-theme&quot;</code> to your <code>html</code>{' '}
+          tag.
         </p>
         <h4>Figure</h4>
         <DisplayGroup>

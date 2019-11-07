@@ -41,7 +41,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([e-util*='no-dark-theme']) {
     --e-hue-theme: 185;
     --e-hue-negative: 310;
     --e-hsl-figure: var(--e-hs-neutral), 86%;
