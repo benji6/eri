@@ -1,7 +1,7 @@
-const styles = getComputedStyle(document.documentElement)
-
 export default function getCssVar(prop: string) {
-  return styles.getPropertyValue(prop).trim()
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue(prop)
+    .trim()
 }
 
 export const getCssTime0 = (): number =>
