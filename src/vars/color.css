@@ -14,8 +14,8 @@
   --e-color-figure-less: hsl(var(--e-hs-neutral), 20%);
   --e-color-figure-more: hsl(var(--e-hs-neutral), 0%);
 
-  --e-color-ground: hsl(var(--e-hs-neutral), 96%);
-  --e-color-ground-less: hsl(var(--e-hs-neutral), 92%);
+  --e-color-ground: hsl(var(--e-hs-neutral), 95%);
+  --e-color-ground-less: hsl(var(--e-hs-neutral), 90%);
   --e-color-ground-more: hsl(var(--e-hs-neutral), 100%);
 
   --e-color-highlight-0: hsl(184, 100%, 48%);
@@ -53,8 +53,8 @@
     --e-color-figure-less: hsl(var(--e-hs-neutral), 76%);
     --e-color-figure-more: hsl(var(--e-hs-neutral), 96%);
 
-    --e-color-ground: hsl(var(--e-hs-neutral), 8%);
-    --e-color-ground-less: hsl(var(--e-hs-neutral), 12%);
+    --e-color-ground: hsl(var(--e-hs-neutral), 9%);
+    --e-color-ground-less: hsl(var(--e-hs-neutral), 14%);
     --e-color-ground-more: hsl(var(--e-hs-neutral), 4%);
 
     --e-color-mask: hsla(var(--e-hs-neutral), 20%, 0.75);
