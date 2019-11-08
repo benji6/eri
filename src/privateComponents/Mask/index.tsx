@@ -4,8 +4,9 @@ import { CSSTransition } from 'react-transition-group'
 import { getCssTime1 } from '../../utils/getCssVar'
 import './style.css'
 
-const documentElement = document.documentElement as HTMLElement
-const portalEl = document.body.appendChild(document.createElement('div'))
+const portalEl =
+  typeof document !== 'undefined' &&
+  document.body.appendChild(document.createElement('div'))
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean
@@ -23,8 +24,8 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
 
   const openMask = () => {
     setScrollY(window.scrollY)
-    documentElement.style.top = `${-window.scrollY}px`
-    documentElement.setAttribute('e-util', 'no-scroll')
+    document.documentElement.style.top = `${-window.scrollY}px`
+    document.documentElement.setAttribute('e-util', 'no-scroll')
   }
 
   React.useEffect(() => {
@@ -33,34 +34,36 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
     window.addEventListener('keydown', keyDownListener)
     return () => {
       window.removeEventListener('keydown', keyDownListener)
-      documentElement.removeAttribute('e-util')
+      document.documentElement.removeAttribute('e-util')
     }
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   React.useEffect(() => {
     if (open) openMask()
     else {
-      documentElement.removeAttribute('e-util')
+      document.documentElement.removeAttribute('e-util')
       window.scrollTo(0, scrollY)
-      documentElement.style.top = null
+      document.documentElement.style.top = null
     }
   }, [open, scrollY])
 
-  return ReactDOM.createPortal(
-    /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-    <div onKeyDown={handleKeyDown(onClose)}>
-      <CSSTransition
-        classNames="e-mask__mask-"
-        in={open}
-        mountOnEnter
-        timeout={{ exit: getCssTime1() + 100 }}
-        unmountOnExit
-      >
-        <div className="e-mask__mask" onClick={onClose} />
-      </CSSTransition>
-      <div {...rest} className="e-mask__container" />
-    </div>,
-    /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-    portalEl,
-  )
+  return portalEl
+    ? ReactDOM.createPortal(
+        /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+        <div onKeyDown={handleKeyDown(onClose)}>
+          <CSSTransition
+            classNames="e-mask__mask-"
+            in={open}
+            mountOnEnter
+            timeout={{ exit: getCssTime1() + 100 }}
+            unmountOnExit
+          >
+            <div className="e-mask__mask" onClick={onClose} />
+          </CSSTransition>
+          <div {...rest} className="e-mask__container" />
+        </div>,
+        /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+        portalEl,
+      )
+    : null
 }

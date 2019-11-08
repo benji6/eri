@@ -16,15 +16,11 @@ interface INavigator extends Navigator {
   share?: (options: ShareOptions) => Promise<void>
 }
 
-const nav = navigator as INavigator
-
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string
   title?: string
   url?: string
 }
-
-const isShareApiAvailable = Boolean(nav.share)
 
 export default function ShareButton({
   text,
@@ -32,11 +28,11 @@ export default function ShareButton({
   url = location.origin,
   ...rest
 }: IProps) {
-  return isShareApiAvailable ? (
+  return 'share' in navigator ? (
     <ButtonGroup>
       <Button
         {...rest}
-        onClick={() => nav.share!({ text, title, url })}
+        onClick={() => (navigator as INavigator).share!({ text, title, url })}
         variant="secondary"
       >
         Share <Icon name="share" />
