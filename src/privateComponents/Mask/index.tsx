@@ -43,7 +43,7 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
     else {
       document.documentElement.removeAttribute('e-util')
       window.scrollTo(0, scrollY)
-      document.documentElement.style.top = null
+      document.documentElement.style.removeProperty('top')
     }
   }, [open, scrollY])
 
