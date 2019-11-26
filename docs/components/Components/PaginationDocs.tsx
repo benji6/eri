@@ -17,6 +17,11 @@ export default function PaginationDocs(_: RouteComponentProps) {
     <PaperGroup>
       <Paper>
         <h2>Pagination</h2>
+        <p>
+          Page buttons have a <code>data-page</code> attribute which specifies
+          which page they navigate to. You can use this to add click handlers if
+          you are not using React client side.
+        </p>
       </Paper>
       <ConfigurableExample example={<Pagination {...childProps} />}>
         <PropControlNumber
