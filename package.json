@@ -19,6 +19,7 @@
     "start": "parcel docs/index.html",
     "style-guide:build": "rm -rf build && parcel build docs/index.html -d build --no-source-maps",
     "test": "run-p test:*",
+    "test:audit": "yarn audit --level high || [ $? -lt 8 ]",
     "test:format": "prettier --check '**/*'",
     "test:lint": "eslint --ext js,ts,tsx .",
     "test:types": "tsc --noEmit"
