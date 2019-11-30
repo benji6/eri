@@ -9,12 +9,14 @@
 
 @media (min-width: 500px) {
   :root {
-    --e-time-0: calc(var(--e-time-base-value) * 1.1);
+    /* Do not calc() this because it is read from a script */
+    --e-time-0: 0.1s;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --e-time-0: calc(var(--e-time-base-value) * 1.2);
+    /* Do not calc() this because it is read from a script */
+    --e-time-0: 0.11s;
   }
 }
