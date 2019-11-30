@@ -1,0 +1,10 @@
+.e-menu-button {
+  align-items: center;
+  display: flex;
+  font-size: var(--e-font-size-0);
+  font-weight: var(--e-font-weight-bold);
+}
+
+.e-menu-button__text {
+  margin-right: var(--e-space-0);
+}
