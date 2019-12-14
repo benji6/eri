@@ -34,6 +34,9 @@
     "url": "https://github.com/benji6/eri/issues"
   },
   "homepage": "https://github.com/benji6/eri#readme",
+  "dependencies": {
+    "react-transition-group": "^4.1.1"
+  },
   "devDependencies": {
     "@reach/router": "^1.2.1",
     "@types/reach__router": "^1.2.4",
@@ -62,8 +65,5 @@
   "peerDependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
-  },
-  "dependencies": {
-    "react-transition-group": "^4.1.1"
   }
 }
