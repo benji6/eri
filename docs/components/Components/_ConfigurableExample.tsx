@@ -1,4 +1,5 @@
 import * as React from 'react'
+import CodeSnippet from './_CodeSnippet'
 import { Paper, Select, TextField, Toggle } from '../../../src'
 
 export default function ConfigurableExample({
@@ -12,6 +13,7 @@ export default function ConfigurableExample({
     <Paper>
       <h3>Configurable example</h3>
       {example}
+      <CodeSnippet>{example}</CodeSnippet>
       <form noValidate>{children}</form>
     </Paper>
   )

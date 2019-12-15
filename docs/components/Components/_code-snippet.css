@@ -1,0 +1,5 @@
+.d-code-snippet {
+  background: var(--e-color-ground);
+  overflow: auto;
+  padding: var(--e-space-1);
+}

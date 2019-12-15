@@ -1,0 +1,18 @@
+.hljs-literal,
+.hljs-number,
+.hljs-template-variable,
+.hljs-variable,
+.hljs-tag .hljs-attr {
+  color: var(--e-color-highlight-1);
+}
+
+.hljs-doctag,
+.hljs-string {
+  color: var(--e-color-highlight-3);
+}
+
+.hljs-attribute,
+.hljs-name,
+.hljs-tag {
+  color: var(--e-color-highlight-0);
+}
