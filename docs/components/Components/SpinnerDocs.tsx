@@ -1,5 +1,6 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
+import ConfigurableExample from './_ConfigurableExample'
 import { Paper, PaperGroup, Spinner } from '../../../src'
 
 export default function SpinnerDocs(_: RouteComponentProps) {
@@ -7,8 +8,8 @@ export default function SpinnerDocs(_: RouteComponentProps) {
     <PaperGroup>
       <Paper>
         <h2>Spinner</h2>
-        <Spinner />
       </Paper>
+      <ConfigurableExample example={<Spinner />} />
     </PaperGroup>
   )
 }

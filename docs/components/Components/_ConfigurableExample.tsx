@@ -7,12 +7,14 @@ export default function ConfigurableExample({
   children,
 }: {
   example: React.ReactNode
-  children: React.ReactNode
+  children?: React.ReactNode
 }) {
   return (
     <Paper>
-      <h3>Configurable example</h3>
+      {children && <h3>Configurable example</h3>}
+      <hr />
       {example}
+      <hr />
       <CodeSnippet>{example}</CodeSnippet>
       <form noValidate>{children}</form>
     </Paper>
