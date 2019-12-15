@@ -4,6 +4,7 @@
 *.ico
 *.json
 *.lock
+*.log
 *.svg
 *.toml
 build
