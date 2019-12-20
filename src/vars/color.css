@@ -5,6 +5,8 @@
   --e-saturation-0: 5%;
   --e-hs-neutral: var(--e-hue-theme), var(--e-saturation-0);
   --e-hsl-figure: var(--e-hs-neutral), 10%;
+  --e-lightness-spread: 7%;
+  --e-lightness-theme: 22%;
 
   --e-color-balance: hsl(var(--e-hs-neutral), 45%);
   --e-color-balance-less: hsl(var(--e-hs-neutral), 55%);
@@ -34,10 +36,22 @@
   --e-color-positive: hsl(var(--e-hue-positive), 75%, 48%);
   --e-color-positive-less: hsl(var(--e-hue-positive), 70%, 57%);
 
-  --e-color-theme: hsl(var(--e-hue-theme), 100%, 22%);
-  --e-color-theme-less: hsl(var(--e-hue-theme), 100%, 29%);
-  --e-color-theme-more: hsl(var(--e-hue-theme), 100%, 15%);
-  --e-color-theme-app: hsl(var(--e-hue-theme), 100%, 8%);
+  --e-color-theme: hsl(var(--e-hue-theme), 100%, var(--e-lightness-theme));
+  --e-color-theme-less: hsl(
+    var(--e-hue-theme),
+    100%,
+    calc(var(--e-lightness-theme) + var(--e-lightness-spread))
+  );
+  --e-color-theme-more: hsl(
+    var(--e-hue-theme),
+    100%,
+    calc(var(--e-lightness-theme) - var(--e-lightness-spread))
+  );
+  --e-color-theme-app: hsl(
+    var(--e-hue-theme),
+    100%,
+    calc(var(--e-lightness-theme) - 2 * var(--e-lightness-spread))
+  );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +59,8 @@
     --e-hue-theme: 185;
     --e-hue-negative: 310;
     --e-hsl-figure: var(--e-hs-neutral), 86%;
+    --e-lightness-spread: -7%;
+    --e-lightness-theme: 70%;
 
     --e-color-balance: hsl(var(--e-hs-neutral), 60%);
     --e-color-balance-less: hsl(var(--e-hs-neutral), 50%);
@@ -58,10 +74,5 @@
     --e-color-ground-more: hsl(var(--e-hs-neutral), 4%);
 
     --e-color-mask: hsla(var(--e-hs-neutral), 20%, 0.75);
-
-    --e-color-theme: hsl(var(--e-hue-theme), 100%, 78%);
-    --e-color-theme-less: hsl(var(--e-hue-theme), 100%, 71%);
-    --e-color-theme-more: hsl(var(--e-hue-theme), 100%, 85%);
-    --e-color-theme-app: hsl(var(--e-hue-theme), 100%, 92%);
   }
 }
