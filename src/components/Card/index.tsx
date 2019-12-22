@@ -16,6 +16,7 @@ export default function Card(
   return (
     <button
       {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}
+      aria-label="View card"
       className="e-card"
       e-util="ripple"
       type="button"
