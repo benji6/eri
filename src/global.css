@@ -48,7 +48,7 @@ header button {
 
 header a:hover,
 header button:hover {
-  color: var(--e-color-highlight-3);
+  color: var(--e-color-highlight-default);
 }
 
 main {
@@ -59,7 +59,7 @@ main {
 
 a,
 button {
-  outline-color: var(--e-color-highlight-1);
+  outline-color: var(--e-color-highlight-default);
 }
 
 fieldset {

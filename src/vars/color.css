@@ -27,6 +27,8 @@
   --e-color-highlight-4: hsl(70, 100%, 45%);
   --e-color-highlight-5: hsl(148, 100%, 45%);
 
+  --e-color-highlight-default: var(--e-color-highlight-3);
+
   --e-color-mask: hsla(var(--e-hs-neutral), 10%, 0.75);
 
   --e-color-negative: hsl(var(--e-hue-negative), 75%, 48%);
@@ -72,6 +74,7 @@
     --e-color-ground: hsl(var(--e-hs-neutral), 9%);
     --e-color-ground-less: hsl(var(--e-hs-neutral), 14%);
     --e-color-ground-more: hsl(var(--e-hs-neutral), 4%);
+    --e-color-highlight-default: var(--e-color-highlight-1);
 
     --e-color-mask: hsla(var(--e-hs-neutral), 20%, 0.75);
   }
