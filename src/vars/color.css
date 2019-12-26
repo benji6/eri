@@ -86,9 +86,9 @@
     --e-hue-theme: 190;
     --e-hue-negative: 310;
     --e-balance-lightness: 60%;
-    --e-figure-lightness: 80%;
+    --e-figure-lightness: 70%;
     --e-ground-lightness: 9%;
-    --e-theme-lightness: 70%;
+    --e-theme-lightness: 75%;
 
     --e-color-highlight-default: var(--e-color-highlight-1);
 
