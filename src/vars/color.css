@@ -84,11 +84,11 @@
   :root:not([e-util*='no-dark-theme']) {
     --e-spread-modifier: -1;
     --e-balance-lightness: 60%;
-    --e-figure-lightness: 70%;
+    --e-figure-lightness: 67%;
     --e-ground-lightness: 9%;
     --e-negative-hue: 310;
     --e-theme-hue: 190;
-    --e-theme-lightness: 75%;
+    --e-theme-lightness: 40%;
 
     --e-color-highlight-default: var(--e-color-highlight-1);
 
