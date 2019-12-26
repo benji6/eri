@@ -1,46 +1,46 @@
 :root {
   --e-spread-modifier: 1;
-  --e-hue-theme: 210;
-  --e-hue-negative: 345;
-  --e-hue-positive: 150;
-  --e-hs-neutral: var(--e-hue-theme), 5%;
   --e-balance-lightness: 45%;
   --e-balance-lightness-spread: calc(10% * var(--e-spread-modifier));
+  --e-figure-hsl: var(--e-neutral-hs), var(--e-figure-lightness);
   --e-figure-lightness: 10%;
   --e-figure-lightness-spread: calc(10% * var(--e-spread-modifier));
   --e-ground-lightness: 95%;
   --e-ground-lightness-spread: calc(5% * var(--e-spread-modifier));
+  --e-negative-hue: 345;
+  --e-neutral-hs: var(--e-theme-hue), 5%;
+  --e-positive-hue: 150;
+  --e-theme-hue: 210;
   --e-theme-lightness: 22%;
   --e-theme-lightness-spread: calc(7% * var(--e-spread-modifier));
-  --e-hsl-figure: var(--e-hs-neutral), var(--e-figure-lightness);
 
-  --e-color-balance: hsl(var(--e-hs-neutral), var(--e-balance-lightness));
+  --e-color-balance: hsl(var(--e-neutral-hs), var(--e-balance-lightness));
   --e-color-balance-less: hsl(
-    var(--e-hs-neutral),
+    var(--e-neutral-hs),
     calc(var(--e-balance-lightness) + var(--e-balance-lightness-spread))
   );
   --e-color-balance-more: hsl(
-    var(--e-hs-neutral),
+    var(--e-neutral-hs),
     calc(var(--e-balance-lightness) - var(--e-balance-lightness-spread))
   );
 
-  --e-color-figure: hsl(var(--e-hs-neutral), var(--e-figure-lightness));
+  --e-color-figure: hsl(var(--e-neutral-hs), var(--e-figure-lightness));
   --e-color-figure-less: hsl(
-    var(--e-hs-neutral),
+    var(--e-neutral-hs),
     calc(var(--e-figure-lightness) + var(--e-figure-lightness-spread))
   );
   --e-color-figure-more: hsl(
-    var(--e-hs-neutral),
+    var(--e-neutral-hs),
     calc(var(--e-figure-lightness) - var(--e-figure-lightness-spread))
   );
 
-  --e-color-ground: hsl(var(--e-hs-neutral), var(--e-ground-lightness));
+  --e-color-ground: hsl(var(--e-neutral-hs), var(--e-ground-lightness));
   --e-color-ground-less: hsl(
-    var(--e-hs-neutral),
+    var(--e-neutral-hs),
     calc(var(--e-ground-lightness) - var(--e-ground-lightness-spread))
   );
   --e-color-ground-more: hsl(
-    var(--e-hs-neutral),
+    var(--e-neutral-hs),
     calc(var(--e-ground-lightness) + var(--e-ground-lightness-spread))
   );
 
@@ -53,28 +53,28 @@
 
   --e-color-highlight-default: var(--e-color-highlight-3);
 
-  --e-color-mask: hsla(var(--e-hs-neutral), 10%, 0.75);
+  --e-color-mask: hsla(var(--e-neutral-hs), 10%, 0.75);
 
-  --e-color-negative: hsl(var(--e-hue-negative), 75%, 48%);
-  --e-color-negative-less: hsl(var(--e-hue-negative), 70%, 57%);
-  --e-color-negative-more: hsl(var(--e-hue-negative), 90%, 42%);
+  --e-color-negative: hsl(var(--e-negative-hue), 75%, 48%);
+  --e-color-negative-less: hsl(var(--e-negative-hue), 70%, 57%);
+  --e-color-negative-more: hsl(var(--e-negative-hue), 90%, 42%);
 
-  --e-color-positive: hsl(var(--e-hue-positive), 75%, 48%);
-  --e-color-positive-less: hsl(var(--e-hue-positive), 70%, 57%);
+  --e-color-positive: hsl(var(--e-positive-hue), 75%, 48%);
+  --e-color-positive-less: hsl(var(--e-positive-hue), 70%, 57%);
 
-  --e-color-theme: hsl(var(--e-hue-theme), 100%, var(--e-theme-lightness));
+  --e-color-theme: hsl(var(--e-theme-hue), 100%, var(--e-theme-lightness));
   --e-color-theme-less: hsl(
-    var(--e-hue-theme),
+    var(--e-theme-hue),
     100%,
     calc(var(--e-theme-lightness) + var(--e-theme-lightness-spread))
   );
   --e-color-theme-more: hsl(
-    var(--e-hue-theme),
+    var(--e-theme-hue),
     100%,
     calc(var(--e-theme-lightness) - var(--e-theme-lightness-spread))
   );
   --e-color-theme-app: hsl(
-    var(--e-hue-theme),
+    var(--e-theme-hue),
     100%,
     calc(var(--e-theme-lightness) - 2 * var(--e-theme-lightness-spread))
   );
@@ -83,15 +83,15 @@
 @media (prefers-color-scheme: dark) {
   :root:not([e-util*='no-dark-theme']) {
     --e-spread-modifier: -1;
-    --e-hue-theme: 190;
-    --e-hue-negative: 310;
     --e-balance-lightness: 60%;
     --e-figure-lightness: 70%;
     --e-ground-lightness: 9%;
+    --e-negative-hue: 310;
+    --e-theme-hue: 190;
     --e-theme-lightness: 75%;
 
     --e-color-highlight-default: var(--e-color-highlight-1);
 
-    --e-color-mask: hsla(var(--e-hs-neutral), 20%, 0.75);
+    --e-color-mask: hsla(var(--e-neutral-hs), 20%, 0.75);
   }
 }
