@@ -83,7 +83,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([e-util*='no-dark-theme']) {
     --e-spread-modifier: -1;
-    --e-hue-theme: 185;
+    --e-hue-theme: 190;
     --e-hue-negative: 310;
     --e-balance-lightness: 60%;
     --e-figure-lightness: 80%;
