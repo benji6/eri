@@ -60,7 +60,7 @@ button.e-paper::before {
   right: 0;
   top: 0;
   transition: opacity var(--e-time-0) var(--e-easing-standard);
-  z-index: 1;
+  z-index: var(--e-z-index-1);
 }
 
 button.e-paper:hover::before,
