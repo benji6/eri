@@ -15,6 +15,7 @@
     "@typescript-eslint/no-empty-function": 0,
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/no-unused-vars": [2, {"argsIgnorePattern": "^_$" }],
+    "jsx-a11y/no-autofocus": 0,
     "react-hooks/exhaustive-deps": 2,
     "react-hooks/rules-of-hooks": 2,
     "react/self-closing-comp": 2

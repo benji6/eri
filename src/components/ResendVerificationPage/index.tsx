@@ -55,6 +55,7 @@ export default function ResendVerificationPage({
         >
           <TextField
             autoComplete="email"
+            autoFocus
             error={emailError}
             label="Email"
             name="email"

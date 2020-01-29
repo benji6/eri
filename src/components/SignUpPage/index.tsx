@@ -63,6 +63,7 @@ export default function SignUpPage({ onSubmit, signInLink }: IProps) {
         >
           <TextField
             autoComplete="email"
+            autoFocus
             error={emailError}
             label="Email"
             name="email"
