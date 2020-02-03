@@ -61,7 +61,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-element-to-jsx-string": "^14.1.0",
-    "semantic-release": "^16.0.1",
+    "semantic-release": "^17.0.2",
     "typescript": "^3.5.2"
   },
   "peerDependencies": {
