@@ -48,14 +48,13 @@ export default function Home(_: RouteComponentProps) {
           which can be found at <code>eri/dist/index.css</code>.
         </p>
         <p>
-          To get the font working you should include the following tag in your
-          HTML page:{' '}
+          To get the font working you should include the following tags in your
+          HTML page:
+          <br />
           <code>
-            {
-              '<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900&display=swap" rel="stylesheet">'
-            }
+            {`<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900&display=swap" rel="stylesheet">`}
           </code>
-          .
         </p>
       </Paper>
       <Paper>
