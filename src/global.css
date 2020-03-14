@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  background: var(--e-color-theme-more);
+  background: var(--e-color-theme);
   box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground);
   padding: var(--e-space-1)
