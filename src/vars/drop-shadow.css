@@ -1,5 +1,7 @@
 :root {
-  --e-drop-shadow-0-no-color: 0 2px 2px;
+  --e-drop-shadow-0-blur-radius: 2px;
+
+  --e-drop-shadow-0-no-color: 0 2px var(--e-drop-shadow-0-blur-radius);
   --e-drop-shadow-1-no-color: 0 3px 3px;
   --e-drop-shadow-2-no-color: 0 4px 4px;
 
@@ -14,6 +16,6 @@
   );
 
   --e-drop-shadow-input-focus: drop-shadow(
-    0 0 var(--e-space-0) var(--e-color-theme-less)
+    0 0 var(--e-drop-shadow-0-blur-radius) var(--e-color-theme-less)
   );
 }
