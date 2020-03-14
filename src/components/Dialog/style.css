@@ -48,7 +48,7 @@
 .e-dialog__dialog {
   background-color: var(--e-color-ground);
   border-radius: var(--e-border-radius-1);
-  box-shadow: var(--e-box-shadow-1);
+  filter: var(--e-drop-shadow-1);
   margin: 0 var(--e-space-3);
   max-width: var(--e-max-width-0);
   padding: var(--e-space-3);

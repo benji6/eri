@@ -1,7 +1,7 @@
 .e-paper {
   background: var(--e-color-ground-more);
   border-radius: var(--e-border-radius-0);
-  box-shadow: var(--e-box-shadow-0);
+  filter: var(--e-drop-shadow-0);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
   padding: var(--e-space-2);
 }

@@ -15,7 +15,7 @@
   margin-right: var(--e-space-2);
   padding: var(--e-border-width-1);
   transition-duration: var(--e-time-0);
-  transition-property: background-color, border-color, box-shadow;
+  transition-property: background-color, border-color, filter;
   transition-timing-function: var(--e-easing-standard);
   width: var(--toggle-width);
 }

@@ -3,7 +3,7 @@
   border: var(--e-border-default);
   border-color: var(--color);
   border-radius: var(--e-border-radius-1);
-  box-shadow: var(--e-box-shadow-1-no-color) var(--color);
+  filter: drop-shadow(var(--e-drop-shadow-1-no-color) var(--color));
   padding: var(--e-space-2);
 }
 
@@ -11,18 +11,18 @@ button.e-card {
   display: block;
   text-align: initial;
   transition-duration: var(--e-time-0);
-  transition-property: box-shadow, transform;
+  transition-property: filter, transform;
   transition-timing-function: var(--e-easing-standard);
   width: 100%;
 }
 
 button.e-card:focus {
-  box-shadow: var(--e-box-shadow-2-no-color) var(--color);
+  filter: drop-shadow(var(--e-drop-shadow-2-no-color) var(--color));
   transform: scale(1.01);
 }
 
 button.e-card:hover {
-  box-shadow: var(--e-box-shadow-2-no-color) var(--color);
+  filter: drop-shadow(var(--e-drop-shadow-2-no-color) var(--color));
   transform: scale(1.01);
 }
 

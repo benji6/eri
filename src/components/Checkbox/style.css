@@ -60,7 +60,7 @@
 
 .e-checkbox__input:focus ~ .e-checkbox__appearance {
   border-color: var(--e-color-theme);
-  box-shadow: var(--e-input-box-shadow-focus);
+  filter: var(--e-drop-shadow-input-focus);
 }
 
 .e-checkbox__input:hover ~ .e-checkbox__appearance {
@@ -69,7 +69,7 @@
 
 .e-checkbox__input[aria-invalid='true'] ~ .e-checkbox__appearance {
   border-color: var(--e-color-negative);
-  box-shadow: none;
+  filter: none;
 }
 
 .e-checkbox__input:checked ~ .e-checkbox__appearance {

@@ -17,8 +17,8 @@ body {
 
 header {
   background: var(--e-color-theme);
-  box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground);
+  filter: var(--e-drop-shadow-1);
   padding: var(--e-space-1)
     calc((100% - var(--e-max-width-1)) / 2 - var(--e-space-2));
   position: relative;
@@ -188,7 +188,7 @@ input:not([type='checkbox']):focus,
 select:focus,
 textarea:focus {
   border-color: var(--e-color-theme-less);
-  box-shadow: var(--e-input-box-shadow-focus);
+  filter: var(--e-drop-shadow-input-focus);
 }
 
 input:not([type='checkbox']):hover,

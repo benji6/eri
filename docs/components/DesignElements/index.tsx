@@ -3,10 +3,10 @@ import * as React from 'react'
 import { Paper, PaperGroup } from '../../../src'
 import Color from './Color'
 import DisplayGroup from './DisplayGroup'
+import DropShadow from './DropShadow'
 import Easing from './Easing'
 import Space from './Space'
 import Time from './Time'
-import BoxShadow from './BoxShadow'
 
 export default function DesignElements(_: RouteComponentProps) {
   return (
@@ -55,11 +55,11 @@ export default function DesignElements(_: RouteComponentProps) {
         </DisplayGroup>
       </Paper>
       <Paper>
-        <h3>Box shadow</h3>
+        <h3>Drop shadow</h3>
         <DisplayGroup>
-          <BoxShadow varName="--e-box-shadow-0" />
-          <BoxShadow varName="--e-box-shadow-1" />
-          <BoxShadow varName="--e-box-shadow-2" />
+          <DropShadow varName="--e-drop-shadow-0" />
+          <DropShadow varName="--e-drop-shadow-1" />
+          <DropShadow varName="--e-drop-shadow-2" />
         </DisplayGroup>
       </Paper>
       <Paper>

@@ -1,6 +1,6 @@
-.d-box-shadow__visual {
-  height: var(--e-space-4);
-  width: var(--e-space-4);
+.d-drop-shadow__visual {
   background: var(--e-color-ground-more);
   border-radius: var(--e-border-radius-0);
+  height: var(--e-space-4);
+  width: var(--e-space-4);
 }

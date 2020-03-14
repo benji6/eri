@@ -1,0 +1,19 @@
+:root {
+  --e-drop-shadow-0-no-color: 0 2px 2px;
+  --e-drop-shadow-1-no-color: 0 3px 3px;
+  --e-drop-shadow-2-no-color: 0 4px 4px;
+
+  --e-drop-shadow-0: drop-shadow(
+    var(--e-drop-shadow-0-no-color) hsla(var(--e-figure-hsl), 0.4)
+  );
+  --e-drop-shadow-1: drop-shadow(
+    var(--e-drop-shadow-1-no-color) hsla(var(--e-figure-hsl), 0.6)
+  );
+  --e-drop-shadow-2: drop-shadow(
+    var(--e-drop-shadow-2-no-color) hsla(var(--e-figure-hsl), 0.8)
+  );
+
+  --e-drop-shadow-input-focus: drop-shadow(
+    0 0 var(--e-space-0) var(--e-color-theme-less)
+  );
+}
