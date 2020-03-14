@@ -1,6 +1,4 @@
 .e-menu {
-  --width: 16em;
-
   background: var(--e-color-ground-more);
   bottom: 0;
   box-sizing: border-box;
@@ -12,12 +10,12 @@
   right: 0;
   top: 0;
   transition: transform var(--e-time-1) var(--e-easing-standard);
-  width: var(--width);
+  width: var(--e-menu-width);
 }
 
 .e-menu--enter,
 .e-menu--exit-active {
-  transform: translateX(var(--width));
+  transform: translateX(var(--e-menu-width));
   transition-timing-function: var(--e-easing-accelerate);
 }
 
