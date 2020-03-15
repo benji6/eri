@@ -48,6 +48,11 @@ export default function ComponentLinks(
           </Link>
         </li>
         <li>
+          <Link {...props} to="/components/main">
+            Main
+          </Link>
+        </li>
+        <li>
           <Link {...props} to="/components/pagination">
             Pagination
           </Link>

@@ -1,0 +1,5 @@
+.e-main {
+  display: flex;
+  justify-content: center;
+  position: relative; /* used by Paper with side */
+}

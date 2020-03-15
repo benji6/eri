@@ -15,10 +15,30 @@ body {
   margin: 0;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  position: relative; /* used by Paper with side */
+a {
+  color: var(--e-color-theme);
+  transition-duration: var(--e-time-0);
+  transition-property: color, text-decoration-color;
+  transition-timing-function: var(--e-easing-standard);
+}
+
+a:focus {
+  color: var(--e-color-theme-less);
+  text-decoration-color: transparent;
+}
+
+a:hover {
+  color: var(--e-color-theme-less);
+  text-decoration-color: transparent;
+}
+
+a:active {
+  color: var(--e-color-theme-more);
+  text-decoration-color: transparent;
+}
+
+a::-moz-focus-inner {
+  border: none;
 }
 
 a,
@@ -103,36 +123,6 @@ p {
 
 p + p {
   margin: var(--e-font-margin-paragraph);
-}
-
-a::-moz-focus-inner {
-  border: none;
-}
-
-main a,
-nav a {
-  color: var(--e-color-theme);
-  transition-duration: var(--e-time-0);
-  transition-property: color, text-decoration-color;
-  transition-timing-function: var(--e-easing-standard);
-}
-
-main a:focus,
-nav a:focus {
-  color: var(--e-color-theme-less);
-  text-decoration-color: transparent;
-}
-
-main a:hover,
-nav a:hover {
-  color: var(--e-color-theme-less);
-  text-decoration-color: transparent;
-}
-
-main a:active,
-nav a:active {
-  color: var(--e-color-theme-more);
-  text-decoration-color: transparent;
 }
 
 input:not([type='checkbox']),
