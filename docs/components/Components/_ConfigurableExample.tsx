@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
 import CodeSnippet from './_CodeSnippet'
 import { Paper, Select, TextField, Toggle } from '../../../src'
@@ -21,13 +22,13 @@ export default function ConfigurableExample({
   )
 }
 
-export const PropControlBoolean = ({
+export const PropControlBoolean = <Props extends { [k: string]: any }>({
   name,
   props,
   setProps,
 }: {
-  name: string
-  props: object
+  name: keyof Props
+  props: Props
   setProps: React.Dispatch<React.SetStateAction<typeof props>>
 }) => (
   <Toggle
@@ -37,15 +38,15 @@ export const PropControlBoolean = ({
   />
 )
 
-export const PropControlEnum = ({
+export const PropControlEnum = <Props extends { [k: string]: any }>({
   name,
   options,
   props,
   setProps,
 }: {
-  name: string
-  options: Array<string | undefined>
-  props: object
+  name: keyof Props
+  options: string[]
+  props: Props
   setProps: React.Dispatch<React.SetStateAction<typeof props>>
 }) => (
   <Select
@@ -66,15 +67,15 @@ export const PropControlEnum = ({
   </Select>
 )
 
-export const PropControlNumber = ({
+export const PropControlNumber = <Props extends { [k: string]: any }>({
   max = Infinity,
   name,
   props,
   setProps,
 }: {
   max?: number
-  name: string
-  props: object
+  name: keyof Props
+  props: Props
   setProps: React.Dispatch<React.SetStateAction<typeof props>>
 }) => (
   <TextField
@@ -87,13 +88,13 @@ export const PropControlNumber = ({
   />
 )
 
-export const PropControlString = ({
+export const PropControlString = <Props extends { [k: string]: any }>({
   name,
   props,
   setProps,
 }: {
-  name: string
-  props: object
+  name: keyof Props
+  props: Props
   setProps: React.Dispatch<React.SetStateAction<typeof props>>
 }) => (
   <TextField

@@ -15,42 +15,6 @@ body {
   margin: 0;
 }
 
-header {
-  background: var(--e-color-theme);
-  color: var(--e-color-ground);
-  filter: var(--e-drop-shadow-1);
-  padding: var(--e-space-1)
-    calc((100% - var(--e-max-width-1)) / 2 - var(--e-space-2));
-  position: relative;
-}
-
-header > div {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 var(--e-space-2);
-}
-
-header h1 {
-  color: inherit;
-  margin: 0;
-}
-
-header a {
-  color: inherit;
-  text-decoration: none;
-}
-
-header a,
-header button {
-  transition: color var(--e-time-1) var(--e-easing-standard);
-}
-
-header a:hover,
-header button:hover {
-  color: var(--e-color-highlight-default);
-}
-
 main {
   display: flex;
   justify-content: center;

@@ -8,6 +8,7 @@ import DesignElements from '../DesignElements'
 import DialogDocs from '../Components/DialogDocs'
 import FabDocs from '../Components/FabDocs'
 import FormDocs from '../Components/FormDocs'
+import HeaderDocs from '../Components/HeaderDocs'
 import Home from '../Home'
 import IconDocs from '../Components/IconDocs'
 import LinkDocs from '../Components/LinkDocs'
@@ -35,6 +36,7 @@ export default function Router() {
       <DialogDocs path="components/dialog" />
       <FabDocs path="components/fab" />
       <FormDocs path="components/form" />
+      <HeaderDocs path="components/header" />
       <IconDocs path="components/icon" />
       <LinkDocs path="components/link" />
       <PaginationDocs path="components/pagination" />

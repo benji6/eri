@@ -16,7 +16,7 @@ interface INavigator extends Navigator {
   share?: (options: ShareOptions) => Promise<void>
 }
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string
   title?: string
   url?: string

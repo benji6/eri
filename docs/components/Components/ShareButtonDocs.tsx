@@ -1,15 +1,14 @@
 import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Paper, PaperGroup, ShareButton } from '../../../src'
-import { IProps } from '../../../src/components/Button'
+import { IProps } from '../../../src/components/ShareButton'
 import ConfigurableExample, { PropControlString } from './_ConfigurableExample'
 
 export default function ShareButtonDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({
-    children: 'Click me!',
-    danger: false,
-    disabled: false,
-    variant: 'primary',
+    text: 'Example text',
+    title: document.title,
+    url: location.origin,
   })
 
   return (

@@ -33,6 +33,11 @@ export default function ComponentLinks(
           </Link>
         </li>
         <li>
+          <Link {...props} to="/components/header">
+            Header
+          </Link>
+        </li>
+        <li>
           <Link {...props} to="/components/icon">
             Icon
           </Link>
