@@ -4,6 +4,7 @@
 }
 
 .e-mask__mask {
+  backdrop-filter: blur(var(--e-space-0));
   background-color: var(--e-color-mask);
   bottom: 0;
   left: 0;
