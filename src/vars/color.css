@@ -81,7 +81,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([e-util*='no-dark-theme']) {
+  :root {
     --e-spread-modifier: -1;
     --e-balance-lightness: 60%;
     --e-figure-lightness: 67%;
