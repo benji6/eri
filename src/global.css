@@ -80,7 +80,7 @@ h3,
 h4 {
   color: var(--e-color-figure-more);
   font-weight: var(--e-font-weight-bold);
-  margin: var(--e-font-margin-heading);
+  margin: var(--e-space-3) 0 var(--e-space-0);
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
@@ -117,6 +117,8 @@ hr {
 }
 
 p {
+  --e-font-margin-paragraph: var(--e-space-2) 0;
+
   margin: var(--e-font-margin-paragraph);
   margin-top: 0;
 }

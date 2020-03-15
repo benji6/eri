@@ -8,6 +8,4 @@
   --e-font-weight-bold: 700;
   --e-font-weight-normal: 400;
   --e-line-height: 1.25;
-  --e-font-margin-heading: var(--e-space-3) 0 var(--e-space-0);
-  --e-font-margin-paragraph: var(--e-space-2) 0;
 }
