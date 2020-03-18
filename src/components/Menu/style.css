@@ -1,7 +1,7 @@
 .e-menu {
   --width: calc(100vw / 4);
 
-  background: var(--e-color-ground);
+  background: var(--e-color-ground-more);
   bottom: 0;
   box-sizing: border-box;
   filter: var(--e-drop-shadow-1);
