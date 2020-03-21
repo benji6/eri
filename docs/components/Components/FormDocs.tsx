@@ -7,7 +7,6 @@ import {
   Paper,
   PaperGroup,
   RadioButton,
-  RadioButtonGroup,
   Select,
   TextArea,
   TextField,
@@ -26,7 +25,7 @@ export default function FormDocs(_: RouteComponentProps) {
           <TextField error="Oops!" label="Text field error" />
           <TextArea label="Text area" supportiveText="Some supportive text" />
           <TextArea error="Oops!" label="Text area error" />
-          <RadioButtonGroup label="Radio group">
+          <RadioButton.Group label="Radio group">
             <RadioButton name="selector" value="one">
               One
             </RadioButton>
@@ -39,8 +38,8 @@ export default function FormDocs(_: RouteComponentProps) {
             <RadioButton name="selector" value="four">
               Four
             </RadioButton>
-          </RadioButtonGroup>
-          <RadioButtonGroup error="Oops!" label="Radio group error">
+          </RadioButton.Group>
+          <RadioButton.Group error="Oops!" label="Radio group error">
             <RadioButton name="error-state-selector" value="one">
               One
             </RadioButton>
@@ -50,7 +49,7 @@ export default function FormDocs(_: RouteComponentProps) {
             <RadioButton name="error-state-selector" value="three">
               Three
             </RadioButton>
-          </RadioButtonGroup>
+          </RadioButton.Group>
           <Select label="Select" supportiveText="Some supportive text">
             <option hidden>Please select</option>
             <option>An option</option>
