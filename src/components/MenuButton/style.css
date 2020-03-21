@@ -5,6 +5,12 @@
   font-weight: var(--e-font-weight-bold);
 }
 
+@media (min-width: 1024px) {
+  .e-menu-button {
+    display: none;
+  }
+}
+
 .e-menu-button__text {
   margin-right: var(--e-space-0);
 }

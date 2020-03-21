@@ -3,3 +3,9 @@
   justify-content: center;
   position: relative; /* used by Paper with side */
 }
+
+@media (min-width: 1024px) {
+  .e-main {
+    padding-right: var(--e-menu-width);
+  }
+}
