@@ -1,4 +1,3 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import {
   Button,
@@ -15,6 +14,7 @@ import {
   TextField,
   Toggle,
 } from '../../../src'
+import { RouteComponentProps } from '@reach/router'
 
 export default function FormDocs(_: RouteComponentProps) {
   return (

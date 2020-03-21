@@ -1,5 +1,5 @@
-import * as React from 'react'
 import './style.css'
+import * as React from 'react'
 
 export type IProps = React.HTMLAttributes<HTMLElement>
 

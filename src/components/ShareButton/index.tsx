@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ButtonGroup, Button, Icon } from '../..'
+import { Button, ButtonGroup, Icon } from '../..'
 
 type ShareOptions =
   | {

@@ -1,12 +1,12 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Button, ButtonGroup, Paper, PaperGroup } from '../../../src'
-import { IProps } from '../../../src/components/Button'
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlEnum,
   PropControlString,
 } from './_ConfigurableExample'
+import { IProps } from '../../../src/components/Button'
+import { RouteComponentProps } from '@reach/router'
 
 export default function ButtonDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({

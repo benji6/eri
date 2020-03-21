@@ -1,7 +1,7 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Paper, PaperGroup, ShareButton } from '../../../src'
 import Banner from './Banner'
+import { RouteComponentProps } from '@reach/router'
 
 export default function Home(_: RouteComponentProps) {
   return (

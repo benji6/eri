@@ -1,6 +1,6 @@
+import './style.css'
 import * as React from 'react'
 import Field from '../../privateComponents/Field'
-import './style.css'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: React.ReactNode

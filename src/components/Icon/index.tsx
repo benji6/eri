@@ -1,5 +1,5 @@
-import * as React from 'react'
 import './style.css'
+import * as React from 'react'
 
 export const iconNameMap = {
   check: <polyline points="20 6 9 17 4 12" />,

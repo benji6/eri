@@ -1,7 +1,7 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Paper, PaperGroup } from '../../../src'
 import PageLinks from '../PageLinks'
+import { RouteComponentProps } from '@reach/router'
 
 export default function PagesHome(_: RouteComponentProps) {
   return (

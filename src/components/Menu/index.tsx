@@ -1,9 +1,9 @@
+import './style.css'
 import * as React from 'react'
 import { CSSTransition } from 'react-transition-group'
 import CloseButton from '../../privateComponents/CloseButton'
 import Mask from '../../privateComponents/Mask'
 import { getCssTime1 } from '../../utils/getCssVar'
-import './style.css'
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean

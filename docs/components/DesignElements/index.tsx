@@ -1,10 +1,10 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Paper, PaperGroup } from '../../../src'
 import Color from './Color'
 import DisplayGroup from './DisplayGroup'
 import DropShadow from './DropShadow'
 import Easing from './Easing'
+import { RouteComponentProps } from '@reach/router'
 import Space from './Space'
 import Time from './Time'
 

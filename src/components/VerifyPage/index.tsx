@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { PaperGroup, Paper } from '../..'
+import { Paper, PaperGroup } from '../..'
 
 interface IProps {
   appName: React.ReactNode

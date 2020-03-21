@@ -1,6 +1,6 @@
+import './style.css'
 import * as React from 'react'
 import Icon from '../Icon'
-import './style.css'
 
 const maxPageButtons = 5
 const halfMaxPageButtons = Math.floor(maxPageButtons / 2)

@@ -1,8 +1,8 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
+import ConfigurableExample, { PropControlNumber } from './_ConfigurableExample'
 import { Pagination, Paper, PaperGroup } from '../../../src'
 import { IProps } from '../../../src/components/Pagination'
-import ConfigurableExample, { PropControlNumber } from './_ConfigurableExample'
+import { RouteComponentProps } from '@reach/router'
 
 export default function PaginationDocs(_: RouteComponentProps) {
   const [childProps, setChildProps] = React.useState<IProps>({

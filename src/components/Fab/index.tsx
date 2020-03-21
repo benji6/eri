@@ -1,8 +1,8 @@
+import './style.css'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { CSSTransition } from 'react-transition-group'
 import { getCssTime0 } from '../../utils/getCssVar'
-import './style.css'
 
 const portalEl =
   typeof document !== 'undefined' &&

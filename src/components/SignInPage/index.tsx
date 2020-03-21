@@ -1,5 +1,5 @@
-import { Button, TextField, ButtonGroup, PaperGroup, Paper } from '../..'
 import * as React from 'react'
+import { Button, ButtonGroup, Paper, PaperGroup, TextField } from '../..'
 import {
   composeValidators,
   emailValidator,

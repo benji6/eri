@@ -1,5 +1,5 @@
-import { RouteComponentProps, Link } from '@reach/router'
 import * as React from 'react'
+import { Link, RouteComponentProps } from '@reach/router'
 import { SignUpPage } from '../../../src'
 
 export default function SignUpPageDocs(_: RouteComponentProps) {

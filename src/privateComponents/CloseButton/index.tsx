@@ -1,6 +1,6 @@
+import './style.css'
 import * as React from 'react'
 import { Icon } from '../..'
-import './style.css'
 
 export default function CloseButton(
   props: React.ButtonHTMLAttributes<HTMLButtonElement>,

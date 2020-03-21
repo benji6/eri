@@ -1,10 +1,10 @@
+import './style.css'
 import * as React from 'react'
 import Field from '../../privateComponents/Field'
 import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
-import SupportiveText from '../../privateComponents/SupportiveText'
 import Icon from '../Icon'
-import './style.css'
+import SupportiveText from '../../privateComponents/SupportiveText'
 
 interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   error?: React.ReactNode

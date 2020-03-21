@@ -1,5 +1,5 @@
-import * as React from 'react'
 import './style.css'
+import * as React from 'react'
 
 export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   danger?: boolean

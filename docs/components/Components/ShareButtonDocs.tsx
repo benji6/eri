@@ -1,8 +1,8 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
+import ConfigurableExample, { PropControlString } from './_ConfigurableExample'
 import { Paper, PaperGroup, ShareButton } from '../../../src'
 import { IProps } from '../../../src/components/ShareButton'
-import ConfigurableExample, { PropControlString } from './_ConfigurableExample'
+import { RouteComponentProps } from '@reach/router'
 
 export default function ShareButtonDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({

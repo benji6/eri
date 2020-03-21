@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react'
-import CodeSnippet from './_CodeSnippet'
 import { Paper, Select, TextField, Toggle } from '../../../src'
+import CodeSnippet from './_CodeSnippet'
 
 export default function ConfigurableExample({
   example,

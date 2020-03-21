@@ -1,10 +1,10 @@
 import * as React from 'react'
+import { Button, ButtonGroup, Paper, PaperGroup, TextField } from '../..'
 import {
   composeValidators,
   emailValidator,
   requiredValidator,
 } from '../../utils/validators'
-import { PaperGroup, Paper, ButtonGroup, Button, TextField } from '../..'
 
 const validateEmail = composeValidators(requiredValidator, emailValidator)
 

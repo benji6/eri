@@ -1,7 +1,7 @@
-import { RouteComponentProps, Link } from '@reach/router'
 import * as React from 'react'
-import { Paper, PaperGroup, Header, MenuButton } from '../../../src'
 import ConfigurableExample, { PropControlString } from './_ConfigurableExample'
+import { Header, MenuButton, Paper, PaperGroup } from '../../../src'
+import { Link, RouteComponentProps } from '@reach/router'
 
 export default function HeaderDocs(_: RouteComponentProps) {
   const [exampleProps, setExampleProps] = React.useState({

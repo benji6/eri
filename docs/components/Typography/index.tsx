@@ -1,6 +1,6 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Paper, PaperGroup, SubHeading } from '../../../src'
+import { RouteComponentProps } from '@reach/router'
 
 export default function Typography(_: RouteComponentProps) {
   return (

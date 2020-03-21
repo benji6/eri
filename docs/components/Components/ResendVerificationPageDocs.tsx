@@ -1,5 +1,5 @@
-import { RouteComponentProps, Link } from '@reach/router'
 import * as React from 'react'
+import { Link, RouteComponentProps } from '@reach/router'
 import { ResendVerificationPage } from '../../../src'
 
 export default function ResendVerificationPageDocs(_: RouteComponentProps) {

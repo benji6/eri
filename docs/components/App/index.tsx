@@ -1,10 +1,10 @@
-import { Link } from '@reach/router'
+import './style.css'
 import * as React from 'react'
 import { Header, Main, Menu, MenuButton } from '../../../src'
 import ComponentLinks from '../ComponentLinks'
+import { Link } from '@reach/router'
 import PageLinks from '../PageLinks'
 import Router from '../Router'
-import './style.css'
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)

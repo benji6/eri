@@ -1,8 +1,8 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Icon, Paper, PaperGroup } from '../../../src'
-import { iconNameMap, IProps } from '../../../src/components/Icon'
 import ConfigurableExample, { PropControlEnum } from './_ConfigurableExample'
+import { IProps, iconNameMap } from '../../../src/components/Icon'
+import { Icon, Paper, PaperGroup } from '../../../src'
+import { RouteComponentProps } from '@reach/router'
 
 const iconNames = Object.keys(iconNameMap)
 

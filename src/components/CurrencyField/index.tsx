@@ -1,8 +1,8 @@
+import './style.css'
 import * as React from 'react'
 import Field from '../../privateComponents/Field'
 import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
-import './style.css'
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: React.ReactNode

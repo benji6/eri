@@ -1,6 +1,6 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Fab, Icon, Paper, PaperGroup, Toggle } from '../../../src'
+import { RouteComponentProps } from '@reach/router'
 
 export default function FabDocs(_: RouteComponentProps) {
   const [isFabVisible, setIsFabVisible] = React.useState(false)

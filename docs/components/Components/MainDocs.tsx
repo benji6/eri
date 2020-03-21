@@ -1,8 +1,8 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import { Paper, PaperGroup, Main } from '../../../src'
-import { IProps } from '../../../src/components/Main'
 import ConfigurableExample, { PropControlString } from './_ConfigurableExample'
+import { Main, Paper, PaperGroup } from '../../../src'
+import { IProps } from '../../../src/components/Main'
+import { RouteComponentProps } from '@reach/router'
 
 export default function MainDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({

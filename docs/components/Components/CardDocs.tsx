@@ -1,6 +1,6 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Card, CardGroup, Paper, PaperGroup } from '../../../src'
+import { RouteComponentProps } from '@reach/router'
 
 export default function CardDocs(_: RouteComponentProps) {
   return (

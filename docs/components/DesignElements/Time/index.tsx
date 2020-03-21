@@ -1,5 +1,5 @@
-import * as React from 'react'
 import './style.css'
+import * as React from 'react'
 
 interface IProps {
   varName: '--e-time-0' | '--e-time-1' | '--e-time-2'

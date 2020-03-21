@@ -1,9 +1,9 @@
+import './style.css'
 import * as React from 'react'
 import Field from '../../privateComponents/Field'
 import FieldError from '../../privateComponents/FieldError'
 import FieldLabel from '../../privateComponents/FieldLabel'
 import RadioButton from '../RadioButton'
-import './style.css'
 
 interface IProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
   children: Array<React.ReactElement<typeof RadioButton>>

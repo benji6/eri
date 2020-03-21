@@ -1,6 +1,6 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
 import { Button, ButtonGroup, Dialog, Paper, PaperGroup } from '../../../src'
+import { RouteComponentProps } from '@reach/router'
 
 export default function DialogDocs(_: RouteComponentProps) {
   const [isDialogOpen, setIsDialogOpen] = React.useState(false)

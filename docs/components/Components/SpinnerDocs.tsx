@@ -1,7 +1,7 @@
-import { RouteComponentProps } from '@reach/router'
 import * as React from 'react'
-import ConfigurableExample from './_ConfigurableExample'
 import { Paper, PaperGroup, Spinner } from '../../../src'
+import ConfigurableExample from './_ConfigurableExample'
+import { RouteComponentProps } from '@reach/router'
 
 export default function SpinnerDocs(_: RouteComponentProps) {
   return (
