@@ -12,7 +12,7 @@
 
 @media (min-width: 500px) {
   :root {
-    --e-max-width-0: 28rem;
-    --e-max-width-1: 32rem;
+    --e-max-width-0: 32rem;
+    --e-max-width-1: 36rem;
   }
 }
