@@ -5,13 +5,13 @@
   --e-space-2: calc(var(--e-space-1) * var(--e-space-scale-ratio));
   --e-space-3: calc(var(--e-space-2) * var(--e-space-scale-ratio));
   --e-space-4: calc(var(--e-space-3) * var(--e-space-scale-ratio));
-  --e-max-width-0: 28rem;
-  --e-max-width-1: 32rem;
+  --e-max-width-0: 100vw;
+  --e-max-width-1: 100vw;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 500px) {
   :root {
-    --e-max-width-0: 100vw;
-    --e-max-width-1: 100vw;
+    --e-max-width-0: 28rem;
+    --e-max-width-1: 32rem;
   }
 }
