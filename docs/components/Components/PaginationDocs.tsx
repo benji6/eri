@@ -6,11 +6,11 @@ import ConfigurableExample, { PropControlNumber } from './_ConfigurableExample'
 
 export default function PaginationDocs(_: RouteComponentProps) {
   const [childProps, setChildProps] = React.useState<IProps>({
-    page: 4,
-    pageCount: 64,
     onChange(page) {
       setChildProps(currentProps => ({ ...currentProps, page }))
     },
+    page: 4,
+    pageCount: 64,
   })
 
   return (

@@ -6,8 +6,6 @@ const iconsPath = path.join(__dirname, '..', 'docs', 'icons')
 const source = path.join(iconsPath, 'icon.svg')
 
 const configuration = {
-  online: false,
-  preferOnline: false,
   icons: {
     android: false,
     appleIcon: false,
@@ -18,6 +16,8 @@ const configuration = {
     windows: false,
     yandex: false,
   },
+  online: false,
+  preferOnline: false,
 }
 
 favicons(source, configuration, (err, response) => {

@@ -18,7 +18,8 @@
     "jsx-a11y/no-autofocus": 0,
     "react-hooks/exhaustive-deps": 2,
     "react-hooks/rules-of-hooks": 2,
-    "react/self-closing-comp": 2
+    "react/self-closing-comp": 2,
+    "sort-keys": 2
   },
   "settings": {
     "react": { "version": "detect" }
