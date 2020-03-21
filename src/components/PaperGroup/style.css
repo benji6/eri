@@ -9,7 +9,7 @@
   padding: var(--paper-group-margin);
 }
 
-@media (min-width: 501px) {
+@media (min-width: 500px) {
   .e-paper-group {
     min-width: var(--e-max-width-0);
   }

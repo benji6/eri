@@ -29,7 +29,7 @@
   --color-hover: var(--e-color-negative-less);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 499px) {
   .e-button {
     display: block;
     width: 100%;
