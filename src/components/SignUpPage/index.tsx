@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button, ButtonGroup, Paper, PaperGroup, TextField } from '../..'
+import { Button, Paper, PaperGroup, TextField } from '../..'
 import {
   composeValidators,
   emailValidator,
@@ -81,9 +81,9 @@ export default function SignUpPage({ onSubmit, signInLink }: IProps) {
               <small e-util="negative">{submitError}</small>
             </p>
           )}
-          <ButtonGroup>
+          <Button.Group>
             <Button disabled={isSubmitting}>Sign up</Button>
-          </ButtonGroup>
+          </Button.Group>
           <p e-util="center">
             <small>Already have an account? {signInLink}!</small>
           </p>

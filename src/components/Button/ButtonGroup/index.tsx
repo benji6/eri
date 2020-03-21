@@ -6,3 +6,5 @@ export default function ButtonGroup(
 ) {
   return <div {...props} className="e-button-group" />
 }
+
+ButtonGroup.displayName = 'Button.Group'

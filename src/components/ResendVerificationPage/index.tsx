@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button, ButtonGroup, Paper, PaperGroup, TextField } from '../..'
+import { Button, Paper, PaperGroup, TextField } from '../..'
 import {
   composeValidators,
   emailValidator,
@@ -66,9 +66,9 @@ export default function ResendVerificationPage({
               <small e-util="negative">{submitError}</small>
             </p>
           )}
-          <ButtonGroup>
+          <Button.Group>
             <Button disabled={isSubmitting}>Resend</Button>
-          </ButtonGroup>
+          </Button.Group>
           <p e-util="center">
             <small>
               Looking for the {signInLink} or {signUpLink} pages?

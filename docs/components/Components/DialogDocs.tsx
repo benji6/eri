@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button, ButtonGroup, Dialog, Paper, PaperGroup } from '../../../src'
+import { Button, Dialog, Paper, PaperGroup } from '../../../src'
 import { RouteComponentProps } from '@reach/router'
 
 export default function DialogDocs(_: RouteComponentProps) {
@@ -11,9 +11,9 @@ export default function DialogDocs(_: RouteComponentProps) {
     <PaperGroup>
       <Paper>
         <h2>Dialog</h2>
-        <ButtonGroup>
+        <Button.Group>
           <Button onClick={handleDialogOpen}>Open dialog</Button>
-        </ButtonGroup>
+        </Button.Group>
         <Dialog
           onClose={handleDialogClose}
           open={isDialogOpen}

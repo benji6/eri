@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button, ButtonGroup, Icon } from '../..'
+import { Button, Icon } from '../..'
 
 type ShareOptions =
   | {
@@ -29,7 +29,7 @@ export default function ShareButton({
   ...rest
 }: IProps) {
   return 'share' in navigator ? (
-    <ButtonGroup>
+    <Button.Group>
       <Button
         {...rest}
         onClick={() => (navigator as INavigator).share!({ text, title, url })}
@@ -37,6 +37,6 @@ export default function ShareButton({
       >
         Share <Icon name="share" />
       </Button>
-    </ButtonGroup>
+    </Button.Group>
   ) : null
 }

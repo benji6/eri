@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button, ButtonGroup, Paper, PaperGroup } from '../../../src'
+import { Button, Paper, PaperGroup } from '../../../src'
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlEnum,
@@ -22,31 +22,31 @@ export default function ButtonDocs(_: RouteComponentProps) {
         <h2>Button</h2>
         <p>
           Buttons are cute little things you press. Remember to always wrap them
-          up in a <code>ButtonGroup</code>.
+          up in a <code>Button.Group</code>.
         </p>
-        <ButtonGroup>
+        <Button.Group>
           <Button>Primary</Button>
           <Button variant="secondary">Secondary</Button>
           <a href="/#">Link</a>
-        </ButtonGroup>
-        <ButtonGroup>
+        </Button.Group>
+        <Button.Group>
           <Button danger>Danger</Button>
           <Button danger variant="secondary">
             Danger secondary
           </Button>
-        </ButtonGroup>
-        <ButtonGroup>
+        </Button.Group>
+        <Button.Group>
           <Button disabled>Primary disabled</Button>
           <Button disabled variant="secondary">
             Secondary disabled
           </Button>
-        </ButtonGroup>
+        </Button.Group>
       </Paper>
       <ConfigurableExample
         example={
-          <ButtonGroup>
+          <Button.Group>
             <Button {...props} />
-          </ButtonGroup>
+          </Button.Group>
         }
       >
         <PropControlString name="children" props={props} setProps={setProps} />

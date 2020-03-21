@@ -1,5 +1,6 @@
 import './style.css'
 import * as React from 'react'
+import ButtonGroup from './ButtonGroup'
 
 export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   danger?: boolean
@@ -20,3 +21,5 @@ export default function Button({
 
   return <button {...rest} {...rippleProp} className={className} type={type} />
 }
+
+Button.Group = ButtonGroup

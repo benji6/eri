@@ -1,7 +1,6 @@
 import * as React from 'react'
 import {
   Button,
-  ButtonGroup,
   Checkbox,
   CurrencyField,
   ImageUpload,
@@ -79,9 +78,9 @@ export default function FormDocs(_: RouteComponentProps) {
           <CurrencyField error="Oops!" label="Currency field error" />
           <ImageUpload label="Image upload" />
           <ImageUpload error="Oops!" label="Image upload error" />
-          <ButtonGroup>
+          <Button.Group>
             <Button type="button">Submit</Button>
-          </ButtonGroup>
+          </Button.Group>
         </form>
       </Paper>
     </PaperGroup>
