@@ -1,7 +1,7 @@
 import * as React from 'react'
 import ConfigurableExample, { PropControlEnum } from './_ConfigurableExample'
 import { IProps, iconNameMap } from '../../../src/components/Icon'
-import { Icon, Paper, PaperGroup } from '../../../src'
+import { Icon, Paper } from '../../../src'
 import { RouteComponentProps } from '@reach/router'
 
 const iconNames = Object.keys(iconNameMap)
@@ -13,7 +13,7 @@ export default function IconDocs(_: RouteComponentProps) {
   })
 
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Icon</h2>
         <p>
@@ -49,6 +49,6 @@ export default function IconDocs(_: RouteComponentProps) {
           setProps={setProps}
         />
       </ConfigurableExample>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

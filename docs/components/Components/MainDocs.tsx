@@ -1,6 +1,6 @@
 import * as React from 'react'
 import ConfigurableExample, { PropControlString } from './_ConfigurableExample'
-import { Main, Paper, PaperGroup } from '../../../src'
+import { Main, Paper } from '../../../src'
 import { IProps } from '../../../src/components/Main'
 import { RouteComponentProps } from '@reach/router'
 
@@ -10,7 +10,7 @@ export default function MainDocs(_: RouteComponentProps) {
   })
 
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Main</h2>
         <p>
@@ -21,6 +21,6 @@ export default function MainDocs(_: RouteComponentProps) {
       <ConfigurableExample example={<Main {...props} />}>
         <PropControlString name="children" props={props} setProps={setProps} />
       </ConfigurableExample>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import ConfigurableExample, { PropControlString } from './_ConfigurableExample'
-import { Paper, PaperGroup, ShareButton } from '../../../src'
+import { Paper, ShareButton } from '../../../src'
 import { IProps } from '../../../src/components/ShareButton'
 import { RouteComponentProps } from '@reach/router'
 
@@ -12,7 +12,7 @@ export default function ShareButtonDocs(_: RouteComponentProps) {
   })
 
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>ShareButton</h2>
         <p>
@@ -26,6 +26,6 @@ export default function ShareButtonDocs(_: RouteComponentProps) {
         <PropControlString name="title" props={props} setProps={setProps} />
         <PropControlString name="url" props={props} setProps={setProps} />
       </ConfigurableExample>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

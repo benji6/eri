@@ -1,16 +1,16 @@
 import * as React from 'react'
-import { Paper, PaperGroup } from '../../../src'
 import Color from './Color'
 import DisplayGroup from './DisplayGroup'
 import DropShadow from './DropShadow'
 import Easing from './Easing'
+import { Paper } from '../../../src'
 import { RouteComponentProps } from '@reach/router'
 import Space from './Space'
 import Time from './Time'
 
 export default function DesignElements(_: RouteComponentProps) {
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Design elements</h2>
       </Paper>
@@ -172,6 +172,6 @@ export default function DesignElements(_: RouteComponentProps) {
           <Color varName="--e-color-highlight-5" />
         </DisplayGroup>
       </Paper>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

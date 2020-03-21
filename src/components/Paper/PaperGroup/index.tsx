@@ -14,3 +14,5 @@ export default function PaperGroup({ noSlide, ...rest }: IProps) {
     />
   )
 }
+
+PaperGroup.displayName = 'Paper.Group'

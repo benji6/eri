@@ -5,7 +5,6 @@ import {
   CurrencyField,
   ImageUpload,
   Paper,
-  PaperGroup,
   RadioButton,
   Select,
   TextArea,
@@ -16,7 +15,7 @@ import { RouteComponentProps } from '@reach/router'
 
 export default function FormDocs(_: RouteComponentProps) {
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <form noValidate>
           <h2>Form</h2>
@@ -82,6 +81,6 @@ export default function FormDocs(_: RouteComponentProps) {
           </Button.Group>
         </form>
       </Paper>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

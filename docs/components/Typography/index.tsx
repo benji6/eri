@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Paper, PaperGroup, SubHeading } from '../../../src'
+import { Paper, SubHeading } from '../../../src'
 import { RouteComponentProps } from '@reach/router'
 
 export default function Typography(_: RouteComponentProps) {
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Typography</h2>
       </Paper>
@@ -71,6 +71,6 @@ export default function Typography(_: RouteComponentProps) {
 ...by setting the e-util attribute to "pre-line"`}
         </p>
       </Paper>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

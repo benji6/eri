@@ -1,5 +1,6 @@
 import './style.css'
 import * as React from 'react'
+import PaperGroup from './PaperGroup'
 
 export default function Paper(
   props: React.HTMLAttributes<HTMLButtonElement | HTMLDivElement>,
@@ -10,3 +11,5 @@ export default function Paper(
     <div {...props} className="e-paper" />
   )
 }
+
+Paper.Group = PaperGroup

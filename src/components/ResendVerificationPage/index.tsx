@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button, Paper, PaperGroup, TextField } from '../..'
+import { Button, Paper, TextField } from '../..'
 import {
   composeValidators,
   emailValidator,
@@ -34,7 +34,7 @@ export default function ResendVerificationPage({
   const [submitError, setSubmitError] = React.useState<React.ReactNode>()
 
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Resend verification email</h2>
         <form
@@ -76,6 +76,6 @@ export default function ResendVerificationPage({
           </p>
         </form>
       </Paper>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

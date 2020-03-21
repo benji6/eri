@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { Fab, Icon, Paper, PaperGroup, Toggle } from '../../../src'
+import { Fab, Icon, Paper, Toggle } from '../../../src'
 import { RouteComponentProps } from '@reach/router'
 
 export default function FabDocs(_: RouteComponentProps) {
   const [isFabVisible, setIsFabVisible] = React.useState(false)
 
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Fab</h2>
         <p>The floating action button.</p>
@@ -21,6 +21,6 @@ export default function FabDocs(_: RouteComponentProps) {
           <Icon name="plus" size="4" />
         </Fab>
       </Paper>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

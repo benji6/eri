@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Paper, PaperGroup } from '../..'
+import { Paper } from '../..'
 
 interface IProps {
   appName: React.ReactNode
@@ -13,7 +13,7 @@ export default function VerifyPage({
   signInLink,
 }: IProps) {
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Verification email sent!</h2>
         <p>
@@ -30,6 +30,6 @@ export default function VerifyPage({
           </small>
         </p>
       </Paper>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

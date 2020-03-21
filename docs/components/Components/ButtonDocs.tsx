@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button, Paper, PaperGroup } from '../../../src'
+import { Button, Paper } from '../../../src'
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlEnum,
@@ -17,7 +17,7 @@ export default function ButtonDocs(_: RouteComponentProps) {
   })
 
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Button</h2>
         <p>
@@ -59,6 +59,6 @@ export default function ButtonDocs(_: RouteComponentProps) {
           setProps={setProps}
         />
       </ConfigurableExample>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

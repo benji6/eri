@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { Card, Paper, PaperGroup } from '../../../src'
+import { Card, Paper } from '../../../src'
 import { RouteComponentProps } from '@reach/router'
 
 export default function CardDocs(_: RouteComponentProps) {
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Card</h2>
         <p>
@@ -55,6 +55,6 @@ export default function CardDocs(_: RouteComponentProps) {
           </Card>
         </Card.Group>
       </Paper>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

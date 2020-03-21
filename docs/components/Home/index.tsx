@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { Paper, PaperGroup, ShareButton } from '../../../src'
+import { Paper, ShareButton } from '../../../src'
 import Banner from './Banner'
 import { RouteComponentProps } from '@reach/router'
 
 export default function Home(_: RouteComponentProps) {
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <Banner />
       </Paper>
@@ -78,6 +78,6 @@ export default function Home(_: RouteComponentProps) {
         </p>
         <ShareButton />
       </Paper>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

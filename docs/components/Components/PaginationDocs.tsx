@@ -1,6 +1,6 @@
 import * as React from 'react'
 import ConfigurableExample, { PropControlNumber } from './_ConfigurableExample'
-import { Pagination, Paper, PaperGroup } from '../../../src'
+import { Pagination, Paper } from '../../../src'
 import { IProps } from '../../../src/components/Pagination'
 import { RouteComponentProps } from '@reach/router'
 
@@ -14,7 +14,7 @@ export default function PaginationDocs(_: RouteComponentProps) {
   })
 
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Pagination</h2>
         <p>
@@ -36,6 +36,6 @@ export default function PaginationDocs(_: RouteComponentProps) {
           setProps={setChildProps}
         />
       </ConfigurableExample>
-    </PaperGroup>
+    </Paper.Group>
   )
 }

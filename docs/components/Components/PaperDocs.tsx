@@ -1,14 +1,14 @@
 import * as React from 'react'
-import { Paper, PaperGroup } from '../../../src'
+import { Paper } from '../../../src'
 import { RouteComponentProps } from '@reach/router'
 
 export default function PaperDocs(_: RouteComponentProps) {
   return (
-    <PaperGroup>
+    <Paper.Group>
       <Paper>
         <h2>Paper</h2>
         <p>
-          Wrap your Papers in a <code>PaperGroup</code>.
+          Wrap your Papers in a <code>Paper.Group</code>.
         </p>
       </Paper>
       <Paper>
@@ -38,6 +38,6 @@ export default function PaperDocs(_: RouteComponentProps) {
           Add an <code>onClick</code> property to make the paper clickable.
         </p>
       </Paper>
-    </PaperGroup>
+    </Paper.Group>
   )
 }
