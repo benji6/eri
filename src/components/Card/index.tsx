@@ -1,5 +1,6 @@
 import './style.css'
 import * as React from 'react'
+import CardGroup from './CardGroup'
 
 export default function Card(
   props:
@@ -23,3 +24,5 @@ export default function Card(
     />
   )
 }
+
+Card.Group = CardGroup

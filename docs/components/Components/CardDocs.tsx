@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Card, CardGroup, Paper, PaperGroup } from '../../../src'
+import { Card, Paper, PaperGroup } from '../../../src'
 import { RouteComponentProps } from '@reach/router'
 
 export default function CardDocs(_: RouteComponentProps) {
@@ -8,9 +8,9 @@ export default function CardDocs(_: RouteComponentProps) {
       <Paper>
         <h2>Card</h2>
         <p>
-          Wrap your Cards in a <code>CardGroup</code>.
+          Wrap your Cards in a <code>Card.Group</code>.
         </p>
-        <CardGroup>
+        <Card.Group>
           <Card>
             <h3>Card one</h3>
           </Card>
@@ -53,7 +53,7 @@ export default function CardDocs(_: RouteComponentProps) {
             <h3>Card twelve</h3>
             <p>A card can also be a button like this one.</p>
           </Card>
-        </CardGroup>
+        </Card.Group>
       </Paper>
     </PaperGroup>
   )
