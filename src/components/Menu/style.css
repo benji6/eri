@@ -1,10 +1,11 @@
 .e-menu {
-  --width: calc(100vw / 4);
+  --width: 16em;
 
   background: var(--e-color-ground-more);
   bottom: 0;
   box-sizing: border-box;
   filter: var(--e-drop-shadow-1);
+  max-width: calc(200vw / 3);
   overflow: auto;
   padding: var(--e-space-3);
   position: fixed;
@@ -12,24 +13,6 @@
   top: 0;
   transition: transform var(--e-time-1) var(--e-easing-standard);
   width: var(--width);
-}
-
-@media (max-width: 1024px) {
-  .e-menu {
-    --width: calc(100vw / 3);
-  }
-}
-
-@media (max-width: 778px) {
-  .e-menu {
-    --width: calc(100vw / 2);
-  }
-}
-
-@media (max-width: 500px) {
-  .e-menu {
-    --width: calc(200vw / 3);
-  }
 }
 
 .e-menu--enter,
