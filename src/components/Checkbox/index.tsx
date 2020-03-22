@@ -1,12 +1,12 @@
-import './style.css'
-import * as React from 'react'
-import Field from '../../privateComponents/Field'
-import FieldError from '../../privateComponents/FieldError'
-import Icon from '../Icon'
+import "./style.css";
+import * as React from "react";
+import Field from "../../privateComponents/Field";
+import FieldError from "../../privateComponents/FieldError";
+import Icon from "../Icon";
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  error?: React.ReactNode
-  label: React.ReactNode
+  error?: React.ReactNode;
+  label: React.ReactNode;
 }
 
 export default function Checkbox({ label, error, ...rest }: IProps) {
@@ -26,5 +26,5 @@ export default function Checkbox({ label, error, ...rest }: IProps) {
       </label>
       <FieldError>{error}</FieldError>
     </Field>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-import * as React from 'react'
-import Color from './Color'
-import DisplayGroup from './DisplayGroup'
-import DropShadow from './DropShadow'
-import Easing from './Easing'
-import { Paper } from '../../../src'
-import { RouteComponentProps } from '@reach/router'
-import Space from './Space'
-import Time from './Time'
+import * as React from "react";
+import Color from "./Color";
+import DisplayGroup from "./DisplayGroup";
+import DropShadow from "./DropShadow";
+import Easing from "./Easing";
+import { Paper } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
+import Space from "./Space";
+import Time from "./Time";
 
 export default function DesignElements(_: RouteComponentProps) {
   return (
@@ -31,7 +31,7 @@ export default function DesignElements(_: RouteComponentProps) {
       <Paper>
         <h3>Space</h3>
         <p>
-          Space is based on a fluid modular scale and is defined with{' '}
+          Space is based on a fluid modular scale and is defined with{" "}
           <code>em</code> units to keep it responsive to font size.
         </p>
         <DisplayGroup>
@@ -75,7 +75,7 @@ export default function DesignElements(_: RouteComponentProps) {
         </DisplayGroup>
         <h3>Easing</h3>
         <p>
-          Inspiration taken from{' '}
+          Inspiration taken from{" "}
           <a href="https://material.io/design/motion/speed.html#easing">
             Material Design
           </a>
@@ -91,31 +91,31 @@ export default function DesignElements(_: RouteComponentProps) {
         <h3>Animation</h3>
         <h4>Fade in</h4>
         <p>
-          Set the <code>e-util</code> attribute on an element to{' '}
+          Set the <code>e-util</code> attribute on an element to{" "}
           <code>&quot;fade-in&quot;</code> to get a fade in animation.
         </p>
         <h4>Slide in</h4>
         <p>
-          Set the <code>e-util</code> attribute on an element to{' '}
+          Set the <code>e-util</code> attribute on an element to{" "}
           <code>&quot;slide-in&quot;</code> to get a slide in animation.
         </p>
         <p>
-          If you want to slide in a group of elements one by one then set the{' '}
-          <code>e-util</code> attribute on the parent element to{' '}
+          If you want to slide in a group of elements one by one then set the{" "}
+          <code>e-util</code> attribute on the parent element to{" "}
           <code>&quot;slide-children-in&quot;</code>.
         </p>
       </Paper>
       <Paper>
         <h3>Color</h3>
         <p>
-          Eri uses the{' '}
+          Eri uses the{" "}
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
             rel="noopener noreferrer"
             target="_blank"
           >
             <code>prefers-color-scheme</code>
-          </a>{' '}
+          </a>{" "}
           media feature to display a dark theme to users who prefer it.
         </p>
         <h4>Figure</h4>
@@ -142,7 +142,7 @@ export default function DesignElements(_: RouteComponentProps) {
         </DisplayGroup>
         <h4>Theme</h4>
         <p>
-          Use <code>--e-color-theme-app</code> for web app manifest or{' '}
+          Use <code>--e-color-theme-app</code> for web app manifest or{" "}
           <code>theme_color</code> meta tag
         </p>
         <DisplayGroup>
@@ -173,5 +173,5 @@ export default function DesignElements(_: RouteComponentProps) {
         </DisplayGroup>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

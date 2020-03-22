@@ -1,15 +1,15 @@
-import './style.css'
-import * as React from 'react'
-import Field from '../../privateComponents/Field'
-import FieldError from '../../privateComponents/FieldError'
-import FieldLabel from '../../privateComponents/FieldLabel'
-import Icon from '../Icon'
-import SupportiveText from '../../privateComponents/SupportiveText'
+import "./style.css";
+import * as React from "react";
+import Field from "../../privateComponents/Field";
+import FieldError from "../../privateComponents/FieldError";
+import FieldLabel from "../../privateComponents/FieldLabel";
+import Icon from "../Icon";
+import SupportiveText from "../../privateComponents/SupportiveText";
 
 interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
-  error?: React.ReactNode
-  label: React.ReactNode
-  supportiveText?: React.ReactNode
+  error?: React.ReactNode;
+  label: React.ReactNode;
+  supportiveText?: React.ReactNode;
 }
 
 export default function Select({
@@ -37,5 +37,5 @@ export default function Select({
       </label>
       <FieldError>{error}</FieldError>
     </Field>
-  )
+  );
 }

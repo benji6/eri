@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Card, Paper } from '../../../src'
-import { RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import { Card, Paper } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function CardDocs(_: RouteComponentProps) {
   return (
@@ -56,5 +56,5 @@ export default function CardDocs(_: RouteComponentProps) {
         </Card.Group>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

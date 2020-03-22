@@ -1,5 +1,5 @@
-import './style.css'
-import * as React from 'react'
+import "./style.css";
+import * as React from "react";
 
 export default function FieldError({
   children,
@@ -9,5 +9,5 @@ export default function FieldError({
     <div {...rest} aria-live="polite" className="e-field-error">
       {children}
     </div>
-  ) : null
+  ) : null;
 }

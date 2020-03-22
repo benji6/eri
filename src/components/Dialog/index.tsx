@@ -1,16 +1,16 @@
-import './style.css'
-import * as React from 'react'
-import { CSSTransition } from 'react-transition-group'
-import CloseButton from '../../privateComponents/CloseButton'
-import Mask from '../../privateComponents/Mask'
-import { getCssTime1 } from '../../utils/getCssVar'
+import "./style.css";
+import * as React from "react";
+import { CSSTransition } from "react-transition-group";
+import CloseButton from "../../privateComponents/CloseButton";
+import Mask from "../../privateComponents/Mask";
+import { getCssTime1 } from "../../utils/getCssVar";
 
 interface IProps {
-  children: React.ReactNode
-  disableClose?: boolean
-  open: boolean
-  title: React.ReactNode
-  onClose(): void
+  children: React.ReactNode;
+  disableClose?: boolean;
+  open: boolean;
+  title: React.ReactNode;
+  onClose(): void;
 }
 
 export default function Dialog({
@@ -59,5 +59,5 @@ export default function Dialog({
         </div>
       </CSSTransition>
     </Mask>
-  )
+  );
 }

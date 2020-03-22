@@ -1,5 +1,5 @@
-import './style.css'
-import * as React from 'react'
+import "./style.css";
+import * as React from "react";
 
 export default function Banner() {
   return (
@@ -25,5 +25,5 @@ export default function Banner() {
       </svg>
       <hr />
     </div>
-  )
+  );
 }

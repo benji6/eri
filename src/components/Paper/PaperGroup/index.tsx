@@ -1,8 +1,8 @@
-import './style.css'
-import * as React from 'react'
+import "./style.css";
+import * as React from "react";
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
-  noSlide?: boolean
+  noSlide?: boolean;
 }
 
 export default function PaperGroup({ noSlide, ...rest }: IProps) {
@@ -10,9 +10,9 @@ export default function PaperGroup({ noSlide, ...rest }: IProps) {
     <div
       {...rest}
       className="e-paper-group"
-      {...(noSlide ? undefined : { 'e-util': 'slide-children-in' })}
+      {...(noSlide ? undefined : { "e-util": "slide-children-in" })}
     />
-  )
+  );
 }
 
-PaperGroup.displayName = 'Paper.Group'
+PaperGroup.displayName = "Paper.Group";

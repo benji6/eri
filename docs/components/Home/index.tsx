@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Paper, ShareButton } from '../../../src'
-import Banner from './Banner'
-import { RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import { Paper, ShareButton } from "../../../src";
+import Banner from "./Banner";
+import { RouteComponentProps } from "@reach/router";
 
 export default function Home(_: RouteComponentProps) {
   return (
@@ -15,14 +15,14 @@ export default function Home(_: RouteComponentProps) {
           <li>
             <span aria-label="Yoga" role="img">
               🧘‍♀️
-            </span>{' '}
+            </span>{" "}
             <strong>Simple</strong> - Eri aims to be minimal and should feel
             clean and intuitive.
           </li>
           <li>
             <span aria-label="Rocket" role="img">
               🚀
-            </span>{' '}
+            </span>{" "}
             <strong>Lightweight</strong> - Eri is performance focussed and will
             not bloat or slow down your app. Components are lightweight and
             tree-shaking is supported out the box.
@@ -30,7 +30,7 @@ export default function Home(_: RouteComponentProps) {
           <li>
             <span aria-label="Smile" role="img">
               😌
-            </span>{' '}
+            </span>{" "}
             <strong>Easy</strong> - Eri should be straightforward and easy to
             use.
           </li>
@@ -61,7 +61,7 @@ export default function Home(_: RouteComponentProps) {
         <h2>About</h2>
         <p>
           Eri is a design system that I created for my personal projects, but it
-          is free and open source and the{' '}
+          is free and open source and the{" "}
           <a href="https://github.com/benji6/eri">
             code is available on GitHub
           </a>
@@ -73,11 +73,11 @@ export default function Home(_: RouteComponentProps) {
           use, especially if you&apos;re using TypeScript.
         </p>
         <p>
-          If you want to see one of my projects that uses Eri check out{' '}
+          If you want to see one of my projects that uses Eri check out{" "}
           <a href="https://github.com/benji6/webnotes">Webnotes</a>.
         </p>
         <ShareButton />
       </Paper>
     </Paper.Group>
-  )
+  );
 }

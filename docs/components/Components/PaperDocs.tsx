@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Paper } from '../../../src'
-import { RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import { Paper } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function PaperDocs(_: RouteComponentProps) {
   return (
@@ -39,5 +39,5 @@ export default function PaperDocs(_: RouteComponentProps) {
         </p>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

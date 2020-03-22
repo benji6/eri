@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { Paper } from '../..'
+import * as React from "react";
+import { Paper } from "../..";
 
 interface IProps {
-  appName: React.ReactNode
-  resendVerificationLink: React.ReactNode
-  signInLink: React.ReactNode
+  appName: React.ReactNode;
+  resendVerificationLink: React.ReactNode;
+  signInLink: React.ReactNode;
 }
 
 export default function VerifyPage({
@@ -25,11 +25,11 @@ export default function VerifyPage({
         </p>
         <p e-util="center">
           <small>
-            Can&apos;t find our email? Check your junk folder or{' '}
+            Can&apos;t find our email? Check your junk folder or{" "}
             {resendVerificationLink}.
           </small>
         </p>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

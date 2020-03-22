@@ -1,28 +1,28 @@
-import * as React from 'react'
-import ButtonDocs from '../Components/ButtonDocs'
-import CardDocs from '../Components/CardDocs'
-import ComponentsHome from '../Components/ComponentsHome'
-import DesignElements from '../DesignElements'
-import DialogDocs from '../Components/DialogDocs'
-import FabDocs from '../Components/FabDocs'
-import FormDocs from '../Components/FormDocs'
-import HeaderDocs from '../Components/HeaderDocs'
-import Home from '../Home'
-import IconDocs from '../Components/IconDocs'
-import LinkDocs from '../Components/LinkDocs'
-import MainDocs from '../Components/MainDocs'
-import PagesHome from '../Components/PagesHome'
-import PaginationDocs from '../Components/PaginationDocs'
-import PaperDocs from '../Components/PaperDocs'
-import { Router as ReachRouter } from '@reach/router'
-import ResendVerificationPageDocs from '../Components/ResendVerificationPageDocs'
-import ShareButtonDocs from '../Components/ShareButtonDocs'
-import SignInPageDocs from '../Components/SignInPageDocs'
-import SignUpPageDocs from '../Components/SignUpPageDocs'
-import SpinnerDocs from '../Components/SpinnerDocs'
-import Typography from '../Typography'
-import VerifyPageDocs from '../Components/VerifyPageDocs'
-import _404 from '../_404'
+import * as React from "react";
+import ButtonDocs from "../Components/ButtonDocs";
+import CardDocs from "../Components/CardDocs";
+import ComponentsHome from "../Components/ComponentsHome";
+import DesignElements from "../DesignElements";
+import DialogDocs from "../Components/DialogDocs";
+import FabDocs from "../Components/FabDocs";
+import FormDocs from "../Components/FormDocs";
+import HeaderDocs from "../Components/HeaderDocs";
+import Home from "../Home";
+import IconDocs from "../Components/IconDocs";
+import LinkDocs from "../Components/LinkDocs";
+import MainDocs from "../Components/MainDocs";
+import PagesHome from "../Components/PagesHome";
+import PaginationDocs from "../Components/PaginationDocs";
+import PaperDocs from "../Components/PaperDocs";
+import { Router as ReachRouter } from "@reach/router";
+import ResendVerificationPageDocs from "../Components/ResendVerificationPageDocs";
+import ShareButtonDocs from "../Components/ShareButtonDocs";
+import SignInPageDocs from "../Components/SignInPageDocs";
+import SignUpPageDocs from "../Components/SignUpPageDocs";
+import SpinnerDocs from "../Components/SpinnerDocs";
+import Typography from "../Typography";
+import VerifyPageDocs from "../Components/VerifyPageDocs";
+import _404 from "../_404";
 
 export default function Router() {
   return (
@@ -51,5 +51,5 @@ export default function Router() {
       <SignUpPageDocs path="pages/sign-up" />
       <VerifyPageDocs path="pages/verify" />
     </ReachRouter>
-  )
+  );
 }

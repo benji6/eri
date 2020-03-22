@@ -1,15 +1,15 @@
-import * as React from 'react'
-import { Button, Paper, TextField } from '../..'
+import * as React from "react";
+import { Button, Paper, TextField } from "../..";
 import {
   composeValidators,
   emailValidator,
   requiredValidator,
-} from '../../utils/validators'
+} from "../../utils/validators";
 
-const validateEmail = composeValidators(requiredValidator, emailValidator)
+const validateEmail = composeValidators(requiredValidator, emailValidator);
 
 interface IFormElement extends HTMLFormElement {
-  email: HTMLInputElement
+  email: HTMLInputElement;
 }
 
 interface IProps {
@@ -17,11 +17,11 @@ interface IProps {
     email,
     setSubmitError,
   }: {
-    email: string
-    setSubmitError: (r: React.ReactNode) => void
-  }): Promise<void>
-  signInLink: React.ReactNode
-  signUpLink: React.ReactNode
+    email: string;
+    setSubmitError: (r: React.ReactNode) => void;
+  }): Promise<void>;
+  signInLink: React.ReactNode;
+  signUpLink: React.ReactNode;
 }
 
 export default function ResendVerificationPage({
@@ -29,9 +29,9 @@ export default function ResendVerificationPage({
   signInLink,
   signUpLink,
 }: IProps) {
-  const [emailError, setEmailError] = React.useState('')
-  const [isSubmitting, setIsSubmitting] = React.useState(false)
-  const [submitError, setSubmitError] = React.useState<React.ReactNode>()
+  const [emailError, setEmailError] = React.useState("");
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitError, setSubmitError] = React.useState<React.ReactNode>();
 
   return (
     <Paper.Group>
@@ -40,16 +40,16 @@ export default function ResendVerificationPage({
         <form
           noValidate
           onSubmit={async (e: React.FormEvent<IFormElement>) => {
-            e.preventDefault()
-            const email = (e.target as IFormElement).email.value
-            const emailErrorMessage = validateEmail(email)
-            if (emailErrorMessage) return setEmailError(emailErrorMessage)
-            if (emailError) setEmailError('')
-            setIsSubmitting(true)
+            e.preventDefault();
+            const email = (e.target as IFormElement).email.value;
+            const emailErrorMessage = validateEmail(email);
+            if (emailErrorMessage) return setEmailError(emailErrorMessage);
+            if (emailError) setEmailError("");
+            setIsSubmitting(true);
             try {
-              await onSubmit({ email, setSubmitError })
+              await onSubmit({ email, setSubmitError });
             } finally {
-              setIsSubmitting(false)
+              setIsSubmitting(false);
             }
           }}
         >
@@ -77,5 +77,5 @@ export default function ResendVerificationPage({
         </form>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

@@ -1,16 +1,16 @@
-import * as React from 'react'
-import ConfigurableExample, { PropControlEnum } from './_ConfigurableExample'
-import { IProps, iconNameMap } from '../../../src/components/Icon'
-import { Icon, Paper } from '../../../src'
-import { RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import ConfigurableExample, { PropControlEnum } from "./_ConfigurableExample";
+import { IProps, iconNameMap } from "../../../src/components/Icon";
+import { Icon, Paper } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
-const iconNames = Object.keys(iconNameMap)
+const iconNames = Object.keys(iconNameMap);
 
 export default function IconDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({
-    name: 'check',
-    size: '4',
-  })
+    name: "check",
+    size: "4",
+  });
 
   return (
     <Paper.Group>
@@ -19,7 +19,7 @@ export default function IconDocs(_: RouteComponentProps) {
         <p>
           <span aria-label="Heart" role="img">
             ❤️
-          </span>{' '}
+          </span>{" "}
           <a href="https://feathericons.com/">Feather</a>
         </p>
         <Icon name="copy" />
@@ -44,11 +44,11 @@ export default function IconDocs(_: RouteComponentProps) {
         />
         <PropControlEnum
           name="size"
-          options={['2', '3', '4']}
+          options={["2", "3", "4"]}
           props={props}
           setProps={setProps}
         />
       </ConfigurableExample>
     </Paper.Group>
-  )
+  );
 }

@@ -67,7 +67,7 @@
   border-color: var(--e-color-theme-less);
 }
 
-.e-checkbox__input[aria-invalid='true'] ~ .e-checkbox__appearance {
+.e-checkbox__input[aria-invalid="true"] ~ .e-checkbox__appearance {
   border-color: var(--e-color-negative);
   filter: none;
 }

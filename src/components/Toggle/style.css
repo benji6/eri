@@ -23,7 +23,7 @@
 .e-toggle__appearance::after {
   background: var(--e-color-ground);
   border-radius: 50%;
-  content: '';
+  content: "";
   display: block;
   height: var(--toggle-button-diameter);
   transition: transform var(--e-time-0) var(--e-easing-standard);

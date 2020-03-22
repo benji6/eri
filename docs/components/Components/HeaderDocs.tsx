@@ -1,12 +1,12 @@
-import * as React from 'react'
-import ConfigurableExample, { PropControlString } from './_ConfigurableExample'
-import { Header, MenuButton, Paper } from '../../../src'
-import { Link, RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
+import { Header, MenuButton, Paper } from "../../../src";
+import { Link, RouteComponentProps } from "@reach/router";
 
 export default function HeaderDocs(_: RouteComponentProps) {
   const [exampleProps, setExampleProps] = React.useState({
-    title: 'Eri',
-  })
+    title: "Eri",
+  });
 
   return (
     <Paper.Group>
@@ -30,5 +30,5 @@ export default function HeaderDocs(_: RouteComponentProps) {
         />
       </ConfigurableExample>
     </Paper.Group>
-  )
+  );
 }

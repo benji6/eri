@@ -57,7 +57,7 @@
   z-index: var(--e-z-index-1);
 }
 
-.e-radio-button-group[aria-invalid='true'] .e-radio-button__appearance {
+.e-radio-button-group[aria-invalid="true"] .e-radio-button__appearance {
   border-color: var(--e-color-negative);
 }
 

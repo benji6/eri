@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Fab, Icon, Paper, Toggle } from '../../../src'
-import { RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import { Fab, Icon, Paper, Toggle } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function FabDocs(_: RouteComponentProps) {
-  const [isFabVisible, setIsFabVisible] = React.useState(false)
+  const [isFabVisible, setIsFabVisible] = React.useState(false);
 
   return (
     <Paper.Group>
@@ -12,7 +12,7 @@ export default function FabDocs(_: RouteComponentProps) {
         <p>The floating action button.</p>
         <Toggle
           checked={isFabVisible}
-          label={isFabVisible ? 'Fab visible' : 'Fab hidden'}
+          label={isFabVisible ? "Fab visible" : "Fab hidden"}
           onChange={({ target }) =>
             target.checked ? setIsFabVisible(true) : setIsFabVisible(false)
           }
@@ -22,5 +22,5 @@ export default function FabDocs(_: RouteComponentProps) {
         </Fab>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

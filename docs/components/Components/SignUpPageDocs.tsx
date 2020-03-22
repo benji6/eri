@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Link, RouteComponentProps } from '@reach/router'
-import { SignUpPage } from '../../../src'
+import * as React from "react";
+import { Link, RouteComponentProps } from "@reach/router";
+import { SignUpPage } from "../../../src";
 
 export default function SignUpPageDocs(_: RouteComponentProps) {
   return (
@@ -10,5 +10,5 @@ export default function SignUpPageDocs(_: RouteComponentProps) {
       }
       signInLink={<Link to="/pages/sign-in">Sign in</Link>}
     />
-  )
+  );
 }

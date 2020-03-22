@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { Button, Dialog, Paper } from '../../../src'
-import { RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import { Button, Dialog, Paper } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function DialogDocs(_: RouteComponentProps) {
-  const [isDialogOpen, setIsDialogOpen] = React.useState(false)
-  const handleDialogClose = () => setIsDialogOpen(false)
-  const handleDialogOpen = () => setIsDialogOpen(true)
+  const [isDialogOpen, setIsDialogOpen] = React.useState(false);
+  const handleDialogClose = () => setIsDialogOpen(false);
+  const handleDialogOpen = () => setIsDialogOpen(true);
 
   return (
     <Paper.Group>
@@ -26,5 +26,5 @@ export default function DialogDocs(_: RouteComponentProps) {
         </Dialog>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

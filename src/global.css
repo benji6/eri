@@ -1,7 +1,7 @@
 html {
   background-color: var(--e-color-ground);
   color: var(--e-color-figure);
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: var(--e-font-weight-normal);
   line-height: var(--e-line-height);
   min-height: 100%;
@@ -127,7 +127,7 @@ p + p {
   margin: var(--e-font-margin-paragraph);
 }
 
-input:not([type='checkbox']),
+input:not([type="checkbox"]),
 select,
 textarea {
   background-color: var(--e-color-ground-more);
@@ -140,22 +140,22 @@ textarea {
   transition-timing-function: var(--e-easing-standard);
 }
 
-input:not([type='checkbox']):focus,
+input:not([type="checkbox"]):focus,
 select:focus,
 textarea:focus {
   border-color: var(--e-color-theme-less);
   filter: var(--e-drop-shadow-input-focus);
 }
 
-input:not([type='checkbox']):hover,
+input:not([type="checkbox"]):hover,
 select:hover,
 textarea:hover {
   border-color: var(--e-color-theme-less);
 }
 
-input:not([type='checkbox'])[aria-invalid='true'],
-select[aria-invalid='true'],
-textarea[aria-invalid='true'] {
+input:not([type="checkbox"])[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
   border-color: var(--e-color-negative);
   box-shadow: none;
 }

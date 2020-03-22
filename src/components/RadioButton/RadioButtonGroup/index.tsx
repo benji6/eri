@@ -1,15 +1,15 @@
-import './style.css'
-import * as React from 'react'
-import Field from '../../../privateComponents/Field'
-import FieldError from '../../../privateComponents/FieldError'
-import FieldLabel from '../../../privateComponents/FieldLabel'
-import RadioButton from '..'
+import "./style.css";
+import * as React from "react";
+import Field from "../../../privateComponents/Field";
+import FieldError from "../../../privateComponents/FieldError";
+import FieldLabel from "../../../privateComponents/FieldLabel";
+import RadioButton from "..";
 
 interface IProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
-  children: Array<React.ReactElement<typeof RadioButton>>
-  disabled?: boolean
-  error?: React.ReactNode
-  label: React.ReactNode
+  children: Array<React.ReactElement<typeof RadioButton>>;
+  disabled?: boolean;
+  error?: React.ReactNode;
+  label: React.ReactNode;
 }
 
 export default function RadioButtonGroup({
@@ -32,7 +32,7 @@ export default function RadioButtonGroup({
         <FieldError>{error}</FieldError>
       </fieldset>
     </Field>
-  )
+  );
 }
 
-RadioButtonGroup.displayName = 'RadioButton.Group'
+RadioButtonGroup.displayName = "RadioButton.Group";

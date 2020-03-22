@@ -1,20 +1,20 @@
-import * as React from 'react'
-import { Button, Paper } from '../../../src'
+import * as React from "react";
+import { Button, Paper } from "../../../src";
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlEnum,
   PropControlString,
-} from './_ConfigurableExample'
-import { IProps } from '../../../src/components/Button'
-import { RouteComponentProps } from '@reach/router'
+} from "./_ConfigurableExample";
+import { IProps } from "../../../src/components/Button";
+import { RouteComponentProps } from "@reach/router";
 
 export default function ButtonDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({
-    children: 'Click me!',
+    children: "Click me!",
     danger: false,
     disabled: false,
-    variant: 'primary',
-  })
+    variant: "primary",
+  });
 
   return (
     <Paper.Group>
@@ -54,11 +54,11 @@ export default function ButtonDocs(_: RouteComponentProps) {
         <PropControlBoolean props={props} setProps={setProps} name="disabled" />
         <PropControlEnum
           name="variant"
-          options={['primary', 'secondary']}
+          options={["primary", "secondary"]}
           props={props}
           setProps={setProps}
         />
       </ConfigurableExample>
     </Paper.Group>
-  )
+  );
 }

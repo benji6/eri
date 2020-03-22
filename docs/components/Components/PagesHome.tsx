@@ -1,7 +1,7 @@
-import * as React from 'react'
-import PageLinks from '../PageLinks'
-import { Paper } from '../../../src'
-import { RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import PageLinks from "../PageLinks";
+import { Paper } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function PagesHome(_: RouteComponentProps) {
   return (
@@ -11,5 +11,5 @@ export default function PagesHome(_: RouteComponentProps) {
         <PageLinks />
       </Paper>
     </Paper.Group>
-  )
+  );
 }

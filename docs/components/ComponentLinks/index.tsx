@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { Link, RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import { Link, RouteComponentProps } from "@reach/router";
 
 export default function ComponentLinks(
-  props: RouteComponentProps & React.HTMLAttributes<HTMLAnchorElement>,
+  props: RouteComponentProps & React.HTMLAttributes<HTMLAnchorElement>
 ) {
   return (
     <nav>
@@ -74,5 +74,5 @@ export default function ComponentLinks(
         </li>
       </ul>
     </nav>
-  )
+  );
 }

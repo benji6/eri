@@ -1,7 +1,7 @@
 export default function debounce(f: () => void, debounceTime: number) {
-  let timeoutId: number | undefined
+  let timeoutId: number | undefined;
   return (): void => {
-    clearTimeout(timeoutId)
-    timeoutId = window.setTimeout(f, debounceTime)
-  }
+    clearTimeout(timeoutId);
+    timeoutId = window.setTimeout(f, debounceTime);
+  };
 }

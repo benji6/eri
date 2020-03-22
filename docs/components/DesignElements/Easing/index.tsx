@@ -1,11 +1,11 @@
-import './style.css'
-import * as React from 'react'
+import "./style.css";
+import * as React from "react";
 
 interface IProps {
   varName:
-    | '--e-easing-accelerate'
-    | '--e-easing-decelerate'
-    | '--e-easing-standard'
+    | "--e-easing-accelerate"
+    | "--e-easing-decelerate"
+    | "--e-easing-standard";
 }
 
 export default function Easing({ varName }: IProps) {
@@ -19,5 +19,5 @@ export default function Easing({ varName }: IProps) {
         <code>{varName}</code>
       </pre>
     </>
-  )
+  );
 }

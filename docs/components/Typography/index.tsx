@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Paper, SubHeading } from '../../../src'
-import { RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import { Paper, SubHeading } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function Typography(_: RouteComponentProps) {
   return (
@@ -72,5 +72,5 @@ export default function Typography(_: RouteComponentProps) {
         </p>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

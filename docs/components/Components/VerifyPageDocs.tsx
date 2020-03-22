@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Link, RouteComponentProps } from '@reach/router'
-import { VerifyPage } from '../../../src'
+import * as React from "react";
+import { Link, RouteComponentProps } from "@reach/router";
+import { VerifyPage } from "../../../src";
 
 export default function VerifyPageDocs(_: RouteComponentProps) {
   return (
@@ -13,5 +13,5 @@ export default function VerifyPageDocs(_: RouteComponentProps) {
       }
       signInLink={<Link to="/pages/sign-in">sign in</Link>}
     />
-  )
+  );
 }

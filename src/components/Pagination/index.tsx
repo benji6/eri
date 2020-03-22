@@ -1,27 +1,27 @@
-import './style.css'
-import * as React from 'react'
-import Icon from '../Icon'
+import "./style.css";
+import * as React from "react";
+import Icon from "../Icon";
 
-const maxPageButtons = 5
-const halfMaxPageButtons = Math.floor(maxPageButtons / 2)
+const maxPageButtons = 5;
+const halfMaxPageButtons = Math.floor(maxPageButtons / 2);
 
 export interface IProps {
-  page: number
-  pageCount: number
-  onChange(page: number): void
+  page: number;
+  pageCount: number;
+  onChange(page: number): void;
 }
 
 export default function Pagination({ page, pageCount, onChange }: IProps) {
-  const pageNumbers = []
-  const pageButtonCount = Math.min(pageCount, maxPageButtons)
+  const pageNumbers = [];
+  const pageButtonCount = Math.min(pageCount, maxPageButtons);
 
   for (let i = 0; i < pageButtonCount; i++) {
     if (page <= halfMaxPageButtons) {
-      pageNumbers.push(i)
+      pageNumbers.push(i);
     } else if (page >= pageCount - halfMaxPageButtons) {
-      pageNumbers.push(i + pageCount - Math.min(maxPageButtons, pageCount))
+      pageNumbers.push(i + pageCount - Math.min(maxPageButtons, pageCount));
     } else {
-      pageNumbers.push(i + page - halfMaxPageButtons)
+      pageNumbers.push(i + page - halfMaxPageButtons);
     }
   }
 
@@ -64,5 +64,5 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
         </button>
       )}
     </div>
-  ) : null
+  ) : null;
 }

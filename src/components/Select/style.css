@@ -41,7 +41,7 @@ option {
   color: var(--e-color-theme-less);
 }
 
-.e-select__select[aria-invalid='true'] ~ .e-select__icon {
+.e-select__select[aria-invalid="true"] ~ .e-select__icon {
   color: var(--e-color-negative);
 }
 

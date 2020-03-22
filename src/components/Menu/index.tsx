@@ -1,18 +1,18 @@
-import './style.css'
-import * as React from 'react'
-import { CSSTransition } from 'react-transition-group'
-import CloseButton from '../../privateComponents/CloseButton'
-import Mask from '../../privateComponents/Mask'
-import { getCssTime1 } from '../../utils/getCssVar'
-import useWidth from '../../hooks/useWidth'
+import "./style.css";
+import * as React from "react";
+import { CSSTransition } from "react-transition-group";
+import CloseButton from "../../privateComponents/CloseButton";
+import Mask from "../../privateComponents/Mask";
+import { getCssTime1 } from "../../utils/getCssVar";
+import useWidth from "../../hooks/useWidth";
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
-  open: boolean
-  onClose(): void
+  open: boolean;
+  onClose(): void;
 }
 
 export default function Menu({ children, onClose, open, ...rest }: IProps) {
-  const isWideResolution = useWidth() >= 1024
+  const isWideResolution = useWidth() >= 1024;
 
   return (
     <Mask onClose={onClose} open={open && !isWideResolution}>
@@ -34,5 +34,5 @@ export default function Menu({ children, onClose, open, ...rest }: IProps) {
         </nav>
       </CSSTransition>
     </Mask>
-  )
+  );
 }

@@ -1,15 +1,15 @@
-import './style.css'
-import * as React from 'react'
-import { Header, Main, Menu, MenuButton } from '../../../src'
-import ComponentLinks from '../ComponentLinks'
-import { Link } from '@reach/router'
-import PageLinks from '../PageLinks'
-import Router from '../Router'
+import "./style.css";
+import * as React from "react";
+import { Header, Main, Menu, MenuButton } from "../../../src";
+import ComponentLinks from "../ComponentLinks";
+import { Link } from "@reach/router";
+import PageLinks from "../PageLinks";
+import Router from "../Router";
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-  const handleMenuClose = () => setIsMenuOpen(false)
-  const handleMenuOpen = () => setIsMenuOpen(true)
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const handleMenuClose = () => setIsMenuOpen(false);
+  const handleMenuOpen = () => setIsMenuOpen(true);
 
   return (
     <React.StrictMode>
@@ -52,5 +52,5 @@ export default function App() {
         <Router />
       </Main>
     </React.StrictMode>
-  )
+  );
 }

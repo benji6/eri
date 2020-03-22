@@ -1,8 +1,8 @@
-import './style.css'
-import * as React from 'react'
+import "./style.css";
+import * as React from "react";
 
 export default function SubHeading(
-  props: React.HTMLAttributes<HTMLSpanElement>,
+  props: React.HTMLAttributes<HTMLSpanElement>
 ) {
-  return <span {...props} className="e-sub-heading" />
+  return <span {...props} className="e-sub-heading" />;
 }

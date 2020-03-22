@@ -1,7 +1,7 @@
-import getCssVar from './utils/getCssVar'
+import getCssVar from "./utils/getCssVar";
 
-if (typeof document !== 'undefined') {
-  const metaThemeColor = document.querySelector('meta[name=theme-color]')
+if (typeof document !== "undefined") {
+  const metaThemeColor = document.querySelector("meta[name=theme-color]");
   if (metaThemeColor)
-    metaThemeColor.setAttribute('content', getCssVar('--e-color-theme-app'))
+    metaThemeColor.setAttribute("content", getCssVar("--e-color-theme-app"));
 }

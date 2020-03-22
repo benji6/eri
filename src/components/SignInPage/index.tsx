@@ -1,18 +1,21 @@
-import * as React from 'react'
-import { Button, Paper, TextField } from '../..'
+import * as React from "react";
+import { Button, Paper, TextField } from "../..";
 import {
   composeValidators,
   emailValidator,
   passwordValidator,
   requiredValidator,
-} from '../../utils/validators'
+} from "../../utils/validators";
 
-const validateEmail = composeValidators(requiredValidator, emailValidator)
-const validatePassword = composeValidators(requiredValidator, passwordValidator)
+const validateEmail = composeValidators(requiredValidator, emailValidator);
+const validatePassword = composeValidators(
+  requiredValidator,
+  passwordValidator
+);
 
 interface IFormElement extends HTMLFormElement {
-  email: HTMLInputElement
-  password: HTMLInputElement
+  email: HTMLInputElement;
+  password: HTMLInputElement;
 }
 
 interface IProps {
@@ -21,18 +24,18 @@ interface IProps {
     password,
     setSubmitError,
   }: {
-    email: string
-    password: string
-    setSubmitError: (r: React.ReactNode) => void
-  }): Promise<void>
-  signUpLink: React.ReactNode
+    email: string;
+    password: string;
+    setSubmitError: (r: React.ReactNode) => void;
+  }): Promise<void>;
+  signUpLink: React.ReactNode;
 }
 
 export default function SignInPage({ onSubmit, signUpLink }: IProps) {
-  const [emailError, setEmailError] = React.useState('')
-  const [passwordError, setPasswordError] = React.useState('')
-  const [isSubmitting, setIsSubmitting] = React.useState(false)
-  const [submitError, setSubmitError] = React.useState<React.ReactNode>()
+  const [emailError, setEmailError] = React.useState("");
+  const [passwordError, setPasswordError] = React.useState("");
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitError, setSubmitError] = React.useState<React.ReactNode>();
 
   return (
     <Paper.Group>
@@ -41,23 +44,23 @@ export default function SignInPage({ onSubmit, signUpLink }: IProps) {
         <form
           noValidate
           onSubmit={async (e) => {
-            e.preventDefault()
-            const email = (e.target as IFormElement).email.value
-            const password = (e.target as IFormElement).password.value
-            const emailErrorMessage = validateEmail(email)
-            const passwordErrorMessage = validatePassword(password)
+            e.preventDefault();
+            const email = (e.target as IFormElement).email.value;
+            const password = (e.target as IFormElement).password.value;
+            const emailErrorMessage = validateEmail(email);
+            const passwordErrorMessage = validatePassword(password);
             if (emailErrorMessage || passwordErrorMessage) {
-              setEmailError(emailErrorMessage || '')
-              setPasswordError(passwordErrorMessage || '')
-              return
+              setEmailError(emailErrorMessage || "");
+              setPasswordError(passwordErrorMessage || "");
+              return;
             }
-            if (emailError) setEmailError('')
-            if (passwordError) setPasswordError('')
-            setIsSubmitting(true)
+            if (emailError) setEmailError("");
+            if (passwordError) setPasswordError("");
+            setIsSubmitting(true);
             try {
-              await onSubmit({ email, password, setSubmitError })
+              await onSubmit({ email, password, setSubmitError });
             } finally {
-              setIsSubmitting(false)
+              setIsSubmitting(false);
             }
           }}
         >
@@ -90,5 +93,5 @@ export default function SignInPage({ onSubmit, signUpLink }: IProps) {
         </form>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

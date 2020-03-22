@@ -1,5 +1,5 @@
-import './style.css'
-import * as React from 'react'
+import "./style.css";
+import * as React from "react";
 
 export const iconNameMap = {
   check: <polyline points="20 6 9 17 4 12" />,
@@ -61,14 +61,14 @@ export const iconNameMap = {
       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
     </>
   ),
-}
+};
 
 export interface IProps extends React.SVGProps<SVGSVGElement> {
-  name: keyof typeof iconNameMap
-  size?: '2' | '3' | '4'
+  name: keyof typeof iconNameMap;
+  size?: "2" | "3" | "4";
 }
 
-export default function Icon({ name, size = '2', ...rest }: IProps) {
+export default function Icon({ name, size = "2", ...rest }: IProps) {
   return (
     <svg
       {...rest}
@@ -83,5 +83,5 @@ export default function Icon({ name, size = '2', ...rest }: IProps) {
     >
       {iconNameMap[name]}
     </svg>
-  )
+  );
 }

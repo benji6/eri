@@ -1,9 +1,9 @@
-import './style.css'
-import * as React from 'react'
-import Field from '../../privateComponents/Field'
+import "./style.css";
+import * as React from "react";
+import Field from "../../privateComponents/Field";
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label: React.ReactNode
+  label: React.ReactNode;
 }
 
 export default function Toggle({ label, ...rest }: IProps) {
@@ -15,5 +15,5 @@ export default function Toggle({ label, ...rest }: IProps) {
         <span className="e-toggle__label-copy">{label}</span>
       </label>
     </Field>
-  )
+  );
 }

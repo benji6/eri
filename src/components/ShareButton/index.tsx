@@ -1,25 +1,25 @@
-import * as React from 'react'
-import { Button, Icon } from '../..'
+import * as React from "react";
+import { Button, Icon } from "../..";
 
 type ShareOptions =
   | {
-      text: string
+      text: string;
     }
   | {
-      title: string
+      title: string;
     }
   | {
-      url: string
-    }
+      url: string;
+    };
 
 interface INavigator extends Navigator {
-  share?: (options: ShareOptions) => Promise<void>
+  share?: (options: ShareOptions) => Promise<void>;
 }
 
 export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  text?: string
-  title?: string
-  url?: string
+  text?: string;
+  title?: string;
+  url?: string;
 }
 
 export default function ShareButton({
@@ -28,7 +28,7 @@ export default function ShareButton({
   url = location.origin,
   ...rest
 }: IProps) {
-  return 'share' in navigator ? (
+  return "share" in navigator ? (
     <Button.Group>
       <Button
         {...rest}
@@ -38,5 +38,5 @@ export default function ShareButton({
         Share <Icon name="share" />
       </Button>
     </Button.Group>
-  ) : null
+  ) : null;
 }

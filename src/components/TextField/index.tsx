@@ -1,14 +1,14 @@
-import './style.css'
-import * as React from 'react'
-import Field from '../../privateComponents/Field'
-import FieldError from '../../privateComponents/FieldError'
-import FieldLabel from '../../privateComponents/FieldLabel'
-import SupportiveText from '../../privateComponents/SupportiveText'
+import "./style.css";
+import * as React from "react";
+import Field from "../../privateComponents/Field";
+import FieldError from "../../privateComponents/FieldError";
+import FieldLabel from "../../privateComponents/FieldLabel";
+import SupportiveText from "../../privateComponents/SupportiveText";
 
 interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  error?: React.ReactNode
-  label: React.ReactNode
-  supportiveText?: React.ReactNode
+  error?: React.ReactNode;
+  label: React.ReactNode;
+  supportiveText?: React.ReactNode;
 }
 
 export default function TextField({
@@ -26,5 +26,5 @@ export default function TextField({
       </label>
       <FieldError>{error}</FieldError>
     </Field>
-  )
+  );
 }

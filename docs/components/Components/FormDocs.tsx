@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react";
 import {
   Button,
   Checkbox,
@@ -10,8 +10,8 @@ import {
   TextArea,
   TextField,
   Toggle,
-} from '../../../src'
-import { RouteComponentProps } from '@reach/router'
+} from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function FormDocs(_: RouteComponentProps) {
   return (
@@ -82,5 +82,5 @@ export default function FormDocs(_: RouteComponentProps) {
         </form>
       </Paper>
     </Paper.Group>
-  )
+  );
 }

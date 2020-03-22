@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Paper } from '../../../src'
-import { RouteComponentProps } from '@reach/router'
+import * as React from "react";
+import { Paper } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function LinkDocs(_: RouteComponentProps) {
   return (
@@ -11,5 +11,5 @@ export default function LinkDocs(_: RouteComponentProps) {
         <a href="/#">Click me!</a>
       </Paper>
     </Paper.Group>
-  )
+  );
 }
