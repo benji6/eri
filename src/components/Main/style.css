@@ -4,7 +4,7 @@
 }
 
 @media (min-width: 1024px) {
-  .e-main {
+  .e-main:not(.e-main--no-menu) {
     padding-right: var(--e-menu-width);
   }
 }

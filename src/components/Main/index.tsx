@@ -1,8 +1,11 @@
 import './style.css'
 import * as React from 'react'
 
-export type IProps = React.HTMLAttributes<HTMLElement>
+export interface IProps extends React.HTMLAttributes<HTMLElement> {
+  noMenu?: boolean
+}
 
-export default function Main(props: IProps) {
-  return <main {...props} className="e-main" />
+export default function Main({ noMenu, ...rest }: IProps) {
+  const className = `e-main${noMenu ? ' e-main--no-menu' : ''}`
+  return <main {...rest} className={className} />
 }

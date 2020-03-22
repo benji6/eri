@@ -1,10 +1,15 @@
 import './style.css'
 import * as React from 'react'
 
-export default function Header(props: React.HTMLAttributes<HTMLDivElement>) {
+interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+  noMenu?: boolean
+}
+
+export default function Header({ noMenu, ...rest }: IProps) {
+  const className = `e-header${noMenu ? ' e-header--no-menu' : ''}`
   return (
-    <header className="e-header">
-      <div {...props} />
+    <header className={className}>
+      <div {...rest} />
     </header>
   )
 }
