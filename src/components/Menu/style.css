@@ -1,5 +1,5 @@
 .e-menu {
-  background: var(--e-color-ground);
+  background: var(--e-color-ground-more);
   bottom: 0;
   box-sizing: border-box;
   filter: var(--e-drop-shadow-2);
@@ -15,6 +15,7 @@
 
 @media (min-width: 1024px) {
   .e-menu {
+    background: var(--e-color-ground);
     left: 0;
     right: initial;
     transform: none !important;
