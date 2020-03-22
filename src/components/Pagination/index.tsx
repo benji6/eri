@@ -39,7 +39,7 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
           <Icon name="left" />
         </button>
       )}
-      {pageNumbers.map(i => (
+      {pageNumbers.map((i) => (
         <button
           aria-label={`navigate to page ${i + 1}`}
           className="pagination__button"

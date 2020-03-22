@@ -34,7 +34,7 @@ export const PropControlBoolean = <Props extends { [k: string]: any }>({
   <Toggle
     checked={props[name]}
     label={name}
-    onChange={e => setProps({ ...props, [name]: e.target.checked })}
+    onChange={(e) => setProps({ ...props, [name]: e.target.checked })}
   />
 )
 
@@ -51,7 +51,7 @@ export const PropControlEnum = <Props extends { [k: string]: any }>({
 }) => (
   <Select
     label={name}
-    onChange={e =>
+    onChange={(e) =>
       setProps({
         ...props,
         [name]: e.target.value ? e.target.value : undefined,
@@ -99,7 +99,7 @@ export const PropControlString = <Props extends { [k: string]: any }>({
 }) => (
   <TextField
     label={name}
-    onChange={e => setProps({ ...props, [name]: e.target.value })}
+    onChange={(e) => setProps({ ...props, [name]: e.target.value })}
     value={props[name]}
   />
 )

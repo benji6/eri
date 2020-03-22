@@ -40,7 +40,7 @@ export default function SignUpPage({ onSubmit, signInLink }: IProps) {
         <h2>Sign up</h2>
         <form
           noValidate
-          onSubmit={async e => {
+          onSubmit={async (e) => {
             e.preventDefault()
             const email = (e.target as IFormElement).email.value
             const password = (e.target as IFormElement).password.value

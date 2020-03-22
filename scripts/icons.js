@@ -25,7 +25,7 @@ favicons(source, configuration, (err, response) => {
   const { contents, name } = response.images.find(
     ({ name }) => name === 'favicon.ico',
   )
-  fs.writeFile(path.join(iconsPath, name), contents, err => {
+  fs.writeFile(path.join(iconsPath, name), contents, (err) => {
     if (err) throw err
   })
 })

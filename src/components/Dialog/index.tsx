@@ -39,7 +39,10 @@ export default function Dialog({
           onClick={disableClose ? undefined : onClose}
           role="dialog"
         >
-          <div className="e-dialog__dialog" onClick={e => e.stopPropagation()}>
+          <div
+            className="e-dialog__dialog"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="e-dialog__content">
               <div className="e-dialog__header">
                 <h4 id="e-dialog-title">{title}</h4>
