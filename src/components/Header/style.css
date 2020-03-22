@@ -10,11 +10,11 @@
 @media (min-width: 1024px) {
   .e-header:not(.e-header--no-menu) {
     padding-left: calc(
-      (100% - var(--e-max-width-1) - var(--e-menu-width)) / 2 - var(--e-space-2)
-    );
-    padding-right: calc(
       (100% - var(--e-max-width-1) - var(--e-menu-width)) / 2 - var(--e-space-2) +
         var(--e-menu-width)
+    );
+    padding-right: calc(
+      (100% - var(--e-max-width-1) - var(--e-menu-width)) / 2 - var(--e-space-2)
     );
   }
 }

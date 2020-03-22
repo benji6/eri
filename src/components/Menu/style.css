@@ -1,8 +1,8 @@
 .e-menu {
-  background: var(--e-color-ground-more);
+  background: var(--e-color-ground);
   bottom: 0;
   box-sizing: border-box;
-  filter: var(--e-drop-shadow-1);
+  filter: var(--e-drop-shadow-2);
   max-width: calc(200vw / 3);
   overflow: auto;
   padding: var(--e-space-3);
@@ -11,6 +11,14 @@
   top: 0;
   transition: transform var(--e-time-1) var(--e-easing-standard);
   width: var(--e-menu-width);
+}
+
+@media (min-width: 1024px) {
+  .e-menu {
+    left: 0;
+    right: initial;
+    transform: none !important;
+  }
 }
 
 .e-menu--enter,

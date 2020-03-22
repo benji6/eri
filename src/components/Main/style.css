@@ -5,6 +5,6 @@
 
 @media (min-width: 1024px) {
   .e-main:not(.e-main--no-menu) {
-    padding-right: var(--e-menu-width);
+    padding-left: var(--e-menu-width);
   }
 }
