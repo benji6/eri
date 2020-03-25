@@ -16,8 +16,10 @@
 @media (min-width: 1024px) {
   .e-menu {
     background: var(--e-color-ground);
+    filter: var(--e-drop-shadow-0);
     left: 0;
     right: initial;
+    top: var(--e-header-height);
     transform: none !important;
   }
 }

@@ -4,7 +4,9 @@
   filter: var(--e-drop-shadow-1);
   height: var(--e-header-height);
   padding: 0 calc((100% - var(--e-max-width-1)) / 2 - var(--e-space-2));
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: var(--e-z-index-2);
 }
 
 @media (min-width: 1024px) {
