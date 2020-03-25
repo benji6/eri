@@ -2,8 +2,8 @@
   background: var(--e-color-theme);
   color: var(--e-color-ground);
   filter: var(--e-drop-shadow-1);
-  padding: var(--e-space-1)
-    calc((100% - var(--e-max-width-1)) / 2 - var(--e-space-2));
+  height: var(--e-header-height);
+  padding: 0 calc((100% - var(--e-max-width-1)) / 2 - var(--e-space-2));
   position: relative;
 }
 
@@ -37,6 +37,7 @@
 .e-header__container {
   align-items: center;
   display: flex;
+  height: 100%;
   justify-content: space-between;
   margin: 0 var(--e-space-2);
 }
