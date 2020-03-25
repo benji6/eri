@@ -3,6 +3,11 @@
   display: flex;
   font-size: var(--e-font-size-0);
   font-weight: var(--e-font-weight-bold);
+  transition: color var(--e-time-1) var(--e-easing-standard);
+}
+
+.e-menu-button:hover {
+  color: var(--e-color-highlight-default);
 }
 
 @media (min-width: 1024px) {

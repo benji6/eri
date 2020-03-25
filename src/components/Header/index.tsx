@@ -9,7 +9,7 @@ export default function Header({ noMenu, ...rest }: IProps) {
   const className = `e-header${noMenu ? " e-header--no-menu" : ""}`;
   return (
     <header className={className}>
-      <div {...rest} />
+      <div {...rest} className="e-header__container" />
     </header>
   );
 }
