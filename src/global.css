@@ -157,7 +157,7 @@ input:not([type="checkbox"])[aria-invalid="true"],
 select[aria-invalid="true"],
 textarea[aria-invalid="true"] {
   border-color: var(--e-color-negative);
-  box-shadow: none;
+  filter: none;
 }
 
 small {
