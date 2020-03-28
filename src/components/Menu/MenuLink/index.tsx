@@ -9,13 +9,17 @@ export default function MenuLink({
   ...rest
 }: React.HTMLAttributes<HTMLAnchorElement> & { to: LinkProps<void>["to"] }) {
   return (
-    <Link
-      {...rest}
-      getProps={({ isCurrent }) => ({
-        className: `e-menu-link${isCurrent ? " e-menu-link--active" : ""} `,
-      })}
-      to={to}
-    />
+    <li className="e-menu-link">
+      <Link
+        {...rest}
+        getProps={({ isCurrent }) => ({
+          className: `e-menu-link__link${
+            isCurrent ? " e-menu-link__link--active" : ""
+          }`,
+        })}
+        to={to}
+      />
+    </li>
   );
 }
 

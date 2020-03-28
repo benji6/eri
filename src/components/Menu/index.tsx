@@ -5,6 +5,8 @@ import CloseButton from "../../privateComponents/CloseButton";
 import Mask from "../../privateComponents/Mask";
 import MenuButton from "./MenuButton";
 import MenuLink from "./MenuLink";
+import MenuList from "./MenuList";
+import MenuSubList from "./MenuSubList";
 import { getCssTime1 } from "../../utils/getCssVar";
 import useWidth from "../../hooks/useWidth";
 
@@ -44,3 +46,5 @@ export default function Menu({ children, onClose, open, ...rest }: IProps) {
 
 Menu.Button = MenuButton;
 Menu.Link = MenuLink;
+Menu.List = MenuList;
+Menu.SubList = MenuSubList;

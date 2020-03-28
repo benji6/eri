@@ -11,6 +11,7 @@ import Home from "../Home";
 import IconDocs from "../Components/IconDocs";
 import LinkDocs from "../Components/LinkDocs";
 import MainDocs from "../Components/MainDocs";
+import MenuDocs from "../Components/MenuDocs";
 import PagesHome from "../Components/PagesHome";
 import PaginationDocs from "../Components/PaginationDocs";
 import PaperDocs from "../Components/PaperDocs";
@@ -41,6 +42,7 @@ export default function Router() {
       <IconDocs path="components/icon" />
       <LinkDocs path="components/link" />
       <MainDocs path="components/main" />
+      <MenuDocs path="components/menu" />
       <PaginationDocs path="components/pagination" />
       <PaperDocs path="components/paper" />
       <ShareButtonDocs path="components/share-button" />

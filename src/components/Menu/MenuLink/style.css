@@ -1,8 +1,21 @@
 .e-menu-link {
+  list-style-type: disc;
+}
+
+.e-menu-list > .e-menu-link {
+  list-style: none;
+  margin: var(--e-space-2) 0;
+}
+
+.e-menu-list > *:first-child {
+  margin-top: 0;
+}
+
+.e-menu-link__link {
   transition: filter var(--e-time-0) var(--e-easing-standard);
 }
 
-.e-menu-link--active {
+.e-menu-link__link--active {
   --active-color: var(--e-color-theme-more);
 
   color: var(--active-color);
@@ -12,6 +25,6 @@
   text-decoration: none;
 }
 
-.e-menu-link--active:hover {
+.e-menu-link__link--active:hover {
   color: var(--active-color);
 }

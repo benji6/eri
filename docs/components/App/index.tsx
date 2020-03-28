@@ -20,33 +20,25 @@ export default function App() {
         <Menu.Button onClick={handleMenuOpen} />
       </Header>
       <Menu onClose={handleMenuClose} open={isMenuOpen}>
-        <p>
+        <Menu.List>
           <Menu.Link onClick={handleMenuClose} to="/">
             Home
           </Menu.Link>
-        </p>
-        <p>
           <Menu.Link onClick={handleMenuClose} to="/design-elements">
             Design elements
           </Menu.Link>
-        </p>
-        <p>
           <Menu.Link onClick={handleMenuClose} to="/typography">
             Typography
           </Menu.Link>
-        </p>
-        <p>
           <Menu.Link onClick={handleMenuClose} to="/components">
             Components
           </Menu.Link>
-        </p>
-        <ComponentLinks onClick={handleMenuClose} />
-        <p>
+          <ComponentLinks onClick={handleMenuClose} />
           <Menu.Link onClick={handleMenuClose} to="/pages">
             Pages
           </Menu.Link>
-        </p>
-        <PageLinks onClick={handleMenuClose} />
+          <PageLinks onClick={handleMenuClose} />
+        </Menu.List>
       </Menu>
       <Main>
         <Router />
