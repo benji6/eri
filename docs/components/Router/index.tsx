@@ -27,7 +27,7 @@ import _404 from "../_404";
 
 export default function Router() {
   return (
-    <ReachRouter>
+    <ReachRouter primary={false}>
       <_404 default />
       <Home path="/" />
       <DesignElements path="design-elements" />
