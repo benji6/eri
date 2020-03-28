@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Link, RouteComponentProps } from "@reach/router";
+import { Menu } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function PageLinks(
   props: RouteComponentProps & React.HTMLAttributes<HTMLAnchorElement>
@@ -7,24 +8,24 @@ export default function PageLinks(
   return (
     <ul>
       <li>
-        <Link {...props} to="/pages/resend-verification">
+        <Menu.Link {...props} to="/pages/resend-verification">
           Resend Verification
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/pages/sign-in">
+        <Menu.Link {...props} to="/pages/sign-in">
           Sign in
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/pages/sign-up">
+        <Menu.Link {...props} to="/pages/sign-up">
           Sign up
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/pages/verify">
+        <Menu.Link {...props} to="/pages/verify">
           Verify
-        </Link>
+        </Menu.Link>
       </li>
     </ul>
   );

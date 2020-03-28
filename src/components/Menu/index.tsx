@@ -4,6 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import CloseButton from "../../privateComponents/CloseButton";
 import Mask from "../../privateComponents/Mask";
 import MenuButton from "./MenuButton";
+import MenuLink from "./MenuLink";
 import { getCssTime1 } from "../../utils/getCssVar";
 import useWidth from "../../hooks/useWidth";
 
@@ -42,3 +43,4 @@ export default function Menu({ children, onClose, open, ...rest }: IProps) {
 }
 
 Menu.Button = MenuButton;
+Menu.Link = MenuLink;

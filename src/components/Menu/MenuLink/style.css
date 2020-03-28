@@ -1,0 +1,17 @@
+.e-menu-link {
+  transition: filter var(--e-time-0) var(--e-easing-standard);
+}
+
+.e-menu-link--active {
+  --active-color: var(--e-color-theme-more);
+
+  color: var(--active-color);
+  filter: drop-shadow(
+    var(--e-drop-shadow-even-2-no-color) var(--e-color-theme-less)
+  );
+  text-decoration: none;
+}
+
+.e-menu-link--active:hover {
+  color: var(--active-color);
+}

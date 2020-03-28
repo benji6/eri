@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Link, RouteComponentProps } from "@reach/router";
+import { Menu } from "../../../src";
+import { RouteComponentProps } from "@reach/router";
 
 export default function ComponentLinks(
   props: RouteComponentProps & React.HTMLAttributes<HTMLAnchorElement>
@@ -7,69 +8,69 @@ export default function ComponentLinks(
   return (
     <ul>
       <li>
-        <Link {...props} to="/components/button">
+        <Menu.Link {...props} to="/components/button">
           Button
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/card">
+        <Menu.Link {...props} to="/components/card">
           Card
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/dialog">
+        <Menu.Link {...props} to="/components/dialog">
           Dialog
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/fab">
+        <Menu.Link {...props} to="/components/fab">
           Fab
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/form">
+        <Menu.Link {...props} to="/components/form">
           Form
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/header">
+        <Menu.Link {...props} to="/components/header">
           Header
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/icon">
+        <Menu.Link {...props} to="/components/icon">
           Icon
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/link">
+        <Menu.Link {...props} to="/components/link">
           Link
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/main">
+        <Menu.Link {...props} to="/components/main">
           Main
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/pagination">
+        <Menu.Link {...props} to="/components/pagination">
           Pagination
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/paper">
+        <Menu.Link {...props} to="/components/paper">
           Paper
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/share-button">
+        <Menu.Link {...props} to="/components/share-button">
           ShareButton
-        </Link>
+        </Menu.Link>
       </li>
       <li>
-        <Link {...props} to="/components/spinner">
+        <Menu.Link {...props} to="/components/spinner">
           Spinner
-        </Link>
+        </Menu.Link>
       </li>
     </ul>
   );
