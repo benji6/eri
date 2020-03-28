@@ -1,6 +1,6 @@
 import "./style.css";
 import * as React from "react";
-import Icon from "../Icon";
+import Icon from "../../Icon";
 
 export default function MenuButton(
   props: React.ButtonHTMLAttributes<HTMLButtonElement>
@@ -12,3 +12,5 @@ export default function MenuButton(
     </button>
   );
 }
+
+MenuButton.displayName = "Menu.Button";

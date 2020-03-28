@@ -1,6 +1,6 @@
 import * as React from "react";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
-import { Header, MenuButton, Paper } from "../../../src";
+import { Header, Menu, Paper } from "../../../src";
 import { Link, RouteComponentProps } from "@reach/router";
 
 export default function HeaderDocs(_: RouteComponentProps) {
@@ -19,7 +19,7 @@ export default function HeaderDocs(_: RouteComponentProps) {
             <h1>
               <Link to="#">{exampleProps.title}</Link>
             </h1>
-            <MenuButton />
+            <Menu.Button />
           </Header>
         }
       >

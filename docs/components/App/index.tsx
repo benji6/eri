@@ -1,6 +1,6 @@
 import "./style.css";
 import * as React from "react";
-import { Header, Main, Menu, MenuButton } from "../../../src";
+import { Header, Main, Menu } from "../../../src";
 import ComponentLinks from "../ComponentLinks";
 import { Link } from "@reach/router";
 import PageLinks from "../PageLinks";
@@ -17,7 +17,7 @@ export default function App() {
         <h1>
           <Link to="/">Eri</Link>
         </h1>
-        <MenuButton onClick={handleMenuOpen} />
+        <Menu.Button onClick={handleMenuOpen} />
       </Header>
       <Menu onClose={handleMenuClose} open={isMenuOpen}>
         <p>
