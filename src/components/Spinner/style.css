@@ -1,8 +1,9 @@
 .e-spinner {
+  --color: var(--e-color-theme);
   --diameter: var(--e-space-4);
 
   animation: var(--e-animation-fade-in), var(--e-animation-spin);
-  border: calc(var(--diameter) / 8) solid var(--e-color-theme);
+  border: calc(var(--diameter) / 8) solid var(--color);
   border-radius: 50%;
   border-right-color: transparent;
   box-sizing: border-box;
@@ -10,4 +11,12 @@
   height: var(--diameter);
   margin: var(--diameter) auto;
   width: var(--diameter);
+}
+
+.e-spinner--inline {
+  --color: currentColor;
+  --diameter: 1em;
+
+  display: inline-flex;
+  margin: auto;
 }
