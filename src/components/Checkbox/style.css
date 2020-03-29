@@ -53,7 +53,7 @@
   stroke-dasharray: 30;
   stroke-dashoffset: -30;
   transition-duration: var(--e-time-0);
-  transition-property: border;
+  transition-property: border, filter;
   transition-timing-function: var(--e-easing-standard);
   width: var(--checkbox-size);
 }
