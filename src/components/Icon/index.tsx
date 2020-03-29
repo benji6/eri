@@ -65,10 +65,10 @@ export const iconNameMap = {
 
 export interface IProps extends React.SVGProps<SVGSVGElement> {
   name: keyof typeof iconNameMap;
-  size?: "2" | "3" | "4";
+  size?: "2" | "3" | "4" | "inherit";
 }
 
-export default function Icon({ name, size = "2", ...rest }: IProps) {
+export default function Icon({ name, size = "inherit", ...rest }: IProps) {
   return (
     <svg
       {...rest}

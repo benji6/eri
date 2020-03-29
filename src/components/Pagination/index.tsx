@@ -36,7 +36,7 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
           onClick={() => onChange(page - 1)}
           type="button"
         >
-          <Icon name="left" />
+          <Icon name="left" size="2" />
         </button>
       )}
       {pageNumbers.map((i) => (
@@ -60,7 +60,7 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
           onClick={() => onChange(page + 1)}
           type="button"
         >
-          <Icon name="right" />
+          <Icon name="right" size="2" />
         </button>
       )}
     </div>

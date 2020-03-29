@@ -13,7 +13,7 @@ export default function CloseButton(
       e-util="ripple"
       type="button"
     >
-      <Icon name="cross" />
+      <Icon name="cross" size="2" />
     </button>
   );
 }

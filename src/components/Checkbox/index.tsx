@@ -20,7 +20,7 @@ export default function Checkbox({ label, error, ...rest }: IProps) {
           type="checkbox"
         />
         <span className="e-checkbox__appearance">
-          <Icon name="check" />
+          <Icon name="check" size="2" />
         </span>
         <span className="e-checkbox__label-copy">{label}</span>
       </label>

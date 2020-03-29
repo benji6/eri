@@ -1,18 +1,19 @@
 .e-icon {
+  --size: 1em;
+
+  height: var(--size);
   vertical-align: middle;
+  width: var(--size);
 }
 
 .e-icon--size-2 {
-  height: var(--e-font-size-2);
-  width: var(--e-font-size-2);
+  --size: var(--e-font-size-2);
 }
 
 .e-icon--size-3 {
-  height: var(--e-font-size-3);
-  width: var(--e-font-size-3);
+  --size: var(--e-font-size-3);
 }
 
 .e-icon--size-4 {
-  height: var(--e-font-size-4);
-  width: var(--e-font-size-4);
+  --size: var(--e-font-size-4);
 }

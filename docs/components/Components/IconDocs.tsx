@@ -44,7 +44,7 @@ export default function IconDocs(_: RouteComponentProps) {
         />
         <PropControlEnum
           name="size"
-          options={["2", "3", "4"]}
+          options={["2", "3", "4", "inherit"]}
           props={props}
           setProps={setProps}
         />
