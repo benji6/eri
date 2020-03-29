@@ -64,15 +64,22 @@ export const iconNameMap = {
 };
 
 export interface IProps extends React.SVGProps<SVGSVGElement> {
+  draw?: boolean;
   name: keyof typeof iconNameMap;
   size?: "2" | "3" | "4" | "inherit";
 }
 
-export default function Icon({ name, size = "inherit", ...rest }: IProps) {
+export default function Icon({
+  draw,
+  name,
+  size = "inherit",
+  ...rest
+}: IProps) {
+  const className = `e-icon e-icon--size-${size}${draw ? " e-icon--draw" : ""}`;
   return (
     <svg
       {...rest}
-      className={`e-icon e-icon--size-${size}`}
+      className={className}
       fill="none"
       stroke="currentColor"
       strokeLinecap="round"

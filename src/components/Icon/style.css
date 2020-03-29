@@ -6,6 +6,12 @@
   width: var(--size);
 }
 
+.e-icon--draw {
+  animation: e-draw var(--e-time-2) linear forwards;
+  stroke-dasharray: 30;
+  stroke-dashoffset: -30;
+}
+
 .e-icon--size-2 {
   --size: var(--e-font-size-2);
 }

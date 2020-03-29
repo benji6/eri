@@ -6,6 +6,12 @@
   --e-animation-spin: e-rotate var(--e-time-2) linear infinite;
 }
 
+@keyframes e-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @keyframes e-rotate {
   to {
     transform: rotate(360deg);
