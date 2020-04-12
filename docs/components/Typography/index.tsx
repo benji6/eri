@@ -56,6 +56,22 @@ export default function Typography(_: RouteComponentProps) {
         <hr />
       </Paper>
       <Paper>
+        <h3>Blockquote</h3>
+        <p>
+          A <code>{"<blockquote>"}</code> looks like this:
+        </p>
+        <blockquote cite="https://www.goodreads.com/book/show/640565.The_Book_of_Chuang_Tzu">
+          <p>
+            All men know the use of the useful, but nobody knows the use of the
+            useless!
+          </p>
+          <footer>
+            —Chuang Tzu, <cite>The Book of Chuang Tzu</cite>
+          </footer>
+        </blockquote>
+        <p>And then here is a normal paragraph.</p>
+      </Paper>
+      <Paper>
         <h3>CSS utilities</h3>
         <p e-util="center">
           You can center any element by setting the e-util attribute to

@@ -46,6 +46,19 @@ button {
   outline-color: var(--e-color-highlight-default);
 }
 
+blockquote {
+  font-style: italic;
+  margin: var(--e-space-3);
+}
+
+blockquote footer {
+  font-weight: var(--e-font-weight-bold);
+}
+
+cite {
+  font-style: normal;
+}
+
 fieldset {
   border-color: var(--e-color-balance);
   border-radius: var(--e-border-radius-1);
