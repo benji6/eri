@@ -10,11 +10,11 @@
   color: var(--e-color-figure-less);
 }
 
+.e-close-button:active {
+  color: red;
+}
+
 .e-close-button:focus:not(:active) {
   background: var(--e-color-figure);
   color: var(--e-color-ground);
-}
-
-.e-close-button:active {
-  color: var(--e-color-figure-more);
 }

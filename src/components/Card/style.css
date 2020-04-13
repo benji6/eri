@@ -30,6 +30,7 @@ button.e-card:active {
   transform: scale(1);
 }
 
+/* stylelint-disable no-descending-specificity */
 .e-card > *:first-child,
 .e-card > *:first-child > *:first-child {
   margin-top: 0;
@@ -39,6 +40,7 @@ button.e-card:active {
 .e-card > *:last-child > *:last-child {
   margin-bottom: 0;
 }
+/* stylelint-enable no-descending-specificity */
 
 .e-card:nth-child(6n + 1) {
   --color: var(--e-color-highlight-0);

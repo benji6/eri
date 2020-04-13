@@ -6,6 +6,7 @@
   padding: var(--e-space-2);
 }
 
+/* stylelint-disable no-descending-specificity */
 .e-paper > *:first-child,
 .e-paper > *:first-child > *:first-child,
 .e-paper > *:first-child > *:first-child > *:first-child,
@@ -31,6 +32,7 @@
   > *:last-child {
   margin-bottom: 0;
 }
+/* stylelint-enable no-descending-specificity */
 
 button.e-paper {
   outline: 0;

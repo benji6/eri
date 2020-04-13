@@ -52,6 +52,10 @@
   transition: 0s;
 }
 
+[e-util*="slide-in"] > * {
+  animation: var(--e-animation-slide-in);
+}
+
 [e-util*="slide-children-in"] > * {
   animation: var(--e-animation-slide-in);
   opacity: 0;
@@ -88,8 +92,4 @@
 }
 [e-util*="slide-children-in"] > *:nth-child(12) {
   animation-delay: calc(var(--e-time-0) * 11);
-}
-
-[e-util*="slide-in"] > * {
-  animation: var(--e-animation-slide-in);
 }

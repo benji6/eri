@@ -22,6 +22,15 @@ a {
   transition-timing-function: var(--e-easing-standard);
 }
 
+a,
+button {
+  outline-color: var(--e-color-highlight-default);
+}
+
+a::-moz-focus-inner {
+  border: none;
+}
+
 a:focus {
   color: var(--e-color-theme-less);
   text-decoration-color: transparent;
@@ -35,15 +44,6 @@ a:hover {
 a:active {
   color: var(--e-color-theme-more);
   text-decoration-color: transparent;
-}
-
-a::-moz-focus-inner {
-  border: none;
-}
-
-a,
-button {
-  outline-color: var(--e-color-highlight-default);
 }
 
 blockquote {
@@ -97,12 +97,6 @@ h4 {
   transition: color, var(--e-time-0) var(--e-easing-standard);
 }
 
-h1 + h2,
-h2 + h3,
-h3 + h4 {
-  margin-top: 0;
-}
-
 h1 {
   font-size: var(--e-font-size-4);
   text-align: center;
@@ -118,6 +112,12 @@ h3 {
 
 h4 {
   font-size: var(--e-font-size-1);
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4 {
+  margin-top: 0;
 }
 
 hr {

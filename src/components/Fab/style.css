@@ -17,13 +17,13 @@
   background: var(--e-color-theme-less);
 }
 
+.e-fab:disabled {
+  background: var(--e-color-balance);
+}
+
 .e-fab:active:not(:disabled) {
   background: var(--e-color-theme-more);
   filter: var(--e-drop-shadow-0);
-}
-
-.e-fab:disabled {
-  background: var(--e-color-balance);
 }
 
 .e-fab--enter,

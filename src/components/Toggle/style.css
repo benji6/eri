@@ -52,12 +52,12 @@
   );
 }
 
-.e-toggle__input:checked:hover ~ .e-toggle__appearance {
-  background: var(--e-color-positive-less);
-}
-
 .e-toggle__input:focus ~ .e-toggle__appearance {
   border-color: var(--e-color-theme-less);
+}
+
+.e-toggle__input:checked:hover ~ .e-toggle__appearance {
+  background: var(--e-color-positive-less);
 }
 
 .e-toggle__label {

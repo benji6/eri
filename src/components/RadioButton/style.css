@@ -29,6 +29,12 @@
   transition-timing-function: var(--e-easing-standard);
 }
 
+.e-radio-button__appearance:hover {
+  border-color: var(--e-color-theme-less);
+  color: var(--e-color-theme-less);
+  z-index: var(--e-z-index-1);
+}
+
 .e-radio-button:first-child .e-radio-button__appearance {
   border-bottom-left-radius: var(--e-border-radius-0);
   border-top-left-radius: var(--e-border-radius-0);
@@ -37,12 +43,6 @@
 .e-radio-button:last-child .e-radio-button__appearance {
   border-bottom-right-radius: var(--e-border-radius-0);
   border-top-right-radius: var(--e-border-radius-0);
-}
-
-.e-radio-button__appearance:hover {
-  border-color: var(--e-color-theme-less);
-  color: var(--e-color-theme-less);
-  z-index: var(--e-z-index-1);
 }
 
 .e-radio-button__input:focus ~ .e-radio-button__appearance {
