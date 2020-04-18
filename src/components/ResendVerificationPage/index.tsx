@@ -54,6 +54,7 @@ export default function ResendVerificationPage({ onSubmit }: IProps) {
             error={emailError}
             label="Email"
             name="email"
+            supportiveText="Take care to type your address correctly"
             type="email"
           />
           {submitError && (
