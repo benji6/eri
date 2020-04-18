@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+.e-radio-button-group__container {
+  display: flex;
+}
+
 .e-radio-button-group__legend {
   padding: 0;
 }

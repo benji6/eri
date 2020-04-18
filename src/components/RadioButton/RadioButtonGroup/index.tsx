@@ -28,7 +28,7 @@ export default function RadioButtonGroup({
         <legend className="e-radio-button-group__legend">
           <FieldLabel>{label}</FieldLabel>
         </legend>
-        <div>{children}</div>
+        <div className="e-radio-button-group__container">{children}</div>
         <FieldError>{error}</FieldError>
       </fieldset>
     </Field>

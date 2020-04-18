@@ -1,5 +1,6 @@
 .e-radio-button {
-  display: inline-block;
+  display: inline-flex;
+  flex-grow: 1;
   margin-left: calc(-1 * var(--e-border-width-1));
   position: relative;
 }
@@ -20,13 +21,13 @@
   border: var(--e-border-default);
   cursor: pointer;
   display: inline-block;
-  min-width: var(--e-space-4);
   padding: var(--e-space-0);
   position: relative;
   text-align: center;
   transition-duration: var(--e-time-0);
   transition-property: background-color, border-color, color;
   transition-timing-function: var(--e-easing-standard);
+  width: 100%;
 }
 
 .e-radio-button__appearance:hover {
