@@ -6,6 +6,7 @@ import {
   passwordValidator,
   requiredValidator,
 } from "../../utils/validators";
+import { Link } from "@reach/router";
 
 const validateEmail = composeValidators(requiredValidator, emailValidator);
 const validatePassword = composeValidators(
@@ -28,10 +29,9 @@ interface IProps {
     password: string;
     setSubmitError: (r: React.ReactNode) => void;
   }): Promise<void>;
-  signUpLink: React.ReactNode;
 }
 
-export default function SignInPage({ onSubmit, signUpLink }: IProps) {
+export default function SignInPage({ onSubmit }: IProps) {
   const [emailError, setEmailError] = React.useState("");
   const [passwordError, setPasswordError] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -88,7 +88,9 @@ export default function SignInPage({ onSubmit, signUpLink }: IProps) {
             <Button disabled={isSubmitting}>Sign in</Button>
           </Button.Group>
           <p e-util="center">
-            <small>Don&apos;t have an account? {signUpLink}!</small>
+            <small>
+              Don&apos;t have an account? <Link to="/sign-up">Sign up</Link>!
+            </small>
           </p>
         </form>
       </Paper>

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Router as ReachRouter, Redirect } from "@reach/router";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
 import ComponentsHome from "../Components/ComponentsHome";
@@ -15,7 +16,6 @@ import MenuDocs from "../Components/MenuDocs";
 import PagesHome from "../Components/PagesHome";
 import PaginationDocs from "../Components/PaginationDocs";
 import PaperDocs from "../Components/PaperDocs";
-import { Router as ReachRouter } from "@reach/router";
 import ResendVerificationPageDocs from "../Components/ResendVerificationPageDocs";
 import ShareButtonDocs from "../Components/ShareButtonDocs";
 import SignInPageDocs from "../Components/SignInPageDocs";
@@ -29,6 +29,10 @@ export default function Router() {
   return (
     <ReachRouter primary={false}>
       <_404 default />
+      <Redirect from="/sign-in" to="/pages/sign-in" />
+      <Redirect from="/sign-up" to="/pages/sign-up" />
+      <Redirect from="/verify" to="/pages/verify" />
+      <Redirect from="/resend-verification" to="/pages/resend-verification" />
       <Home path="/" />
       <DesignElements path="design-elements" />
       <Typography path="typography" />
