@@ -68,7 +68,7 @@ export default function ResendVerificationPage({ onSubmit }: IProps) {
           <p e-util="center">
             <small>
               Looking for the <Link to="/sign-in">Sign in</Link> or{" "}
-              <Link to="/pages/sign-up">Sign up</Link> pages?
+              <Link to="/sign-up">Sign up</Link> pages?
             </small>
           </p>
         </form>
