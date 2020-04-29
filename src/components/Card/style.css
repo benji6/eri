@@ -31,13 +31,13 @@ button.e-card:active {
 }
 
 /* stylelint-disable no-descending-specificity */
-.e-card > *:first-child:not(.e-spinner),
-.e-card > *:first-child > *:first-child:not(.e-spinner) {
+.e-card > *:first-child,
+.e-card > *:first-child > *:first-child {
   margin-top: 0;
 }
 
-.e-card > *:last-child:not(.e-spinner),
-.e-card > *:last-child > *:last-child:not(.e-spinner) {
+.e-card > *:last-child,
+.e-card > *:last-child > *:last-child {
   margin-bottom: 0;
 }
 /* stylelint-enable no-descending-specificity */
