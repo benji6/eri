@@ -1,21 +1,6 @@
 import * as React from "react";
 import { Button, Icon } from "../..";
 
-type ShareOptions =
-  | {
-      text: string;
-    }
-  | {
-      title: string;
-    }
-  | {
-      url: string;
-    };
-
-interface INavigator extends Navigator {
-  share?: (options: ShareOptions) => Promise<void>;
-}
-
 export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
   title?: string;
@@ -32,7 +17,7 @@ export default function ShareButton({
     <Button.Group>
       <Button
         {...rest}
-        onClick={() => (navigator as INavigator).share!({ text, title, url })}
+        onClick={() => navigator.share!({ text, title, url })}
         variant="secondary"
       >
         Share <Icon name="share" />
