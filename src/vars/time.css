@@ -7,14 +7,14 @@
   --e-time-2: calc(var(--e-time-1) * var(--e-time-scale-ratio));
 }
 
-@media (min-width: 500px) {
+@media (min-width: 37rem) {
   :root {
     /* Do not calc() this because it is read from a script */
     --e-time-0: 0.1s;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 66rem) {
   :root {
     /* Do not calc() this because it is read from a script */
     --e-time-0: 0.11s;

@@ -1,5 +1,6 @@
 .e-button-group {
   display: flex;
+  flex-direction: column;
   margin: var(--e-space-3) 0 var(--e-space-4);
   text-align: center;
 }
@@ -8,17 +9,11 @@ form .e-button-group {
   margin: var(--e-space-4) 0;
 }
 
-@media (max-width: 499px) {
-  .e-button-group {
-    flex-direction: column;
-  }
-
-  .e-button-group > *:not(:last-child) {
-    margin-bottom: var(--e-space-3);
-  }
+.e-button-group > *:not(:last-child) {
+  margin-bottom: var(--e-space-3);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 37rem) {
   .e-button-group {
     align-items: center;
     flex-direction: row-reverse;
@@ -32,5 +27,9 @@ form .e-button-group {
 
   .e-button-group > *:not(:first-child) {
     margin-right: var(--e-space-3);
+  }
+
+  .e-button-group > *:not(:last-child) {
+    margin-bottom: unset;
   }
 }

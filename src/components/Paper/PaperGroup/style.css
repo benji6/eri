@@ -3,14 +3,14 @@
 
   display: grid;
   grid-gap: var(--e-space-3);
-  max-width: var(--e-max-width-1);
+  max-width: var(--e-break-point);
   min-width: calc(100vw - 2 * var(--paper-group-margin));
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
   padding: var(--paper-group-margin);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 37rem) {
   .e-paper-group {
-    min-width: var(--e-max-width-0);
+    min-width: calc(var(--e-break-point) * 0.8);
   }
 }

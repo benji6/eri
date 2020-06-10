@@ -68,8 +68,10 @@ fieldset {
   user-select: none;
 }
 
-form {
-  max-width: var(--e-max-width-0);
+@media (min-width: 37rem) {
+  form {
+    max-width: calc(var(--e-break-point) - var(--e-space-4) * 2);
+  }
 }
 
 legend {

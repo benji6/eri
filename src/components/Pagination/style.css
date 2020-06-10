@@ -15,7 +15,7 @@
   padding: var(--e-space-0) var(--e-space-1);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 37rem) {
   .pagination__button {
     padding-left: var(--e-space-2);
     padding-right: var(--e-space-2);

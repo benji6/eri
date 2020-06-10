@@ -65,7 +65,7 @@
   display: flex;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 37rem) {
   .e-toggle__label {
     display: inline-flex;
   }

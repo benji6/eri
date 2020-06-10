@@ -1,7 +1,6 @@
 :root {
+  --e-break-point: 100vw;
   --e-header-height: 3.93em;
-  --e-max-width-0: 100vw;
-  --e-max-width-1: 100vw;
   --e-menu-width: 16em;
   --e-space-scale-ratio: 1.5;
   --e-space-0: calc(1em / 3);
@@ -11,9 +10,8 @@
   --e-space-4: calc(var(--e-space-3) * var(--e-space-scale-ratio));
 }
 
-@media (min-width: 500px) {
+@media (min-width: 37rem) {
   :root {
-    --e-max-width-0: 32rem;
-    --e-max-width-1: 36rem;
+    --e-break-point: 37rem;
   }
 }

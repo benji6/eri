@@ -13,7 +13,7 @@
   width: var(--e-menu-width);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 66rem) {
   .e-menu {
     background: var(--e-color-ground);
     filter: var(--e-drop-shadow-0);

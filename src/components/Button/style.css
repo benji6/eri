@@ -29,13 +29,6 @@
   --color-hover: var(--e-color-negative-less);
 }
 
-@media (max-width: 499px) {
-  .e-button {
-    display: block;
-    width: 100%;
-  }
-}
-
 .e-button--primary {
   background: var(--color);
   color: var(--e-color-ground);

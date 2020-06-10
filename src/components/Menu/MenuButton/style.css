@@ -10,7 +10,7 @@
   color: var(--e-color-highlight-default);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 66rem) {
   .e-menu-button {
     display: none;
   }

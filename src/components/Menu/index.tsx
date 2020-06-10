@@ -16,7 +16,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function Menu({ children, onClose, open, ...rest }: IProps) {
-  const isWideResolution = useWidth() >= 1024;
+  const isWideResolution = useWidth() >= 1056;
 
   return isWideResolution ? (
     /* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
