@@ -1,4 +1,4 @@
-[<img height="100" width="100%" src="docs/icons/icon.svg">](https://eri.netlify.com)
+[<img height="100" width="100%" src="docs/icons/icon.svg">](https://eri.netlify.app)
 
 [![npm version](https://badge.fury.io/js/eri.svg)](https://badge.fury.io/js/eri)
 [![Build Status](https://travis-ci.org/benji6/eri.svg?branch=master)](https://travis-ci.org/benji6/eri)
@@ -8,4 +8,4 @@
 
 A minimal design system
 
-[Take a look here](https://eri.netlify.com)
+[Take a look here](https://eri.netlify.app)
