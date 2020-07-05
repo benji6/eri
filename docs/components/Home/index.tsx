@@ -68,15 +68,43 @@ export default function Home(_: RouteComponentProps) {
           .
         </p>
         <p>
-          Documentation is a little sparse because to my knowledge I&apos;m the
-          only person who uses this, but it should be fairly straightforward to
-          use, especially if you&apos;re using TypeScript.
-        </p>
-        <p>
-          If you want to see one of my projects that uses Eri check out{" "}
-          <a href="https://github.com/benji6/webnotes">Webnotes</a>.
+          Documentation is a little sparse because I&apos;m the only person who
+          uses this, but it should be fairly straightforward to use, especially
+          if you&apos;re using TypeScript.
         </p>
         <ShareButton />
+      </Paper>
+      <Paper>
+        <h2>See also</h2>
+        <p>Here are some things I&apos;ve made using Eri:</p>
+        <ul>
+          <li>
+            <a
+              href="https://moodtracker.link"
+              rel="noopener"
+              // eslint-disable-next-line react/jsx-no-target-blank
+              target="_blank"
+            >
+              MoodTracker
+            </a>{" "}
+            is a free and open source web app that lets you track your mood.
+            It&apos;s simple to use, works offline and because it runs in your
+            browser you can use it across all your devices!
+          </li>
+          <li>
+            <a
+              href="https://webnotes.link"
+              rel="noopener"
+              // eslint-disable-next-line react/jsx-no-target-blank
+              target="_blank"
+            >
+              Webnotes
+            </a>{" "}
+            is a free and open source web app that lets you create and manage
+            notes. It&apos;s simple to use, works offline and because it runs in
+            your browser you can use it across all your devices!
+          </li>
+        </ul>
       </Paper>
     </Paper.Group>
   );
