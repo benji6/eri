@@ -9,8 +9,7 @@ export default function PaperGroup({ noSlide, ...rest }: IProps) {
   return (
     <div
       {...rest}
-      className="e-paper-group"
-      {...(noSlide ? undefined : { "e-util": "slide-children-in" })}
+      className={`e-paper-group${noSlide ? "" : " slide-children-in"}`}
     />
   );
 }

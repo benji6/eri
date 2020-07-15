@@ -30,9 +30,8 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
       {page !== 0 && (
         <button
           aria-label="navigate to previous page"
-          className="pagination__button"
+          className="pagination__button ripple"
           data-page={page - 1}
-          e-util="ripple"
           onClick={() => onChange(page - 1)}
           type="button"
         >
@@ -54,9 +53,8 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
       {page !== pageCount - 1 && (
         <button
           aria-label="navigate to next page"
-          className="pagination__button"
+          className="pagination__button ripple"
           data-page={page + 1}
-          e-util="ripple"
           onClick={() => onChange(page + 1)}
           type="button"
         >

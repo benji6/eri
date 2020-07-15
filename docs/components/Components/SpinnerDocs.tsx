@@ -19,7 +19,7 @@ export default function SpinnerDocs(_: RouteComponentProps) {
       <ConfigurableExample
         example={
           exampleProps.inline ? (
-            <p e-util="center">An inline example {spinnerEl}</p>
+            <p className="center">An inline example {spinnerEl}</p>
           ) : (
             spinnerEl
           )

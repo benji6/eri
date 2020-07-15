@@ -1,32 +1,32 @@
-[e-util*="center"] {
+.center {
   text-align: center;
 }
 
-[e-util*="fade-in"] {
+.fade-in {
   animation: var(--e-animation-fade-in);
 }
 
-[e-util*="negative"] {
+.negative {
   color: var(--e-color-negative);
 }
 
-[e-util*="no-scroll"] {
+.no-scroll {
   overflow: hidden;
   position: fixed;
   left: 0;
   right: 0;
 }
 
-[e-util*="pre-line"] {
+.pre-line {
   white-space: pre-line;
 }
 
-[e-util*="ripple"] {
+.ripple {
   overflow: hidden;
   position: relative;
 }
 
-[e-util*="ripple"]::after {
+.ripple::after {
   background-image: radial-gradient(
     circle,
     var(--e-color-balance) 10%,
@@ -46,50 +46,50 @@
     transform var(--e-time-1) var(--e-easing-standard);
 }
 
-[e-util*="ripple"]:active::after {
+.ripple:active::after {
   opacity: 0.25;
   transform: scale(0);
   transition: 0s;
 }
 
-[e-util*="slide-in"] > * {
+.slide-in > * {
   animation: var(--e-animation-slide-in);
 }
 
-[e-util*="slide-children-in"] > * {
+.slide-children-in > * {
   animation: var(--e-animation-slide-in);
   opacity: 0;
 }
-[e-util*="slide-children-in"] > *:nth-child(2) {
+.slide-children-in > *:nth-child(2) {
   animation-delay: var(--e-time-0);
 }
-[e-util*="slide-children-in"] > *:nth-child(3) {
+.slide-children-in > *:nth-child(3) {
   animation-delay: calc(var(--e-time-0) * 2);
 }
-[e-util*="slide-children-in"] > *:nth-child(4) {
+.slide-children-in > *:nth-child(4) {
   animation-delay: calc(var(--e-time-0) * 3);
 }
-[e-util*="slide-children-in"] > *:nth-child(5) {
+.slide-children-in > *:nth-child(5) {
   animation-delay: calc(var(--e-time-0) * 4);
 }
-[e-util*="slide-children-in"] > *:nth-child(6) {
+.slide-children-in > *:nth-child(6) {
   animation-delay: calc(var(--e-time-0) * 5);
 }
-[e-util*="slide-children-in"] > *:nth-child(7) {
+.slide-children-in > *:nth-child(7) {
   animation-delay: calc(var(--e-time-0) * 6);
 }
-[e-util*="slide-children-in"] > *:nth-child(8) {
+.slide-children-in > *:nth-child(8) {
   animation-delay: calc(var(--e-time-0) * 7);
 }
-[e-util*="slide-children-in"] > *:nth-child(9) {
+.slide-children-in > *:nth-child(9) {
   animation-delay: calc(var(--e-time-0) * 8);
 }
-[e-util*="slide-children-in"] > *:nth-child(10) {
+.slide-children-in > *:nth-child(10) {
   animation-delay: calc(var(--e-time-0) * 9);
 }
-[e-util*="slide-children-in"] > *:nth-child(11) {
+.slide-children-in > *:nth-child(11) {
   animation-delay: calc(var(--e-time-0) * 10);
 }
-[e-util*="slide-children-in"] > *:nth-child(12) {
+.slide-children-in > *:nth-child(12) {
   animation-delay: calc(var(--e-time-0) * 11);
 }

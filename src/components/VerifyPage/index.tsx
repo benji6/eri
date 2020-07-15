@@ -18,7 +18,7 @@ export default function VerifyPage({ appName }: IProps) {
           When you&apos;re finished come back to {appName} to{" "}
           <Link to="/sign-in">Sign in</Link> and get started!
         </p>
-        <p e-util="center">
+        <p className="center">
           <small>
             Can&apos;t find our email? Check your junk folder or{" "}
             <Link to="/resend-verification">resend the verification email</Link>

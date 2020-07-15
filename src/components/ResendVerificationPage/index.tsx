@@ -58,14 +58,14 @@ export default function ResendVerificationPage({ onSubmit }: IProps) {
             type="email"
           />
           {submitError && (
-            <p e-util="center">
-              <small e-util="negative">{submitError}</small>
+            <p className="center">
+              <small className="negative">{submitError}</small>
             </p>
           )}
           <Button.Group>
             <Button disabled={isSubmitting}>Resend</Button>
           </Button.Group>
-          <p e-util="center">
+          <p className="center">
             <small>
               Looking for the <Link to="/sign-in">Sign in</Link> or{" "}
               <Link to="/sign-up">Sign up</Link> pages?

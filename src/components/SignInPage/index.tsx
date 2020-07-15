@@ -80,14 +80,14 @@ export default function SignInPage({ onSubmit }: IProps) {
             type="password"
           />
           {submitError && (
-            <p e-util="center">
-              <small e-util="negative">{submitError}</small>
+            <p className="center">
+              <small className="negative">{submitError}</small>
             </p>
           )}
           <Button.Group>
             <Button disabled={isSubmitting}>Sign in</Button>
           </Button.Group>
-          <p e-util="center">
+          <p className="center">
             <small>
               Don&apos;t have an account? <Link to="/sign-up">Sign up</Link>!
             </small>

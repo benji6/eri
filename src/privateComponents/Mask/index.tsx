@@ -25,7 +25,7 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
   const openMask = () => {
     setScrollY(window.scrollY);
     document.documentElement.style.top = `${-window.scrollY}px`;
-    document.documentElement.setAttribute("e-util", "no-scroll");
+    document.documentElement.classList.add("no-scroll");
   };
 
   React.useEffect(() => {
@@ -34,14 +34,14 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
     window.addEventListener("keydown", keyDownListener);
     return () => {
       window.removeEventListener("keydown", keyDownListener);
-      document.documentElement.removeAttribute("e-util");
+      document.documentElement.classList.remove("no-scroll");
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   React.useEffect(() => {
     if (open) openMask();
     else {
-      document.documentElement.removeAttribute("e-util");
+      document.documentElement.classList.remove("no-scroll");
       window.scrollTo(0, scrollY);
       document.documentElement.style.removeProperty("top");
     }

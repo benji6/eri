@@ -15,11 +15,9 @@ export default function Button({
 }: IProps) {
   const className = `e-button e-button--${variant}${
     danger ? " e-button--danger" : ""
-  }`;
+  }${rest.disabled ? "" : " ripple"}`;
 
-  const rippleProp = rest.disabled ? undefined : { "e-util": "ripple" };
-
-  return <button {...rest} {...rippleProp} className={className} type={type} />;
+  return <button {...rest} className={className} type={type} />;
 }
 
 Button.Group = ButtonGroup;

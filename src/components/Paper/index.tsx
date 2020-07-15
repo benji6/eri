@@ -6,7 +6,7 @@ export default function Paper(
   props: React.HTMLAttributes<HTMLButtonElement | HTMLDivElement>
 ) {
   return props.onClick ? (
-    <button {...props} className="e-paper" e-util="ripple" type="button" />
+    <button {...props} className="e-paper ripple" type="button" />
   ) : (
     <div {...props} className="e-paper" />
   );
