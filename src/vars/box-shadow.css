@@ -1,0 +1,23 @@
+:root {
+  --e-blur-radius-0: 4px;
+  --e-blur-radius-1: 5px;
+  --e-blur-radius-2: 6px;
+
+  --e-box-shadow-0-no-color: 0 2px var(--e-blur-radius-0);
+  --e-box-shadow-1-no-color: 0 3px var(--e-blur-radius-1);
+  --e-box-shadow-2-no-color: 0 4px var(--e-blur-radius-2);
+
+  --e-box-shadow-even-0-no-color: 0 0 var(--e-blur-radius-0);
+  --e-box-shadow-even-1-no-color: 0 0 var(--e-blur-radius-1);
+  --e-box-shadow-even-2-no-color: 0 0 var(--e-blur-radius-2);
+
+  --e-box-shadow-0: var(--e-box-shadow-0-no-color)
+    hsla(var(--e-figure-hsl), 0.4);
+  --e-box-shadow-1: var(--e-box-shadow-1-no-color)
+    hsla(var(--e-figure-hsl), 0.6);
+  --e-box-shadow-2: var(--e-box-shadow-2-no-color)
+    hsla(var(--e-figure-hsl), 0.8);
+
+  --e-box-shadow-input-focus: var(--e-box-shadow-even-0-no-color)
+    var(--e-color-theme-less);
+}

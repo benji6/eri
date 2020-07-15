@@ -2,13 +2,13 @@
   background: var(--e-color-theme);
   border-radius: 50%;
   bottom: var(--e-space-2);
+  box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground-more);
-  filter: var(--e-drop-shadow-1);
   padding: var(--e-space-2);
   position: fixed;
   right: var(--e-space-2);
   transition-duration: var(--e-time-0);
-  transition-property: background-color, filter, opacity, transform;
+  transition-property: background-color, box-shadow, opacity, transform;
   transition-timing-function: var(--e-easing-standard);
   z-index: var(--e-z-index-1);
 }
@@ -23,7 +23,7 @@
 
 .e-fab:active:not(:disabled) {
   background: var(--e-color-theme-more);
-  filter: var(--e-drop-shadow-0);
+  box-shadow: var(--e-box-shadow-0);
 }
 
 .e-fab--enter,

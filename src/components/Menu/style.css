@@ -1,8 +1,8 @@
 .e-menu {
   background: var(--e-color-ground-more);
   bottom: 0;
+  box-shadow: var(--e-box-shadow-2);
   box-sizing: border-box;
-  filter: var(--e-drop-shadow-2);
   max-width: calc(200vw / 3);
   overflow: auto;
   padding: var(--e-space-3);
@@ -16,7 +16,7 @@
 @media (min-width: 66rem) {
   .e-menu {
     background: var(--e-color-ground);
-    filter: var(--e-drop-shadow-0);
+    box-shadow: var(--e-box-shadow-0);
     left: 0;
     right: initial;
     top: var(--e-header-height);

@@ -1,7 +1,7 @@
 .e-header {
   background: var(--e-color-theme);
+  box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground);
-  filter: var(--e-drop-shadow-1);
   height: var(--e-header-height);
   padding: 0 calc((100% - var(--e-break-point)) / 2 - var(--e-space-2));
 }

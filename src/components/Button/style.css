@@ -4,23 +4,23 @@
   --color-hover: var(--e-color-theme-less);
 
   border-radius: var(--e-border-radius-0);
-  filter: var(--e-drop-shadow-0);
+  box-shadow: var(--e-box-shadow-0);
   font-weight: var(--e-font-weight-bold);
   padding: var(--e-space-1) var(--e-space-3);
   transition-duration: var(--e-time-0);
-  transition-property: background-color, border-color, filter, transform;
+  transition-property: background-color, border-color, box-shadow, transform;
   transition-timing-function: var(--e-easing-standard);
   user-select: none;
 }
 
 .e-button:hover {
-  filter: var(--e-drop-shadow-1);
+  box-shadow: var(--e-box-shadow-1);
 }
 
 .e-button:active,
 .e-button:disabled,
 .e-button:focus {
-  filter: none;
+  box-shadow: none;
 }
 
 .e-button--danger {

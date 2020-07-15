@@ -53,14 +53,14 @@
   stroke-dasharray: 30;
   stroke-dashoffset: -30;
   transition-duration: var(--e-time-0);
-  transition-property: border, filter;
+  transition-property: border, box-shadow;
   transition-timing-function: var(--e-easing-standard);
   width: var(--checkbox-size);
 }
 
 .e-checkbox__input:focus ~ .e-checkbox__appearance {
   border-color: var(--e-color-theme);
-  filter: var(--e-drop-shadow-input-focus);
+  box-shadow: var(--e-box-shadow-input-focus);
 }
 
 .e-checkbox__input:hover ~ .e-checkbox__appearance {
@@ -69,7 +69,7 @@
 
 .e-checkbox__input[aria-invalid="true"] ~ .e-checkbox__appearance {
   border-color: var(--e-color-negative);
-  filter: none;
+  box-shadow: none;
 }
 
 .e-checkbox__input:checked ~ .e-checkbox__appearance {

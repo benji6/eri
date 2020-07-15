@@ -152,7 +152,7 @@ textarea {
   outline: 0;
   padding: var(--e-space-1);
   transition-duration: var(--e-time-0);
-  transition-property: background-color, border, filter;
+  transition-property: background-color, border, box-shadow;
   transition-timing-function: var(--e-easing-standard);
 }
 
@@ -160,7 +160,7 @@ input:not([type="checkbox"]):focus,
 select:focus,
 textarea:focus {
   border-color: var(--e-color-theme-less);
-  filter: var(--e-drop-shadow-input-focus);
+  box-shadow: var(--e-box-shadow-input-focus);
 }
 
 input:not([type="checkbox"]):hover,
@@ -173,7 +173,7 @@ input:not([type="checkbox"])[aria-invalid="true"],
 select[aria-invalid="true"],
 textarea[aria-invalid="true"] {
   border-color: var(--e-color-negative);
-  filter: none;
+  box-shadow: none;
 }
 
 small {
