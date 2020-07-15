@@ -2,7 +2,7 @@
   --e-break-point: 100vw;
   --e-header-height: 3.93em;
   --e-menu-width: 16em;
-  --e-space-scale-ratio: 1.5;
+  --e-space-scale-ratio: 1.61803;
   --e-space-0: calc(1em / 3);
   --e-space-1: calc(var(--e-space-0) * var(--e-space-scale-ratio));
   --e-space-2: calc(var(--e-space-1) * var(--e-space-scale-ratio));

@@ -80,13 +80,14 @@ legend {
   font-weight: var(--e-font-weight-bold);
 }
 
+ol,
 ul {
-  margin: var(--e-space-2) 0;
-  padding-left: var(--e-space-4);
+  margin: var(--e-space-1) 0 var(--e-space-2);
+  padding-left: var(--e-space-3);
 }
 
 li {
-  margin: var(--e-space-1) 0;
+  margin: var(--e-space-0) 0;
 }
 
 h1,

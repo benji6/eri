@@ -4,7 +4,7 @@
 
 .e-menu-list > .e-menu-link {
   list-style: none;
-  margin: var(--e-space-2) 0;
+  margin: var(--e-space-2) 0 var(--e-space-1);
 }
 
 .e-menu-list > *:first-child {

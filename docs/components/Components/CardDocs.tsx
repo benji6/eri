@@ -12,22 +12,22 @@ export default function CardDocs(_: RouteComponentProps) {
         </p>
         <Card.Group>
           <Card>
-            <h3>Card one</h3>
+            <p>Card one</p>
           </Card>
           <Card>
-            <h3>Card two</h3>
+            <p>Card two</p>
           </Card>
           <Card>
-            <h3>Card three</h3>
+            <p>Card three</p>
           </Card>
           <Card>
-            <h3>Card four</h3>
+            <p>Card four</p>
           </Card>
           <Card>
-            <h3>Card five</h3>
+            <p>Card five</p>
           </Card>
           <Card>
-            <h3>Card six</h3>
+            <p>Card six</p>
           </Card>
           <Card onClick={() => undefined}>
             <h3>Card seven</h3>
