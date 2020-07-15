@@ -5,10 +5,6 @@
   text-align: center;
 }
 
-form .e-button-group {
-  margin: var(--e-space-4) 0;
-}
-
 .e-button-group > *:not(:last-child) {
   margin-bottom: var(--e-space-3);
 }
@@ -18,11 +14,6 @@ form .e-button-group {
     align-items: center;
     flex-direction: row-reverse;
     justify-content: center;
-  }
-
-  form .e-button-group {
-    border-top: var(--e-border-width-1) solid var(--e-color-figure-less);
-    padding-top: var(--e-space-3);
   }
 
   .e-button-group > *:not(:first-child) {
