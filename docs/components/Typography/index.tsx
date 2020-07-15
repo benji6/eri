@@ -56,6 +56,23 @@ export default function Typography(_: RouteComponentProps) {
         <hr />
       </Paper>
       <Paper>
+        <h3>List</h3>
+        <h4>Ordered list</h4>
+        <ol>
+          <li>Ordered list item 1</li>
+          <li>Ordered list item 2</li>
+          <li>Ordered list item 3</li>
+          <li>Ordered list item 4</li>
+        </ol>
+        <h4>Unordered list</h4>
+        <ul>
+          <li>Unordered list item 1</li>
+          <li>Unordered list item 2</li>
+          <li>Unordered list item 3</li>
+          <li>Unordered list item 4</li>
+        </ul>
+      </Paper>
+      <Paper>
         <h3>Blockquote</h3>
         <p>
           A <code>{"<blockquote>"}</code> looks like this:
