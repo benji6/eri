@@ -12,17 +12,18 @@
 }
 
 .e-menu-link__link {
-  transition: box-shadow var(--e-time-0) var(--e-easing-standard);
+  transition: filter var(--e-time-0) var(--e-easing-standard);
 }
 
 .e-menu-link__link--active {
   --active-color: var(--e-color-theme-more);
 
-  box-shadow: var(--e-box-shadow-even-2-no-color) var(--e-color-theme-less);
+  text-shadow: var(--e-box-shadow-even-0-no-color) var(--e-color-theme-less);
   color: var(--active-color);
   text-decoration: none;
 }
 
+.e-menu-link__link--active:focus,
 .e-menu-link__link--active:hover {
   color: var(--active-color);
 }
