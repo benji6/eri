@@ -44,7 +44,7 @@
   border: var(--e-border-default);
   border-radius: var(--e-border-radius-1);
   box-sizing: border-box;
-  color: var(--e-color-figure);
+  color: var(--e-color-figure-more);
   display: inline-flex;
   flex-shrink: 0;
   height: var(--checkbox-size);

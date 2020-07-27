@@ -75,7 +75,6 @@ fieldset {
 }
 
 legend {
-  color: var(--e-color-figure-more);
   font-size: var(--e-font-size-0);
   font-weight: var(--e-font-weight-bold);
 }
