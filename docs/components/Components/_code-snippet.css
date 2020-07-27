@@ -1,6 +1,6 @@
 .d-code-snippet {
   background: var(--e-color-ground);
-  border-radius: var(--e-border-radius-0);
+  border-radius: var(--e-border-radius-1);
   overflow: auto;
   padding: var(--e-space-1);
 }

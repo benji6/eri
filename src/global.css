@@ -147,7 +147,7 @@ input:not([type="checkbox"]),
 select,
 textarea {
   background-color: var(--e-color-ground-more);
-  border-radius: var(--e-border-radius-0);
+  border-radius: var(--e-border-radius-1);
   border: var(--e-border-default);
   outline: 0;
   padding: var(--e-space-1);
@@ -188,7 +188,7 @@ strong {
 }
 
 img {
-  border-radius: var(--e-border-radius-0);
+  border-radius: var(--e-border-radius-1);
   display: block;
   margin: var(--e-space-3) auto;
   max-width: calc(200% / 3);

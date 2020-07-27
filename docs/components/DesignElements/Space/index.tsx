@@ -3,8 +3,6 @@ import * as React from "react";
 
 interface IProps {
   varName:
-    | "--e-border-radius-0"
-    | "--e-border-radius-1"
     | "--e-border-width-0"
     | "--e-border-width-1"
     | "--e-font-size-0"

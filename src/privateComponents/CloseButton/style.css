@@ -1,5 +1,5 @@
 .e-close-button {
-  border-radius: var(--e-border-radius-0);
+  border-radius: var(--e-border-radius-1);
   margin-left: var(--e-space-2);
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;

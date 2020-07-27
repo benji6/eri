@@ -1,4 +1,5 @@
 import * as React from "react";
+import BorderRadius from "./BorderRadius";
 import BoxShadow from "./BoxShadow";
 import Color from "./Color";
 import DisplayGroup from "./DisplayGroup";
@@ -44,8 +45,8 @@ export default function DesignElements(_: RouteComponentProps) {
         <h3>Border radius</h3>
         <p>Border radius is responsive to font size.</p>
         <DisplayGroup>
-          <Space varName="--e-border-radius-0" />
-          <Space varName="--e-border-radius-1" />
+          <BorderRadius varName="--e-border-radius-0" />
+          <BorderRadius varName="--e-border-radius-1" />
         </DisplayGroup>
         <h3>Border width</h3>
         <p>Border width is fixed for all devices.</p>

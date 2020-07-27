@@ -10,7 +10,7 @@
 
 .pagination__button {
   background: none;
-  border-radius: var(--e-border-radius-0);
+  border-radius: var(--e-border-radius-1);
   color: var(--e-color-theme);
   padding: var(--e-space-0) var(--e-space-1);
 }

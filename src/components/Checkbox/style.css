@@ -42,7 +42,7 @@
   align-self: flex-start;
   background-color: var(--e-color-ground-more);
   border: var(--e-border-default);
-  border-radius: var(--e-border-radius-0);
+  border-radius: var(--e-border-radius-1);
   box-sizing: border-box;
   color: var(--e-color-figure);
   display: inline-flex;

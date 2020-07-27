@@ -3,7 +3,7 @@
   --color-active: var(--e-color-theme-more);
   --color-hover: var(--e-color-theme-less);
 
-  border-radius: var(--e-border-radius-0);
+  border-radius: var(--e-border-radius-1);
   box-shadow: var(--e-box-shadow-0);
   font-weight: var(--e-font-weight-bold);
   padding: var(--e-space-1) var(--e-space-3);
