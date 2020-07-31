@@ -62,7 +62,7 @@ cite {
 fieldset {
   border-color: var(--e-color-balance);
   border-radius: var(--e-border-radius-1);
-  border-width: var(--e-border-width-0);
+  border-width: var(--e-border-width-1);
   margin: var(--e-space-3) 0;
   padding: var(--e-space-1) var(--e-space-2);
   user-select: none;
@@ -127,7 +127,7 @@ hr {
   border-color: var(--e-color-balance-less);
   border-left: none;
   border-right: none;
-  border-width: var(--e-border-width-1);
+  border-width: var(--e-border-width-2);
   margin: var(--e-space-3) 0;
 }
 
@@ -191,4 +191,29 @@ img {
   display: block;
   margin: var(--e-space-3) auto;
   max-width: calc(200% / 3);
+}
+
+table {
+  border-spacing: 0;
+  margin: var(--e-space-2) auto;
+  text-align: right;
+}
+
+td,
+th {
+  padding: var(--e-space-0) calc(var(--e-space-3) / 2);
+}
+
+th {
+  border-bottom: var(--e-border-width-2) solid var(--e-color-figure-more);
+  font-weight: var(--e-font-weight-bold);
+}
+
+td:first-child,
+th:first-child {
+  text-align: left;
+}
+
+tr:not(:last-child) td {
+  border-bottom: var(--e-border-width-0) solid var(--e-color-figure-more);
 }

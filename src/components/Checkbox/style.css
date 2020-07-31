@@ -8,7 +8,7 @@
 .e-checkbox .e-field-error {
   margin-left: calc(
     var(--checkbox-size) + var(--checkbox-margin-right) +
-      var(--e-border-width-1)
+      var(--e-border-width-2)
   );
 }
 

@@ -9,6 +9,22 @@ export default function Typography(_: RouteComponentProps) {
         <h2>Typography</h2>
       </Paper>
       <Paper>
+        <h3>Blockquote</h3>
+        <p>
+          A <code>{"<blockquote>"}</code> looks like this:
+        </p>
+        <blockquote cite="https://www.goodreads.com/book/show/640565.The_Book_of_Chuang_Tzu">
+          <p>
+            All men know the use of the useful, but nobody knows the use of the
+            useless!
+          </p>
+          <footer>
+            —Chuang Tzu, <cite>The Book of Chuang Tzu</cite>
+          </footer>
+        </blockquote>
+        <p>And then here is a normal paragraph.</p>
+      </Paper>
+      <Paper>
         <h1>
           Heading 1 <SubHeading>With a subheading</SubHeading>
         </h1>
@@ -73,20 +89,33 @@ export default function Typography(_: RouteComponentProps) {
         </ul>
       </Paper>
       <Paper>
-        <h3>Blockquote</h3>
-        <p>
-          A <code>{"<blockquote>"}</code> looks like this:
-        </p>
-        <blockquote cite="https://www.goodreads.com/book/show/640565.The_Book_of_Chuang_Tzu">
-          <p>
-            All men know the use of the useful, but nobody knows the use of the
-            useless!
-          </p>
-          <footer>
-            —Chuang Tzu, <cite>The Book of Chuang Tzu</cite>
-          </footer>
-        </blockquote>
-        <p>And then here is a normal paragraph.</p>
+        <h3>Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Column A</th>
+              <th>Column B</th>
+              <th>Column C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Foo</td>
+              <td>1</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Bar</td>
+              <td>3</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Baz</td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+          </tbody>
+        </table>
       </Paper>
       <Paper>
         <h3>CSS utilities</h3>

@@ -53,6 +53,7 @@ export default function DesignElements(_: RouteComponentProps) {
         <DisplayGroup>
           <Space varName="--e-border-width-0" />
           <Space varName="--e-border-width-1" />
+          <Space varName="--e-border-width-2" />
         </DisplayGroup>
       </Paper>
       <Paper>

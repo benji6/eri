@@ -5,6 +5,7 @@ interface IProps {
   varName:
     | "--e-border-width-0"
     | "--e-border-width-1"
+    | "--e-border-width-2"
     | "--e-font-size-0"
     | "--e-font-size-1"
     | "--e-font-size-2"
