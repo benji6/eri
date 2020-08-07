@@ -16,7 +16,7 @@ export default function VerifyPage({ appName }: IProps) {
         </p>
         <p>
           When you&apos;re finished come back to {appName} to{" "}
-          <Link to="/sign-in">Sign in</Link> and get started!
+          <Link to="/sign-in">sign in</Link> and get started!
         </p>
         <p className="center">
           <small>
