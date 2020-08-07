@@ -53,7 +53,7 @@ export default function Home(_: RouteComponentProps) {
           <br />
           <code>
             {`<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900&display=swap" rel="stylesheet">`}
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">`}
           </code>
         </p>
       </Paper>

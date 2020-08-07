@@ -1,7 +1,7 @@
 html {
   background-color: var(--e-color-ground);
   color: var(--e-color-figure);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-weight: var(--e-font-weight-normal);
   line-height: var(--e-line-height);
   min-height: 100%;
