@@ -67,8 +67,8 @@ export default function ResendVerificationPage({ onSubmit }: IProps) {
           </Button.Group>
           <p className="center">
             <small>
-              Looking for the <Link to="/sign-in">Sign in</Link> or{" "}
-              <Link to="/sign-up">Sign up</Link> pages?
+              Looking for the <Link to="/sign-in">sign in</Link> or{" "}
+              <Link to="/sign-up">sign up</Link> pages?
             </small>
           </p>
         </form>
