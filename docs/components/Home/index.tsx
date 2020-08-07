@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Paper, ShareButton } from "../../../src";
 import Banner from "./Banner";
+import CodeSnippet from "../Components/_CodeSnippet";
 import { RouteComponentProps } from "@reach/router";
 
 export default function Home(_: RouteComponentProps) {
@@ -50,12 +51,9 @@ export default function Home(_: RouteComponentProps) {
         <p>
           To get the font working you should include the following tags in your
           HTML page:
-          <br />
-          <code>
-            {`<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">`}
-          </code>
         </p>
+        <CodeSnippet language="html">{`<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">`}</CodeSnippet>
       </Paper>
       <Paper>
         <h2>About</h2>

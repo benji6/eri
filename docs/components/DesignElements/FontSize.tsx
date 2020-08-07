@@ -1,4 +1,5 @@
 import * as React from "react";
+import CodeSnippet from "../Components/_CodeSnippet";
 
 interface IProps {
   varName:
@@ -13,9 +14,7 @@ export default function FontSize({ varName }: IProps) {
   return (
     <>
       <span style={{ fontSize: `var(${varName})` }}>Lorem ipsum</span>
-      <pre>
-        <code>{varName}</code>
-      </pre>
+      <CodeSnippet language="css">{varName}</CodeSnippet>
     </>
   );
 }

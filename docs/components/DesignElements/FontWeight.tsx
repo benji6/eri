@@ -1,4 +1,5 @@
 import * as React from "react";
+import CodeSnippet from "../Components/_CodeSnippet";
 
 interface IProps {
   varName: "--e-font-weight-normal" | "--e-font-weight-bold";
@@ -9,9 +10,7 @@ export default function FontWeight({ varName }: IProps) {
     <>
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <span style={{ fontWeight: `var(${varName})` as any }}>Lorem ipsum</span>
-      <pre>
-        <code>{varName}</code>
-      </pre>
+      <CodeSnippet language="css">{varName}</CodeSnippet>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import "./style.css";
 import * as React from "react";
+import CodeSnippet from "../../Components/_CodeSnippet";
 
 interface IProps {
   varName:
@@ -15,9 +16,7 @@ export default function Easing({ varName }: IProps) {
         className="d-easing__visual"
         style={{ animationTimingFunction: `var(${varName})` }}
       />
-      <pre>
-        <code>{varName}</code>
-      </pre>
+      <CodeSnippet language="css">{varName}</CodeSnippet>
     </>
   );
 }

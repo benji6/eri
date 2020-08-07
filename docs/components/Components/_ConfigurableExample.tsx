@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from "react";
 import { Paper, Select, TextField, Toggle } from "../../../src";
-import CodeSnippet from "./_CodeSnippet";
+import ReactCodeSnippet from "./_ReactCodeSnippet";
 
 export default function ConfigurableExample({
   example,
@@ -16,7 +16,7 @@ export default function ConfigurableExample({
       <hr />
       {example}
       <hr />
-      <CodeSnippet>{example}</CodeSnippet>
+      <ReactCodeSnippet>{example}</ReactCodeSnippet>
       <form noValidate>{children}</form>
     </Paper>
   );

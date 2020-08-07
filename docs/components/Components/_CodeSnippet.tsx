@@ -2,21 +2,24 @@ import "./_code-snippet.css";
 import "./_highlight.js.css";
 import * as React from "react";
 import hljs from "highlight.js";
-import reactElementToJSXString from "react-element-to-jsx-string";
 
-export default function CodeSnippet({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface IProps {
+  children: string;
+  language: "css" | "jsx" | "html";
+}
+
+export default function CodeSnippet({ children, language }: IProps) {
+  // HACK: we use `isJsx` to trick highlight.js into highlighting our JSX nicely
+  const isJsx = language === "jsx";
+  const stringToHighlight = isJsx ? "(" + children : children;
+  const highlightedString = hljs.highlight(language, stringToHighlight).value;
+
   return (
     <pre className="d-code-snippet">
       <code
-        className="language-jsx"
+        className={`language-${language}`}
         dangerouslySetInnerHTML={{
-          __html: hljs
-            .highlight("jsx", "(" + reactElementToJSXString(children))
-            .value.slice(1),
+          __html: isJsx ? highlightedString.slice(1) : highlightedString,
         }}
       />
     </pre>

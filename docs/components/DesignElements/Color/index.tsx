@@ -1,5 +1,6 @@
 import "./style.css";
 import * as React from "react";
+import CodeSnippet from "../../Components/_CodeSnippet";
 
 interface IProps {
   varName:
@@ -37,9 +38,7 @@ export default function Color({ varName }: IProps) {
         className="d-color__visual"
         style={{ background: `var(${varName})` }}
       />
-      <pre>
-        <code>{varName}</code>
-      </pre>
+      <CodeSnippet language="css">{varName}</CodeSnippet>
     </>
   );
 }

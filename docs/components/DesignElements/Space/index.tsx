@@ -1,5 +1,6 @@
 import "./style.css";
 import * as React from "react";
+import CodeSnippet from "../../Components/_CodeSnippet";
 
 interface IProps {
   varName:
@@ -17,9 +18,7 @@ export default function Space({ varName }: IProps) {
   return (
     <>
       <div className="d-space__visual" style={{ width: `var(${varName})` }} />
-      <pre>
-        <code>{varName}</code>
-      </pre>
+      <CodeSnippet language="css">{varName}</CodeSnippet>
     </>
   );
 }
