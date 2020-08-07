@@ -4,6 +4,8 @@ import BoxShadow from "./BoxShadow";
 import Color from "./Color";
 import DisplayGroup from "./DisplayGroup";
 import Easing from "./Easing";
+import FontSize from "./FontSize";
+import FontWeight from "./FontWeight";
 import { Paper } from "../../../src";
 import { RouteComponentProps } from "@reach/router";
 import Space from "./Space";
@@ -22,11 +24,18 @@ export default function DesignElements(_: RouteComponentProps) {
           simple and conveys a sense of harmony.
         </p>
         <DisplayGroup>
-          <Space varName="--e-font-size-0" />
-          <Space varName="--e-font-size-1" />
-          <Space varName="--e-font-size-2" />
-          <Space varName="--e-font-size-3" />
-          <Space varName="--e-font-size-4" />
+          <FontSize varName="--e-font-size-0" />
+          <FontSize varName="--e-font-size-1" />
+          <FontSize varName="--e-font-size-2" />
+          <FontSize varName="--e-font-size-3" />
+          <FontSize varName="--e-font-size-4" />
+        </DisplayGroup>
+      </Paper>
+      <Paper>
+        <h3>Font weight</h3>
+        <DisplayGroup>
+          <FontWeight varName="--e-font-weight-normal" />
+          <FontWeight varName="--e-font-weight-bold" />
         </DisplayGroup>
       </Paper>
       <Paper>
