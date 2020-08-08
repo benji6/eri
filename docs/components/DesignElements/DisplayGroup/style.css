@@ -2,6 +2,6 @@
   align-items: center;
   display: grid;
   grid-gap: var(--e-space-1) var(--e-space-2);
-  grid-template-columns: max-content max-content;
+  grid-template-columns: minmax(min-content, max-content) max-content;
   margin-left: var(--e-space-2);
 }
