@@ -22,8 +22,7 @@
   }
 }
 
-.pagination__button:first-child,
-.pagination__button:last-child {
+.pagination__arrow-button {
   padding-left: var(--e-space-0);
   padding-right: var(--e-space-0);
 }
