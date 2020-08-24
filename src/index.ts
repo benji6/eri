@@ -17,6 +17,7 @@ import "./metaThemeColor";
 export { default as Button } from "./components/Button";
 export { default as Card } from "./components/Card";
 export { default as Checkbox } from "./components/Checkbox";
+export { default as Chart } from "./components/Chart";
 export { default as CurrencyField } from "./components/CurrencyField";
 export { default as Dialog } from "./components/Dialog";
 export { default as Fab } from "./components/Fab";

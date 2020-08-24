@@ -2,6 +2,7 @@ import * as React from "react";
 import { Router as ReachRouter, Redirect } from "@reach/router";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
+import ChartDocs from "../Components/ChartDocs";
 import ComponentsHome from "../Components/ComponentsHome";
 import DesignElements from "../DesignElements";
 import DialogDocs from "../Components/DialogDocs";
@@ -39,6 +40,7 @@ export default function Router() {
       <ComponentsHome path="components" />
       <ButtonDocs path="components/button" />
       <CardDocs path="components/card" />
+      <ChartDocs path="components/chart" />
       <DialogDocs path="components/dialog" />
       <FabDocs path="components/fab" />
       <FormDocs path="components/form" />

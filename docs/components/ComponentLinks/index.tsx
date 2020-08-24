@@ -13,6 +13,9 @@ export default function ComponentLinks(
       <Menu.Link {...props} to="/components/card">
         Card
       </Menu.Link>
+      <Menu.Link {...props} to="/components/chart">
+        Chart
+      </Menu.Link>
       <Menu.Link {...props} to="/components/dialog">
         Dialog
       </Menu.Link>
