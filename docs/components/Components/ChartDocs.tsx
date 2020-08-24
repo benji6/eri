@@ -5,7 +5,7 @@ import { RouteComponentProps } from "@reach/router";
 export default function CardDocs(_: RouteComponentProps) {
   const labels = Array.from({ length: 5 }, (_, n): [number, string] => [
     n / 4,
-    String(n / 4),
+    String((n / 4) * 100),
   ]);
 
   return (
