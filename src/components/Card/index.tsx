@@ -2,11 +2,16 @@ import "./style.css";
 import * as React from "react";
 import CardGroup from "./CardGroup";
 
-export default function Card(
-  props:
-    | React.ButtonHTMLAttributes<HTMLButtonElement>
-    | React.HTMLAttributes<HTMLDivElement>
-) {
+type Props = { color?: string } & (
+  | React.ButtonHTMLAttributes<HTMLButtonElement>
+  | React.HTMLAttributes<HTMLDivElement>
+);
+
+export default function Card({ color, ...rest }: Props) {
+  const props = color
+    ? Object.assign(rest, { style: { "--color": color } })
+    : rest;
+
   if (!props.onClick)
     return (
       <div
@@ -14,6 +19,7 @@ export default function Card(
         className="e-card"
       />
     );
+
   return (
     <button
       {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}

@@ -26,8 +26,9 @@ export default function CardDocs(_: RouteComponentProps) {
           <Card>
             <p>Card five</p>
           </Card>
-          <Card>
-            <p>Card six</p>
+          <Card onClick={() => undefined}>
+            <h3>Card six</h3>
+            <p>A card can also be a button like this one.</p>
           </Card>
           <Card onClick={() => undefined}>
             <h3>Card seven</h3>
@@ -45,13 +46,13 @@ export default function CardDocs(_: RouteComponentProps) {
             <h3>Card ten</h3>
             <p>A card can also be a button like this one.</p>
           </Card>
-          <Card onClick={() => undefined}>
-            <h3>Card eleven</h3>
-            <p>A card can also be a button like this one.</p>
+          <Card color="red">
+            <h3>Custom color red</h3>
+            <p>A card can have a custom color like this one.</p>
           </Card>
-          <Card onClick={() => undefined}>
-            <h3>Card twelve</h3>
-            <p>A card can also be a button like this one.</p>
+          <Card color="blue" onClick={() => undefined}>
+            <h3>Custom color blue</h3>
+            <p>A card can be a button and have a custom color like this one.</p>
           </Card>
         </Card.Group>
       </Paper>
