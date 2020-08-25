@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PLOT_ASPECT_RATIO, POINT_RADIUS } from "./constants";
+import { PLOT_ASPECT_RATIO, POINT_RADIUS } from "../constants";
 
 interface Props {
   color?: string;

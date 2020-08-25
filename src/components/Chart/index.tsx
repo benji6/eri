@@ -8,12 +8,9 @@ import {
   MARGIN_LEFT,
   MARGIN_RIGHT,
   MARGIN_TOP,
-  PLOT_ASPECT_RATIO,
   PLOT_HEIGHT,
-  PLOT_WIDTH,
 } from "./constants";
-import Line from "./Line";
-import Point from "./Point";
+import PlotArea from "./PlotArea";
 import { TPoint } from "./types";
 
 type TLabel = [number, string]; // [x/y position, label text]
@@ -37,12 +34,6 @@ export default function Chart({
   xLabels,
   yLabels,
 }: Props) {
-  const tranformPoint = ([x, y]: TPoint): TPoint => [
-    (x - domain[0]) / (domain[1] - domain[0]),
-    (y - range[0]) / (range[1] - range[0]),
-  ];
-  const points = data.map(tranformPoint);
-
   return (
     <svg
       viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
@@ -136,35 +127,13 @@ export default function Chart({
         );
       })}
 
-      <svg
-        height={PLOT_HEIGHT}
-        viewBox={`0 0 ${PLOT_ASPECT_RATIO} 1`}
-        width={PLOT_WIDTH}
-        x={MARGIN_LEFT}
-        y={MARGIN_TOP}
-      >
-        {/* tendline */}
-        {trendlinePoints && (
-          <Line
-            color="var(--e-color-balance-less)"
-            points={trendlinePoints.map(tranformPoint)}
-            thickness={LINE_WIDTH_2}
-          />
-        )}
-
-        {/* chart line */}
-        <Line points={points} />
-
-        {/* chart points */}
-        {points.map((point, i) => (
-          <Point
-            color={colorFromY ? colorFromY(data[i][1]) : "var(--e-color-theme)"}
-            key={point[0]}
-            x={point[0]}
-            y={point[1]}
-          />
-        ))}
-      </svg>
+      <PlotArea
+        colorFromY={colorFromY}
+        data={data}
+        domain={domain}
+        range={range}
+        trendlinePoints={trendlinePoints}
+      />
 
       {/* x-axis */}
       <line
