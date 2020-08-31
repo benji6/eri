@@ -11,7 +11,7 @@
 }
 
 .e-close-button:active {
-  color: red;
+  color: var(--e-color-figure-more);
 }
 
 .e-close-button:focus:not(:active) {

@@ -28,7 +28,6 @@
 
 .e-dialog__content {
   position: relative;
-  padding: var(--content-vertical-padding) 0;
 }
 
 .e-dialog__header {
