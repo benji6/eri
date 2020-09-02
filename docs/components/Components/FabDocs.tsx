@@ -13,9 +13,7 @@ export default function FabDocs(_: RouteComponentProps) {
         <Toggle
           checked={isFabVisible}
           label={isFabVisible ? "Fab visible" : "Fab hidden"}
-          onChange={({ target }) =>
-            target.checked ? setIsFabVisible(true) : setIsFabVisible(false)
-          }
+          onChange={({ target }) => setIsFabVisible(target.checked)}
         />
         <Fab aria-label="example FAB" hide={!isFabVisible}>
           <Icon name="plus" size="4" />
