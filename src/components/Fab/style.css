@@ -13,6 +13,7 @@
   z-index: var(--e-z-index-1);
 }
 
+.e-fab:focus,
 .e-fab:hover {
   background: var(--e-color-theme-less);
 }
