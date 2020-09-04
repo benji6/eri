@@ -3,8 +3,6 @@
   justify-content: center;
 }
 
-@media (min-width: 66rem) {
-  .e-main:not(.e-main--no-menu) {
-    padding-left: var(--e-menu-width);
-  }
+.e-main:not(.e-main--no-menu) {
+  padding-left: var(--e-space-for-menu);
 }
