@@ -7,20 +7,26 @@ type FluxStandardAction<
   ? { type: Type }
   : { payload: Payload; type: Type };
 
-type Action = FluxStandardAction<"menu/exists", boolean>;
+type Action =
+  | FluxStandardAction<"menu/exists", boolean>
+  | FluxStandardAction<"quickNav/height", number>;
 
 interface IState {
   menuExists: boolean;
+  quickNavHeight: number | null; // is only `null` if never set & when unset it will be `0`
 }
 
 const initialState: IState = {
   menuExists: false,
+  quickNavHeight: null,
 };
 
 const stateReducer = (state: IState, action: Action): IState => {
   switch (action.type) {
     case "menu/exists":
       return { ...state, menuExists: action.payload };
+    case "quickNav/height":
+      return { ...state, quickNavHeight: action.payload };
   }
 };
 

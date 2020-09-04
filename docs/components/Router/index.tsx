@@ -17,6 +17,7 @@ import MenuDocs from "../Components/MenuDocs";
 import PagesHome from "../Components/PagesHome";
 import PaginationDocs from "../Components/PaginationDocs";
 import PaperDocs from "../Components/PaperDocs";
+import QuickNavDocs from "../Components/QuickNavDocs";
 import ResendVerificationPageDocs from "../Components/ResendVerificationPageDocs";
 import ShareButtonDocs from "../Components/ShareButtonDocs";
 import SignInPageDocs from "../Components/SignInPageDocs";
@@ -54,6 +55,7 @@ export default function Router() {
       <ShareButtonDocs path="components/share-button" />
       <SpinnerDocs path="components/spinner" />
       <PagesHome path="pages" />
+      <QuickNavDocs path="components/quick-nav" />
       <ResendVerificationPageDocs path="pages/resend-verification" />
       <SignInPageDocs path="pages/sign-in" />
       <SignUpPageDocs path="pages/sign-up" />

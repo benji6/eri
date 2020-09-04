@@ -46,6 +46,9 @@ export default function ComponentLinks(
       <Menu.Link {...props} to="/components/paper">
         Paper
       </Menu.Link>
+      <Menu.Link {...props} to="/components/quick-nav">
+        QuickNav
+      </Menu.Link>
       <Menu.Link {...props} to="/components/share-button">
         ShareButton
       </Menu.Link>

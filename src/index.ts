@@ -29,6 +29,7 @@ export { default as Menu } from "./components/Menu";
 export { default as Main } from "./components/Main";
 export { default as Pagination } from "./components/Pagination";
 export { default as Paper } from "./components/Paper";
+export { default as QuickNav } from "./components/QuickNav";
 export { default as RadioButton } from "./components/RadioButton";
 export { default as ResendVerificationPage } from "./components/ResendVerificationPage";
 export { default as Select } from "./components/Select";

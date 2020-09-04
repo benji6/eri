@@ -1,0 +1,38 @@
+.e-quick-nav {
+  --animation-delay: calc(var(--e-time-0) / 2);
+  --margin: var(--e-space-2);
+
+  bottom: var(--margin);
+  display: flex;
+  justify-content: space-evenly;
+  left: var(--e-space-for-menu);
+  position: fixed;
+  right: 0;
+  z-index: var(--e-z-index-1);
+}
+
+.e-quick-nav > * {
+  animation: e-animate-quick-nav-in var(--e-time-0) var(--e-easing-decelerate)
+    forwards;
+  opacity: 0;
+}
+.e-quick-nav > *:nth-child(2) {
+  animation-delay: var(--animation-delay);
+}
+.e-quick-nav > *:nth-child(3) {
+  animation-delay: calc(var(--animation-delay) * 2);
+}
+.e-quick-nav > *:nth-child(4) {
+  animation-delay: calc(var(--animation-delay) * 3);
+}
+
+@keyframes e-animate-quick-nav-in {
+  from {
+    opacity: 0;
+    transform: translateY(calc(100% + var(--margin)));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,26 @@
+.e-quick-nav-link {
+  background: var(--e-color-theme);
+  border-radius: 50%;
+  box-shadow: var(--e-box-shadow-1);
+  color: var(--e-color-ground-more);
+  padding: var(--e-space-2);
+  transition-duration: var(--e-time-0);
+  transition-property: background-color, box-shadow;
+  transition-timing-function: var(--e-easing-standard);
+}
+
+.e-quick-nav-link:focus,
+.e-quick-nav-link:hover {
+  background: var(--e-color-theme-less);
+  color: var(--e-color-ground-more);
+}
+
+.e-quick-nav-link:active {
+  background: var(--e-color-theme-more);
+  box-shadow: var(--e-box-shadow-0);
+  color: var(--e-color-ground-more);
+}
+
+.e-quick-nav-link--active {
+  background: var(--e-color-highlight-default) !important;
+}

@@ -2,8 +2,7 @@ import "./style.css";
 import * as React from "react";
 import { Link, LinkProps } from "@reach/router";
 
-// FIXME - the type of props is fairly messed up,
-// when typing it properly there are a number of type errors thrown
+// FIXME - type annotation can probably be improved
 export default function MenuLink({
   to,
   ...rest
