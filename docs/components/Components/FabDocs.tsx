@@ -3,7 +3,7 @@ import { Fab, Icon, Paper, Toggle } from "../../../src";
 import { RouteComponentProps } from "@reach/router";
 
 export default function FabDocs(_: RouteComponentProps) {
-  const [isFabVisible, setIsFabVisible] = React.useState(false);
+  const [isFabVisible, setIsFabVisible] = React.useState(true);
 
   return (
     <Paper.Group>
@@ -12,7 +12,7 @@ export default function FabDocs(_: RouteComponentProps) {
         <p>The floating action button.</p>
         <Toggle
           checked={isFabVisible}
-          label={isFabVisible ? "Fab visible" : "Fab hidden"}
+          label={`Fab ${isFabVisible ? "visible" : "hidden"}`}
           onChange={({ target }) => setIsFabVisible(target.checked)}
         />
         <Fab aria-label="example FAB" hide={!isFabVisible}>
