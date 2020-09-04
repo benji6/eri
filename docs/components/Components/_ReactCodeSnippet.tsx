@@ -10,7 +10,6 @@ export default function ReactCodeSnippet({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(reactElementToJSXString(children));
   return (
     <CodeSnippet language="jsx">
       {reactElementToJSXString(children)}
