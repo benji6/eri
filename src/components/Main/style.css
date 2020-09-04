@@ -3,6 +3,6 @@
   justify-content: center;
 }
 
-.e-main:not(.e-main--no-menu) {
+.e-main--menu-space {
   padding-left: var(--e-space-for-menu);
 }

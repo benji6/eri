@@ -38,7 +38,7 @@ export default function Home(_: RouteComponentProps) {
         </ul>
       </Paper>
       <Paper>
-        <h2>Getting Started</h2>
+        <h2>Getting started</h2>
         <p>
           The <code>eri</code> package is published on npm so you can install it
           with your favorite package manager. Tree-shaking and TypeScript are
@@ -54,6 +54,21 @@ export default function Home(_: RouteComponentProps) {
         </p>
         <CodeSnippet language="html">{`<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">`}</CodeSnippet>
+        <p>
+          Make sure to add <code>EriProvider</code> near the root of your
+          component tree as various components depend on it being an ancestor:
+        </p>
+        <CodeSnippet language="jsx">{`import * as React from "react";
+import * as ReactDOM from "react-dom";
+import App from "./components/App";
+import { EriProvider } from "../src";
+
+ReactDOM.render(
+  <EriProvider>
+    <App />
+  </EriProvider>,
+  document.getElementById("root")
+);`}</CodeSnippet>
       </Paper>
       <Paper>
         <h2>About</h2>

@@ -1,11 +1,10 @@
 import "./style.css";
 import * as React from "react";
+import { StateContext } from "../EriProvider";
 
-export interface IProps extends React.HTMLAttributes<HTMLElement> {
-  noMenu?: boolean;
-}
+export default function Main(props: React.HTMLAttributes<HTMLElement>) {
+  const state = React.useContext(StateContext);
+  const className = `e-main${state.menuExists ? " e-main--menu-space" : ""}`;
 
-export default function Main({ noMenu, ...rest }: IProps) {
-  const className = `e-main${noMenu ? " e-main--no-menu" : ""}`;
-  return <main {...rest} className={className} />;
+  return <main {...props} className={className} />;
 }

@@ -13,7 +13,7 @@
     z-index: var(--e-z-index-2);
   }
 
-  .e-header:not(.e-header--no-menu) {
+  .e-header--menu-space {
     padding-left: calc(
       (100% - var(--e-break-point) - var(--e-menu-width)) / 2 - var(--e-space-2) +
         var(--e-menu-width)

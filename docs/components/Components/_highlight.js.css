@@ -11,6 +11,7 @@
   color: var(--e-color-highlight-3);
 }
 
+.hljs-keyword,
 .hljs-attribute,
 .hljs-name,
 .hljs-tag {
