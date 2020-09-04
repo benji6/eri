@@ -3,11 +3,10 @@ import ConfigurableExample, {
   PropControlBoolean,
   PropControlEnum,
 } from "./_ConfigurableExample";
-import { IProps, iconNameMap } from "../../../src/components/Icon";
 import { Icon, Paper } from "../../../src";
+import { ICON_NAMES } from "../../constants";
+import { IProps } from "../../../src/components/Icon";
 import { RouteComponentProps } from "@reach/router";
-
-const iconNames = Object.keys(iconNameMap);
 
 export default function IconDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({
@@ -43,7 +42,7 @@ export default function IconDocs(_: RouteComponentProps) {
         <PropControlBoolean name="draw" props={props} setProps={setProps} />
         <PropControlEnum
           name="name"
-          options={iconNames}
+          options={ICON_NAMES}
           props={props}
           setProps={setProps}
         />
