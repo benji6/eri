@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-evenly;
   left: var(--e-space-for-menu);
+  pointer-events: none;
   position: fixed;
   right: 0;
   z-index: var(--e-z-index-1);

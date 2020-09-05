@@ -4,6 +4,7 @@
   box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground-more);
   padding: var(--e-space-2);
+  pointer-events: initial; /* pointer-events on quick-nav is none */
   transition-duration: var(--e-time-0);
   transition-property: background-color, box-shadow;
   transition-timing-function: var(--e-easing-standard);
