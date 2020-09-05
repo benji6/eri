@@ -16,6 +16,7 @@
   animation: e-animate-quick-nav-in var(--e-time-0) var(--e-easing-decelerate)
     forwards;
   opacity: 0;
+  pointer-events: initial;
 }
 .e-quick-nav > *:nth-child(2) {
   animation-delay: var(--animation-delay);
