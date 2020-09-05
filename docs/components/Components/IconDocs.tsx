@@ -25,18 +25,9 @@ export default function IconDocs(_: RouteComponentProps) {
           </span>{" "}
           <a href="https://feathericons.com/">Feather</a>
         </p>
-        <Icon draw name="copy" />
-        <Icon draw name="check" />
-        <Icon draw name="cross" />
-        <Icon draw name="down" />
-        <Icon draw name="left" />
-        <Icon draw name="menu" />
-        <Icon draw name="moon" />
-        <Icon draw name="plus" />
-        <Icon draw name="right" />
-        <Icon draw name="save" />
-        <Icon draw name="share" />
-        <Icon draw name="sun" />
+        {ICON_NAMES.map((name) => (
+          <Icon draw key={name} name={name} />
+        ))}
       </Paper>
       <ConfigurableExample example={<Icon {...props} />}>
         <PropControlBoolean name="draw" props={props} setProps={setProps} />
