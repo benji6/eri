@@ -13,6 +13,11 @@ export default function QuickNavDocs(_: RouteComponentProps) {
       <Paper>
         <h2>QuickNav</h2>
         <p>
+          The QuickNav isn&apos;t rendered when the screen is wide enough for
+          the menu to always be open. You may need to narrow your browser window
+          to see it.
+        </p>
+        <p>
           The first button demonstrates the active style when the user is
           already on the linked page.
         </p>

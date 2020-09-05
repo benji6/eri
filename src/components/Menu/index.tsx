@@ -9,7 +9,7 @@ import MenuLink from "./MenuLink";
 import MenuList from "./MenuList";
 import MenuSubList from "./MenuSubList";
 import { getCssTime1 } from "../../utils/getCssVar";
-import useWidth from "../../hooks/useWidth";
+import useIsWideResolution from "../../hooks/useIsWideResolution";
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean;
@@ -17,7 +17,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function Menu({ children, onClose, open, ...rest }: IProps) {
-  const isWideResolution = useWidth() >= 1056;
+  const isWideResolution = useIsWideResolution();
   const dispatch = React.useContext(DispatchContext);
 
   React.useEffect(() => {
