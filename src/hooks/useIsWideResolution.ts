@@ -1,12 +1,19 @@
 import * as React from "react";
-import debounce from "../utils/debounce";
+
+const mediaQuery = window.matchMedia("(min-width: 66rem)");
 
 export default function useIsWideResolution(): boolean {
-  const [width, setWidth] = React.useState(innerWidth);
+  const [isWideResolution, setIsWideResolution] = React.useState(
+    mediaQuery.matches
+  );
+
+  const mediaQueryHandler = (e: MediaQueryListEvent) =>
+    setIsWideResolution(e.matches);
+
   React.useEffect(() => {
-    const handleResize = debounce(() => setWidth(innerWidth), 200);
-    addEventListener("resize", handleResize);
-    return () => removeEventListener("resize", handleResize);
+    mediaQuery.addListener(mediaQueryHandler);
+    return () => mediaQuery.removeListener(mediaQueryHandler);
   }, []);
-  return width >= 1056;
+
+  return isWideResolution;
 }
