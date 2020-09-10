@@ -1,6 +1,9 @@
 import * as React from "react";
 
-const mediaQuery = window.matchMedia("(min-width: 66rem)");
+const mediaQuery =
+  typeof window === "undefined"
+    ? { addListener() {}, matches: false, removeListener() {} }
+    : window.matchMedia("(min-width: 66rem)");
 
 export default function useIsWideResolution(): boolean {
   const [isWideResolution, setIsWideResolution] = React.useState(

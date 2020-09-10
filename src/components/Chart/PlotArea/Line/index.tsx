@@ -28,8 +28,6 @@ export default function Line({
     polylinePoints += `${x},${y} `;
   }
 
-  console.log(lineLength);
-
   polylinePoints = polylinePoints.trimRight();
 
   return (
