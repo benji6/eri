@@ -1,3 +1,4 @@
+import "./style.css";
 import * as React from "react";
 import {
   AXIS_MARKER_LENGTH,
@@ -35,11 +36,7 @@ export default function Chart({
   yLabels,
 }: Props) {
   return (
-    <svg
-      viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
-      style={{ background: "var(--e-color-ground-more)" }}
-      width="100%"
-    >
+    <svg viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`} width="100%">
       {xLabels.map(([labelX, labelText]) => {
         const x =
           ((labelX - domain[0]) / (domain[1] - domain[0])) *
@@ -72,9 +69,9 @@ export default function Chart({
 
             {/* x-label */}
             <text
+              className="e-chart__text"
               dominantBaseline="central"
               fill="currentColor"
-              style={{ fontSize: 0.055 }}
               textAnchor="middle"
               x={x}
               y={1 - (MARGIN_BOTTOM - AXIS_MARKER_LENGTH) / 2}
@@ -114,9 +111,9 @@ export default function Chart({
 
             {/* y-label */}
             <text
+              className="e-chart__text"
               dominantBaseline="central"
               fill="currentColor"
-              style={{ fontSize: 0.055 }}
               textAnchor="middle"
               x={(MARGIN_LEFT - AXIS_MARKER_LENGTH) / 2}
               y={y}
