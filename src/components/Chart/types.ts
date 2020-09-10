@@ -1,1 +1,1 @@
-export type TPoint = [number, number]; // [x, y]
+export type TPoint = [x: number, y: number];

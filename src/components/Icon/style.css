@@ -7,7 +7,7 @@
 }
 
 .e-icon--draw {
-  animation: e-draw var(--e-time-1) linear forwards;
+  animation: e-draw var(--e-time-1) var(--e-easing-standard) forwards;
   stroke-dasharray: 66;
   stroke-dashoffset: -66;
 }

@@ -83,6 +83,7 @@ export default function DesignElements(_: RouteComponentProps) {
           <Time varName="--e-time-0" />
           <Time varName="--e-time-1" />
           <Time varName="--e-time-2" />
+          <Time varName="--e-time-3" />
         </DisplayGroup>
         <h3>Easing</h3>
         <p>

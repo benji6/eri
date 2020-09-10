@@ -14,7 +14,7 @@ import {
 import PlotArea from "./PlotArea";
 import { TPoint } from "./types";
 
-type TLabel = [number, string]; // [x/y position, label text]
+type TLabel = [xyPosition: number, labelText: string];
 
 interface Props {
   colorFromY?(y: number): string;
