@@ -3,8 +3,6 @@ import {
   LINE_WIDTH_2,
   MARGIN_LEFT,
   MARGIN_TOP,
-  PLOT_ASPECT_RATIO,
-  PLOT_HEIGHT,
   PLOT_WIDTH,
   POINT_RADIUS,
 } from "../constants";
@@ -18,17 +16,21 @@ import { TPoint } from "../types";
 const SCALE_RATIO = 1 + POINT_RADIUS;
 
 interface Props {
+  aspectRatio: number;
   colorFromY?(y: number): string;
   data: TPoint[];
   domain: [number, number];
+  height: number;
   range: [number, number];
   trendlinePoints?: TPoint[];
 }
 
 export default function PlotArea({
+  aspectRatio,
   colorFromY,
   data,
   domain,
+  height,
   range,
   trendlinePoints,
 }: Props) {
@@ -41,15 +43,16 @@ export default function PlotArea({
 
   return (
     <svg
-      height={PLOT_HEIGHT * SCALE_RATIO}
-      viewBox={`0 0 ${PLOT_ASPECT_RATIO} 1`}
+      height={height * SCALE_RATIO}
+      viewBox={`0 0 ${aspectRatio} 1`}
       width={PLOT_WIDTH * SCALE_RATIO}
       x={MARGIN_LEFT}
-      y={MARGIN_TOP - (PLOT_HEIGHT * SCALE_RATIO - PLOT_HEIGHT)}
+      y={MARGIN_TOP - (height * SCALE_RATIO - height)}
     >
       {/* tendline */}
       {trendlinePoints && (
         <Line
+          aspectRatio={aspectRatio}
           color="var(--e-color-balance-less)"
           points={trendlinePoints.map(tranformPoint)}
           thickness={LINE_WIDTH_2}
@@ -57,11 +60,12 @@ export default function PlotArea({
       )}
 
       {/* chart line */}
-      <Line points={points} />
+      <Line aspectRatio={aspectRatio} points={points} />
 
       {/* chart points */}
       {points.map((point, i) => (
         <Point
+          aspectRatio={aspectRatio}
           color={colorFromY ? colorFromY(data[i][1]) : "var(--e-color-theme)"}
           key={point[0]}
           x={point[0]}

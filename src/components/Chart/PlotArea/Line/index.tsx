@@ -1,15 +1,17 @@
 import "./style.css";
 import * as React from "react";
-import { LINE_WIDTH_1, PLOT_ASPECT_RATIO } from "../../constants";
+import { LINE_WIDTH_1 } from "../../constants";
 import { TPoint } from "../../types";
 
 interface Props {
+  aspectRatio: number;
   color?: string;
   points: TPoint[];
   thickness?: number;
 }
 
 export default function Line({
+  aspectRatio,
   color = "var(--e-color-theme)",
   points,
   thickness = LINE_WIDTH_1,
@@ -21,7 +23,7 @@ export default function Line({
   let prevXY: [x: number, y: number] | undefined;
 
   for (const point of points) {
-    const x = point[0] * PLOT_ASPECT_RATIO;
+    const x = point[0] * aspectRatio;
     const y = 1 - point[1];
     if (prevXY) lineLength += Math.hypot(x - prevXY[0], y - prevXY[1]);
     prevXY = [x, y];
@@ -32,12 +34,12 @@ export default function Line({
 
   return (
     <polyline
-      style={{ "--length": lineLength } as React.CSSProperties}
       className="e-line"
       fill="none"
       points={polylinePoints}
       stroke={color}
       strokeWidth={thickness}
+      style={{ "--length": lineLength } as React.CSSProperties}
     />
   );
 }
