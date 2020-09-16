@@ -3,5 +3,5 @@
 }
 
 .e-chart__axis-label {
-  font-weight: bold;
+  font-weight: var(--e-font-weight-bold);
 }
