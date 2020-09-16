@@ -1,7 +1,11 @@
 .e-chart {
-  font-size: 0.05px;
+  margin: var(--e-space-2) auto;
 }
 
 .e-chart__axis-label {
   font-weight: var(--e-font-weight-bold);
+}
+
+.e-chart__svg {
+  font-size: 0.05px;
 }
