@@ -1,6 +1,7 @@
 {
   "env": { "browser": true },
   "extends": [
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
@@ -14,7 +15,7 @@
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-empty-function": 0,
     "@typescript-eslint/no-non-null-assertion": 0,
-    "@typescript-eslint/no-unused-vars": [2, {"argsIgnorePattern": "^_$" }],
+    "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_$" }],
     "jsx-a11y/no-autofocus": 0,
     "react/prop-types": 0,
     "react-hooks/exhaustive-deps": 2,
