@@ -1,8 +1,8 @@
+.cache
 *.*ignore
 *.*rc
 *.html
 *.ico
-*.json
 *.lock
 *.log
 *.svg
