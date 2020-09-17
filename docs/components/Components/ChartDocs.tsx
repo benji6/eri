@@ -26,29 +26,29 @@ export default function CardDocs(_: RouteComponentProps) {
     <Paper.Group>
       <Paper>
         <h2>Chart</h2>
-        <ConfigurableExample
-          example={
-            <Chart
-              domain={[0, 1]}
-              range={[0, 1]}
-              xLabels={labels}
-              yLabels={labels}
-              {...props}
-            />
-          }
-        >
-          <PropControlString
-            name="xAxisLabel"
-            props={props}
-            setProps={setProps}
-          />
-          <PropControlString
-            name="yAxisLabel"
-            props={props}
-            setProps={setProps}
-          />
-        </ConfigurableExample>
       </Paper>
+      <ConfigurableExample
+        example={
+          <Chart
+            domain={[0, 1]}
+            range={[0, 1]}
+            xLabels={labels}
+            yLabels={labels}
+            {...props}
+          />
+        }
+      >
+        <PropControlString
+          name="xAxisLabel"
+          props={props}
+          setProps={setProps}
+        />
+        <PropControlString
+          name="yAxisLabel"
+          props={props}
+          setProps={setProps}
+        />
+      </ConfigurableExample>
     </Paper.Group>
   );
 }
