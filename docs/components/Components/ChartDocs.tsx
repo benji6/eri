@@ -11,7 +11,7 @@ export default function CardDocs(_: RouteComponentProps) {
   ]);
 
   const [props, setProps] = React.useState<
-    Pick<IProps, "data" | "trendlinePoints" | "xAxisLabel">
+    Pick<IProps, "data" | "trendlinePoints" | "xAxisLabel" | "yAxisLabel">
   >({
     data: Array.from({ length: 8 }, (_, n) => [n / 7, Math.random()]),
     trendlinePoints: Array.from({ length: 4 }, (_, n) => [
@@ -19,6 +19,7 @@ export default function CardDocs(_: RouteComponentProps) {
       Math.random() / 2 + 0.25,
     ]),
     xAxisLabel: "X axis label",
+    yAxisLabel: "Y axis label",
   });
 
   return (
@@ -38,6 +39,11 @@ export default function CardDocs(_: RouteComponentProps) {
         >
           <PropControlString
             name="xAxisLabel"
+            props={props}
+            setProps={setProps}
+          />
+          <PropControlString
+            name="yAxisLabel"
             props={props}
             setProps={setProps}
           />

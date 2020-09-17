@@ -1,11 +1,5 @@
 import * as React from "react";
-import {
-  LINE_WIDTH_2,
-  MARGIN_LEFT,
-  MARGIN_TOP,
-  PLOT_WIDTH,
-  POINT_RADIUS,
-} from "../constants";
+import { LINE_WIDTH_2, MARGIN_TOP, POINT_RADIUS } from "../constants";
 import Line from "./Line";
 import Point from "./Point";
 import { TPoint } from "../types";
@@ -21,6 +15,8 @@ interface Props {
   data: TPoint[];
   domain: [number, number];
   height: number;
+  marginLeft: number;
+  plotWidth: number;
   range: [number, number];
   trendlinePoints?: TPoint[];
 }
@@ -31,6 +27,8 @@ export default function PlotArea({
   data,
   domain,
   height,
+  marginLeft,
+  plotWidth,
   range,
   trendlinePoints,
 }: Props) {
@@ -45,8 +43,8 @@ export default function PlotArea({
     <svg
       height={height * SCALE_RATIO}
       viewBox={`0 0 ${aspectRatio} 1`}
-      width={PLOT_WIDTH * SCALE_RATIO}
-      x={MARGIN_LEFT}
+      width={plotWidth * SCALE_RATIO}
+      x={marginLeft}
       y={MARGIN_TOP - (height * SCALE_RATIO - height)}
     >
       {/* tendline */}

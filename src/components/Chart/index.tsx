@@ -5,10 +5,8 @@ import {
   CHART_ASPECT_RATIO,
   LINE_WIDTH_0,
   LINE_WIDTH_2,
-  MARGIN_LEFT,
   MARGIN_RIGHT,
   MARGIN_TOP,
-  PLOT_WIDTH,
 } from "./constants";
 import PlotArea from "./PlotArea";
 import { TPoint } from "./types";
@@ -23,6 +21,7 @@ export interface IProps {
   trendlinePoints?: TPoint[];
   xAxisLabel?: string;
   xLabels: TLabel[];
+  yAxisLabel?: string;
   yLabels: TLabel[];
 }
 
@@ -34,11 +33,14 @@ export default function Chart({
   trendlinePoints,
   xAxisLabel,
   xLabels,
+  yAxisLabel,
   yLabels,
 }: IProps) {
   const marginBottom = xAxisLabel ? 0.175 : 0.125;
+  const marginLeft = yAxisLabel ? 0.175 : 0.125;
   const plotHeight = 1 - marginBottom - MARGIN_TOP;
-  const plotAspectRatio = PLOT_WIDTH / plotHeight;
+  const plotWidth = CHART_ASPECT_RATIO - marginLeft - MARGIN_RIGHT;
+  const plotAspectRatio = plotWidth / plotHeight;
 
   return (
     <svg
@@ -50,8 +52,8 @@ export default function Chart({
         const x =
           ((labelX - domain[0]) / (domain[1] - domain[0])) *
             CHART_ASPECT_RATIO *
-            (1 - (MARGIN_LEFT + MARGIN_RIGHT) / CHART_ASPECT_RATIO) +
-          MARGIN_LEFT;
+            (1 - (marginLeft + MARGIN_RIGHT) / CHART_ASPECT_RATIO) +
+          marginLeft;
 
         return (
           <React.Fragment key={labelX}>
@@ -101,7 +103,7 @@ export default function Chart({
               stroke="var(--e-color-balance)"
               strokeDasharray={LINE_WIDTH_2}
               strokeWidth={LINE_WIDTH_0}
-              x1={MARGIN_LEFT}
+              x1={marginLeft}
               x2={CHART_ASPECT_RATIO - MARGIN_RIGHT}
               y1={y}
               y2={y}
@@ -111,8 +113,8 @@ export default function Chart({
             <line
               stroke="currentColor"
               strokeWidth={LINE_WIDTH_2}
-              x1={MARGIN_LEFT - AXIS_MARKER_LENGTH}
-              x2={MARGIN_LEFT + LINE_WIDTH_2 / 2}
+              x1={marginLeft - AXIS_MARKER_LENGTH}
+              x2={marginLeft + LINE_WIDTH_2 / 2}
               y1={y}
               y2={y}
             />
@@ -121,8 +123,8 @@ export default function Chart({
             <text
               dominantBaseline="central"
               fill="currentColor"
-              textAnchor="middle"
-              x={(MARGIN_LEFT - AXIS_MARKER_LENGTH) / 2}
+              textAnchor="end"
+              x={marginLeft - 2 * AXIS_MARKER_LENGTH}
               y={y}
             >
               {labelText}
@@ -137,25 +139,17 @@ export default function Chart({
         data={data}
         domain={domain}
         height={plotHeight}
+        marginLeft={marginLeft}
+        plotWidth={plotWidth}
         range={range}
         trendlinePoints={trendlinePoints}
       />
 
       {/* x-axis */}
       <line
-        x1={MARGIN_LEFT}
+        x1={marginLeft}
         x2={CHART_ASPECT_RATIO - MARGIN_RIGHT}
         y1={1 - marginBottom}
-        y2={1 - marginBottom}
-        stroke="currentColor"
-        strokeWidth={LINE_WIDTH_2}
-      />
-
-      {/* y-axis */}
-      <line
-        x1={MARGIN_LEFT}
-        x2={MARGIN_LEFT}
-        y1={MARGIN_TOP}
         y2={1 - marginBottom}
         stroke="currentColor"
         strokeWidth={LINE_WIDTH_2}
@@ -168,12 +162,37 @@ export default function Chart({
           dominantBaseline="text-after-edge"
           fill="currentColor"
           textAnchor="middle"
-          x={
-            MARGIN_LEFT + (CHART_ASPECT_RATIO - MARGIN_LEFT - MARGIN_RIGHT) / 2
-          }
+          x={marginLeft + (CHART_ASPECT_RATIO - marginLeft - MARGIN_RIGHT) / 2}
           y={1}
         >
           {xAxisLabel}
+        </text>
+      )}
+
+      {/* y-axis */}
+      <line
+        x1={marginLeft}
+        x2={marginLeft}
+        y1={MARGIN_TOP}
+        y2={1 - marginBottom}
+        stroke="currentColor"
+        strokeWidth={LINE_WIDTH_2}
+      />
+
+      {/* y-axis-label */}
+      {yAxisLabel && (
+        <text
+          className="e-chart__axis-label"
+          dominantBaseline="text-before-edge"
+          fill="currentColor"
+          textAnchor="middle"
+          transform={`rotate(270, 0, ${
+            MARGIN_TOP + (1 - MARGIN_TOP - marginBottom) / 2
+          })`}
+          x={0}
+          y={MARGIN_TOP + (1 - MARGIN_TOP - marginBottom) / 2}
+        >
+          {yAxisLabel}
         </text>
       )}
     </svg>
