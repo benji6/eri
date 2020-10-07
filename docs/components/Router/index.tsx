@@ -2,7 +2,6 @@ import * as React from "react";
 import { Router as ReachRouter, Redirect } from "@reach/router";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
-import ChartDocs from "../Components/ChartDocs";
 import ComponentsHome from "../Components/ComponentsHome";
 import DesignElements from "../DesignElements";
 import DialogDocs from "../Components/DialogDocs";
@@ -11,6 +10,7 @@ import FormDocs from "../Components/FormDocs";
 import HeaderDocs from "../Components/HeaderDocs";
 import Home from "../Home";
 import IconDocs from "../Components/IconDocs";
+import LineChartDocs from "../Components/LineChartDocs";
 import LinkDocs from "../Components/LinkDocs";
 import MainDocs from "../Components/MainDocs";
 import MenuDocs from "../Components/MenuDocs";
@@ -41,12 +41,12 @@ export default function Router() {
       <ComponentsHome path="components" />
       <ButtonDocs path="components/button" />
       <CardDocs path="components/card" />
-      <ChartDocs path="components/chart" />
       <DialogDocs path="components/dialog" />
       <FabDocs path="components/fab" />
       <FormDocs path="components/form" />
       <HeaderDocs path="components/header" />
       <IconDocs path="components/icon" />
+      <LineChartDocs path="components/line-chart" />
       <LinkDocs path="components/link" />
       <MainDocs path="components/main" />
       <MenuDocs path="components/menu" />

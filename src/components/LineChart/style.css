@@ -1,7 +1,7 @@
-.e-chart {
+.e-line-chart {
   font-size: 0.05px;
 }
 
-.e-chart__axis-label {
+.e-line-chart__axis-label {
   font-weight: var(--e-font-weight-bold);
 }

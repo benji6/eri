@@ -25,7 +25,7 @@ export interface IProps {
   yLabels: TLabel[];
 }
 
-export default function Chart({
+export default function LineChart({
   colorFromY,
   data,
   domain,
@@ -44,7 +44,7 @@ export default function Chart({
 
   return (
     <svg
-      className="e-chart"
+      className="e-line-chart"
       viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
       width="100%"
     >
@@ -158,7 +158,7 @@ export default function Chart({
       {/* x-axis-label */}
       {xAxisLabel && (
         <text
-          className="e-chart__axis-label"
+          className="e-line-chart__axis-label"
           dominantBaseline="text-after-edge"
           fill="currentColor"
           textAnchor="middle"
@@ -182,7 +182,7 @@ export default function Chart({
       {/* y-axis-label */}
       {yAxisLabel && (
         <text
-          className="e-chart__axis-label"
+          className="e-line-chart__axis-label"
           dominantBaseline="text-before-edge"
           fill="currentColor"
           textAnchor="middle"

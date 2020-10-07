@@ -47,7 +47,7 @@ export default function PlotArea({
       x={marginLeft}
       y={MARGIN_TOP - (height * SCALE_RATIO - height)}
     >
-      {/* tendline */}
+      {/* trendline */}
       {trendlinePoints && (
         <Line
           aspectRatio={aspectRatio}

@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Chart, Paper } from "../../../src";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
-import { IProps } from "../../../src/components/Chart";
+import { LineChart, Paper } from "../../../src";
+import { IProps } from "../../../src/components/LineChart";
 import { RouteComponentProps } from "@reach/router";
 
-export default function CardDocs(_: RouteComponentProps) {
+export default function LineChartDocs(_: RouteComponentProps) {
   const labels = Array.from({ length: 5 }, (_, n): [number, string] => [
     n / 4,
     String((n / 4) * 100),
@@ -29,7 +29,7 @@ export default function CardDocs(_: RouteComponentProps) {
       </Paper>
       <ConfigurableExample
         example={
-          <Chart
+          <LineChart
             domain={[0, 1]}
             range={[0, 1]}
             xLabels={labels}
