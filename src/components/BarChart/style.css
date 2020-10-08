@@ -1,0 +1,14 @@
+.e-bar-chart__bar {
+  animation: e-bar-expand var(--e-time-2) var(--e-easing-standard) forwards;
+
+  /* --bar-number is set by React Component */
+  animation-delay: calc(var(--bar-number) * var(--e-time-0));
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+@keyframes e-bar-expand {
+  to {
+    transform: scaleY(1);
+  }
+}

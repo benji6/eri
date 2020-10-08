@@ -1,3 +1,4 @@
+import "./style.css";
 import * as React from "react";
 import {
   CHART_ASPECT_RATIO,
@@ -7,31 +8,31 @@ import {
 import Chart from "../../privateComponents/Chart";
 import PlotArea from "./PlotArea";
 import { TLabel } from "../../privateComponents/Chart/types";
-import { TPoint } from "./types";
 
 export interface IProps {
   colorFromY?(y: number): string;
-  data: TPoint[];
+  data: number[];
   domain: [number, number];
   range: [number, number];
-  trendlinePoints?: TPoint[];
   xAxisLabel?: string;
-  xLabels: TLabel[];
+  xLabels: string[];
   yAxisLabel?: string;
   yLabels: TLabel[];
 }
 
-export default function LineChart({
+export default function BarChart({
   colorFromY,
   data,
   domain,
   range,
-  trendlinePoints,
   xAxisLabel,
   xLabels,
   yAxisLabel,
   yLabels,
 }: IProps) {
+  if (xLabels.length !== data.length)
+    throw Error("`xLabels.length` !== `data.length`");
+
   const marginBottom = xAxisLabel ? 0.175 : 0.125;
   const marginLeft = yAxisLabel ? 0.175 : 0.125;
   const plotHeight = 1 - marginBottom - MARGIN_TOP;
@@ -48,12 +49,15 @@ export default function LineChart({
       <Chart.XLabels
         domain={domain}
         xAxisLabel={xAxisLabel}
-        xLabels={xLabels}
+        xLabels={xLabels.map((labelText, i) => [
+          (i + 0.5) / xLabels.length,
+          labelText,
+        ])}
         yAxisLabel={yAxisLabel}
       />
       <Chart.XGridLines
         domain={domain}
-        gridLines={xLabels.map(([x]) => x)}
+        gridLines={xLabels.map((_, i) => i / xLabels.length)}
         xAxisLabel={xAxisLabel}
         yAxisLabel={yAxisLabel}
       />
@@ -61,12 +65,10 @@ export default function LineChart({
         aspectRatio={plotAspectRatio}
         colorFromY={colorFromY}
         data={data}
-        domain={domain}
         height={plotHeight}
         marginLeft={marginLeft}
         plotWidth={plotWidth}
         range={range}
-        trendlinePoints={trendlinePoints}
       />
     </Chart>
   );

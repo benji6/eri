@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Router as ReachRouter, Redirect } from "@reach/router";
+import BarChartDocs from "../Components/BarChartDocs";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
 import ComponentsHome from "../Components/ComponentsHome";
@@ -39,6 +40,7 @@ export default function Router() {
       <DesignElements path="design-elements" />
       <Typography path="typography" />
       <ComponentsHome path="components" />
+      <BarChartDocs path="components/bar-chart" />
       <ButtonDocs path="components/button" />
       <CardDocs path="components/card" />
       <DialogDocs path="components/dialog" />

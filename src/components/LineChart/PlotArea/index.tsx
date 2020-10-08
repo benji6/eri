@@ -1,6 +1,10 @@
 import * as React from "react";
-import { LINE_WIDTH_2, MARGIN_TOP, POINT_RADIUS } from "../constants";
+import {
+  LINE_WIDTH_2,
+  MARGIN_TOP,
+} from "../../../privateComponents/Chart/constants";
 import Line from "./Line";
+import { POINT_RADIUS } from "../constants";
 import Point from "./Point";
 import { TPoint } from "../types";
 

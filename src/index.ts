@@ -14,6 +14,7 @@ import "./vars/z-index.css";
 
 import "./metaThemeColor";
 
+export { default as BarChart } from "./components/BarChart";
 export { default as Button } from "./components/Button";
 export { default as Card } from "./components/Card";
 export { default as Checkbox } from "./components/Checkbox";

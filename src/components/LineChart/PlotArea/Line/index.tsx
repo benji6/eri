@@ -1,6 +1,6 @@
 import "./style.css";
 import * as React from "react";
-import { LINE_WIDTH_1 } from "../../constants";
+import { LINE_WIDTH_1 } from "../../../../privateComponents/Chart/constants";
 import { TPoint } from "../../types";
 
 interface Props {
