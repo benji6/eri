@@ -10,6 +10,7 @@ import PlotArea from "./PlotArea";
 import { TLabel } from "../../privateComponents/Chart/types";
 
 export interface IProps {
+  colorFromX?(x: number): string;
   colorFromY?(y: number): string;
   data: number[];
   domain: [number, number];
@@ -21,6 +22,7 @@ export interface IProps {
 }
 
 export default function BarChart({
+  colorFromX,
   colorFromY,
   data,
   domain,
@@ -30,8 +32,13 @@ export default function BarChart({
   yAxisLabel,
   yLabels,
 }: IProps) {
-  if (xLabels.length !== data.length)
+  if (xLabels.length && xLabels.length !== data.length)
     throw Error("`xLabels.length` !== `data.length`");
+
+  if (colorFromX && colorFromY)
+    throw Error(
+      "Both `colorFromX` and `colorFromY` were provided - please only provide one"
+    );
 
   const marginBottom = xAxisLabel ? 0.175 : 0.125;
   const marginLeft = yAxisLabel ? 0.175 : 0.125;
@@ -65,6 +72,7 @@ export default function BarChart({
       />
       <PlotArea
         aspectRatio={plotAspectRatio}
+        colorFromX={colorFromX}
         colorFromY={colorFromY}
         data={data}
         height={plotHeight}

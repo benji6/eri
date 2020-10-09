@@ -3,6 +3,7 @@ import { MARGIN_TOP } from "../../privateComponents/Chart/constants";
 
 interface Props {
   aspectRatio: number;
+  colorFromX?(x: number): string;
   colorFromY?(y: number): string;
   data: number[];
   height: number;
@@ -13,6 +14,7 @@ interface Props {
 
 export default function PlotArea({
   aspectRatio,
+  colorFromX,
   colorFromY,
   data,
   height,
@@ -34,13 +36,21 @@ export default function PlotArea({
     >
       {bars.map((height, i) => {
         const width = aspectRatio / (2 * bars.length);
+        const x = (i / bars.length) * aspectRatio + width / 2;
+
         return (
           <rect
             className="e-bar-chart__bar"
             key={i}
-            x={(i / bars.length) * aspectRatio + width / 2}
+            x={x}
             y={1 - height}
-            fill={colorFromY ? colorFromY(height) : "var(--e-color-theme)"}
+            fill={
+              colorFromX
+                ? colorFromX(x)
+                : colorFromY
+                ? colorFromY(height)
+                : "var(--e-color-theme)"
+            }
             height={height}
             style={{ "--bar-number": i } as React.CSSProperties}
             width={width}
