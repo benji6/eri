@@ -50,14 +50,16 @@ export default function BarChart({
         domain={domain}
         xAxisLabel={xAxisLabel}
         xLabels={xLabels.map((labelText, i) => [
-          (i + 0.5) / xLabels.length,
+          ((i + 0.5) / xLabels.length) * (domain[1] - domain[0]) + domain[0],
           labelText,
         ])}
         yAxisLabel={yAxisLabel}
       />
       <Chart.XGridLines
         domain={domain}
-        gridLines={xLabels.map((_, i) => i / xLabels.length)}
+        gridLines={xLabels.map(
+          (_, i) => (i / xLabels.length) * (domain[1] - domain[0]) + domain[0]
+        )}
         xAxisLabel={xAxisLabel}
         yAxisLabel={yAxisLabel}
       />
