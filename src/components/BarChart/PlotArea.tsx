@@ -46,7 +46,7 @@ export default function PlotArea({
             y={1 - height}
             fill={
               colorFromX
-                ? colorFromX(x)
+                ? colorFromX(bars.length > 1 ? i / (bars.length - 1) : 0.5)
                 : colorFromY
                 ? colorFromY(height)
                 : "var(--e-color-theme)"
