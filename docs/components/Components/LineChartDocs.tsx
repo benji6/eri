@@ -29,12 +29,7 @@ export default function LineChartDocs(_: RouteComponentProps) {
       </Paper>
       <ConfigurableExample
         example={
-          <Chart.LineChart
-            domain={[0, 1]}
-            range={[0, 1]}
-            yLabels={labels}
-            {...props}
-          >
+          <Chart.LineChart domain={[0, 1]} range={[0, 1]} {...props}>
             <Chart.XGridLines lines={labels.map(([x]) => x)} />
             <Chart.YGridLines lines={labels.map(([y]) => y)} />
             <Chart.XAxis labels={labels} markers={labels.map(([x]) => x)} />

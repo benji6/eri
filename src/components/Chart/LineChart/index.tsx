@@ -2,7 +2,6 @@ import * as React from "react";
 import { CHART_ASPECT_RATIO, MARGIN_RIGHT, MARGIN_TOP } from "../constants";
 import BaseChart from "../BaseChart";
 import PlotArea from "./PlotArea";
-import { TLabel } from "../types";
 import { TPoint } from "./types";
 
 export interface IProps {
@@ -14,7 +13,6 @@ export interface IProps {
   trendlinePoints?: TPoint[];
   xAxisTitle?: string;
   yAxisTitle?: string;
-  yLabels: TLabel[];
 }
 
 export default function LineChart({
