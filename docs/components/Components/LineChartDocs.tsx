@@ -1,7 +1,7 @@
 import * as React from "react";
+import { Chart, Paper } from "../../../src";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
-import { LineChart, Paper } from "../../../src";
-import { IProps } from "../../../src/components/LineChart";
+import { IProps } from "../../../src/components/Chart/LineChart";
 import { RouteComponentProps } from "@reach/router";
 
 export default function LineChartDocs(_: RouteComponentProps) {
@@ -11,15 +11,15 @@ export default function LineChartDocs(_: RouteComponentProps) {
   ]);
 
   const [props, setProps] = React.useState<
-    Pick<IProps, "data" | "trendlinePoints" | "xAxisLabel" | "yAxisLabel">
+    Pick<IProps, "data" | "trendlinePoints" | "xAxisTitle" | "yAxisTitle">
   >({
     data: Array.from({ length: 8 }, (_, n) => [n / 7, Math.random()]),
     trendlinePoints: Array.from({ length: 4 }, (_, n) => [
       n / 3,
       Math.random() / 2 + 0.25,
     ]),
-    xAxisLabel: "X axis label",
-    yAxisLabel: "Y axis label",
+    xAxisTitle: "X axis title",
+    yAxisTitle: "Y axis title",
   });
 
   return (
@@ -29,22 +29,26 @@ export default function LineChartDocs(_: RouteComponentProps) {
       </Paper>
       <ConfigurableExample
         example={
-          <LineChart
+          <Chart.LineChart
             domain={[0, 1]}
             range={[0, 1]}
-            xLabels={labels}
             yLabels={labels}
             {...props}
-          />
+          >
+            <Chart.XGridLines lines={labels.map(([x]) => x)} />
+            <Chart.YGridLines lines={labels.map(([y]) => y)} />
+            <Chart.XAxis labels={labels} markers={labels.map(([x]) => x)} />
+            <Chart.YAxis labels={labels} markers={labels.map(([x]) => x)} />
+          </Chart.LineChart>
         }
       >
         <PropControlString
-          name="xAxisLabel"
+          name="xAxisTitle"
           props={props}
           setProps={setProps}
         />
         <PropControlString
-          name="yAxisLabel"
+          name="yAxisTitle"
           props={props}
           setProps={setProps}
         />

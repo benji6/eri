@@ -1,5 +1,5 @@
 import * as React from "react";
-import { MARGIN_TOP } from "../../privateComponents/Chart/constants";
+import { MARGIN_TOP } from "../constants";
 
 interface Props {
   aspectRatio: number;

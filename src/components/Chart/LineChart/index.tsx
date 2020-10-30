@@ -1,73 +1,56 @@
 import * as React from "react";
-import {
-  CHART_ASPECT_RATIO,
-  MARGIN_RIGHT,
-  MARGIN_TOP,
-} from "../../privateComponents/Chart/constants";
-import Chart from "../../privateComponents/Chart";
+import { CHART_ASPECT_RATIO, MARGIN_RIGHT, MARGIN_TOP } from "../constants";
+import BaseChart from "../BaseChart";
 import PlotArea from "./PlotArea";
-import { TLabel } from "../../privateComponents/Chart/types";
+import { TLabel } from "../types";
 import { TPoint } from "./types";
 
 export interface IProps {
   colorFromY?(y: number): string;
+  children?: React.ReactNode;
   data: TPoint[];
   domain: [number, number];
   range: [number, number];
   trendlinePoints?: TPoint[];
-  xAxisLabel?: string;
-  xLabels: TLabel[];
-  yAxisLabel?: string;
+  xAxisTitle?: string;
+  yAxisTitle?: string;
   yLabels: TLabel[];
 }
 
 export default function LineChart({
+  children,
   colorFromY,
   data,
   domain,
   range,
   trendlinePoints,
-  xAxisLabel,
-  xLabels,
-  yAxisLabel,
-  yLabels,
+  xAxisTitle,
+  yAxisTitle,
 }: IProps) {
-  const marginBottom = xAxisLabel ? 0.175 : 0.125;
-  const marginLeft = yAxisLabel ? 0.175 : 0.125;
+  const marginBottom = xAxisTitle ? 0.175 : 0.125;
+  const marginLeft = yAxisTitle ? 0.175 : 0.125;
   const plotHeight = 1 - marginBottom - MARGIN_TOP;
   const plotWidth = CHART_ASPECT_RATIO - marginLeft - MARGIN_RIGHT;
   const plotAspectRatio = plotWidth / plotHeight;
 
   return (
-    <Chart
+    <BaseChart
+      domain={domain}
       range={range}
-      xAxisLabel={xAxisLabel}
-      yAxisLabel={yAxisLabel}
-      yLabels={yLabels}
+      xAxisTitle={xAxisTitle}
+      yAxisTitle={yAxisTitle}
     >
-      <Chart.XLabels
-        domain={domain}
-        xAxisLabel={xAxisLabel}
-        xLabels={xLabels}
-        yAxisLabel={yAxisLabel}
-      />
-      <Chart.XGridLines
-        domain={domain}
-        gridLines={xLabels.map(([x]) => x)}
-        xAxisLabel={xAxisLabel}
-        yAxisLabel={yAxisLabel}
-      />
+      {children}
       <PlotArea
         aspectRatio={plotAspectRatio}
         colorFromY={colorFromY}
         data={data}
-        domain={domain}
         height={plotHeight}
         marginLeft={marginLeft}
         plotWidth={plotWidth}
         range={range}
         trendlinePoints={trendlinePoints}
       />
-    </Chart>
+    </BaseChart>
   );
 }

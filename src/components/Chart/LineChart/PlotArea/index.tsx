@@ -1,8 +1,6 @@
 import * as React from "react";
-import {
-  LINE_WIDTH_2,
-  MARGIN_TOP,
-} from "../../../privateComponents/Chart/constants";
+import { LINE_WIDTH_2, MARGIN_TOP } from "../../constants";
+import { DomainContext } from "../../contexts";
 import Line from "./Line";
 import { POINT_RADIUS } from "../constants";
 import Point from "./Point";
@@ -17,7 +15,6 @@ interface Props {
   aspectRatio: number;
   colorFromY?(y: number): string;
   data: TPoint[];
-  domain: [number, number];
   height: number;
   marginLeft: number;
   plotWidth: number;
@@ -29,13 +26,13 @@ export default function PlotArea({
   aspectRatio,
   colorFromY,
   data,
-  domain,
   height,
   marginLeft,
   plotWidth,
   range,
   trendlinePoints,
 }: Props) {
+  const domain = React.useContext(DomainContext);
   const tranformPoint = ([x, y]: TPoint): TPoint => [
     (x - domain[0]) / (domain[1] - domain[0]) / SCALE_RATIO,
     (y - range[0]) / (range[1] - range[0]) / SCALE_RATIO,
