@@ -16,7 +16,7 @@
     "build:js:clean:css-requires:esm": "BABEL_ENV=css babel esm --out-dir esm",
     "format": "yarn test:lint:css --fix && yarn test:lint:scripts --fix && prettier --write '**/*'",
     "icons": "node scripts/icons",
-    "start": "parcel docs/index.html",
+    "start": "parcel docs/index.html --open",
     "style-guide:build": "rm -rf build && parcel build docs/index.html -d build --no-source-maps",
     "test": "run-p test:*",
     "test:audit": "yarn audit --level critical || [ $? -lt 16 ]",
