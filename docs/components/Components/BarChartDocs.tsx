@@ -38,11 +38,11 @@ export default function BarChartDocs(_: RouteComponentProps) {
             xLabels={xLabels}
             yAxisTitle={props.yAxisTitle}
           >
-            <Chart.YGridLines lines={yLabels.map(([y]) => y)} />
-            <Chart.YAxis labels={yLabels} markers={yLabels.map(([x]) => x)} />
             <Chart.PlotArea>
               <Chart.Bars data={props.data} />
             </Chart.PlotArea>
+            <Chart.YGridLines lines={yLabels.map(([y]) => y)} />
+            <Chart.YAxis labels={yLabels} markers={yLabels.map(([x]) => x)} />
           </Chart.BarChart>
         }
       >
