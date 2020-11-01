@@ -1,4 +1,4 @@
-.e-line {
+.e-base-line {
   animation: e-draw var(--e-time-3) var(--e-easing-standard) forwards;
 
   /* --length is set by React Component */

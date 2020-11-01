@@ -1,15 +1,16 @@
 import * as React from "react";
 import { Chart, Paper } from "../../../src";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
-import { IProps } from "../../../src/components/Chart/BarChart";
 import { RouteComponentProps } from "@reach/router";
 
 const DATA_COUNT = 8;
 
 export default function BarChartDocs(_: RouteComponentProps) {
-  const [props, setProps] = React.useState<
-    Pick<IProps, "data" | "xAxisTitle" | "yAxisTitle">
-  >({
+  const [props, setProps] = React.useState<{
+    data: number[];
+    xAxisTitle?: string;
+    yAxisTitle?: string;
+  }>({
     data: Array.from({ length: DATA_COUNT }, () => Math.random()),
     xAxisTitle: "X axis title",
     yAxisTitle: "Y axis title",
@@ -33,11 +34,15 @@ export default function BarChartDocs(_: RouteComponentProps) {
           <Chart.BarChart
             domain={[0, 1]}
             range={[0, 1]}
+            xAxisTitle={props.xAxisTitle}
             xLabels={xLabels}
-            {...props}
+            yAxisTitle={props.yAxisTitle}
           >
             <Chart.YGridLines lines={yLabels.map(([y]) => y)} />
             <Chart.YAxis labels={yLabels} markers={yLabels.map(([x]) => x)} />
+            <Chart.PlotArea>
+              <Chart.Bars data={props.data} />
+            </Chart.PlotArea>
           </Chart.BarChart>
         }
       >

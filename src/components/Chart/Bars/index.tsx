@@ -1,46 +1,35 @@
+import "./style.css";
 import * as React from "react";
-import { MARGIN_TOP } from "../constants";
+import { AspectRatioContext, RangeContext } from "../contexts";
 
-interface Props {
-  aspectRatio: number;
+interface IProps {
   colorFromX?(x: number): string;
   colorFromY?(y: number): string;
   data: number[];
-  height: number;
-  marginLeft: number;
-  plotWidth: number;
-  range: [number, number];
 }
 
-export default function PlotArea({
-  aspectRatio,
-  colorFromX,
-  colorFromY,
-  data,
-  height,
-  marginLeft,
-  plotWidth,
-  range,
-}: Props) {
+export default function Bars({ colorFromX, colorFromY, data }: IProps) {
+  if (colorFromX && colorFromY)
+    throw Error(
+      "Both `colorFromX` and `colorFromY` were provided - please only provide one"
+    );
+
+  const aspectRatio = React.useContext(AspectRatioContext);
+  const range = React.useContext(RangeContext);
+
   const bars = data.map(
     (height: number): number => (height - range[0]) / (range[1] - range[0])
   );
 
   return (
-    <svg
-      height={height}
-      viewBox={`0 0 ${aspectRatio} 1`}
-      width={plotWidth}
-      x={marginLeft}
-      y={MARGIN_TOP - (height - height)}
-    >
+    <>
       {bars.map((height, i) => {
         const width = aspectRatio / (2 * bars.length);
         const x = (i / bars.length) * aspectRatio + width / 2;
 
         return (
           <rect
-            className="e-bar-chart__bar"
+            className="e-bars__bar"
             key={i}
             x={x}
             y={1 - height}
@@ -57,6 +46,6 @@ export default function PlotArea({
           />
         );
       })}
-    </svg>
+    </>
   );
 }

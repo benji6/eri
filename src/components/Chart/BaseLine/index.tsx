@@ -1,21 +1,22 @@
 import "./style.css";
 import * as React from "react";
-import { LINE_WIDTH_1 } from "../../../constants";
-import { TPoint } from "../../types";
+import { AspectRatioContext } from "../contexts";
+import { LINE_WIDTH_1 } from "../constants";
+import { TPoint } from "../LineChart/types";
 
 interface Props {
-  aspectRatio: number;
   color?: string;
   points: TPoint[];
   thickness?: number;
 }
 
-export default function Line({
-  aspectRatio,
+export default function BaseLine({
   color = "var(--e-color-theme)",
   points,
   thickness = LINE_WIDTH_1,
 }: Props) {
+  const aspectRatio = React.useContext(AspectRatioContext);
+
   if (points.length < 2) return null;
 
   let polylinePoints = "";
@@ -34,7 +35,7 @@ export default function Line({
 
   return (
     <polyline
-      className="e-line"
+      className="e-base-line"
       fill="none"
       points={polylinePoints}
       stroke={color}

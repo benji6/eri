@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Chart, Paper } from "../../../src";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
-import { IProps } from "../../../src/components/Chart/LineChart";
 import { RouteComponentProps } from "@reach/router";
+import { TPoint } from "../../../src/components/Chart/LineChart/types";
 
 export default function LineChartDocs(_: RouteComponentProps) {
   const labels = Array.from({ length: 5 }, (_, n): [number, string] => [
@@ -10,9 +10,12 @@ export default function LineChartDocs(_: RouteComponentProps) {
     String((n / 4) * 100),
   ]);
 
-  const [props, setProps] = React.useState<
-    Pick<IProps, "data" | "trendlinePoints" | "xAxisTitle" | "yAxisTitle">
-  >({
+  const [props, setProps] = React.useState<{
+    data: TPoint[];
+    trendlinePoints: TPoint[];
+    xAxisTitle?: string;
+    yAxisTitle?: string;
+  }>({
     data: Array.from({ length: 8 }, (_, n) => [n / 7, Math.random()]),
     trendlinePoints: Array.from({ length: 4 }, (_, n) => [
       n / 3,
@@ -29,11 +32,21 @@ export default function LineChartDocs(_: RouteComponentProps) {
       </Paper>
       <ConfigurableExample
         example={
-          <Chart.LineChart domain={[0, 1]} range={[0, 1]} {...props}>
+          <Chart.LineChart
+            domain={[0, 1]}
+            range={[0, 1]}
+            xAxisTitle={props.xAxisTitle}
+            yAxisTitle={props.yAxisTitle}
+          >
             <Chart.XGridLines lines={labels.map(([x]) => x)} />
             <Chart.YGridLines lines={labels.map(([y]) => y)} />
             <Chart.XAxis labels={labels} markers={labels.map(([x]) => x)} />
             <Chart.YAxis labels={labels} markers={labels.map(([x]) => x)} />
+            <Chart.PlotArea>
+              <Chart.TrendLine data={props.trendlinePoints} />
+              <Chart.Line data={props.data} />
+              <Chart.Points data={props.data} />
+            </Chart.PlotArea>
           </Chart.LineChart>
         }
       >
