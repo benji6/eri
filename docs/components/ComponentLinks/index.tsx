@@ -7,14 +7,17 @@ export default function ComponentLinks(
 ) {
   return (
     <Menu.SubList>
-      <Menu.Link {...props} to="/components/bar-chart">
-        BarChart
-      </Menu.Link>
       <Menu.Link {...props} to="/components/button">
         Button
       </Menu.Link>
       <Menu.Link {...props} to="/components/card">
         Card
+      </Menu.Link>
+      <Menu.Link {...props} to="/components/bar-chart">
+        Chart.BarChart
+      </Menu.Link>
+      <Menu.Link {...props} to="/components/line-chart">
+        Chart.LineChart
       </Menu.Link>
       <Menu.Link {...props} to="/components/dialog">
         Dialog
@@ -30,9 +33,6 @@ export default function ComponentLinks(
       </Menu.Link>
       <Menu.Link {...props} to="/components/icon">
         Icon
-      </Menu.Link>
-      <Menu.Link {...props} to="/components/line-chart">
-        LineChart
       </Menu.Link>
       <Menu.Link {...props} to="/components/link">
         Link

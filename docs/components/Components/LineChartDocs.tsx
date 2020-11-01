@@ -25,7 +25,7 @@ export default function LineChartDocs(_: RouteComponentProps) {
   return (
     <Paper.Group>
       <Paper>
-        <h2>Chart</h2>
+        <h2>Chart.LineChart</h2>
       </Paper>
       <ConfigurableExample
         example={

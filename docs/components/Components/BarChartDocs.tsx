@@ -26,7 +26,7 @@ export default function BarChartDocs(_: RouteComponentProps) {
   return (
     <Paper.Group>
       <Paper>
-        <h2>BarChart</h2>
+        <h2>Chart.BarChart</h2>
       </Paper>
       <ConfigurableExample
         example={
