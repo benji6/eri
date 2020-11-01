@@ -39,7 +39,11 @@ export default function LineChartDocs(_: RouteComponentProps) {
             yAxisTitle={props.yAxisTitle}
           >
             <Chart.PlotArea>
-              <Chart.TrendLine data={props.trendlinePoints} />
+              <Chart.Line
+                color="var(--e-color-balance-less)"
+                data={props.trendlinePoints}
+                thickness={2}
+              />
               <Chart.Line data={props.data} />
               <Chart.Points data={props.data} />
             </Chart.PlotArea>
