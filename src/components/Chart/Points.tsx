@@ -1,10 +1,10 @@
 import * as React from "react";
 import { AspectRatioContext } from "./contexts";
-import { LINE_WIDTH_0 } from "./constants";
+import { LINE_WIDTH_1 } from "./constants";
 import { TPoint } from "./LineChart/types";
 import { useTransformedPoints } from "./hooks";
 
-const POINT_RADIUS = LINE_WIDTH_0 * 8;
+const POINT_RADIUS = LINE_WIDTH_1 * 3;
 
 interface IProps {
   colorFromY?(y: number): string;

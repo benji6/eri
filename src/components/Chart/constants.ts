@@ -1,7 +1,7 @@
 export const AXIS_MARKER_LENGTH = 0.02;
 export const CHART_ASPECT_RATIO = 1.5;
 
-const LINE_WIDTH_RATIO = 2.25;
+const LINE_WIDTH_RATIO = 2.5;
 
 export const LINE_WIDTH_0 = 15e-4;
 export const LINE_WIDTH_1 = LINE_WIDTH_0 * LINE_WIDTH_RATIO;
