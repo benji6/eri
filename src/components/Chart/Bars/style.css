@@ -1,5 +1,5 @@
 .e-bars__bar {
-  animation: e-bar-expand var(--e-time-2) var(--e-easing-standard) forwards;
+  animation: e-bar-appear var(--e-time-2) var(--e-easing-standard) forwards;
 
   /* --bar-number is set by React Component */
   animation-delay: calc(var(--bar-number) * var(--e-time-0));
@@ -7,7 +7,7 @@
   transform: scaleY(0);
 }
 
-@keyframes e-bar-expand {
+@keyframes e-bar-appear {
   to {
     transform: scaleY(1);
   }
