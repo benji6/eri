@@ -22,7 +22,7 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
   );
 
   return (
-    <>
+    <g style={{ "--total-bars": bars.length } as React.CSSProperties}>
       {bars.map((height, i) => {
         const width = aspectRatio / (2 * bars.length);
         const x = (i / bars.length) * aspectRatio + width / 2;
@@ -46,6 +46,6 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
           />
         );
       })}
-    </>
+    </g>
   );
 }

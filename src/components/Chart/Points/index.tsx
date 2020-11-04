@@ -17,7 +17,7 @@ export default function Points({ colorFromY, data }: IProps) {
   const points = useTransformedPoints(data);
 
   return (
-    <>
+    <g style={{ "--total-points": points.length } as React.CSSProperties}>
       {points.map((point, i) => (
         <circle
           className="e-points__point"
@@ -29,6 +29,6 @@ export default function Points({ colorFromY, data }: IProps) {
           style={{ "--point-number": i } as React.CSSProperties}
         />
       ))}
-    </>
+    </g>
   );
 }

@@ -4,6 +4,9 @@ import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
 import { RouteComponentProps } from "@reach/router";
 import { TPoint } from "../../../src/components/Chart/LineChart/types";
 
+const POINTS_COUNT = 8;
+const TRENDLINE_POINTS_COUNT = POINTS_COUNT / 2;
+
 export default function LineChartDocs(_: RouteComponentProps) {
   const labels = Array.from({ length: 5 }, (_, n): [number, string] => [
     n / 4,
@@ -16,9 +19,12 @@ export default function LineChartDocs(_: RouteComponentProps) {
     xAxisTitle?: string;
     yAxisTitle?: string;
   }>({
-    data: Array.from({ length: 8 }, (_, n) => [n / 7, Math.random()]),
-    trendlinePoints: Array.from({ length: 4 }, (_, n) => [
-      n / 3,
+    data: Array.from({ length: POINTS_COUNT }, (_, n) => [
+      n / (POINTS_COUNT - 1),
+      Math.random(),
+    ]),
+    trendlinePoints: Array.from({ length: TRENDLINE_POINTS_COUNT }, (_, n) => [
+      n / (TRENDLINE_POINTS_COUNT - 1),
       Math.random() / 2 + 0.25,
     ]),
     xAxisTitle: "X axis title",

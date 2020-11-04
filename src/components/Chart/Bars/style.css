@@ -1,8 +1,10 @@
 .e-bars__bar {
   animation: e-bar-appear var(--e-time-2) var(--e-easing-standard) forwards;
 
-  /* --bar-number is set by React Component */
-  animation-delay: calc(var(--bar-number) * var(--e-time-0));
+  /* --bar-number and --total-bars set by JS */
+  animation-delay: calc(
+    var(--bar-number) / (var(--total-bars) - 1) * var(--e-time-2)
+  );
   transform-origin: bottom;
   transform: scaleY(0);
 }
