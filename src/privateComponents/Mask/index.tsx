@@ -2,6 +2,7 @@ import "./style.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
+import { StateContext } from "../../components/EriProvider";
 import { getCssTime1 } from "../../utils/getCssVar";
 
 const portalEl =
@@ -20,6 +21,7 @@ const handleKeyDown = (onClose: IProps["onClose"]) => (
 };
 
 export default function Mask({ onClose, open, ...rest }: IProps) {
+  const state = React.useContext(StateContext);
   const [scrollY, setScrollY] = React.useState(0);
 
   const openMask = () => {
@@ -47,23 +49,23 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
     }
   }, [open, scrollY]);
 
-  return portalEl
-    ? ReactDOM.createPortal(
-        /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-        <div onKeyDown={handleKeyDown(onClose)}>
-          <CSSTransition
-            classNames="e-mask__mask-"
-            in={open}
-            mountOnEnter
-            timeout={{ exit: getCssTime1() + 100 }}
-            unmountOnExit
-          >
-            <div className="e-mask__mask" onClick={onClose} />
-          </CSSTransition>
-          <div {...rest} className="e-mask__container" />
-        </div>,
-        /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-        portalEl
-      )
-    : null;
+  if (state.renderingToString || !portalEl) return null;
+
+  return ReactDOM.createPortal(
+    /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+    <div onKeyDown={handleKeyDown(onClose)}>
+      <CSSTransition
+        classNames="e-mask__mask-"
+        in={open}
+        mountOnEnter
+        timeout={{ exit: getCssTime1() + 100 }}
+        unmountOnExit
+      >
+        <div className="e-mask__mask" onClick={onClose} />
+      </CSSTransition>
+      <div {...rest} className="e-mask__container" />
+    </div>,
+    /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
+    portalEl
+  );
 }

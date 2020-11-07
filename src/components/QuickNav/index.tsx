@@ -1,7 +1,7 @@
 import "./style.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { DispatchContext } from "../EriProvider";
+import { DispatchContext, StateContext } from "../EriProvider";
 import QuickNavLink from "./QuickNavLink";
 import useIsWideResolution from "../../hooks/useIsWideResolution";
 
@@ -10,6 +10,7 @@ const portalEl =
   document.body.appendChild(document.createElement("div"));
 
 export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
+  const state = React.useContext(StateContext);
   const dispatch = React.useContext(DispatchContext);
   const navElRef = React.useRef<HTMLElement>(null);
   const isWideResolution = useIsWideResolution();
@@ -24,7 +25,7 @@ export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
     return () => dispatch({ payload: 0, type: "quickNav/height" });
   }, [dispatch, isWideResolution, navElRef]);
 
-  if (!portalEl || isWideResolution) return null;
+  if (state.renderingToString || !portalEl || isWideResolution) return null;
 
   return ReactDOM.createPortal(
     <nav {...props} className="e-quick-nav" ref={navElRef} />,
