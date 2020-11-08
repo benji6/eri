@@ -5,7 +5,6 @@ import {
   usePlotAreaWidth,
   useTransformPointsToPlotArea,
 } from "../hooks";
-import { RangeContext } from "../contexts";
 
 interface IProps {
   colorFromX?(x: number): string;
@@ -20,13 +19,9 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
     );
 
   const marginBottom = useMarginBottom();
-  const range = React.useContext(RangeContext);
 
   const transformedPoints = useTransformPointsToPlotArea(
-    data.map((height, i) => [
-      (i + 0.25) / data.length,
-      (height - range[0]) / (range[1] - range[0]),
-    ])
+    data.map((height, i) => [(i + 0.25) / data.length, height])
   );
   const plotAreaWidth = usePlotAreaWidth();
 

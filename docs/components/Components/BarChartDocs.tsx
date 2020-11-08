@@ -4,6 +4,7 @@ import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
 import { RouteComponentProps } from "@reach/router";
 
 const DATA_COUNT = 8;
+const RANGE: [number, number] = [0, 10];
 
 export default function BarChartDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<{
@@ -11,7 +12,10 @@ export default function BarChartDocs(_: RouteComponentProps) {
     xAxisTitle?: string;
     yAxisTitle?: string;
   }>({
-    data: Array.from({ length: DATA_COUNT }, () => Math.random()),
+    data: Array.from(
+      { length: DATA_COUNT },
+      () => Math.random() * (RANGE[1] - RANGE[0]) + RANGE[0]
+    ),
     xAxisTitle: "X axis title",
     yAxisTitle: "Y axis title",
   });
@@ -19,10 +23,10 @@ export default function BarChartDocs(_: RouteComponentProps) {
   const xLabels = Array.from({ length: DATA_COUNT }, (_, n): string =>
     String(n)
   );
-  const yLabels = Array.from({ length: 5 }, (_, n): [number, string] => [
-    n / 4,
-    String((n / 4) * 100),
-  ]);
+  const yLabels = Array.from({ length: 5 }, (_, n): [number, string] => {
+    const y = (n / 4) * (RANGE[1] - RANGE[0]) + RANGE[0];
+    return [y, String(y)];
+  });
 
   return (
     <Paper.Group>
@@ -32,16 +36,15 @@ export default function BarChartDocs(_: RouteComponentProps) {
       <ConfigurableExample
         example={
           <Chart.BarChart
-            domain={[0, 1]}
-            range={[0, 1]}
+            range={RANGE}
             xAxisTitle={props.xAxisTitle}
             xLabels={xLabels}
             yAxisTitle={props.yAxisTitle}
           >
+            <Chart.YGridLines lines={yLabels.map(([y]) => y)} />
             <Chart.PlotArea>
               <Chart.Bars data={props.data} />
             </Chart.PlotArea>
-            <Chart.YGridLines lines={yLabels.map(([y]) => y)} />
             <Chart.YAxis labels={yLabels} markers={yLabels.map(([x]) => x)} />
           </Chart.BarChart>
         }

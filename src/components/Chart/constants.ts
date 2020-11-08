@@ -3,7 +3,7 @@ export const CHART_ASPECT_RATIO = 1.5;
 
 const LINE_WIDTH_RATIO = 2.5;
 
-export const LINE_WIDTH_0 = 15e-4;
+export const LINE_WIDTH_0 = 1e-3;
 export const LINE_WIDTH_1 = LINE_WIDTH_0 * LINE_WIDTH_RATIO;
 export const LINE_WIDTH_2 = LINE_WIDTH_1 * LINE_WIDTH_RATIO;
 export const MARGIN_RIGHT = 0.1;
