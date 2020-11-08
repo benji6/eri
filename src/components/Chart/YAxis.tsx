@@ -1,5 +1,10 @@
 import * as React from "react";
-import { AXIS_MARKER_LENGTH, LINE_WIDTH_2, MARGIN_TOP } from "./constants";
+import {
+  AXIS_MARKER_LENGTH,
+  FONT_SIZE,
+  LINE_WIDTH_2,
+  MARGIN_TOP,
+} from "./constants";
 import { RangeContext, YAxisTitleContext } from "./contexts";
 import { TLabel } from "./types";
 import { usePlotAreaHeight } from "./hooks";
@@ -47,7 +52,7 @@ export default function YAxis({ labels, markers }: IProps) {
         return (
           <text
             key={y}
-            dominantBaseline="central"
+            dy={FONT_SIZE * 0.3}
             fill="currentColor"
             textAnchor="end"
             x={marginLeft - 2 * AXIS_MARKER_LENGTH}

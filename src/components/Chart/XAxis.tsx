@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   AXIS_MARKER_LENGTH,
   CHART_ASPECT_RATIO,
+  FONT_SIZE,
   LINE_WIDTH_2,
   MARGIN_RIGHT,
 } from "./constants";
@@ -59,7 +60,7 @@ export default function XAxis({ labels, markers }: IProps) {
         return (
           <text
             key={x}
-            dominantBaseline="text-before-edge"
+            dy={FONT_SIZE * 0.8}
             fill="currentColor"
             textAnchor="middle"
             x={x}

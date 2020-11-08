@@ -1,4 +1,5 @@
 .e-base-chart {
+  /* If you change this property then update FONT_SIZE in script */
   font-size: 0.05px;
 }
 

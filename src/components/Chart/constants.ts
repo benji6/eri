@@ -1,6 +1,9 @@
 export const AXIS_MARKER_LENGTH = 0.02;
 export const CHART_ASPECT_RATIO = 1.5;
 
+// If you change this constant then update font-size in CSS
+export const FONT_SIZE = 0.05;
+
 const LINE_WIDTH_RATIO = 2.5;
 
 export const LINE_WIDTH_0 = 1e-3;

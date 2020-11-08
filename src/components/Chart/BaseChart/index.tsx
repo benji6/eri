@@ -2,6 +2,7 @@ import "./style.css";
 import * as React from "react";
 import {
   CHART_ASPECT_RATIO,
+  FONT_SIZE,
   LINE_WIDTH_2,
   MARGIN_RIGHT,
   MARGIN_TOP,
@@ -63,7 +64,7 @@ export default function BaseChart({
           {xAxisTitle && (
             <text
               className="e-base-chart__axis-label"
-              dominantBaseline="text-after-edge"
+              dy={FONT_SIZE * -0.2}
               fill="currentColor"
               textAnchor="middle"
               x={marginLeft + plotAreaWidth / 2}
@@ -87,7 +88,7 @@ export default function BaseChart({
           {yAxisTitle && (
             <text
               className="e-base-chart__axis-label"
-              dominantBaseline="text-before-edge"
+              dy={FONT_SIZE * 0.8}
               fill="currentColor"
               textAnchor="middle"
               transform={`rotate(270, 0, ${MARGIN_TOP + plotAreaHeight / 2})`}
