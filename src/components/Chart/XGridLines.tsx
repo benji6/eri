@@ -1,12 +1,10 @@
 import * as React from "react";
 import {
-  CHART_ASPECT_RATIO,
   LINE_WIDTH_0,
   LINE_WIDTH_2,
-  MARGIN_RIGHT,
   MARGIN_TOP,
 } from "../../components/Chart/constants";
-import { useMarginBottom, useMarginLeft } from "./hooks";
+import { useMarginBottom, useMarginLeft, usePlotAreaWidth } from "./hooks";
 import { DomainContext } from "../../components/Chart/contexts";
 
 interface IProps {
@@ -17,15 +15,14 @@ export default function XGridLines({ lines }: IProps) {
   const domain = React.useContext(DomainContext);
   const marginBottom = useMarginBottom();
   const marginLeft = useMarginLeft();
+  const plotAreaWidth = usePlotAreaWidth();
 
   return (
     <>
       {lines.map((lineX) => {
         const x =
-          ((lineX - domain[0]) / (domain[1] - domain[0])) *
-            CHART_ASPECT_RATIO *
-            (1 - (marginLeft + MARGIN_RIGHT) / CHART_ASPECT_RATIO) +
-          marginLeft;
+          marginLeft +
+          ((lineX - domain[0]) / (domain[1] - domain[0])) * plotAreaWidth;
 
         return (
           <line

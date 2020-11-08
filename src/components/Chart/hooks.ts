@@ -34,9 +34,8 @@ export const useTransformPointsToPlotArea = (data: TPoint[]): TPoint[] => {
   const range = React.useContext(RangeContext);
   const marginBottom = useMarginBottom();
   const marginLeft = useMarginLeft();
+  const plotAreaHeight = usePlotAreaHeight();
   const plotAreaWidth = usePlotAreaWidth();
-
-  const plotAreaHeight = 1 - MARGIN_TOP - marginBottom;
 
   return data.map(([x, y]) => [
     marginLeft + ((x - domain[0]) / (domain[1] - domain[0])) * plotAreaWidth,

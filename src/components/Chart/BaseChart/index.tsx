@@ -13,6 +13,7 @@ import {
   YAxisTitleContext,
 } from "../contexts";
 import { computeMarginBottom, computeMarginTop } from "../utils";
+import { usePlotAreaHeight, usePlotAreaWidth } from "../hooks";
 
 interface IProps {
   children: React.ReactNode;
@@ -31,6 +32,8 @@ export default function BaseChart({
 }: IProps) {
   const marginBottom = computeMarginBottom(xAxisTitle);
   const marginLeft = computeMarginTop(yAxisTitle);
+  const plotAreaHeight = usePlotAreaHeight();
+  const plotAreaWidth = usePlotAreaWidth();
 
   return (
     <svg
@@ -63,10 +66,7 @@ export default function BaseChart({
               dominantBaseline="text-after-edge"
               fill="currentColor"
               textAnchor="middle"
-              x={
-                marginLeft +
-                (CHART_ASPECT_RATIO - marginLeft - MARGIN_RIGHT) / 2
-              }
+              x={marginLeft + plotAreaWidth / 2}
               y={1}
             >
               {xAxisTitle}
@@ -90,11 +90,9 @@ export default function BaseChart({
               dominantBaseline="text-before-edge"
               fill="currentColor"
               textAnchor="middle"
-              transform={`rotate(270, 0, ${
-                MARGIN_TOP + (1 - MARGIN_TOP - marginBottom) / 2
-              })`}
+              transform={`rotate(270, 0, ${MARGIN_TOP + plotAreaHeight / 2})`}
               x={0}
-              y={MARGIN_TOP + (1 - MARGIN_TOP - marginBottom) / 2}
+              y={MARGIN_TOP + plotAreaHeight / 2}
             >
               {yAxisTitle}
             </text>

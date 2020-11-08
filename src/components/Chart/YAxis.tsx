@@ -1,7 +1,8 @@
 import * as React from "react";
 import { AXIS_MARKER_LENGTH, LINE_WIDTH_2, MARGIN_TOP } from "./constants";
-import { RangeContext, XAxisTitleContext, YAxisTitleContext } from "./contexts";
+import { RangeContext, YAxisTitleContext } from "./contexts";
 import { TLabel } from "./types";
+import { usePlotAreaHeight } from "./hooks";
 
 const transformY = (
   range: [number, number],
@@ -18,18 +19,14 @@ interface IProps {
 
 export default function YAxis({ labels, markers }: IProps) {
   const range = React.useContext(RangeContext);
-  const title = React.useContext(XAxisTitleContext);
   const yAxisLabel = React.useContext(YAxisTitleContext);
-
-  const marginBottom = title ? 0.175 : 0.125;
+  const plotAreaHeight = usePlotAreaHeight();
   const marginLeft = yAxisLabel ? 0.175 : 0.125;
-
-  const plotHeight = 1 - marginBottom - MARGIN_TOP;
 
   return (
     <>
       {markers?.map((markerY) => {
-        const y = transformY(range, plotHeight, markerY);
+        const y = transformY(range, plotAreaHeight, markerY);
 
         return (
           <line
@@ -45,7 +42,7 @@ export default function YAxis({ labels, markers }: IProps) {
       })}
 
       {labels.map(([labelY, labelText]) => {
-        const y = transformY(range, plotHeight, labelY);
+        const y = transformY(range, plotAreaHeight, labelY);
 
         return (
           <text
