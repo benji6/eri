@@ -5,7 +5,6 @@ import { TLabel } from "./types";
 
 interface IProps {
   children: React.ReactNode;
-  domain: [number, number];
   range: [number, number];
   xAxisTitle?: string;
   xLabels: string[];
@@ -14,20 +13,19 @@ interface IProps {
 
 export default function BarChart({
   children,
-  domain,
   range,
   xAxisTitle,
   xLabels,
   yAxisTitle,
 }: IProps) {
   const transformedLabels: TLabel[] = xLabels.map((labelText, i) => [
-    ((i + 0.5) / xLabels.length) * (domain[1] - domain[0]) + domain[0],
+    (i + 0.5) / xLabels.length,
     labelText,
   ]);
 
   return (
     <BaseChart
-      domain={domain}
+      domain={[0, 1]}
       range={range}
       xAxisTitle={xAxisTitle}
       yAxisTitle={yAxisTitle}
@@ -36,11 +34,7 @@ export default function BarChart({
         labels={transformedLabels}
         markers={transformedLabels.map(([x]) => x)}
       />
-      <Chart.XGridLines
-        lines={xLabels.map(
-          (_, i) => (i / xLabels.length) * (domain[1] - domain[0]) + domain[0]
-        )}
-      />
+      <Chart.XGridLines lines={xLabels.map((_, i) => i / xLabels.length)} />
       {children}
     </BaseChart>
   );

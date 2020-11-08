@@ -12,6 +12,7 @@ import {
   XAxisTitleContext,
   YAxisTitleContext,
 } from "../contexts";
+import { computeMarginBottom, computeMarginTop } from "../utils";
 
 interface IProps {
   children: React.ReactNode;
@@ -28,8 +29,8 @@ export default function BaseChart({
   xAxisTitle,
   yAxisTitle,
 }: IProps) {
-  const marginBottom = xAxisTitle ? 0.175 : 0.125;
-  const marginLeft = yAxisTitle ? 0.175 : 0.125;
+  const marginBottom = computeMarginBottom(xAxisTitle);
+  const marginLeft = computeMarginTop(yAxisTitle);
 
   return (
     <svg

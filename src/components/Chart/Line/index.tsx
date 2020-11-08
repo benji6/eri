@@ -1,9 +1,8 @@
 import "./style.css";
 import * as React from "react";
 import { LINE_WIDTH_0, LINE_WIDTH_1, LINE_WIDTH_2 } from "../constants";
-import { AspectRatioContext } from "../contexts";
 import { TPoint } from "../LineChart/types";
-import { useTransformedPoints } from "../hooks";
+import { useTransformPointsToPlotArea } from "../hooks";
 
 interface Props {
   color?: string;
@@ -22,18 +21,15 @@ export default function Line({
   data,
   thickness = 1,
 }: Props) {
-  const aspectRatio = React.useContext(AspectRatioContext);
-  const points = useTransformedPoints(data);
+  const transformedPoints = useTransformPointsToPlotArea(data);
 
-  if (points.length < 2) return null;
+  if (transformedPoints.length < 2) return null;
 
   let polylinePoints = "";
   let lineLength = 0;
   let prevXY: [x: number, y: number] | undefined;
 
-  for (const point of points) {
-    const x = point[0] * aspectRatio;
-    const y = 1 - point[1];
+  for (const [x, y] of transformedPoints) {
     if (prevXY) lineLength += Math.hypot(x - prevXY[0], y - prevXY[1]);
     prevXY = [x, y];
     polylinePoints += `${x},${y} `;

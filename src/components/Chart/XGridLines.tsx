@@ -6,11 +6,8 @@ import {
   MARGIN_RIGHT,
   MARGIN_TOP,
 } from "../../components/Chart/constants";
-import {
-  DomainContext,
-  XAxisTitleContext,
-  YAxisTitleContext,
-} from "../../components/Chart/contexts";
+import { useMarginBottom, useMarginLeft } from "./hooks";
+import { DomainContext } from "../../components/Chart/contexts";
 
 interface IProps {
   lines: number[];
@@ -18,11 +15,8 @@ interface IProps {
 
 export default function XGridLines({ lines }: IProps) {
   const domain = React.useContext(DomainContext);
-  const xAxisTitle = React.useContext(XAxisTitleContext);
-  const yAxisTitle = React.useContext(YAxisTitleContext);
-
-  const marginBottom = xAxisTitle ? 0.175 : 0.125;
-  const marginLeft = yAxisTitle ? 0.175 : 0.125;
+  const marginBottom = useMarginBottom();
+  const marginLeft = useMarginLeft();
 
   return (
     <>

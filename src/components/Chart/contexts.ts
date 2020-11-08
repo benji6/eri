@@ -1,6 +1,5 @@
 import * as React from "react";
 
-export const AspectRatioContext = React.createContext<number>(1);
 export const DomainContext = React.createContext<[number, number]>([0, 1]);
 export const RangeContext = React.createContext<[number, number]>([0, 1]);
 export const XAxisTitleContext = React.createContext<string | undefined>(

@@ -6,7 +6,8 @@ import {
   MARGIN_RIGHT,
   MARGIN_TOP,
 } from "./constants";
-import { RangeContext, XAxisTitleContext, YAxisTitleContext } from "./contexts";
+import { useMarginBottom, useMarginLeft } from "./hooks";
+import { RangeContext } from "./contexts";
 
 interface IProps {
   lines: number[];
@@ -14,11 +15,8 @@ interface IProps {
 
 export default function YGridLines({ lines }: IProps) {
   const range = React.useContext(RangeContext);
-  const xAxisTitle = React.useContext(XAxisTitleContext);
-  const yAxisTitle = React.useContext(YAxisTitleContext);
-
-  const marginBottom = xAxisTitle ? 0.175 : 0.125;
-  const marginLeft = yAxisTitle ? 0.175 : 0.125;
+  const marginBottom = useMarginBottom();
+  const marginLeft = useMarginLeft();
 
   const plotHeight = 1 - marginBottom - MARGIN_TOP;
 

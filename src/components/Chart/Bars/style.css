@@ -5,7 +5,6 @@
   animation-delay: calc(
     var(--bar-number) / (var(--total-bars) - 1) * var(--e-time-2)
   );
-  transform-origin: bottom;
   transform: scaleY(0);
 }
 

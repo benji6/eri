@@ -1,9 +1,8 @@
 import "./style.css";
 import * as React from "react";
-import { AspectRatioContext } from "../contexts";
 import { LINE_WIDTH_1 } from "../constants";
 import { TPoint } from "../LineChart/types";
-import { useTransformedPoints } from "../hooks";
+import { useTransformPointsToPlotArea } from "../hooks";
 
 const POINT_RADIUS = LINE_WIDTH_1 * 3;
 
@@ -13,18 +12,21 @@ interface IProps {
 }
 
 export default function Points({ colorFromY, data }: IProps) {
-  const aspectRatio = React.useContext(AspectRatioContext);
-  const points = useTransformedPoints(data);
+  const transformedPoints = useTransformPointsToPlotArea(data);
 
   return (
-    <g style={{ "--total-points": points.length } as React.CSSProperties}>
-      {points.map((point, i) => (
+    <g
+      style={
+        { "--total-points": transformedPoints.length } as React.CSSProperties
+      }
+    >
+      {transformedPoints.map(([x, y], i) => (
         <circle
           className="e-points__point"
-          cx={point[0] * aspectRatio}
-          cy={1 - point[1]}
+          cx={x}
+          cy={y}
           fill={colorFromY ? colorFromY(data[i][1]) : "var(--e-color-theme)"}
-          key={point[0]}
+          key={`${x}:${y}`}
           r={POINT_RADIUS}
           style={{ "--point-number": i } as React.CSSProperties}
         />

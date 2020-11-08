@@ -1,6 +1,11 @@
 import "./style.css";
 import * as React from "react";
-import { AspectRatioContext, RangeContext } from "../contexts";
+import {
+  useMarginBottom,
+  usePlotAreaWidth,
+  useTransformPointsToPlotArea,
+} from "../hooks";
+import { RangeContext } from "../contexts";
 
 interface IProps {
   colorFromX?(x: number): string;
@@ -14,34 +19,42 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
       "Both `colorFromX` and `colorFromY` were provided - please only provide one"
     );
 
-  const aspectRatio = React.useContext(AspectRatioContext);
+  const marginBottom = useMarginBottom();
   const range = React.useContext(RangeContext);
 
-  const bars = data.map(
-    (height: number): number => (height - range[0]) / (range[1] - range[0])
+  const transformedPoints = useTransformPointsToPlotArea(
+    data.map((height, i) => [
+      (i + 0.25) / data.length,
+      (height - range[0]) / (range[1] - range[0]),
+    ])
   );
+  const plotAreaWidth = usePlotAreaWidth();
 
   return (
-    <g style={{ "--total-bars": bars.length } as React.CSSProperties}>
-      {bars.map((height, i) => {
-        const width = aspectRatio / (2 * bars.length);
-        const x = (i / bars.length) * aspectRatio + width / 2;
+    <g style={{ "--total-bars": data.length } as React.CSSProperties}>
+      {transformedPoints.map(([x, y], i) => {
+        const width = plotAreaWidth / (2 * data.length);
 
         return (
           <rect
             className="e-bars__bar"
             key={i}
             x={x}
-            y={1 - height}
+            y={y}
             fill={
               colorFromX
-                ? colorFromX(bars.length > 1 ? i / (bars.length - 1) : 0.5)
+                ? colorFromX(data.length > 1 ? i / (data.length - 1) : 0.5)
                 : colorFromY
-                ? colorFromY(height)
+                ? colorFromY(data[i])
                 : "var(--e-color-theme)"
             }
-            height={height}
-            style={{ "--bar-number": i } as React.CSSProperties}
+            height={1 - y - marginBottom}
+            style={
+              {
+                "--bar-number": i,
+                transformOrigin: `center ${1 - marginBottom}px`,
+              } as React.CSSProperties
+            }
             width={width}
           />
         );

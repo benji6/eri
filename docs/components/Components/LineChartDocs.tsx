@@ -44,6 +44,8 @@ export default function LineChartDocs(_: RouteComponentProps) {
             xAxisTitle={props.xAxisTitle}
             yAxisTitle={props.yAxisTitle}
           >
+            <Chart.XGridLines lines={labels.map(([x]) => x)} />
+            <Chart.YGridLines lines={labels.map(([y]) => y)} />
             <Chart.PlotArea>
               <Chart.Line
                 color="var(--e-color-balance-less)"
@@ -53,8 +55,6 @@ export default function LineChartDocs(_: RouteComponentProps) {
               <Chart.Line data={props.data} />
               <Chart.Points data={props.data} />
             </Chart.PlotArea>
-            <Chart.XGridLines lines={labels.map(([x]) => x)} />
-            <Chart.YGridLines lines={labels.map(([y]) => y)} />
             <Chart.XAxis labels={labels} markers={labels.map(([x]) => x)} />
             <Chart.YAxis labels={labels} markers={labels.map(([x]) => x)} />
           </Chart.LineChart>
