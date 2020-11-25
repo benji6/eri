@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Button, Dialog, Paper } from "../../../src";
+import { LOREM_IPSUM } from "../../constants";
 import { RouteComponentProps } from "@reach/router";
 
 export default function DialogDocs(_: RouteComponentProps) {
@@ -19,10 +20,7 @@ export default function DialogDocs(_: RouteComponentProps) {
           open={isDialogOpen}
           title="Test dialog"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          {LOREM_IPSUM}
         </Dialog>
       </Paper>
     </Paper.Group>

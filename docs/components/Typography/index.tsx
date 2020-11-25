@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Paper, SubHeading } from "../../../src";
+import { LOREM_IPSUM } from "../../constants";
 import { RouteComponentProps } from "@reach/router";
 
 export default function Typography(_: RouteComponentProps) {
@@ -31,12 +32,7 @@ export default function Typography(_: RouteComponentProps) {
         <h2>
           Heading 2 <SubHeading>With a subheading</SubHeading>
         </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <p>{LOREM_IPSUM}</p>
         <p>
           Example of some <strong>strong text</strong>.
         </p>
@@ -53,12 +49,7 @@ export default function Typography(_: RouteComponentProps) {
           laborum.
         </p>
         <h3>Heading 3</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <p>{LOREM_IPSUM}</p>
         <h4>Heading 4</h4>
         <p>
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum

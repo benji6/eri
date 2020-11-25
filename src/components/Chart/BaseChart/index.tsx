@@ -16,7 +16,7 @@ import {
 import { computeMarginBottom, computeMarginTop } from "../utils";
 import { usePlotAreaHeight, usePlotAreaWidth } from "../hooks";
 
-interface IProps {
+interface IProps extends React.SVGProps<SVGSVGElement> {
   children: React.ReactNode;
   domain: [number, number];
   range: [number, number];
@@ -30,6 +30,7 @@ export default function BaseChart({
   range,
   xAxisTitle,
   yAxisTitle,
+  ...rest
 }: IProps) {
   const marginBottom = computeMarginBottom(xAxisTitle);
   const marginLeft = computeMarginTop(yAxisTitle);
@@ -38,6 +39,7 @@ export default function BaseChart({
 
   return (
     <svg
+      {...rest}
       className="e-base-chart"
       viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
       width="100%"

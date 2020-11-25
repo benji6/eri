@@ -1,7 +1,7 @@
 import * as React from "react";
 import BaseChart from "../BaseChart";
 
-interface IProps {
+interface IProps extends React.SVGProps<SVGSVGElement> {
   children?: React.ReactNode;
   domain: [number, number];
   range: [number, number];
@@ -15,9 +15,11 @@ export default function LineChart({
   range,
   xAxisTitle,
   yAxisTitle,
+  ...rest
 }: IProps) {
   return (
     <BaseChart
+      {...rest}
       domain={domain}
       range={range}
       xAxisTitle={xAxisTitle}

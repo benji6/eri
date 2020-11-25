@@ -36,6 +36,7 @@ export default function BarChartDocs(_: RouteComponentProps) {
       <ConfigurableExample
         example={
           <Chart.BarChart
+            aria-label="Example bar chart"
             range={RANGE}
             xAxisTitle={props.xAxisTitle}
             xLabels={xLabels}

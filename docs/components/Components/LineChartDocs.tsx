@@ -45,6 +45,7 @@ export default function LineChartDocs(_: RouteComponentProps) {
       <ConfigurableExample
         example={
           <Chart.LineChart
+            aria-label="Example line chart"
             domain={DOMAIN}
             range={RANGE}
             xAxisTitle={props.xAxisTitle}

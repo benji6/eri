@@ -3,7 +3,7 @@ import BaseChart from "./BaseChart";
 import Chart from ".";
 import { TLabel } from "./types";
 
-interface IProps {
+interface IProps extends React.SVGProps<SVGSVGElement> {
   children: React.ReactNode;
   range: [number, number];
   xAxisTitle?: string;
@@ -17,6 +17,7 @@ export default function BarChart({
   xAxisTitle,
   xLabels,
   yAxisTitle,
+  ...rest
 }: IProps) {
   const transformedLabels: TLabel[] = xLabels.map((labelText, i) => [
     (i + 0.5) / xLabels.length,
@@ -25,6 +26,7 @@ export default function BarChart({
 
   return (
     <BaseChart
+      {...rest}
       domain={[0, 1]}
       range={range}
       xAxisTitle={xAxisTitle}

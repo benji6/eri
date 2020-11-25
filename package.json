@@ -36,6 +36,9 @@
     "url": "https://github.com/benji6/eri/issues"
   },
   "homepage": "https://github.com/benji6/eri#readme",
+  "browserslist": [
+    ">1.25%"
+  ],
   "dependencies": {
     "react-transition-group": "^4.4.1"
   },
