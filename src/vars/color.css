@@ -44,6 +44,7 @@
     calc(var(--e-ground-lightness) + var(--e-ground-lightness-spread))
   );
 
+  /* if you add or remove a highlight color you need to update HIGHLIGHT_COLOR_COUNT in script */
   --e-color-highlight-0: hsl(184, 100%, 48%);
   --e-color-highlight-1: hsl(270, 100%, 67%);
   --e-color-highlight-2: hsl(300, 90%, 65%);

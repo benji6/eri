@@ -3,8 +3,8 @@ type TValidator = (_: string) => string | undefined;
 export const composeValidators = (...validators: TValidator[]): TValidator => (
   value
 ) => {
-  for (const validator of validators) {
-    const validationResult = validator(value);
+  for (let i = 0; i < validators.length; i++) {
+    const validationResult = validators[i](value);
     if (validationResult) return validationResult;
   }
 };

@@ -26,6 +26,7 @@ import SignUpPageDocs from "../Components/SignUpPageDocs";
 import SpinnerDocs from "../Components/SpinnerDocs";
 import Typography from "../Typography";
 import VerifyPageDocs from "../Components/VerifyPageDocs";
+import WordCloudDocs from "../Components/WordCloudDocs";
 import _404 from "../_404";
 
 export default function Router() {
@@ -58,6 +59,7 @@ export default function Router() {
       <SpinnerDocs path="components/spinner" />
       <PagesHome path="pages" />
       <QuickNavDocs path="components/quick-nav" />
+      <WordCloudDocs path="components/word-cloud" />
       <ResendVerificationPageDocs path="pages/resend-verification" />
       <SignInPageDocs path="pages/sign-in" />
       <SignUpPageDocs path="pages/sign-up" />

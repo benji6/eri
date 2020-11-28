@@ -58,6 +58,9 @@ export default function ComponentLinks(
       <Menu.Link {...props} to="/components/spinner">
         Spinner
       </Menu.Link>
+      <Menu.Link {...props} to="/components/word-cloud">
+        WordCloud
+      </Menu.Link>
     </Menu.SubList>
   );
 }

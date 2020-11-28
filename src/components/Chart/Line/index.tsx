@@ -29,7 +29,8 @@ export default function Line({
   let lineLength = 0;
   let prevXY: [x: number, y: number] | undefined;
 
-  for (const [x, y] of transformedPoints) {
+  for (let i = 0; i < transformedPoints.length; i++) {
+    const [x, y] = transformedPoints[i];
     if (prevXY) lineLength += Math.hypot(x - prevXY[0], y - prevXY[1]);
     prevXY = [x, y];
     polylinePoints += `${x},${y} `;
