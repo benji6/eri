@@ -14,7 +14,7 @@ const FONT_SIZE_RANGE = 0.125;
 // Manual tests indicate that this ratio places all words provided
 // 50% of the time which makes it a nice balance between displaying
 // as many words as possible and not having too much empty space.
-const OPTIMAL_WORD_SPACE_USAGE = 0.46;
+const OPTIMAL_WORD_SPACE_USAGE = 0.6;
 
 interface IRect {
   x: number;
@@ -53,7 +53,7 @@ const checkIfRectangleNotContained = (rect: IRect) =>
   rect.y > 1 - rect.height / 2;
 
 const fermatsSprial = (theta: number): [x: number, y: number] => {
-  const r = 0.1 * Math.sqrt(theta);
+  const r = 0.01 * Math.sqrt(theta);
   return [r * Math.cos(theta), r * Math.sin(theta)];
 };
 
@@ -131,7 +131,7 @@ export default function WordCloud({ words, ...rest }: IProps) {
         word.x = (x + 0.5) * ASPECT_RATIO;
         word.y = y + 0.5;
 
-        theta += 0.1;
+        theta += 0.2;
       } while (
         shouldPlaceWord &&
         (checkIfRectangleNotContained(word) ||
