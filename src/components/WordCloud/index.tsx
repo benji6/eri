@@ -88,9 +88,10 @@ export default function WordCloud({ words, ...rest }: IProps) {
     for (let i = 0; i < sortedWordEntries.length; i++) {
       const [word, weighting] = sortedWordEntries[i];
       const textEl = document.createElementNS(XMLNS, "text");
-      const fontSize =
-        ((weighting - minWeighting) / weightingRange) * FONT_SIZE_RANGE +
-        MIN_FONT_SIZE;
+      const fontSize = weightingRange
+        ? ((weighting - minWeighting) / weightingRange) * FONT_SIZE_RANGE +
+          MIN_FONT_SIZE
+        : MIN_FONT_SIZE;
       textEl.setAttributeNS(null, "font-size", String(fontSize));
       textEl.setAttributeNS(null, "x", "-1");
       textEl.setAttributeNS(null, "y", "-1");
