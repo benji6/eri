@@ -112,16 +112,20 @@ export default function Typography(_: RouteComponentProps) {
         <h3>CSS utilities</h3>
         <p className="center">
           You can center any element by setting the <code>class</code> to
-          &quot;center&quot;
+          &quot;center&quot;.
         </p>
         <p className="center negative">
           You can give any element a negative sentiment by setting the{" "}
-          <code>class</code> to &quot;negative&quot;
+          <code>class</code> to &quot;negative&quot;.
         </p>
         <p className="pre-line">
           {`You can set white-space to pre-line...
 
-...by setting the class to "pre-line"`}
+...by setting the class to "pre-line".`}
+        </p>
+        <p className="nowrap">
+          You can set <code>whitespace</code> to <code>nowrap</code> on any
+          element by setting the <code>class</code> to &quot;nowrap&quot;.
         </p>
       </Paper>
     </Paper.Group>
