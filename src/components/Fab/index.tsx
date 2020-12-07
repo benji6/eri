@@ -9,7 +9,7 @@ const portalEl =
   typeof document !== "undefined" &&
   document.body.appendChild(document.createElement("div"));
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   hide?: boolean;
 }
 

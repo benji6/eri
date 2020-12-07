@@ -1,9 +1,11 @@
 .e-fab {
+  align-items: center;
   background: var(--e-color-theme);
-  border-radius: 50%;
+  border-radius: 10em;
   bottom: var(--e-space-2);
   box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground-more);
+  display: flex;
   padding: var(--e-space-2);
   position: fixed;
   right: var(--e-space-2);

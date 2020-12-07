@@ -3,19 +3,23 @@ import * as React from "react";
 import { Paper, Select, TextField, Toggle } from "../../../src";
 import ReactCodeSnippet from "./_ReactCodeSnippet";
 
-export default function ConfigurableExample({
-  example,
-  children,
-}: {
-  example: React.ReactNode;
+interface IProps {
   children?: React.ReactNode;
-}) {
+  example: React.ReactNode;
+  rendersInPortal?: boolean;
+}
+
+export default function ConfigurableExample({
+  children,
+  example,
+  rendersInPortal = false,
+}: IProps) {
   return (
     <Paper>
       {children && <h3>Configurable example</h3>}
-      <hr />
+      {!rendersInPortal && <hr />}
       {example}
-      <hr />
+      {!rendersInPortal && <hr />}
       <ReactCodeSnippet>{example}</ReactCodeSnippet>
       <form noValidate>{children}</form>
     </Paper>

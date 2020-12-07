@@ -1,24 +1,43 @@
 import * as React from "react";
-import { Fab, Icon, Paper, Toggle } from "../../../src";
+import ConfigurableExample, {
+  PropControlBoolean,
+  PropControlString,
+} from "./_ConfigurableExample";
+import { Fab, Icon, Paper } from "../../../src";
+import { IProps } from "../../../src/components/Fab";
 import { RouteComponentProps } from "@reach/router";
 
 export default function FabDocs(_: RouteComponentProps) {
-  const [isFabVisible, setIsFabVisible] = React.useState(true);
+  const [props, setProps] = React.useState<IProps>({
+    children: "Add widget",
+    hide: false,
+  });
+  const { children, ...rest } = props;
 
   return (
     <Paper.Group>
       <Paper>
         <h2>Fab</h2>
-        <p>The floating action button.</p>
-        <Toggle
-          checked={isFabVisible}
-          label={`Fab ${isFabVisible ? "visible" : "hidden"}`}
-          onChange={({ target }) => setIsFabVisible(target.checked)}
-        />
-        <Fab aria-label="example FAB" hide={!isFabVisible}>
-          <Icon name="plus" size="4" />
-        </Fab>
+        <p>
+          The{" "}
+          <a href="https://material.io/components/buttons-floating-action-button">
+            floating action button
+          </a>
+          .
+        </p>
       </Paper>
+      <ConfigurableExample
+        example={
+          <Fab aria-label={children as string} {...rest}>
+            <Icon name="plus" size="4" />
+            {children}
+          </Fab>
+        }
+        rendersInPortal
+      >
+        <PropControlString name="children" props={props} setProps={setProps} />
+        <PropControlBoolean name="hide" props={props} setProps={setProps} />
+      </ConfigurableExample>
     </Paper.Group>
   );
 }
