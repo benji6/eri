@@ -7,5 +7,5 @@ export default function useShouldRenderQuickNav(): boolean {
   const state = React.useContext(EriStateContext);
   const isWideResolution = useIsWideResolution();
 
-  return !state.renderingToString && QUICK_NAV_PORTAL_EL && isWideResolution;
+  return !state.renderingToString && QUICK_NAV_PORTAL_EL && !isWideResolution;
 }
