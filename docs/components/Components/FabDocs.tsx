@@ -25,6 +25,10 @@ export default function FabDocs(_: RouteComponentProps) {
           </a>
           .
         </p>
+        <p>
+          This component does not render if the QuickNav is visible on the
+          screen (the two components occupy the same space).
+        </p>
       </Paper>
       <ConfigurableExample
         example={

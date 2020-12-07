@@ -9,17 +9,20 @@ type FluxStandardAction<
 
 type Action =
   | FluxStandardAction<"menu/exists", boolean>
-  | FluxStandardAction<"quickNav/height", number>;
+  | FluxStandardAction<"quickNav/height", number>
+  | FluxStandardAction<"quickNav/unMount">;
 
 interface IState {
   menuExists: boolean;
   quickNavHeight: number | null; // is only `null` if never set & when unset it will be `0`
+  quickNavMounted: boolean;
   renderingToString: boolean;
 }
 
 const initialState: IState = {
   menuExists: false,
   quickNavHeight: null,
+  quickNavMounted: false,
   renderingToString: false,
 };
 
@@ -28,7 +31,13 @@ const stateReducer = (state: IState, action: Action): IState => {
     case "menu/exists":
       return { ...state, menuExists: action.payload };
     case "quickNav/height":
-      return { ...state, quickNavHeight: action.payload };
+      return {
+        ...state,
+        quickNavHeight: action.payload,
+        quickNavMounted: true,
+      };
+    case "quickNav/unMount":
+      return { ...state, quickNavHeight: 0, quickNavMounted: false };
   }
 };
 

@@ -4,6 +4,7 @@ import * as ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
 import { EriStateContext } from "../EriProvider";
 import { getCssTime0 } from "../../utils/getCssVar";
+import useShouldRenderQuickNav from "../../hooks/useShouldRenderQuickNav";
 
 const portalEl =
   typeof document !== "undefined" &&
@@ -19,8 +20,9 @@ export default function Fab({
   ...rest
 }: IProps) {
   const state = React.useContext(EriStateContext);
+  const shouldRenderQuickNav = useShouldRenderQuickNav();
 
-  if (state.renderingToString || !portalEl) return null;
+  if (state.renderingToString || shouldRenderQuickNav || !portalEl) return null;
 
   return ReactDOM.createPortal(
     <CSSTransition
