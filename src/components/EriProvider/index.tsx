@@ -10,6 +10,7 @@ type FluxStandardAction<
 type Action =
   | FluxStandardAction<"menu/exists", boolean>
   | FluxStandardAction<"quickNav/height", number>
+  | FluxStandardAction<"quickNav/mount">
   | FluxStandardAction<"quickNav/unMount">;
 
 interface IState {
@@ -27,15 +28,14 @@ const initialState: IState = {
 };
 
 const stateReducer = (state: IState, action: Action): IState => {
+  console.log(action.type);
   switch (action.type) {
     case "menu/exists":
       return { ...state, menuExists: action.payload };
     case "quickNav/height":
-      return {
-        ...state,
-        quickNavHeight: action.payload,
-        quickNavMounted: true,
-      };
+      return { ...state, quickNavHeight: action.payload };
+    case "quickNav/mount":
+      return { ...state, quickNavMounted: true };
     case "quickNav/unMount":
       return { ...state, quickNavHeight: 0, quickNavMounted: false };
   }

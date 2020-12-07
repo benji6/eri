@@ -17,13 +17,18 @@ export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
   const shouldRenderQuickNav = useShouldRenderQuickNav();
 
   React.useEffect(() => {
+    dispatch({ type: "quickNav/mount" });
+    return () => dispatch({ type: "quickNav/unMount" });
+  }, [dispatch]);
+
+  React.useEffect(() => {
     if (isWideResolution || !navElRef.current) return;
     const boundingClientRect = navElRef.current.getBoundingClientRect();
     dispatch({
       payload: innerHeight - boundingClientRect.top,
       type: "quickNav/height",
     });
-    return () => dispatch({ type: "quickNav/unMount" });
+    return () => dispatch({ payload: 0, type: "quickNav/height" });
   }, [dispatch, isWideResolution, navElRef]);
 
   if (!shouldRenderQuickNav) return null;
