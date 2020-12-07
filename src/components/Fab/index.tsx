@@ -22,7 +22,12 @@ export default function Fab({
   const state = React.useContext(EriStateContext);
   const shouldRenderQuickNav = useShouldRenderQuickNav();
 
-  if (state.renderingToString || shouldRenderQuickNav || !portalEl) return null;
+  if (
+    state.renderingToString ||
+    !portalEl ||
+    (state.quickNavMounted && shouldRenderQuickNav)
+  )
+    return null;
 
   return ReactDOM.createPortal(
     <CSSTransition
