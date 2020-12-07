@@ -2,7 +2,7 @@ import "./style.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
-import { StateContext } from "../../components/EriProvider";
+import { EriStateContext } from "../../components/EriProvider";
 import { getCssTime1 } from "../../utils/getCssVar";
 
 const portalEl =
@@ -21,7 +21,7 @@ const handleKeyDown = (onClose: IProps["onClose"]) => (
 };
 
 export default function Mask({ onClose, open, ...rest }: IProps) {
-  const state = React.useContext(StateContext);
+  const state = React.useContext(EriStateContext);
   const [scrollY, setScrollY] = React.useState(0);
 
   const openMask = () => {

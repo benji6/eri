@@ -2,7 +2,7 @@ import "./style.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
-import { StateContext } from "../EriProvider";
+import { EriStateContext } from "../EriProvider";
 import { getCssTime0 } from "../../utils/getCssVar";
 
 const portalEl =
@@ -18,7 +18,7 @@ export default function Fab({
   type = "submit", // Formik gets grumpy if you don't specify this
   ...rest
 }: IProps) {
-  const state = React.useContext(StateContext);
+  const state = React.useContext(EriStateContext);
 
   if (state.renderingToString || !portalEl) return null;
 

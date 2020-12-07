@@ -32,10 +32,10 @@ const stateReducer = (state: IState, action: Action): IState => {
   }
 };
 
-export const DispatchContext = React.createContext<React.Dispatch<Action>>(
+export const EriDispatchContext = React.createContext<React.Dispatch<Action>>(
   () => {}
 );
-export const StateContext = React.createContext<IState>(initialState);
+export const EriStateContext = React.createContext<IState>(initialState);
 
 interface IProps {
   children: React.ReactNode;
@@ -51,8 +51,10 @@ export default function EriProvider({
     renderingToString,
   });
   return (
-    <DispatchContext.Provider value={dispatch}>
-      <StateContext.Provider value={state}>{children}</StateContext.Provider>
-    </DispatchContext.Provider>
+    <EriDispatchContext.Provider value={dispatch}>
+      <EriStateContext.Provider value={state}>
+        {children}
+      </EriStateContext.Provider>
+    </EriDispatchContext.Provider>
   );
 }

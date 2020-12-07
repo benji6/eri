@@ -2,7 +2,7 @@ import "./style.css";
 import * as React from "react";
 import { CSSTransition } from "react-transition-group";
 import CloseButton from "../../privateComponents/CloseButton";
-import { DispatchContext } from "../EriProvider";
+import { EriDispatchContext } from "../EriProvider";
 import Mask from "../../privateComponents/Mask";
 import MenuButton from "./MenuButton";
 import MenuLink from "./MenuLink";
@@ -18,7 +18,7 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export default function Menu({ children, onClose, open, ...rest }: IProps) {
   const isWideResolution = useIsWideResolution();
-  const dispatch = React.useContext(DispatchContext);
+  const dispatch = React.useContext(EriDispatchContext);
 
   React.useEffect(() => {
     dispatch({ payload: true, type: "menu/exists" });

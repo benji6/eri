@@ -1,9 +1,9 @@
 import "./style.css";
 import * as React from "react";
-import { StateContext } from "../EriProvider";
+import { EriStateContext } from "../EriProvider";
 
 export default function Header(props: React.HTMLAttributes<HTMLDivElement>) {
-  const state = React.useContext(StateContext);
+  const state = React.useContext(EriStateContext);
   const className = `e-header${
     state.menuExists ? " e-header--menu-space" : ""
   }`;

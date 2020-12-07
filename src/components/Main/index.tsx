@@ -1,11 +1,11 @@
 import "./style.css";
 import * as React from "react";
-import { StateContext } from "../EriProvider";
+import { EriStateContext } from "../EriProvider";
 
 export type IProps = React.HTMLAttributes<HTMLElement>;
 
 export default function Main(props: IProps) {
-  const state = React.useContext(StateContext);
+  const state = React.useContext(EriStateContext);
   const className = `e-main${state.menuExists ? " e-main--menu-space" : ""}`;
 
   const mainElRef = React.useRef<HTMLElement>(null);
