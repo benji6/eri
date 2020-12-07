@@ -28,7 +28,6 @@ const initialState: IState = {
 };
 
 const stateReducer = (state: IState, action: Action): IState => {
-  console.log(action.type);
   switch (action.type) {
     case "menu/exists":
       return { ...state, menuExists: action.payload };
