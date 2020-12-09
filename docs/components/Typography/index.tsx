@@ -114,9 +114,13 @@ export default function Typography(_: RouteComponentProps) {
           You can center any element by setting the <code>class</code> to
           &quot;center&quot;.
         </p>
-        <p className="center negative">
+        <p className="negative">
           You can give any element a negative sentiment by setting the{" "}
           <code>class</code> to &quot;negative&quot;.
+        </p>
+        <p className="positive">
+          You can give any element a positive sentiment by setting the{" "}
+          <code>class</code> to &quot;positive&quot;.
         </p>
         <p className="pre-line">
           {`You can set white-space to pre-line...
