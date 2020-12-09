@@ -23,3 +23,13 @@ export const passwordValidator: TValidator = (value) => {
 
 export const requiredValidator: TValidator = (value) =>
   value ? undefined : "Required";
+
+export const validateEmailField = composeValidators(
+  requiredValidator,
+  emailValidator
+);
+
+export const validatePasswordField = composeValidators(
+  requiredValidator,
+  passwordValidator
+);

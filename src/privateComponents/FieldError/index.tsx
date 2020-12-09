@@ -6,7 +6,7 @@ export default function FieldError({
   ...rest
 }: React.HTMLAttributes<HTMLDivElement>) {
   return children ? (
-    <div {...rest} aria-live="polite" className="e-field-error">
+    <div {...rest} aria-live="polite" className="e-field-error negative">
       {children}
     </div>
   ) : null;

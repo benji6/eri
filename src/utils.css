@@ -21,6 +21,10 @@
   white-space: nowrap;
 }
 
+.positive {
+  color: var(--e-color-positive);
+}
+
 .pre-line {
   white-space: pre-line;
 }

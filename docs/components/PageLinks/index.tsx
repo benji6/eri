@@ -7,14 +7,20 @@ export default function PageLinks(
 ) {
   return (
     <Menu.SubList>
+      <Menu.Link {...props} to="/pages/forgot-password">
+        ForgotPassword
+      </Menu.Link>
       <Menu.Link {...props} to="/pages/resend-verification">
-        Resend Verification
+        ResendVerification
+      </Menu.Link>
+      <Menu.Link {...props} to="/pages/reset-password">
+        ResetPassword
       </Menu.Link>
       <Menu.Link {...props} to="/pages/sign-in">
-        Sign in
+        SignIn
       </Menu.Link>
       <Menu.Link {...props} to="/pages/sign-up">
-        Sign up
+        SignUp
       </Menu.Link>
       <Menu.Link {...props} to="/pages/verify">
         Verify

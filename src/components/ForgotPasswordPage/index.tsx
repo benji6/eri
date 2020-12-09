@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Button, Paper, TextField } from "../..";
-import { Link } from "@reach/router";
-import { validateEmailField } from "../../utils/validators";
+import { Button, Paper, TextField, validateEmailField } from "../..";
+import { Link, useNavigate } from "@reach/router";
 
 interface IFormElement extends HTMLFormElement {
   email: HTMLInputElement;
@@ -17,7 +16,8 @@ interface IProps {
   }): Promise<void>;
 }
 
-export default function ResendVerificationPage({ onSubmit }: IProps) {
+export default function ForgotPasswordPage({ onSubmit }: IProps) {
+  const navigate = useNavigate();
   const [emailError, setEmailError] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitError, setSubmitError] = React.useState<React.ReactNode>();
@@ -25,7 +25,16 @@ export default function ResendVerificationPage({ onSubmit }: IProps) {
   return (
     <Paper.Group>
       <Paper>
-        <h2>Resend verification email</h2>
+        <h2>Forgot password?</h2>
+        <p>
+          If you already have an account we&apos;ll send you a code for
+          resetting your password.
+        </p>
+        <p>
+          If you don&apos;t receive an email check your junk folder and the
+          spelling of your address, or try <Link to="/sign-up">signing up</Link>
+          .
+        </p>
         <form
           noValidate
           onSubmit={async (e: React.FormEvent<IFormElement>) => {
@@ -37,6 +46,7 @@ export default function ResendVerificationPage({ onSubmit }: IProps) {
             setIsSubmitting(true);
             try {
               await onSubmit({ email, setSubmitError });
+              navigate("/reset-password");
             } finally {
               setIsSubmitting(false);
             }
@@ -57,12 +67,12 @@ export default function ResendVerificationPage({ onSubmit }: IProps) {
             </p>
           )}
           <Button.Group>
-            <Button disabled={isSubmitting}>Resend</Button>
+            <Button disabled={isSubmitting}>Send code</Button>
           </Button.Group>
           <p className="center">
             <small>
-              Looking for the <Link to="/sign-in">sign in</Link> or{" "}
-              <Link to="/sign-up">sign up</Link> pages?
+              Already have a verification code?{" "}
+              <Link to="/reset-password">Reset your password</Link>!
             </small>
           </p>
         </form>

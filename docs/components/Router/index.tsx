@@ -7,6 +7,7 @@ import ComponentsHome from "../Components/ComponentsHome";
 import DesignElements from "../DesignElements";
 import DialogDocs from "../Components/DialogDocs";
 import FabDocs from "../Components/FabDocs";
+import ForgotPasswordPageDocs from "../Components/ForgotPasswordPageDocs";
 import FormDocs from "../Components/FormDocs";
 import HeaderDocs from "../Components/HeaderDocs";
 import Home from "../Home";
@@ -20,6 +21,7 @@ import PaginationDocs from "../Components/PaginationDocs";
 import PaperDocs from "../Components/PaperDocs";
 import QuickNavDocs from "../Components/QuickNavDocs";
 import ResendVerificationPageDocs from "../Components/ResendVerificationPageDocs";
+import ResetPasswordPageDocs from "../Components/ResetPasswordPageDocs";
 import ShareButtonDocs from "../Components/ShareButtonDocs";
 import SignInPageDocs from "../Components/SignInPageDocs";
 import SignUpPageDocs from "../Components/SignUpPageDocs";
@@ -33,10 +35,12 @@ export default function Router() {
   return (
     <ReachRouter primary={false}>
       <_404 default />
+      <Redirect from="/forgot-password" to="/pages/forgot-password" />
+      <Redirect from="/resend-verification" to="/pages/resend-verification" />
+      <Redirect from="/reset-password" to="/pages/reset-password" />
       <Redirect from="/sign-in" to="/pages/sign-in" />
       <Redirect from="/sign-up" to="/pages/sign-up" />
       <Redirect from="/verify" to="/pages/verify" />
-      <Redirect from="/resend-verification" to="/pages/resend-verification" />
       <Home path="/" />
       <DesignElements path="design-elements" />
       <Typography path="typography" />
@@ -60,7 +64,9 @@ export default function Router() {
       <PagesHome path="pages" />
       <QuickNavDocs path="components/quick-nav" />
       <WordCloudDocs path="components/word-cloud" />
+      <ForgotPasswordPageDocs path="pages/forgot-password" />
       <ResendVerificationPageDocs path="pages/resend-verification" />
+      <ResetPasswordPageDocs path="pages/reset-password" />
       <SignInPageDocs path="pages/sign-in" />
       <SignUpPageDocs path="pages/sign-up" />
       <VerifyPageDocs path="pages/verify" />
