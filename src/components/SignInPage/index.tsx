@@ -30,6 +30,8 @@ export default function SignInPage({ onSubmit }: IProps) {
   const [submitError, setSubmitError] = React.useState<React.ReactNode>();
   const location = useLocation();
 
+  const defaultEmailAddress = new URLSearchParams(location.search).get("email");
+  const hasDefaultEmailAddress = Boolean(defaultEmailAddress);
   const passwordWasReset = new URLSearchParams(location.search).has(
     "password-reset"
   );
@@ -70,7 +72,8 @@ export default function SignInPage({ onSubmit }: IProps) {
         >
           <TextField
             autoComplete="email"
-            autoFocus
+            autoFocus={!hasDefaultEmailAddress}
+            defaultValue={defaultEmailAddress || undefined}
             error={emailError}
             label="Email"
             name="email"
@@ -78,6 +81,7 @@ export default function SignInPage({ onSubmit }: IProps) {
           />
           <TextField
             autoComplete="current-password"
+            autoFocus={hasDefaultEmailAddress}
             error={passwordError}
             label="Password"
             name="password"

@@ -46,7 +46,9 @@ export default function ForgotPasswordPage({ onSubmit }: IProps) {
             setIsSubmitting(true);
             try {
               await onSubmit({ email, setSubmitError });
-              navigate("/reset-password");
+              const searchParams = new URLSearchParams();
+              searchParams.set("email", email);
+              navigate(`/reset-password?${searchParams}`);
             } finally {
               setIsSubmitting(false);
             }

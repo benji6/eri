@@ -7,14 +7,13 @@ import {
   validateEmailField,
   validatePasswordField,
 } from "../..";
-import { Link, useNavigate } from "@reach/router";
+import { Link, useLocation, useNavigate } from "@reach/router";
 
 interface IFormElement extends HTMLFormElement {
   email: HTMLInputElement;
 }
 
 interface IProps {
-  defaultEmail?: string;
   onSubmit({
     code,
     email,
@@ -28,13 +27,17 @@ interface IProps {
   }): Promise<void>;
 }
 
-export default function ResetPasswordPage({ defaultEmail, onSubmit }: IProps) {
+export default function ResetPasswordPage({ onSubmit }: IProps) {
   const navigate = useNavigate();
   const [codeError, setCodeError] = React.useState("");
   const [emailError, setEmailError] = React.useState("");
   const [passwordError, setPasswordError] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitError, setSubmitError] = React.useState<React.ReactNode>();
+  const location = useLocation();
+
+  const defaultEmailAddress = new URLSearchParams(location.search).get("email");
+  const hasDefaultEmailAddress = Boolean(defaultEmailAddress);
 
   return (
     <Paper.Group>
@@ -67,7 +70,10 @@ export default function ResetPasswordPage({ defaultEmail, onSubmit }: IProps) {
             setIsSubmitting(true);
             try {
               await onSubmit({ code, email, password, setSubmitError });
-              navigate("/sign-in?password-reset");
+              const searchParams = new URLSearchParams();
+              searchParams.set("password-reset", "true");
+              searchParams.set("email", email);
+              navigate(`/sign-in?${searchParams}`);
             } finally {
               setIsSubmitting(false);
             }
@@ -75,8 +81,8 @@ export default function ResetPasswordPage({ defaultEmail, onSubmit }: IProps) {
         >
           <TextField
             autoComplete="email"
-            autoFocus
-            defaultValue={defaultEmail}
+            autoFocus={!hasDefaultEmailAddress}
+            defaultValue={defaultEmailAddress || undefined}
             error={emailError}
             label="Email"
             name="email"
@@ -84,6 +90,7 @@ export default function ResetPasswordPage({ defaultEmail, onSubmit }: IProps) {
             type="email"
           />
           <TextField
+            autoFocus={hasDefaultEmailAddress}
             error={codeError}
             label="Verification code"
             name="code"
