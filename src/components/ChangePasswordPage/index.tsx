@@ -4,16 +4,19 @@ import { validatePasswordField } from "../../utils/validators";
 
 interface IProps {
   onSubmit({
-    password,
+    currentPassword,
+    newPassword,
     setSubmitError,
   }: {
-    password: string;
+    currentPassword: string;
+    newPassword: string;
     setSubmitError: (r: React.ReactNode) => void;
   }): Promise<void>;
 }
 
 export default function ChangePasswordPage({ onSubmit }: IProps) {
-  const [passwordError, setPasswordError] = React.useState("");
+  const [currentPasswordError, setCurrentPasswordError] = React.useState("");
+  const [newPasswordError, setNewPasswordError] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitError, setSubmitError] = React.useState<React.ReactNode>();
   const [successfullyChanged, setSuccessfullyChanged] = React.useState(false);
@@ -32,14 +35,31 @@ export default function ChangePasswordPage({ onSubmit }: IProps) {
             noValidate
             onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
               e.preventDefault();
-              const password = (e.target as HTMLFormElement).password.value;
-              const passwordErrorMessage = validatePasswordField(password);
-              if (passwordErrorMessage)
-                return setPasswordError(passwordErrorMessage);
-              if (passwordError) setPasswordError("");
+              const currentPassword = (e.target as HTMLFormElement)
+                .currentPassword.value;
+              const newPassword = (e.target as HTMLFormElement).newPassword
+                .value;
+              console.log(123, currentPassword, newPassword);
+              const currentPasswordErrorMessage = validatePasswordField(
+                currentPassword
+              );
+              const newPasswordErrorMessage = validatePasswordField(
+                newPassword
+              );
+              if (currentPasswordErrorMessage || newPasswordErrorMessage) {
+                setCurrentPasswordError(currentPasswordErrorMessage || "");
+                setNewPasswordError(newPasswordErrorMessage || "");
+                return;
+              }
+              if (currentPasswordError) setCurrentPasswordError("");
+              if (newPasswordError) setNewPasswordError("");
               setIsSubmitting(true);
               try {
-                await onSubmit({ password, setSubmitError });
+                await onSubmit({
+                  currentPassword,
+                  newPassword,
+                  setSubmitError,
+                });
               } finally {
                 setIsSubmitting(false);
                 setSuccessfullyChanged(true);
@@ -47,11 +67,18 @@ export default function ChangePasswordPage({ onSubmit }: IProps) {
             }}
           >
             <TextField
-              autoComplete="new-password"
+              autoComplete="current-password"
               autoFocus
-              error={passwordError}
+              error={currentPasswordError}
+              label="Current password"
+              name="currentPassword"
+              type="password"
+            />
+            <TextField
+              autoComplete="new-password"
+              error={newPasswordError}
               label="New password"
-              name="password"
+              name="newPassword"
               type="password"
             />
             {submitError && (

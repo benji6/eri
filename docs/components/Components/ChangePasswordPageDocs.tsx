@@ -5,7 +5,9 @@ import { RouteComponentProps } from "@reach/router";
 export default function ChangePasswordPageDocs(_: RouteComponentProps) {
   return (
     <ChangePasswordPage
-      onSubmit={async ({ password }) => console.table({ password })}
+      onSubmit={async ({ currentPassword, newPassword }) =>
+        console.table({ currentPassword, newPassword })
+      }
     />
   );
 }
