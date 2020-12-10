@@ -3,6 +3,7 @@ import { Router as ReachRouter, Redirect } from "@reach/router";
 import BarChartDocs from "../Components/BarChartDocs";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
+import ChangePasswordPageDocs from "../Components/ChangePasswordPageDocs";
 import ComponentsHome from "../Components/ComponentsHome";
 import DesignElements from "../DesignElements";
 import DialogDocs from "../Components/DialogDocs";
@@ -64,6 +65,7 @@ export default function Router() {
       <PagesHome path="pages" />
       <QuickNavDocs path="components/quick-nav" />
       <WordCloudDocs path="components/word-cloud" />
+      <ChangePasswordPageDocs path="pages/change-password" />
       <ForgotPasswordPageDocs path="pages/forgot-password" />
       <ResendVerificationPageDocs path="pages/resend-verification" />
       <ResetPasswordPageDocs path="pages/reset-password" />

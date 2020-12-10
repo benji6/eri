@@ -6,11 +6,6 @@ import {
 } from "../../utils/validators";
 import { Link } from "@reach/router";
 
-interface IFormElement extends HTMLFormElement {
-  email: HTMLInputElement;
-  password: HTMLInputElement;
-}
-
 interface IProps {
   onSubmit({
     email,
@@ -35,10 +30,10 @@ export default function SignUpPage({ onSubmit }: IProps) {
         <h2>Sign up</h2>
         <form
           noValidate
-          onSubmit={async (e) => {
+          onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
-            const email = (e.target as IFormElement).email.value;
-            const password = (e.target as IFormElement).password.value;
+            const email = (e.target as HTMLFormElement).email.value;
+            const password = (e.target as HTMLFormElement).password.value;
             const emailErrorMessage = validateEmailField(email);
             const passwordErrorMessage = validatePasswordField(password);
             if (emailErrorMessage || passwordErrorMessage) {

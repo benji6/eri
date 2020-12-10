@@ -2,10 +2,6 @@ import * as React from "react";
 import { Button, Paper, TextField, validateEmailField } from "../..";
 import { Link, useNavigate } from "@reach/router";
 
-interface IFormElement extends HTMLFormElement {
-  email: HTMLInputElement;
-}
-
 interface IProps {
   onSubmit({
     email,
@@ -37,9 +33,9 @@ export default function ForgotPasswordPage({ onSubmit }: IProps) {
         </p>
         <form
           noValidate
-          onSubmit={async (e: React.FormEvent<IFormElement>) => {
+          onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
-            const email = (e.target as IFormElement).email.value;
+            const email = (e.target as HTMLFormElement).email.value;
             const emailErrorMessage = validateEmailField(email);
             if (emailErrorMessage) return setEmailError(emailErrorMessage);
             if (emailError) setEmailError("");

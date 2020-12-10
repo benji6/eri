@@ -3,10 +3,6 @@ import { Button, Paper, TextField } from "../..";
 import { Link } from "@reach/router";
 import { validateEmailField } from "../../utils/validators";
 
-interface IFormElement extends HTMLFormElement {
-  email: HTMLInputElement;
-}
-
 interface IProps {
   onSubmit({
     email,
@@ -28,9 +24,9 @@ export default function ResendVerificationPage({ onSubmit }: IProps) {
         <h2>Resend verification email</h2>
         <form
           noValidate
-          onSubmit={async (e: React.FormEvent<IFormElement>) => {
+          onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
-            const email = (e.target as IFormElement).email.value;
+            const email = (e.target as HTMLFormElement).email.value;
             const emailErrorMessage = validateEmailField(email);
             if (emailErrorMessage) return setEmailError(emailErrorMessage);
             if (emailError) setEmailError("");

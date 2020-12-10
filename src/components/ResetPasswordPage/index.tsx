@@ -9,10 +9,6 @@ import {
 } from "../..";
 import { Link, useLocation, useNavigate } from "@reach/router";
 
-interface IFormElement extends HTMLFormElement {
-  email: HTMLInputElement;
-}
-
 interface IProps {
   onSubmit({
     code,
@@ -50,11 +46,11 @@ export default function ResetPasswordPage({ onSubmit }: IProps) {
         </p>
         <form
           noValidate
-          onSubmit={async (e: React.FormEvent<IFormElement>) => {
+          onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
-            const code = (e.target as IFormElement).code.value;
-            const email = (e.target as IFormElement).email.value;
-            const password = (e.target as IFormElement).password.value;
+            const code = (e.target as HTMLFormElement).code.value;
+            const email = (e.target as HTMLFormElement).email.value;
+            const password = (e.target as HTMLFormElement).password.value;
             const codeErrorMessage = requiredValidator(code);
             const emailErrorMessage = validateEmailField(email);
             const passwordErrorMessage = validatePasswordField(password);

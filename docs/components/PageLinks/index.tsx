@@ -7,6 +7,9 @@ export default function PageLinks(
 ) {
   return (
     <Menu.SubList>
+      <Menu.Link {...props} to="/pages/change-password">
+        ChangePassword
+      </Menu.Link>
       <Menu.Link {...props} to="/pages/forgot-password">
         ForgotPassword
       </Menu.Link>
