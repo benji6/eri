@@ -39,7 +39,6 @@ export default function ChangePasswordPage({ onSubmit }: IProps) {
                 .currentPassword.value;
               const newPassword = (e.target as HTMLFormElement).newPassword
                 .value;
-              console.log(123, currentPassword, newPassword);
               const currentPasswordErrorMessage = validatePasswordField(
                 currentPassword
               );
