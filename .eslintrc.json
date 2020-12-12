@@ -18,6 +18,7 @@
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_$" }],
     "jsx-a11y/no-autofocus": 0,
+    "no-console": 2,
     "react/prop-types": 0,
     "react-hooks/exhaustive-deps": 2,
     "react-hooks/rules-of-hooks": 2,
