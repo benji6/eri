@@ -59,9 +59,9 @@ export default function ChangePasswordPage({ onSubmit }: IProps) {
                   newPassword,
                   setSubmitError,
                 });
+                setSuccessfullyChanged(true);
               } finally {
                 setIsSubmitting(false);
-                setSuccessfullyChanged(true);
               }
             }}
           >
