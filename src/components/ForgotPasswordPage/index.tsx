@@ -35,6 +35,7 @@ export default function ForgotPasswordPage({ onSubmit }: IProps) {
           noValidate
           onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
+            setSubmitError(undefined);
             const email = (e.target as HTMLFormElement).email.value;
             const emailErrorMessage = validateEmailField(email);
             if (emailErrorMessage) return setEmailError(emailErrorMessage);

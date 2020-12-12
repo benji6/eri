@@ -46,6 +46,7 @@ export default function SignInPage({ onSubmit }: IProps) {
           noValidate
           onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
+            setSubmitError(undefined);
             const email = (e.target as HTMLFormElement).email.value;
             const password = (e.target as HTMLFormElement).password.value;
             const emailErrorMessage = validateEmailField(email);

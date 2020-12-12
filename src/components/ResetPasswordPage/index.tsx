@@ -48,6 +48,7 @@ export default function ResetPasswordPage({ onSubmit }: IProps) {
           noValidate
           onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
+            setSubmitError(undefined);
             const code = (e.target as HTMLFormElement).code.value;
             const email = (e.target as HTMLFormElement).email.value;
             const password = (e.target as HTMLFormElement).password.value;

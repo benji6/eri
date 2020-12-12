@@ -35,6 +35,7 @@ export default function ChangePasswordPage({ onSubmit }: IProps) {
             noValidate
             onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
               e.preventDefault();
+              setSubmitError(undefined);
               const currentPassword = (e.target as HTMLFormElement)
                 .currentPassword.value;
               const newPassword = (e.target as HTMLFormElement).newPassword
