@@ -8,7 +8,7 @@
   --e-ground-lightness: 95%;
   --e-ground-lightness-spread: calc(5% * var(--e-spread-modifier));
   --e-negative-hue: 345;
-  --e-neutral-hs: var(--e-theme-hue), 5%;
+  --e-neutral-hs: var(--e-theme-hue), 25%;
   --e-positive-hue: 150;
   --e-theme-hue: 210;
   --e-theme-lightness: 22%;
@@ -85,10 +85,10 @@
   :root {
     --e-spread-modifier: -1;
     --e-balance-lightness: 60%;
-    --e-figure-lightness: 67%;
-    --e-ground-lightness: 9%;
+    --e-figure-lightness: 75%;
+    --e-ground-lightness: 7%;
     --e-negative-hue: 310;
-    --e-theme-hue: 190;
+    --e-theme-hue: 195;
     --e-theme-lightness: 41%;
 
     --e-color-highlight-default: var(--e-color-highlight-1);
