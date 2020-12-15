@@ -56,12 +56,12 @@
 
   --e-color-mask: hsla(var(--e-neutral-hs), 10%, 0.75);
 
-  --e-color-negative: hsl(var(--e-negative-hue), 75%, 48%);
-  --e-color-negative-less: hsl(var(--e-negative-hue), 70%, 57%);
-  --e-color-negative-more: hsl(var(--e-negative-hue), 90%, 42%);
+  --e-color-negative: hsl(var(--e-negative-hue), 75%, 50%);
+  --e-color-negative-less: hsl(var(--e-negative-hue), 70%, 58%);
+  --e-color-negative-more: hsl(var(--e-negative-hue), 90%, 43%);
 
-  --e-color-positive: hsl(var(--e-positive-hue), 75%, 48%);
-  --e-color-positive-less: hsl(var(--e-positive-hue), 70%, 57%);
+  --e-color-positive: hsl(var(--e-positive-hue), 75%, 44%);
+  --e-color-positive-less: hsl(var(--e-positive-hue), 70%, 54%);
 
   --e-color-theme: hsl(var(--e-theme-hue), 100%, var(--e-theme-lightness));
   --e-color-theme-less: hsl(
@@ -86,7 +86,8 @@
     --e-spread-modifier: -1;
     --e-balance-lightness: 60%;
     --e-figure-lightness: 75%;
-    --e-ground-lightness: 7%;
+    --e-ground-lightness: 2%;
+    --e-ground-lightness-spread: calc(-5% * var(--e-spread-modifier));
     --e-negative-hue: 310;
     --e-theme-hue: 195;
     --e-theme-lightness: 41%;

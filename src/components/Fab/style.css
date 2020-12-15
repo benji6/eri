@@ -4,7 +4,7 @@
   border-radius: 10em;
   bottom: var(--e-space-2);
   box-shadow: var(--e-box-shadow-1);
-  color: var(--e-color-ground-more);
+  color: var(--e-color-ground);
   display: flex;
   padding: var(--e-space-2);
   position: fixed;
