@@ -14,7 +14,7 @@ const FONT_SIZE_RANGE = 0.125;
 // Manual tests indicate that this ratio places all words provided
 // 50% of the time which makes it a nice balance between displaying
 // as many words as possible and not having too much empty space.
-const OPTIMAL_WORD_SPACE_USAGE = 0.6;
+const OPTIMAL_WORD_SPACE_USAGE = 0.55;
 
 interface IRect {
   x: number;
@@ -54,7 +54,7 @@ const checkIfRectangleNotContained = (rect: IRect) =>
 
 const fermatsSprial = (theta: number): [x: number, y: number] => {
   const r = 0.01 * Math.sqrt(theta);
-  return [r * Math.cos(theta), r * Math.sin(theta)];
+  return [r * Math.cos(theta) * ASPECT_RATIO, r * Math.sin(theta)];
 };
 
 export interface IProps extends React.SVGProps<SVGSVGElement> {
@@ -99,7 +99,10 @@ export default function WordCloud({ words, ...rest }: IProps) {
       svgEl.appendChild(textEl);
       const { height, width } = textEl.getBBox();
       svgEl.removeChild(textEl);
-      unplacedWords.push({ fontSize, height, width, word });
+
+      // Reducing the height because the text boxes are about that much
+      // bigger than the text they contain
+      unplacedWords.push({ fontSize, height: (height * 2) / 3, width, word });
     }
 
     let totalArea = 0;
