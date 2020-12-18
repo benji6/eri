@@ -102,7 +102,7 @@ export default function WordCloud({ words, ...rest }: IProps) {
 
       // Reducing the height because the text boxes are about that much
       // bigger than the text they contain
-      unplacedWords.push({ fontSize, height: height * 0.75, width, word });
+      unplacedWords.push({ fontSize, height: height * 0.8, width, word });
     }
 
     let totalArea = 0;
