@@ -8,13 +8,14 @@ const RANGE: [number, number] = [0, 10];
 
 export default function BarChartDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<{
-    data: number[];
+    data: (number | undefined)[];
     xAxisTitle?: string;
     yAxisTitle?: string;
   }>({
-    data: Array.from(
-      { length: DATA_COUNT },
-      () => Math.random() * (RANGE[1] - RANGE[0]) + RANGE[0]
+    data: Array.from({ length: DATA_COUNT }, () =>
+      Math.random() < 1 / DATA_COUNT
+        ? undefined
+        : Math.random() * (RANGE[1] - RANGE[0]) + RANGE[0]
     ),
     xAxisTitle: "X axis title",
     yAxisTitle: "Y axis title",

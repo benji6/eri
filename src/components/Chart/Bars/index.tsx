@@ -5,11 +5,12 @@ import {
   usePlotAreaWidth,
   useTransformPointsToPlotArea,
 } from "../hooks";
+import { TPoint } from "../LineChart/types";
 
 interface IProps {
   colorFromX?(x: number): string;
   colorFromY?(y: number): string;
-  data: number[];
+  data: (number | undefined)[];
 }
 
 export default function Bars({ colorFromX, colorFromY, data }: IProps) {
@@ -21,7 +22,9 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
   const marginBottom = useMarginBottom();
 
   const transformedPoints = useTransformPointsToPlotArea(
-    data.map((height, i) => [(i + 0.25) / data.length, height])
+    data
+      .map((height, i) => [(i + 0.25) / data.length, height])
+      .filter(([, height]) => height !== undefined) as TPoint[]
   );
   const plotAreaWidth = usePlotAreaWidth();
 
@@ -40,7 +43,7 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
               colorFromX
                 ? colorFromX(data.length > 1 ? i / (data.length - 1) : 0.5)
                 : colorFromY
-                ? colorFromY(data[i])
+                ? colorFromY(data[i] as number)
                 : "var(--e-color-theme)"
             }
             height={1 - y - marginBottom}
