@@ -91,8 +91,8 @@
     --e-ground-lightness-spread: calc(-5% * var(--e-spread-modifier));
     --e-color-ground-highlight: hsl(240, 100%, 20%);
     --e-negative-hue: 310;
-    --e-theme-hue: 175;
-    --e-theme-lightness: 37.5%;
+    --e-theme-hue: 195;
+    --e-theme-lightness: 41%;
 
     --e-color-highlight-default: var(--e-color-highlight-1);
 
