@@ -10,6 +10,7 @@ interface IProps {
     | "--e-color-figure-less"
     | "--e-color-figure-more"
     | "--e-color-figure"
+    | "--e-color-ground-highlight"
     | "--e-color-ground-less"
     | "--e-color-ground-more"
     | "--e-color-ground"

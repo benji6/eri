@@ -147,6 +147,7 @@ export default function DesignElements(_: RouteComponentProps) {
           <Color varName="--e-color-ground-more" />
           <Color varName="--e-color-ground" />
           <Color varName="--e-color-ground-less" />
+          <Color varName="--e-color-ground-highlight" />
         </DisplayGroup>
         <h4>Mask</h4>
         <DisplayGroup>

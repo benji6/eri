@@ -1,5 +1,10 @@
 html {
-  background-color: var(--e-color-ground);
+  background: linear-gradient(
+    calc(21turn / 32),
+    var(--e-color-ground-highlight) 0%,
+    var(--e-color-ground) 33%,
+    var(--e-color-ground) 100%
+  );
   color: var(--e-color-figure);
   font-family: "Public Sans", sans-serif;
   font-weight: var(--e-font-weight-normal);
