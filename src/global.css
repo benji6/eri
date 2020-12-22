@@ -5,6 +5,7 @@ html {
     var(--e-color-ground) 33%,
     var(--e-color-ground) 100%
   );
+  background-color: var(--e-color-ground);
   color: var(--e-color-figure);
   font-family: "Public Sans", sans-serif;
   font-weight: var(--e-font-weight-normal);
