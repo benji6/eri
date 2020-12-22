@@ -14,7 +14,7 @@ const FONT_SIZE_RANGE = 0.125;
 // Manual tests indicate that this ratio places all words provided
 // 50% of the time which makes it a nice balance between displaying
 // as many words as possible and not having too much empty space.
-const OPTIMAL_WORD_SPACE_USAGE = 0.55;
+const OPTIMAL_WORD_SPACE_USAGE = 0.76;
 
 interface IRect {
   x: number;
@@ -43,8 +43,8 @@ const getRange = (xs: number[]): [min: number, max: number] => {
 const checkIfRectanglesIntersect = (rectA: IRect, rectB: IRect): boolean =>
   rectA.x + rectA.width / 2 >= rectB.x - rectB.width / 2 &&
   rectA.x - rectA.width / 2 <= rectB.x + rectB.width / 2 &&
-  rectA.y + rectA.height / 2 >= rectB.y - rectB.y / 2 &&
-  rectA.y - rectB.height / 2 <= rectB.y + rectB.height / 2;
+  rectA.y + rectA.height / 2 >= rectB.y - rectB.height / 2 &&
+  rectA.y - rectA.height / 2 <= rectB.y + rectB.height / 2;
 
 const checkIfRectangleNotContained = (rect: IRect) =>
   rect.x < rect.width / 2 ||
