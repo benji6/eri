@@ -52,8 +52,8 @@ const checkIfRectangleNotContained = (rect: IRect) =>
   rect.y < rect.height / 2 ||
   rect.y > 1 - rect.height / 2;
 
-const fermatsSprial = (theta: number): [x: number, y: number] => {
-  const r = 0.01 * Math.sqrt(theta);
+const archimedeanSpiral = (theta: number): [x: number, y: number] => {
+  const r = 0.001 * theta;
   return [r * Math.cos(theta) * ASPECT_RATIO, r * Math.sin(theta)];
 };
 
@@ -134,7 +134,7 @@ export default function WordCloud({ words, ...rest }: IProps) {
       const word = unplacedWords[i] as IPlacedWord;
       let shouldPlaceWord = true;
       do {
-        const [x, y] = fermatsSprial(theta);
+        const [x, y] = archimedeanSpiral(theta);
         if (Math.hypot(x, y) > MAX_RADIUS) shouldPlaceWord = false;
         word.x = (x + 0.5) * ASPECT_RATIO;
         word.y = y + 0.5;
