@@ -9,7 +9,7 @@ export default function WordCloudDocs(_: RouteComponentProps) {
   const words = {};
 
   wordSet.forEach(
-    (word) => (words[word] = Math.floor(Math.random() ** 2 * 128))
+    (word) => (words[word] = Math.floor(Math.random() ** 2 * 32))
   );
 
   return (

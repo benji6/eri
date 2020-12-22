@@ -83,7 +83,11 @@ export default function WordCloud({ words, ...rest }: IProps) {
     const weightingRange = maxWeighting - minWeighting;
     const unplacedWords: IUnplacedWord[] = [];
 
-    const sortedWordEntries = Object.entries(words).sort((a, b) => b[1] - a[1]);
+    const sortedWordEntries = Object.entries(words).sort((a, b) => {
+      const weightingDifference = b[1] - a[1];
+      if (weightingDifference) return weightingDifference;
+      return b[0].length - a[0].length;
+    });
 
     for (let i = 0; i < sortedWordEntries.length; i++) {
       const [word, weighting] = sortedWordEntries[i];
