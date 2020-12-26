@@ -5,7 +5,8 @@ import FieldError from "../../../privateComponents/FieldError";
 import FieldLabel from "../../../privateComponents/FieldLabel";
 import RadioButton from "..";
 
-interface IProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
+export interface IProps
+  extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
   children: Array<React.ReactElement<typeof RadioButton>>;
   disabled?: boolean;
   error?: React.ReactNode;
@@ -26,7 +27,7 @@ export default function RadioButtonGroup({
         className="e-radio-button-group"
       >
         <legend className="e-radio-button-group__legend">
-          <FieldLabel>{label}</FieldLabel>
+          <FieldLabel optional={false}>{label}</FieldLabel>
         </legend>
         <div className="e-radio-button-group__container">{children}</div>
         <FieldError>{error}</FieldError>

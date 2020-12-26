@@ -5,6 +5,7 @@ import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
 import ChangePasswordPageDocs from "../Components/ChangePasswordPageDocs";
 import ComponentsHome from "../Components/ComponentsHome";
+import CurrencyFieldDocs from "../Components/CurrencyFieldDocs";
 import DesignElements from "../DesignElements";
 import DialogDocs from "../Components/DialogDocs";
 import FabDocs from "../Components/FabDocs";
@@ -13,6 +14,7 @@ import FormDocs from "../Components/FormDocs";
 import HeaderDocs from "../Components/HeaderDocs";
 import Home from "../Home";
 import IconDocs from "../Components/IconDocs";
+import ImageUploadDocs from "../Components/ImageUploadDocs";
 import LineChartDocs from "../Components/LineChartDocs";
 import LinkDocs from "../Components/LinkDocs";
 import MainDocs from "../Components/MainDocs";
@@ -21,12 +23,16 @@ import PagesHome from "../Components/PagesHome";
 import PaginationDocs from "../Components/PaginationDocs";
 import PaperDocs from "../Components/PaperDocs";
 import QuickNavDocs from "../Components/QuickNavDocs";
+import RadioButtonDocs from "../Components/RadioButtonDocs";
 import ResendVerificationPageDocs from "../Components/ResendVerificationPageDocs";
 import ResetPasswordPageDocs from "../Components/ResetPasswordPageDocs";
+import SelectDocs from "../Components/SelectDocs";
 import ShareButtonDocs from "../Components/ShareButtonDocs";
 import SignInPageDocs from "../Components/SignInPageDocs";
 import SignUpPageDocs from "../Components/SignUpPageDocs";
 import SpinnerDocs from "../Components/SpinnerDocs";
+import TextAreaDocs from "../Components/TextAreaDocs";
+import TextFieldDocs from "../Components/TextFieldDocs";
 import Typography from "../Typography";
 import VerifyPageDocs from "../Components/VerifyPageDocs";
 import WordCloudDocs from "../Components/WordCloudDocs";
@@ -49,21 +55,27 @@ export default function Router() {
       <BarChartDocs path="components/bar-chart" />
       <ButtonDocs path="components/button" />
       <CardDocs path="components/card" />
+      <CurrencyFieldDocs path="components/currency-field" />
       <DialogDocs path="components/dialog" />
       <FabDocs path="components/fab" />
       <FormDocs path="components/form" />
       <HeaderDocs path="components/header" />
       <IconDocs path="components/icon" />
+      <ImageUploadDocs path="components/image-upload" />
       <LineChartDocs path="components/line-chart" />
       <LinkDocs path="components/link" />
       <MainDocs path="components/main" />
       <MenuDocs path="components/menu" />
       <PaginationDocs path="components/pagination" />
       <PaperDocs path="components/paper" />
+      <SelectDocs path="components/select" />
       <ShareButtonDocs path="components/share-button" />
       <SpinnerDocs path="components/spinner" />
+      <TextAreaDocs path="components/text-area" />
+      <TextFieldDocs path="components/text-field" />
       <PagesHome path="pages" />
       <QuickNavDocs path="components/quick-nav" />
+      <RadioButtonDocs path="components/radio-button" />
       <WordCloudDocs path="components/word-cloud" />
       <ChangePasswordPageDocs path="pages/change-password" />
       <ForgotPasswordPageDocs path="pages/forgot-password" />

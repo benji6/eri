@@ -1,8 +1,15 @@
 import "./style.css";
 import * as React from "react";
 
-export default function FieldLabel(
-  props: React.HTMLAttributes<HTMLSpanElement>
-) {
-  return <span {...props} className="e-field-label" />;
+interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
+  optional: boolean;
+}
+
+export default function FieldLabel({ children, optional, ...rest }: IProps) {
+  return (
+    <span {...rest} className="e-field-label">
+      {children}
+      {optional && " (optional)"}
+    </span>
+  );
 }

@@ -3,11 +3,14 @@ import * as React from "react";
 import Field from "../../privateComponents/Field";
 import FieldError from "../../privateComponents/FieldError";
 import FieldLabel from "../../privateComponents/FieldLabel";
+import SupportiveText from "../../privateComponents/SupportiveText";
 
-interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: React.ReactNode;
   label: React.ReactNode;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  optional?: boolean;
+  supportiveText?: React.ReactNode;
 }
 
 interface IState {
@@ -22,6 +25,8 @@ export default function ImageUpload({
   error,
   label,
   onChange,
+  optional = false,
+  supportiveText,
   ...rest
 }: IProps) {
   const [{ imageName, imageUrl }, setState] = React.useState<IState>({
@@ -49,7 +54,8 @@ export default function ImageUpload({
   return (
     <Field>
       <label className="e-image-upload__label">
-        <FieldLabel>{label}</FieldLabel>
+        <FieldLabel optional={optional}>{label}</FieldLabel>
+        <SupportiveText>{supportiveText}</SupportiveText>
         {imageUrl && (
           <img
             alt={`preview of ${imageName}`}
@@ -59,12 +65,12 @@ export default function ImageUpload({
           />
         )}
         <input
-          required
           {...rest}
           accept="image/*"
           aria-invalid={Boolean(error)}
           className="e-image-upload__input"
           onChange={handleChange}
+          required={!optional}
           type="file"
         />
       </label>

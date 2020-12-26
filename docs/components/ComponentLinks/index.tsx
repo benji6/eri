@@ -19,6 +19,9 @@ export default function ComponentLinks(
       <Menu.Link {...props} to="/components/line-chart">
         Chart.LineChart
       </Menu.Link>
+      <Menu.Link {...props} to="/components/currency-field">
+        CurrencyField
+      </Menu.Link>
       <Menu.Link {...props} to="/components/dialog">
         Dialog
       </Menu.Link>
@@ -33,6 +36,9 @@ export default function ComponentLinks(
       </Menu.Link>
       <Menu.Link {...props} to="/components/icon">
         Icon
+      </Menu.Link>
+      <Menu.Link {...props} to="/components/image-upload">
+        ImageUpload
       </Menu.Link>
       <Menu.Link {...props} to="/components/link">
         Link
@@ -49,14 +55,26 @@ export default function ComponentLinks(
       <Menu.Link {...props} to="/components/paper">
         Paper
       </Menu.Link>
+      <Menu.Link {...props} to="/components/radio-button">
+        RadioButton
+      </Menu.Link>
       <Menu.Link {...props} to="/components/quick-nav">
         QuickNav
+      </Menu.Link>
+      <Menu.Link {...props} to="/components/select">
+        Select
       </Menu.Link>
       <Menu.Link {...props} to="/components/share-button">
         ShareButton
       </Menu.Link>
       <Menu.Link {...props} to="/components/spinner">
         Spinner
+      </Menu.Link>
+      <Menu.Link {...props} to="/components/text-area">
+        TextArea
+      </Menu.Link>
+      <Menu.Link {...props} to="/components/text-field">
+        TextField
       </Menu.Link>
       <Menu.Link {...props} to="/components/word-cloud">
         WordCloud
