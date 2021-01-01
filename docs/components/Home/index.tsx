@@ -99,8 +99,7 @@ ReactDOM.render(
           <li>
             <a
               href="https://moodtracker.link"
-              rel="noopener"
-              // eslint-disable-next-line react/jsx-no-target-blank
+              rel="noopener noreferrer"
               target="_blank"
             >
               MoodTracker
@@ -112,8 +111,7 @@ ReactDOM.render(
           <li>
             <a
               href="https://webnotes.link"
-              rel="noopener"
-              // eslint-disable-next-line react/jsx-no-target-blank
+              rel="noopener noreferrer"
               target="_blank"
             >
               Webnotes
