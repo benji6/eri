@@ -3,9 +3,8 @@ import * as React from "react";
 import {
   useMarginBottom,
   usePlotAreaWidth,
-  useTransformPointsToPlotArea,
+  useTransformBarsToPlotArea,
 } from "../hooks";
-import { TPoint } from "../LineChart/types";
 
 interface IProps {
   colorFromX?(x: number): string;
@@ -21,16 +20,16 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
 
   const marginBottom = useMarginBottom();
 
-  const transformedPoints = useTransformPointsToPlotArea(
-    data
-      .map((height, i) => [(i + 0.25) / data.length, height])
-      .filter(([, height]) => height !== undefined) as TPoint[]
+  const transformedBars = useTransformBarsToPlotArea(
+    data.map((height, i) => [(i + 0.25) / data.length, height])
   );
   const plotAreaWidth = usePlotAreaWidth();
 
   return (
     <g style={{ "--total-bars": data.length } as React.CSSProperties}>
-      {transformedPoints.map(([x, y], i) => {
+      {transformedBars.map(([x, y], i) => {
+        if (y === undefined) return;
+
         const width = plotAreaWidth / (2 * data.length);
 
         return (
