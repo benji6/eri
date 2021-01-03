@@ -65,6 +65,7 @@ interface IUnplacedWord {
   fontSize: number;
   height: number;
   width: number;
+  weighting: number;
   word: string;
 }
 
@@ -106,7 +107,13 @@ export default function WordCloud({ words, ...rest }: IProps) {
 
       // Reducing the height because the text boxes are about that much
       // bigger than the text they contain
-      unplacedWords.push({ fontSize, height: height * 0.8, width, word });
+      unplacedWords.push({
+        fontSize,
+        height: height * 0.8,
+        weighting,
+        width,
+        word,
+      });
     }
 
     let totalArea = 0;
@@ -162,7 +169,7 @@ export default function WordCloud({ words, ...rest }: IProps) {
       width="100%"
     >
       <g style={{ "--total-words": renderData.length } as React.CSSProperties}>
-        {renderData.map(({ fontSize, word, x, y }, i) => (
+        {renderData.map(({ fontSize, weighting, word, x, y }, i) => (
           <text
             className="fade-in e-word-cloud__word"
             dy={fontSize * 0.3}
@@ -180,6 +187,7 @@ export default function WordCloud({ words, ...rest }: IProps) {
             x={x}
             y={y}
           >
+            <title>{weighting}</title>
             {word}
           </text>
         ))}
