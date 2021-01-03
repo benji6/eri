@@ -29,6 +29,7 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
     <g style={{ "--total-bars": data.length } as React.CSSProperties}>
       {transformedBars.map(([x, y], i) => {
         if (y === undefined) return;
+        const originalY = data[i]!;
 
         const width = plotAreaWidth / (2 * data.length);
 
@@ -42,7 +43,7 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
               colorFromX
                 ? colorFromX(data.length > 1 ? i / (data.length - 1) : 0.5)
                 : colorFromY
-                ? colorFromY(data[i] as number)
+                ? colorFromY(originalY)
                 : "var(--e-color-theme)"
             }
             height={1 - y - marginBottom}
@@ -53,7 +54,9 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
               } as React.CSSProperties
             }
             width={width}
-          />
+          >
+            <title>{originalY.toFixed(1)}</title>
+          </rect>
         );
       })}
     </g>
