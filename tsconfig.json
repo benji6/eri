@@ -4,6 +4,7 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["DOM", "ES2015"],
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "outDir": "dist",
