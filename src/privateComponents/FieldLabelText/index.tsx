@@ -5,7 +5,11 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
   optional: boolean;
 }
 
-export default function FieldLabel({ children, optional, ...rest }: IProps) {
+export default function FieldLabelText({
+  children,
+  optional,
+  ...rest
+}: IProps) {
   return (
     <span {...rest} className="e-field-label">
       {children}

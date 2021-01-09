@@ -1,8 +1,8 @@
-import "./style.css";
 import * as React from "react";
 import Field from "../../privateComponents/Field";
 import FieldError from "../../privateComponents/FieldError";
-import FieldLabel from "../../privateComponents/FieldLabel";
+import FieldLabelText from "../../privateComponents/FieldLabelText";
+import Label from "../../privateComponents/Label";
 import SupportiveText from "../../privateComponents/SupportiveText";
 
 export interface IProps
@@ -22,15 +22,15 @@ export default function TextArea({
 }: IProps) {
   return (
     <Field>
-      <label className="e-text-area__label">
-        <FieldLabel optional={optional}>{label}</FieldLabel>
+      <Label>
+        <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <textarea
           {...rest}
           aria-invalid={Boolean(error)}
           required={!optional}
         />
-      </label>
+      </Label>
       <FieldError>{error}</FieldError>
     </Field>
   );

@@ -148,6 +148,22 @@ p + p {
   margin: var(--e-font-margin-paragraph);
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity var(--e-time-0) var(--e-easing-standard);
+}
+
+@media (prefers-color-scheme: dark) {
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+  }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
 input:not([type="checkbox"]),
 select,
 textarea {

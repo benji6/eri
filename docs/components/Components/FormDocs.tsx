@@ -3,6 +3,7 @@ import {
   Button,
   Checkbox,
   CurrencyField,
+  DateField,
   ImageUpload,
   Paper,
   RadioButton,
@@ -52,6 +53,7 @@ export default function FormDocs(_: RouteComponentProps) {
             <Toggle label="Toggle with a long label so we can see how it overflows" />
           </fieldset>
           <CurrencyField label="Currency field" />
+          <DateField label="Date field" supportiveText="Some supportive text" />
           <ImageUpload label="Image upload" />
           <Button.Group>
             <Button type="button">Submit</Button>

@@ -2,7 +2,8 @@ import "./style.css";
 import * as React from "react";
 import Field from "../../privateComponents/Field";
 import FieldError from "../../privateComponents/FieldError";
-import FieldLabel from "../../privateComponents/FieldLabel";
+import FieldLabelText from "../../privateComponents/FieldLabelText";
+import Label from "../../privateComponents/Label";
 import SupportiveText from "../../privateComponents/SupportiveText";
 
 export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -23,8 +24,8 @@ export default function CurrencyField({
 }: IProps) {
   return (
     <Field>
-      <label className="e-currency-field__label">
-        <FieldLabel optional={optional}>{label}</FieldLabel>
+      <Label>
+        <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <span className="e-currency-field__input-container">
           <input
@@ -37,7 +38,7 @@ export default function CurrencyField({
             pattern={integer ? "[0-9]*" : "[0-9]*"}
           />
         </span>
-      </label>
+      </Label>
       <FieldError>{error}</FieldError>
     </Field>
   );

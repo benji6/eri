@@ -6,6 +6,7 @@ import CardDocs from "../Components/CardDocs";
 import ChangePasswordPageDocs from "../Components/ChangePasswordPageDocs";
 import ComponentsHome from "../Components/ComponentsHome";
 import CurrencyFieldDocs from "../Components/CurrencyFieldDocs";
+import DateFieldDocs from "../Components/DateFieldDocs";
 import DesignElements from "../DesignElements";
 import DialogDocs from "../Components/DialogDocs";
 import FabDocs from "../Components/FabDocs";
@@ -56,6 +57,7 @@ export default function Router() {
       <ButtonDocs path="components/button" />
       <CardDocs path="components/card" />
       <CurrencyFieldDocs path="components/currency-field" />
+      <DateFieldDocs path="components/date-field" />
       <DialogDocs path="components/dialog" />
       <FabDocs path="components/fab" />
       <FormDocs path="components/form" />

@@ -22,6 +22,9 @@ export default function ComponentLinks(
       <Menu.Link {...props} to="/components/currency-field">
         CurrencyField
       </Menu.Link>
+      <Menu.Link {...props} to="/components/date-field">
+        DateField
+      </Menu.Link>
       <Menu.Link {...props} to="/components/dialog">
         Dialog
       </Menu.Link>

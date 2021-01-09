@@ -2,8 +2,9 @@ import "./style.css";
 import * as React from "react";
 import Field from "../../privateComponents/Field";
 import FieldError from "../../privateComponents/FieldError";
-import FieldLabel from "../../privateComponents/FieldLabel";
+import FieldLabelText from "../../privateComponents/FieldLabelText";
 import Icon from "../Icon";
+import Label from "../../privateComponents/Label";
 import SupportiveText from "../../privateComponents/SupportiveText";
 
 export interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
@@ -22,8 +23,8 @@ export default function Select({
 }: IProps) {
   return (
     <Field>
-      <label className="e-select__label">
-        <FieldLabel optional={optional}>{label}</FieldLabel>
+      <Label>
+        <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <span className="e-select__select-container">
           <select
@@ -36,7 +37,7 @@ export default function Select({
             <Icon name="down" />
           </span>
         </span>
-      </label>
+      </Label>
       <FieldError>{error}</FieldError>
     </Field>
   );

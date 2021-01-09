@@ -2,7 +2,8 @@ import "./style.css";
 import * as React from "react";
 import Field from "../../privateComponents/Field";
 import FieldError from "../../privateComponents/FieldError";
-import FieldLabel from "../../privateComponents/FieldLabel";
+import FieldLabelText from "../../privateComponents/FieldLabelText";
+import Label from "../../privateComponents/Label";
 import SupportiveText from "../../privateComponents/SupportiveText";
 
 export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -53,8 +54,8 @@ export default function ImageUpload({
 
   return (
     <Field>
-      <label className="e-image-upload__label">
-        <FieldLabel optional={optional}>{label}</FieldLabel>
+      <Label>
+        <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         {imageUrl && (
           <img
@@ -73,7 +74,7 @@ export default function ImageUpload({
           required={!optional}
           type="file"
         />
-      </label>
+      </Label>
       <FieldError>{error}</FieldError>
     </Field>
   );

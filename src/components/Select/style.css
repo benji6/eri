@@ -9,11 +9,6 @@
   transition: color var(--e-time-0) var(--e-easing-standard);
 }
 
-.e-select__label {
-  display: flex;
-  flex-direction: column;
-}
-
 .e-select__select {
   -moz-appearance: none;
   -webkit-appearance: none;

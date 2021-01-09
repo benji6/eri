@@ -20,6 +20,7 @@ export { default as ChangePasswordPage } from "./components/ChangePasswordPage";
 export { default as Chart } from "./components/Chart";
 export { default as Checkbox } from "./components/Checkbox";
 export { default as CurrencyField } from "./components/CurrencyField";
+export { default as DateField } from "./components/DateField";
 export { default as Dialog } from "./components/Dialog";
 export { default as EriProvider } from "./components/EriProvider";
 export { default as Fab } from "./components/Fab";

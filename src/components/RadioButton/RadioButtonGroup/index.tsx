@@ -2,7 +2,7 @@ import "./style.css";
 import * as React from "react";
 import Field from "../../../privateComponents/Field";
 import FieldError from "../../../privateComponents/FieldError";
-import FieldLabel from "../../../privateComponents/FieldLabel";
+import FieldLabelText from "../../../privateComponents/FieldLabelText";
 import RadioButton from "..";
 
 export interface IProps
@@ -27,7 +27,7 @@ export default function RadioButtonGroup({
         className="e-radio-button-group"
       >
         <legend className="e-radio-button-group__legend">
-          <FieldLabel optional={false}>{label}</FieldLabel>
+          <FieldLabelText optional={false}>{label}</FieldLabelText>
         </legend>
         <div className="e-radio-button-group__container">{children}</div>
         <FieldError>{error}</FieldError>
