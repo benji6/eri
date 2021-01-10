@@ -4,6 +4,7 @@
 
 .fade-in {
   animation: var(--e-animation-fade-in);
+  opacity: 0;
 }
 
 .negative {
