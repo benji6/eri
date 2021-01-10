@@ -6,11 +6,8 @@ import {
   LINE_WIDTH_2,
   MARGIN_RIGHT,
 } from "./constants";
-import {
-  DomainContext,
-  XAxisTitleContext,
-  YAxisTitleContext,
-} from "./contexts";
+import { useMarginBottom, useMarginLeft } from "./hooks";
+import { DomainContext } from "./contexts";
 import { TLabel } from "./types";
 
 const transformX = (
@@ -30,11 +27,8 @@ interface IProps {
 
 export default function XAxis({ labels, markers }: IProps) {
   const domain = React.useContext(DomainContext);
-  const title = React.useContext(XAxisTitleContext);
-  const yAxisLabel = React.useContext(YAxisTitleContext);
-
-  const marginBottom = title ? 0.175 : 0.125;
-  const marginLeft = yAxisLabel ? 0.175 : 0.125;
+  const marginBottom = useMarginBottom();
+  const marginLeft = useMarginLeft();
 
   return (
     <>

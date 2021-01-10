@@ -13,7 +13,7 @@ import {
   XAxisTitleContext,
   YAxisTitleContext,
 } from "../contexts";
-import { computeMarginBottom, computeMarginTop } from "../utils";
+import { computeMarginBottom, computeMarginLeft } from "../utils";
 import { usePlotAreaHeight, usePlotAreaWidth } from "../hooks";
 
 interface IProps extends React.SVGProps<SVGSVGElement> {
@@ -33,7 +33,7 @@ export default function BaseChart({
   ...rest
 }: IProps) {
   const marginBottom = computeMarginBottom(xAxisTitle);
-  const marginLeft = computeMarginTop(yAxisTitle);
+  const marginLeft = computeMarginLeft(yAxisTitle);
   const plotAreaHeight = usePlotAreaHeight();
   const plotAreaWidth = usePlotAreaWidth();
 

@@ -6,7 +6,7 @@ import {
   XAxisTitleContext,
   YAxisTitleContext,
 } from "./contexts";
-import { computeMarginBottom, computeMarginTop } from "./utils";
+import { computeMarginBottom, computeMarginLeft } from "./utils";
 import { TPoint } from "./LineChart/types";
 
 export const useMarginBottom = (): number => {
@@ -16,7 +16,7 @@ export const useMarginBottom = (): number => {
 
 export const useMarginLeft = (): number => {
   const yAxisTitle = React.useContext(YAxisTitleContext);
-  return computeMarginTop(yAxisTitle);
+  return computeMarginLeft(yAxisTitle);
 };
 
 export const usePlotAreaHeight = (): number => {
