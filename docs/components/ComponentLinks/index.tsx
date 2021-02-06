@@ -19,6 +19,9 @@ export default function ComponentLinks(
       <Menu.Link {...props} to="/components/line-chart">
         Chart.LineChart
       </Menu.Link>
+      <Menu.Link {...props} to="/components/combo-box">
+        ComboBox
+      </Menu.Link>
       <Menu.Link {...props} to="/components/currency-field">
         CurrencyField
       </Menu.Link>
