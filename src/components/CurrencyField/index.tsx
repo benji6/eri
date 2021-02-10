@@ -30,11 +30,14 @@ export default function CurrencyField({
         <span className="e-currency-field__input-container">
           <input
             autoComplete="off"
+            // When fields aren't in forms they should not be required
+            // and do not need to be marked explicitly as optional,
+            // hence the user can override this attribute
+            required={!optional}
             {...rest}
             aria-invalid={Boolean(error)}
             className="e-currency-field__input"
             inputMode={integer ? "numeric" : "decimal"}
-            required={!optional}
             pattern={integer ? "[0-9]*" : "[0-9]*"}
           />
         </span>

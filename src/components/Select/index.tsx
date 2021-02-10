@@ -28,10 +28,13 @@ export default function Select({
         <SupportiveText>{supportiveText}</SupportiveText>
         <span className="e-select__select-container">
           <select
+            // When fields aren't in forms they should not be required
+            // and do not need to be marked explicitly as optional,
+            // hence the user can override this attribute
+            required={!optional}
             {...rest}
             aria-invalid={Boolean(error)}
             className="e-select__select"
-            required={!optional}
           />
           <span className="e-select__icon">
             <Icon name="down" />

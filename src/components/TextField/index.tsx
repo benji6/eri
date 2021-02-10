@@ -24,7 +24,14 @@ export default function TextField({
       <Label>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
-        <input {...rest} aria-invalid={Boolean(error)} required={!optional} />
+        <input
+          // When fields aren't in forms they should not be required
+          // and do not need to be marked explicitly as optional,
+          // hence the user can override this attribute
+          required={!optional}
+          {...rest}
+          aria-invalid={Boolean(error)}
+        />
       </Label>
       <FieldError>{error}</FieldError>
     </Field>

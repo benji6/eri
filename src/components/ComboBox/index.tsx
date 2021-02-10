@@ -31,10 +31,13 @@ export default function ComboBox({
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <input
+          // When fields aren't in forms they should not be required
+          // and do not need to be marked explicitly as optional,
+          // hence the user can override this attribute
+          required={!optional}
           {...rest}
           aria-invalid={Boolean(error)}
           list={dataListIdRef.current}
-          required={!optional}
         />
         <datalist id={dataListIdRef.current}>
           {options.map((option) => (

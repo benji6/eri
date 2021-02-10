@@ -26,9 +26,12 @@ export default function TextArea({
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <textarea
+          // When fields aren't in forms they should not be required
+          // and do not need to be marked explicitly as optional,
+          // hence the user can override this attribute
+          required={!optional}
           {...rest}
           aria-invalid={Boolean(error)}
-          required={!optional}
         />
       </Label>
       <FieldError>{error}</FieldError>

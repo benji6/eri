@@ -66,12 +66,15 @@ export default function ImageUpload({
           />
         )}
         <input
+          // When fields aren't in forms they should not be required
+          // and do not need to be marked explicitly as optional,
+          // hence the user can override this attribute
+          required={!optional}
           {...rest}
           accept="image/*"
           aria-invalid={Boolean(error)}
           className="e-image-upload__input"
           onChange={handleChange}
-          required={!optional}
           type="file"
         />
       </Label>
