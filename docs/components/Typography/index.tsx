@@ -2,6 +2,7 @@ import * as React from "react";
 import { Paper, SubHeading } from "../../../src";
 import { LOREM_IPSUM } from "../../constants";
 import { RouteComponentProps } from "@reach/router";
+const treeSrc = require("./tree.jpg"); // eslint-disable-line @typescript-eslint/no-var-requires
 
 export default function Typography(_: RouteComponentProps) {
   return (
@@ -61,6 +62,10 @@ export default function Typography(_: RouteComponentProps) {
       <Paper>
         <h3>Hr</h3>
         <hr />
+      </Paper>
+      <Paper>
+        <h3>Img</h3>
+        <img alt="Tree" src={treeSrc} />
       </Paper>
       <Paper>
         <h3>List</h3>

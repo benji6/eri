@@ -212,7 +212,7 @@ img {
   border-radius: var(--e-border-radius-1);
   display: block;
   margin: var(--e-space-3) auto;
-  max-width: calc(200% / 3);
+  max-width: 80%;
 }
 
 table {
