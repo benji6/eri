@@ -1,12 +1,9 @@
 .e-paper-group {
-  --paper-group-margin: var(--e-space-2); /* used by Paper */
-
   display: grid;
   grid-gap: var(--e-space-2);
-  max-width: var(--e-break-point);
-  min-width: calc(100vw - 2 * var(--paper-group-margin));
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
-  padding: var(--paper-group-margin);
+  padding: var(--e-space-2);
+  width: var(--e-break-point);
 }
 
 @media (min-width: 37rem) {
