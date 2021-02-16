@@ -36,7 +36,8 @@ export default function Line({
     polylinePoints += `${x},${y} `;
   }
 
-  polylinePoints = polylinePoints.trimRight();
+  // TODO - change to `trimEnd` when target is ES2019
+  polylinePoints = polylinePoints.trim();
 
   return (
     <polyline
