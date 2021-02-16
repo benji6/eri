@@ -2,12 +2,14 @@
   display: grid;
   grid-gap: var(--e-space-2);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
+
+  /* switching to margin cuts off the paper box-shadow */
   padding: var(--e-space-2);
-  width: var(--e-break-point);
+  width: calc(var(--e-break-point) - 2 * var(--e-space-2));
 }
 
-@media (min-width: 37rem) {
+@media (min-width: 38rem) {
   .e-paper-group {
-    min-width: calc(var(--e-break-point) * 0.8);
+    width: var(--e-break-point);
   }
 }
