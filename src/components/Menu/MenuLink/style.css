@@ -14,7 +14,9 @@
   transition-property: background-color, color;
   transition-timing-function: var(--e-easing-standard);
 }
-.e-menu-link__link:focus,
+.e-menu-link__link:focus {
+  color: var(--e-color-theme-more);
+}
 .e-menu-link__link:hover {
   background: var(--e-color-ground-less);
   color: var(--e-color-theme-more);
