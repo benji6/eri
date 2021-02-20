@@ -36,11 +36,7 @@
 }
 
 .ripple::after {
-  background-image: radial-gradient(
-    circle,
-    var(--e-color-balance) 10%,
-    transparent 10%
-  );
+  background-image: radial-gradient(circle, var(--color) 10%, transparent 10%);
   bottom: 0;
   content: "";
   display: block;

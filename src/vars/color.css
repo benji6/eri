@@ -80,6 +80,10 @@
     100%,
     calc(var(--e-theme-lightness) - 2 * var(--e-theme-lightness-spread))
   );
+
+  /* components may override this prop
+  currenlty it is used by the ripple utility class */
+  --color: var(--e-color-theme);
 }
 
 @media (prefers-color-scheme: dark) {
