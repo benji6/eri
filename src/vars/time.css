@@ -1,5 +1,5 @@
 :root {
-  --e-time-base-value: 0.09s;
+  --e-time-base-value: 0.1s;
   --e-time-scale-ratio: 2.5;
 
   --e-time-0: var(--e-time-base-value);
