@@ -14,7 +14,7 @@ export default function MenuLink({
         getProps={({ isCurrent }) => ({
           className: `e-menu-link__link${
             isCurrent ? " e-menu-link__link--active" : ""
-          }`,
+          } ripple`,
         })}
         to={to}
       />

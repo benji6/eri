@@ -1,29 +1,36 @@
 .e-menu-link {
-  list-style-type: disc;
-}
-
-.e-menu-list > .e-menu-link {
   list-style: none;
-  margin: var(--e-space-2) 0 var(--e-space-1);
-}
-
-.e-menu-list > *:first-child {
-  margin-top: 0;
+  margin: 0;
 }
 
 .e-menu-link__link {
-  transition: filter var(--e-time-0) var(--e-easing-standard);
+  --active-color: var(--e-color-highlight-default);
+
+  display: block;
+  font-weight: var(--e-font-weight-bold);
+  padding: var(--e-space-1) var(--e-space-3);
+  text-decoration: none;
+  transition-duration: var(--e-time-0);
+  transition-property: background-color, color;
+  transition-timing-function: var(--e-easing-standard);
+}
+.e-menu-link__link:focus,
+.e-menu-link__link:hover {
+  background: var(--e-color-ground-less);
+  color: var(--e-color-theme-more);
+}
+
+.e-menu-sub-list .e-menu-link__link {
+  padding-bottom: var(--e-space-0);
+  padding-left: var(--e-space-4);
+  padding-top: var(--e-space-0);
 }
 
 .e-menu-link__link--active {
-  --active-color: var(--e-color-theme-more);
-
-  text-shadow: var(--e-box-shadow-even-0-no-color) var(--e-color-theme-less);
-  color: var(--active-color);
-  text-decoration: none;
+  --color: var(--active-color);
+  color: var(--color);
 }
-
 .e-menu-link__link--active:focus,
 .e-menu-link__link--active:hover {
-  color: var(--active-color);
+  color: var(--color);
 }

@@ -6,7 +6,7 @@ export default function MenuSubList(
 ) {
   return (
     <li className="e-menu-sub-list">
-      <ul {...props} />
+      <ul {...props} className="e-menu-sub-list__list" />
     </li>
   );
 }

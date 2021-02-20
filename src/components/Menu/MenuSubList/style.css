@@ -1,3 +1,9 @@
 .e-menu-sub-list {
   list-style: none;
+  margin-top: calc(-1 * var(--e-space-0));
+}
+
+.e-menu-sub-list__list {
+  margin: 0;
+  padding: 0;
 }
