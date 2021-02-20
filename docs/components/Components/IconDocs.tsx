@@ -26,7 +26,7 @@ export default function IconDocs(_: RouteComponentProps) {
           <a href="https://feathericons.com/">Feather</a>
         </p>
         {ICON_NAMES.map((name) => (
-          <Icon draw key={name} name={name} />
+          <Icon draw key={name} name={name} size="2" />
         ))}
       </Paper>
       <ConfigurableExample example={<Icon {...props} />}>
