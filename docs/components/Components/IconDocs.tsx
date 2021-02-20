@@ -11,6 +11,7 @@ import { RouteComponentProps } from "@reach/router";
 export default function IconDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<IProps>({
     draw: false,
+    margin: undefined,
     name: "check",
     size: "4",
   });
@@ -31,20 +32,22 @@ export default function IconDocs(_: RouteComponentProps) {
         ))}
         <hr />
         <p>
-          <Icon draw name="help" />
-          When you don&apos;t set a size
+          <Icon draw margin="right" name="help" />
+          When you don&apos;t set a size you can use Icon inline
         </p>
         <p>
-          <Icon draw name="left" />
-          the component expects to
-        </p>
-        <p>
-          <Icon draw name="check" />
-          be used like this
+          You can use the margin prop for horizontal spacing
+          <Icon draw margin="left" name="right" />
         </p>
       </Paper>
       <ConfigurableExample example={<Icon {...props} />}>
         <PropControlBoolean name="draw" props={props} setProps={setProps} />
+        <PropControlEnum
+          name="margin"
+          options={[undefined, "left", "right"]}
+          props={props}
+          setProps={setProps}
+        />
         <PropControlEnum
           name="name"
           options={ICON_NAMES}

@@ -14,8 +14,15 @@
 
 .e-icon--inline {
   bottom: 2px;
-  margin-right: var(--e-space-0);
   position: relative;
+}
+
+.e-icon--margin-left {
+  margin-left: var(--e-space-0);
+}
+
+.e-icon--margin-right {
+  margin-right: var(--e-space-0);
 }
 
 .e-icon--size-2 {
