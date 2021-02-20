@@ -123,7 +123,10 @@ export default function Icon({
   size = "inherit",
   ...rest
 }: IProps) {
-  const className = `e-icon e-icon--size-${size}${draw ? " e-icon--draw" : ""}`;
+  const className = `e-icon e-icon--size-${size}${draw ? " e-icon--draw" : ""}${
+    size === "inherit" ? " e-icon--inline" : ""
+  }`;
+
   return (
     <svg
       {...rest}

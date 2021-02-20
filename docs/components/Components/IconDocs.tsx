@@ -25,9 +25,23 @@ export default function IconDocs(_: RouteComponentProps) {
           </span>{" "}
           <a href="https://feathericons.com/">Feather</a>
         </p>
+        <hr />
         {ICON_NAMES.map((name) => (
           <Icon draw key={name} name={name} size="2" />
         ))}
+        <hr />
+        <p>
+          <Icon draw name="help" />
+          When you don&apos;t set a size
+        </p>
+        <p>
+          <Icon draw name="left" />
+          the component expects to
+        </p>
+        <p>
+          <Icon draw name="check" />
+          be used like this
+        </p>
       </Paper>
       <ConfigurableExample example={<Icon {...props} />}>
         <PropControlBoolean name="draw" props={props} setProps={setProps} />

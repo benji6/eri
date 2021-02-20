@@ -20,7 +20,8 @@ export default function ShareButton({
         onClick={() => navigator.share!({ text, title, url })}
         variant="secondary"
       >
-        Share <Icon name="share" />
+        <Icon name="share" />
+        Share
       </Button>
     </Button.Group>
   ) : null;

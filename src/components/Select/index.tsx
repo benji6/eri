@@ -37,7 +37,7 @@ export default function Select({
             className="e-select__select"
           />
           <span className="e-select__icon">
-            <Icon name="down" />
+            <Icon name="down" size="2" />
           </span>
         </span>
       </Label>

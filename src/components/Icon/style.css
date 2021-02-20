@@ -12,6 +12,12 @@
   stroke-dashoffset: -66;
 }
 
+.e-icon--inline {
+  bottom: 2px;
+  margin-right: var(--e-space-0);
+  position: relative;
+}
+
 .e-icon--size-2 {
   --size: var(--e-font-size-2);
 }
