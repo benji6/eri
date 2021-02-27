@@ -17,23 +17,26 @@ export default function Home(_: RouteComponentProps) {
             <span aria-label="Yoga" role="img">
               🧘‍♀️
             </span>{" "}
-            <strong>Simple</strong> - Eri aims to be minimal and should feel
-            clean and intuitive.
+            <strong>Simple</strong> - Eri is minimal and provides a clean and
+            intuitive user experience. Eri does confuse or distract users with
+            excessive design flair.
+          </li>
+          <li>
+            <span aria-label="Exclamation mark" role="img">
+              ❗
+            </span>{" "}
+            <strong>Prescriptive</strong> - Eri enforces a strict way of
+            building applications and leaves little room for variation and
+            creative freedom. Eri does not permit the creation of wildly
+            differing user experiences.
           </li>
           <li>
             <span aria-label="Rocket" role="img">
               🚀
             </span>{" "}
-            <strong>Lightweight</strong> - Eri is performance focussed and will
+            <strong>Performant</strong> - Eri is performance focussed and will
             not bloat or slow down your app. Components are lightweight and
             tree-shaking is supported out the box.
-          </li>
-          <li>
-            <span aria-label="Smile" role="img">
-              😌
-            </span>{" "}
-            <strong>Easy</strong> - Eri should be straightforward and easy to
-            use.
           </li>
         </ul>
       </Paper>
