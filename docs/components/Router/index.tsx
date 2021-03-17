@@ -35,6 +35,7 @@ import SignUpPageDocs from "../Components/SignUpPageDocs";
 import SpinnerDocs from "../Components/SpinnerDocs";
 import TextAreaDocs from "../Components/TextAreaDocs";
 import TextFieldDocs from "../Components/TextFieldDocs";
+import ToggleDocs from "../Components/ToggleDocs";
 import Typography from "../Typography";
 import VerifyPageDocs from "../Components/VerifyPageDocs";
 import WordCloudDocs from "../Components/WordCloudDocs";
@@ -87,6 +88,7 @@ export default function Router() {
       <ResetPasswordPageDocs path="pages/reset-password" />
       <SignInPageDocs path="pages/sign-in" />
       <SignUpPageDocs path="pages/sign-up" />
+      <ToggleDocs path="components/toggle" />
       <VerifyPageDocs path="pages/verify" />
     </ReachRouter>
   );

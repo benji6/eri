@@ -23,8 +23,8 @@ export default function Checkbox({ label, error, ...rest }: IProps) {
           <Icon name="check" size="2" />
         </span>
         <span className="e-checkbox__label-copy">{label}</span>
+        <FieldError indent>{error}</FieldError>
       </label>
-      <FieldError>{error}</FieldError>
     </Field>
   );
 }

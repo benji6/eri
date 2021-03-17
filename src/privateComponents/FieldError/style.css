@@ -3,3 +3,8 @@
   font-weight: initial;
   padding-top: var(--e-space-0);
 }
+
+.e-field-error--indent {
+  grid-column-start: 2;
+  padding-top: 0;
+}

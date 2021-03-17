@@ -1,26 +1,14 @@
 .e-checkbox {
   --checkbox-size: var(--e-font-size-3);
-  --checkbox-margin-right: var(--e-space-2);
 
   position: relative;
 }
 
-.e-checkbox .e-field-error {
-  margin-left: calc(
-    var(--checkbox-size) + var(--checkbox-margin-right) +
-      var(--e-border-width-2)
-  );
-}
-
 .e-checkbox__label {
+  column-gap: var(--e-space-2);
   cursor: pointer;
-  display: flex;
-}
-
-@media (min-width: 37rem) {
-  .e-checkbox__label {
-    display: inline-flex;
-  }
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 .e-checkbox__input {
@@ -49,7 +37,6 @@
   flex-shrink: 0;
   height: var(--checkbox-size);
   justify-content: center;
-  margin-right: var(--checkbox-margin-right);
   stroke-dasharray: 30;
   stroke-dashoffset: -30;
   transition-duration: var(--e-time-0);

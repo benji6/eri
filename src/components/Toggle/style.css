@@ -9,10 +9,8 @@
   background: var(--e-color-balance);
   border-radius: var(--e-space-3);
   border: var(--e-border-width-2) solid transparent;
-  cursor: pointer;
   flex-shrink: 0;
   height: var(--toggle-button-diameter);
-  margin-right: var(--e-space-2);
   padding: var(--e-border-width-2);
   transition-duration: var(--e-time-0);
   transition-property: background-color, border-color;
@@ -39,9 +37,6 @@
   width: calc(var(--toggle-width) + 2 * var(--e-border-width-2));
 }
 
-.e-toggle__input:hover ~ .e-toggle__appearance {
-  background: var(--e-color-balance-less);
-}
 .e-toggle__input:checked ~ .e-toggle__appearance {
   background: var(--e-color-positive);
 }
@@ -56,19 +51,33 @@
   border-color: var(--e-color-theme-less);
 }
 
-.e-toggle__input:checked:hover ~ .e-toggle__appearance {
+.e-toggle__input[aria-invalid="true"] ~ .e-toggle__appearance {
+  border-color: var(--e-color-negative);
+}
+
+.e-toggle__input:disabled ~ .e-toggle__appearance {
+  background: var(--e-color-balance-less);
+}
+.e-toggle__input:disabled ~ .e-toggle__appearance::after {
+  background: var(--e-color-ground-less);
+}
+
+.e-toggle__input:hover:not(:disabled) ~ .e-toggle__appearance {
+  background: var(--e-color-balance-less);
+}
+
+.e-toggle__input:checked:hover:not(:disabled) ~ .e-toggle__appearance {
   background: var(--e-color-positive-less);
 }
 
 .e-toggle__label {
+  column-gap: var(--e-space-2);
   cursor: pointer;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
-
-@media (min-width: 37rem) {
-  .e-toggle__label {
-    display: inline-flex;
-  }
+.e-toggle__label--disabled {
+  cursor: not-allowed;
 }
 
 .e-toggle__label-copy {

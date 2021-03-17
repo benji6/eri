@@ -82,6 +82,9 @@ export default function ComponentLinks(
       <Menu.Link {...props} to="/components/text-field">
         TextField
       </Menu.Link>
+      <Menu.Link {...props} to="/components/toggle">
+        Toggle
+      </Menu.Link>
       <Menu.Link {...props} to="/components/word-cloud">
         WordCloud
       </Menu.Link>

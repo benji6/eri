@@ -50,7 +50,10 @@ export default function FormDocs(_: RouteComponentProps) {
               label="Checkbox with a long label so we can see how it overflows"
             />
             <Toggle label="Toggle" />
-            <Toggle label="Toggle with a long label so we can see how it overflows" />
+            <Toggle
+              error="Oops!"
+              label="Toggle with a long label so we can see how it overflows"
+            />
           </fieldset>
           <CurrencyField label="Currency field" />
           <DateField label="Date field" supportiveText="Some supportive text" />
