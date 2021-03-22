@@ -7,6 +7,14 @@
   opacity: 0;
 }
 
+.ml-0 {
+  margin-left: var(--e-space-0);
+}
+
+.mr-0 {
+  margin-right: var(--e-space-0);
+}
+
 .negative {
   color: var(--e-color-negative);
 }

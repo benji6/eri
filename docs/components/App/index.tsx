@@ -30,6 +30,9 @@ export default function App() {
           <Menu.Link onClick={handleMenuClose} to="/typography">
             Typography
           </Menu.Link>
+          <Menu.Link onClick={handleMenuClose} to="/css-utilities">
+            CSS utilities
+          </Menu.Link>
           <Menu.Link onClick={handleMenuClose} to="/components">
             Components
           </Menu.Link>

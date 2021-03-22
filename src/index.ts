@@ -1,7 +1,6 @@
 import "./reset.css";
 
 import "./global.css";
-import "./utils.css";
 import "./vars/animation.css";
 import "./vars/border.css";
 import "./vars/box-shadow.css";
@@ -51,3 +50,5 @@ export { default as WordCloud } from "./components/WordCloud";
 
 export { default as getCssVar } from "./utils/getCssVar";
 export * from "./utils/validators";
+
+import "./utils.css";

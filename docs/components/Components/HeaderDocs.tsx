@@ -4,7 +4,7 @@ import { Header, Menu, Paper } from "../../../src";
 import { Link, RouteComponentProps } from "@reach/router";
 
 export default function HeaderDocs(_: RouteComponentProps) {
-  const [exampleProps, setExampleProps] = React.useState({
+  const [props, setProps] = React.useState({
     title: "Eri",
   });
 
@@ -17,17 +17,13 @@ export default function HeaderDocs(_: RouteComponentProps) {
         example={
           <Header>
             <h1>
-              <Link to="#">{exampleProps.title}</Link>
+              <Link to="#">{props.title}</Link>
             </h1>
             <Menu.Button />
           </Header>
         }
       >
-        <PropControlString
-          name="title"
-          props={exampleProps}
-          setProps={setExampleProps}
-        />
+        <PropControlString name="title" props={props} setProps={setProps} />
       </ConfigurableExample>
     </Paper.Group>
   );

@@ -133,7 +133,7 @@ export default function Icon({
 }: IProps) {
   const className = `e-icon e-icon--size-${size}${draw ? " e-icon--draw" : ""}${
     size === "inherit" ? " e-icon--inline" : ""
-  }${margin ? ` e-icon--margin-${margin}` : ""}`;
+  }${margin ? ` m${margin[0]}-0` : ""}`;
 
   return (
     <svg

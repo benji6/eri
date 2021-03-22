@@ -7,7 +7,7 @@ export default function MenuButton(
 ) {
   return (
     <button {...props} className="e-menu-button ripple">
-      <span className="e-menu-button__text">Menu</span>
+      <span className="e-menu-button__text mr-0">Menu</span>
       <Icon name="menu" size="3" />
     </button>
   );

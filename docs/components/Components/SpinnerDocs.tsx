@@ -1,16 +1,18 @@
 import * as React from "react";
 import ConfigurableExample, {
   PropControlBoolean,
+  PropControlEnum,
 } from "./_ConfigurableExample";
 import { Paper, Spinner } from "../../../src";
 import { IProps } from "../../../src/components/Spinner";
 import { RouteComponentProps } from "@reach/router";
 
 export default function SpinnerDocs(_: RouteComponentProps) {
-  const [exampleProps, setExampleProps] = React.useState<IProps>({
+  const [props, setProps] = React.useState<IProps>({
     inline: false,
+    margin: undefined,
   });
-  const spinnerEl = <Spinner {...exampleProps} />;
+  const spinnerEl = <Spinner {...props} />;
   return (
     <Paper.Group>
       <Paper>
@@ -18,17 +20,25 @@ export default function SpinnerDocs(_: RouteComponentProps) {
       </Paper>
       <ConfigurableExample
         example={
-          exampleProps.inline ? (
-            <p className="center">An inline example {spinnerEl}</p>
+          props.inline ? (
+            <p className="center">
+              {props.margin === "right" ? (
+                <>{spinnerEl}An inline example</>
+              ) : (
+                <>An inline example{spinnerEl}</>
+              )}
+            </p>
           ) : (
             spinnerEl
           )
         }
       >
-        <PropControlBoolean
-          name="inline"
-          props={exampleProps}
-          setProps={setExampleProps}
+        <PropControlBoolean name="inline" props={props} setProps={setProps} />
+        <PropControlEnum
+          name="margin"
+          options={[undefined, "left", "right"]}
+          props={props}
+          setProps={setProps}
         />
       </ConfigurableExample>
     </Paper.Group>

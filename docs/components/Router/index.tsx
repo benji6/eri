@@ -6,6 +6,7 @@ import CardDocs from "../Components/CardDocs";
 import ChangePasswordPageDocs from "../Components/ChangePasswordPageDocs";
 import ComboBoxDocs from "../Components/ComboBoxDocs";
 import ComponentsHome from "../Components/ComponentsHome";
+import CssUtilities from "../CssUtilities";
 import CurrencyFieldDocs from "../Components/CurrencyFieldDocs";
 import DateFieldDocs from "../Components/DateFieldDocs";
 import DesignElements from "../DesignElements";
@@ -59,6 +60,7 @@ export default function Router() {
       <ButtonDocs path="components/button" />
       <CardDocs path="components/card" />
       <ComboBoxDocs path="components/combo-box" />
+      <CssUtilities path="css-utilities" />
       <CurrencyFieldDocs path="components/currency-field" />
       <DateFieldDocs path="components/date-field" />
       <DialogDocs path="components/dialog" />
