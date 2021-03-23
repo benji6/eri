@@ -1,8 +1,6 @@
 .d-color__visual {
   --size: var(--e-space-3);
 
-  border: var(--e-border-default);
-  border-radius: var(--e-border-radius-1);
   height: var(--size);
   transition: background-color var(--e-time-0) var(--e-easing-standard);
   width: var(--size);

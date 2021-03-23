@@ -3,14 +3,10 @@
   --color-active: var(--e-color-theme-more);
   --color-hover: var(--e-color-theme-less);
 
-  border-radius: var(--e-border-radius-1);
-  box-shadow: var(--e-box-shadow-0);
-  font-weight: var(--e-font-weight-bold);
   padding: var(--e-space-1) var(--e-space-3);
   transition-duration: var(--e-time-0);
   transition-property: background-color, border-color, box-shadow, transform;
   transition-timing-function: var(--e-easing-standard);
-  user-select: none;
 }
 
 .e-button:hover {
@@ -34,7 +30,6 @@
   color: var(--e-color-ground);
   padding: calc(var(--e-space-1) + 2 * var(--e-border-width-1))
     calc(var(--e-space-3) + 2 * var(--e-border-width-1));
-  position: relative;
 }
 
 .e-button--primary:hover {
@@ -54,7 +49,6 @@
 
 .e-button--secondary {
   background: none;
-  border: var(--e-border-default);
   border-color: var(--color);
   color: var(--color);
 }

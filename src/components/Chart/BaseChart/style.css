@@ -2,7 +2,3 @@
   /* If you change this property then update FONT_SIZE in script */
   font-size: 0.05px;
 }
-
-.e-base-chart__axis-label {
-  font-weight: var(--e-font-weight-bold);
-}

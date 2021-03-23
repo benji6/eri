@@ -60,7 +60,7 @@ export default function ImageUpload({
         {imageUrl && (
           <img
             alt={`preview of ${imageName}`}
-            className="e-image-upload__img"
+            className="e-image-upload__img bw-2"
             onLoad={handleLoad}
             src={imageUrl}
           />
@@ -73,7 +73,7 @@ export default function ImageUpload({
           {...rest}
           accept="image/*"
           aria-invalid={Boolean(error)}
-          className="e-image-upload__input"
+          className="inline-flex"
           onChange={handleChange}
           type="file"
         />

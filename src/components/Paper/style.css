@@ -1,9 +1,6 @@
 .e-paper {
   background: var(--e-color-ground-more);
-  box-shadow: var(--e-box-shadow-0);
-  border-radius: var(--e-border-radius-0);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
-  padding: var(--e-space-2);
 }
 
 /* stylelint-disable no-descending-specificity */
@@ -44,7 +41,6 @@
 
 button.e-paper {
   outline: 0;
-  position: relative;
   text-align: initial;
 }
 

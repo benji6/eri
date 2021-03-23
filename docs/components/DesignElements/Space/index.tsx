@@ -17,7 +17,10 @@ interface IProps {
 export default function Space({ varName }: IProps) {
   return (
     <>
-      <div className="d-space__visual" style={{ width: `var(${varName})` }} />
+      <div
+        className="d-space__visual br-0"
+        style={{ width: `var(${varName})` }}
+      />
       <CodeSnippet language="css">{varName}</CodeSnippet>
     </>
   );

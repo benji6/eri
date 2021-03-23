@@ -26,11 +26,11 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
   }
 
   return pageCount > 1 ? (
-    <div className="e-pagination">
+    <div className="e-pagination flex my-3 select-none">
       {page !== 0 && (
         <button
           aria-label="navigate to previous page"
-          className="pagination__arrow-button pagination__button ripple"
+          className="pagination__button br-1 px-1 ripple"
           data-page={page - 1}
           onClick={() => onChange(page - 1)}
           type="button"
@@ -41,7 +41,7 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
       {pageNumbers.map((i) => (
         <button
           aria-label={`navigate to page ${i + 1}`}
-          className="pagination__button"
+          className="pagination__button br-1"
           data-page={i}
           disabled={i === page}
           key={i}
@@ -53,7 +53,7 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
       {page !== pageCount - 1 && (
         <button
           aria-label="navigate to next page"
-          className="pagination__arrow-button pagination__button ripple"
+          className="pagination__button br-1 px-1 ripple"
           data-page={page + 1}
           onClick={() => onChange(page + 1)}
           type="button"

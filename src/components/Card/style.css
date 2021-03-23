@@ -1,14 +1,10 @@
 .e-card {
   background-color: var(--e-color-ground-more);
-  border: var(--e-border-default);
   border-color: var(--color);
-  border-radius: var(--e-border-radius-1);
   box-shadow: var(--e-box-shadow-even-1-no-color) var(--color);
-  padding: var(--e-space-2);
 }
 
 button.e-card {
-  display: block;
   text-align: initial;
   transition-duration: var(--e-time-0);
   transition-property: box-shadow, transform;

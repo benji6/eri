@@ -1,14 +1,11 @@
 .e-toggle {
   --toggle-button-diameter: var(--e-space-2);
   --toggle-width: calc(2 * var(--toggle-button-diameter));
-
-  position: relative;
 }
 
 .e-toggle__appearance {
   background: var(--e-color-balance);
-  border-radius: var(--e-space-3);
-  border: var(--e-border-width-2) solid transparent;
+  border-color: transparent;
   flex-shrink: 0;
   height: var(--toggle-button-diameter);
   padding: var(--e-border-width-2);
@@ -30,10 +27,8 @@
 
 .e-toggle__input {
   opacity: 0;
-  border-radius: var(--e-space-3);
   pointer-events: none;
   height: calc(var(--toggle-button-diameter) + 2 * var(--e-border-width-2));
-  position: absolute;
   width: calc(var(--toggle-width) + 2 * var(--e-border-width-2));
 }
 
@@ -73,7 +68,6 @@
 .e-toggle__label {
   column-gap: var(--e-space-2);
   cursor: pointer;
-  display: grid;
   grid-template-columns: auto 1fr;
 }
 .e-toggle__label--disabled {
@@ -82,5 +76,4 @@
 
 .e-toggle__label-copy {
   align-items: center;
-  display: flex;
 }

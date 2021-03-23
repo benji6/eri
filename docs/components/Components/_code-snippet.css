@@ -1,7 +1,5 @@
 .d-code-snippet {
   background: var(--e-color-ground);
-  border-radius: var(--e-border-radius-1);
   margin: var(--e-space-1) 0;
   overflow: auto;
-  padding: var(--e-space-1);
 }

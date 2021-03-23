@@ -2,8 +2,3 @@
   list-style: none;
   margin-top: calc(-1 * var(--e-space-0));
 }
-
-.e-nav-sub-list__list {
-  margin: 0;
-  padding: 0;
-}

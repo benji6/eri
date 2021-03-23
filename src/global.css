@@ -6,6 +6,7 @@ html {
     var(--e-color-ground) 100%
   );
   background-color: var(--e-color-ground);
+  border-color: var(--e-color-figure-more);
   color: var(--e-color-figure);
   font-family: "Public Sans", sans-serif;
   font-weight: var(--e-font-weight-normal);
@@ -169,7 +170,7 @@ select,
 textarea {
   background-color: var(--e-color-ground-more);
   border-radius: var(--e-border-radius-1);
-  border: var(--e-border-default);
+  border: var(--e-border-width-2) solid var(--e-color-figure-more);
   outline: 0;
   padding: var(--e-space-1);
   transition-duration: var(--e-time-0);

@@ -1,14 +1,10 @@
 .e-nav-link {
   list-style: none;
-  margin: 0;
 }
 
 .e-nav-link__link {
   --active-color: var(--e-color-highlight-default);
 
-  display: block;
-  font-weight: var(--e-font-weight-bold);
-  padding: var(--e-space-1) var(--e-space-3);
   text-decoration: none;
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;

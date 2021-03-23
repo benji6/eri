@@ -11,18 +11,18 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export default function Checkbox({ label, error, ...rest }: IProps) {
   return (
-    <Field className="e-checkbox">
-      <label className="e-checkbox__label">
+    <Field className="e-checkbox relative">
+      <label className="e-checkbox__label grid">
         <input
           {...rest}
           aria-invalid={!!error}
-          className="e-checkbox__input"
+          className="e-checkbox__input absolute m-0"
           type="checkbox"
         />
-        <span className="e-checkbox__appearance">
+        <span className="e-checkbox__appearance br-1 bw-2 inline-flex">
           <Icon name="check" size="2" />
         </span>
-        <span className="e-checkbox__label-copy">{label}</span>
+        <span className="e-checkbox__label-copy flex">{label}</span>
         <FieldError indent>{error}</FieldError>
       </label>
     </Field>

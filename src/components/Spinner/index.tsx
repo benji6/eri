@@ -7,8 +7,8 @@ export interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function Spinner({ inline, margin, ...rest }: IProps) {
-  const className = `e-spinner${inline ? " e-spinner--inline" : ""}${
-    margin ? ` m${margin[0]}-0` : ""
-  }`;
+  const className = `e-spinner br-max flex${
+    inline ? " e-spinner--inline inline-flex" : ""
+  }${margin ? ` m${margin[0]}-1` : ""}`;
   return <span {...rest} className={className} />;
 }

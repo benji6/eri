@@ -1,16 +1,12 @@
 .e-pagination {
   border-bottom: var(--e-border-width-2) solid currentColor;
   border-top: var(--e-border-width-2) solid currentColor;
-  display: flex;
   justify-content: center;
-  margin: var(--e-space-2) 0;
   padding: var(--e-space-1) 0;
-  user-select: none;
 }
 
 .pagination__button {
   background: none;
-  border-radius: var(--e-border-radius-1);
   color: var(--e-color-theme);
   padding: var(--e-space-0) var(--e-space-1);
 }
@@ -20,11 +16,6 @@
     padding-left: var(--e-space-2);
     padding-right: var(--e-space-2);
   }
-}
-
-.pagination__arrow-button {
-  padding-left: var(--e-space-0);
-  padding-right: var(--e-space-0);
 }
 
 .pagination__button:focus {

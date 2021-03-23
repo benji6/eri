@@ -1,9 +1,6 @@
 .e-quick-nav-link {
   background: var(--e-color-theme);
-  border-radius: 50%;
-  box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground);
-  padding: var(--e-space-2);
   transition-duration: var(--e-time-0);
   transition-property: background-color, box-shadow;
   transition-timing-function: var(--e-easing-standard);

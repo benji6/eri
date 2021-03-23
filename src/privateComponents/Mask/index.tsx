@@ -61,9 +61,9 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
         timeout={{ exit: getCssTime1() + 100 }}
         unmountOnExit
       >
-        <div className="e-mask__mask" onClick={onClose} />
+        <div className="e-mask__mask fixed z-3" onClick={onClose} />
       </CSSTransition>
-      <div {...rest} className="e-mask__container" />
+      <div {...rest} className="relative z-3" />
     </div>,
     /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
     portalEl

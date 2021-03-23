@@ -1,29 +1,20 @@
 .e-radio-button {
-  display: inline-flex;
   flex-grow: 1;
   margin-left: calc(-1 * var(--e-border-width-2));
-  position: relative;
 }
 
 .e-radio-button__input {
   height: 100%;
   left: 0;
-  margin: 0;
   opacity: 0;
   pointer-events: none;
-  position: absolute;
   top: 0;
   width: 100%;
 }
 
 .e-radio-button__appearance {
   background-color: var(--e-color-ground-more);
-  border: var(--e-border-default);
   cursor: pointer;
-  display: inline-block;
-  padding: var(--e-space-0);
-  position: relative;
-  text-align: center;
   transition-duration: var(--e-time-0);
   transition-property: background-color, border-color, color;
   transition-timing-function: var(--e-easing-standard);
@@ -56,6 +47,10 @@
   border-color: var(--e-color-theme-more);
   color: var(--e-color-theme-more);
   z-index: var(--e-z-index-1);
+}
+
+.e-radio-button-group {
+  border: none;
 }
 
 .e-radio-button-group[aria-invalid="true"] .e-radio-button__appearance {

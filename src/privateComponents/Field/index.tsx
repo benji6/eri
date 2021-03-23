@@ -1,4 +1,3 @@
-import "./style.css";
 import * as React from "react";
 
 export default function Field({
@@ -6,6 +5,9 @@ export default function Field({
   ...rest
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div {...rest} className={`e-field${className ? ` ${className}` : ""}`} />
+    <div
+      {...rest}
+      className={`select-none my-3${className ? ` ${className}` : ""}`}
+    />
   );
 }

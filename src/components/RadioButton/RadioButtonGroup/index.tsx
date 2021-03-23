@@ -1,4 +1,3 @@
-import "./style.css";
 import * as React from "react";
 import Field from "../../../privateComponents/Field";
 import FieldError from "../../../privateComponents/FieldError";
@@ -24,12 +23,12 @@ export default function RadioButtonGroup({
       <fieldset
         {...rest}
         aria-invalid={!!error}
-        className="e-radio-button-group"
+        className="e-radio-button-group p-0"
       >
-        <legend className="e-radio-button-group__legend">
+        <legend className="p-0">
           <FieldLabelText optional={false}>{label}</FieldLabelText>
         </legend>
-        <div className="e-radio-button-group__container">{children}</div>
+        <div className="flex">{children}</div>
         <FieldError>{error}</FieldError>
       </fieldset>
     </Field>

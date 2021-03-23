@@ -26,7 +26,7 @@ export default function Select({
       <Label>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
-        <span className="e-select__select-container">
+        <span className="relative">
           <select
             // When fields aren't in forms they should not be required
             // and do not need to be marked explicitly as optional,
@@ -36,7 +36,7 @@ export default function Select({
             aria-invalid={Boolean(error)}
             className="e-select__select"
           />
-          <span className="e-select__icon">
+          <span className="e-select__icon absolute flex">
             <Icon name="down" size="2" />
           </span>
         </span>

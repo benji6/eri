@@ -1,4 +1,3 @@
-import "./style.css";
 import * as React from "react";
 
 interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
@@ -11,7 +10,7 @@ export default function FieldLabelText({
   ...rest
 }: IProps) {
   return (
-    <span {...rest} className="e-field-label">
+    <span {...rest} className="block fs-0 fw-b mb-1">
       {children}
       {optional && " (optional)"}
     </span>

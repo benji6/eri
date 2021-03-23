@@ -10,7 +10,7 @@ export default function BoxShadow({ varName }: IProps) {
   return (
     <>
       <div
-        className="d-box-shadow__visual"
+        className="d-box-shadow__visual br-1"
         style={{ boxShadow: `var(${varName})` }}
       />
       <CodeSnippet language="css">{varName}</CodeSnippet>

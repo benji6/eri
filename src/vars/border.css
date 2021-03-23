@@ -1,8 +1,0 @@
-:root {
-  --e-border-radius-0: calc(2em / 5);
-  --e-border-radius-1: calc(2em / 3);
-  --e-border-width-0: 1px;
-  --e-border-width-1: 2px;
-  --e-border-width-2: 3px;
-  --e-border-default: var(--e-border-width-2) solid var(--e-color-figure-more);
-}

@@ -9,3 +9,21 @@
   --e-font-weight-normal: 400;
   --e-line-height: calc(4 / 3);
 }
+
+.fs-0 {
+  font-size: var(--e-font-size-0);
+}
+
+.fw-b {
+  font-weight: var(--e-font-weight-bold);
+}
+.fw-i {
+  font-weight: initial;
+}
+.fw-n {
+  font-weight: var(--e-font-weight-normal);
+}
+
+.italic {
+  font-style: italic;
+}

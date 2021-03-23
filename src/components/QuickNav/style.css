@@ -3,13 +3,10 @@
   --margin: var(--e-space-2);
 
   bottom: var(--margin);
-  display: flex;
   justify-content: space-evenly;
   left: var(--e-space-for-nav);
   pointer-events: none;
-  position: fixed;
   right: 0;
-  z-index: var(--e-z-index-1);
 }
 
 .e-quick-nav > * {

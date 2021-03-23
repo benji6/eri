@@ -1,0 +1,82 @@
+:root {
+  --e-break-point: 100vw;
+  --e-header-height: 3.93em;
+  --e-nav-width: 16em;
+  --e-space-for-nav: 0; /* used for components that need to shift when the nav is always open */
+  --e-space-scale-ratio: 1.61803;
+  --e-space-0: calc(1em / 3);
+  --e-space-1: calc(var(--e-space-0) * var(--e-space-scale-ratio));
+  --e-space-2: calc(var(--e-space-1) * var(--e-space-scale-ratio));
+  --e-space-3: calc(var(--e-space-2) * var(--e-space-scale-ratio));
+  --e-space-4: calc(var(--e-space-3) * var(--e-space-scale-ratio));
+}
+
+@media (min-width: 37rem) {
+  :root {
+    --e-break-point: 37rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  :root {
+    --e-space-for-nav: var(--e-nav-width);
+  }
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mb-1 {
+  margin-bottom: var(--e-space-0);
+}
+
+.ml-1 {
+  margin-left: var(--e-space-0);
+}
+
+.mr-1 {
+  margin-right: var(--e-space-0);
+}
+
+.my-3 {
+  margin-bottom: var(--e-space-2);
+  margin-top: var(--e-space-2);
+}
+
+.p-0 {
+  padding: 0;
+}
+.p-1 {
+  padding: var(--e-space-0);
+}
+.p-2 {
+  padding: var(--e-space-1);
+}
+.p-3 {
+  padding: var(--e-space-2);
+}
+.p-4 {
+  padding: var(--e-space-3);
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+.pt-1 {
+  padding-top: var(--e-space-0);
+}
+
+.px-1 {
+  padding-left: var(--e-space-0);
+  padding-right: var(--e-space-0);
+}
+.px-4 {
+  padding-left: var(--e-space-3);
+  padding-right: var(--e-space-3);
+}
+
+.py-2 {
+  padding-bottom: var(--e-space-1);
+  padding-top: var(--e-space-1);
+}

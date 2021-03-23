@@ -36,7 +36,7 @@ export default function Color({ varName }: IProps) {
   return (
     <>
       <div
-        className="d-color__visual"
+        className="d-color__visual br-1 bw-2"
         style={{ background: `var(${varName})` }}
       />
       <CodeSnippet language="css">{varName}</CodeSnippet>

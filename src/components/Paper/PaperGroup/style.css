@@ -1,10 +1,6 @@
 .e-paper-group {
-  display: grid;
   grid-gap: var(--e-space-2);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
-
-  /* switching to margin cuts off the paper box-shadow */
-  padding: var(--e-space-2);
   width: calc(var(--e-break-point) - 2 * var(--e-space-2));
 }
 

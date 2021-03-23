@@ -16,7 +16,7 @@ export default function CodeSnippet({ children, language }: IProps) {
     .value;
 
   return (
-    <pre className="d-code-snippet">
+    <pre className="d-code-snippet br-1 p-2">
       <code
         className={`language-${language}`}
         dangerouslySetInnerHTML={{

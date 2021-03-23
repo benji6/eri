@@ -41,7 +41,7 @@ export default function Nav({ children, onClose, open, ...rest }: IProps) {
       >
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
         <nav {...rest} className="e-nav" onClick={(e) => e.stopPropagation()}>
-          <div className="e-nav__close-button">
+          <div className="e-nav__close-button absolute">
             <CloseButton onClick={onClose} />
           </div>
           {children}

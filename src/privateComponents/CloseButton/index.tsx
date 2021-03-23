@@ -9,7 +9,7 @@ export default function CloseButton(
     <button
       {...props}
       aria-label="close"
-      className="e-close-button ripple"
+      className="e-close-button br-1 ripple"
       type="button"
     >
       <Icon name="cross" size="2" />

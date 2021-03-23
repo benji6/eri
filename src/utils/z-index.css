@@ -1,0 +1,15 @@
+:root {
+  --e-z-index-1: 1;
+  --e-z-index-2: 2;
+  --e-z-index-3: 3;
+}
+
+.z-1 {
+  z-index: var(--e-z-index-1);
+}
+.z-2 {
+  z-index: var(--e-z-index-2);
+}
+.z-3 {
+  z-index: var(--e-z-index-3);
+}

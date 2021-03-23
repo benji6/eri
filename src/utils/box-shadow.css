@@ -21,3 +21,10 @@
   --e-box-shadow-input-focus: var(--e-box-shadow-even-0-no-color)
     var(--e-color-theme-less);
 }
+
+.bs-0 {
+  box-shadow: var(--e-box-shadow-0);
+}
+.bs-1 {
+  box-shadow: var(--e-box-shadow-1);
+}

@@ -1,8 +1,6 @@
 .e-button-group {
-  display: flex;
   flex-direction: column;
   margin: var(--e-space-3) 0 var(--e-space-4);
-  text-align: center;
 }
 
 .e-button-group > *:not(:last-child) {

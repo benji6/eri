@@ -16,7 +16,7 @@ export default function Card({ color, ...rest }: Props) {
     return (
       <div
         {...(props as React.HTMLAttributes<HTMLDivElement>)}
-        className="e-card"
+        className="e-card br-1 bw-1 p-3"
       />
     );
 
@@ -24,7 +24,7 @@ export default function Card({ color, ...rest }: Props) {
     <button
       {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}
       aria-label="View card"
-      className="e-card ripple"
+      className="e-card block br-1 bw-1 p-3 ripple"
       type="button"
     />
   );

@@ -10,7 +10,7 @@ export default function Time({ varName }: IProps) {
   return (
     <>
       <div
-        className="d-time__visual"
+        className="d-time__visual br-1"
         style={{ animationDuration: `var(${varName})` }}
       />
       <CodeSnippet language="css">{varName}</CodeSnippet>

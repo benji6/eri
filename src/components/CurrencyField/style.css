@@ -1,14 +1,3 @@
-.e-currency-field__label {
-  display: flex;
-  flex-direction: column;
-}
-
-.e-currency-field__input-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
 .e-currency-field__input-container::after {
   align-items: center;
   bottom: 0;

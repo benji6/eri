@@ -1,15 +1,9 @@
 import "./reset.css";
 
 import "./global.css";
-import "./vars/animation.css";
-import "./vars/border.css";
-import "./vars/box-shadow.css";
 import "./vars/color.css";
 import "./vars/easing.css";
-import "./vars/space.css";
 import "./vars/time.css";
-import "./vars/typography.css";
-import "./vars/z-index.css";
 
 import "./metaThemeColor";
 
@@ -51,4 +45,17 @@ export { default as WordCloud } from "./components/WordCloud";
 export { default as getCssVar } from "./utils/getCssVar";
 export * from "./utils/validators";
 
-import "./utils.css";
+import "./utils/animation.css";
+import "./utils/border.css";
+import "./utils/box-shadow.css";
+import "./utils/display.css";
+import "./utils/flex-direction.css";
+import "./utils/misc.css";
+import "./utils/position.css";
+import "./utils/sentiment.css";
+import "./utils/space.css";
+import "./utils/text-align.css";
+import "./utils/typography.css";
+import "./utils/user-select.css";
+import "./utils/whitespace.css";
+import "./utils/z-index.css";

@@ -1,18 +1,13 @@
 .e-fab {
   align-items: center;
   background: var(--e-color-theme);
-  border-radius: 10em;
   bottom: var(--e-space-2);
   box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground);
-  display: flex;
-  padding: var(--e-space-2);
-  position: fixed;
   right: var(--e-space-2);
   transition-duration: var(--e-time-0);
   transition-property: background-color, box-shadow, opacity, transform;
   transition-timing-function: var(--e-easing-standard);
-  z-index: var(--e-z-index-1);
 }
 
 .e-fab:focus,

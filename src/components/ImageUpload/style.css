@@ -1,8 +1,3 @@
 .e-image-upload__img {
-  border: var(--e-border-default);
   max-width: 50%;
-}
-
-.e-image-upload__input {
-  display: inline-flex;
 }

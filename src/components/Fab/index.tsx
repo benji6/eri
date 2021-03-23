@@ -37,7 +37,11 @@ export default function Fab({
       timeout={{ exit: getCssTime0() + 100 }}
       unmountOnExit
     >
-      <button {...rest} className="e-fab" type={type} />
+      <button
+        {...rest}
+        className="e-fab br-max fixed flex p-3 z-1"
+        type={type}
+      />
     </CSSTransition>,
     portalEl
   );

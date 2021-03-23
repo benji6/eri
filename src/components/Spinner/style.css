@@ -4,10 +4,8 @@
 
   animation: var(--e-animation-fade-in), var(--e-animation-spin);
   border: calc(var(--diameter) / 8) solid var(--color);
-  border-radius: 50%;
   border-right-color: transparent;
   box-sizing: border-box;
-  display: flex;
   height: var(--diameter);
   margin: var(--diameter) auto;
   width: var(--diameter);
@@ -17,6 +15,5 @@
   --color: currentColor;
   --diameter: 1em;
 
-  display: inline-flex;
   margin: auto;
 }

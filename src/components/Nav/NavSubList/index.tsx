@@ -6,7 +6,7 @@ export default function NavSubList(
 ) {
   return (
     <li className="e-nav-sub-list">
-      <ul {...props} className="e-nav-sub-list__list" />
+      <ul {...props} className="m-0 p-0" />
     </li>
   );
 }

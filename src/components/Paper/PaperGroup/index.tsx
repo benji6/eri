@@ -9,7 +9,8 @@ export default function PaperGroup({ noSlide, ...rest }: IProps) {
   return (
     <div
       {...rest}
-      className={`e-paper-group${noSlide ? "" : " slide-children-in"}`}
+      // padding used because margin cuts off the paper box-shadow
+      className={`e-paper-group grid p-3${noSlide ? "" : " slide-children-in"}`}
     />
   );
 }

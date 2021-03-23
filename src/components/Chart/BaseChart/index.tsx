@@ -65,7 +65,7 @@ export default function BaseChart({
           {/* x-axis-title */}
           {xAxisTitle && (
             <text
-              className="e-base-chart__axis-label"
+              className="fw-b"
               dy={FONT_SIZE * -0.2}
               fill="currentColor"
               textAnchor="middle"
@@ -89,7 +89,7 @@ export default function BaseChart({
           {/* y-axis-title */}
           {yAxisTitle && (
             <text
-              className="e-base-chart__axis-label"
+              className="fw-b"
               dy={FONT_SIZE * 0.8}
               fill="currentColor"
               textAnchor="middle"

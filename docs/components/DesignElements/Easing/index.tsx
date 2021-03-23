@@ -13,7 +13,7 @@ export default function Easing({ varName }: IProps) {
   return (
     <>
       <div
-        className="d-easing__visual"
+        className="d-easing__visual br-1"
         style={{ animationTimingFunction: `var(${varName})` }}
       />
       <CodeSnippet language="css">{varName}</CodeSnippet>

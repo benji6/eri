@@ -1,13 +1,10 @@
 .e-checkbox {
   --checkbox-size: var(--e-font-size-3);
-
-  position: relative;
 }
 
 .e-checkbox__label {
   column-gap: var(--e-space-2);
   cursor: pointer;
-  display: grid;
   grid-template-columns: auto 1fr;
 }
 
@@ -16,10 +13,8 @@
   bottom: 0;
   height: var(--checkbox-size);
   left: 0;
-  margin: 0;
   opacity: 0;
   pointer-events: none;
-  position: absolute;
   right: 0;
   top: 0;
   width: var(--checkbox-size);
@@ -29,11 +24,8 @@
   align-items: center;
   align-self: flex-start;
   background-color: var(--e-color-ground-more);
-  border: var(--e-border-default);
-  border-radius: var(--e-border-radius-1);
   box-sizing: border-box;
   color: var(--e-color-figure-more);
-  display: inline-flex;
   flex-shrink: 0;
   height: var(--checkbox-size);
   justify-content: center;
@@ -66,5 +58,4 @@
 
 .e-checkbox__label-copy {
   align-items: center;
-  display: flex;
 }

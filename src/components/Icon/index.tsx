@@ -132,8 +132,8 @@ export default function Icon({
   ...rest
 }: IProps) {
   const className = `e-icon e-icon--size-${size}${draw ? " e-icon--draw" : ""}${
-    size === "inherit" ? " e-icon--inline" : ""
-  }${margin ? ` m${margin[0]}-0` : ""}`;
+    size === "inherit" ? " e-icon--inline relative" : ""
+  }${margin ? ` m${margin[0]}-1` : ""}`;
 
   return (
     <svg

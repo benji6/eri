@@ -35,16 +35,16 @@ export default function Dialog({
           {...rest}
           aria-describedby="e-dialog-desc"
           aria-labelledby="e-dialog-title"
-          className="e-dialog"
+          className="e-dialog fixed flex"
           onClick={disableClose ? undefined : onClose}
           role="dialog"
         >
           <div
-            className="e-dialog__dialog"
+            className="e-dialog__dialog br-1 bs-1 p-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="e-dialog__content">
-              <div className="e-dialog__header">
+            <div>
+              <div className="e-dialog__header flex">
                 <h3 id="e-dialog-title">{title}</h3>
                 <div className="e-dialog__close-button-container">
                   <CloseButton

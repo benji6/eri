@@ -3,10 +3,8 @@
 
   align-items: center;
   bottom: 0;
-  display: flex;
   justify-content: center;
   left: 0;
-  position: fixed;
   right: 0;
   top: 0;
   transition-duration: var(--e-time-1);
@@ -26,13 +24,8 @@
   margin-top: calc(var(--content-vertical-padding) * -1);
 }
 
-.e-dialog__content {
-  position: relative;
-}
-
 .e-dialog__header {
   align-items: flex-start;
-  display: flex;
   justify-content: space-between;
 }
 
@@ -46,9 +39,6 @@
 
 .e-dialog__dialog {
   background-color: var(--e-color-ground);
-  border-radius: var(--e-border-radius-1);
-  box-shadow: var(--e-box-shadow-1);
   margin: 0 var(--e-space-3);
   max-width: var(--e-break-point);
-  padding: var(--e-space-3);
 }
