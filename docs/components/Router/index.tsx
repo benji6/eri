@@ -21,7 +21,7 @@ import ImageUploadDocs from "../Components/ImageUploadDocs";
 import LineChartDocs from "../Components/LineChartDocs";
 import LinkDocs from "../Components/LinkDocs";
 import MainDocs from "../Components/MainDocs";
-import MenuDocs from "../Components/MenuDocs";
+import NavDocs from "../Components/NavDocs";
 import PagesHome from "../Components/PagesHome";
 import PaginationDocs from "../Components/PaginationDocs";
 import PaperDocs from "../Components/PaperDocs";
@@ -72,7 +72,7 @@ export default function Router() {
       <LineChartDocs path="components/line-chart" />
       <LinkDocs path="components/link" />
       <MainDocs path="components/main" />
-      <MenuDocs path="components/menu" />
+      <NavDocs path="components/nav" />
       <PaginationDocs path="components/pagination" />
       <PaperDocs path="components/paper" />
       <SelectDocs path="components/select" />

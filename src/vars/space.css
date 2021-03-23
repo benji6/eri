@@ -1,8 +1,8 @@
 :root {
   --e-break-point: 100vw;
   --e-header-height: 3.93em;
-  --e-menu-width: 16em;
-  --e-space-for-menu: 0; /* used for components that need to shift when the menu is always open */
+  --e-nav-width: 16em;
+  --e-space-for-nav: 0; /* used for components that need to shift when the nav is always open */
   --e-space-scale-ratio: 1.61803;
   --e-space-0: calc(1em / 3);
   --e-space-1: calc(var(--e-space-0) * var(--e-space-scale-ratio));
@@ -19,6 +19,6 @@
 
 @media (min-width: 66rem) {
   :root {
-    --e-space-for-menu: var(--e-menu-width);
+    --e-space-for-nav: var(--e-nav-width);
   }
 }

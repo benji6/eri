@@ -1,8 +1,8 @@
-.e-menu-list {
+.e-nav-list {
   margin: 0;
   padding: var(--e-space-2) 0 0;
 }
 
-.e-menu__close-button ~ .e-menu-list {
+.e-nav__close-button ~ .e-nav-list {
   padding-top: var(--e-space-4);
 }

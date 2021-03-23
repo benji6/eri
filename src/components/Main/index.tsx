@@ -6,7 +6,7 @@ export type IProps = React.HTMLAttributes<HTMLElement>;
 
 export default function Main(props: IProps) {
   const state = React.useContext(EriStateContext);
-  const className = `e-main${state.menuExists ? " e-main--menu-space" : ""}`;
+  const className = `e-main${state.navExists ? " e-main--nav-space" : ""}`;
 
   const mainElRef = React.useRef<HTMLElement>(null);
 

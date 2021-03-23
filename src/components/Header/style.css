@@ -13,13 +13,13 @@
     z-index: var(--e-z-index-2);
   }
 
-  .e-header--menu-space {
+  .e-header--nav-space {
     padding-left: calc(
-      (100% - var(--e-break-point) - var(--e-menu-width)) / 2 - var(--e-space-2) +
-        var(--e-menu-width)
+      (100% - var(--e-break-point) - var(--e-nav-width)) / 2 - var(--e-space-2) +
+        var(--e-nav-width)
     );
     padding-right: calc(
-      (100% - var(--e-break-point) - var(--e-menu-width)) / 2 - var(--e-space-2)
+      (100% - var(--e-break-point) - var(--e-nav-width)) / 2 - var(--e-space-2)
     );
   }
 }

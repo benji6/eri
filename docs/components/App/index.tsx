@@ -1,15 +1,15 @@
 import "./style.css";
 import * as React from "react";
-import { Header, Main, Menu } from "../../../src";
+import { Header, Main, Nav } from "../../../src";
 import ComponentLinks from "../ComponentLinks";
 import { Link } from "@reach/router";
 import PageLinks from "../PageLinks";
 import Router from "../Router";
 
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const handleMenuClose = () => setIsMenuOpen(false);
-  const handleMenuOpen = () => setIsMenuOpen(true);
+  const [isNavOpen, setIsNavOpen] = React.useState(false);
+  const handleNavClose = () => setIsNavOpen(false);
+  const handleNavOpen = () => setIsNavOpen(true);
 
   return (
     <React.StrictMode>
@@ -17,32 +17,32 @@ export default function App() {
         <h1>
           <Link to="/">Eri</Link>
         </h1>
-        <Menu.Button onClick={handleMenuOpen} />
+        <Nav.Button onClick={handleNavOpen} />
       </Header>
-      <Menu onClose={handleMenuClose} open={isMenuOpen}>
-        <Menu.List>
-          <Menu.Link onClick={handleMenuClose} to="/">
+      <Nav onClose={handleNavClose} open={isNavOpen}>
+        <Nav.List>
+          <Nav.Link onClick={handleNavClose} to="/">
             Home
-          </Menu.Link>
-          <Menu.Link onClick={handleMenuClose} to="/design-elements">
+          </Nav.Link>
+          <Nav.Link onClick={handleNavClose} to="/design-elements">
             Design elements
-          </Menu.Link>
-          <Menu.Link onClick={handleMenuClose} to="/typography">
+          </Nav.Link>
+          <Nav.Link onClick={handleNavClose} to="/typography">
             Typography
-          </Menu.Link>
-          <Menu.Link onClick={handleMenuClose} to="/css-utilities">
+          </Nav.Link>
+          <Nav.Link onClick={handleNavClose} to="/css-utilities">
             CSS utilities
-          </Menu.Link>
-          <Menu.Link onClick={handleMenuClose} to="/components">
+          </Nav.Link>
+          <Nav.Link onClick={handleNavClose} to="/components">
             Components
-          </Menu.Link>
-          <ComponentLinks onClick={handleMenuClose} />
-          <Menu.Link onClick={handleMenuClose} to="/pages">
+          </Nav.Link>
+          <ComponentLinks onClick={handleNavClose} />
+          <Nav.Link onClick={handleNavClose} to="/pages">
             Pages
-          </Menu.Link>
-          <PageLinks onClick={handleMenuClose} />
-        </Menu.List>
-      </Menu>
+          </Nav.Link>
+          <PageLinks onClick={handleNavClose} />
+        </Nav.List>
+      </Nav>
       <Main>
         <Router />
       </Main>

@@ -29,7 +29,7 @@ export { default as Header } from "./components/Header";
 export { default as Icon } from "./components/Icon";
 export { default as ImageUpload } from "./components/ImageUpload";
 export { default as Main } from "./components/Main";
-export { default as Menu } from "./components/Menu";
+export { default as Nav } from "./components/Nav";
 export { default as Pagination } from "./components/Pagination";
 export { default as Paper } from "./components/Paper";
 export { default as QuickNav } from "./components/QuickNav";

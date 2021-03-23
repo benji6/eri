@@ -3,6 +3,6 @@
   justify-content: center;
 }
 
-.e-main--menu-space {
-  padding-left: var(--e-space-for-menu);
+.e-main--nav-space {
+  padding-left: var(--e-space-for-nav);
 }
