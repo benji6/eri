@@ -8,8 +8,9 @@ import {
   validatePasswordField,
 } from "../..";
 import { Link, useLocation, useNavigate } from "@reach/router";
+import { PaperGroupProps } from "../Paper/PaperGroup";
 
-interface IProps {
+interface Props extends Omit<PaperGroupProps, "onSubmit"> {
   onSubmit({
     code,
     email,
@@ -23,7 +24,7 @@ interface IProps {
   }): Promise<void>;
 }
 
-export default function ResetPasswordPage({ onSubmit }: IProps) {
+export default function ResetPasswordPage({ onSubmit, ...rest }: Props) {
   const navigate = useNavigate();
   const [codeError, setCodeError] = React.useState("");
   const [emailError, setEmailError] = React.useState("");
@@ -36,7 +37,7 @@ export default function ResetPasswordPage({ onSubmit }: IProps) {
   const hasDefaultEmailAddress = Boolean(defaultEmailAddress);
 
   return (
-    <Paper.Group>
+    <Paper.Group {...rest}>
       <Paper>
         <h2>Reset password</h2>
         <p>

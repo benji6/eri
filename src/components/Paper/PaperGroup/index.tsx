@@ -1,11 +1,11 @@
 import "./style.css";
 import * as React from "react";
 
-interface IProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface PaperGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   noSlide?: boolean;
 }
 
-export default function PaperGroup({ noSlide, ...rest }: IProps) {
+export default function PaperGroup({ noSlide, ...rest }: PaperGroupProps) {
   return (
     <div
       {...rest}

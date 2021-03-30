@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Button, Paper, TextField } from "../..";
+import { PaperGroupProps } from "../Paper/PaperGroup";
 import { validatePasswordField } from "../../utils/validators";
 
-interface IProps {
+interface Props extends Omit<PaperGroupProps, "onSubmit"> {
   onSubmit({
     currentPassword,
     newPassword,
@@ -14,7 +15,7 @@ interface IProps {
   }): Promise<void>;
 }
 
-export default function ChangePasswordPage({ onSubmit }: IProps) {
+export default function ChangePasswordPage({ onSubmit, ...rest }: Props) {
   const [currentPasswordError, setCurrentPasswordError] = React.useState("");
   const [newPasswordError, setNewPasswordError] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -22,7 +23,7 @@ export default function ChangePasswordPage({ onSubmit }: IProps) {
   const [successfullyChanged, setSuccessfullyChanged] = React.useState(false);
 
   return (
-    <Paper.Group>
+    <Paper.Group {...rest}>
       <Paper>
         <h2>Change password</h2>
         {successfullyChanged ? (

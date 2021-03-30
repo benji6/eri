@@ -1,14 +1,15 @@
 import * as React from "react";
 import { Link } from "@reach/router";
 import { Paper } from "../..";
+import { PaperGroupProps } from "../Paper/PaperGroup";
 
-interface IProps {
+interface Props extends Omit<PaperGroupProps, "onSubmit"> {
   appName: React.ReactNode;
 }
 
-export default function VerifyPage({ appName }: IProps) {
+export default function VerifyPage({ appName, ...rest }: Props) {
   return (
-    <Paper.Group>
+    <Paper.Group {...rest}>
       <Paper>
         <h2>Verification email sent!</h2>
         <p>

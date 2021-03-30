@@ -5,8 +5,9 @@ import {
   validateEmailField,
   validatePasswordField,
 } from "../../utils/validators";
+import { PaperGroupProps } from "../Paper/PaperGroup";
 
-interface IProps {
+interface Props extends Omit<PaperGroupProps, "onSubmit"> {
   onSubmit({
     email,
     password,
@@ -18,7 +19,7 @@ interface IProps {
   }): Promise<void>;
 }
 
-export default function SignInPage({ onSubmit }: IProps) {
+export default function SignInPage({ onSubmit, ...rest }: Props) {
   const [emailError, setEmailError] = React.useState("");
   const [passwordError, setPasswordError] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -32,7 +33,7 @@ export default function SignInPage({ onSubmit }: IProps) {
   );
 
   return (
-    <Paper.Group>
+    <Paper.Group {...rest}>
       <Paper>
         <h2>Sign in</h2>
         {passwordWasReset && (

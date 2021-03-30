@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Button, Paper, TextField } from "../..";
 import { Link } from "@reach/router";
+import { PaperGroupProps } from "../Paper/PaperGroup";
 import { validateEmailField } from "../../utils/validators";
 
-interface IProps {
+interface Props extends Omit<PaperGroupProps, "onSubmit"> {
   onSubmit({
     email,
     setSubmitError,
@@ -13,13 +14,13 @@ interface IProps {
   }): Promise<void>;
 }
 
-export default function ResendVerificationPage({ onSubmit }: IProps) {
+export default function ResendVerificationPage({ onSubmit, ...rest }: Props) {
   const [emailError, setEmailError] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitError, setSubmitError] = React.useState<React.ReactNode>();
 
   return (
-    <Paper.Group>
+    <Paper.Group {...rest}>
       <Paper>
         <h2>Resend verification email</h2>
         <form

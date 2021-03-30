@@ -5,8 +5,9 @@ import {
   validatePasswordField,
 } from "../../utils/validators";
 import { Link } from "@reach/router";
+import { PaperGroupProps } from "../Paper/PaperGroup";
 
-interface IProps {
+interface Props extends Omit<PaperGroupProps, "onSubmit"> {
   onSubmit({
     email,
     password,
@@ -18,14 +19,14 @@ interface IProps {
   }): Promise<void>;
 }
 
-export default function SignUpPage({ onSubmit }: IProps) {
+export default function SignUpPage({ onSubmit, ...rest }: Props) {
   const [emailError, setEmailError] = React.useState("");
   const [passwordError, setPasswordError] = React.useState("");
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitError, setSubmitError] = React.useState<React.ReactNode>();
 
   return (
-    <Paper.Group>
+    <Paper.Group {...rest}>
       <Paper>
         <h2>Sign up</h2>
         <form
