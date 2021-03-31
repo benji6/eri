@@ -23,7 +23,7 @@ export default function RadioButtonGroup({
       <fieldset
         {...rest}
         aria-invalid={!!error}
-        className="e-radio-button-group p-0"
+        className="radio-button-group p-0"
       >
         <legend className="p-0">
           <FieldLabelText optional={false}>{label}</FieldLabelText>

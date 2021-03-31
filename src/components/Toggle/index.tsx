@@ -10,21 +10,21 @@ export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export default function Toggle({ error, disabled, label, ...rest }: IProps) {
   return (
-    <Field className="e-toggle relative">
+    <Field className="toggle">
       <label
-        className={`e-toggle__label grid${
-          disabled ? " e-toggle__label--disabled" : ""
+        className={`toggle__label grid${
+          disabled ? " toggle__label--disabled" : ""
         }`}
       >
         <input
           {...rest}
           aria-invalid={!!error}
-          className="e-toggle__input absolute br-max"
+          className="toggle__input br-max"
           disabled={disabled}
           type="checkbox"
         />
-        <span className="e-toggle__appearance br-max bw-2" />
-        <span className="e-toggle__label-copy flex">{label}</span>
+        <span className="toggle__appearance br-max bw-2" />
+        <span className="toggle__label-copy flex">{label}</span>
         <FieldError indent>{error}</FieldError>
       </label>
     </Field>

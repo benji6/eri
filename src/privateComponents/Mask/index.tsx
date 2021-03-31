@@ -55,15 +55,15 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
     <div onKeyDown={handleKeyDown(onClose)}>
       <CSSTransition
-        classNames="e-mask__mask-"
+        classNames="mask__mask-"
         in={open}
         mountOnEnter
         timeout={{ exit: getCssTime1() + 100 }}
         unmountOnExit
       >
-        <div className="e-mask__mask fixed z-3" onClick={onClose} />
+        <div className="mask__mask z-3" onClick={onClose} />
       </CSSTransition>
-      <div {...rest} className="relative z-3" />
+      <div {...rest} className="mask__container z-3" />
     </div>,
     /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
     portalEl

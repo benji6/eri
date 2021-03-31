@@ -1,31 +1,32 @@
-.e-fab {
+.fab {
   align-items: center;
   background: var(--e-color-theme);
   bottom: var(--e-space-2);
   box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground);
+  position: fixed;
   right: var(--e-space-2);
   transition-duration: var(--e-time-0);
   transition-property: background-color, box-shadow, opacity, transform;
   transition-timing-function: var(--e-easing-standard);
 }
 
-.e-fab:focus,
-.e-fab:hover {
+.fab:focus,
+.fab:hover {
   background: var(--e-color-theme-less);
 }
 
-.e-fab:disabled {
+.fab:disabled {
   background: var(--e-color-balance);
 }
 
-.e-fab:active:not(:disabled) {
+.fab:active:not(:disabled) {
   background: var(--e-color-theme-more);
   box-shadow: var(--e-box-shadow-0);
 }
 
-.e-fab--enter,
-.e-fab--exit-active {
+.fab--enter,
+.fab--exit-active {
   opacity: 0;
   transform: scale(0);
   transition-timing-function: var(--e-easing-accelerate);

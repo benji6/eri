@@ -50,7 +50,6 @@ import "./utils/border.css";
 import "./utils/box-shadow.css";
 import "./utils/display.css";
 import "./utils/misc.css";
-import "./utils/position.css";
 import "./utils/sentiment.css";
 import "./utils/space.css";
 import "./utils/text-align.css";

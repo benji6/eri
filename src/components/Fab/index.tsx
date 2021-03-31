@@ -31,17 +31,13 @@ export default function Fab({
 
   return ReactDOM.createPortal(
     <CSSTransition
-      classNames="e-fab-"
+      classNames="fab-"
       in={!hide}
       mountOnEnter
       timeout={{ exit: getCssTime0() + 100 }}
       unmountOnExit
     >
-      <button
-        {...rest}
-        className="e-fab br-max fixed flex p-3 z-1"
-        type={type}
-      />
+      <button {...rest} className="fab br-max flex p-3 z-1" type={type} />
     </CSSTransition>,
     portalEl
   );

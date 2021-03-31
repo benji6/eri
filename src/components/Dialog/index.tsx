@@ -24,7 +24,7 @@ export default function Dialog({
   return (
     <Mask onClose={disableClose ? undefined : onClose} open={open}>
       <CSSTransition
-        classNames="e-dialog-"
+        classNames="dialog-"
         in={open}
         mountOnEnter
         timeout={{ exit: getCssTime1() + 100 }}
@@ -33,27 +33,27 @@ export default function Dialog({
         {/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
         <div
           {...rest}
-          aria-describedby="e-dialog-desc"
-          aria-labelledby="e-dialog-title"
-          className="e-dialog fixed flex"
+          aria-describedby="dialog-desc"
+          aria-labelledby="dialog-title"
+          className="dialog flex"
           onClick={disableClose ? undefined : onClose}
           role="dialog"
         >
           <div
-            className="e-dialog__dialog br-1 bs-1 p-4"
+            className="dialog__dialog br-1 bs-1 p-4"
             onClick={(e) => e.stopPropagation()}
           >
             <div>
-              <div className="e-dialog__header flex">
-                <h3 id="e-dialog-title">{title}</h3>
-                <div className="e-dialog__close-button-container">
+              <div className="dialog__header flex">
+                <h3 id="dialog-title">{title}</h3>
+                <div className="dialog__close-button-container">
                   <CloseButton
                     disabled={disableClose || !open}
                     onClick={onClose}
                   />
                 </div>
               </div>
-              <div id="e-dialog-desc">{children}</div>
+              <div id="dialog-desc">{children}</div>
             </div>
           </div>
         </div>

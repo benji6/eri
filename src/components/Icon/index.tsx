@@ -138,8 +138,8 @@ export default function Icon({
   size = "inherit",
   ...rest
 }: IProps) {
-  const className = `e-icon e-icon--size-${size}${draw ? " e-icon--draw" : ""}${
-    size === "inherit" ? " e-icon--inline relative" : ""
+  const className = `icon icon--size-${size}${draw ? " icon--draw" : ""}${
+    size === "inherit" ? " icon--inline" : ""
   }${margin ? ` m${margin[0]}-1` : ""}`;
 
   return (

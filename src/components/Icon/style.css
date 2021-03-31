@@ -1,4 +1,4 @@
-.e-icon {
+.icon {
   --size: 1em;
 
   height: var(--size);
@@ -6,24 +6,25 @@
   width: var(--size);
 }
 
-.e-icon--draw {
+.icon--draw {
   animation: e-draw var(--e-time-1) var(--e-easing-standard) forwards;
   stroke-dasharray: 66;
   stroke-dashoffset: -66;
 }
 
-.e-icon--inline {
+.icon--inline {
   bottom: 2px;
+  position: relative;
 }
 
-.e-icon--size-2 {
+.icon--size-2 {
   --size: var(--e-font-size-2);
 }
 
-.e-icon--size-3 {
+.icon--size-3 {
   --size: var(--e-font-size-3);
 }
 
-.e-icon--size-4 {
+.icon--size-4 {
   --size: var(--e-font-size-4);
 }

@@ -1,10 +1,11 @@
-.e-dialog {
+.dialog {
   --content-vertical-padding: var(--e-space-1);
 
   align-items: center;
   bottom: 0;
   justify-content: center;
   left: 0;
+  position: fixed;
   right: 0;
   top: 0;
   transition-duration: var(--e-time-1);
@@ -12,32 +13,32 @@
   transition-timing-function: var(--e-easing-decelerate);
 }
 
-.e-dialog--enter,
-.e-dialog--exit-active {
+.dialog--enter,
+.dialog--exit-active {
   opacity: 0;
   pointer-events: none;
   transform: scale(0.9);
   transition-timing-function: var(--e-easing-accelerate);
 }
 
-.e-dialog__close-button-container {
+.dialog__close-button-container {
   margin-top: calc(var(--content-vertical-padding) * -1);
 }
 
-.e-dialog__header {
+.dialog__header {
   align-items: flex-start;
   justify-content: space-between;
 }
 
-.e-dialog__header > *:first-child {
+.dialog__header > *:first-child {
   margin-top: 0;
 }
 
-.e-dialog__content > *:last-child {
+.dialog__content > *:last-child {
   margin-bottom: 0;
 }
 
-.e-dialog__dialog {
+.dialog__dialog {
   background-color: var(--e-color-ground);
   margin: 0 var(--e-space-3);
   max-width: var(--e-break-point);

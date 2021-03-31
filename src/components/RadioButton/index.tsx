@@ -9,15 +9,9 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export default function RadioButton({ children, ...rest }: IProps) {
   return (
-    <label className="e-radio-button inline-flex relative">
-      <input
-        {...rest}
-        className="e-radio-button__input absolute m-0"
-        type="radio"
-      />
-      <div className="e-radio-button__appearance bw-2 center p-1">
-        {children}
-      </div>
+    <label className="radio-button inline-flex">
+      <input {...rest} className="radio-button__input m-0" type="radio" />
+      <div className="radio-button__appearance bw-2 center p-1">{children}</div>
     </label>
   );
 }

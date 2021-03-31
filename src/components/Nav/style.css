@@ -31,7 +31,8 @@
   transition-timing-function: var(--e-easing-accelerate);
 }
 
-.e-nav__close-button {
+.nav__close-button {
+  position: absolute;
   right: var(--e-space-2);
   top: var(--e-space-1);
 }

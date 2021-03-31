@@ -1,26 +1,29 @@
-.e-checkbox {
+.checkbox {
   --checkbox-size: var(--e-font-size-3);
+
+  position: relative;
 }
 
-.e-checkbox__label {
+.checkbox__label {
   column-gap: var(--e-space-2);
   cursor: pointer;
   grid-template-columns: auto 1fr;
 }
 
-.e-checkbox__input {
+.checkbox__input {
   align-self: flex-start;
   bottom: 0;
   height: var(--checkbox-size);
   left: 0;
   opacity: 0;
   pointer-events: none;
+  position: absolute;
   right: 0;
   top: 0;
   width: var(--checkbox-size);
 }
 
-.e-checkbox__appearance {
+.checkbox__appearance {
   align-items: center;
   align-self: flex-start;
   background-color: var(--e-color-ground-more);
@@ -37,25 +40,25 @@
   width: var(--checkbox-size);
 }
 
-.e-checkbox__input:focus ~ .e-checkbox__appearance {
+.checkbox__input:focus ~ .checkbox__appearance {
   border-color: var(--e-color-theme);
   box-shadow: var(--e-box-shadow-input-focus);
 }
 
-.e-checkbox__input:hover ~ .e-checkbox__appearance {
+.checkbox__input:hover ~ .checkbox__appearance {
   border-color: var(--e-color-theme-less);
 }
 
-.e-checkbox__input[aria-invalid="true"] ~ .e-checkbox__appearance {
+.checkbox__input[aria-invalid="true"] ~ .checkbox__appearance {
   border-color: var(--e-color-negative);
   box-shadow: none;
 }
 
-.e-checkbox__input:checked ~ .e-checkbox__appearance {
+.checkbox__input:checked ~ .checkbox__appearance {
   stroke-dashoffset: 0;
   transition-property: border, stroke-dashoffset;
 }
 
-.e-checkbox__label-copy {
+.checkbox__label-copy {
   align-items: center;
 }

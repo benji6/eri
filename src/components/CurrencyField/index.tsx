@@ -27,7 +27,7 @@ export default function CurrencyField({
       <Label>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
-        <span className="currency-field__input-container relative">
+        <span className="currency-field__input-container">
           <input
             autoComplete="off"
             // When fields aren't in forms they should not be required

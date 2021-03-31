@@ -2,6 +2,6 @@
   padding: var(--e-space-2) 0 0;
 }
 
-.e-nav__close-button ~ .e-nav-list {
+.nav__close-button ~ .e-nav-list {
   padding-top: var(--e-space-4);
 }

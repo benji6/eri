@@ -1,6 +1,7 @@
 .currency-field__input-container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .currency-field__input-container::after {

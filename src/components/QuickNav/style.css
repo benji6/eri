@@ -1,4 +1,4 @@
-.e-quick-nav {
+.quick-nav {
   --animation-delay: calc(var(--e-time-0) / 2);
   --margin: var(--e-space-2);
 
@@ -6,22 +6,23 @@
   justify-content: space-evenly;
   left: var(--e-space-for-nav);
   pointer-events: none;
+  position: fixed;
   right: 0;
 }
 
-.e-quick-nav > * {
+.quick-nav > * {
   animation: e-animate-quick-nav-in var(--e-time-0) var(--e-easing-decelerate)
     forwards;
   opacity: 0;
   pointer-events: initial;
 }
-.e-quick-nav > *:nth-child(2) {
+.quick-nav > *:nth-child(2) {
   animation-delay: var(--animation-delay);
 }
-.e-quick-nav > *:nth-child(3) {
+.quick-nav > *:nth-child(3) {
   animation-delay: calc(var(--animation-delay) * 2);
 }
-.e-quick-nav > *:nth-child(4) {
+.quick-nav > *:nth-child(4) {
   animation-delay: calc(var(--animation-delay) * 3);
 }
 

@@ -76,18 +76,6 @@ export default function CssUtilities(_: RouteComponentProps) {
             <code>fw-n</code>: Sets font weight to normal
           </li>
         </ul>
-        <h3>Position</h3>
-        <ul>
-          <li>
-            <code>absolute</code>: Sets position to absolute
-          </li>
-          <li>
-            <code>fixed</code>: Sets position to fixed
-          </li>
-          <li>
-            <code>relative</code>: Sets position to relative
-          </li>
-        </ul>
         <h3>Sentiment</h3>
         <p className="negative">
           You can give any element a negative sentiment by setting the class to{" "}

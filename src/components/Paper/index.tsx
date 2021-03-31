@@ -6,13 +6,9 @@ export default function Paper(
   props: React.HTMLAttributes<HTMLButtonElement | HTMLDivElement>
 ) {
   return props.onClick ? (
-    <button
-      {...props}
-      className="e-paper br-0 bs-0 p-3 relative ripple"
-      type="button"
-    />
+    <button {...props} className="paper br-0 bs-0 p-3 ripple" type="button" />
   ) : (
-    <div {...props} className="e-paper br-0 bs-0 p-3" />
+    <div {...props} className="paper br-0 bs-0 p-3" />
   );
 }
 
