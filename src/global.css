@@ -1,3 +1,8 @@
+::selection {
+  background-color: var(--e-color-highlight-default);
+  color: var(--e-color-figure-more);
+}
+
 html {
   background: linear-gradient(
     calc(21turn / 32),
