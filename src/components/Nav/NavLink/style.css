@@ -1,34 +1,35 @@
-.e-nav-link {
+.nav-link {
   list-style: none;
 }
 
-.e-nav-link__link {
+.nav-link__link {
   --active-color: var(--e-color-highlight-default);
 
+  display: block;
   text-decoration: none;
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;
   transition-timing-function: var(--e-easing-standard);
 }
-.e-nav-link__link:focus {
+.nav-link__link:focus {
   color: var(--e-color-theme-more);
 }
-.e-nav-link__link:hover {
+.nav-link__link:hover {
   background: var(--e-color-ground-less);
   color: var(--e-color-theme-more);
 }
 
-.e-nav-sub-list .e-nav-link__link {
+.e-nav-sub-list .nav-link__link {
   padding-bottom: var(--e-space-0);
   padding-left: var(--e-space-4);
   padding-top: var(--e-space-0);
 }
 
-.e-nav-link__link--active {
+.nav-link__link--active {
   --color: var(--active-color);
   color: var(--color);
 }
-.e-nav-link__link--active:focus,
-.e-nav-link__link--active:hover {
+.nav-link__link--active:focus,
+.nav-link__link--active:hover {
   color: var(--color);
 }

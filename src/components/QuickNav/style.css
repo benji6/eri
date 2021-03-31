@@ -3,6 +3,7 @@
   --margin: var(--e-space-2);
 
   bottom: var(--margin);
+  display: flex;
   justify-content: space-evenly;
   left: var(--e-space-for-nav);
   pointer-events: none;

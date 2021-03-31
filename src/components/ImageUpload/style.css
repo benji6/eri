@@ -1,3 +1,7 @@
-.e-image-upload__img {
+.image-upload__img {
   max-width: 50%;
+}
+
+.image-upload__input {
+  display: inline-flex;
 }

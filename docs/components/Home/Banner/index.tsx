@@ -6,7 +6,7 @@ export default function Banner() {
     <div className="d-banner">
       <hr />
       <svg
-        className="d-banner__icon block"
+        className="d-banner__icon"
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"

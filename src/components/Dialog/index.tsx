@@ -35,7 +35,7 @@ export default function Dialog({
           {...rest}
           aria-describedby="dialog-desc"
           aria-labelledby="dialog-title"
-          className="dialog flex"
+          className="dialog"
           onClick={disableClose ? undefined : onClose}
           role="dialog"
         >
@@ -44,7 +44,7 @@ export default function Dialog({
             onClick={(e) => e.stopPropagation()}
           >
             <div>
-              <div className="dialog__header flex">
+              <div className="dialog__header">
                 <h3 id="dialog-title">{title}</h3>
                 <div className="dialog__close-button-container">
                   <CloseButton

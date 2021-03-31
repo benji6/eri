@@ -1,6 +1,7 @@
 .select__icon {
   align-items: center;
   bottom: 0;
+  display: flex;
   pointer-events: none;
   position: absolute;
   right: var(--e-space-2);

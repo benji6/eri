@@ -20,7 +20,7 @@
     left: 0;
     padding-bottom: var(--e-space-3);
     right: initial;
-    top: var(--e-header-height);
+    top: var(--header-height);
     transform: none !important;
   }
 }

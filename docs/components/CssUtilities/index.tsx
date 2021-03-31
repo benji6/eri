@@ -40,21 +40,6 @@ export default function CssUtilities(_: RouteComponentProps) {
             <code>bs-1</code>: Sets a box shadow
           </li>
         </ul>
-        <h3>Display</h3>
-        <ul>
-          <li>
-            <code>block</code>: Sets display to block
-          </li>
-          <li>
-            <code>flex</code>: Sets display to flex
-          </li>
-          <li>
-            <code>grid</code>: Sets display to grid
-          </li>
-          <li>
-            <code>inline-flex</code>: Sets display to inline-flex
-          </li>
-        </ul>
         <h3>Font size</h3>
         <ul>
           <li>

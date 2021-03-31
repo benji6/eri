@@ -4,6 +4,7 @@
   bottom: var(--e-space-2);
   box-shadow: var(--e-box-shadow-1);
   color: var(--e-color-ground);
+  display: flex;
   position: fixed;
   right: var(--e-space-2);
   transition-duration: var(--e-time-0);

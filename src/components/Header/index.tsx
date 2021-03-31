@@ -7,11 +7,9 @@ export default function Header(props: React.HTMLAttributes<HTMLDivElement>) {
 
   return (
     <header
-      className={`e-header bs-1${
-        state.navExists ? " e-header--nav-space" : ""
-      }`}
+      className={`header bs-1${state.navExists ? " header--nav-space" : ""}`}
     >
-      <div {...props} className="e-header__container flex" />
+      <div {...props} className="header__container" />
     </header>
   );
 }

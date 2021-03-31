@@ -61,11 +61,11 @@ export default function ComponentLinks(
       <Nav.Link {...props} to="/components/paper">
         Paper
       </Nav.Link>
-      <Nav.Link {...props} to="/components/radio-button">
-        RadioButton
-      </Nav.Link>
       <Nav.Link {...props} to="/components/quick-nav">
         QuickNav
+      </Nav.Link>
+      <Nav.Link {...props} to="/components/radio-button">
+        RadioButton
       </Nav.Link>
       <Nav.Link {...props} to="/components/select">
         Select

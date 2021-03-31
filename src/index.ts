@@ -48,7 +48,6 @@ export * from "./utils/validators";
 import "./utils/animation.css";
 import "./utils/border.css";
 import "./utils/box-shadow.css";
-import "./utils/display.css";
 import "./utils/misc.css";
 import "./utils/sentiment.css";
 import "./utils/space.css";

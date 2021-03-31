@@ -3,6 +3,7 @@
 
   align-items: center;
   bottom: 0;
+  display: flex;
   justify-content: center;
   left: 0;
   position: fixed;
@@ -27,6 +28,7 @@
 
 .dialog__header {
   align-items: flex-start;
+  display: flex;
   justify-content: space-between;
 }
 

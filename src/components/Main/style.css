@@ -1,7 +1,8 @@
-.e-main {
+.main {
   justify-content: center;
+  display: flex;
 }
 
-.e-main--nav-space {
+.main--nav-space {
   padding-left: var(--e-space-for-nav);
 }

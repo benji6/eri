@@ -1,4 +1,5 @@
 .paper-group {
+  display: grid;
   grid-gap: var(--e-space-2);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
   width: calc(var(--e-break-point) - 2 * var(--e-space-2));

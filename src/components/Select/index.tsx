@@ -36,7 +36,7 @@ export default function Select({
             aria-invalid={Boolean(error)}
             className="select__select"
           />
-          <span className="select__icon flex">
+          <span className="select__icon">
             <Icon name="down" size="2" />
           </span>
         </span>

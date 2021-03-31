@@ -1,24 +1,25 @@
-.e-button-group {
+.button-group {
+  display: flex;
   flex-direction: column;
   margin: var(--e-space-3) 0 var(--e-space-4);
 }
 
-.e-button-group > *:not(:last-child) {
+.button-group > *:not(:last-child) {
   margin-bottom: var(--e-space-3);
 }
 
 @media (min-width: 37rem) {
-  .e-button-group {
+  .button-group {
     align-items: center;
     flex-direction: row-reverse;
     justify-content: center;
   }
 
-  .e-button-group > *:not(:first-child) {
+  .button-group > *:not(:first-child) {
     margin-right: var(--e-space-3);
   }
 
-  .e-button-group > *:not(:last-child) {
+  .button-group > *:not(:last-child) {
     margin-bottom: unset;
   }
 }

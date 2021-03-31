@@ -8,12 +8,12 @@ export default function NavLink({
   ...rest
 }: React.HTMLAttributes<HTMLAnchorElement> & { to: LinkProps<void>["to"] }) {
   return (
-    <li className="e-nav-link m-0">
+    <li className="nav-link m-0">
       <Link
         {...rest}
         getProps={({ isCurrent }) => ({
-          className: `e-nav-link__link block fw-b px-4 py-2${
-            isCurrent ? " e-nav-link__link--active" : ""
+          className: `nav-link__link fw-b px-4 py-2${
+            isCurrent ? " nav-link__link--active" : ""
           } ripple`,
         })}
         to={to}

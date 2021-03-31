@@ -12,9 +12,7 @@ export default function Toggle({ error, disabled, label, ...rest }: IProps) {
   return (
     <Field className="toggle">
       <label
-        className={`toggle__label grid${
-          disabled ? " toggle__label--disabled" : ""
-        }`}
+        className={`toggle__label${disabled ? " toggle__label--disabled" : ""}`}
       >
         <input
           {...rest}
@@ -24,7 +22,7 @@ export default function Toggle({ error, disabled, label, ...rest }: IProps) {
           type="checkbox"
         />
         <span className="toggle__appearance br-max bw-2" />
-        <span className="toggle__label-copy flex">{label}</span>
+        <span className="toggle__label-copy">{label}</span>
         <FieldError indent>{error}</FieldError>
       </label>
     </Field>

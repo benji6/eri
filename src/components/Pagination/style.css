@@ -1,6 +1,7 @@
-.e-pagination {
+.pagination {
   border-bottom: var(--e-border-width-2) solid currentColor;
   border-top: var(--e-border-width-2) solid currentColor;
+  display: flex;
   justify-content: center;
   padding: var(--e-space-1) 0;
 }

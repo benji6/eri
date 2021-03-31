@@ -1,6 +1,6 @@
 :root {
   --e-break-point: 100vw;
-  --e-header-height: 3.93em;
+  --header-height: 3.93em;
   --e-nav-width: 16em;
   --e-space-for-nav: 0; /* used for components that need to shift when the nav is always open */
   --e-space-scale-ratio: 1.61803;

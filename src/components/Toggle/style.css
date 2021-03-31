@@ -71,6 +71,7 @@
 .toggle__label {
   column-gap: var(--e-space-2);
   cursor: pointer;
+  display: grid;
   grid-template-columns: auto 1fr;
 }
 .toggle__label--disabled {
@@ -79,4 +80,5 @@
 
 .toggle__label-copy {
   align-items: center;
+  display: flex;
 }
