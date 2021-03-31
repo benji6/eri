@@ -29,7 +29,6 @@
   --color: var(--active-color);
   color: var(--color);
 }
-.nav-link__link--active:focus,
-.nav-link__link--active:hover {
+.nav-link__link--active:is(:focus, :hover) {
   color: var(--color);
 }

@@ -43,12 +43,7 @@ a::-moz-focus-inner {
   border: none;
 }
 
-a:focus {
-  color: var(--color-theme-less);
-  text-decoration-color: transparent;
-}
-
-a:hover {
+a:is(:focus, :hover) {
   color: var(--color-theme-less);
   text-decoration-color: transparent;
 }
@@ -170,9 +165,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   opacity: 1;
 }
 
-input:not([type="checkbox"]),
-select,
-textarea {
+:is(input:not([type="checkbox"]), select, textarea) {
   background-color: var(--color-ground-more);
   border-radius: var(--border-radius-1);
   border: var(--border-width-2) solid var(--color-figure-more);
@@ -183,22 +176,16 @@ textarea {
   transition-timing-function: var(--easing-standard);
 }
 
-input:not([type="checkbox"]):focus,
-select:focus,
-textarea:focus {
+:is(input:not([type="checkbox"]), select, textarea):focus {
   border-color: var(--color-theme-less);
   box-shadow: var(--box-shadow-input-focus);
 }
 
-input:not([type="checkbox"]):hover,
-select:hover,
-textarea:hover {
+:is(input:not([type="checkbox"]), select, textarea):hover {
   border-color: var(--color-theme-less);
 }
 
-input:not([type="checkbox"])[aria-invalid="true"],
-select[aria-invalid="true"],
-textarea[aria-invalid="true"] {
+:is(input:not([type="checkbox"]), select, textarea)[aria-invalid="true"] {
   border-color: var(--color-negative);
   box-shadow: none;
 }
@@ -237,8 +224,7 @@ th {
   font-weight: var(--font-weight-bold);
 }
 
-td:first-child,
-th:first-child {
+:is(td, th):first-child {
   text-align: left;
 }
 

@@ -3,41 +3,21 @@
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
 }
 
-/* stylelint-disable no-descending-specificity */
-.paper > *:first-child:not(.spinner),
-.paper > *:first-child > *:first-child:not(.spinner),
-.paper > *:first-child > *:first-child > *:first-child:not(.spinner),
-.paper
-  > *:first-child
-  > *:first-child
-  > *:first-child
-  > *:first-child:not(.spinner),
-.paper
-  > *:first-child
-  > *:first-child
-  > *:first-child
-  > *:first-child
-  > *:first-child:not(.spinner) {
+:is(.card, .paper)
+  > *:is(:first-child, :first-child
+    > *:is(:first-child, :first-child
+      > *:is(:first-child, :first-child
+        > *:is(:first-child, :first-child > *:first-child)))):not(.spinner) {
   margin-top: 0;
 }
 
-.paper > *:last-child:not(.spinner),
-.paper > *:last-child > *:last-child:not(.spinner),
-.paper > *:last-child > *:last-child > *:last-child:not(.spinner),
-.paper
-  > *:last-child
-  > *:last-child
-  > *:last-child
-  > *:last-child:not(.spinner),
-.paper
-  > *:last-child
-  > *:last-child
-  > *:last-child
-  > *:last-child
-  > *:last-child:not(.spinner) {
+:is(.card, .paper)
+  > *:is(:last-child, :last-child
+    > *:is(:last-child, :last-child
+      > *:is(:last-child, :last-child
+        > *:is(:last-child, :last-child > *:last-child)))):not(.spinner) {
   margin-bottom: 0;
 }
-/* stylelint-enable no-descending-specificity */
 
 button.paper {
   outline: 0;
@@ -58,7 +38,6 @@ button.paper::before {
   z-index: var(--z-index-1);
 }
 
-button.paper:hover::before,
-button.paper:focus::before {
+button.paper:is(:focus, :hover)::before {
   opacity: 0.07;
 }

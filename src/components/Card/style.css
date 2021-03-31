@@ -1,3 +1,5 @@
+/* NOTE: some shared Card styles are in the Paper stylesheet for convenience */
+
 .card {
   background-color: var(--color-ground-more);
   border-color: var(--color);
@@ -26,18 +28,6 @@ button.card:hover {
 button.card:active {
   transform: scale(1);
 }
-
-/* stylelint-disable no-descending-specificity */
-.card > *:first-child,
-.card > *:first-child > *:first-child {
-  margin-top: 0;
-}
-
-.card > *:last-child,
-.card > *:last-child > *:last-child {
-  margin-bottom: 0;
-}
-/* stylelint-enable no-descending-specificity */
 
 .card:nth-child(6n + 1) {
   --color: var(--color-highlight-0);

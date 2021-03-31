@@ -13,9 +13,7 @@
   box-shadow: var(--box-shadow-1);
 }
 
-.button:active,
-.button:disabled,
-.button:focus {
+.button:is(:active, :disabled, :focus) {
   box-shadow: none;
 }
 
