@@ -27,7 +27,7 @@ export default function CurrencyField({
       <Label>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
-        <span className="e-currency-field__input-container flex-col relative">
+        <span className="currency-field__input-container relative">
           <input
             autoComplete="off"
             // When fields aren't in forms they should not be required
@@ -36,7 +36,7 @@ export default function CurrencyField({
             required={!optional}
             {...rest}
             aria-invalid={Boolean(error)}
-            className="e-currency-field__input"
+            className="currency-field__input"
             inputMode={integer ? "numeric" : "decimal"}
             pattern={integer ? "[0-9]*" : "[0-9]*"}
           />

@@ -49,7 +49,6 @@ import "./utils/animation.css";
 import "./utils/border.css";
 import "./utils/box-shadow.css";
 import "./utils/display.css";
-import "./utils/flex-direction.css";
 import "./utils/misc.css";
 import "./utils/position.css";
 import "./utils/sentiment.css";

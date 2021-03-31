@@ -55,13 +55,6 @@ export default function CssUtilities(_: RouteComponentProps) {
             <code>inline-flex</code>: Sets display to inline-flex
           </li>
         </ul>
-        <h3>Flex direction</h3>
-        <ul>
-          <li>
-            <code>flex-col</code>: Sets display to flex and flex direction to
-            column
-          </li>
-        </ul>
         <h3>Font size</h3>
         <ul>
           <li>

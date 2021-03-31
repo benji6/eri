@@ -1,4 +1,9 @@
-.e-currency-field__input-container::after {
+.currency-field__input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.currency-field__input-container::after {
   align-items: center;
   bottom: 0;
   content: "£";
@@ -8,6 +13,6 @@
   top: 0;
 }
 
-input.e-currency-field__input {
+input.currency-field__input {
   padding-left: calc(var(--e-space-4) - var(--e-space-0));
 }
