@@ -13,9 +13,9 @@ export default function Button({
   type = "submit", // Formik gets grumpy if you don't specify this
   ...rest
 }: IProps) {
-  const className = `e-button bs-0 br-1 fw-b select-none e-button--${variant}${
+  const className = `button bs-0 br-1 fw-b select-none button--${variant}${
     variant === "secondary" ? " bw-2" : ""
-  }${danger ? " e-button--danger" : ""}${rest.disabled ? "" : " ripple"}`;
+  }${danger ? " button--danger" : ""}${rest.disabled ? "" : " ripple"}`;
 
   return <button {...rest} className={className} type={type} />;
 }

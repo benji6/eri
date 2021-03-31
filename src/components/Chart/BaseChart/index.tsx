@@ -40,7 +40,7 @@ export default function BaseChart({
   return (
     <svg
       {...rest}
-      className="e-base-chart"
+      className="base-chart"
       viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
       width="100%"
     >

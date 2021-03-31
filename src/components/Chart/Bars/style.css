@@ -1,4 +1,4 @@
-.e-bars__bar {
+.bars__bar {
   animation: e-bar-appear var(--e-time-2) var(--e-easing-standard) forwards;
 
   /* --bar-number and --total-bars set by JS */

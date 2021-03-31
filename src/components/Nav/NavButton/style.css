@@ -1,15 +1,15 @@
-.e-nav-button {
+.nav-button {
   align-items: center;
   display: flex;
   transition: color var(--e-time-1) var(--e-easing-standard);
 }
 
-.e-nav-button:hover {
+.nav-button:hover {
   color: var(--e-color-highlight-default);
 }
 
 @media (min-width: 66rem) {
-  .e-nav-button {
+  .nav-button {
     display: none;
   }
 }

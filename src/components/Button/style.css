@@ -1,4 +1,4 @@
-.e-button {
+.button {
   --color: var(--e-color-theme);
   --color-active: var(--e-color-theme-more);
   --color-hover: var(--e-color-theme-less);
@@ -9,61 +9,61 @@
   transition-timing-function: var(--e-easing-standard);
 }
 
-.e-button:hover {
+.button:hover {
   box-shadow: var(--e-box-shadow-1);
 }
 
-.e-button:active,
-.e-button:disabled,
-.e-button:focus {
+.button:active,
+.button:disabled,
+.button:focus {
   box-shadow: none;
 }
 
-.e-button--danger {
+.button--danger {
   --color: var(--e-color-negative);
   --color-active: var(--e-color-negative-more);
   --color-hover: var(--e-color-negative-less);
 }
 
-.e-button--primary {
+.button--primary {
   background: var(--color);
   color: var(--e-color-ground);
   padding: calc(var(--e-space-1) + 2 * var(--e-border-width-1))
     calc(var(--e-space-3) + 2 * var(--e-border-width-1));
 }
 
-.e-button--primary:hover {
+.button--primary:hover {
   background: var(--color-hover);
   border-color: var(--color-hover);
 }
 
-.e-button--primary:active {
+.button--primary:active {
   background: var(--color-active);
   border-color: var(--color-active);
 }
 
-.e-button--primary:disabled {
+.button--primary:disabled {
   background: var(--e-color-balance);
   border-color: transparent;
 }
 
-.e-button--secondary {
+.button--secondary {
   background: none;
   border-color: var(--color);
   color: var(--color);
 }
 
-.e-button--secondary:hover {
+.button--secondary:hover {
   border-color: var(--color-hover);
   color: var(--color-hover);
 }
 
-.e-button--secondary:active {
+.button--secondary:active {
   border-color: var(--color-active);
   color: var(--color-active);
 }
 
-.e-button--secondary:disabled {
+.button--secondary:disabled {
   border-color: var(--e-color-balance);
   color: var(--e-color-balance);
 }

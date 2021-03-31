@@ -22,7 +22,7 @@ export default function Points({ colorFromY, data }: IProps) {
     >
       {transformedPoints.map(([x, y], i) => (
         <circle
-          className="e-points__point"
+          className="points__point"
           cx={x}
           cy={y}
           fill={colorFromY ? colorFromY(data[i][1]) : "var(--e-color-theme)"}

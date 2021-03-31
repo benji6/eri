@@ -1,4 +1,4 @@
-.e-points__point {
+.points__point {
   animation: e-point-appear var(--e-time-2) var(--e-easing-standard) forwards;
 
   /* --point-number and --total-points set by JS */

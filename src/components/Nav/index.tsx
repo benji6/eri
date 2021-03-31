@@ -27,20 +27,20 @@ export default function Nav({ children, onClose, open, ...rest }: IProps) {
 
   return isWideResolution ? (
     /* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
-    <nav {...rest} className="e-nav" onClick={(e) => e.stopPropagation()}>
+    <nav {...rest} className="nav" onClick={(e) => e.stopPropagation()}>
       {children}
     </nav>
   ) : (
     <Mask onClose={onClose} open={open}>
       <CSSTransition
-        classNames="e-nav-"
+        classNames="nav-"
         in={open}
         mountOnEnter
         timeout={{ exit: getCssTime1() + 100 }}
         unmountOnExit
       >
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */}
-        <nav {...rest} className="e-nav" onClick={(e) => e.stopPropagation()}>
+        <nav {...rest} className="nav" onClick={(e) => e.stopPropagation()}>
           <div className="nav__close-button">
             <CloseButton onClick={onClose} />
           </div>

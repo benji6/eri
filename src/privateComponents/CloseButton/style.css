@@ -1,19 +1,19 @@
-.e-close-button {
+.close-button {
   margin-left: var(--e-space-2);
   transition-duration: var(--e-time-0);
   transition-property: background-color, color;
   transition-timing-function: var(--e-easing-standard);
 }
 
-.e-close-button:hover {
+.close-button:hover {
   color: var(--e-color-figure-less);
 }
 
-.e-close-button:active {
+.close-button:active {
   color: var(--e-color-figure-more);
 }
 
-.e-close-button:focus:not(:active) {
+.close-button:focus:not(:active) {
   background: var(--e-color-figure);
   color: var(--e-color-ground);
 }

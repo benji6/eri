@@ -1,4 +1,4 @@
-.e-nav {
+.nav {
   background: var(--e-color-ground-more);
   bottom: 0;
   box-shadow: var(--e-box-shadow-2);
@@ -14,7 +14,7 @@
 }
 
 @media (min-width: 66rem) {
-  .e-nav {
+  .nav {
     background: var(--e-color-ground);
     box-shadow: var(--e-box-shadow-0);
     left: 0;
@@ -25,8 +25,8 @@
   }
 }
 
-.e-nav--enter,
-.e-nav--exit-active {
+.nav--enter,
+.nav--exit-active {
   transform: translateX(var(--e-nav-width));
   transition-timing-function: var(--e-easing-accelerate);
 }

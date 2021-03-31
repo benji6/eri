@@ -35,7 +35,7 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
 
         return (
           <rect
-            className="e-bars__bar"
+            className="bars__bar"
             key={i}
             x={x}
             y={y}

@@ -163,7 +163,7 @@ export default function WordCloud({ words, ...rest }: IProps) {
   return (
     <svg
       {...rest}
-      className="e-word-cloud"
+      className="word-cloud"
       ref={svgRef}
       viewBox={`0 0 ${ASPECT_RATIO} 1`}
       width="100%"
@@ -171,7 +171,7 @@ export default function WordCloud({ words, ...rest }: IProps) {
       <g style={{ "--total-words": renderData.length } as React.CSSProperties}>
         {renderData.map(({ fontSize, weighting, word, x, y }, i) => (
           <text
-            className="fade-in e-word-cloud__word"
+            className="fade-in word-cloud__word"
             dy={fontSize * 0.3}
             fill={`var(--e-color-highlight-${stringToColorIndex(word)})`}
             fontSize={fontSize}

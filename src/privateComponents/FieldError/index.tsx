@@ -14,7 +14,7 @@ export default function FieldError({
     <div
       {...rest}
       aria-live="polite"
-      className={`fs-0 negative${indent ? " e-field-error--indent" : " pt-1"}`}
+      className={`fs-0 negative${indent ? " field-error--indent" : " pt-1"}`}
     >
       {children}
     </div>

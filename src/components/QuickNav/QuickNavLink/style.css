@@ -1,4 +1,4 @@
-.e-quick-nav-link {
+.quick-nav-link {
   background: var(--e-color-theme);
   color: var(--e-color-ground);
   transition-duration: var(--e-time-0);
@@ -6,18 +6,18 @@
   transition-timing-function: var(--e-easing-standard);
 }
 
-.e-quick-nav-link:focus,
-.e-quick-nav-link:hover {
+.quick-nav-link:focus,
+.quick-nav-link:hover {
   background: var(--e-color-theme-less);
   color: var(--e-color-ground);
 }
 
-.e-quick-nav-link:active {
+.quick-nav-link:active {
   background: var(--e-color-theme-more);
   box-shadow: var(--e-box-shadow-0);
   color: var(--e-color-ground);
 }
 
-.e-quick-nav-link--active {
+.quick-nav-link--active {
   background: var(--e-color-highlight-default) !important;
 }

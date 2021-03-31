@@ -41,7 +41,7 @@ export default function Line({
 
   return (
     <polyline
-      className="e-line"
+      className="line"
       fill="none"
       points={polylinePoints}
       stroke={color}
