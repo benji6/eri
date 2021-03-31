@@ -1,5 +1,5 @@
 .d-code-snippet {
-  background: var(--e-color-ground);
-  margin: var(--e-space-1) 0;
+  background: var(--color-ground);
+  margin: var(--space-1) 0;
   overflow: auto;
 }

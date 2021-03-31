@@ -3,11 +3,11 @@ import CodeSnippet from "../Components/_CodeSnippet";
 
 interface IProps {
   varName:
-    | "--e-font-size-0"
-    | "--e-font-size-1"
-    | "--e-font-size-2"
-    | "--e-font-size-3"
-    | "--e-font-size-4";
+    | "--font-size-0"
+    | "--font-size-1"
+    | "--font-size-2"
+    | "--font-size-3"
+    | "--font-size-4";
 }
 
 export default function FontSize({ varName }: IProps) {

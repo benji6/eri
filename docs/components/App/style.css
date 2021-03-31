@@ -1,6 +1,6 @@
 code {
-  font-size: var(--e-font-size-0);
-  transition: background-color var(--e-time-0) var(--e-easing-standard);
+  font-size: var(--font-size-0);
+  transition: background-color var(--time-0) var(--easing-standard);
   white-space: pre-wrap;
 }
 

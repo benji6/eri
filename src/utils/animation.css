@@ -1,9 +1,8 @@
 :root {
-  --e-animation-fade-in: e-fade-in var(--e-time-2) var(--e-easing-standard)
-    forwards;
-  --e-animation-slide-in: var(--e-animation-fade-in),
-    e-slide-in var(--e-time-1) var(--e-easing-decelerate) forwards;
-  --e-animation-spin: e-rotate var(--e-time-2) linear infinite;
+  --animation-fade-in: e-fade-in var(--time-2) var(--easing-standard) forwards;
+  --animation-slide-in: var(--animation-fade-in),
+    e-slide-in var(--time-1) var(--easing-decelerate) forwards;
+  --animation-spin: e-rotate var(--time-2) linear infinite;
 }
 
 @keyframes e-draw {
@@ -34,48 +33,48 @@
 }
 
 .fade-in {
-  animation: var(--e-animation-fade-in);
+  animation: var(--animation-fade-in);
   opacity: 0;
 }
 
 .slide-in > * {
-  animation: var(--e-animation-slide-in);
+  animation: var(--animation-slide-in);
 }
 
 .slide-children-in > * {
-  animation: var(--e-animation-slide-in);
+  animation: var(--animation-slide-in);
   opacity: 0;
 }
 .slide-children-in > *:nth-child(2) {
-  animation-delay: var(--e-time-0);
+  animation-delay: var(--time-0);
 }
 .slide-children-in > *:nth-child(3) {
-  animation-delay: calc(var(--e-time-0) * 2);
+  animation-delay: calc(var(--time-0) * 2);
 }
 .slide-children-in > *:nth-child(4) {
-  animation-delay: calc(var(--e-time-0) * 3);
+  animation-delay: calc(var(--time-0) * 3);
 }
 .slide-children-in > *:nth-child(5) {
-  animation-delay: calc(var(--e-time-0) * 4);
+  animation-delay: calc(var(--time-0) * 4);
 }
 .slide-children-in > *:nth-child(6) {
-  animation-delay: calc(var(--e-time-0) * 5);
+  animation-delay: calc(var(--time-0) * 5);
 }
 .slide-children-in > *:nth-child(7) {
-  animation-delay: calc(var(--e-time-0) * 6);
+  animation-delay: calc(var(--time-0) * 6);
 }
 .slide-children-in > *:nth-child(8) {
-  animation-delay: calc(var(--e-time-0) * 7);
+  animation-delay: calc(var(--time-0) * 7);
 }
 .slide-children-in > *:nth-child(9) {
-  animation-delay: calc(var(--e-time-0) * 8);
+  animation-delay: calc(var(--time-0) * 8);
 }
 .slide-children-in > *:nth-child(10) {
-  animation-delay: calc(var(--e-time-0) * 9);
+  animation-delay: calc(var(--time-0) * 9);
 }
 .slide-children-in > *:nth-child(11) {
-  animation-delay: calc(var(--e-time-0) * 10);
+  animation-delay: calc(var(--time-0) * 10);
 }
 .slide-children-in > *:nth-child(12) {
-  animation-delay: calc(var(--e-time-0) * 11);
+  animation-delay: calc(var(--time-0) * 11);
 }

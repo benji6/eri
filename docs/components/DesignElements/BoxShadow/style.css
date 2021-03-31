@@ -1,5 +1,5 @@
 .d-box-shadow__visual {
-  background: var(--e-color-ground-more);
-  height: var(--e-space-4);
-  width: var(--e-space-4);
+  background: var(--color-ground-more);
+  height: var(--space-4);
+  width: var(--space-4);
 }

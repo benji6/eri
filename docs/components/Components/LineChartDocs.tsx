@@ -55,7 +55,7 @@ export default function LineChartDocs(_: RouteComponentProps) {
             <Chart.YGridLines lines={ylabels.map(([y]) => y)} />
             <Chart.PlotArea>
               <Chart.Line
-                color="var(--e-color-balance-less)"
+                color="var(--color-balance-less)"
                 data={props.trendlinePoints}
                 thickness={2}
               />

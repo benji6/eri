@@ -2,7 +2,7 @@ import * as React from "react";
 import CodeSnippet from "../Components/_CodeSnippet";
 
 interface IProps {
-  varName: "--e-font-weight-normal" | "--e-font-weight-bold";
+  varName: "--font-weight-normal" | "--font-weight-bold";
 }
 
 export default function FontWeight({ varName }: IProps) {

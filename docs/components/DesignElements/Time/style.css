@@ -1,7 +1,7 @@
 .d-time__visual {
-  animation: var(--e-animation-spin);
-  background: var(--e-color-figure-more);
-  height: var(--e-space-2);
-  transition: background-color var(--e-time-0) var(--e-easing-standard);
-  width: var(--e-space-4);
+  animation: var(--animation-spin);
+  background: var(--color-figure-more);
+  height: var(--space-2);
+  transition: background-color var(--time-0) var(--easing-standard);
+  width: var(--space-4);
 }

@@ -1,23 +1,23 @@
 .quick-nav-link {
-  background: var(--e-color-theme);
-  color: var(--e-color-ground);
-  transition-duration: var(--e-time-0);
+  background: var(--color-theme);
+  color: var(--color-ground);
+  transition-duration: var(--time-0);
   transition-property: background-color, box-shadow;
-  transition-timing-function: var(--e-easing-standard);
+  transition-timing-function: var(--easing-standard);
 }
 
 .quick-nav-link:focus,
 .quick-nav-link:hover {
-  background: var(--e-color-theme-less);
-  color: var(--e-color-ground);
+  background: var(--color-theme-less);
+  color: var(--color-ground);
 }
 
 .quick-nav-link:active {
-  background: var(--e-color-theme-more);
-  box-shadow: var(--e-box-shadow-0);
-  color: var(--e-color-ground);
+  background: var(--color-theme-more);
+  box-shadow: var(--box-shadow-0);
+  color: var(--color-ground);
 }
 
 .quick-nav-link--active {
-  background: var(--e-color-highlight-default) !important;
+  background: var(--color-highlight-default) !important;
 }

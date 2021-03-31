@@ -1,105 +1,105 @@
 :root {
-  --e-spread-modifier: 1;
-  --e-balance-lightness: 45%;
-  --e-balance-lightness-spread: calc(10% * var(--e-spread-modifier));
-  --e-figure-hsl: var(--e-neutral-hs), var(--e-figure-lightness);
-  --e-figure-lightness: 10%;
-  --e-figure-lightness-spread: calc(10% * var(--e-spread-modifier));
-  --e-ground-lightness: 95%;
-  --e-ground-lightness-spread: calc(5% * var(--e-spread-modifier));
-  --e-negative-hue: 345;
-  --e-neutral-hs: var(--e-theme-hue), 25%;
-  --e-positive-hue: 150;
-  --e-theme-hue: 210;
-  --e-theme-lightness: 22%;
-  --e-theme-lightness-spread: calc(7% * var(--e-spread-modifier));
+  --spread-modifier: 1;
+  --balance-lightness: 45%;
+  --balance-lightness-spread: calc(10% * var(--spread-modifier));
+  --figure-hsl: var(--neutral-hs), var(--figure-lightness);
+  --figure-lightness: 10%;
+  --figure-lightness-spread: calc(10% * var(--spread-modifier));
+  --ground-lightness: 95%;
+  --ground-lightness-spread: calc(5% * var(--spread-modifier));
+  --negative-hue: 345;
+  --neutral-hs: var(--theme-hue), 25%;
+  --positive-hue: 150;
+  --theme-hue: 210;
+  --theme-lightness: 22%;
+  --theme-lightness-spread: calc(7% * var(--spread-modifier));
 
-  --e-color-balance: hsl(var(--e-neutral-hs), var(--e-balance-lightness));
-  --e-color-balance-less: hsl(
-    var(--e-neutral-hs),
-    calc(var(--e-balance-lightness) + var(--e-balance-lightness-spread))
+  --color-balance: hsl(var(--neutral-hs), var(--balance-lightness));
+  --color-balance-less: hsl(
+    var(--neutral-hs),
+    calc(var(--balance-lightness) + var(--balance-lightness-spread))
   );
-  --e-color-balance-more: hsl(
-    var(--e-neutral-hs),
-    calc(var(--e-balance-lightness) - var(--e-balance-lightness-spread))
-  );
-
-  --e-color-figure: hsl(var(--e-neutral-hs), var(--e-figure-lightness));
-  --e-color-figure-less: hsl(
-    var(--e-neutral-hs),
-    calc(var(--e-figure-lightness) + var(--e-figure-lightness-spread))
-  );
-  --e-color-figure-more: hsl(
-    var(--e-neutral-hs),
-    calc(var(--e-figure-lightness) - var(--e-figure-lightness-spread))
+  --color-balance-more: hsl(
+    var(--neutral-hs),
+    calc(var(--balance-lightness) - var(--balance-lightness-spread))
   );
 
-  --e-color-ground: hsl(var(--e-neutral-hs), var(--e-ground-lightness));
-  --e-color-ground-less: hsl(
-    var(--e-neutral-hs),
-    calc(var(--e-ground-lightness) - var(--e-ground-lightness-spread))
+  --color-figure: hsl(var(--neutral-hs), var(--figure-lightness));
+  --color-figure-less: hsl(
+    var(--neutral-hs),
+    calc(var(--figure-lightness) + var(--figure-lightness-spread))
   );
-  --e-color-ground-more: hsl(
-    var(--e-neutral-hs),
-    calc(var(--e-ground-lightness) + var(--e-ground-lightness-spread))
+  --color-figure-more: hsl(
+    var(--neutral-hs),
+    calc(var(--figure-lightness) - var(--figure-lightness-spread))
   );
-  --e-color-ground-highlight: hsl(var(--e-theme-hue), 100%, 95%);
+
+  --color-ground: hsl(var(--neutral-hs), var(--ground-lightness));
+  --color-ground-less: hsl(
+    var(--neutral-hs),
+    calc(var(--ground-lightness) - var(--ground-lightness-spread))
+  );
+  --color-ground-more: hsl(
+    var(--neutral-hs),
+    calc(var(--ground-lightness) + var(--ground-lightness-spread))
+  );
+  --color-ground-highlight: hsl(var(--theme-hue), 100%, 95%);
 
   /* if you add or remove a highlight color you need to update HIGHLIGHT_COLOR_COUNT in script */
-  --e-color-highlight-0: hsl(184, 100%, 48%);
-  --e-color-highlight-1: hsl(270, 100%, 67%);
-  --e-color-highlight-2: hsl(300, 90%, 65%);
-  --e-color-highlight-3: hsl(32, 100%, 60%);
-  --e-color-highlight-4: hsl(70, 100%, 45%);
-  --e-color-highlight-5: hsl(148, 100%, 45%);
+  --color-highlight-0: hsl(184, 100%, 48%);
+  --color-highlight-1: hsl(270, 100%, 67%);
+  --color-highlight-2: hsl(300, 90%, 65%);
+  --color-highlight-3: hsl(32, 100%, 60%);
+  --color-highlight-4: hsl(70, 100%, 45%);
+  --color-highlight-5: hsl(148, 100%, 45%);
 
-  --e-color-highlight-default: var(--e-color-highlight-3);
+  --color-highlight-default: var(--color-highlight-3);
 
-  --e-color-mask: hsla(var(--e-neutral-hs), 10%, 0.75);
+  --color-mask: hsla(var(--neutral-hs), 10%, 0.75);
 
-  --e-color-negative: hsl(var(--e-negative-hue), 75%, 50%);
-  --e-color-negative-less: hsl(var(--e-negative-hue), 70%, 58%);
-  --e-color-negative-more: hsl(var(--e-negative-hue), 90%, 43%);
+  --color-negative: hsl(var(--negative-hue), 75%, 50%);
+  --color-negative-less: hsl(var(--negative-hue), 70%, 58%);
+  --color-negative-more: hsl(var(--negative-hue), 90%, 43%);
 
-  --e-color-positive: hsl(var(--e-positive-hue), 75%, 44%);
-  --e-color-positive-less: hsl(var(--e-positive-hue), 70%, 54%);
+  --color-positive: hsl(var(--positive-hue), 75%, 44%);
+  --color-positive-less: hsl(var(--positive-hue), 70%, 54%);
 
-  --e-color-theme: hsl(var(--e-theme-hue), 100%, var(--e-theme-lightness));
-  --e-color-theme-less: hsl(
-    var(--e-theme-hue),
+  --color-theme: hsl(var(--theme-hue), 100%, var(--theme-lightness));
+  --color-theme-less: hsl(
+    var(--theme-hue),
     100%,
-    calc(var(--e-theme-lightness) + var(--e-theme-lightness-spread))
+    calc(var(--theme-lightness) + var(--theme-lightness-spread))
   );
-  --e-color-theme-more: hsl(
-    var(--e-theme-hue),
+  --color-theme-more: hsl(
+    var(--theme-hue),
     100%,
-    calc(var(--e-theme-lightness) - var(--e-theme-lightness-spread))
+    calc(var(--theme-lightness) - var(--theme-lightness-spread))
   );
-  --e-color-theme-app: hsl(
-    var(--e-theme-hue),
+  --color-theme-app: hsl(
+    var(--theme-hue),
     100%,
-    calc(var(--e-theme-lightness) - 2 * var(--e-theme-lightness-spread))
+    calc(var(--theme-lightness) - 2 * var(--theme-lightness-spread))
   );
 
   /* components may override this prop
   currenlty it is used by the ripple utility class */
-  --color: var(--e-color-theme);
+  --color: var(--color-theme);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --e-spread-modifier: -1;
-    --e-balance-lightness: 60%;
-    --e-figure-lightness: 75%;
-    --e-ground-lightness: 2%;
-    --e-ground-lightness-spread: calc(-5% * var(--e-spread-modifier));
-    --e-color-ground-highlight: hsl(240, 100%, 20%);
-    --e-negative-hue: 310;
-    --e-theme-hue: 195;
-    --e-theme-lightness: 41%;
+    --spread-modifier: -1;
+    --balance-lightness: 60%;
+    --figure-lightness: 75%;
+    --ground-lightness: 2%;
+    --ground-lightness-spread: calc(-5% * var(--spread-modifier));
+    --color-ground-highlight: hsl(240, 100%, 20%);
+    --negative-hue: 310;
+    --theme-hue: 195;
+    --theme-lightness: 41%;
 
-    --e-color-highlight-default: var(--e-color-highlight-1);
+    --color-highlight-default: var(--color-highlight-1);
 
-    --e-color-mask: hsla(var(--e-neutral-hs), 20%, 0.75);
+    --color-mask: hsla(var(--neutral-hs), 20%, 0.75);
   }
 }

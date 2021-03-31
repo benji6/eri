@@ -1,23 +1,23 @@
 :root {
-  --e-time-base-value: 0.1s;
-  --e-time-scale-ratio: 2.5;
+  --time-base-value: 0.1s;
+  --time-scale-ratio: 2.5;
 
-  --e-time-0: var(--e-time-base-value);
-  --e-time-1: calc(var(--e-time-0) * var(--e-time-scale-ratio));
-  --e-time-2: calc(var(--e-time-1) * var(--e-time-scale-ratio));
-  --e-time-3: calc(var(--e-time-2) * var(--e-time-scale-ratio));
+  --time-0: var(--time-base-value);
+  --time-1: calc(var(--time-0) * var(--time-scale-ratio));
+  --time-2: calc(var(--time-1) * var(--time-scale-ratio));
+  --time-3: calc(var(--time-2) * var(--time-scale-ratio));
 }
 
 @media (min-width: 37rem) {
   :root {
     /* Do not calc() this because it is read from a script */
-    --e-time-0: 0.1s;
+    --time-0: 0.1s;
   }
 }
 
 @media (min-width: 66rem) {
   :root {
     /* Do not calc() this because it is read from a script */
-    --e-time-0: 0.11s;
+    --time-0: 0.11s;
   }
 }

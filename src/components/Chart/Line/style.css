@@ -1,5 +1,5 @@
 .line {
-  animation: e-draw var(--e-time-3) var(--e-easing-standard) forwards;
+  animation: e-draw var(--time-3) var(--easing-standard) forwards;
 
   /* --length is set by React Component */
   stroke-dasharray: var(--length);

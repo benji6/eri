@@ -25,7 +25,7 @@ export default function Points({ colorFromY, data }: IProps) {
           className="points__point"
           cx={x}
           cy={y}
-          fill={colorFromY ? colorFromY(data[i][1]) : "var(--e-color-theme)"}
+          fill={colorFromY ? colorFromY(data[i][1]) : "var(--color-theme)"}
           key={`${x}:${y}`}
           r={POINT_RADIUS}
           style={{ "--point-number": i } as React.CSSProperties}

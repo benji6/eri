@@ -28,7 +28,7 @@ export default function YGridLines({ lines }: IProps) {
         return (
           <line
             key={lineY}
-            stroke="var(--e-color-balance)"
+            stroke="var(--color-balance)"
             strokeDasharray={LINE_WIDTH_2}
             strokeWidth={LINE_WIDTH_0}
             x1={marginLeft}

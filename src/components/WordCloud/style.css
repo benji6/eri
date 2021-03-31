@@ -5,13 +5,13 @@
 
 .word-cloud__word {
   animation-name: e-fade-in, e-word-slide;
-  animation-duration: var(--e-time-2);
-  animation-timing-function: var(--e-easing-standard);
+  animation-duration: var(--time-2);
+  animation-timing-function: var(--easing-standard);
   animation-fill-mode: forwards;
 
   /* --word-number and --total-words set by JS */
   animation-delay: calc(
-    var(--word-number) / (var(--total-words) - 1) * var(--e-time-2)
+    var(--word-number) / (var(--total-words) - 1) * var(--time-2)
   );
   opacity: 0;
 }

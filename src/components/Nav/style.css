@@ -1,24 +1,24 @@
 .nav {
-  background: var(--e-color-ground-more);
+  background: var(--color-ground-more);
   bottom: 0;
-  box-shadow: var(--e-box-shadow-2);
+  box-shadow: var(--box-shadow-2);
   box-sizing: border-box;
   max-width: calc(200vw / 3);
   overflow: auto;
-  padding-bottom: var(--e-space-2);
+  padding-bottom: var(--space-2);
   position: fixed;
   right: 0;
   top: 0;
-  transition: transform var(--e-time-1) var(--e-easing-standard);
-  width: var(--e-nav-width);
+  transition: transform var(--time-1) var(--easing-standard);
+  width: var(--nav-width);
 }
 
 @media (min-width: 66rem) {
   .nav {
-    background: var(--e-color-ground);
-    box-shadow: var(--e-box-shadow-0);
+    background: var(--color-ground);
+    box-shadow: var(--box-shadow-0);
     left: 0;
-    padding-bottom: var(--e-space-3);
+    padding-bottom: var(--space-3);
     right: initial;
     top: var(--header-height);
     transform: none !important;
@@ -27,12 +27,12 @@
 
 .nav--enter,
 .nav--exit-active {
-  transform: translateX(var(--e-nav-width));
-  transition-timing-function: var(--e-easing-accelerate);
+  transform: translateX(var(--nav-width));
+  transition-timing-function: var(--easing-accelerate);
 }
 
 .nav__close-button {
   position: absolute;
-  right: var(--e-space-2);
-  top: var(--e-space-1);
+  right: var(--space-2);
+  top: var(--space-1);
 }

@@ -27,7 +27,7 @@ export default function XGridLines({ lines }: IProps) {
         return (
           <line
             key={lineX}
-            stroke="var(--e-color-balance)"
+            stroke="var(--color-balance)"
             strokeDasharray={LINE_WIDTH_2}
             strokeWidth={LINE_WIDTH_0}
             x1={x}

@@ -1,19 +1,19 @@
 .close-button {
-  margin-left: var(--e-space-2);
-  transition-duration: var(--e-time-0);
+  margin-left: var(--space-2);
+  transition-duration: var(--time-0);
   transition-property: background-color, color;
-  transition-timing-function: var(--e-easing-standard);
+  transition-timing-function: var(--easing-standard);
 }
 
 .close-button:hover {
-  color: var(--e-color-figure-less);
+  color: var(--color-figure-less);
 }
 
 .close-button:active {
-  color: var(--e-color-figure-more);
+  color: var(--color-figure-more);
 }
 
 .close-button:focus:not(:active) {
-  background: var(--e-color-figure);
-  color: var(--e-color-ground);
+  background: var(--color-figure);
+  color: var(--color-ground);
 }

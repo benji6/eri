@@ -3,7 +3,7 @@ import * as React from "react";
 import CodeSnippet from "../../Components/_CodeSnippet";
 
 interface IProps {
-  varName: "--e-border-radius-0" | "--e-border-radius-1";
+  varName: "--border-radius-0" | "--border-radius-1";
 }
 
 export default function BorderRadius({ varName }: IProps) {

@@ -1,5 +1,5 @@
 .paper {
-  background: var(--e-color-ground-more);
+  background: var(--color-ground-more);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
 }
 
@@ -46,7 +46,7 @@ button.paper {
 }
 
 button.paper::before {
-  background: var(--e-color-figure-more);
+  background: var(--color-figure-more);
   bottom: 0;
   content: "";
   left: 0;
@@ -54,8 +54,8 @@ button.paper::before {
   position: absolute;
   right: 0;
   top: 0;
-  transition: opacity var(--e-time-0) var(--e-easing-standard);
-  z-index: var(--e-z-index-1);
+  transition: opacity var(--time-0) var(--easing-standard);
+  z-index: var(--z-index-1);
 }
 
 button.paper:hover::before,

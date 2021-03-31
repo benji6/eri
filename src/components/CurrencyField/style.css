@@ -9,11 +9,11 @@
   bottom: 0;
   content: "£";
   display: flex;
-  left: var(--e-space-2);
+  left: var(--space-2);
   position: absolute;
   top: 0;
 }
 
 input.currency-field__input {
-  padding-left: calc(var(--e-space-4) - var(--e-space-0));
+  padding-left: calc(var(--space-4) - var(--space-0));
 }

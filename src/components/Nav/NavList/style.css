@@ -1,7 +1,7 @@
 .nav-list {
-  padding: var(--e-space-2) 0 0;
+  padding: var(--space-2) 0 0;
 }
 
 .nav__close-button ~ .nav-list {
-  padding-top: var(--e-space-4);
+  padding-top: var(--space-4);
 }

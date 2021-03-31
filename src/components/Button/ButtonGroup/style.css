@@ -1,11 +1,11 @@
 .button-group {
   display: flex;
   flex-direction: column;
-  margin: var(--e-space-3) 0 var(--e-space-4);
+  margin: var(--space-3) 0 var(--space-4);
 }
 
 .button-group > *:not(:last-child) {
-  margin-bottom: var(--e-space-3);
+  margin-bottom: var(--space-3);
 }
 
 @media (min-width: 37rem) {
@@ -16,7 +16,7 @@
   }
 
   .button-group > *:not(:first-child) {
-    margin-right: var(--e-space-3);
+    margin-right: var(--space-3);
   }
 
   .button-group > *:not(:last-child) {

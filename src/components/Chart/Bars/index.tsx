@@ -44,7 +44,7 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
                 ? colorFromX(data.length > 1 ? i / (data.length - 1) : 0.5)
                 : colorFromY
                 ? colorFromY(originalY)
-                : "var(--e-color-theme)"
+                : "var(--color-theme)"
             }
             height={1 - y - marginBottom}
             style={

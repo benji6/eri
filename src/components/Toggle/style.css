@@ -1,29 +1,29 @@
 .toggle {
-  --toggle-button-diameter: var(--e-space-2);
+  --toggle-button-diameter: var(--space-2);
   --toggle-width: calc(2 * var(--toggle-button-diameter));
 
   position: relative;
 }
 
 .toggle__appearance {
-  background: var(--e-color-balance);
+  background: var(--color-balance);
   border-color: transparent;
   flex-shrink: 0;
   height: var(--toggle-button-diameter);
-  padding: var(--e-border-width-2);
-  transition-duration: var(--e-time-0);
+  padding: var(--border-width-2);
+  transition-duration: var(--time-0);
   transition-property: background-color, border-color;
-  transition-timing-function: var(--e-easing-standard);
+  transition-timing-function: var(--easing-standard);
   width: var(--toggle-width);
 }
 
 .toggle__appearance::after {
-  background: var(--e-color-ground);
+  background: var(--color-ground);
   border-radius: 50%;
   content: "";
   display: block;
   height: var(--toggle-button-diameter);
-  transition: transform var(--e-time-0) var(--e-easing-standard);
+  transition: transform var(--time-0) var(--easing-standard);
   width: var(--toggle-button-diameter);
 }
 
@@ -31,12 +31,12 @@
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  height: calc(var(--toggle-button-diameter) + 2 * var(--e-border-width-2));
-  width: calc(var(--toggle-width) + 2 * var(--e-border-width-2));
+  height: calc(var(--toggle-button-diameter) + 2 * var(--border-width-2));
+  width: calc(var(--toggle-width) + 2 * var(--border-width-2));
 }
 
 .toggle__input:checked ~ .toggle__appearance {
-  background: var(--e-color-positive);
+  background: var(--color-positive);
 }
 
 .toggle__input:checked ~ .toggle__appearance::after {
@@ -46,30 +46,30 @@
 }
 
 .toggle__input:focus ~ .toggle__appearance {
-  border-color: var(--e-color-theme-less);
+  border-color: var(--color-theme-less);
 }
 
 .toggle__input[aria-invalid="true"] ~ .toggle__appearance {
-  border-color: var(--e-color-negative);
+  border-color: var(--color-negative);
 }
 
 .toggle__input:disabled ~ .toggle__appearance {
-  background: var(--e-color-balance-less);
+  background: var(--color-balance-less);
 }
 .toggle__input:disabled ~ .toggle__appearance::after {
-  background: var(--e-color-ground-less);
+  background: var(--color-ground-less);
 }
 
 .toggle__input:hover:not(:disabled) ~ .toggle__appearance {
-  background: var(--e-color-balance-less);
+  background: var(--color-balance-less);
 }
 
 .toggle__input:checked:hover:not(:disabled) ~ .toggle__appearance {
-  background: var(--e-color-positive-less);
+  background: var(--color-positive-less);
 }
 
 .toggle__label {
-  column-gap: var(--e-space-2);
+  column-gap: var(--space-2);
   cursor: pointer;
   display: grid;
   grid-template-columns: auto 1fr;

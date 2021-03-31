@@ -1,18 +1,18 @@
 .quick-nav {
-  --animation-delay: calc(var(--e-time-0) / 2);
-  --margin: var(--e-space-2);
+  --animation-delay: calc(var(--time-0) / 2);
+  --margin: var(--space-2);
 
   bottom: var(--margin);
   display: flex;
   justify-content: space-evenly;
-  left: var(--e-space-for-nav);
+  left: var(--space-for-nav);
   pointer-events: none;
   position: fixed;
   right: 0;
 }
 
 .quick-nav > * {
-  animation: e-animate-quick-nav-in var(--e-time-0) var(--e-easing-decelerate)
+  animation: e-animate-quick-nav-in var(--time-0) var(--easing-decelerate)
     forwards;
   opacity: 0;
   pointer-events: initial;

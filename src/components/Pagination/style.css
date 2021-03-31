@@ -1,21 +1,21 @@
 .pagination {
-  border-bottom: var(--e-border-width-2) solid currentColor;
-  border-top: var(--e-border-width-2) solid currentColor;
+  border-bottom: var(--border-width-2) solid currentColor;
+  border-top: var(--border-width-2) solid currentColor;
   display: flex;
   justify-content: center;
-  padding: var(--e-space-1) 0;
+  padding: var(--space-1) 0;
 }
 
 .pagination__button {
   background: none;
-  color: var(--e-color-theme);
-  padding: var(--e-space-0) var(--e-space-1);
+  color: var(--color-theme);
+  padding: var(--space-0) var(--space-1);
 }
 
 @media (min-width: 37rem) {
   .pagination__button {
-    padding-left: var(--e-space-2);
-    padding-right: var(--e-space-2);
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
   }
 }
 
@@ -24,22 +24,22 @@
 }
 
 .pagination__button:hover {
-  color: var(--e-color-theme-less);
+  color: var(--color-theme-less);
   text-decoration: underline;
 }
 
 .pagination__button:active {
-  color: var(--e-color-theme-more);
+  color: var(--color-theme-more);
   text-decoration: underline;
 }
 
 .pagination__button:not(:last-child) {
-  margin-right: var(--e-space-0);
+  margin-right: var(--space-0);
 }
 
 .pagination__button:disabled {
-  color: var(--e-color-ground) !important;
-  background: var(--e-color-theme);
+  color: var(--color-ground) !important;
+  background: var(--color-theme);
   text-decoration: none !important;
   cursor: default;
 }

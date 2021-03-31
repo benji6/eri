@@ -1,34 +1,34 @@
 .fab {
   align-items: center;
-  background: var(--e-color-theme);
-  bottom: var(--e-space-2);
-  box-shadow: var(--e-box-shadow-1);
-  color: var(--e-color-ground);
+  background: var(--color-theme);
+  bottom: var(--space-2);
+  box-shadow: var(--box-shadow-1);
+  color: var(--color-ground);
   display: flex;
   position: fixed;
-  right: var(--e-space-2);
-  transition-duration: var(--e-time-0);
+  right: var(--space-2);
+  transition-duration: var(--time-0);
   transition-property: background-color, box-shadow, opacity, transform;
-  transition-timing-function: var(--e-easing-standard);
+  transition-timing-function: var(--easing-standard);
 }
 
 .fab:focus,
 .fab:hover {
-  background: var(--e-color-theme-less);
+  background: var(--color-theme-less);
 }
 
 .fab:disabled {
-  background: var(--e-color-balance);
+  background: var(--color-balance);
 }
 
 .fab:active:not(:disabled) {
-  background: var(--e-color-theme-more);
-  box-shadow: var(--e-box-shadow-0);
+  background: var(--color-theme-more);
+  box-shadow: var(--box-shadow-0);
 }
 
 .fab--enter,
 .fab--exit-active {
   opacity: 0;
   transform: scale(0);
-  transition-timing-function: var(--e-easing-accelerate);
+  transition-timing-function: var(--easing-accelerate);
 }

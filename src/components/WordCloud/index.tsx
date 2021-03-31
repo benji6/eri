@@ -173,7 +173,7 @@ export default function WordCloud({ words, ...rest }: IProps) {
           <text
             className="fade-in word-cloud__word"
             dy={fontSize * 0.3}
-            fill={`var(--e-color-highlight-${stringToColorIndex(word)})`}
+            fill={`var(--color-highlight-${stringToColorIndex(word)})`}
             fontSize={fontSize}
             key={word}
             style={

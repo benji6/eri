@@ -1,30 +1,27 @@
 :root {
-  --e-blur-radius-0: 4px;
-  --e-blur-radius-1: 5px;
-  --e-blur-radius-2: 6px;
+  --blur-radius-0: 4px;
+  --blur-radius-1: 5px;
+  --blur-radius-2: 6px;
 
-  --e-box-shadow-0-no-color: 0 2px var(--e-blur-radius-0);
-  --e-box-shadow-1-no-color: 0 3px var(--e-blur-radius-1);
-  --e-box-shadow-2-no-color: 0 4px var(--e-blur-radius-2);
+  --box-shadow-0-no-color: 0 2px var(--blur-radius-0);
+  --box-shadow-1-no-color: 0 3px var(--blur-radius-1);
+  --box-shadow-2-no-color: 0 4px var(--blur-radius-2);
 
-  --e-box-shadow-even-0-no-color: 0 0 var(--e-blur-radius-0);
-  --e-box-shadow-even-1-no-color: 0 0 var(--e-blur-radius-1);
-  --e-box-shadow-even-2-no-color: 0 0 var(--e-blur-radius-2);
+  --box-shadow-even-0-no-color: 0 0 var(--blur-radius-0);
+  --box-shadow-even-1-no-color: 0 0 var(--blur-radius-1);
+  --box-shadow-even-2-no-color: 0 0 var(--blur-radius-2);
 
-  --e-box-shadow-0: var(--e-box-shadow-0-no-color)
-    hsla(var(--e-figure-hsl), 0.4);
-  --e-box-shadow-1: var(--e-box-shadow-1-no-color)
-    hsla(var(--e-figure-hsl), 0.6);
-  --e-box-shadow-2: var(--e-box-shadow-2-no-color)
-    hsla(var(--e-figure-hsl), 0.8);
+  --box-shadow-0: var(--box-shadow-0-no-color) hsla(var(--figure-hsl), 0.4);
+  --box-shadow-1: var(--box-shadow-1-no-color) hsla(var(--figure-hsl), 0.6);
+  --box-shadow-2: var(--box-shadow-2-no-color) hsla(var(--figure-hsl), 0.8);
 
-  --e-box-shadow-input-focus: var(--e-box-shadow-even-0-no-color)
-    var(--e-color-theme-less);
+  --box-shadow-input-focus: var(--box-shadow-even-0-no-color)
+    var(--color-theme-less);
 }
 
 .bs-0 {
-  box-shadow: var(--e-box-shadow-0);
+  box-shadow: var(--box-shadow-0);
 }
 .bs-1 {
-  box-shadow: var(--e-box-shadow-1);
+  box-shadow: var(--box-shadow-1);
 }

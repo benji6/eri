@@ -1,6 +1,6 @@
 .negative {
-  color: var(--e-color-negative);
+  color: var(--color-negative);
 }
 .positive {
-  color: var(--e-color-positive);
+  color: var(--color-positive);
 }

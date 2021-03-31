@@ -3,26 +3,26 @@
 }
 
 .nav-link__link {
-  --active-color: var(--e-color-highlight-default);
+  --active-color: var(--color-highlight-default);
 
   display: block;
   text-decoration: none;
-  transition-duration: var(--e-time-0);
+  transition-duration: var(--time-0);
   transition-property: background-color, color;
-  transition-timing-function: var(--e-easing-standard);
+  transition-timing-function: var(--easing-standard);
 }
 .nav-link__link:focus {
-  color: var(--e-color-theme-more);
+  color: var(--color-theme-more);
 }
 .nav-link__link:hover {
-  background: var(--e-color-ground-less);
-  color: var(--e-color-theme-more);
+  background: var(--color-ground-less);
+  color: var(--color-theme-more);
 }
 
 .nav-sub-list .nav-link__link {
-  padding-bottom: var(--e-space-0);
-  padding-left: var(--e-space-4);
-  padding-top: var(--e-space-0);
+  padding-bottom: var(--space-0);
+  padding-left: var(--space-4);
+  padding-top: var(--space-0);
 }
 
 .nav-link__link--active {

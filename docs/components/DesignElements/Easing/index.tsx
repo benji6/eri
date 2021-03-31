@@ -3,10 +3,7 @@ import * as React from "react";
 import CodeSnippet from "../../Components/_CodeSnippet";
 
 interface IProps {
-  varName:
-    | "--e-easing-accelerate"
-    | "--e-easing-decelerate"
-    | "--e-easing-standard";
+  varName: "--easing-accelerate" | "--easing-decelerate" | "--easing-standard";
 }
 
 export default function Easing({ varName }: IProps) {

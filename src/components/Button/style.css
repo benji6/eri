@@ -1,16 +1,16 @@
 .button {
-  --color: var(--e-color-theme);
-  --color-active: var(--e-color-theme-more);
-  --color-hover: var(--e-color-theme-less);
+  --color: var(--color-theme);
+  --color-active: var(--color-theme-more);
+  --color-hover: var(--color-theme-less);
 
-  padding: var(--e-space-1) var(--e-space-3);
-  transition-duration: var(--e-time-0);
+  padding: var(--space-1) var(--space-3);
+  transition-duration: var(--time-0);
   transition-property: background-color, border-color, box-shadow, transform;
-  transition-timing-function: var(--e-easing-standard);
+  transition-timing-function: var(--easing-standard);
 }
 
 .button:hover {
-  box-shadow: var(--e-box-shadow-1);
+  box-shadow: var(--box-shadow-1);
 }
 
 .button:active,
@@ -20,16 +20,16 @@
 }
 
 .button--danger {
-  --color: var(--e-color-negative);
-  --color-active: var(--e-color-negative-more);
-  --color-hover: var(--e-color-negative-less);
+  --color: var(--color-negative);
+  --color-active: var(--color-negative-more);
+  --color-hover: var(--color-negative-less);
 }
 
 .button--primary {
   background: var(--color);
-  color: var(--e-color-ground);
-  padding: calc(var(--e-space-1) + 2 * var(--e-border-width-1))
-    calc(var(--e-space-3) + 2 * var(--e-border-width-1));
+  color: var(--color-ground);
+  padding: calc(var(--space-1) + 2 * var(--border-width-1))
+    calc(var(--space-3) + 2 * var(--border-width-1));
 }
 
 .button--primary:hover {
@@ -43,7 +43,7 @@
 }
 
 .button--primary:disabled {
-  background: var(--e-color-balance);
+  background: var(--color-balance);
   border-color: transparent;
 }
 
@@ -64,6 +64,6 @@
 }
 
 .button--secondary:disabled {
-  border-color: var(--e-color-balance);
-  color: var(--e-color-balance);
+  border-color: var(--color-balance);
+  color: var(--color-balance);
 }

@@ -17,7 +17,7 @@ const thicknessToLineWidth = [
 ] as const;
 
 export default function Line({
-  color = "var(--e-color-theme)",
+  color = "var(--color-theme)",
   data,
   thickness = 1,
 }: Props) {

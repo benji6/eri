@@ -1,6 +1,6 @@
 .d-border-radius__visual {
-  height: var(--e-space-3);
-  width: var(--e-space-3);
-  background: var(--e-color-figure-more);
-  transition: background-color var(--e-time-0) var(--e-easing-standard);
+  height: var(--space-3);
+  width: var(--space-3);
+  background: var(--color-figure-more);
+  transition: background-color var(--time-0) var(--easing-standard);
 }

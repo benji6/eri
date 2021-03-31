@@ -1,7 +1,7 @@
 .d-color__visual {
-  --size: var(--e-space-3);
+  --size: var(--space-3);
 
   height: var(--size);
-  transition: background-color var(--e-time-0) var(--e-easing-standard);
+  transition: background-color var(--time-0) var(--easing-standard);
   width: var(--size);
 }

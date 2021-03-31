@@ -1,5 +1,5 @@
 .dialog {
-  --content-vertical-padding: var(--e-space-1);
+  --content-vertical-padding: var(--space-1);
 
   align-items: center;
   bottom: 0;
@@ -9,9 +9,9 @@
   position: fixed;
   right: 0;
   top: 0;
-  transition-duration: var(--e-time-1);
+  transition-duration: var(--time-1);
   transition-property: opacity, transform;
-  transition-timing-function: var(--e-easing-decelerate);
+  transition-timing-function: var(--easing-decelerate);
 }
 
 .dialog--enter,
@@ -19,7 +19,7 @@
   opacity: 0;
   pointer-events: none;
   transform: scale(0.9);
-  transition-timing-function: var(--e-easing-accelerate);
+  transition-timing-function: var(--easing-accelerate);
 }
 
 .dialog__close-button-container {
@@ -41,7 +41,7 @@
 }
 
 .dialog__dialog {
-  background-color: var(--e-color-ground);
-  margin: 0 var(--e-space-3);
-  max-width: var(--e-break-point);
+  background-color: var(--color-ground);
+  margin: 0 var(--space-3);
+  max-width: var(--break-point);
 }

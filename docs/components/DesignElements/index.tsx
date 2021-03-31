@@ -24,18 +24,18 @@ export default function DesignElements(_: RouteComponentProps) {
           simple and conveys a sense of harmony.
         </p>
         <DisplayGroup>
-          <FontSize varName="--e-font-size-0" />
-          <FontSize varName="--e-font-size-1" />
-          <FontSize varName="--e-font-size-2" />
-          <FontSize varName="--e-font-size-3" />
-          <FontSize varName="--e-font-size-4" />
+          <FontSize varName="--font-size-0" />
+          <FontSize varName="--font-size-1" />
+          <FontSize varName="--font-size-2" />
+          <FontSize varName="--font-size-3" />
+          <FontSize varName="--font-size-4" />
         </DisplayGroup>
       </Paper>
       <Paper>
         <h3>Font weight</h3>
         <DisplayGroup>
-          <FontWeight varName="--e-font-weight-normal" />
-          <FontWeight varName="--e-font-weight-bold" />
+          <FontWeight varName="--font-weight-normal" />
+          <FontWeight varName="--font-weight-bold" />
         </DisplayGroup>
       </Paper>
       <Paper>
@@ -45,32 +45,32 @@ export default function DesignElements(_: RouteComponentProps) {
           <code>em</code> units to keep it responsive to font size.
         </p>
         <DisplayGroup>
-          <Space varName="--e-space-0" />
-          <Space varName="--e-space-1" />
-          <Space varName="--e-space-2" />
-          <Space varName="--e-space-3" />
-          <Space varName="--e-space-4" />
+          <Space varName="--space-0" />
+          <Space varName="--space-1" />
+          <Space varName="--space-2" />
+          <Space varName="--space-3" />
+          <Space varName="--space-4" />
         </DisplayGroup>
         <h3>Border radius</h3>
         <p>Border radius is responsive to font size.</p>
         <DisplayGroup>
-          <BorderRadius varName="--e-border-radius-0" />
-          <BorderRadius varName="--e-border-radius-1" />
+          <BorderRadius varName="--border-radius-0" />
+          <BorderRadius varName="--border-radius-1" />
         </DisplayGroup>
         <h3>Border width</h3>
         <p>Border width is fixed for all devices.</p>
         <DisplayGroup>
-          <Space varName="--e-border-width-0" />
-          <Space varName="--e-border-width-1" />
-          <Space varName="--e-border-width-2" />
+          <Space varName="--border-width-0" />
+          <Space varName="--border-width-1" />
+          <Space varName="--border-width-2" />
         </DisplayGroup>
       </Paper>
       <Paper>
         <h3>Box shadow</h3>
         <DisplayGroup>
-          <BoxShadow varName="--e-box-shadow-0" />
-          <BoxShadow varName="--e-box-shadow-1" />
-          <BoxShadow varName="--e-box-shadow-2" />
+          <BoxShadow varName="--box-shadow-0" />
+          <BoxShadow varName="--box-shadow-1" />
+          <BoxShadow varName="--box-shadow-2" />
         </DisplayGroup>
       </Paper>
       <Paper>
@@ -80,10 +80,10 @@ export default function DesignElements(_: RouteComponentProps) {
           velocity feels more constant.
         </p>
         <DisplayGroup>
-          <Time varName="--e-time-0" />
-          <Time varName="--e-time-1" />
-          <Time varName="--e-time-2" />
-          <Time varName="--e-time-3" />
+          <Time varName="--time-0" />
+          <Time varName="--time-1" />
+          <Time varName="--time-2" />
+          <Time varName="--time-3" />
         </DisplayGroup>
         <h3>Easing</h3>
         <p>
@@ -94,9 +94,9 @@ export default function DesignElements(_: RouteComponentProps) {
           .
         </p>
         <DisplayGroup>
-          <Easing varName="--e-easing-accelerate" />
-          <Easing varName="--e-easing-decelerate" />
-          <Easing varName="--e-easing-standard" />
+          <Easing varName="--easing-accelerate" />
+          <Easing varName="--easing-decelerate" />
+          <Easing varName="--easing-standard" />
         </DisplayGroup>
       </Paper>
       <Paper>
@@ -132,57 +132,57 @@ export default function DesignElements(_: RouteComponentProps) {
         </p>
         <h4>Figure</h4>
         <DisplayGroup>
-          <Color varName="--e-color-figure-more" />
-          <Color varName="--e-color-figure" />
-          <Color varName="--e-color-figure-less" />
+          <Color varName="--color-figure-more" />
+          <Color varName="--color-figure" />
+          <Color varName="--color-figure-less" />
         </DisplayGroup>
         <h4>Balance</h4>
         <DisplayGroup>
-          <Color varName="--e-color-balance-more" />
-          <Color varName="--e-color-balance" />
-          <Color varName="--e-color-balance-less" />
+          <Color varName="--color-balance-more" />
+          <Color varName="--color-balance" />
+          <Color varName="--color-balance-less" />
         </DisplayGroup>
         <h4>Ground</h4>
         <DisplayGroup>
-          <Color varName="--e-color-ground-more" />
-          <Color varName="--e-color-ground" />
-          <Color varName="--e-color-ground-less" />
-          <Color varName="--e-color-ground-highlight" />
+          <Color varName="--color-ground-more" />
+          <Color varName="--color-ground" />
+          <Color varName="--color-ground-less" />
+          <Color varName="--color-ground-highlight" />
         </DisplayGroup>
         <h4>Mask</h4>
         <DisplayGroup>
-          <Color varName="--e-color-mask" />
+          <Color varName="--color-mask" />
         </DisplayGroup>
         <h4>Theme</h4>
         <p>
-          Use <code>--e-color-theme-app</code> for web app manifest or{" "}
+          Use <code>--color-theme-app</code> for web app manifest or{" "}
           <code>theme_color</code> meta tag
         </p>
         <DisplayGroup>
-          <Color varName="--e-color-theme-app" />
-          <Color varName="--e-color-theme-more" />
-          <Color varName="--e-color-theme" />
-          <Color varName="--e-color-theme-less" />
+          <Color varName="--color-theme-app" />
+          <Color varName="--color-theme-more" />
+          <Color varName="--color-theme" />
+          <Color varName="--color-theme-less" />
         </DisplayGroup>
         <h4>Negative</h4>
         <DisplayGroup>
-          <Color varName="--e-color-negative-more" />
-          <Color varName="--e-color-negative" />
-          <Color varName="--e-color-negative-less" />
+          <Color varName="--color-negative-more" />
+          <Color varName="--color-negative" />
+          <Color varName="--color-negative-less" />
         </DisplayGroup>
         <h4>Positive</h4>
         <DisplayGroup>
-          <Color varName="--e-color-positive" />
-          <Color varName="--e-color-positive-less" />
+          <Color varName="--color-positive" />
+          <Color varName="--color-positive-less" />
         </DisplayGroup>
         <h4>Highlight</h4>
         <DisplayGroup>
-          <Color varName="--e-color-highlight-0" />
-          <Color varName="--e-color-highlight-1" />
-          <Color varName="--e-color-highlight-2" />
-          <Color varName="--e-color-highlight-3" />
-          <Color varName="--e-color-highlight-4" />
-          <Color varName="--e-color-highlight-5" />
+          <Color varName="--color-highlight-0" />
+          <Color varName="--color-highlight-1" />
+          <Color varName="--color-highlight-2" />
+          <Color varName="--color-highlight-3" />
+          <Color varName="--color-highlight-4" />
+          <Color varName="--color-highlight-5" />
         </DisplayGroup>
       </Paper>
     </Paper.Group>

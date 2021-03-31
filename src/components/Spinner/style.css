@@ -1,8 +1,8 @@
 .spinner {
-  --color: var(--e-color-theme);
-  --diameter: var(--e-space-4);
+  --color: var(--color-theme);
+  --diameter: var(--space-4);
 
-  animation: var(--e-animation-fade-in), var(--e-animation-spin);
+  animation: var(--animation-fade-in), var(--animation-spin);
   border: calc(var(--diameter) / 8) solid var(--color);
   border-right-color: transparent;
   box-sizing: border-box;

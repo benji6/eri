@@ -1,12 +1,12 @@
 .paper-group {
   display: grid;
-  grid-gap: var(--e-space-2);
+  grid-gap: var(--space-2);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
-  width: calc(var(--e-break-point) - 2 * var(--e-space-2));
+  width: calc(var(--break-point) - 2 * var(--space-2));
 }
 
 @media (min-width: 38rem) {
   .paper-group {
-    width: var(--e-break-point);
+    width: var(--break-point);
   }
 }
