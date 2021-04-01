@@ -7,7 +7,6 @@
 }
 
 .pagination__button {
-  background: none;
   color: var(--color-theme);
   padding: var(--space-0) var(--space-1);
 }

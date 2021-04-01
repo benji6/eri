@@ -4,7 +4,7 @@ import ButtonGroup from "./ButtonGroup";
 
 export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   danger?: boolean;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "tertiary";
 }
 
 export default function Button({
@@ -13,9 +13,11 @@ export default function Button({
   type = "submit", // Formik gets grumpy if you don't specify this
   ...rest
 }: IProps) {
-  const className = `button bs-0 br-1 fw-b select-none button--${variant}${
+  const className = `button fw-b select-none button--${variant}${
     variant === "secondary" ? " bw-2" : ""
-  }${danger ? " button--danger" : ""}${rest.disabled ? "" : " ripple"}`;
+  }${variant === "tertiary" ? "" : " br-1 bs-0"}${
+    danger ? " button--danger" : ""
+  }${rest.disabled ? "" : " ripple"}`;
 
   return <button {...rest} className={className} type={type} />;
 }

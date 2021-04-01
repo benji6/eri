@@ -27,6 +27,7 @@ export default function ButtonDocs(_: RouteComponentProps) {
         <Button.Group>
           <Button>Primary</Button>
           <Button variant="secondary">Secondary</Button>
+          <Button variant="tertiary">Tertiary</Button>
           <a href="/#">Link</a>
         </Button.Group>
         <Button.Group>
@@ -34,11 +35,17 @@ export default function ButtonDocs(_: RouteComponentProps) {
           <Button danger variant="secondary">
             Danger secondary
           </Button>
+          <Button danger variant="tertiary">
+            Danger tertiary
+          </Button>
         </Button.Group>
         <Button.Group>
           <Button disabled>Primary disabled</Button>
           <Button disabled variant="secondary">
             Secondary disabled
+          </Button>
+          <Button disabled variant="tertiary">
+            Tertiary disabled
           </Button>
         </Button.Group>
       </Paper>
@@ -54,7 +61,7 @@ export default function ButtonDocs(_: RouteComponentProps) {
         <PropControlBoolean props={props} setProps={setProps} name="disabled" />
         <PropControlEnum
           name="variant"
-          options={["primary", "secondary"]}
+          options={["primary", "secondary", "tertiary"]}
           props={props}
           setProps={setProps}
         />
