@@ -3,19 +3,17 @@
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
 }
 
-:is(.card, .paper)
-  > *:is(:first-child, :first-child
-    > *:is(:first-child, :first-child
-      > *:is(:first-child, :first-child
-        > *:is(:first-child, :first-child > *:first-child)))):not(.spinner) {
+:is(:is(.card, .paper) > :first-child, :first-child
+    > :is(:first-child, :first-child
+      > :is(:first-child, :first-child
+        > :is(:first-child, :first-child > :first-child)))):not(.spinner) {
   margin-top: 0;
 }
 
-:is(.card, .paper)
-  > *:is(:last-child, :last-child
-    > *:is(:last-child, :last-child
-      > *:is(:last-child, :last-child
-        > *:is(:last-child, :last-child > *:last-child)))):not(.spinner) {
+:is(:is(.card, .paper) > :last-child, :last-child
+    > :is(:last-child, :last-child
+      > :is(:last-child, :last-child
+        > :is(:last-child, :last-child > :last-child)))):not(.spinner) {
   margin-bottom: 0;
 }
 
