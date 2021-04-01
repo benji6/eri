@@ -5,12 +5,13 @@
   right: 0;
 }
 
+a,
 .ripple {
   overflow: hidden;
   position: relative;
 }
 
-.ripple::after {
+:is(a, .ripple)::after {
   background-image: radial-gradient(circle, var(--color) 10%, transparent 10%);
   bottom: 0;
   content: "";
@@ -26,7 +27,7 @@
     transform var(--time-1) var(--easing-standard);
 }
 
-.ripple:active::after {
+:is(a, .ripple):active::after {
   opacity: 0.25;
   transform: scale(0);
   transition: 0s;
