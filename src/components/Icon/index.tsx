@@ -122,6 +122,7 @@ export const iconNameMap = {
       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
     </>
   ),
+  up: <polyline points="18 15 12 9 6 15" />,
 };
 
 export interface IProps extends React.SVGProps<SVGSVGElement> {
