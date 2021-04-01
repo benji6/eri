@@ -8,8 +8,8 @@
 
 .icon--draw {
   animation: e-draw var(--time-1) var(--easing-standard) forwards;
-  stroke-dasharray: 66;
-  stroke-dashoffset: -66;
+  stroke-dasharray: 84;
+  stroke-dashoffset: -84;
 }
 
 .icon--inline {
