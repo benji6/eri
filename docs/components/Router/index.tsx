@@ -5,7 +5,6 @@ import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
 import ChangePasswordPageDocs from "../Components/ChangePasswordPageDocs";
 import ComboBoxDocs from "../Components/ComboBoxDocs";
-import ComponentsHome from "../Components/ComponentsHome";
 import CssUtilities from "../CssUtilities";
 import CurrencyFieldDocs from "../Components/CurrencyFieldDocs";
 import DateFieldDocs from "../Components/DateFieldDocs";
@@ -22,7 +21,6 @@ import LineChartDocs from "../Components/LineChartDocs";
 import LinkDocs from "../Components/LinkDocs";
 import MainDocs from "../Components/MainDocs";
 import NavDocs from "../Components/NavDocs";
-import PagesHome from "../Components/PagesHome";
 import PaginationDocs from "../Components/PaginationDocs";
 import PaperDocs from "../Components/PaperDocs";
 import QuickNavDocs from "../Components/QuickNavDocs";
@@ -55,7 +53,6 @@ export default function Router() {
       <Home path="/" />
       <DesignElements path="design-elements" />
       <Typography path="typography" />
-      <ComponentsHome path="components" />
       <BarChartDocs path="components/bar-chart" />
       <ButtonDocs path="components/button" />
       <CardDocs path="components/card" />
@@ -80,7 +77,6 @@ export default function Router() {
       <SpinnerDocs path="components/spinner" />
       <TextAreaDocs path="components/text-area" />
       <TextFieldDocs path="components/text-field" />
-      <PagesHome path="pages" />
       <QuickNavDocs path="components/quick-nav" />
       <RadioButtonDocs path="components/radio-button" />
       <WordCloudDocs path="components/word-cloud" />

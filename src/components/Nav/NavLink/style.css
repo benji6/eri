@@ -19,7 +19,7 @@
   color: var(--color-theme-more);
 }
 
-.nav-sub-list .nav-link__link {
+.nav-sub-list__list .nav-link__link {
   padding-bottom: var(--space-0);
   padding-left: var(--space-4);
   padding-top: var(--space-0);
