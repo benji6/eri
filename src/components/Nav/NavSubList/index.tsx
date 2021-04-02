@@ -8,13 +8,17 @@ interface Props extends React.HTMLAttributes<HTMLUListElement> {
 
 export default function NavSubList({ heading, ...rest }: Props) {
   const [isExpanded, setIsExpanded] = React.useState(true);
+  const [hasBeenClicked, setHasBeenClicked] = React.useState(false);
 
   return (
     <>
       <li className="nav-link m-0">
         <button
           className="nav-sub-list__heading fw-b px-4 py-2 ripple"
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={() => {
+            if (!hasBeenClicked) setHasBeenClicked(true);
+            setIsExpanded(!isExpanded);
+          }}
         >
           {heading}
           <span
@@ -27,7 +31,12 @@ export default function NavSubList({ heading, ...rest }: Props) {
         </button>
       </li>
       <li className="nav-sub-list__list">
-        {isExpanded && <ul {...rest} className="m-0 p-0 slide-in" />}
+        {isExpanded && (
+          <ul
+            {...rest}
+            className={`m-0 p-0${hasBeenClicked ? " slide-in" : ""}`}
+          />
+        )}
       </li>
     </>
   );
