@@ -11,13 +11,13 @@
 @media (min-width: 37rem) {
   :root {
     /* Do not calc() this because it is read from a script */
-    --time-0: 0.1s;
+    --time-0: 0.11s;
   }
 }
 
 @media (min-width: 66rem) {
   :root {
     /* Do not calc() this because it is read from a script */
-    --time-0: 0.11s;
+    --time-0: 0.12s;
   }
 }

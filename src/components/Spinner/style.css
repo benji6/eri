@@ -3,8 +3,9 @@
   --diameter: var(--space-4);
 
   animation: var(--animation-fade-in), var(--animation-spin);
-  border: calc(var(--diameter) / 8) solid var(--color);
-  border-right-color: transparent;
+  border-color: var(--color) transparent var(--color) transparent;
+  border-style: solid;
+  border-width: calc(var(--diameter) / 6);
   box-sizing: border-box;
   display: flex;
   height: var(--diameter);
