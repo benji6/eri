@@ -1,17 +1,17 @@
 :root {
-  --animation-fade-in: e-fade-in var(--time-2) var(--easing-standard) forwards;
+  --animation-fade-in: fade-in var(--time-2) var(--easing-standard) forwards;
   --animation-slide-in: var(--animation-fade-in),
-    e-slide-in var(--time-1) var(--easing-decelerate) forwards;
-  --animation-spin: e-rotate var(--time-2) linear infinite;
+    slide-in var(--time-1) var(--easing-decelerate) forwards;
+  --animation-spin: rotate var(--time-2) linear infinite;
 }
 
-@keyframes e-draw {
+@keyframes draw {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-@keyframes e-fade-in {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
@@ -20,13 +20,13 @@
   }
 }
 
-@keyframes e-rotate {
+@keyframes rotate {
   to {
-    transform: rotate(360deg);
+    transform: rotate(1turn);
   }
 }
 
-@keyframes e-slide-in {
+@keyframes slide-in {
   from {
     transform: translateY(25vh);
   }

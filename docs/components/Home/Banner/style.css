@@ -5,7 +5,7 @@
 .d-banner__icon {
   --size: 4em;
 
-  animation: e-draw var(--time-2) var(--easing-standard) forwards;
+  animation: draw var(--time-2) var(--easing-standard) forwards;
   animation-delay: var(--time-1);
   display: block;
   height: var(--size);

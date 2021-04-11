@@ -4,7 +4,7 @@
 }
 
 .word-cloud__word {
-  animation-name: e-fade-in, e-word-slide;
+  animation-name: fade-in, word-slide;
   animation-duration: var(--time-2);
   animation-timing-function: var(--easing-standard);
   animation-fill-mode: forwards;
@@ -16,7 +16,7 @@
   opacity: 0;
 }
 
-@keyframes e-word-slide {
+@keyframes word-slide {
   from {
     transform: translate(
       calc((var(--aspect-ratio) / 2 - var(--word-x)) * 1px),

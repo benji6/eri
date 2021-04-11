@@ -1,5 +1,5 @@
 .points__point {
-  animation: e-point-appear var(--time-2) var(--easing-standard) forwards;
+  animation: point-appear var(--time-2) var(--easing-standard) forwards;
 
   /* --point-number and --total-points set by JS */
   animation-delay: calc(
@@ -10,7 +10,7 @@
   transform-origin: center;
 }
 
-@keyframes e-point-appear {
+@keyframes point-appear {
   to {
     opacity: 1;
   }

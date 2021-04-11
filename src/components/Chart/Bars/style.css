@@ -1,5 +1,5 @@
 .bars__bar {
-  animation: e-bar-appear var(--time-2) var(--easing-standard) forwards;
+  animation: bar-appear var(--time-2) var(--easing-standard) forwards;
 
   /* --bar-number and --total-bars set by JS */
   animation-delay: calc(
@@ -8,7 +8,7 @@
   transform: scaleY(0);
 }
 
-@keyframes e-bar-appear {
+@keyframes bar-appear {
   to {
     transform: scaleY(1);
   }
