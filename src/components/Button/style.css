@@ -39,6 +39,7 @@
 .button--primary:disabled {
   background: var(--color-balance);
   border-color: transparent;
+  box-shadow: none;
 }
 
 .button--secondary {
@@ -57,6 +58,7 @@
 }
 .button--secondary:disabled {
   border-color: var(--color-balance);
+  box-shadow: none;
   color: var(--color-balance);
 }
 
