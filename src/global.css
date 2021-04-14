@@ -75,12 +75,6 @@ fieldset {
   user-select: none;
 }
 
-@media (min-width: 37rem) {
-  form {
-    max-width: calc(var(--break-point) - var(--space-4) * 2);
-  }
-}
-
 legend {
   font-size: var(--font-size-0);
   font-weight: var(--font-weight-bold);
