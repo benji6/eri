@@ -2,7 +2,6 @@
 *.*ignore
 *.*rc
 *.html
-*.ico
 *.jpg
 *.lock
 *.log
