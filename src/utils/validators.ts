@@ -1,6 +1,6 @@
 type TValidator = (_: string) => string | undefined;
 
-export const composeValidators = (...validators: TValidator[]): TValidator => (
+const composeValidators = (...validators: TValidator[]): TValidator => (
   value
 ) => {
   for (let i = 0; i < validators.length; i++) {
@@ -9,10 +9,10 @@ export const composeValidators = (...validators: TValidator[]): TValidator => (
   }
 };
 
-export const emailValidator: TValidator = (value) =>
+const emailValidator: TValidator = (value) =>
   /.+@.+/.test(value) ? undefined : "Email address not valid";
 
-export const passwordValidator: TValidator = (value) => {
+const passwordValidator: TValidator = (value) => {
   if (value.length < 8) return "Password must be at least 8 characters long";
   if (value.toLowerCase() === value)
     return "Password must have at least one uppercase letter";

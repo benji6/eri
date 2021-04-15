@@ -43,7 +43,6 @@ export { default as VerifyPage } from "./components/VerifyPage";
 export { default as WordCloud } from "./components/WordCloud";
 
 export { default as getCssVar } from "./utils/getCssVar";
-export * from "./utils/validators";
 
 import "./utils/animation.css";
 import "./utils/border.css";

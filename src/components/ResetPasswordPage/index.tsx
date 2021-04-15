@@ -1,13 +1,11 @@
 import * as React from "react";
+import { Button, Paper, TextField } from "../..";
+import { Link, useLocation, useNavigate } from "@reach/router";
 import {
-  Button,
-  Paper,
-  TextField,
   requiredValidator,
   validateEmailField,
   validatePasswordField,
-} from "../..";
-import { Link, useLocation, useNavigate } from "@reach/router";
+} from "../../utils/validators";
 import { PaperGroupProps } from "../Paper/PaperGroup";
 
 interface Props extends Omit<PaperGroupProps, "onSubmit"> {
