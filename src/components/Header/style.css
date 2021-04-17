@@ -34,8 +34,10 @@
   transition: color var(--time-1) var(--easing-standard);
 }
 
-.header a:hover {
-  color: var(--color-highlight-default);
+@media (hover: hover) {
+  .header a:hover {
+    color: var(--color-highlight-default);
+  }
 }
 
 .header__container {

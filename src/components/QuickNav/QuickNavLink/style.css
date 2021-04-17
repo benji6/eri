@@ -6,9 +6,11 @@
   transition-timing-function: var(--easing-standard);
 }
 
-.quick-nav-link:is(:focus, :hover) {
-  background: var(--color-theme-less);
-  color: var(--color-ground);
+@media (hover: hover) {
+  .quick-nav-link:hover {
+    background: var(--color-theme-less);
+    color: var(--color-ground);
+  }
 }
 
 .quick-nav-link:active {

@@ -5,15 +5,12 @@
   transition-timing-function: var(--easing-standard);
 }
 
-.close-button:hover {
-  color: var(--color-figure-less);
+@media (hover: hover) {
+  .close-button:hover {
+    color: var(--color-figure-less);
+  }
 }
 
 .close-button:active {
   color: var(--color-figure-more);
-}
-
-.close-button:focus:not(:active) {
-  background: var(--color-figure);
-  color: var(--color-ground);
 }

@@ -56,6 +56,11 @@
   box-shadow: none;
 }
 
+.checkbox__input[aria-invalid="true"]:focus-visible ~ .checkbox__appearance {
+  border-color: var(--color-theme);
+  box-shadow: var(--box-shadow-input-focus);
+}
+
 .checkbox__input:checked ~ .checkbox__appearance {
   stroke-dashoffset: 0;
   transition-property: border, stroke-dashoffset;

@@ -16,12 +16,14 @@
   transition-timing-function: var(--easing-standard);
   width: 100%;
 }
-.nav-sub-list__heading:focus {
+.nav-sub-list__heading:focus-visible {
   color: var(--color-theme-more);
 }
-.nav-sub-list__heading:hover {
-  background: var(--color-ground-less);
-  color: var(--color-theme-more);
+@media (hover: hover) {
+  .nav-sub-list__heading:hover {
+    background: var(--color-ground-less);
+    color: var(--color-theme-more);
+  }
 }
 
 .nav-sub-list__icon {

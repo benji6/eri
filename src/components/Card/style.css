@@ -15,11 +15,6 @@ button.card {
   width: 100%;
 }
 
-button.card:focus {
-  box-shadow: var(--box-shadow-even-2-no-color) var(--color);
-  transform: scale(1.01);
-}
-
 button.card:hover {
   box-shadow: var(--box-shadow-even-2-no-color) var(--color);
   transform: scale(1.01);

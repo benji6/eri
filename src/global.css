@@ -43,9 +43,11 @@ a::-moz-focus-inner {
   border: none;
 }
 
-a:is(:focus, :hover) {
-  color: var(--color-theme-less);
-  text-decoration-color: transparent;
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-theme-less);
+    text-decoration-color: transparent;
+  }
 }
 
 a:active {
@@ -155,8 +157,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator:hover {
-  opacity: 1;
+@media (hover: hover) {
+  input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+  }
 }
 
 :is(input:not([type="checkbox"]), select, textarea) {
@@ -175,8 +179,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   box-shadow: var(--box-shadow-input-focus);
 }
 
-:is(input:not([type="checkbox"]), select, textarea):hover {
-  border-color: var(--color-theme-less);
+@media (hover: hover) {
+  :is(input:not([type="checkbox"]), select, textarea):hover {
+    border-color: var(--color-theme-less);
+  }
 }
 
 :is(input:not([type="checkbox"]), select, textarea)[aria-invalid="true"] {

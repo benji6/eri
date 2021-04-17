@@ -11,12 +11,14 @@
   transition-property: background-color, color;
   transition-timing-function: var(--easing-standard);
 }
-.nav-link__link:focus {
+.nav-link__link:focus-visible {
   color: var(--color-theme-more);
 }
-.nav-link__link:hover {
-  background: var(--color-ground-less);
-  color: var(--color-theme-more);
+@media (hover: hover) {
+  .nav-link__link:hover {
+    background: var(--color-ground-less);
+    color: var(--color-theme-more);
+  }
 }
 
 .nav-sub-list__list .nav-link__link {

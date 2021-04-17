@@ -36,8 +36,10 @@ option {
   color: var(--color-theme-less);
 }
 
-.select__select:hover ~ .select__icon {
-  color: var(--color-theme-less);
+@media (hover: hover) {
+  .select__select:hover ~ .select__icon {
+    color: var(--color-theme-less);
+  }
 }
 
 .select__select[aria-invalid="true"] ~ .select__icon {

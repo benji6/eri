@@ -12,8 +12,10 @@
   transition-timing-function: var(--easing-standard);
 }
 
-.fab:is(:focus, :hover) {
-  background: var(--color-theme-less);
+@media (hover: hover) {
+  .fab:hover {
+    background: var(--color-theme-less);
+  }
 }
 
 .fab:disabled {

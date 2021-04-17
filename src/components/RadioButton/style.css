@@ -24,10 +24,12 @@
   width: 100%;
 }
 
-.radio-button__appearance:hover {
-  border-color: var(--color-theme-less);
-  color: var(--color-theme-less);
-  z-index: var(--z-index-1);
+@media (hover: hover) {
+  .radio-button__appearance:hover {
+    border-color: var(--color-theme-less);
+    color: var(--color-theme-less);
+    z-index: var(--z-index-1);
+  }
 }
 
 .radio-button:first-child .radio-button__appearance {
@@ -40,7 +42,7 @@
   border-top-right-radius: var(--border-radius-1);
 }
 
-.radio-button__input:focus ~ .radio-button__appearance {
+.radio-button__input:focus-visible ~ .radio-button__appearance {
   border-color: var(--color-theme-less);
   color: var(--color-theme-less);
   z-index: var(--z-index-1);
@@ -67,9 +69,11 @@
   z-index: var(--z-index-1);
 }
 
-.radio-button__input:checked ~ .radio-button__appearance:hover {
-  background: var(--color-theme-less);
-  border-color: var(--color-theme-less);
+@media (hover: hover) {
+  .radio-button__input:checked ~ .radio-button__appearance:hover {
+    background: var(--color-theme-less);
+    border-color: var(--color-theme-less);
+  }
 }
 
 .radio-button__input:active:checked ~ .radio-button__appearance {
@@ -77,7 +81,7 @@
   border-color: var(--color-theme-more);
 }
 
-.radio-button__input:checked:focus ~ .radio-button__appearance {
+.radio-button__input:checked:focus-visible ~ .radio-button__appearance {
   border-color: var(--color-theme-less);
   background: var(--color-theme-less);
 }

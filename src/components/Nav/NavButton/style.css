@@ -4,8 +4,10 @@
   transition: color var(--time-1) var(--easing-standard);
 }
 
-.nav-button:hover {
-  color: var(--color-highlight-default);
+@media (hover: hover) {
+  .nav-button:hover {
+    color: var(--color-highlight-default);
+  }
 }
 
 @media (min-width: 66rem) {
