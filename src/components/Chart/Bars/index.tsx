@@ -10,9 +10,15 @@ interface IProps {
   colorFromX?(x: number): string;
   colorFromY?(y: number): string;
   data: (number | undefined)[];
+  onClick?(xIndex: number, y: number): void;
 }
 
-export default function Bars({ colorFromX, colorFromY, data }: IProps) {
+export default function Bars({
+  colorFromX,
+  colorFromY,
+  data,
+  onClick,
+}: IProps) {
   if (colorFromX && colorFromY)
     throw Error(
       "Both `colorFromX` and `colorFromY` were provided - please only provide one"
@@ -35,7 +41,7 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
 
         return (
           <rect
-            className="bars__bar"
+            className={`bars__bar${onClick ? " bars__bar--clickable" : ""}`}
             key={i}
             x={x}
             y={y}
@@ -47,6 +53,7 @@ export default function Bars({ colorFromX, colorFromY, data }: IProps) {
                 : "var(--color-theme)"
             }
             height={1 - y - marginBottom}
+            onClick={onClick ? () => onClick(i, originalY) : undefined}
             style={
               {
                 "--bar-number": i,

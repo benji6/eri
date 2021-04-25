@@ -1,6 +1,9 @@
 import * as React from "react";
 import { Chart, Paper } from "../../../src";
-import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
+import ConfigurableExample, {
+  PropControlBoolean,
+  PropControlString,
+} from "./_ConfigurableExample";
 import { RouteComponentProps } from "@reach/router";
 
 const DATA_COUNT = 8;
@@ -9,6 +12,7 @@ const RANGE: [number, number] = [0, 10];
 export default function BarChartDocs(_: RouteComponentProps) {
   const [props, setProps] = React.useState<{
     data: (number | undefined)[];
+    onClick: boolean;
     xAxisTitle?: string;
     yAxisTitle?: string;
   }>({
@@ -17,6 +21,7 @@ export default function BarChartDocs(_: RouteComponentProps) {
         ? undefined
         : Math.random() * (RANGE[1] - RANGE[0]) + RANGE[0]
     ),
+    onClick: false,
     xAxisTitle: "X axis title",
     yAxisTitle: "Y axis title",
   });
@@ -45,12 +50,18 @@ export default function BarChartDocs(_: RouteComponentProps) {
           >
             <Chart.YGridLines lines={yLabels.map(([y]) => y)} />
             <Chart.PlotArea>
-              <Chart.Bars data={props.data} />
+              <Chart.Bars
+                data={props.data}
+                onClick={
+                  props.onClick ? (x, y) => console.log(x, y) : undefined
+                }
+              />
             </Chart.PlotArea>
             <Chart.YAxis labels={yLabels} markers={yLabels.map(([x]) => x)} />
           </Chart.BarChart>
         }
       >
+        <PropControlBoolean name="onClick" props={props} setProps={setProps} />
         <PropControlString
           name="xAxisTitle"
           props={props}

@@ -8,6 +8,14 @@
   transform: scaleY(0);
 }
 
+.bars__bar--clickable {
+  transition: filter var(--time-0) var(--easing-standard);
+  cursor: pointer;
+}
+.bars__bar--clickable:hover:not(:active) {
+  filter: brightness(1.15) contrast(1.15) saturate(1.15);
+}
+
 @keyframes bar-appear {
   to {
     transform: scaleY(1);
