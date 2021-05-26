@@ -41,12 +41,10 @@ export default function ChangePasswordPage({ onSubmit, ...rest }: Props) {
                 .currentPassword.value;
               const newPassword = (e.target as HTMLFormElement).newPassword
                 .value;
-              const currentPasswordErrorMessage = validatePasswordField(
-                currentPassword
-              );
-              const newPasswordErrorMessage = validatePasswordField(
-                newPassword
-              );
+              const currentPasswordErrorMessage =
+                validatePasswordField(currentPassword);
+              const newPasswordErrorMessage =
+                validatePasswordField(newPassword);
               if (currentPasswordErrorMessage || newPasswordErrorMessage) {
                 setCurrentPasswordError(currentPasswordErrorMessage || "");
                 setNewPasswordError(newPasswordErrorMessage || "");

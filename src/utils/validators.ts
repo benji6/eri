@@ -1,13 +1,13 @@
 type TValidator = (_: string) => string | undefined;
 
-const composeValidators = (...validators: TValidator[]): TValidator => (
-  value
-) => {
-  for (let i = 0; i < validators.length; i++) {
-    const validationResult = validators[i](value);
-    if (validationResult) return validationResult;
-  }
-};
+const composeValidators =
+  (...validators: TValidator[]): TValidator =>
+  (value) => {
+    for (let i = 0; i < validators.length; i++) {
+      const validationResult = validators[i](value);
+      if (validationResult) return validationResult;
+    }
+  };
 
 const emailValidator: TValidator = (value) =>
   /.+@.+/.test(value) ? undefined : "Email address not valid";

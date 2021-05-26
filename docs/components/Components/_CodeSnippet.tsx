@@ -12,8 +12,9 @@ export default function CodeSnippet({ children, language }: IProps) {
   // HACK: we use `isJsx` to trick highlight.js into highlighting our JSX nicely
   const isJsx = language === "jsx";
   const stringToHighlight = isJsx ? "(" + children : children;
-  const highlightedString = hljs.highlight(stringToHighlight, { language })
-    .value;
+  const highlightedString = hljs.highlight(stringToHighlight, {
+    language,
+  }).value;
 
   return (
     <pre className="d-code-snippet br-1 p-2">

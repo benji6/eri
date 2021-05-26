@@ -14,11 +14,11 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   onClose?: () => void;
 }
 
-const handleKeyDown = (onClose: IProps["onClose"]) => (
-  e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>
-) => {
-  if (e.keyCode === 27 && onClose) onClose();
-};
+const handleKeyDown =
+  (onClose: IProps["onClose"]) =>
+  (e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.keyCode === 27 && onClose) onClose();
+  };
 
 export default function Mask({ onClose, open, ...rest }: IProps) {
   const state = React.useContext(EriStateContext);
