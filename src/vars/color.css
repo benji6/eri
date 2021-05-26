@@ -12,7 +12,7 @@
   --positive-hue: 150;
   --theme-hue: 210;
   --theme-lightness: 22%;
-  --theme-lightness-spread: calc(7% * var(--spread-modifier));
+  --theme-lightness-spread: 7%;
 
   --color-balance: hsl(var(--neutral-hs), var(--balance-lightness));
   --color-balance-less: hsl(

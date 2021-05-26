@@ -59,6 +59,7 @@
 }
 
 .radio-button-group[aria-invalid="true"] .radio-button__appearance {
+  color: var(--color-negative);
   border-color: var(--color-negative);
 }
 

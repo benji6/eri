@@ -4,8 +4,9 @@
 }
 
 .nav-sub-list__heading {
-  --active-color: var(--color-highlight-default);
   --color: var(--color-highlight-default);
+  --active-color: var(--color-highlight-default);
+  --hover-color: var(--color-theme-more);
 
   color: var(--color-theme);
   display: flex;
@@ -16,13 +17,20 @@
   transition-timing-function: var(--easing-standard);
   width: 100%;
 }
+
+@media (prefers-color-scheme: dark) {
+  .nav-sub-list__heading {
+    --hover-color: var(--color-theme-less);
+  }
+}
+
 .nav-sub-list__heading:focus-visible {
   color: var(--color-theme-more);
 }
 @media (hover: hover) {
   .nav-sub-list__heading:hover {
     background: var(--color-ground-less);
-    color: var(--color-theme-more);
+    color: var(--hover-color);
   }
 }
 

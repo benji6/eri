@@ -4,6 +4,7 @@
 
 .nav-link__link {
   --active-color: var(--color-highlight-default);
+  --hover-color: var(--color-theme-more);
 
   display: block;
   text-decoration: none;
@@ -11,13 +12,20 @@
   transition-property: background-color, color;
   transition-timing-function: var(--easing-standard);
 }
+
+@media (prefers-color-scheme: dark) {
+  .nav-link__link {
+    --hover-color: var(--color-theme-less);
+  }
+}
+
 .nav-link__link:focus-visible {
   color: var(--color-theme-more);
 }
 @media (hover: hover) {
   .nav-link__link:hover {
     background: var(--color-ground-less);
-    color: var(--color-theme-more);
+    color: var(--hover-color);
   }
 }
 

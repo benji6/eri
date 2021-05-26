@@ -7,7 +7,7 @@
 
 @media (hover: hover) {
   .close-button:hover {
-    color: var(--color-figure-less);
+    color: var(--color-figure-more);
   }
 }
 
