@@ -34,7 +34,7 @@ export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
   if (!shouldRenderQuickNav) return null;
 
   return ReactDOM.createPortal(
-    <nav {...props} className="quick-nav z-1" ref={navElRef} />,
+    <nav {...props} className="quick-nav bs-1 z-1" ref={navElRef} />,
     QUICK_NAV_PORTAL_EL as HTMLDivElement
   );
 }

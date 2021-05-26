@@ -1,24 +1,24 @@
 .quick-nav-link {
-  background: var(--color-theme);
+  background-color: var(--color-theme);
   color: var(--color-ground);
+  padding: var(--space-1) var(--space-2);
   transition-duration: var(--time-0);
-  transition-property: background-color, box-shadow;
+  transition-property: background-color;
   transition-timing-function: var(--easing-standard);
 }
 
 @media (hover: hover) {
   .quick-nav-link:hover {
-    background: var(--color-theme-less);
+    background-color: var(--color-theme-less);
     color: var(--color-ground);
   }
 }
 
 .quick-nav-link:active {
-  background: var(--color-theme-more);
-  box-shadow: var(--box-shadow-0);
+  background-color: var(--color-theme-more);
   color: var(--color-ground);
 }
 
 .quick-nav-link--active {
-  background: var(--color-highlight-default) !important;
+  background-color: var(--color-highlight-default) !important;
 }

@@ -10,7 +10,7 @@ export default function QuickNavLink(
     <Link
       {...props}
       getProps={({ isCurrent }) => ({
-        className: `quick-nav-link br-max bs-1 p-3${
+        className: `quick-nav-link${
           isCurrent ? " quick-nav-link--active" : ""
         }`,
       })}

@@ -50,7 +50,7 @@ export default function QuickNavDocs(_: RouteComponentProps) {
         <QuickNav>
           {ICON_NAMES.slice(0, linkCount).map((name, i) => (
             <QuickNav.Link key={name} to={i ? "/" : location.pathname}>
-              <Icon name={name} size="4" />
+              <Icon name={name} size="3" />
             </QuickNav.Link>
           ))}
         </QuickNav>
