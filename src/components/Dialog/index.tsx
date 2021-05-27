@@ -3,6 +3,7 @@ import * as React from "react";
 import { CSSTransition } from "react-transition-group";
 import CloseButton from "../../privateComponents/CloseButton";
 import Mask from "../../privateComponents/Mask";
+import { PORTAL_CONTAINERS } from "../../constants";
 import { getCssTime1 } from "../../utils/getCssVar";
 
 interface IProps {
@@ -22,7 +23,11 @@ export default function Dialog({
   ...rest
 }: IProps) {
   return (
-    <Mask onClose={disableClose ? undefined : onClose} open={open}>
+    <Mask
+      onClose={disableClose ? undefined : onClose}
+      open={open}
+      portalContainer={PORTAL_CONTAINERS.dialog}
+    >
       <CSSTransition
         classNames="dialog-"
         in={open}

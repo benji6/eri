@@ -3,12 +3,11 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
 import { EriStateContext } from "../EriProvider";
+import { PORTAL_CONTAINERS } from "../../constants";
 import { getCssTime0 } from "../../utils/getCssVar";
 import useShouldRenderQuickNav from "../../hooks/useShouldRenderQuickNav";
 
-const portalEl =
-  typeof document !== "undefined" &&
-  document.body.appendChild(document.createElement("div"));
+const PORTAL_EL = PORTAL_CONTAINERS.fab;
 
 export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   hide?: boolean;
@@ -24,7 +23,7 @@ export default function Fab({
 
   if (
     state.renderingToString ||
-    !portalEl ||
+    !PORTAL_EL ||
     (state.quickNavMounted && shouldRenderQuickNav)
   )
     return null;
@@ -39,6 +38,6 @@ export default function Fab({
     >
       <button {...rest} className="fab br-max p-3 z-1" type={type} />
     </CSSTransition>,
-    portalEl
+    PORTAL_EL
   );
 }

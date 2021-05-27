@@ -5,13 +5,10 @@ import { CSSTransition } from "react-transition-group";
 import { EriStateContext } from "../../components/EriProvider";
 import { getCssTime1 } from "../../utils/getCssVar";
 
-const portalEl =
-  typeof document !== "undefined" &&
-  document.body.appendChild(document.createElement("div"));
-
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   open: boolean;
   onClose?: () => void;
+  portalContainer: HTMLDivElement | undefined;
 }
 
 const handleKeyDown =
@@ -20,7 +17,12 @@ const handleKeyDown =
     if (e.keyCode === 27 && onClose) onClose();
   };
 
-export default function Mask({ onClose, open, ...rest }: IProps) {
+export default function Mask({
+  onClose,
+  open,
+  portalContainer,
+  ...rest
+}: IProps) {
   const state = React.useContext(EriStateContext);
   const [scrollY, setScrollY] = React.useState(0);
 
@@ -49,7 +51,7 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
     }
   }, [open, scrollY]);
 
-  if (state.renderingToString || !portalEl) return null;
+  if (state.renderingToString || !portalContainer) return null;
 
   return ReactDOM.createPortal(
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
@@ -66,6 +68,6 @@ export default function Mask({ onClose, open, ...rest }: IProps) {
       <div {...rest} className="mask__container z-3" />
     </div>,
     /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-    portalEl
+    portalContainer
   );
 }

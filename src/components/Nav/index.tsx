@@ -8,6 +8,7 @@ import NavButton from "./NavButton";
 import NavLink from "./NavLink";
 import NavList from "./NavList";
 import NavSubList from "./NavSubList";
+import { PORTAL_CONTAINERS } from "../../constants";
 import { getCssTime1 } from "../../utils/getCssVar";
 import useIsWideResolution from "../../hooks/useIsWideResolution";
 
@@ -31,7 +32,7 @@ export default function Nav({ children, onClose, open, ...rest }: IProps) {
       {children}
     </nav>
   ) : (
-    <Mask onClose={onClose} open={open}>
+    <Mask onClose={onClose} open={open} portalContainer={PORTAL_CONTAINERS.nav}>
       <CSSTransition
         classNames="nav-"
         in={open}

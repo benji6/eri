@@ -2,13 +2,10 @@ import "./style.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { EriDispatchContext } from "../EriProvider";
+import { PORTAL_CONTAINERS } from "../../constants";
 import QuickNavLink from "./QuickNavLink";
 import useIsWideResolution from "../../hooks/useIsWideResolution";
 import useShouldRenderQuickNav from "../../hooks/useShouldRenderQuickNav";
-
-export const QUICK_NAV_PORTAL_EL =
-  typeof document !== "undefined" &&
-  document.body.appendChild(document.createElement("div"));
 
 export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
   const dispatch = React.useContext(EriDispatchContext);
@@ -35,7 +32,7 @@ export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
 
   return ReactDOM.createPortal(
     <nav {...props} className="quick-nav bs-1 z-1" ref={navElRef} />,
-    QUICK_NAV_PORTAL_EL as HTMLDivElement
+    PORTAL_CONTAINERS.quickNav as HTMLDivElement
   );
 }
 
