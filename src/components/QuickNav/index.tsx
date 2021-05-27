@@ -25,7 +25,7 @@ export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
     if (isWideResolution || !navElRef.current) return;
     const boundingClientRect = navElRef.current.getBoundingClientRect();
     dispatch({
-      payload: innerHeight - boundingClientRect.top,
+      payload: boundingClientRect.height,
       type: "quickNav/height",
     });
     return () => dispatch({ payload: 0, type: "quickNav/height" });

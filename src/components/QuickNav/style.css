@@ -1,6 +1,5 @@
 .quick-nav {
   --animation-delay: calc(var(--time-0) / 2);
-  --margin: var(--space-2);
 
   animation: animate-quick-nav-in var(--time-1) var(--easing-decelerate)
     forwards;
@@ -31,7 +30,7 @@
 
 @keyframes animate-quick-nav-in {
   from {
-    transform: translateY(calc(100% + var(--margin)));
+    transform: translateY(100%);
   }
   to {
     transform: translateY(0);
