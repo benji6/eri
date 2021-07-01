@@ -1,7 +1,11 @@
 import * as React from "react";
 
-type FluxStandardAction<Type extends string, Payload = undefined> =
-  Payload extends undefined ? { type: Type } : { payload: Payload; type: Type };
+type FluxStandardAction<
+  Type extends string,
+  Payload = undefined
+> = Payload extends undefined
+  ? { type: Type }
+  : { payload: Payload; type: Type };
 
 type Action =
   | FluxStandardAction<"nav/exists", boolean>
