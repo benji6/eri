@@ -3,7 +3,7 @@
   --balance-lightness: 45%;
   --balance-lightness-spread: calc(10% * var(--spread-modifier));
   --figure-hsl: var(--neutral-hs), var(--figure-lightness);
-  --figure-lightness: 10%;
+  --figure-lightness: 15%;
   --figure-lightness-spread: calc(10% * var(--spread-modifier));
   --ground-lightness: 95%;
   --ground-lightness-spread: calc(5% * var(--spread-modifier));
