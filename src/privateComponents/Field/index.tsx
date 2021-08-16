@@ -1,3 +1,4 @@
+import "./style.css";
 import * as React from "react";
 
 export default function Field({
@@ -7,7 +8,7 @@ export default function Field({
   return (
     <div
       {...rest}
-      className={`select-none my-3${className ? ` ${className}` : ""}`}
+      className={`field select-none${className ? ` ${className}` : ""}`}
     />
   );
 }

@@ -85,9 +85,6 @@ export default function CssUtilities(_: RouteComponentProps) {
             <code>mr-1</code>: Gives things a tiny right margin
           </li>
           <li>
-            <code>my-3</code>: Gives things a medium vertical margin
-          </li>
-          <li>
             <code>p-0</code>: Removes all padding
           </li>
           <li>

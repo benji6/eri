@@ -26,7 +26,7 @@ export default function Pagination({ page, pageCount, onChange }: IProps) {
   }
 
   return pageCount > 1 ? (
-    <div className="pagination my-3 select-none">
+    <div className="pagination select-none">
       {page !== 0 && (
         <button
           aria-label="navigate to previous page"

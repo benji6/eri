@@ -39,11 +39,6 @@
   margin-right: var(--space-0);
 }
 
-.my-3 {
-  margin-bottom: var(--space-2);
-  margin-top: var(--space-2);
-}
-
 .p-0 {
   padding: 0;
 }
