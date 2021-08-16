@@ -6,12 +6,11 @@
 
 .currency-field__input-container::after {
   align-items: center;
-  bottom: 0;
   content: "£";
   display: flex;
+  inset-block: 0;
   left: var(--space-2);
   position: absolute;
-  top: 0;
 }
 
 input.currency-field__input {

@@ -13,14 +13,11 @@
 
 .checkbox__input {
   align-self: flex-start;
-  bottom: 0;
   height: var(--checkbox-size);
-  left: 0;
+  inset: 0;
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  right: 0;
-  top: 0;
   width: var(--checkbox-size);
 }
 

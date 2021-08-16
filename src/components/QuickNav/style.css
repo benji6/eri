@@ -7,9 +7,8 @@
   bottom: 0;
   display: flex;
   justify-content: space-evenly;
-  left: 0;
+  inset-inline: 0;
   position: fixed;
-  right: 0;
 }
 
 .quick-nav > * {

@@ -2,13 +2,10 @@
   --content-vertical-padding: var(--space-1);
 
   align-items: center;
-  bottom: 0;
   display: flex;
+  inset: 0;
   justify-content: center;
-  left: 0;
   position: fixed;
-  right: 0;
-  top: 0;
   transition-duration: var(--time-1);
   transition-property: opacity, transform;
   transition-timing-function: var(--easing-decelerate);
