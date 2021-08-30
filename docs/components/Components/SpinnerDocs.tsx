@@ -22,7 +22,7 @@ export default function SpinnerDocs(_: RouteComponentProps) {
         example={
           props.inline ? (
             <p className="center">
-              {props.margin === "right" ? (
+              {props.margin === "end" ? (
                 <>{spinnerEl}An inline example</>
               ) : (
                 <>An inline example{spinnerEl}</>
@@ -36,7 +36,7 @@ export default function SpinnerDocs(_: RouteComponentProps) {
         <PropControlBoolean name="inline" props={props} setProps={setProps} />
         <PropControlEnum
           name="margin"
-          options={[undefined, "left", "right"]}
+          options={[undefined, "start", "end"]}
           props={props}
           setProps={setProps}
         />

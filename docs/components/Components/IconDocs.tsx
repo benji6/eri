@@ -32,19 +32,19 @@ export default function IconDocs(_: RouteComponentProps) {
         ))}
         <hr />
         <p>
-          <Icon draw margin="right" name="help" />
+          <Icon draw margin="end" name="help" />
           When you don&apos;t set a size you can use Icon inline
         </p>
         <p>
           You can use the margin prop for horizontal spacing
-          <Icon draw margin="left" name="right" />
+          <Icon draw margin="start" name="right" />
         </p>
       </Paper>
       <ConfigurableExample example={<Icon {...props} />}>
         <PropControlBoolean name="draw" props={props} setProps={setProps} />
         <PropControlEnum
           name="margin"
-          options={[undefined, "left", "right"]}
+          options={[undefined, "start", "end"]}
           props={props}
           setProps={setProps}
         />

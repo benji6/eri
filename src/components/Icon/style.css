@@ -17,6 +17,13 @@
   position: relative;
 }
 
+.icon--margin-start {
+  margin-inline-start: var(--space-0);
+}
+.icon--margin-end {
+  margin-inline-end: var(--space-0);
+}
+
 .icon--size-2 {
   --size: var(--font-size-2);
 }

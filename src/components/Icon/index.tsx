@@ -140,7 +140,7 @@ export const iconNameMap = {
 
 export interface IProps extends React.SVGProps<SVGSVGElement> {
   draw?: boolean;
-  margin?: "left" | "right";
+  margin?: "start" | "end";
   name: keyof typeof iconNameMap;
   size?: "2" | "3" | "4" | "inherit";
 }
@@ -154,7 +154,7 @@ export default function Icon({
 }: IProps) {
   const className = `icon icon--size-${size}${draw ? " icon--draw" : ""}${
     size === "inherit" ? " icon--inline" : ""
-  }${margin ? ` m${margin[0]}-1` : ""}`;
+  }${margin ? ` icon--margin-${margin}` : ""}`;
 
   return (
     <svg

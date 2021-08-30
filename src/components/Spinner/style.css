@@ -20,3 +20,10 @@
   display: inline-flex;
   margin: auto;
 }
+
+.spinner--margin-start {
+  margin-inline-start: var(--space-0);
+}
+.spinner--margin-end {
+  margin-inline-end: var(--space-0);
+}
