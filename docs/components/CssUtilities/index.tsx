@@ -90,9 +90,6 @@ export default function CssUtilities(_: RouteComponentProps) {
           <li>
             <code>p-4</code>: Gives things a big amount of padding
           </li>
-          <li>
-            <code>pt-1</code>: Gives things a tiny amount of top padding
-          </li>
         </ul>
         <h3>Text align</h3>
         <p className="center">

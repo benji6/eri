@@ -1,3 +1,7 @@
+.field-error:not(.field-error--indent) {
+  padding-top: var(--space-0);
+}
+
 .field-error--indent {
   grid-column-start: 2;
 }
