@@ -105,9 +105,6 @@ export default function CssUtilities(_: RouteComponentProps) {
           <li>
             <code>pt-1</code>: Gives things a tiny amount of top padding
           </li>
-          <li>
-            <code>px-1</code>: Gives things a tiny amount of horizontal padding
-          </li>
         </ul>
         <h3>Text align</h3>
         <p className="center">

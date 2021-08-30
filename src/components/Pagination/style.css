@@ -9,13 +9,16 @@
 
 .pagination__button {
   color: var(--color-theme);
-  padding: var(--space-0) var(--space-1);
+  padding-block: var(--space-0);
+  padding-inline: var(--space-1);
 }
 
 @media (min-width: 37rem) {
   .pagination__button {
-    padding-left: var(--space-2);
-    padding-right: var(--space-2);
+    padding-inline: var(--space-2);
+  }
+  .pagination__button--arrow {
+    padding-inline: var(--space-0);
   }
 }
 
