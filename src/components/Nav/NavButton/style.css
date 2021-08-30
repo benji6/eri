@@ -1,6 +1,7 @@
 .nav-button {
   align-items: center;
   display: flex;
+  margin-right: var(--space-0);
   transition: color var(--time-1) var(--easing-standard);
 }
 

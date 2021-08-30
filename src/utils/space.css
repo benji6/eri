@@ -27,10 +27,6 @@
   margin: 0;
 }
 
-.mr-1 {
-  margin-right: var(--space-0);
-}
-
 .p-0 {
   padding: 0;
 }

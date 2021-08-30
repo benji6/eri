@@ -7,7 +7,7 @@ export default function NavButton(
 ) {
   return (
     <button {...props} className="nav-button fs-0 fw-b ripple">
-      <span className="nav-button__text mr-1">Menu</span>
+      <span className="nav-button__text">Menu</span>
       <Icon name="menu" size="3" />
     </button>
   );
