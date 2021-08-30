@@ -66,10 +66,6 @@
   padding-left: var(--space-0);
   padding-right: var(--space-0);
 }
-.px-4 {
-  padding-left: var(--space-3);
-  padding-right: var(--space-3);
-}
 
 .py-2 {
   padding-bottom: var(--space-1);
