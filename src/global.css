@@ -211,7 +211,7 @@ img {
 table {
   border-spacing: 0;
   margin: var(--space-2) auto;
-  text-align: right;
+  text-align: end;
 }
 
 td,
@@ -225,7 +225,7 @@ th {
 }
 
 :is(td, th):first-child {
-  text-align: left;
+  text-align: start;
 }
 
 tr:not(:last-child) td {
