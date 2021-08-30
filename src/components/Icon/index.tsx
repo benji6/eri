@@ -65,6 +65,12 @@ export const iconNameMap = {
       <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
     </>
   ),
+  location: (
+    <>
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </>
+  ),
   lock: (
     <>
       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
