@@ -91,9 +91,6 @@ export default function CssUtilities(_: RouteComponentProps) {
             <code>p-4</code>: Gives things a big amount of padding
           </li>
           <li>
-            <code>pt-0</code>: Removes top padding
-          </li>
-          <li>
             <code>pt-1</code>: Gives things a tiny amount of top padding
           </li>
         </ul>
