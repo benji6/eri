@@ -76,9 +76,6 @@ export default function CssUtilities(_: RouteComponentProps) {
             <code>m-0</code>: Removes all margin
           </li>
           <li>
-            <code>mb-1</code>: Gives things a tiny bottom margin
-          </li>
-          <li>
             <code>ml-1</code>: Gives things a tiny left margin
           </li>
           <li>

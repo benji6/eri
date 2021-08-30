@@ -11,7 +11,7 @@ export default function FieldLabelText({
   ...rest
 }: IProps) {
   return (
-    <span {...rest} className="field-label-text fs-0 fw-b mb-1">
+    <span {...rest} className="field-label-text fs-0 fw-b">
       {children}
       {optional && " (optional)"}
     </span>
