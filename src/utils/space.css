@@ -27,10 +27,6 @@
   margin: 0;
 }
 
-.ml-1 {
-  margin-left: var(--space-0);
-}
-
 .mr-1 {
   margin-right: var(--space-0);
 }
