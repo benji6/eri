@@ -9,7 +9,7 @@
   animation-delay: var(--time-1);
   display: block;
   height: var(--size);
-  margin: 0 auto 0;
+  margin-inline: auto;
   stroke-dasharray: 2.5;
   stroke-dashoffset: 2.5;
   width: var(--size);

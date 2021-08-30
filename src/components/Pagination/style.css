@@ -1,6 +1,5 @@
 .pagination {
-  border-bottom: var(--border-width-2) solid currentColor;
-  border-top: var(--border-width-2) solid currentColor;
+  border-block: var(--border-width-2) solid currentColor;
   display: flex;
   justify-content: center;
   margin-block: var(--space-2);

@@ -128,8 +128,7 @@ h3 + h4 {
 hr {
   border-bottom: none;
   border-color: var(--color-balance-less);
-  border-left: none;
-  border-right: none;
+  border-inline: none;
   border-width: var(--border-width-2);
   margin: var(--space-3) 0;
 }
