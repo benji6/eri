@@ -7,7 +7,7 @@
   --hover-color: var(--color-theme-more);
 
   display: block;
-  padding-inline: var(--space-3);
+  padding: var(--space-1) var(--space-3);
   text-decoration: none;
   transition-duration: var(--time-0);
   transition-property: background-color, color;

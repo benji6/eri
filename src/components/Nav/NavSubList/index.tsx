@@ -14,7 +14,7 @@ export default function NavSubList({ heading, ...rest }: Props) {
     <>
       <li className="nav-link m-0">
         <button
-          className="nav-sub-list__heading fw-b py-2 ripple"
+          className="nav-sub-list__heading fw-b ripple"
           onClick={() => {
             if (!hasBeenClicked) setHasBeenClicked(true);
             setIsExpanded(!isExpanded);

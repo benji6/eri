@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   outline: 0; /* FIXME */
-  padding-inline: var(--space-3);
+  padding: var(--space-1) var(--space-3);
   transition-duration: var(--time-0);
   transition-property: background-color, color;
   transition-timing-function: var(--easing-standard);

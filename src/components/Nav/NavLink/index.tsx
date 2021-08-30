@@ -12,7 +12,7 @@ export default function NavLink({
       <Link
         {...rest}
         getProps={({ isCurrent }) => ({
-          className: `nav-link__link fw-b py-2${
+          className: `nav-link__link fw-b ${
             isCurrent ? " nav-link__link--active" : ""
           } ripple`,
         })}
