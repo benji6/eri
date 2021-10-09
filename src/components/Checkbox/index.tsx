@@ -4,7 +4,7 @@ import Field from "../../privateComponents/Field";
 import FieldError from "../../privateComponents/FieldError";
 import Icon from "../Icon";
 
-interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   error?: React.ReactNode;
   label: React.ReactNode;
 }

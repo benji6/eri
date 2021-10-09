@@ -25,7 +25,7 @@ export default function NavDocs(_: RouteComponentProps) {
             <Nav.List>
               <Nav.Link to="/a">Link A</Nav.Link>
               <Nav.Link to="/b">Link B</Nav.Link>
-              <Nav.SubList>
+              <Nav.SubList heading="Sub list">
                 <Nav.Link to="/x">Sub link X</Nav.Link>
                 <Nav.Link to="/y">Sub link Y</Nav.Link>
               </Nav.SubList>

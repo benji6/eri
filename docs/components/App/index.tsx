@@ -44,6 +44,9 @@ export default function App() {
             <Nav.Link onClick={handleNavClose} to="/components/line-chart">
               Chart.LineChart
             </Nav.Link>
+            <Nav.Link onClick={handleNavClose} to="/components/checkbox">
+              Checkbox
+            </Nav.Link>
             <Nav.Link onClick={handleNavClose} to="/components/combo-box">
               ComboBox
             </Nav.Link>

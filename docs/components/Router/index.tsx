@@ -4,6 +4,7 @@ import BarChartDocs from "../Components/BarChartDocs";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
 import ChangePasswordPageDocs from "../Components/ChangePasswordPageDocs";
+import CheckboxDocs from "../Components/CheckboxDocs";
 import ComboBoxDocs from "../Components/ComboBoxDocs";
 import CssUtilities from "../CssUtilities";
 import CurrencyFieldDocs from "../Components/CurrencyFieldDocs";
@@ -56,6 +57,7 @@ export default function Router() {
       <BarChartDocs path="components/bar-chart" />
       <ButtonDocs path="components/button" />
       <CardDocs path="components/card" />
+      <CheckboxDocs path="components/checkbox" />
       <ComboBoxDocs path="components/combo-box" />
       <CssUtilities path="css-utilities" />
       <CurrencyFieldDocs path="components/currency-field" />
