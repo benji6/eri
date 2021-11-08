@@ -39,6 +39,26 @@ button {
   outline-color: var(--color-highlight-default);
 }
 
+button {
+  transition-duration: var(--time-0);
+
+  /* Includes transition properties used by other buttons */
+  transition-property: box-shadow, filter, opacity, transform;
+  transition-timing-function: var(--easing-standard);
+}
+button:active {
+  filter: brightness(0.8) saturate(1.2);
+}
+.button:disabled {
+  filter: grayscale(0.5);
+  opacity: 0.75;
+}
+@media (hover: hover) {
+  button:not(:disabled):not(:active):hover {
+    filter: brightness(1.2) saturate(1.2);
+  }
+}
+
 a::-moz-focus-inner {
   border: none;
 }

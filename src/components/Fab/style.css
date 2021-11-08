@@ -1,29 +1,19 @@
 .fab {
   align-items: center;
-  background: var(--color-theme);
+  background: linear-gradient(
+    45deg,
+    var(--color-theme-more),
+    var(--color-theme-less)
+  );
   bottom: var(--space-2);
   box-shadow: var(--box-shadow-1);
   color: var(--color-ground);
   display: flex;
   position: fixed;
   right: var(--space-2);
-  transition-duration: var(--time-0);
-  transition-property: background-color, box-shadow, opacity, transform;
-  transition-timing-function: var(--easing-standard);
-}
-
-@media (hover: hover) {
-  .fab:hover {
-    background: var(--color-theme-less);
-  }
-}
-
-.fab:disabled {
-  background: var(--color-balance);
 }
 
 .fab:active:not(:disabled) {
-  background: var(--color-theme-more);
   box-shadow: var(--box-shadow-0);
 }
 

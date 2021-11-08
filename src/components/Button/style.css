@@ -1,24 +1,8 @@
 .button {
   --color: var(--color-theme);
-
-  transition-duration: var(--time-0);
-  transition-property: box-shadow, filter;
-  transition-timing-function: var(--easing-standard);
 }
 .button:is(:active, :disabled, :focus) {
   box-shadow: none;
-}
-@media (hover: hover) {
-  .button:not(:disabled):not(:active):hover {
-    filter: brightness(1.2) saturate(1.2);
-  }
-}
-.button:active {
-  filter: brightness(0.8) saturate(1.2);
-}
-.button:disabled {
-  filter: grayscale(0.5);
-  opacity: 0.75;
 }
 
 .button--primary {

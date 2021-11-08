@@ -1,16 +1,3 @@
 .close-button {
   margin-left: var(--space-2);
-  transition-duration: var(--time-0);
-  transition-property: background-color, color;
-  transition-timing-function: var(--easing-standard);
-}
-
-@media (hover: hover) {
-  .close-button:hover {
-    color: var(--color-figure-more);
-  }
-}
-
-.close-button:active {
-  color: var(--color-figure-more);
 }

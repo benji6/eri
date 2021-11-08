@@ -9,9 +9,6 @@
 button.card {
   display: block;
   text-align: initial;
-  transition-duration: var(--time-0);
-  transition-property: box-shadow, transform;
-  transition-timing-function: var(--easing-standard);
   width: 100%;
 }
 

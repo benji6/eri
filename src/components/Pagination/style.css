@@ -23,13 +23,11 @@
 
 @media (hover: hover) {
   .pagination__button:hover {
-    color: var(--color-theme-less);
     text-decoration: underline;
   }
 }
 
 .pagination__button:active {
-  color: var(--color-theme-more);
   text-decoration: underline;
 }
 
