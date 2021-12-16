@@ -49,7 +49,7 @@ button {
 button:active {
   filter: brightness(0.8) saturate(1.2);
 }
-.button:disabled {
+button:disabled {
   filter: grayscale(0.5);
   opacity: 0.75;
 }

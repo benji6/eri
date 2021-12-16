@@ -2,7 +2,6 @@ import "./style.css";
 import * as React from "react";
 import { CSSTransition } from "react-transition-group";
 import CloseButton from "../../privateComponents/CloseButton";
-import { EriDispatchContext } from "../EriProvider";
 import Mask from "../../privateComponents/Mask";
 import NavButton from "./NavButton";
 import NavLink from "./NavLink";
@@ -19,12 +18,6 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export default function Nav({ children, onClose, open, ...rest }: IProps) {
   const isWideResolution = useIsWideResolution();
-  const dispatch = React.useContext(EriDispatchContext);
-
-  React.useEffect(() => {
-    dispatch({ payload: true, type: "nav/exists" });
-    return () => dispatch({ payload: false, type: "nav/exists" });
-  }, [dispatch]);
 
   return isWideResolution ? (
     /* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */

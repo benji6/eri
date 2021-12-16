@@ -2,7 +2,6 @@
   --break-point: 100vw;
   --header-height: 3.93em;
   --nav-width: 16em;
-  --space-for-nav: 0; /* used for components that need to shift when the nav is always open */
   --space-scale-ratio: 1.61803;
   --space-0: calc(1em / 3);
   --space-1: calc(var(--space-0) * var(--space-scale-ratio));
@@ -14,12 +13,6 @@
 @media (min-width: 37rem) {
   :root {
     --break-point: 37rem;
-  }
-}
-
-@media (min-width: 66rem) {
-  :root {
-    --space-for-nav: var(--nav-width);
   }
 }
 
