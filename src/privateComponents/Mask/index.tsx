@@ -11,12 +11,6 @@ interface IProps extends React.HTMLAttributes<HTMLDivElement> {
   portalContainer: HTMLDivElement | undefined;
 }
 
-const handleKeyDown =
-  (onClose: IProps["onClose"]) =>
-  (e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>) => {
-    if (e.keyCode === 27 && onClose) onClose();
-  };
-
 export default function Mask({
   onClose,
   open,
@@ -32,15 +26,26 @@ export default function Mask({
     document.documentElement.classList.add("no-scroll");
   };
 
+  const handleKeyDown = React.useCallback(
+    (e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>) => {
+      if (open && onClose && e.code === "Escape") onClose();
+    },
+    [onClose, open]
+  );
+
   React.useEffect(() => {
-    const keyDownListener = handleKeyDown(onClose);
     if (open) openMask();
-    window.addEventListener("keydown", keyDownListener);
     return () => {
-      window.removeEventListener("keydown", keyDownListener);
       document.documentElement.classList.remove("no-scroll");
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  React.useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   React.useEffect(() => {
     if (open) openMask();
@@ -55,7 +60,7 @@ export default function Mask({
 
   return ReactDOM.createPortal(
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-    <div onKeyDown={handleKeyDown(onClose)}>
+    <div onKeyDown={handleKeyDown}>
       <CSSTransition
         classNames="mask__mask-"
         in={open}
