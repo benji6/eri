@@ -5,8 +5,10 @@
   border-color: var(--color);
   box-shadow: var(--box-shadow-even-1-no-color) var(--color);
 
-  /* This is for applications that dynamically change the color of this component */
-  transition: border-color var(--time-0) var(--easing-standard);
+  /* These properties are for applications that dynamically change the color of this component */
+  transition-duration: var(--time-0);
+  transition-property: border-color, box-shadow;
+  transition-timing-function: var(--easing-standard);
 }
 
 button.card {
