@@ -36,8 +36,12 @@
 }
 
 .pagination__button:disabled {
-  color: var(--color-ground) !important;
   background: var(--color-theme);
-  text-decoration: none !important;
+  color: var(--color-ground) !important;
   cursor: default;
+  text-decoration: none !important;
+
+  /* override global button:disabled styles */
+  filter: none;
+  transition: filter var(--time-0) var(--easing-standard);
 }
