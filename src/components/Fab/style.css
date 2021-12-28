@@ -23,3 +23,13 @@
   transform: scale(0);
   transition-timing-function: var(--easing-accelerate);
 }
+
+.fab--quick-nav-mounted {
+  display: none;
+}
+
+@media (min-width: 66rem) {
+  .fab--quick-nav-mounted {
+    display: initial;
+  }
+}
