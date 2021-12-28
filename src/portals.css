@@ -1,0 +1,5 @@
+@media (min-width: 66rem) {
+  #e-portal-quick-nav {
+    display: none;
+  }
+}
