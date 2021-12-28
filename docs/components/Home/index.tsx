@@ -58,20 +58,10 @@ export default function Home(_: RouteComponentProps) {
         <CodeSnippet language="html">{`<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">`}</CodeSnippet>
         <p>
-          Make sure to add <code>EriProvider</code> near the root of your
-          component tree as various components depend on it being an ancestor:
+          You&apos;re now good to go! Eri comes bundled with some global styles.
+          Be sure to use semantic markup and things should generally work as
+          expected.
         </p>
-        <CodeSnippet language="jsx">{`import * as React from "react";
-import * as ReactDOM from "react-dom";
-import App from "./components/App";
-import { EriProvider } from "../src";
-
-ReactDOM.render(
-  <EriProvider>
-    <App />
-  </EriProvider>,
-  document.getElementById("root")
-);`}</CodeSnippet>
       </Paper>
       <Paper>
         <h2>About</h2>

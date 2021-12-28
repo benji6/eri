@@ -2,6 +2,7 @@
   --break-point: 100vw;
   --header-height: 3.93em;
   --nav-width: 16em;
+  --quick-nav-height: 0;
   --space-scale-ratio: 1.61803;
   --space-0: calc(1em / 3);
   --space-1: calc(var(--space-0) * var(--space-scale-ratio));

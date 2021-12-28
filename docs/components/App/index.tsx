@@ -1,6 +1,6 @@
 import "./style.css";
 import * as React from "react";
-import { Header, Main, Nav } from "../../../src";
+import { Header, Nav } from "../../../src";
 import { Link } from "@reach/router";
 import Router from "../Router";
 
@@ -77,9 +77,6 @@ export default function App() {
             <Nav.Link onClick={handleNavClose} to="/components/link">
               Link
             </Nav.Link>
-            <Nav.Link onClick={handleNavClose} to="/components/main">
-              Main
-            </Nav.Link>
             <Nav.Link onClick={handleNavClose} to="/components/nav">
               Nav
             </Nav.Link>
@@ -142,9 +139,9 @@ export default function App() {
           </Nav.SubList>
         </Nav.List>
       </Nav>
-      <Main>
+      <main>
         <Router />
-      </Main>
+      </main>
     </React.StrictMode>
   );
 }

@@ -27,6 +27,18 @@ body {
   margin: 0;
 }
 
+main {
+  justify-content: center;
+  display: flex;
+  margin-bottom: var(--quick-nav-height);
+}
+
+@media (min-width: 66rem) {
+  main {
+    padding-left: var(--nav-width);
+  }
+}
+
 a {
   color: var(--color-theme);
   transition-duration: var(--time-0);

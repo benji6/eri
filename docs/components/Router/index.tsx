@@ -20,7 +20,6 @@ import IconDocs from "../Components/IconDocs";
 import ImageUploadDocs from "../Components/ImageUploadDocs";
 import LineChartDocs from "../Components/LineChartDocs";
 import LinkDocs from "../Components/LinkDocs";
-import MainDocs from "../Components/MainDocs";
 import NavDocs from "../Components/NavDocs";
 import PaginationDocs from "../Components/PaginationDocs";
 import PaperDocs from "../Components/PaperDocs";
@@ -70,7 +69,6 @@ export default function Router() {
       <ImageUploadDocs path="components/image-upload" />
       <LineChartDocs path="components/line-chart" />
       <LinkDocs path="components/link" />
-      <MainDocs path="components/main" />
       <NavDocs path="components/nav" />
       <PaginationDocs path="components/pagination" />
       <PaperDocs path="components/paper" />
