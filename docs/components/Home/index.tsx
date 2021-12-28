@@ -72,11 +72,6 @@ ReactDOM.render(
   </EriProvider>,
   document.getElementById("root")
 );`}</CodeSnippet>
-        <p>
-          If you&apos;re rendering to string (perhaps for server-side rendering
-          or prerendering) then pass the <code>renderingToString</code> prop to{" "}
-          <code>EriProvider</code>.
-        </p>
       </Paper>
       <Paper>
         <h2>About</h2>

@@ -2,7 +2,6 @@ import "./style.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
-import { EriStateContext } from "../../components/EriProvider";
 import { getCssTime1 } from "../../utils/getCssVar";
 
 interface IProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -17,7 +16,6 @@ export default function Mask({
   portalContainer,
   ...rest
 }: IProps) {
-  const state = React.useContext(EriStateContext);
   const [scrollY, setScrollY] = React.useState(0);
 
   const openMask = () => {
@@ -56,7 +54,7 @@ export default function Mask({
     }
   }, [open, scrollY]);
 
-  if (state.renderingToString || !portalContainer) return null;
+  if (!portalContainer) return null;
 
   return ReactDOM.createPortal(
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */

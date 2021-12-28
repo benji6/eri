@@ -15,13 +15,11 @@ type Action =
 interface IState {
   quickNavHeight: number | null; // is only `null` if never set & when unset it will be `0`
   quickNavMounted: boolean;
-  renderingToString: boolean;
 }
 
 const initialState: IState = {
   quickNavHeight: null,
   quickNavMounted: false,
-  renderingToString: false,
 };
 
 const stateReducer = (state: IState, action: Action): IState => {
@@ -42,17 +40,10 @@ export const EriStateContext = React.createContext<IState>(initialState);
 
 interface IProps {
   children: React.ReactNode;
-  renderingToString?: boolean;
 }
 
-export default function EriProvider({
-  children,
-  renderingToString = false,
-}: IProps) {
-  const [state, dispatch] = React.useReducer(stateReducer, {
-    ...initialState,
-    renderingToString,
-  });
+export default function EriProvider({ children }: IProps) {
+  const [state, dispatch] = React.useReducer(stateReducer, initialState);
   return (
     <EriDispatchContext.Provider value={dispatch}>
       <EriStateContext.Provider value={state}>

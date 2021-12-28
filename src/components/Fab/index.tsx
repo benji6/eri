@@ -19,7 +19,7 @@ export default function Fab({
 }: IProps) {
   const state = React.useContext(EriStateContext);
 
-  if (state.renderingToString || !PORTAL_EL) return null;
+  if (!PORTAL_EL) return null;
 
   return ReactDOM.createPortal(
     <CSSTransition
