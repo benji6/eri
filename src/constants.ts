@@ -6,7 +6,7 @@ export const HIGHLIGHT_COLOR_COUNT = 6;
 function createPortalContainer(id?: string): HTMLDivElement | undefined {
   if (typeof document === "undefined") return;
   const container = document.createElement("div");
-  if (id) container.id = `e-portal-${id}`;
+  if (id) container.id = `${id}-portal`;
   return document.body.appendChild(container);
 }
 

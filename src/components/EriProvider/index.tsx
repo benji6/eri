@@ -7,29 +7,20 @@ type FluxStandardAction<
   ? { type: Type }
   : { payload: Payload; type: Type };
 
-type Action =
-  | FluxStandardAction<"quickNav/height", number>
-  | FluxStandardAction<"quickNav/mount">
-  | FluxStandardAction<"quickNav/unMount">;
+type Action = FluxStandardAction<"quickNav/height", number>;
 
 interface IState {
   quickNavHeight: number | null; // is only `null` if never set & when unset it will be `0`
-  quickNavMounted: boolean;
 }
 
 const initialState: IState = {
   quickNavHeight: null,
-  quickNavMounted: false,
 };
 
 const stateReducer = (state: IState, action: Action): IState => {
   switch (action.type) {
     case "quickNav/height":
       return { ...state, quickNavHeight: action.payload };
-    case "quickNav/mount":
-      return { ...state, quickNavMounted: true };
-    case "quickNav/unMount":
-      return { ...state, quickNavHeight: 0, quickNavMounted: false };
   }
 };
 

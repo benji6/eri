@@ -24,12 +24,12 @@
   transition-timing-function: var(--easing-accelerate);
 }
 
-.fab--quick-nav-mounted {
+.quick-nav-mounted .fab {
   display: none;
 }
 
 @media (min-width: 66rem) {
-  .fab--quick-nav-mounted {
+  .quick-nav-mounted .fab {
     display: initial;
   }
 }

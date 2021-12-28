@@ -2,7 +2,6 @@ import "./style.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
-import { EriStateContext } from "../EriProvider";
 import { PORTAL_CONTAINERS } from "../../constants";
 import { getCssTime0 } from "../../utils/getCssVar";
 
@@ -17,8 +16,6 @@ export default function Fab({
   type = "submit", // Formik gets grumpy if you don't specify this
   ...rest
 }: IProps) {
-  const state = React.useContext(EriStateContext);
-
   if (!PORTAL_EL) return null;
 
   return ReactDOM.createPortal(
@@ -29,13 +26,7 @@ export default function Fab({
       timeout={{ exit: getCssTime0() + 100 }}
       unmountOnExit
     >
-      <button
-        {...rest}
-        className={`fab${
-          state.quickNavMounted ? " fab--quick-nav-mounted" : ""
-        } br-max p-3 z-1`}
-        type={type}
-      />
+      <button {...rest} className="fab br-max p-3 z-1" type={type} />
     </CSSTransition>,
     PORTAL_EL
   );

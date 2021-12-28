@@ -12,8 +12,11 @@ export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
   const isWideResolution = useIsWideResolution();
 
   React.useEffect(() => {
-    dispatch({ type: "quickNav/mount" });
-    return () => dispatch({ type: "quickNav/unMount" });
+    document.documentElement.classList.add("quick-nav-mounted");
+    return () => {
+      document.documentElement.classList.remove("quick-nav-mounted");
+      dispatch({ payload: 0, type: "quickNav/height" });
+    };
   }, [dispatch]);
 
   React.useEffect(() => {
