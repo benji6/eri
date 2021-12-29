@@ -1,7 +1,9 @@
 .nav-list {
-  padding: var(--space-2) 0 0;
+  padding: var(--space-4) 0 0;
 }
 
-.nav__close-button ~ .nav-list {
-  padding-top: var(--space-4);
+@media (min-width: 66rem) {
+  .nav-list {
+    padding-top: var(--space-2);
+  }
 }

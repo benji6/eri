@@ -36,3 +36,9 @@
   right: var(--space-2);
   top: var(--space-1);
 }
+
+@media (min-width: 66rem) {
+  .nav__close-button {
+    display: none;
+  }
+}
