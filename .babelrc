@@ -1,9 +1,0 @@
-{
-  "env": {
-    "css": {
-      "plugins": [["babel-plugin-transform-require-ignore", {
-        "extensions": [".css"]
-      }]]
-    }
-  }
-}
