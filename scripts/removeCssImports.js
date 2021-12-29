@@ -10,7 +10,7 @@ const recursiveMapOverFilesByExtension =
       const nextPath = path.join(pathToCheck, name);
 
       if ((await fs.lstat(nextPath)).isDirectory()) {
-        recursiveMapOverDefinitionFiles(f)(nextPath);
+        recursiveMapOverFilesByExtension(extension)(f)(nextPath);
       } else if (nextPath.endsWith(`.${extension}`)) {
         const file = await fs.readFile(nextPath, "utf8");
         fs.writeFile(nextPath, f(file));
