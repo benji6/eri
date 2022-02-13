@@ -100,24 +100,6 @@ export default function DesignElements(_: RouteComponentProps) {
         </DisplayGroup>
       </Paper>
       <Paper>
-        <h3>Animation</h3>
-        <h4>Fade in</h4>
-        <p>
-          Set the <code>class</code> on an element to{" "}
-          <code>&quot;fade-in&quot;</code> to get a fade in animation.
-        </p>
-        <h4>Slide in</h4>
-        <p>
-          Set the <code>class</code> on an element to{" "}
-          <code>&quot;slide-in&quot;</code> to get a slide in animation.
-        </p>
-        <p>
-          If you want to slide in a group of elements one by one then set the{" "}
-          <code>class</code> on the parent element to{" "}
-          <code>&quot;slide-children-in&quot;</code>.
-        </p>
-      </Paper>
-      <Paper>
         <h3>Color</h3>
         <p>
           Eri uses the{" "}

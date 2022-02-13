@@ -7,6 +7,24 @@ export default function CssUtilities(_: RouteComponentProps) {
     <Paper.Group>
       <Paper>
         <h2>CSS utilities</h2>
+        <p>
+          Add these class names to your elements to get some out-the-box
+          functionality quickly.
+        </p>
+        <h3>Animation</h3>
+        <ul>
+          <li>
+            <code>fade-in</code>: Makes the element fade in when it is rendered
+          </li>
+          <li>
+            <code>slide-in</code>: Makes the element slide in when it is
+            rendered
+          </li>
+          <li>
+            <code>slide-children-in</code>: Makes all children of the parent
+            element slide in one by one when rendered
+          </li>
+        </ul>
         <h3>Border radius</h3>
         <ul>
           <li>
