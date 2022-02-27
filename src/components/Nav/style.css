@@ -23,6 +23,12 @@
     top: var(--header-height);
     transform: none !important;
   }
+
+  @media (prefers-color-scheme: dark) {
+    .nav {
+      background: var(--color-ground-more);
+    }
+  }
 }
 
 .nav--enter,

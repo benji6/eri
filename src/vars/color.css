@@ -90,15 +90,23 @@
   :root {
     --spread-modifier: -1;
     --balance-lightness: 60%;
-    --figure-lightness: 75%;
-    --ground-lightness: 2%;
+    --figure-lightness: 80%;
+    --ground-lightness: 5%;
     --ground-lightness-spread: calc(-5% * var(--spread-modifier));
-    --color-ground-highlight: hsl(240, 100%, 20%);
+    --color-ground-highlight: hsl(240, 100%, 10%);
     --negative-hue: 310;
-    --theme-hue: 195;
-    --theme-lightness: 41%;
+    --theme-hue: 200;
+    --theme-lightness: 50%;
 
-    --color-highlight-default: var(--color-highlight-1);
+    /* if you add or remove a highlight color you need to update HIGHLIGHT_COLOR_COUNT in script */
+    --color-highlight-0: hsl(184, 100%, 50%);
+    --color-highlight-1: hsl(270, 100%, 70%);
+    --color-highlight-2: hsl(300, 100%, 68%);
+    --color-highlight-3: hsl(32, 100%, 64%);
+    --color-highlight-4: hsl(70, 100%, 50%);
+    --color-highlight-5: hsl(145, 100%, 45%);
+
+    --color-highlight-default: var(--color-highlight-2);
 
     --color-mask: hsla(var(--neutral-hs), 20%, 0.75);
   }

@@ -25,3 +25,11 @@
 .bs-1 {
   box-shadow: var(--box-shadow-1);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --box-shadow-0: 0;
+    --box-shadow-1: 0;
+    --box-shadow-2: 0;
+  }
+}
