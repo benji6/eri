@@ -11,9 +11,7 @@
   flex-shrink: 0;
   height: var(--toggle-button-diameter);
   padding: var(--border-width-2);
-  transition-duration: var(--time-0);
   transition-property: background-color, border-color;
-  transition-timing-function: var(--easing-standard);
   width: var(--toggle-width);
 }
 

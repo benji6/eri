@@ -15,5 +15,4 @@
 .mask__mask--exit-active {
   opacity: 0;
   transition-duration: var(--time-2);
-  transition-timing-function: var(--easing-standard);
 }

@@ -13,9 +13,7 @@
   justify-content: space-between;
   outline: 0; /* FIXME */
   padding: var(--space-1) var(--space-3);
-  transition-duration: var(--time-0);
   transition-property: background-color, color;
-  transition-timing-function: var(--easing-standard);
   width: 100%;
 }
 

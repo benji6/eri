@@ -2,9 +2,7 @@
   background-color: var(--color-theme);
   color: var(--color-ground);
   padding: var(--space-1) var(--space-2);
-  transition-duration: var(--time-0);
   transition-property: background-color;
-  transition-timing-function: var(--easing-standard);
 }
 
 @media (hover: hover) {

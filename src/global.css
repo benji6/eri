@@ -1,6 +1,6 @@
-::selection {
-  background-color: var(--color-highlight-default);
-  color: var(--color-figure-more);
+* {
+  transition-duration: var(--time-0);
+  transition-timing-function: var(--easing-standard);
 }
 
 html {
@@ -17,9 +17,12 @@ html {
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height);
   min-height: 100%;
-  transition-duration: var(--time-0);
   transition-property: background-color, color;
-  transition-timing-function: var(--easing-standard);
+}
+
+::selection {
+  background-color: var(--color-highlight-default);
+  color: var(--color-figure-more);
 }
 
 body {
@@ -41,9 +44,7 @@ main {
 
 a {
   color: var(--color-theme);
-  transition-duration: var(--time-0);
   transition-property: color, text-decoration-color;
-  transition-timing-function: var(--easing-standard);
 }
 
 a,
@@ -52,11 +53,8 @@ button {
 }
 
 button {
-  transition-duration: var(--time-0);
-
   /* Includes transition properties used by other buttons */
   transition-property: box-shadow, filter, opacity, transform;
-  transition-timing-function: var(--easing-standard);
 }
 button:active {
   filter: brightness(0.8) saturate(1.2);
@@ -200,9 +198,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border: var(--border-width-2) solid var(--color-figure-more);
   outline: 0;
   padding: var(--space-1);
-  transition-duration: var(--time-0);
   transition-property: background-color, border, box-shadow;
-  transition-timing-function: var(--easing-standard);
 }
 
 :is(input:not([type="checkbox"]), select, textarea):focus {

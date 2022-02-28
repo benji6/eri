@@ -18,9 +18,7 @@
 .radio-button__appearance {
   background-color: var(--color-ground-more);
   cursor: pointer;
-  transition-duration: var(--time-0);
   transition-property: background-color, border-color, color;
-  transition-timing-function: var(--easing-standard);
   width: 100%;
 }
 

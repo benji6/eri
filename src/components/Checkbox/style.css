@@ -33,9 +33,7 @@
   justify-content: center;
   stroke-dasharray: 30;
   stroke-dashoffset: -30;
-  transition-duration: var(--time-0);
   transition-property: border, box-shadow;
-  transition-timing-function: var(--easing-standard);
   width: var(--checkbox-size);
 }
 
