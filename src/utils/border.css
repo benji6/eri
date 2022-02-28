@@ -1,9 +1,9 @@
 :root {
-  --border-radius-0: calc(2em / 5);
-  --border-radius-1: calc(2em / 3);
+  --border-radius-0: 0.3em;
+  --border-radius-1: calc(var(--border-radius-0) * 2);
   --border-width-0: 1px;
-  --border-width-1: 2px;
-  --border-width-2: 3px;
+  --border-width-1: calc(var(--border-width-0) * 2);
+  --border-width-2: calc(var(--border-width-0) * 3);
 }
 
 .br-0 {
