@@ -3,7 +3,6 @@
 }
 
 .nav-link__link {
-  --active-color: var(--color-highlight-default);
   --hover-color: var(--color-theme-more);
 
   display: block;
@@ -25,7 +24,7 @@
 }
 @media (hover: hover) {
   .nav-link__link:hover {
-    background: var(--color-ground-less);
+    background-color: var(--color-ground-less);
     color: var(--hover-color);
   }
 }
@@ -37,7 +36,8 @@
 }
 
 .nav-link__link--active {
-  --color: var(--active-color);
+  --color: var(--color-highlight-default);
+  background-color: var(--color-ground-less);
   color: var(--color);
 }
 .nav-link__link--active:is(:focus, :hover) {
