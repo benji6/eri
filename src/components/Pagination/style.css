@@ -43,5 +43,5 @@
 
   /* override global button:disabled styles */
   filter: none;
-  transition: filter var(--time-0) var(--easing-standard);
+  transition-property: filter;
 }

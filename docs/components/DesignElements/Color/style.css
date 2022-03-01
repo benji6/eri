@@ -2,6 +2,6 @@
   --size: var(--space-3);
 
   height: var(--size);
-  transition: background-color var(--time-0) var(--easing-standard);
+  transition-property: background-color;
   width: var(--size);
 }

@@ -2,6 +2,6 @@
   animation: var(--animation-spin);
   background: var(--color-figure-more);
   height: var(--space-2);
-  transition: background-color var(--time-0) var(--easing-standard);
+  transition-property: background-color;
   width: var(--space-4);
 }

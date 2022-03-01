@@ -21,7 +21,7 @@
   content: "";
   display: block;
   height: var(--toggle-button-diameter);
-  transition: transform var(--time-0) var(--easing-standard);
+  transition-property: transform;
   width: var(--toggle-button-diameter);
 }
 

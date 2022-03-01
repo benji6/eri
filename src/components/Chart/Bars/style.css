@@ -9,7 +9,7 @@
 }
 
 .bars__bar--clickable {
-  transition: filter var(--time-0) var(--easing-standard);
+  transition-property: filter;
   cursor: pointer;
 }
 .bars__bar--clickable:hover:not(:active) {

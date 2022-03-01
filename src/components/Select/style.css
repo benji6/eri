@@ -5,7 +5,7 @@
   pointer-events: none;
   position: absolute;
   right: var(--space-2);
-  transition: color var(--time-0) var(--easing-standard);
+  transition-property: color;
 }
 
 .select__select {

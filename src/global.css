@@ -129,7 +129,7 @@ h4 {
   color: var(--color-figure-more);
   font-weight: var(--font-weight-bold);
   margin: var(--space-3) 0 var(--space-0);
-  transition: color, var(--time-0) var(--easing-standard);
+  transition-property: color;
 }
 
 h1 {
@@ -177,7 +177,7 @@ p + p {
 input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   opacity: 0.75;
-  transition: opacity var(--time-0) var(--easing-standard);
+  transition-property: opacity;
 }
 
 @media (prefers-color-scheme: dark) {
