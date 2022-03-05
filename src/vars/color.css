@@ -95,7 +95,6 @@
     --ground-lightness-spread: calc(-5% * var(--spread-modifier));
     --color-ground-highlight: hsl(240, 100%, 10%);
     --negative-hue: 310;
-    --theme-hue: 200;
     --theme-lightness: 50%;
 
     /* if you add or remove a highlight color you need to update HIGHLIGHT_COLOR_COUNT in script */
