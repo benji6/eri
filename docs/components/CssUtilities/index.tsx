@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Paper } from "../../../src";
-import { RouteComponentProps } from "@reach/router";
 
-export default function CssUtilities(_: RouteComponentProps) {
+export default function CssUtilities() {
   return (
     <Paper.Group>
       <Paper>

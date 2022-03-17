@@ -6,9 +6,8 @@ import ConfigurableExample, {
   PropControlString,
 } from "./_ConfigurableExample";
 import { IProps } from "../../../src/components/Button";
-import { RouteComponentProps } from "@reach/router";
 
-export default function ButtonDocs(_: RouteComponentProps) {
+export default function ButtonDocs() {
   const [props, setProps] = React.useState<IProps>({
     children: "Click me!",
     danger: false,

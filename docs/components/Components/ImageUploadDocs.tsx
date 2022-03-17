@@ -5,9 +5,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { ImageUpload, Paper } from "../../../src";
 import { IProps } from "../../../src/components/ImageUpload";
-import { RouteComponentProps } from "@reach/router";
 
-export default function ImageUploadDocs(_: RouteComponentProps) {
+export default function ImageUploadDocs() {
   const [props, setProps] = React.useState<IProps>({
     error: "",
     label: "Field label",

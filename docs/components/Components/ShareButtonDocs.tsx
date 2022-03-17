@@ -2,9 +2,8 @@ import * as React from "react";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
 import { Paper, ShareButton } from "../../../src";
 import { IProps } from "../../../src/components/ShareButton";
-import { RouteComponentProps } from "@reach/router";
 
-export default function ShareButtonDocs(_: RouteComponentProps) {
+export default function ShareButtonDocs() {
   const [props, setProps] = React.useState<IProps>({
     text: "Example text",
     title: document.title,

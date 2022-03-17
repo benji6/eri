@@ -6,9 +6,8 @@ import ConfigurableExample, {
 import { Icon, Paper } from "../../../src";
 import { ICON_NAMES } from "../../constants";
 import { IProps } from "../../../src/components/Icon";
-import { RouteComponentProps } from "@reach/router";
 
-export default function IconDocs(_: RouteComponentProps) {
+export default function IconDocs() {
   const [props, setProps] = React.useState<IProps>({
     draw: false,
     margin: undefined,

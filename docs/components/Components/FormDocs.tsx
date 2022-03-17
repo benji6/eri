@@ -12,9 +12,8 @@ import {
   TextField,
   Toggle,
 } from "../../../src";
-import { RouteComponentProps } from "@reach/router";
 
-export default function FormDocs(_: RouteComponentProps) {
+export default function FormDocs() {
   return (
     <Paper.Group>
       <Paper>

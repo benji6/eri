@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Button, Paper, TextField } from "../..";
-import { Link, useLocation } from "@reach/router";
+import { Link, useLocation } from "react-router-dom";
 import {
   validateEmailField,
   validatePasswordField,

@@ -4,12 +4,11 @@ import ConfigurableExample, {
   PropControlBoolean,
   PropControlString,
 } from "./_ConfigurableExample";
-import { RouteComponentProps } from "@reach/router";
 
 const DATA_COUNT = 8;
 const RANGE: [number, number] = [0, 10];
 
-export default function BarChartDocs(_: RouteComponentProps) {
+export default function BarChartDocs() {
   const [props, setProps] = React.useState<{
     data: (number | undefined)[];
     onClick: boolean;

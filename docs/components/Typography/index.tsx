@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Paper, SubHeading } from "../../../src";
 import { LOREM_IPSUM } from "../../constants";
-import { RouteComponentProps } from "@reach/router";
+
 const treeSrc = require("./tree.jpg"); // eslint-disable-line @typescript-eslint/no-var-requires
 
-export default function Typography(_: RouteComponentProps) {
+export default function Typography() {
   return (
     <Paper.Group>
       <Paper>

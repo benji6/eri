@@ -5,9 +5,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { Paper, Toggle } from "../../../src";
 import { IProps } from "../../../src/components/Toggle";
-import { RouteComponentProps } from "@reach/router";
 
-export default function ToggleDocs(_: RouteComponentProps) {
+export default function ToggleDocs() {
   const [props, setProps] = React.useState<IProps>({
     disabled: false,
     error: "",

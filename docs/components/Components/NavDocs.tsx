@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Link, RouteComponentProps } from "@reach/router";
 import { Nav, Paper } from "../../../src";
+import { Link } from "react-router-dom";
 import ReactCodeSnippet from "./_ReactCodeSnippet";
 
-export default function NavDocs(_: RouteComponentProps) {
+export default function NavDocs() {
   return (
     <Paper.Group>
       <Paper>

@@ -5,9 +5,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { Paper, RadioButton } from "../../../src";
 import { IProps } from "../../../src/components/RadioButton/RadioButtonGroup";
-import { RouteComponentProps } from "@reach/router";
 
-export default function RadioButtonDocs(_: RouteComponentProps) {
+export default function RadioButtonDocs() {
   const [props, setProps] = React.useState<Omit<IProps, "children">>({
     disabled: false,
     error: "",

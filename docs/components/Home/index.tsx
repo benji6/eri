@@ -2,9 +2,8 @@ import * as React from "react";
 import { Paper, ShareButton } from "../../../src";
 import Banner from "./Banner";
 import CodeSnippet from "../Components/_CodeSnippet";
-import { RouteComponentProps } from "@reach/router";
 
-export default function Home(_: RouteComponentProps) {
+export default function Home() {
   return (
     <Paper.Group>
       <Paper>
@@ -15,7 +14,7 @@ export default function Home(_: RouteComponentProps) {
         <ul>
           <li>
             <span aria-label="Yoga" role="img">
-              🧘‍♀️
+              🧘
             </span>{" "}
             <strong>Simple</strong> - Eri is minimal and provides a clean and
             intuitive user experience. Eri does confuse or distract users with

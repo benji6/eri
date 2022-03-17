@@ -5,9 +5,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { DateField, Paper } from "../../../src";
 import { IProps } from "../../../src/components/TextField";
-import { RouteComponentProps } from "@reach/router";
 
-export default function DateFieldDocs(_: RouteComponentProps) {
+export default function DateFieldDocs() {
   const [props, setProps] = React.useState<IProps>({
     error: "",
     label: "Field label",

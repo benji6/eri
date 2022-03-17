@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import { Paper } from "../..";
 import { PaperGroupProps } from "../Paper/PaperGroup";
 

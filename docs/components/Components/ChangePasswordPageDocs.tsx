@@ -1,8 +1,7 @@
 import * as React from "react";
 import { ChangePasswordPage } from "../../../src";
-import { RouteComponentProps } from "@reach/router";
 
-export default function ChangePasswordPageDocs(_: RouteComponentProps) {
+export default function ChangePasswordPageDocs() {
   return (
     <ChangePasswordPage
       onSubmit={async ({ currentPassword, newPassword }) =>

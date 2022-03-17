@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Router as ReachRouter, Redirect } from "@reach/router";
+import { Route, Routes } from "react-router-dom";
 import BarChartDocs from "../Components/BarChartDocs";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
@@ -42,52 +42,55 @@ import _404 from "../_404";
 
 export default function Router() {
   return (
-    <ReachRouter primary={false}>
-      <_404 default />
-      <Redirect from="/forgot-password" to="/pages/forgot-password" />
-      <Redirect from="/resend-verification" to="/pages/resend-verification" />
-      <Redirect from="/reset-password" to="/pages/reset-password" />
-      <Redirect from="/sign-in" to="/pages/sign-in" />
-      <Redirect from="/sign-up" to="/pages/sign-up" />
-      <Redirect from="/verify" to="/pages/verify" />
-      <Home path="/" />
-      <DesignElements path="design-elements" />
-      <Typography path="typography" />
-      <BarChartDocs path="components/bar-chart" />
-      <ButtonDocs path="components/button" />
-      <CardDocs path="components/card" />
-      <CheckboxDocs path="components/checkbox" />
-      <ComboBoxDocs path="components/combo-box" />
-      <CssUtilities path="css-utilities" />
-      <CurrencyFieldDocs path="components/currency-field" />
-      <DateFieldDocs path="components/date-field" />
-      <DialogDocs path="components/dialog" />
-      <FabDocs path="components/fab" />
-      <FormDocs path="components/form" />
-      <HeaderDocs path="components/header" />
-      <IconDocs path="components/icon" />
-      <ImageUploadDocs path="components/image-upload" />
-      <LineChartDocs path="components/line-chart" />
-      <LinkDocs path="components/link" />
-      <NavDocs path="components/nav" />
-      <PaginationDocs path="components/pagination" />
-      <PaperDocs path="components/paper" />
-      <SelectDocs path="components/select" />
-      <ShareButtonDocs path="components/share-button" />
-      <SpinnerDocs path="components/spinner" />
-      <TextAreaDocs path="components/text-area" />
-      <TextFieldDocs path="components/text-field" />
-      <QuickNavDocs path="components/quick-nav" />
-      <RadioButtonDocs path="components/radio-button" />
-      <WordCloudDocs path="components/word-cloud" />
-      <ChangePasswordPageDocs path="pages/change-password" />
-      <ForgotPasswordPageDocs path="pages/forgot-password" />
-      <ResendVerificationPageDocs path="pages/resend-verification" />
-      <ResetPasswordPageDocs path="pages/reset-password" />
-      <SignInPageDocs path="pages/sign-in" />
-      <SignUpPageDocs path="pages/sign-up" />
-      <ToggleDocs path="components/toggle" />
-      <VerifyPageDocs path="pages/verify" />
-    </ReachRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="design-elements" element={<DesignElements />} />
+      <Route path="typography" element={<Typography />} />
+      <Route path="components/bar-chart" element={<BarChartDocs />} />
+      <Route path="components/button" element={<ButtonDocs />} />
+      <Route path="components/card" element={<CardDocs />} />
+      <Route path="components/checkbox" element={<CheckboxDocs />} />
+      <Route path="components/combo-box" element={<ComboBoxDocs />} />
+      <Route path="css-utilities" element={<CssUtilities />} />
+      <Route path="components/currency-field" element={<CurrencyFieldDocs />} />
+      <Route path="components/date-field" element={<DateFieldDocs />} />
+      <Route path="components/dialog" element={<DialogDocs />} />
+      <Route path="components/fab" element={<FabDocs />} />
+      <Route path="components/form" element={<FormDocs />} />
+      <Route path="components/header" element={<HeaderDocs />} />
+      <Route path="components/icon" element={<IconDocs />} />
+      <Route path="components/image-upload" element={<ImageUploadDocs />} />
+      <Route path="components/line-chart" element={<LineChartDocs />} />
+      <Route path="components/link" element={<LinkDocs />} />
+      <Route path="components/nav" element={<NavDocs />} />
+      <Route path="components/pagination" element={<PaginationDocs />} />
+      <Route path="components/paper" element={<PaperDocs />} />
+      <Route path="components/select" element={<SelectDocs />} />
+      <Route path="components/share-button" element={<ShareButtonDocs />} />
+      <Route path="components/spinner" element={<SpinnerDocs />} />
+      <Route path="components/text-area" element={<TextAreaDocs />} />
+      <Route path="components/text-field" element={<TextFieldDocs />} />
+      <Route path="components/quick-nav" element={<QuickNavDocs />} />
+      <Route path="components/radio-button" element={<RadioButtonDocs />} />
+      <Route path="components/word-cloud" element={<WordCloudDocs />} />
+      <Route
+        path="pages/change-password"
+        element={<ChangePasswordPageDocs />}
+      />
+      <Route
+        path="pages/forgot-password"
+        element={<ForgotPasswordPageDocs />}
+      />
+      <Route
+        path="pages/resend-verification"
+        element={<ResendVerificationPageDocs />}
+      />
+      <Route path="pages/reset-password" element={<ResetPasswordPageDocs />} />
+      <Route path="pages/sign-in" element={<SignInPageDocs />} />
+      <Route path="pages/sign-up" element={<SignUpPageDocs />} />
+      <Route path="components/toggle" element={<ToggleDocs />} />
+      <Route path="pages/verify" element={<VerifyPageDocs />} />
+      <Route path="*" element={<_404 />} />
+    </Routes>
   );
 }

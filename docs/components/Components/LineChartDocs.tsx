@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Chart, Paper } from "../../../src";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
-import { RouteComponentProps } from "@reach/router";
+
 import { TPoint } from "../../../src/components/Chart/LineChart/types";
 
 const POINTS_COUNT = 8;
@@ -9,7 +9,7 @@ const DOMAIN: [number, number] = [0, 10];
 const RANGE: [number, number] = [0, 100];
 const TRENDLINE_POINTS_COUNT = POINTS_COUNT / 2;
 
-export default function LineChartDocs(_: RouteComponentProps) {
+export default function LineChartDocs() {
   const xlabels = Array.from({ length: 5 }, (_, n): [number, string] => {
     const x = (n / 4) * (DOMAIN[1] - DOMAIN[0]) + DOMAIN[0];
     return [x, String(x)];

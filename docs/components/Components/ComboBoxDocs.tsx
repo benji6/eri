@@ -6,9 +6,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { IProps } from "../../../src/components/ComboBox";
 import { POKEMON_NAMES } from "../../constants";
-import { RouteComponentProps } from "@reach/router";
 
-export default function ComboBoxDocs(_: RouteComponentProps) {
+export default function ComboBoxDocs() {
   const [props, setProps] = React.useState<IProps>({
     error: "",
     label: "Field label",

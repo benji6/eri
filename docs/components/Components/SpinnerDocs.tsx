@@ -5,9 +5,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { Paper, Spinner } from "../../../src";
 import { IProps } from "../../../src/components/Spinner";
-import { RouteComponentProps } from "@reach/router";
 
-export default function SpinnerDocs(_: RouteComponentProps) {
+export default function SpinnerDocs() {
   const [props, setProps] = React.useState<IProps>({
     inline: false,
     margin: undefined,

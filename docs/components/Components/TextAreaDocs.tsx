@@ -5,9 +5,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { Paper, TextArea } from "../../../src";
 import { IProps } from "../../../src/components/TextArea";
-import { RouteComponentProps } from "@reach/router";
 
-export default function TextAreaDocs(_: RouteComponentProps) {
+export default function TextAreaDocs() {
   const [props, setProps] = React.useState<IProps>({
     error: "",
     label: "Field label",

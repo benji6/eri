@@ -1,8 +1,8 @@
 import * as React from "react";
-import { RouteComponentProps } from "@reach/router";
+
 import { SignUpPage } from "../../../src";
 
-export default function SignUpPageDocs(_: RouteComponentProps) {
+export default function SignUpPageDocs() {
   return (
     <SignUpPage
       onSubmit={async ({ email, password }) =>

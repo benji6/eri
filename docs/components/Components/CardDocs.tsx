@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Card, Paper } from "../../../src";
-import { RouteComponentProps } from "@reach/router";
 
-export default function CardDocs(_: RouteComponentProps) {
+export default function CardDocs() {
   return (
     <Paper.Group>
       <Paper>

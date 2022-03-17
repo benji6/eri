@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Button, Paper, TextField } from "../..";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import { PaperGroupProps } from "../Paper/PaperGroup";
 import { validateEmailField } from "../../utils/validators";
 

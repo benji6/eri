@@ -1,9 +1,8 @@
 import * as React from "react";
 import { Button, Dialog, Paper } from "../../../src";
 import { LOREM_IPSUM } from "../../constants";
-import { RouteComponentProps } from "@reach/router";
 
-export default function DialogDocs(_: RouteComponentProps) {
+export default function DialogDocs() {
   const [isDialogOpen, setIsDialogOpen] = React.useState(false);
   const handleDialogClose = () => setIsDialogOpen(false);
   const handleDialogOpen = () => setIsDialogOpen(true);

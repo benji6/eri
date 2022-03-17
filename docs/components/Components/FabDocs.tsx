@@ -5,9 +5,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { Fab, Icon, Paper } from "../../../src";
 import { IProps } from "../../../src/components/Fab";
-import { RouteComponentProps } from "@reach/router";
 
-export default function FabDocs(_: RouteComponentProps) {
+export default function FabDocs() {
   const [props, setProps] = React.useState<IProps>({
     children: "Add widget",
     hide: false,

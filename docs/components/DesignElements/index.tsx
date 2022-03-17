@@ -7,11 +7,11 @@ import Easing from "./Easing";
 import FontSize from "./FontSize";
 import FontWeight from "./FontWeight";
 import { Paper } from "../../../src";
-import { RouteComponentProps } from "@reach/router";
+
 import Space from "./Space";
 import Time from "./Time";
 
-export default function DesignElements(_: RouteComponentProps) {
+export default function DesignElements() {
   return (
     <Paper.Group>
       <Paper>

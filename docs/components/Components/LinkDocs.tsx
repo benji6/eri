@@ -1,8 +1,7 @@
 import * as React from "react";
 import { Paper } from "../../../src";
-import { RouteComponentProps } from "@reach/router";
 
-export default function LinkDocs(_: RouteComponentProps) {
+export default function LinkDocs() {
   return (
     <Paper.Group>
       <Paper>

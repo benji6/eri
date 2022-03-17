@@ -5,9 +5,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { CurrencyField, Paper } from "../../../src";
 import { IProps } from "../../../src/components/CurrencyField";
-import { RouteComponentProps } from "@reach/router";
 
-export default function CurrencyFieldDocs(_: RouteComponentProps) {
+export default function CurrencyFieldDocs() {
   const [props, setProps] = React.useState<IProps>({
     error: "",
     integer: false,

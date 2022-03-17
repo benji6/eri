@@ -5,9 +5,8 @@ import ConfigurableExample, {
   PropControlString,
 } from "./_ConfigurableExample";
 import { IProps } from "../../../src/components/Checkbox";
-import { RouteComponentProps } from "@reach/router";
 
-export default function CheckboxDocs(_: RouteComponentProps) {
+export default function CheckboxDocs() {
   const [props, setProps] = React.useState<IProps>({
     disabled: false,
     error: "",

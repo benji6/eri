@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Icon, Paper, QuickNav, RadioButton } from "../../../src";
-import { Link, RouteComponentProps } from "@reach/router";
 import { ICON_NAMES } from "../../constants";
+import { Link } from "react-router-dom";
 
 const MAX_LINKS = 4;
 
-export default function QuickNavDocs(_: RouteComponentProps) {
+export default function QuickNavDocs() {
   const [linkCount, setLinkCount] = React.useState(MAX_LINKS);
 
   return (

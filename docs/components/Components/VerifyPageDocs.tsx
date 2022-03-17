@@ -1,7 +1,7 @@
 import * as React from "react";
-import { RouteComponentProps } from "@reach/router";
+
 import { VerifyPage } from "../../../src";
 
-export default function VerifyPageDocs(_: RouteComponentProps) {
+export default function VerifyPageDocs() {
   return <VerifyPage appName="Eri" />;
 }

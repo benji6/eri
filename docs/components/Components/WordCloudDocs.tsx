@@ -2,9 +2,8 @@ import * as React from "react";
 import { Paper, WordCloud } from "../../../src";
 import ConfigurableExample from "./_ConfigurableExample";
 import { LOREM_IPSUM } from "../../constants";
-import { RouteComponentProps } from "@reach/router";
 
-export default function WordCloudDocs(_: RouteComponentProps) {
+export default function WordCloudDocs() {
   const wordSet = new Set(LOREM_IPSUM.replace(/[,.]/g, "").split(" "));
   const words = {};
 

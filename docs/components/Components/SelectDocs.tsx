@@ -5,9 +5,8 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { Paper, Select } from "../../../src";
 import { IProps } from "../../../src/components/Select";
-import { RouteComponentProps } from "@reach/router";
 
-export default function SelectDocs(_: RouteComponentProps) {
+export default function SelectDocs() {
   const [props, setProps] = React.useState<IProps>({
     error: "",
     label: "Field label",

@@ -1,8 +1,7 @@
 import * as React from "react";
 import { ResetPasswordPage } from "../../../src";
-import { RouteComponentProps } from "@reach/router";
 
-export default function ResetPasswordPageDocs(_: RouteComponentProps) {
+export default function ResetPasswordPageDocs() {
   return (
     <ResetPasswordPage
       onSubmit={async ({ code, email, password }) =>

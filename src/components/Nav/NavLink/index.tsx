@@ -1,21 +1,17 @@
 import "./style.css";
 import * as React from "react";
-import { Link, LinkProps } from "@reach/router";
+import { NavLinkProps, NavLink as ReactRouterNavLink } from "react-router-dom";
 
-// FIXME - type annotation can probably be improved
-export default function NavLink({
-  to,
-  ...rest
-}: React.HTMLAttributes<HTMLAnchorElement> & { to: LinkProps<void>["to"] }) {
+export default function NavLink({ to, ...rest }: NavLinkProps) {
   return (
     <li className="nav-link m-0">
-      <Link
+      <ReactRouterNavLink
         {...rest}
-        getProps={({ isCurrent }) => ({
-          className: `nav-link__link fw-b ${
-            isCurrent ? " nav-link__link--active" : ""
-          } ripple`,
-        })}
+        className={({ isActive }) =>
+          `nav-link__link fw-b ${
+            isActive ? " nav-link__link--active" : ""
+          } ripple`
+        }
         to={to}
       />
     </li>
