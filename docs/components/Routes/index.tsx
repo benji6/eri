@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Routes as ReactRouterRoutes, Route } from "react-router-dom";
 import BarChartDocs from "../Components/BarChartDocs";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
@@ -40,9 +40,9 @@ import VerifyPageDocs from "../Components/VerifyPageDocs";
 import WordCloudDocs from "../Components/WordCloudDocs";
 import _404 from "../_404";
 
-export default function Router() {
+export default function Routes() {
   return (
-    <Routes>
+    <ReactRouterRoutes>
       <Route path="/" element={<Home />} />
       <Route path="design-elements" element={<DesignElements />} />
       <Route path="typography" element={<Typography />} />
@@ -91,6 +91,6 @@ export default function Router() {
       <Route path="components/toggle" element={<ToggleDocs />} />
       <Route path="pages/verify" element={<VerifyPageDocs />} />
       <Route path="*" element={<_404 />} />
-    </Routes>
+    </ReactRouterRoutes>
   );
 }

@@ -2,7 +2,7 @@ import "./style.css";
 import * as React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { Header, Nav } from "../../../src";
-import Router from "../Router";
+import Routes from "../Routes";
 
 export default function App() {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
@@ -147,7 +147,7 @@ export default function App() {
           </Nav.List>
         </Nav>
         <main>
-          <Router />
+          <Routes />
         </main>
       </BrowserRouter>
     </React.StrictMode>
