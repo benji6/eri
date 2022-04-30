@@ -23,7 +23,7 @@ export default function Line({
 }: Props) {
   const transformedPoints = useTransformPointsToPlotArea(data);
 
-  if (transformedPoints.length < 2) return null;
+  if (transformedPoints.length < 2) return;
 
   let polylinePoints = "";
   let lineLength = 0;

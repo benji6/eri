@@ -18,6 +18,4 @@ export default function _404() {
     }
     navigate("/");
   });
-
-  return null;
 }
