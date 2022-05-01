@@ -12,6 +12,7 @@ export default function NavLink({ to, ...rest }: NavLinkProps) {
             isActive ? " nav-link__link--active" : ""
           } ripple`
         }
+        end
         to={to}
       />
     </li>

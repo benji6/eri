@@ -9,6 +9,7 @@ export default function QuickNavLink(props: NavLinkProps) {
       className={({ isActive }) =>
         `quick-nav-link${isActive ? " quick-nav-link--active" : ""}`
       }
+      end
     />
   );
 }
