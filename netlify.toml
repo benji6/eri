@@ -1,5 +1,5 @@
 [build]
-  command = "yarn style-guide:build"
+  command = "npm run style-guide:build"
   publish = "build"
 [[headers]]
   for = "*"
