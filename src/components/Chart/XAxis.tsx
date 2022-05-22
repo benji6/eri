@@ -22,17 +22,19 @@ const transformX = (
 
 interface IProps {
   labels: TLabel[];
-  markers?: number[];
+  markers?: true | number[];
 }
 
 export default function XAxis({ labels, markers }: IProps) {
   const domain = React.useContext(DomainContext);
   const marginBottom = useMarginBottom();
   const marginLeft = useMarginLeft();
+  const markerCoordinates =
+    markers === true ? labels.map(([labelY]) => labelY) : markers;
 
   return (
     <>
-      {markers?.map((markerX) => {
+      {markerCoordinates?.map((markerX) => {
         const x = transformX(domain, marginLeft, markerX);
 
         return (

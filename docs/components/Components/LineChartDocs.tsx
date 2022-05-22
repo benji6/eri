@@ -27,11 +27,11 @@ export default function LineChartDocs() {
   }>({
     data: Array.from({ length: POINTS_COUNT }, (_, n) => [
       (n / (POINTS_COUNT - 1)) * (DOMAIN[1] - DOMAIN[0]) + DOMAIN[0],
-      Math.random() * (RANGE[1] - RANGE[0]) + RANGE[0],
+      Math.round(Math.random() * (RANGE[1] - RANGE[0]) + RANGE[0]),
     ]),
     trendlinePoints: Array.from({ length: TRENDLINE_POINTS_COUNT }, (_, n) => [
       (n / (TRENDLINE_POINTS_COUNT - 1)) * (DOMAIN[1] - DOMAIN[0]) + DOMAIN[0],
-      (Math.random() / 2 + 0.25) * (RANGE[1] - RANGE[0]) + RANGE[0],
+      Math.round((Math.random() / 2 + 0.25) * (RANGE[1] - RANGE[0]) + RANGE[0]),
     ]),
     xAxisTitle: "X axis title",
     yAxisTitle: "Y axis title",
@@ -41,6 +41,13 @@ export default function LineChartDocs() {
     <Paper.Group>
       <Paper>
         <h2>Chart.LineChart</h2>
+        <p>
+          <code>XAxis</code> and <code>YAxis</code> have a <code>markers</code>{" "}
+          property. If you specify the value <code>true</code> then markers will
+          be automatically inserted. If you want fine control over the positions
+          of these markers you can instead pass an array of numbers representing
+          the co-ordinates for the markers.
+        </p>
       </Paper>
       <ConfigurableExample
         example={
@@ -62,8 +69,8 @@ export default function LineChartDocs() {
               <Chart.Line data={props.data} />
               <Chart.Points data={props.data} />
             </Chart.PlotArea>
-            <Chart.XAxis labels={xlabels} markers={xlabels.map(([x]) => x)} />
-            <Chart.YAxis labels={ylabels} markers={ylabels.map(([x]) => x)} />
+            <Chart.XAxis labels={xlabels} markers />
+            <Chart.YAxis labels={ylabels} markers />
           </Chart.LineChart>
         }
       >

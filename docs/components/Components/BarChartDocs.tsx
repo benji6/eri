@@ -37,6 +37,13 @@ export default function BarChartDocs() {
     <Paper.Group>
       <Paper>
         <h2>Chart.BarChart</h2>
+        <p>
+          <code>YAxis</code> has a <code>markers</code> property. If you specify
+          the value <code>true</code> then markers will be automatically
+          inserted. If you want fine control over the positions of these markers
+          you can instead pass an array of numbers representing the co-ordinates
+          for the markers.
+        </p>
       </Paper>
       <ConfigurableExample
         example={

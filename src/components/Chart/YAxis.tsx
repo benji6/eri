@@ -19,17 +19,19 @@ const transformY = (
 
 interface IProps {
   labels: TLabel[];
-  markers?: number[];
+  markers?: true | number[];
 }
 
 export default function YAxis({ labels, markers }: IProps) {
   const range = React.useContext(RangeContext);
   const marginLeft = useMarginLeft();
   const plotAreaHeight = usePlotAreaHeight();
+  const markerCoordinates =
+    markers === true ? labels.map(([labelY]) => labelY) : markers;
 
   return (
     <>
-      {markers?.map((markerY) => {
+      {markerCoordinates?.map((markerY) => {
         const y = transformY(range, plotAreaHeight, markerY);
 
         return (
