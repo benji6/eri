@@ -8,7 +8,7 @@
   margin-bottom: var(--space-3);
 }
 
-@media (min-width: 37rem) {
+@media (min-width: 38rem) {
   .button-group {
     align-items: center;
     flex-direction: row-reverse;

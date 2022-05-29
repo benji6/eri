@@ -12,7 +12,7 @@
   padding-inline: var(--space-1);
 }
 
-@media (min-width: 37rem) {
+@media (min-width: 38rem) {
   .pagination__button {
     padding-inline: var(--space-2);
   }

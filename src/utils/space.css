@@ -11,9 +11,9 @@
   --space-4: calc(var(--space-3) * var(--space-scale-ratio));
 }
 
-@media (min-width: 37rem) {
+@media (min-width: 38rem) {
   :root {
-    --break-point: 37rem;
+    --break-point: 38rem;
   }
 }
 
