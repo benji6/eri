@@ -192,7 +192,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-:is(input:not([type="checkbox"]), select, textarea) {
+:where(input:not([type="checkbox"]), select, textarea) {
   background-color: var(--color-ground-more);
   border-radius: var(--border-radius-1);
   border: var(--border-width-2) solid var(--color-figure-more);
@@ -201,18 +201,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transition-property: background-color, border, box-shadow;
 }
 
-:is(input:not([type="checkbox"]), select, textarea):focus {
+:where(input:not([type="checkbox"]), select, textarea):focus {
   border-color: var(--color-theme-less);
   box-shadow: var(--box-shadow-input-focus);
 }
 
 @media (hover: hover) {
-  :is(input:not([type="checkbox"]), select, textarea):hover {
+  :where(input:not([type="checkbox"]), select, textarea):hover {
     border-color: var(--color-theme-less);
   }
 }
 
-:is(input:not([type="checkbox"]), select, textarea)[aria-invalid="true"] {
+:where(input:not([type="checkbox"]), select, textarea)[aria-invalid="true"] {
   border-color: var(--color-negative);
   box-shadow: none;
 }
@@ -251,7 +251,7 @@ th {
   font-weight: var(--font-weight-bold);
 }
 
-:is(td, th):first-child {
+:where(td, th):first-child {
   text-align: start;
 }
 
