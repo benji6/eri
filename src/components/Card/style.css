@@ -17,11 +17,11 @@ button.card {
 
 button.card:hover {
   box-shadow: var(--box-shadow-even-2-no-color) var(--color);
-  transform: scale(1.01);
+  scale: 1.01;
 }
 
 button.card:active {
-  transform: scale(1);
+  scale: 1;
 }
 
 .card:nth-child(6n + 1) {
