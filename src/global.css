@@ -54,7 +54,7 @@ button {
 
 button {
   /* Includes transition properties used by other buttons */
-  transition-property: box-shadow, filter, opacity, scale;
+  transition-property: box-shadow, filter, opacity, transform;
 }
 button:active {
   filter: brightness(0.8) saturate(1.2);

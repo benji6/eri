@@ -5,7 +5,7 @@
   animation-delay: calc(
     var(--bar-number) / (var(--total-bars) - 1) * var(--time-2)
   );
-  scale: 1 0;
+  transform: scaleY(0);
 }
 
 .bars__bar--clickable {
@@ -18,6 +18,6 @@
 
 @keyframes bar-appear {
   to {
-    scale: 1;
+    transform: scaleY(1);
   }
 }

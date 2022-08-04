@@ -21,7 +21,7 @@
   content: "";
   display: block;
   height: var(--toggle-button-diameter);
-  transition-property: translate;
+  transition-property: transform;
   width: var(--toggle-button-diameter);
 }
 
@@ -38,7 +38,9 @@
 }
 
 .toggle__input:checked ~ .toggle__appearance::after {
-  translate: calc(var(--toggle-width) - var(--toggle-button-diameter));
+  transform: translateX(
+    calc(var(--toggle-width) - var(--toggle-button-diameter))
+  );
 }
 
 .toggle__input:focus ~ .toggle__appearance {

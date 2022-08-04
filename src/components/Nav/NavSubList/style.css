@@ -34,8 +34,8 @@
 }
 
 .nav-sub-list__icon {
-  transition: rotate var(--time-1) var(--easing-standard);
+  transition: transform var(--time-1) var(--easing-standard);
 }
 .nav-sub-list__icon--expanded {
-  rotate: -0.5turn;
+  transform: rotate(-0.5turn);
 }
