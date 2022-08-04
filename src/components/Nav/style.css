@@ -9,7 +9,8 @@
   position: fixed;
   right: 0;
   top: 0;
-  transition: transform var(--time-1) var(--easing-standard);
+  transition-duration: var(--time-1);
+  transition-property: translate;
   width: var(--nav-width);
 }
 
@@ -21,7 +22,7 @@
     padding-bottom: var(--space-3);
     right: initial;
     top: var(--header-height);
-    transform: none !important;
+    translate: 0 !important;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -33,7 +34,7 @@
 
 .nav--enter,
 .nav--exit-active {
-  transform: translateX(var(--nav-width));
+  translate: var(--nav-width);
   transition-timing-function: var(--easing-accelerate);
 }
 

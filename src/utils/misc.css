@@ -19,13 +19,13 @@ a,
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  transform: scale(10);
+  scale: 10;
   transition: opacity var(--time-2) var(--easing-standard),
-    transform var(--time-1) var(--easing-standard);
+    scale var(--time-1) var(--easing-standard);
 }
 
 .ripple:active::after {
   opacity: 0.25;
-  transform: scale(0);
+  scale: 0;
   transition: 0s;
 }

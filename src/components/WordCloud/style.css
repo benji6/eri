@@ -18,9 +18,7 @@
 
 @keyframes word-slide {
   from {
-    transform: translate(
-      calc((var(--aspect-ratio) / 2 - var(--word-x)) * 1px),
-      calc(0.5px - var(--word-y) * 1px)
-    );
+    translate: calc((var(--aspect-ratio) / 2 - var(--word-x)) * 1px)
+      calc(0.5px - var(--word-y) * 1px);
   }
 }
