@@ -19,7 +19,13 @@ export default function DialogDocs() {
           open={isDialogOpen}
           title="Test dialog"
         >
-          {LOREM_IPSUM}
+          <p>There is a lot of text here to test vertical overflow.</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
         </Dialog>
       </Paper>
     </Paper.Group>

@@ -38,7 +38,11 @@
 }
 
 .dialog__dialog {
+  --margin: var(--space-3);
+
   background-color: var(--color-ground);
-  margin: 0 var(--space-3);
+  margin: 0 var(--margin);
+  max-height: calc(100vh - 4 * var(--margin));
   max-width: var(--break-point);
+  overflow-y: auto;
 }
