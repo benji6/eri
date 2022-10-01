@@ -1,15 +1,20 @@
 import * as React from "react";
 import { Paper, WordCloud } from "../../../src";
+import { useEffect, useState } from "react";
 import ConfigurableExample from "./_ConfigurableExample";
 import { LOREM_IPSUM } from "../../constants";
 
 export default function WordCloudDocs() {
-  const wordSet = new Set(LOREM_IPSUM.replace(/[,.]/g, "").split(" "));
-  const words = {};
+  const [words, setWords] = useState({});
 
-  wordSet.forEach(
-    (word) => (words[word] = Math.floor(Math.random() ** 2 * 32))
-  );
+  useEffect(() => {
+    const wordSet = new Set(LOREM_IPSUM.replace(/[,.]/g, "").split(" "));
+    const newWords = {};
+    wordSet.forEach(
+      (word) => (newWords[word] = Math.floor(Math.random() ** 2 * 32))
+    );
+    setWords(newWords);
+  }, []);
 
   return (
     <Paper.Group>
