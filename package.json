@@ -45,7 +45,7 @@
     }
   },
   "dependencies": {
-    "react-transition-group": "^4.4.2"
+    "react-transition-group": "4.4.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.9",
