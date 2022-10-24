@@ -268,9 +268,8 @@ dialog {
   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   background-color: var(--color-ground);
   border: none;
-  max-height: calc(100vh - 4 * var(--space-3));
-  max-width: min(var(--break-point), calc(100vw - 4 * var(--space-3)));
-  padding: var(--space-3);
+  max-height: calc(100vh - 2 * var(--space-3));
+  max-width: min(var(--break-point), calc(100vw - 2 * var(--space-3)));
 }
 dialog[data-closing] {
   animation-name: fade-out, scale-out;

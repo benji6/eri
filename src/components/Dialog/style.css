@@ -1,3 +1,7 @@
+.dialog__container {
+  padding: var(--space-3);
+}
+
 .dialog__close-button-container {
   margin-top: calc(var(--space-1) * -1);
 }

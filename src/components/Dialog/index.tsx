@@ -50,7 +50,7 @@ export default function Dialog({
       {...rest}
       aria-describedby="dialog-desc"
       aria-labelledby="dialog-title"
-      className="br-1 bs-1"
+      className="br-1 bs-1 p-0"
       onClick={
         disableClose
           ? undefined
@@ -62,7 +62,7 @@ export default function Dialog({
     >
       {/* This div allows us to check the target on dialog click events (see above)
         and tells us whether the click was on the backdrop or not */}
-      <div>
+      <div className="dialog__container">
         <div className="dialog__header">
           <h3 id="dialog-title">{title}</h3>
           <div className="dialog__close-button-container">
