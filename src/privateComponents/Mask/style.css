@@ -1,3 +1,7 @@
+:root:has(.mask__mask--enter-done) {
+  overflow: hidden;
+}
+
 .mask__container {
   position: relative;
 }

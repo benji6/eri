@@ -16,14 +16,6 @@ export default function Mask({
   portalContainer,
   ...rest
 }: IProps) {
-  const [scrollY, setScrollY] = React.useState(0);
-
-  const openMask = () => {
-    setScrollY(window.scrollY);
-    document.documentElement.style.top = `${-window.scrollY}px`;
-    document.documentElement.classList.add("no-scroll");
-  };
-
   const handleKeyDown = React.useCallback(
     (e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>) => {
       if (open && onClose && e.code === "Escape") onClose();
@@ -32,27 +24,11 @@ export default function Mask({
   );
 
   React.useEffect(() => {
-    if (open) openMask();
-    return () => {
-      document.documentElement.classList.remove("no-scroll");
-    };
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  React.useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [handleKeyDown]);
-
-  React.useEffect(() => {
-    if (open) openMask();
-    else {
-      document.documentElement.classList.remove("no-scroll");
-      window.scrollTo(0, scrollY);
-      document.documentElement.style.removeProperty("top");
-    }
-  }, [open, scrollY]);
 
   if (!portalContainer) return null;
 
