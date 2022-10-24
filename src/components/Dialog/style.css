@@ -29,11 +29,11 @@
   justify-content: space-between;
 }
 
-.dialog__header > *:first-child {
+.dialog__header > :first-child {
   margin-top: 0;
 }
 
-.dialog__content > *:last-child {
+.dialog__content > :last-child {
   margin-bottom: 0;
 }
 

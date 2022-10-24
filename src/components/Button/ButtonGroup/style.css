@@ -4,7 +4,7 @@
   margin: var(--space-3) 0 var(--space-4);
 }
 
-.button-group > *:not(:last-child) {
+.button-group > :not(:last-child) {
   margin-bottom: var(--space-3);
 }
 
@@ -15,11 +15,11 @@
     justify-content: center;
   }
 
-  .button-group > *:not(:first-child) {
+  .button-group > :not(:first-child) {
     margin-right: var(--space-3);
   }
 
-  .button-group > *:not(:last-child) {
+  .button-group > :not(:last-child) {
     margin-bottom: unset;
   }
 }

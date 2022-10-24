@@ -45,36 +45,36 @@
   animation: var(--animation-slide-in);
   opacity: 0;
 }
-.slide-children-in > *:nth-child(2) {
+.slide-children-in > :nth-child(2) {
   animation-delay: var(--time-0);
 }
-.slide-children-in > *:nth-child(3) {
+.slide-children-in > :nth-child(3) {
   animation-delay: calc(var(--time-0) * 2);
 }
-.slide-children-in > *:nth-child(4) {
+.slide-children-in > :nth-child(4) {
   animation-delay: calc(var(--time-0) * 3);
 }
-.slide-children-in > *:nth-child(5) {
+.slide-children-in > :nth-child(5) {
   animation-delay: calc(var(--time-0) * 4);
 }
-.slide-children-in > *:nth-child(6) {
+.slide-children-in > :nth-child(6) {
   animation-delay: calc(var(--time-0) * 5);
 }
-.slide-children-in > *:nth-child(7) {
+.slide-children-in > :nth-child(7) {
   animation-delay: calc(var(--time-0) * 6);
 }
-.slide-children-in > *:nth-child(8) {
+.slide-children-in > :nth-child(8) {
   animation-delay: calc(var(--time-0) * 7);
 }
-.slide-children-in > *:nth-child(9) {
+.slide-children-in > :nth-child(9) {
   animation-delay: calc(var(--time-0) * 8);
 }
-.slide-children-in > *:nth-child(10) {
+.slide-children-in > :nth-child(10) {
   animation-delay: calc(var(--time-0) * 9);
 }
-.slide-children-in > *:nth-child(11) {
+.slide-children-in > :nth-child(11) {
   animation-delay: calc(var(--time-0) * 10);
 }
-.slide-children-in > *:nth-child(12) {
+.slide-children-in > :nth-child(12) {
   animation-delay: calc(var(--time-0) * 11);
 }
