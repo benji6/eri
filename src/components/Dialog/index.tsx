@@ -1,10 +1,8 @@
 import "./style.css";
 import * as React from "react";
-import { CSSTransition } from "react-transition-group";
+import * as ReactDOM from "react-dom";
 import CloseButton from "../../privateComponents/CloseButton";
-import Mask from "../../privateComponents/Mask";
 import { PORTAL_CONTAINERS } from "../../constants";
-import { getCssTime1 } from "../../utils/getCssVar";
 
 interface IProps {
   children: React.ReactNode;
@@ -22,47 +20,61 @@ export default function Dialog({
   title,
   ...rest
 }: IProps) {
-  return (
-    <Mask
-      onClose={disableClose ? undefined : onClose}
-      open={open}
-      portalContainer={PORTAL_CONTAINERS.dialog}
+  const dialogRef = React.useRef<HTMLDialogElement>(null);
+
+  const closeDialog = React.useCallback(() => {
+    if (!dialogRef.current) return;
+    dialogRef.current.setAttribute("data-closing", "");
+
+    dialogRef.current.addEventListener(
+      "animationend",
+      () => {
+        if (!dialogRef.current) return;
+        dialogRef.current.removeAttribute("data-closing");
+        dialogRef.current.close();
+        onClose();
+      },
+      { once: true }
+    );
+  }, [onClose]);
+
+  React.useEffect(() => {
+    if (!dialogRef.current || dialogRef.current.open === open) return;
+    if (open) return dialogRef.current.showModal();
+    closeDialog();
+  }, [closeDialog, open]);
+
+  return ReactDOM.createPortal(
+    /*eslint-disable-next-line jsx-a11y/click-events-have-key-events*/
+    <dialog
+      {...rest}
+      aria-describedby="dialog-desc"
+      aria-labelledby="dialog-title"
+      className="br-1 bs-1"
+      onClick={
+        disableClose
+          ? undefined
+          : (e) => {
+              if (e.target === dialogRef.current) closeDialog();
+            }
+      }
+      ref={dialogRef}
     >
-      <CSSTransition
-        classNames="dialog-"
-        in={open}
-        mountOnEnter
-        timeout={{ exit: getCssTime1() + 100 }}
-        unmountOnExit
-      >
-        {/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
-        <div
-          {...rest}
-          aria-describedby="dialog-desc"
-          aria-labelledby="dialog-title"
-          className="dialog"
-          onClick={disableClose ? undefined : onClose}
-          role="dialog"
-        >
-          <div
-            className="dialog__dialog br-1 bs-1 p-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div>
-              <div className="dialog__header">
-                <h3 id="dialog-title">{title}</h3>
-                <div className="dialog__close-button-container">
-                  <CloseButton
-                    disabled={disableClose || !open}
-                    onClick={onClose}
-                  />
-                </div>
-              </div>
-              <div id="dialog-desc">{children}</div>
-            </div>
+      {/* This div allows us to check the target on dialog click events (see above)
+        and tells us whether the click was on the backdrop or not */}
+      <div>
+        <div className="dialog__header">
+          <h3 id="dialog-title">{title}</h3>
+          <div className="dialog__close-button-container">
+            <CloseButton
+              disabled={disableClose || !open}
+              onClick={() => closeDialog()}
+            />
           </div>
         </div>
-      </CSSTransition>
-    </Mask>
+        <div id="dialog-desc">{children}</div>
+      </div>
+    </dialog>,
+    PORTAL_CONTAINERS.dialog!
   );
 }

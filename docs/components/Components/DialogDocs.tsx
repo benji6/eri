@@ -30,6 +30,7 @@ export default function DialogDocs() {
             <p>{LOREM_IPSUM}</p>
             <p>{LOREM_IPSUM}</p>
             <p>{LOREM_IPSUM}</p>
+            <p>{LOREM_IPSUM}</p>
           </details>
         </Dialog>
       </Paper>

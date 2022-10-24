@@ -258,3 +258,45 @@ th {
 tr:not(:last-child) td {
   border-bottom: var(--border-width-0) solid var(--color-figure-more);
 }
+
+/* TODO update hardcoded values to CSS custom properties.
+Values shared by ::backdrop have been hardcoded as CSS custom properties
+did not work in ::backdrop when I originally wrote this */
+dialog {
+  animation-duration: 0.3s;
+  animation-name: fade-in, scale-in;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  background-color: var(--color-ground);
+  border: none;
+  max-height: calc(100vh - 4 * var(--space-3));
+  max-width: min(var(--break-point), calc(100vw - 4 * var(--space-3)));
+  padding: var(--space-3);
+}
+dialog[data-closing] {
+  animation-name: fade-out, scale-out;
+}
+
+dialog::backdrop {
+  animation-duration: 0.3s;
+  animation-name: fade-in;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  backdrop-filter: blur(calc(1em / 3));
+  background: linear-gradient(
+    calc(21turn / 32),
+    hsla(210, 25%, 15%, 0.75),
+    hsla(210, 25%, 10%, 0.75)
+  );
+  transition: opacity 0.3s var(--easing-decelerate);
+}
+dialog[data-closing]::backdrop {
+  animation-name: fade-out;
+}
+@media (prefers-color-scheme: dark) {
+  dialog::backdrop {
+    background: linear-gradient(
+      calc(21turn / 32),
+      hsla(310, 25%, 25%, 0.75),
+      hsla(310, 25%, 20%, 0.75)
+    );
+  }
+}

@@ -1,26 +1,5 @@
-.dialog {
-  --content-vertical-padding: var(--space-1);
-
-  align-items: center;
-  display: flex;
-  inset: 0;
-  justify-content: center;
-  position: fixed;
-  transition-duration: var(--time-1);
-  transition-property: opacity, scale;
-  transition-timing-function: var(--easing-decelerate);
-}
-
-.dialog--enter,
-.dialog--exit-active {
-  opacity: 0;
-  pointer-events: none;
-  scale: 0.9;
-  transition-timing-function: var(--easing-accelerate);
-}
-
 .dialog__close-button-container {
-  margin-top: calc(var(--content-vertical-padding) * -1);
+  margin-top: calc(var(--space-1) * -1);
 }
 
 .dialog__header {
@@ -35,14 +14,4 @@
 
 .dialog__content > :last-child {
   margin-bottom: 0;
-}
-
-.dialog__dialog {
-  --margin: var(--space-3);
-
-  background-color: var(--color-ground);
-  margin: 0 var(--margin);
-  max-height: calc(100vh - 4 * var(--margin));
-  max-width: var(--break-point);
-  overflow-y: auto;
 }

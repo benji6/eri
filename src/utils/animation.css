@@ -19,10 +19,35 @@
     opacity: 1;
   }
 }
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 @keyframes rotate {
   to {
     rotate: 1turn;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    scale: 0.9;
+  }
+  to {
+    scale: 1;
+  }
+}
+@keyframes scale-out {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0.9;
   }
 }
 
