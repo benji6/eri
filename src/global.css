@@ -268,6 +268,7 @@ dialog {
   animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   background-color: var(--color-ground);
   border: none;
+  color: inherit;
   max-height: calc(100vh - 2 * var(--space-3));
   max-width: min(var(--break-point), calc(100vw - 2 * var(--space-3)));
 }
@@ -294,8 +295,8 @@ dialog[data-closing]::backdrop {
   dialog::backdrop {
     background: linear-gradient(
       calc(21turn / 32),
-      hsla(310, 25%, 25%, 0.75),
-      hsla(310, 25%, 20%, 0.75)
+      hsla(210, 25%, 25%, 0.75),
+      hsla(210, 25%, 20%, 0.75)
     );
   }
 }
