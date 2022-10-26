@@ -23,6 +23,12 @@ export const iconNameMap = {
   ),
   check: <polyline points="20 6 9 17 4 12" />,
   cloud: <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />,
+  compass: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+    </>
+  ),
   copy: (
     <>
       <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
@@ -52,6 +58,13 @@ export const iconNameMap = {
       <line x1="12" y1="21" x2="12" y2="23" />
       <line x1="12" y1="15" x2="12" y2="17" />
       <path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25" />
+    </>
+  ),
+  droplet: <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />,
+  eye: (
+    <>
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+      <circle cx="12" cy="12" r="3" />
     </>
   ),
   help: (
@@ -179,7 +192,37 @@ export const iconNameMap = {
       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
     </>
   ),
+  sunrise: (
+    <>
+      <path d="M17 18a5 5 0 0 0-10 0" />
+      <line x1="12" y1="2" x2="12" y2="9" />
+      <line x1="4.22" y1="10.22" x2="5.64" y2="11.64" />
+      <line x1="1" y1="18" x2="3" y2="18" />
+      <line x1="21" y1="18" x2="23" y2="18" />
+      <line x1="18.36" y1="11.64" x2="19.78" y2="10.22" />
+      <line x1="23" y1="22" x2="1" y2="22" />
+      <polyline points="8 6 12 2 16 6" />
+    </>
+  ),
+  sunset: (
+    <>
+      <path d="M17 18a5 5 0 0 0-10 0" />
+      <line x1="12" y1="9" x2="12" y2="2" />
+      <line x1="4.22" y1="10.22" x2="5.64" y2="11.64" />
+      <line x1="1" y1="18" x2="3" y2="18" />
+      <line x1="21" y1="18" x2="23" y2="18" />
+      <line x1="18.36" y1="11.64" x2="19.78" y2="10.22" />
+      <line x1="23" y1="22" x2="1" y2="22" />
+      <polyline points="16 5 12 9 8 5" />
+    </>
+  ),
+  thermometer: (
+    <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
+  ),
   up: <polyline points="18 15 12 9 6 15" />,
+  wind: (
+    <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" />
+  ),
 };
 
 export interface IProps extends React.SVGProps<SVGSVGElement> {
