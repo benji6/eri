@@ -26,9 +26,20 @@ export default function IconDocs() {
           <a href="https://feathericons.com/">Feather</a>
         </p>
         <hr />
-        {ICON_NAMES.map((name) => (
-          <Icon draw key={name} name={name} size="2" />
-        ))}
+        <div
+          style={{
+            display: "grid",
+            gap: "var(--space-0)",
+            gridTemplateColumns: "repeat(auto-fit, minmax(8em, 1fr))",
+          }}
+        >
+          {ICON_NAMES.map((name) => (
+            <div key={name}>
+              <Icon draw key={name} margin="end" name={name} />
+              {name}
+            </div>
+          ))}
+        </div>
         <hr />
         <p>
           <Icon draw margin="end" name="help" />
