@@ -13,7 +13,7 @@
     "build:js:compile:cjs": "tsc",
     "build:js:compile:esm": "tsc -m es6 --outDir esm",
     "fmt": "npm run test:lint:css --fix && npm run test:lint:scripts --fix && prettier --write '**/*'",
-    "start": "parcel --open --target styleguide",
+    "start": "parcel --open -p 1235 --target styleguide",
     "style-guide:build": "rm -rf build && parcel build --no-source-maps --target styleguide",
     "test": "run-p test:*",
     "test:audit": "npm audit --audit-level=low",
