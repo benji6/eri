@@ -21,6 +21,9 @@
   margin: auto;
 }
 
+.spinner--margin-false {
+  margin-block: 0;
+}
 .spinner--margin-start {
   margin-inline-start: var(--space-0);
 }
