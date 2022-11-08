@@ -2,5 +2,12 @@
   display: grid;
   grid-gap: var(--space-2);
   overflow: hidden; /* prevents scrollbar issues on sliding transitions */
-  width: min(calc(100vw - 2 * var(--space-2)), var(--break-point));
+  padding-block: var(--space-3);
+}
+
+@media (min-width: 38rem) {
+  .paper-group {
+    padding-inline: var(--space-3);
+    width: var(--break-point);
+  }
 }

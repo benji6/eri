@@ -10,7 +10,7 @@ export default function PaperGroup({ noSlide, ...rest }: PaperGroupProps) {
     <div
       {...rest}
       // padding used because margin cuts off the paper box-shadow
-      className={`paper-group p-3${noSlide ? "" : " slide-children-in"}`}
+      className={`paper-group ${noSlide ? "" : " slide-children-in"}`}
     />
   );
 }
