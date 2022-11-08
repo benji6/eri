@@ -1,4 +1,6 @@
-:root:has(.mask__mask--enter-done) {
+/* TODO remove below stylelint comment when stylelint supports :modal */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:root:is(:has(.mask__mask--enter-done), :has(:modal)) {
   overflow: hidden;
 }
 

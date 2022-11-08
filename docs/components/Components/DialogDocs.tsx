@@ -11,6 +11,19 @@ export default function DialogDocs() {
     <Paper.Group>
       <Paper>
         <h2>Dialog</h2>
+        <details>
+          <summary>
+            Expand to view a lot of text to test how scrolling is impacted by
+            opening and closing the dialog
+          </summary>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+          <p>{LOREM_IPSUM}</p>
+        </details>
         <Button.Group>
           <Button onClick={handleDialogOpen}>Open dialog</Button>
         </Button.Group>
