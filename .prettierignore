@@ -1,13 +1,4 @@
 .parcel-cache
-*.*ignore
-*.*rc
-*.html
-*.jpg
-*.lock
-*.log
-*.svg
-*.toml
 build
 dist
 esm
-LICENSE
