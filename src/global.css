@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Mona Sans";
+  src: url("Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+}
+
 * {
   transition-duration: var(--time-0);
   transition-timing-function: var(--easing-standard);
@@ -13,7 +19,7 @@ html {
   background-color: var(--color-ground);
   border-color: var(--color-figure-more);
   color: var(--color-figure);
-  font-family: "Public Sans", sans-serif;
+  font-family: "Mona Sans", sans-serif;
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height);
   min-height: 100%;

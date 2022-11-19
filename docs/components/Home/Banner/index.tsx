@@ -10,7 +10,7 @@ export default function Banner() {
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth=".75"
+        strokeWidth=".8"
         viewBox="0 0 8 8"
       >
         <line x1="1.5" y1="4" x2="1.5" y2="1.5" />

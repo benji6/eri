@@ -51,11 +51,10 @@ export default function Home() {
           which can be found at <code>eri/dist/index.css</code>.
         </p>
         <p>
-          To get the font working you should include the following tags in your
-          HTML page:
+          To preload the font and reduce CLS you should include the following
+          tag in the <code>head</code> of your HTML page:
         </p>
-        <CodeSnippet language="html">{`<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">`}</CodeSnippet>
+        <CodeSnippet language="html">{`<link as="font" href="eri/dist/Mona-Sans.woff2" rel="preload" type="font/woff2"/>`}</CodeSnippet>
         <p>
           You&apos;re now good to go! Eri comes bundled with some global styles.
           Be sure to use semantic markup and things should generally work as
