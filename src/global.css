@@ -1,7 +1,8 @@
 @font-face {
+  font-display: swap;
   font-family: "Mona Sans";
-  src: url("Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200 900;
+  src: url("Mona-Sans.woff2") format("woff2-variations");
 }
 
 * {
