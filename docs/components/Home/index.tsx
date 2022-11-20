@@ -54,7 +54,7 @@ export default function Home() {
           To preload the font and reduce CLS you should include the following
           tag in the <code>head</code> of your HTML page:
         </p>
-        <CodeSnippet language="html">{`<link as="font" href="eri/dist/Mona-Sans.woff2" rel="preload" type="font/woff2"/>`}</CodeSnippet>
+        <CodeSnippet language="html">{`<link as="font" crossorigin href="eri/dist/Mona-Sans.woff2" rel="preload" type="font/woff2"/>`}</CodeSnippet>
         <p>
           You&apos;re now good to go! Eri comes bundled with some global styles.
           Be sure to use semantic markup and things should generally work as
