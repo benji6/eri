@@ -109,7 +109,7 @@ export default function WordCloud({ words, ...rest }: IProps) {
       // bigger than the text they contain
       unplacedWords.push({
         fontSize,
-        height: height * 0.8,
+        height,
         weighting,
         width,
         word,
