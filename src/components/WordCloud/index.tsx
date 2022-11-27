@@ -1,6 +1,5 @@
 import "./style.css";
 import * as React from "react";
-import { HIGHLIGHT_COLOR_COUNT } from "../../constants";
 
 const XMLNS = "http://www.w3.org/2000/svg";
 
@@ -22,12 +21,6 @@ interface IRect {
   height: number;
   width: number;
 }
-
-const stringToColorIndex = (s: string): number => {
-  let total = 0;
-  for (let i = 0; i < s.length; i++) total += s.charCodeAt(i);
-  return total % HIGHLIGHT_COLOR_COUNT;
-};
 
 const getRange = (xs: number[]): [min: number, max: number] => {
   let min = Infinity;
@@ -173,7 +166,6 @@ export default function WordCloud({ words, ...rest }: IProps) {
           <text
             className="fade-in word-cloud__word"
             dy={fontSize * 0.3}
-            fill={`var(--color-highlight-${stringToColorIndex(word)})`}
             fontSize={fontSize}
             key={word}
             style={

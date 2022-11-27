@@ -22,3 +22,22 @@
       calc(0.5px - var(--word-y) * 1px);
   }
 }
+
+.word-cloud__word:nth-child(6n + 1) {
+  fill: var(--color-highlight-0);
+}
+.word-cloud__word:nth-child(6n + 2) {
+  fill: var(--color-highlight-1);
+}
+.word-cloud__word:nth-child(6n + 3) {
+  fill: var(--color-highlight-2);
+}
+.word-cloud__word:nth-child(6n + 4) {
+  fill: var(--color-highlight-3);
+}
+.word-cloud__word:nth-child(6n + 5) {
+  fill: var(--color-highlight-4);
+}
+.word-cloud__word:nth-child(6n + 6) {
+  fill: var(--color-highlight-5);
+}

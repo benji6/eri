@@ -1,8 +1,5 @@
 import "./portals.css";
 
-// The number of highlight colors defined in CSS
-export const HIGHLIGHT_COLOR_COUNT = 6;
-
 function createPortalContainer(id?: string): HTMLDivElement | undefined {
   if (typeof document === "undefined") return;
   const container = document.createElement("div");
