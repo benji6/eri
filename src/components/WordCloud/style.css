@@ -13,7 +13,6 @@
   animation-delay: calc(
     var(--word-number) / (var(--total-words) - 1) * var(--time-2)
   );
-  opacity: 0;
 }
 
 @keyframes word-slide {
