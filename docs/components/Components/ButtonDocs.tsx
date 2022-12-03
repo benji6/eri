@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Button, Paper } from "../../../src";
 import ConfigurableExample, {
   PropControlBoolean,
@@ -6,9 +5,10 @@ import ConfigurableExample, {
   PropControlString,
 } from "./_ConfigurableExample";
 import { IProps } from "../../../src/components/Button";
+import { useState } from "react";
 
 export default function ButtonDocs() {
-  const [props, setProps] = React.useState<IProps>({
+  const [props, setProps] = useState<IProps>({
     children: "Click me!",
     danger: false,
     disabled: false,

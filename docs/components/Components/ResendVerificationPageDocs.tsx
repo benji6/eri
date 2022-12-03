@@ -1,4 +1,3 @@
-import * as React from "react";
 import { ResendVerificationPage } from "../../../src";
 
 export default function ResendVerificationPageDocs() {

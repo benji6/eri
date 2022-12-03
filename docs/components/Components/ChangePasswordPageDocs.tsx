@@ -1,4 +1,3 @@
-import * as React from "react";
 import { ChangePasswordPage } from "../../../src";
 
 export default function ChangePasswordPageDocs() {

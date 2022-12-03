@@ -1,13 +1,13 @@
-import * as React from "react";
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlString,
 } from "./_ConfigurableExample";
 import { Paper, RadioButton } from "../../../src";
 import { IProps } from "../../../src/components/RadioButton/RadioButtonGroup";
+import { useState } from "react";
 
 export default function RadioButtonDocs() {
-  const [props, setProps] = React.useState<Omit<IProps, "children">>({
+  const [props, setProps] = useState<Omit<IProps, "children">>({
     disabled: false,
     error: "",
     label: "Field label",

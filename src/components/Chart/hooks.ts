@@ -1,4 +1,3 @@
-import * as React from "react";
 import { CHART_ASPECT_RATIO, MARGIN_RIGHT, MARGIN_TOP } from "./constants";
 import {
   DomainContext,
@@ -8,14 +7,15 @@ import {
 } from "./contexts";
 import { computeMarginBottom, computeMarginLeft } from "./utils";
 import { TPoint } from "./LineChart/types";
+import { useContext } from "react";
 
 export const useMarginBottom = (): number => {
-  const xAxisTitle = React.useContext(XAxisTitleContext);
+  const xAxisTitle = useContext(XAxisTitleContext);
   return computeMarginBottom(xAxisTitle);
 };
 
 export const useMarginLeft = (): number => {
-  const yAxisTitle = React.useContext(YAxisTitleContext);
+  const yAxisTitle = useContext(YAxisTitleContext);
   return computeMarginLeft(yAxisTitle);
 };
 
@@ -32,8 +32,8 @@ export const usePlotAreaWidth = (): number => {
 export const useTransformBarsToPlotArea = (
   data: [x: number, y: number | undefined][]
 ): [x: number, y: number | undefined][] => {
-  const domain = React.useContext(DomainContext);
-  const range = React.useContext(RangeContext);
+  const domain = useContext(DomainContext);
+  const range = useContext(RangeContext);
   const marginBottom = useMarginBottom();
   const marginLeft = useMarginLeft();
   const plotAreaHeight = usePlotAreaHeight();

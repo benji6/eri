@@ -1,5 +1,4 @@
 import "./style.css";
-import * as React from "react";
 
 export default function Banner() {
   return (

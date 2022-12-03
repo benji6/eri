@@ -1,10 +1,10 @@
-import * as React from "react";
 import ConfigurableExample, { PropControlNumber } from "./_ConfigurableExample";
 import { Pagination, Paper } from "../../../src";
 import { IProps } from "../../../src/components/Pagination";
+import { useState } from "react";
 
 export default function PaginationDocs() {
-  const [childProps, setChildProps] = React.useState<IProps>({
+  const [childProps, setChildProps] = useState<IProps>({
     onChange(page) {
       setChildProps((currentProps) => ({ ...currentProps, page }));
     },

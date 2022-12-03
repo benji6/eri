@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { SignUpPage } from "../../../src";
 
 export default function SignUpPageDocs() {

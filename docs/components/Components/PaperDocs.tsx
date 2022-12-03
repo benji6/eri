@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Paper } from "../../../src";
 
 export default function PaperDocs() {

@@ -1,13 +1,13 @@
-import * as React from "react";
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlString,
 } from "./_ConfigurableExample";
 import { Paper, Toggle } from "../../../src";
 import { IProps } from "../../../src/components/Toggle";
+import { useState } from "react";
 
 export default function ToggleDocs() {
-  const [props, setProps] = React.useState<IProps>({
+  const [props, setProps] = useState<IProps>({
     disabled: false,
     error: "",
     label: "Field label",

@@ -1,12 +1,12 @@
-import * as React from "react";
 import { Icon, Paper, QuickNav, RadioButton } from "../../../src";
 import { ICON_NAMES } from "../../constants";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const MAX_LINKS = 4;
 
 export default function QuickNavDocs() {
-  const [linkCount, setLinkCount] = React.useState(MAX_LINKS);
+  const [linkCount, setLinkCount] = useState(MAX_LINKS);
 
   return (
     <Paper.Group>

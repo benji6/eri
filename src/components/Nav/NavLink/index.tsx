@@ -1,5 +1,4 @@
 import "./style.css";
-import * as React from "react";
 import { NavLinkProps, NavLink as ReactRouterNavLink } from "react-router-dom";
 
 export default function NavLink({ to, ...rest }: NavLinkProps) {

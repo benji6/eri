@@ -1,4 +1,3 @@
-import * as React from "react";
 import BorderRadius from "./BorderRadius";
 import BoxShadow from "./BoxShadow";
 import Color from "./Color";

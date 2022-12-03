@@ -1,9 +1,9 @@
-import * as React from "react";
 import { Button, Dialog, Paper } from "../../../src";
 import { LOREM_IPSUM } from "../../constants";
+import { useState } from "react";
 
 export default function DialogDocs() {
-  const [isDialogOpen, setIsDialogOpen] = React.useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const handleDialogClose = () => setIsDialogOpen(false);
   const handleDialogOpen = () => setIsDialogOpen(true);
 

@@ -1,10 +1,10 @@
-import * as React from "react";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
 import { Paper, ShareButton } from "../../../src";
 import { IProps } from "../../../src/components/ShareButton";
+import { useState } from "react";
 
 export default function ShareButtonDocs() {
-  const [props, setProps] = React.useState<IProps>({
+  const [props, setProps] = useState<IProps>({
     text: "Example text",
     title: document.title,
     url: location.origin,

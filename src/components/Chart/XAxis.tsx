@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   AXIS_MARKER_LENGTH,
   CHART_ASPECT_RATIO,
@@ -9,6 +8,7 @@ import {
 import { useMarginBottom, useMarginLeft } from "./hooks";
 import { DomainContext } from "./contexts";
 import { TLabel } from "./types";
+import { useContext } from "react";
 
 const transformX = (
   domain: [number, number],
@@ -26,7 +26,7 @@ interface IProps {
 }
 
 export default function XAxis({ labels, markers }: IProps) {
-  const domain = React.useContext(DomainContext);
+  const domain = useContext(DomainContext);
   const marginBottom = useMarginBottom();
   const marginLeft = useMarginLeft();
   const markerCoordinates =

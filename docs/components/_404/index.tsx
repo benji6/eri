@@ -1,11 +1,11 @@
-import * as React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function _404() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  React.useEffect(() => {
+  useEffect(() => {
     switch (location.pathname) {
       case "/forgot-password":
       case "/resend-verification":

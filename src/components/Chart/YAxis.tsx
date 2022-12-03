@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   AXIS_MARKER_LENGTH,
   FONT_SIZE,
@@ -8,6 +7,7 @@ import {
 import { useMarginLeft, usePlotAreaHeight } from "./hooks";
 import { RangeContext } from "./contexts";
 import { TLabel } from "./types";
+import { useContext } from "react";
 
 const transformY = (
   range: [number, number],
@@ -23,7 +23,7 @@ interface IProps {
 }
 
 export default function YAxis({ labels, markers }: IProps) {
-  const range = React.useContext(RangeContext);
+  const range = useContext(RangeContext);
   const marginLeft = useMarginLeft();
   const plotAreaHeight = usePlotAreaHeight();
   const markerCoordinates =

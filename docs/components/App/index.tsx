@@ -1,16 +1,16 @@
 import "./style.css";
-import * as React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { Header, Nav } from "../../../src";
+import { StrictMode, useState } from "react";
 import Routes from "../Routes";
 
 export default function App() {
-  const [isNavOpen, setIsNavOpen] = React.useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const handleNavClose = () => setIsNavOpen(false);
   const handleNavOpen = () => setIsNavOpen(true);
 
   return (
-    <React.StrictMode>
+    <StrictMode>
       <BrowserRouter>
         <Header>
           <h1>
@@ -150,6 +150,6 @@ export default function App() {
           <Routes />
         </main>
       </BrowserRouter>
-    </React.StrictMode>
+    </StrictMode>
   );
 }

@@ -1,13 +1,13 @@
-import * as React from "react";
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlString,
 } from "./_ConfigurableExample";
 import { Paper, TextField } from "../../../src";
 import { IProps } from "../../../src/components/TextField";
+import { useState } from "react";
 
 export default function TextFieldDocs() {
-  const [props, setProps] = React.useState<IProps>({
+  const [props, setProps] = useState<IProps>({
     error: "",
     label: "Field label",
     optional: false,

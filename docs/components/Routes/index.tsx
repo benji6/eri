@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Routes as ReactRouterRoutes, Route } from "react-router-dom";
 import BarChartDocs from "../Components/BarChartDocs";
 import ButtonDocs from "../Components/ButtonDocs";

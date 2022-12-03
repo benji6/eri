@@ -1,4 +1,3 @@
-import * as React from "react";
 import { IProps } from "../TextField";
 import { TextField } from "../..";
 

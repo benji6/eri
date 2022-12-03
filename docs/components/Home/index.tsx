@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Paper, ShareButton } from "../../../src";
 import Banner from "./Banner";
 import CodeSnippet from "../Components/_CodeSnippet";

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { ResetPasswordPage } from "../../../src";
 
 export default function ResetPasswordPageDocs() {

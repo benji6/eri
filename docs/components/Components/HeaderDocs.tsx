@@ -1,10 +1,10 @@
-import * as React from "react";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
 import { Header, Nav, Paper } from "../../../src";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function HeaderDocs() {
-  const [props, setProps] = React.useState({
+  const [props, setProps] = useState({
     title: "Eri",
   });
 

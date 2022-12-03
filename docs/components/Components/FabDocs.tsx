@@ -1,13 +1,13 @@
-import * as React from "react";
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlString,
 } from "./_ConfigurableExample";
 import { Fab, Icon, Paper } from "../../../src";
 import { IProps } from "../../../src/components/Fab";
+import { useState } from "react";
 
 export default function FabDocs() {
-  const [props, setProps] = React.useState<IProps>({
+  const [props, setProps] = useState<IProps>({
     children: "Add widget",
     hide: false,
   });

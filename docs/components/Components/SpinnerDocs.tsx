@@ -1,13 +1,13 @@
-import * as React from "react";
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlEnum,
 } from "./_ConfigurableExample";
 import { Paper, Spinner } from "../../../src";
 import { IProps } from "../../../src/components/Spinner";
+import { useState } from "react";
 
 export default function SpinnerDocs() {
-  const [props, setProps] = React.useState<IProps>({
+  const [props, setProps] = useState<IProps>({
     inline: false,
     margin: undefined,
   });

@@ -1,13 +1,13 @@
-import * as React from "react";
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlString,
 } from "./_ConfigurableExample";
 import { CurrencyField, Paper } from "../../../src";
 import { IProps } from "../../../src/components/CurrencyField";
+import { useState } from "react";
 
 export default function CurrencyFieldDocs() {
-  const [props, setProps] = React.useState<IProps>({
+  const [props, setProps] = useState<IProps>({
     error: "",
     integer: false,
     label: "Field label",

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { ComboBox, Paper } from "../../../src";
 import ConfigurableExample, {
   PropControlBoolean,
@@ -6,9 +5,10 @@ import ConfigurableExample, {
 } from "./_ConfigurableExample";
 import { IProps } from "../../../src/components/ComboBox";
 import { POKEMON_NAMES } from "../../constants";
+import { useState } from "react";
 
 export default function ComboBoxDocs() {
-  const [props, setProps] = React.useState<IProps>({
+  const [props, setProps] = useState<IProps>({
     error: "",
     label: "Field label",
     optional: false,

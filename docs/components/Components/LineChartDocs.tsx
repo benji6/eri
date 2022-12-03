@@ -1,8 +1,7 @@
-import * as React from "react";
 import { Chart, Paper } from "../../../src";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
-
 import { TPoint } from "../../../src/components/Chart/LineChart/types";
+import { useState } from "react";
 
 const POINTS_COUNT = 8;
 const DOMAIN: [number, number] = [0, 10];
@@ -19,7 +18,7 @@ export default function LineChartDocs() {
     return [y, String(y)];
   });
 
-  const [props, setProps] = React.useState<{
+  const [props, setProps] = useState<{
     data: TPoint[];
     trendlinePoints: TPoint[];
     xAxisTitle?: string;

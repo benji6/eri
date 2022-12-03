@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Paper, SubHeading } from "../../../src";
 import { LOREM_IPSUM } from "../../constants";
 

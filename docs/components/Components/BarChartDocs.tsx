@@ -1,15 +1,15 @@
-import * as React from "react";
 import { Chart, Paper } from "../../../src";
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlString,
 } from "./_ConfigurableExample";
+import { useState } from "react";
 
 const DATA_COUNT = 8;
 const RANGE: [number, number] = [0, 10];
 
 export default function BarChartDocs() {
-  const [props, setProps] = React.useState<{
+  const [props, setProps] = useState<{
     data: (number | undefined)[];
     onClick: boolean;
     xAxisTitle?: string;

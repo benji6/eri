@@ -1,5 +1,4 @@
 import "./style.css";
-import * as React from "react";
 import Icon from "../Icon";
 
 const maxPageButtons = 5;

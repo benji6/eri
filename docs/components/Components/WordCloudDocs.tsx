@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Paper, WordCloud } from "../../../src";
 import { useEffect, useState } from "react";
 import ConfigurableExample from "./_ConfigurableExample";

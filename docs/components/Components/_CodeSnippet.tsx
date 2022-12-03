@@ -1,6 +1,5 @@
 import "./_code-snippet.css";
 import "./_highlight.js.css";
-import * as React from "react";
 import hljs from "highlight.js";
 
 interface IProps {

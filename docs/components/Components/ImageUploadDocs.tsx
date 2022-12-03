@@ -1,13 +1,13 @@
-import * as React from "react";
 import ConfigurableExample, {
   PropControlBoolean,
   PropControlString,
 } from "./_ConfigurableExample";
 import { ImageUpload, Paper } from "../../../src";
 import { IProps } from "../../../src/components/ImageUpload";
+import { useState } from "react";
 
 export default function ImageUploadDocs() {
-  const [props, setProps] = React.useState<IProps>({
+  const [props, setProps] = useState<IProps>({
     error: "",
     label: "Field label",
     optional: false,

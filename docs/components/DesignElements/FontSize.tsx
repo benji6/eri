@@ -1,4 +1,3 @@
-import * as React from "react";
 import CodeSnippet from "../Components/_CodeSnippet";
 
 interface IProps {
