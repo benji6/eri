@@ -3,10 +3,10 @@
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "module": "CommonJS",
+    "module": "ES2020",
     "moduleResolution": "node",
     "noUnusedLocals": true,
-    "outDir": "dist",
+    "outDir": "esm",
     "strict": true,
     "target": "ES2021"
   },
