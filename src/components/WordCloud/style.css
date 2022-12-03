@@ -8,11 +8,6 @@
   animation-duration: var(--time-2);
   animation-timing-function: var(--easing-standard);
   animation-fill-mode: forwards;
-
-  /* --word-number and --total-words set by JS */
-  animation-delay: calc(
-    var(--word-number) / (var(--total-words) - 1) * var(--time-2)
-  );
 }
 
 @keyframes word-slide {
