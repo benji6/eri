@@ -23,22 +23,18 @@ const removeLines = (f) => (definition) =>
     .filter((line) => !f(line.trim()))
     .join("\n");
 
+const removeCssImportLines = removeLines(
+  (trimmedLine) =>
+    trimmedLine.startsWith("import") && trimmedLine.endsWith('.css";')
+);
+
 const recursiveMapOverDefinitionFiles =
   recursiveMapOverFilesByExtension("d.ts");
 
-const recursiveRemoveDefinitionCssImports = recursiveMapOverDefinitionFiles(
-  removeLines(
-    (trimmedLine) =>
-      trimmedLine.startsWith("import") && trimmedLine.endsWith('.css";')
-  )
-);
+const recursiveRemoveDefinitionCssImports =
+  recursiveMapOverDefinitionFiles(removeCssImportLines);
 recursiveRemoveDefinitionCssImports(distPath);
 
 const recursiveMapOverJsFiles = recursiveMapOverFilesByExtension("js");
 
-recursiveMapOverJsFiles(
-  removeLines(
-    (trimmedLine) =>
-      trimmedLine.startsWith('require("') && trimmedLine.endsWith('.css");')
-  )
-)(distPath);
+recursiveMapOverJsFiles(removeCssImportLines)(distPath);
