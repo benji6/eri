@@ -1,0 +1,30 @@
+.word-cloud__word {
+  animation-name: word-slide;
+  animation-duration: var(--time-2);
+  animation-timing-function: var(--easing-standard);
+}
+
+@keyframes word-slide {
+  from {
+    translate: var(--word-from-x) var(--word-from-y);
+  }
+}
+
+.word-cloud__word-container:nth-child(6n + 1) {
+  fill: var(--color-highlight-0);
+}
+.word-cloud__word-container:nth-child(6n + 2) {
+  fill: var(--color-highlight-1);
+}
+.word-cloud__word-container:nth-child(6n + 3) {
+  fill: var(--color-highlight-2);
+}
+.word-cloud__word-container:nth-child(6n + 4) {
+  fill: var(--color-highlight-3);
+}
+.word-cloud__word-container:nth-child(6n + 5) {
+  fill: var(--color-highlight-4);
+}
+.word-cloud__word-container:nth-child(6n + 6) {
+  fill: var(--color-highlight-5);
+}

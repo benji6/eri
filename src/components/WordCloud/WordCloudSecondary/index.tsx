@@ -1,11 +1,10 @@
 import "./style.css";
 import * as React from "react";
+import { SVG_ASPECT_RATIO } from "../constants";
 
 const XMLNS = "http://www.w3.org/2000/svg";
 
-// If you change this then update the value of --aspect-ratio in the CSS
-const ASPECT_RATIO = 5 / 3;
-const MAX_RADIUS = Math.hypot(ASPECT_RATIO / 2, 0.5);
+const MAX_RADIUS = Math.hypot(SVG_ASPECT_RATIO / 2, 0.5);
 const MIN_FONT_SIZE = 0.025;
 const FONT_SIZE_RANGE = 0.125;
 
@@ -41,13 +40,13 @@ const checkIfRectanglesIntersect = (rectA: IRect, rectB: IRect): boolean =>
 
 const checkIfRectangleNotContained = (rect: IRect) =>
   rect.x < rect.width / 2 ||
-  rect.x > ASPECT_RATIO - rect.width / 2 ||
+  rect.x > SVG_ASPECT_RATIO - rect.width / 2 ||
   rect.y < rect.height / 2 ||
   rect.y > 1 - rect.height / 2;
 
 const archimedeanSpiral = (theta: number): [x: number, y: number] => {
   const r = 0.001 * theta;
-  return [r * Math.cos(theta) * ASPECT_RATIO, r * Math.sin(theta)];
+  return [r * Math.cos(theta) * SVG_ASPECT_RATIO, r * Math.sin(theta)];
 };
 
 export interface IProps extends React.SVGProps<SVGSVGElement> {
@@ -113,7 +112,7 @@ export default function WordCloudSecondary({ words, ...rest }: IProps) {
       totalArea += height * width;
     }
 
-    const wordSpaceUsage = totalArea / ASPECT_RATIO;
+    const wordSpaceUsage = totalArea / SVG_ASPECT_RATIO;
     const adjustmentRatio = Math.sqrt(
       OPTIMAL_WORD_SPACE_USAGE / wordSpaceUsage
     );
@@ -134,7 +133,7 @@ export default function WordCloudSecondary({ words, ...rest }: IProps) {
       do {
         const [x, y] = archimedeanSpiral(theta);
         if (Math.hypot(x, y) > MAX_RADIUS) shouldPlaceWord = false;
-        word.x = (x + 0.5) * ASPECT_RATIO;
+        word.x = (x + 0.5) * SVG_ASPECT_RATIO;
         word.y = y + 0.5;
 
         theta += 0.2;
@@ -154,15 +153,15 @@ export default function WordCloudSecondary({ words, ...rest }: IProps) {
   return (
     <svg
       {...rest}
-      className="word-cloud"
+      className="word-cloud-secondary"
       ref={svgRef}
-      viewBox={`0 0 ${ASPECT_RATIO} 1`}
+      viewBox={`0 0 ${SVG_ASPECT_RATIO} 1`}
       width="100%"
     >
       <g style={{ "--total-words": renderData.length } as React.CSSProperties}>
         {renderData.map(({ fontSize, weighting, word, x, y }) => (
           <text
-            className="fade-in word-cloud__word"
+            className="fade-in word-cloud-secondary__word"
             dy={fontSize * 0.3}
             fontSize={fontSize}
             key={word}

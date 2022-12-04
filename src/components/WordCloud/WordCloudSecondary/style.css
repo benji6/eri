@@ -1,37 +1,42 @@
-.word-cloud {
+.word-cloud-secondary {
   /* if you change this then update the value of ASPECT_RATIO in the script */
   --aspect-ratio: calc(5 / 3);
 }
 
-.word-cloud__word {
-  animation-name: fade-in, word-slide;
+.word-cloud-secondary__word {
+  animation-name: fade-in, word-slide-secondary;
   animation-duration: var(--time-2);
   animation-timing-function: var(--easing-standard);
   animation-fill-mode: forwards;
+
+  /* --word-number and --total-words set by JS */
+  animation-delay: calc(
+    var(--word-number) / (var(--total-words) - 1) * var(--time-2)
+  );
 }
 
-@keyframes word-slide {
+@keyframes word-slide-secondary {
   from {
     translate: calc((var(--aspect-ratio) / 2 - var(--word-x)) * 1px)
       calc(0.5px - var(--word-y) * 1px);
   }
 }
 
-.word-cloud__word:nth-child(6n + 1) {
+.word-cloud-secondary__word:nth-child(6n + 1) {
   fill: var(--color-highlight-0);
 }
-.word-cloud__word:nth-child(6n + 2) {
+.word-cloud-secondary__word:nth-child(6n + 2) {
   fill: var(--color-highlight-1);
 }
-.word-cloud__word:nth-child(6n + 3) {
+.word-cloud-secondary__word:nth-child(6n + 3) {
   fill: var(--color-highlight-2);
 }
-.word-cloud__word:nth-child(6n + 4) {
+.word-cloud-secondary__word:nth-child(6n + 4) {
   fill: var(--color-highlight-3);
 }
-.word-cloud__word:nth-child(6n + 5) {
+.word-cloud-secondary__word:nth-child(6n + 5) {
   fill: var(--color-highlight-4);
 }
-.word-cloud__word:nth-child(6n + 6) {
+.word-cloud-secondary__word:nth-child(6n + 6) {
   fill: var(--color-highlight-5);
 }
