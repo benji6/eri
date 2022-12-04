@@ -26,7 +26,10 @@ interface Word {
 
 const fontFace = new FontFace(
   "Mona sans",
-  'url("Mona-Sans.woff2") format("woff2-variations")'
+  `url(${new URL(
+    "../../../Mona-Sans.woff2",
+    import.meta.url
+  )}) format("woff2-variations")`
 );
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ((self as any).fonts as FontFaceSet).add(fontFace);
