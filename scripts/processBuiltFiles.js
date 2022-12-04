@@ -17,8 +17,12 @@ const recursiveMapOverFilesByExtension =
     }
   };
 
-const removeLines = (f) => (definition) =>
-  definition
+const recursiveMapOverDefinitionFiles =
+  recursiveMapOverFilesByExtension("d.ts");
+const recursiveMapOverJsFiles = recursiveMapOverFilesByExtension("js");
+
+const removeLines = (f) => (fileText) =>
+  fileText
     .split("\n")
     .filter((line) => !f(line.trim()))
     .join("\n");
@@ -28,13 +32,9 @@ const removeCssImportLines = removeLines(
     trimmedLine.startsWith("import") && trimmedLine.endsWith('.css";')
 );
 
-const recursiveMapOverDefinitionFiles =
-  recursiveMapOverFilesByExtension("d.ts");
+const renameTsUrls = (fileText) =>
+  fileText.replace(/(new +URL\("\w+\.)(ts)(")/g, "$1js$3");
 
-const recursiveRemoveDefinitionCssImports =
-  recursiveMapOverDefinitionFiles(removeCssImportLines);
-recursiveRemoveDefinitionCssImports(distPath);
-
-const recursiveMapOverJsFiles = recursiveMapOverFilesByExtension("js");
-
+recursiveMapOverDefinitionFiles(removeCssImportLines)(distPath);
 recursiveMapOverJsFiles(removeCssImportLines)(distPath);
+recursiveMapOverJsFiles(renameTsUrls)(distPath);
