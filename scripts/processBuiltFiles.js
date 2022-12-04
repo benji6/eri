@@ -35,6 +35,8 @@ const removeCssImportLines = removeLines(
 const renameTsUrls = (fileText) =>
   fileText.replace(/(new +URL\("\w+\.)(ts)(")/g, "$1js$3");
 
+const processJsFiles = (fileText) =>
+  renameTsUrls(removeCssImportLines(fileText));
+
 recursiveMapOverDefinitionFiles(removeCssImportLines)(distPath);
-recursiveMapOverJsFiles(removeCssImportLines)(distPath);
-recursiveMapOverJsFiles(renameTsUrls)(distPath);
+recursiveMapOverJsFiles(processJsFiles)(distPath);
