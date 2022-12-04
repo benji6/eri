@@ -2,7 +2,6 @@ const fs = require("fs").promises;
 const path = require("path");
 
 const distPath = path.join(__dirname, "..", "dist");
-const esmPath = path.join(__dirname, "..", "esm");
 
 const recursiveMapOverFilesByExtension =
   (extension) => (f) => async (pathToCheck) => {
@@ -34,16 +33,8 @@ const recursiveRemoveDefinitionCssImports = recursiveMapOverDefinitionFiles(
   )
 );
 recursiveRemoveDefinitionCssImports(distPath);
-recursiveRemoveDefinitionCssImports(esmPath);
 
 const recursiveMapOverJsFiles = recursiveMapOverFilesByExtension("js");
-
-recursiveMapOverJsFiles(
-  removeLines(
-    (trimmedLine) =>
-      trimmedLine.startsWith("import") && trimmedLine.endsWith('.css";')
-  )
-)(esmPath);
 
 recursiveMapOverJsFiles(
   removeLines(
