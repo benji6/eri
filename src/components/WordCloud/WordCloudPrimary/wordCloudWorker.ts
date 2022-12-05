@@ -38,13 +38,13 @@ const loadFontFacePromise = fontFace.load();
 const SVG_DIAGONAL = Math.hypot(SVG_WIDTH, SVG_HEIGHT);
 const CANVAS_HEIGHT = 2048;
 const CANVAS_WIDTH = 2048;
-const WORD_PADDING = 1;
+const WORD_PADDING = 2;
 
 // Set via trial and error. Derived by balancing the desire to place
 // as many words as possible and the desire to have as little empty
 // space as possible. Note that behavior is different bewteen
 // different browsers
-const FONT_SIZE_RATIO_ADJUSTMENT = 0.955;
+const FONT_SIZE_RATIO_ADJUSTMENT = 0.79;
 // Set via trial and error. Attempting to balance desire to fit all
 // words when there are few of them with the desire to have rotation
 const MINIMUM_WORD_COUNT_FOR_ROTATION = 16;
