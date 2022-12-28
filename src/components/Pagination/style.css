@@ -40,8 +40,5 @@
   color: var(--color-ground) !important;
   cursor: default;
   text-decoration: none !important;
-
-  /* override global button:disabled styles */
-  filter: none;
   transition-property: filter;
 }

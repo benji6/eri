@@ -63,10 +63,10 @@ button {
   /* Includes transition properties used by other buttons */
   transition-property: box-shadow, filter, opacity, scale;
 }
-button:active {
+button:active:not(:disabled) {
   filter: brightness(0.8) saturate(1.2);
 }
-button:disabled {
+button:disabled:not(.pagination__button) {
   filter: grayscale(0.5);
   opacity: 0.75;
 }
