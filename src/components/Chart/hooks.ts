@@ -29,9 +29,7 @@ export const usePlotAreaWidth = (): number => {
   return CHART_ASPECT_RATIO - marginLeft - MARGIN_RIGHT;
 };
 
-export const useTransformBarsToPlotArea = (
-  data: [x: number, y: number | undefined][]
-): [x: number, y: number | undefined][] => {
+export const useTransformPointsToPlotArea = (data: TPoint[]): TPoint[] => {
   const domain = useContext(DomainContext);
   const range = useContext(RangeContext);
   const marginBottom = useMarginBottom();
@@ -39,15 +37,12 @@ export const useTransformBarsToPlotArea = (
   const plotAreaHeight = usePlotAreaHeight();
   const plotAreaWidth = usePlotAreaWidth();
 
-  return data.map(([x, y]) => [
-    marginLeft + ((x - domain[0]) / (domain[1] - domain[0])) * plotAreaWidth,
-    y === undefined
-      ? undefined
-      : 1 -
+  return data.map(
+    ([x, y]): TPoint => [
+      marginLeft + ((x - domain[0]) / (domain[1] - domain[0])) * plotAreaWidth,
+      1 -
         ((y - range[0]) / (range[1] - range[0])) * plotAreaHeight -
         marginBottom,
-  ]);
+    ]
+  );
 };
-
-export const useTransformPointsToPlotArea = (data: TPoint[]): TPoint[] =>
-  useTransformBarsToPlotArea(data) as TPoint[];

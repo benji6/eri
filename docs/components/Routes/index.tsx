@@ -1,5 +1,4 @@
 import { Routes as ReactRouterRoutes, Route } from "react-router-dom";
-import BarChartDocs from "../Components/BarChartDocs";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
 import ChangePasswordPageDocs from "../Components/ChangePasswordPageDocs";
@@ -45,7 +44,6 @@ export default function Routes() {
       <Route path="/" element={<Home />} />
       <Route path="design-elements" element={<DesignElements />} />
       <Route path="typography" element={<Typography />} />
-      <Route path="components/bar-chart" element={<BarChartDocs />} />
       <Route path="components/button" element={<ButtonDocs />} />
       <Route path="components/card" element={<CardDocs />} />
       <Route path="components/checkbox" element={<CheckboxDocs />} />
