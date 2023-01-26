@@ -20,7 +20,7 @@
 .radio-button__appearance {
   background-color: var(--color-ground-more);
   cursor: pointer;
-  transition-property: background-color, border-color, color;
+  transition-property: border-color, color, filter;
   width: 100%;
 }
 
