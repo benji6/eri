@@ -10,10 +10,9 @@ export default function useIsWideResolution(): boolean {
     mediaQuery ? mediaQuery.matches : false
   );
 
-  const mediaQueryHandler = (e: MediaQueryListEvent) =>
-    setIsWideResolution(e.matches);
-
   useEffect(() => {
+    const mediaQueryHandler = (e: MediaQueryListEvent) =>
+      setIsWideResolution(e.matches);
     mediaQuery?.addEventListener("change", mediaQueryHandler);
     return () => mediaQuery?.removeEventListener("change", mediaQueryHandler);
   }, []);
