@@ -1,4 +1,6 @@
 .radio-button {
+  --color: var(--color-theme);
+
   display: inline-flex;
   flex-grow: 1;
   margin-left: calc(-1 * var(--border-width-2));
@@ -24,8 +26,9 @@
 
 @media (hover: hover) {
   .radio-button__appearance:hover {
-    border-color: var(--color-theme-less);
-    color: var(--color-theme-less);
+    border-color: var(--color);
+    color: var(--color);
+    filter: brightness(1.2) saturate(1.2);
     z-index: var(--z-index-1);
   }
 }
@@ -41,14 +44,12 @@
 }
 
 .radio-button__input:focus-visible ~ .radio-button__appearance {
-  border-color: var(--color-theme-less);
-  color: var(--color-theme-less);
+  filter: brightness(1.2) saturate(1.2);
   z-index: var(--z-index-1);
 }
 
 .radio-button__input:active ~ .radio-button__appearance {
-  border-color: var(--color-theme-more);
-  color: var(--color-theme-more);
+  filter: brightness(0.8) saturate(1.2);
   z-index: var(--z-index-1);
 }
 
@@ -62,25 +63,22 @@
 }
 
 .radio-button__input:checked ~ .radio-button__appearance {
-  background: var(--color-theme);
-  border-color: var(--color-theme);
+  background: var(--color);
+  border-color: var(--color);
   color: var(--color-ground);
   z-index: var(--z-index-1);
 }
 
 @media (hover: hover) {
   .radio-button__input:checked ~ .radio-button__appearance:hover {
-    background: var(--color-theme-less);
-    border-color: var(--color-theme-less);
+    filter: brightness(1.2) saturate(1.2);
   }
 }
 
 .radio-button__input:active:checked ~ .radio-button__appearance {
-  background: var(--color-theme-more);
-  border-color: var(--color-theme-more);
+  filter: brightness(0.8) saturate(1.2);
 }
 
 .radio-button__input:checked:focus-visible ~ .radio-button__appearance {
-  border-color: var(--color-theme-less);
-  background: var(--color-theme-less);
+  filter: brightness(1.2) saturate(1.2);
 }
