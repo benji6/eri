@@ -30,7 +30,7 @@ export default function QuickNavDocs() {
         <RadioButton.Group
           label="Number of buttons"
           onChange={(e) =>
-            setLinkCount(Number((e.target as HTMLInputElement).value))
+            setLinkCount((e.target as HTMLInputElement).valueAsNumber)
           }
         >
           {Array.from({ length: MAX_LINKS }, (_, i) => {

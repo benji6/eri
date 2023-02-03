@@ -84,9 +84,9 @@ export const PropControlNumber = <Props extends { [k: string]: any }>({
 }) => (
   <TextField
     label={name}
-    onChange={({ target: { value } }) => {
-      const n = Number(value);
-      if (!Number.isNaN(n) && n <= max) setProps({ ...props, [name]: n });
+    onChange={({ target: { valueAsNumber } }) => {
+      if (!Number.isNaN(valueAsNumber) && valueAsNumber <= max)
+        setProps({ ...props, [name]: valueAsNumber });
     }}
     value={props[name]}
   />
