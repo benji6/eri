@@ -2,5 +2,4 @@
 *.log
 build
 dist
-esm
 node_modules
