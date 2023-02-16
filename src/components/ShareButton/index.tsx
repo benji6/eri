@@ -17,7 +17,12 @@ export default function ShareButton({
     <Button.Group>
       <Button
         {...rest}
-        onClick={() => navigator.share!({ text, title, url })}
+        onClick={() =>
+          navigator.share({ text, title, url }).catch((e) => {
+            if (e instanceof DOMException && e.name === "AbortError") return;
+            throw e;
+          })
+        }
         variant="secondary"
       >
         <Icon name="share" margin="end" />
