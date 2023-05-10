@@ -250,6 +250,12 @@ export const iconNameMap = {
       <polyline points="16 5 12 9 8 5" />
     </>
   ),
+  tag: (
+    <>
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+      <line x1="7" y1="7" x2="7.01" y2="7" />
+    </>
+  ),
   thermometer: (
     <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
   ),
