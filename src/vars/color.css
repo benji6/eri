@@ -8,7 +8,7 @@
   --ground-lightness: 95%;
   --ground-lightness-spread: calc(5% * var(--spread-modifier));
   --negative-hue: 345;
-  --neutral-hs: var(--theme-hue), 25%;
+  --neutral-hs: var(--theme-hue), 15%;
   --positive-hue: 150;
   --theme-hue: 210;
   --theme-lightness: 22%;
