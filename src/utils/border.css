@@ -1,6 +1,6 @@
 :root {
   --border-radius-0: 0.3em;
-  --border-radius-1: calc(var(--border-radius-0) * 2);
+  --border-radius-1: 0.5em;
   --border-width-0: 1px;
   --border-width-1: calc(var(--border-width-0) * 2);
   --border-width-2: calc(var(--border-width-0) * 3);
