@@ -4,10 +4,9 @@
 }
 
 .nav-sub-list__heading {
-  --color: var(--color-highlight-default);
+  --color: var(--color-figure);
   --hover-color: var(--color-theme-more);
 
-  color: var(--color-theme);
   display: flex;
   filter: none !important; /* overrides tag-level button styles */
   justify-content: space-between;
@@ -28,7 +27,6 @@
 }
 @media (hover: hover) {
   .nav-sub-list__heading:hover {
-    background-color: var(--color-ground-less);
     color: var(--hover-color);
   }
 }
