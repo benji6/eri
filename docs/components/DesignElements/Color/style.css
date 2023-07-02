@@ -1,5 +1,5 @@
 .d-color__visual {
-  --size: var(--space-3);
+  --size: var(--space-4);
 
   height: var(--size);
   transition-property: background-color;

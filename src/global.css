@@ -13,7 +13,7 @@
 html {
   background: linear-gradient(
     calc(21turn / 32),
-    var(--color-ground-highlight) 0%,
+    var(--color-theme-least) 0%,
     var(--color-ground) 33%,
     var(--color-ground) 100%
   );

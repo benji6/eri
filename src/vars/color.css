@@ -1,49 +1,25 @@
 :root {
-  --spread-modifier: 1;
-  --balance-lightness: 45%;
-  --balance-lightness-spread: calc(10% * var(--spread-modifier));
-  --figure-hsl: var(--neutral-hs), var(--figure-lightness);
-  --figure-lightness: 15%;
-  --figure-lightness-spread: calc(10% * var(--spread-modifier));
-  --ground-lightness: 95%;
-  --ground-lightness-spread: calc(5% * var(--spread-modifier));
+  --figure-lightness: 5%;
   --negative-hue: 345;
-  --neutral-hs: var(--theme-hue), 15%;
-  --positive-hue: 150;
   --theme-hue: 210;
-  --theme-lightness: 22%;
-  --theme-lightness-spread: 7%;
+  --theme-lightness: 8%;
+  --neutral-hs: var(--theme-hue), 50%;
+  --figure-hsl: var(--neutral-hs), var(--figure-lightness);
 
-  --color-balance: hsl(var(--neutral-hs), var(--balance-lightness));
-  --color-balance-less: hsl(
-    var(--neutral-hs),
-    calc(var(--balance-lightness) + var(--balance-lightness-spread))
-  );
-  --color-balance-more: hsl(
-    var(--neutral-hs),
-    calc(var(--balance-lightness) - var(--balance-lightness-spread))
-  );
+  /* The strongest figure color */
+  --figure: hsl(var(--figure-hsl));
+  /* The strongest ground color */
+  --ground: hsl(var(--neutral-hs), 100%);
 
-  --color-figure: hsl(var(--neutral-hs), var(--figure-lightness));
-  --color-figure-less: hsl(
-    var(--neutral-hs),
-    calc(var(--figure-lightness) + var(--figure-lightness-spread))
-  );
-  --color-figure-more: hsl(
-    var(--neutral-hs),
-    calc(var(--figure-lightness) - var(--figure-lightness-spread))
-  );
-
-  --color-ground: hsl(var(--neutral-hs), var(--ground-lightness));
-  --color-ground-less: hsl(
-    var(--neutral-hs),
-    calc(var(--ground-lightness) - var(--ground-lightness-spread))
-  );
-  --color-ground-more: hsl(
-    var(--neutral-hs),
-    calc(var(--ground-lightness) + var(--ground-lightness-spread))
-  );
-  --color-ground-highlight: hsl(var(--theme-hue), 100%, 95%);
+  --color-figure-more: var(--figure);
+  --color-ground-more: var(--ground);
+  --color-balance: color-mix(in oklab, var(--figure), var(--ground));
+  --color-balance-less: color-mix(in oklab, var(--figure), var(--ground) 63%);
+  --color-balance-more: color-mix(in oklab, var(--figure), var(--ground) 37%);
+  --color-figure: color-mix(in oklab, var(--figure), var(--ground) 13%);
+  --color-figure-less: color-mix(in oklab, var(--figure), var(--ground) 26%);
+  --color-ground: color-mix(in oklab, var(--ground), var(--figure) 5%);
+  --color-ground-less: color-mix(in oklab, var(--ground), var(--figure) 10%);
 
   --color-highlight-0: hsl(184, 100%, 48%);
   --color-highlight-1: hsl(270, 100%, 67%);
@@ -51,33 +27,45 @@
   --color-highlight-3: hsl(32, 100%, 55%);
   --color-highlight-4: hsl(70, 100%, 45%);
   --color-highlight-5: hsl(148, 100%, 45%);
-
   --color-highlight-default: var(--color-highlight-3);
 
-  --color-mask: hsla(var(--neutral-hs), 10%, 0.75);
+  --color-mask: color-mix(in oklab, var(--figure), #0000 25%);
 
-  --color-negative: hsl(var(--negative-hue), 75%, 50%);
-  --color-negative-less: hsl(var(--negative-hue), 70%, 58%);
   --color-negative-more: hsl(var(--negative-hue), 90%, 43%);
-
-  --color-positive: hsl(var(--positive-hue), 75%, 44%);
-  --color-positive-less: hsl(var(--positive-hue), 70%, 54%);
-
-  --color-theme: hsl(var(--theme-hue), 100%, var(--theme-lightness));
-  --color-theme-less: hsl(
-    var(--theme-hue),
-    100%,
-    calc(var(--theme-lightness) + var(--theme-lightness-spread))
+  --color-negative: color-mix(
+    in hsl,
+    var(--color-negative-more),
+    var(--ground) 8%
   );
-  --color-theme-more: hsl(
-    var(--theme-hue),
-    100%,
-    calc(var(--theme-lightness) - var(--theme-lightness-spread))
+  --color-negative-less: color-mix(
+    in hsl,
+    var(--color-negative-more),
+    var(--ground) 16%
   );
-  --color-theme-app: hsl(
-    var(--theme-hue),
-    100%,
-    calc(var(--theme-lightness) - 2 * var(--theme-lightness-spread))
+
+  --color-positive: hsl(150, 75%, 44%);
+  --color-positive-less: color-mix(
+    in hsl,
+    var(--color-positive),
+    var(--ground) 8%
+  );
+
+  --color-theme-app: hsl(var(--theme-hue), 100%, var(--theme-lightness));
+  --color-theme-more: color-mix(
+    in hsl,
+    var(--color-theme-app),
+    var(--ground) 8%
+  );
+  --color-theme: color-mix(in hsl, var(--color-theme-app), var(--ground) 16%);
+  --color-theme-less: color-mix(
+    in hsl,
+    var(--color-theme-app),
+    var(--ground) 24%
+  );
+  --color-theme-least: color-mix(
+    in hsl,
+    var(--color-theme-app),
+    var(--ground) 83%
   );
 
   /* components may override this prop
@@ -87,14 +75,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --spread-modifier: -1;
-    --balance-lightness: 60%;
-    --figure-lightness: 80%;
-    --ground-lightness: 5%;
-    --ground-lightness-spread: calc(-5% * var(--spread-modifier));
-    --color-ground-highlight: hsl(240, 100%, 10%);
+    --figure-lightness: 90%;
     --negative-hue: 310;
-    --theme-lightness: 50%;
+    --theme-lightness: 60%;
+    --ground: hsl(var(--neutral-hs), 1%);
+
+    --color-ground-less: var(--ground);
+    --color-ground: color-mix(in oklab, var(--ground), var(--figure) 7%);
+    --color-ground-more: color-mix(in oklab, var(--ground), var(--figure) 14%);
 
     --color-highlight-0: hsl(184, 100%, 50%);
     --color-highlight-1: hsl(270, 100%, 70%);
@@ -102,9 +90,8 @@
     --color-highlight-3: hsl(32, 100%, 64%);
     --color-highlight-4: hsl(70, 100%, 50%);
     --color-highlight-5: hsl(145, 100%, 45%);
-
     --color-highlight-default: var(--color-highlight-2);
 
-    --color-mask: hsla(var(--neutral-hs), 20%, 0.75);
+    --color-mask: color-mix(in oklab, var(--ground), #0000 50%);
   }
 }

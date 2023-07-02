@@ -128,7 +128,6 @@ export default function DesignElements() {
           <Color varName="--color-ground-more" />
           <Color varName="--color-ground" />
           <Color varName="--color-ground-less" />
-          <Color varName="--color-ground-highlight" />
         </DisplayGroup>
         <h4>Mask</h4>
         <DisplayGroup>
@@ -144,6 +143,7 @@ export default function DesignElements() {
           <Color varName="--color-theme-more" />
           <Color varName="--color-theme" />
           <Color varName="--color-theme-less" />
+          <Color varName="--color-theme-least" />
         </DisplayGroup>
         <h4>Negative</h4>
         <DisplayGroup>
