@@ -65,7 +65,7 @@
   --color-theme-least: color-mix(
     in hsl,
     var(--color-theme-app),
-    var(--ground) 83%
+    var(--ground) 80%
   );
 
   /* components may override this prop
