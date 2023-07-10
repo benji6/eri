@@ -13,7 +13,7 @@ import { useContext } from "react";
 const transformX = (
   domain: [number, number],
   marginLeft: number,
-  providedX: number
+  providedX: number,
 ): number =>
   ((providedX - domain[0]) / (domain[1] - domain[0])) *
     CHART_ASPECT_RATIO *

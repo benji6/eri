@@ -22,7 +22,7 @@ export default function WordCloudPrimary({ words, ...rest }: IProps) {
   useEffect(() => {
     const wordCloudWorker = new Worker(
       new URL("wordCloudWorker.ts", import.meta.url),
-      { type: "module" }
+      { type: "module" },
     );
     wordCloudWorker.onmessage = ({ data }) => setWordsToRender(data);
     workerRef.current = wordCloudWorker;
@@ -50,7 +50,7 @@ export default function WordCloudPrimary({ words, ...rest }: IProps) {
           100
         ).toFixed(1)}% of words.`,
         "Failed to render the following words:",
-        Object.keys(words).filter((word) => !textToRender.has(word))
+        Object.keys(words).filter((word) => !textToRender.has(word)),
       );
     }
   }

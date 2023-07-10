@@ -29,7 +29,7 @@ const removeLines = (f) => (fileText) =>
 
 const removeCssImportLines = removeLines(
   (trimmedLine) =>
-    trimmedLine.startsWith("import") && trimmedLine.endsWith('.css";')
+    trimmedLine.startsWith("import") && trimmedLine.endsWith('.css";'),
 );
 
 const renameTsUrls = (fileText) =>

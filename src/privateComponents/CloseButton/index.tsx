@@ -3,7 +3,7 @@ import * as React from "react";
 import { Icon } from "../..";
 
 export default function CloseButton(
-  props: React.ButtonHTMLAttributes<HTMLButtonElement>
+  props: React.ButtonHTMLAttributes<HTMLButtonElement>,
 ) {
   return (
     <button

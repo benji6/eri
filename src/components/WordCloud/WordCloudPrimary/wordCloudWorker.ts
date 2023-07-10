@@ -28,8 +28,8 @@ const fontFace = new FontFace(
   "Mona sans",
   `url(${new URL(
     "../../../Mona-Sans.woff2",
-    import.meta.url
-  )}) format("woff2-variations")`
+    import.meta.url,
+  )}) format("woff2-variations")`,
 );
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ((self as any).fonts as FontFaceSet).add(fontFace);
@@ -68,7 +68,7 @@ onmessage = async (e) => {
   context.textAlign = "center";
 
   const sortedMeasuredWords = Object.entries(
-    e.data as { [word: string]: number }
+    e.data as { [word: string]: number },
   )
     .sort((a, b) => {
       const weightingDifference = b[1] - a[1];
@@ -169,7 +169,7 @@ onmessage = async (e) => {
         0,
         0,
         CANVAS_WIDTH,
-        CANVAS_HEIGHT
+        CANVAS_HEIGHT,
       ).data;
       const sprite: number[] = [];
       while (--di >= 0) {

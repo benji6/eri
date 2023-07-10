@@ -34,7 +34,7 @@ export default function Dialog({
         dialogRef.current.close();
         onClose();
       },
-      { once: true }
+      { once: true },
     );
   }, [onClose]);
 
@@ -75,6 +75,6 @@ export default function Dialog({
         <div id="dialog-desc">{children}</div>
       </div>
     </dialog>,
-    PORTAL_CONTAINERS.dialog!
+    PORTAL_CONTAINERS.dialog!,
   );
 }

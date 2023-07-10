@@ -29,7 +29,7 @@ export default function SignInPage({ onSubmit, ...rest }: Props) {
   const defaultEmailAddress = new URLSearchParams(location.search).get("email");
   const hasDefaultEmailAddress = Boolean(defaultEmailAddress);
   const passwordWasReset = new URLSearchParams(location.search).has(
-    "password-reset"
+    "password-reset",
   );
 
   return (

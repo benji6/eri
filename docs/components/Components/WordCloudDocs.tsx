@@ -33,7 +33,7 @@ export default function WordCloudDocs() {
         <h2>{Object.keys(words).length} pokemon with narrow weighting range</h2>
         <WordCloud
           words={Object.fromEntries(
-            Object.entries(words).map(([k, v]) => [k, v / 64])
+            Object.entries(words).map(([k, v]) => [k, v / 64]),
           )}
         />
       </Paper>
@@ -61,7 +61,7 @@ export default function WordCloudDocs() {
           words={Object.fromEntries(
             Object.entries(words)
               .slice(0, 10)
-              .map(([k, v]) => [k, v / 64])
+              .map(([k, v]) => [k, v / 64]),
           )}
         />
       </Paper>

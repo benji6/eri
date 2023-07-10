@@ -26,10 +26,10 @@ export const requiredValidator: TValidator = (value) =>
 
 export const validateEmailField = composeValidators(
   requiredValidator,
-  emailValidator
+  emailValidator,
 );
 
 export const validatePasswordField = composeValidators(
   requiredValidator,
-  passwordValidator
+  passwordValidator,
 );

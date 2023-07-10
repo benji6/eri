@@ -13,7 +13,8 @@ a,
   pointer-events: none;
   position: absolute;
   scale: 10;
-  transition: opacity var(--time-2) var(--easing-standard),
+  transition:
+    opacity var(--time-2) var(--easing-standard),
     scale var(--time-1) var(--easing-standard);
 }
 

@@ -20,7 +20,7 @@ export default function Mask({
     (e: KeyboardEvent | React.KeyboardEvent<HTMLDivElement>) => {
       if (open && onClose && e.code === "Escape") onClose();
     },
-    [onClose, open]
+    [onClose, open],
   );
 
   React.useEffect(() => {
@@ -47,6 +47,6 @@ export default function Mask({
       <div {...rest} className="mask__container z-3" />
     </div>,
     /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-    portalContainer
+    portalContainer,
   );
 }

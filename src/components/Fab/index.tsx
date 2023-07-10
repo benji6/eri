@@ -28,6 +28,6 @@ export default function Fab({
     >
       <button {...rest} className="fab br-max p-3 z-1" type={type} />
     </CSSTransition>,
-    PORTAL_EL
+    PORTAL_EL,
   );
 }

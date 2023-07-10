@@ -7,7 +7,7 @@ const mediaQuery =
 
 export default function useIsWideResolution(): boolean {
   const [isWideResolution, setIsWideResolution] = useState<boolean>(
-    mediaQuery ? mediaQuery.matches : false
+    mediaQuery ? mediaQuery.matches : false,
   );
 
   useEffect(() => {

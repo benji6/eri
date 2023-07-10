@@ -114,7 +114,7 @@ export default function WordCloudSecondary({ words, ...rest }: IProps) {
 
     const wordSpaceUsage = totalArea / SVG_ASPECT_RATIO;
     const adjustmentRatio = Math.sqrt(
-      OPTIMAL_WORD_SPACE_USAGE / wordSpaceUsage
+      OPTIMAL_WORD_SPACE_USAGE / wordSpaceUsage,
     );
 
     for (let i = 0; i < unplacedWords.length; i++) {
@@ -141,7 +141,7 @@ export default function WordCloudSecondary({ words, ...rest }: IProps) {
         shouldPlaceWord &&
         (checkIfRectangleNotContained(word) ||
           placedWords.some((placedWord) =>
-            checkIfRectanglesIntersect(word, placedWord)
+            checkIfRectanglesIntersect(word, placedWord),
           ))
       );
       if (shouldPlaceWord) placedWords.push(word);

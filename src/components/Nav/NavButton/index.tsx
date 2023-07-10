@@ -3,7 +3,7 @@ import * as React from "react";
 import Icon from "../../Icon";
 
 export default function NavButton(
-  props: React.ButtonHTMLAttributes<HTMLButtonElement>
+  props: React.ButtonHTMLAttributes<HTMLButtonElement>,
 ) {
   return (
     <button {...props} className="nav-button fs-0 fw-b ripple">

@@ -1,7 +1,7 @@
 import { iconNameMap } from "../src/components/Icon";
 
 export const ICON_NAMES = Object.keys(
-  iconNameMap
+  iconNameMap,
 ) as (keyof typeof iconNameMap)[];
 
 export const LOREM_IPSUM =

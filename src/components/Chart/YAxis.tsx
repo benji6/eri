@@ -12,7 +12,7 @@ import { useContext } from "react";
 const transformY = (
   range: [number, number],
   plotHeight: number,
-  providedY: number
+  providedY: number,
 ): number =>
   plotHeight * (1 - (providedY - range[0]) / (range[1] - range[0])) +
   MARGIN_TOP;

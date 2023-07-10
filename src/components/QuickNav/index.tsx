@@ -13,7 +13,7 @@ export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
       const boundingClientRect = navElRef.current.getBoundingClientRect();
       document.documentElement.style.setProperty(
         "--quick-nav-height",
-        `${boundingClientRect.height}px`
+        `${boundingClientRect.height}px`,
       );
     };
     document.documentElement.classList.add("quick-nav-mounted");
@@ -28,7 +28,7 @@ export default function QuickNav(props: React.HTMLAttributes<HTMLDivElement>) {
 
   return ReactDOM.createPortal(
     <nav {...props} className="quick-nav bs-1 z-1" ref={navElRef} />,
-    PORTAL_CONTAINERS.quickNav as HTMLDivElement
+    PORTAL_CONTAINERS.quickNav as HTMLDivElement,
   );
 }
 

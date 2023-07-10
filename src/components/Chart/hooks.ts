@@ -43,6 +43,6 @@ export const useTransformPointsToPlotArea = (data: TPoint[]): TPoint[] => {
       1 -
         ((y - range[0]) / (range[1] - range[0])) * plotAreaHeight -
         marginBottom,
-    ]
+    ],
   );
 };

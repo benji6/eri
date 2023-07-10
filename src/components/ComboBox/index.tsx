@@ -22,7 +22,7 @@ export default function ComboBox({
   ...rest
 }: IProps) {
   const dataListIdRef = React.useRef<string>(
-    `combo-box-auto-generated-id-${Math.random().toString(36)}`
+    `combo-box-auto-generated-id-${Math.random().toString(36)}`,
   );
 
   return (
