@@ -5,7 +5,6 @@
 
 .nav-sub-list__heading {
   --color: var(--color-figure);
-  --hover-color: var(--color-theme-more);
 
   display: flex;
   filter: none !important; /* overrides tag-level button styles */
@@ -16,18 +15,14 @@
   width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  .nav-sub-list__heading {
-    --hover-color: var(--color-theme-less);
-  }
-}
-
 .nav-sub-list__heading:focus-visible {
-  color: var(--color-theme-more);
+  color: var(--color-theme-less);
+  background-color: var(--color-ground-less);
 }
 @media (hover: hover) {
   .nav-sub-list__heading:hover {
-    color: var(--hover-color);
+    color: var(--color-theme-less);
+    background-color: var(--color-ground-less);
   }
 }
 

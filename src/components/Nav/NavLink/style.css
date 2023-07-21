@@ -11,9 +11,9 @@
 }
 
 .nav-link__link:focus-visible {
-  color: var(--color-theme-more);
+  color: var(--color-theme-less);
+  background-color: var(--color-ground-less);
 }
-
 @media (hover: hover) {
   .nav-link__link:hover {
     background-color: var(--color-ground-less);
