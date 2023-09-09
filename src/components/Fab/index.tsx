@@ -16,7 +16,7 @@ export default function Fab({
   type = "submit", // Formik gets grumpy if you don't specify this
   ...rest
 }: IProps) {
-  if (!PORTAL_EL) return null;
+  if (!PORTAL_EL) return;
 
   return ReactDOM.createPortal(
     <CSSTransition

@@ -30,7 +30,7 @@ export default function Mask({
     };
   }, [handleKeyDown]);
 
-  if (!portalContainer) return null;
+  if (!portalContainer) return;
 
   return ReactDOM.createPortal(
     /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
