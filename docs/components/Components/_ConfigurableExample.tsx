@@ -7,12 +7,14 @@ interface IProps {
   children?: React.ReactNode;
   example: React.ReactNode;
   rendersInPortal?: boolean;
+  showCodeSnippet?: boolean;
 }
 
 export default function ConfigurableExample({
   children,
   example,
   rendersInPortal = false,
+  showCodeSnippet = true,
 }: IProps) {
   return (
     <Paper>
@@ -20,7 +22,7 @@ export default function ConfigurableExample({
       {!rendersInPortal && <hr />}
       {example}
       {!rendersInPortal && <hr />}
-      <ReactCodeSnippet>{example}</ReactCodeSnippet>
+      {showCodeSnippet && <ReactCodeSnippet>{example}</ReactCodeSnippet>}
       <form noValidate>{children}</form>
     </Paper>
   );

@@ -39,6 +39,9 @@ export default function App() {
               <Nav.Link onClick={handleNavClose} to="/components/card">
                 Card
               </Nav.Link>
+              <Nav.Link onClick={handleNavClose} to="/components/column-chart">
+                Chart.ColumnChart
+              </Nav.Link>
               <Nav.Link onClick={handleNavClose} to="/components/line-chart">
                 Chart.LineChart
               </Nav.Link>

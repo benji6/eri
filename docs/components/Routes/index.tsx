@@ -3,6 +3,7 @@ import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
 import ChangePasswordPageDocs from "../Components/ChangePasswordPageDocs";
 import CheckboxDocs from "../Components/CheckboxDocs";
+import ColumnChartDocs from "../Components/ColumnChartDocs";
 import ComboBoxDocs from "../Components/ComboBoxDocs";
 import CssUtilities from "../CssUtilities";
 import CurrencyFieldDocs from "../Components/CurrencyFieldDocs";
@@ -42,13 +43,11 @@ export default function Routes() {
   return (
     <ReactRouterRoutes>
       <Route path="/" element={<Home />} />
-      <Route path="design-elements" element={<DesignElements />} />
-      <Route path="typography" element={<Typography />} />
       <Route path="components/button" element={<ButtonDocs />} />
       <Route path="components/card" element={<CardDocs />} />
       <Route path="components/checkbox" element={<CheckboxDocs />} />
+      <Route path="components/column-chart" element={<ColumnChartDocs />} />
       <Route path="components/combo-box" element={<ComboBoxDocs />} />
-      <Route path="css-utilities" element={<CssUtilities />} />
       <Route path="components/currency-field" element={<CurrencyFieldDocs />} />
       <Route path="components/date-field" element={<DateFieldDocs />} />
       <Route path="components/dialog" element={<DialogDocs />} />
@@ -62,14 +61,17 @@ export default function Routes() {
       <Route path="components/nav" element={<NavDocs />} />
       <Route path="components/pagination" element={<PaginationDocs />} />
       <Route path="components/paper" element={<PaperDocs />} />
+      <Route path="components/quick-nav" element={<QuickNavDocs />} />
+      <Route path="components/radio-button" element={<RadioButtonDocs />} />
       <Route path="components/select" element={<SelectDocs />} />
       <Route path="components/share-button" element={<ShareButtonDocs />} />
       <Route path="components/spinner" element={<SpinnerDocs />} />
       <Route path="components/text-area" element={<TextAreaDocs />} />
       <Route path="components/text-field" element={<TextFieldDocs />} />
-      <Route path="components/quick-nav" element={<QuickNavDocs />} />
-      <Route path="components/radio-button" element={<RadioButtonDocs />} />
       <Route path="components/word-cloud" element={<WordCloudDocs />} />
+      <Route path="css-utilities" element={<CssUtilities />} />
+      <Route path="design-elements" element={<DesignElements />} />
+      <Route path="typography" element={<Typography />} />
       <Route
         path="pages/change-password"
         element={<ChangePasswordPageDocs />}
