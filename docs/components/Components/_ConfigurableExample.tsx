@@ -88,6 +88,7 @@ export const PropControlNumber = <Props extends { [k: string]: any }>({
       if (!Number.isNaN(valueAsNumber) && valueAsNumber <= max)
         setProps({ ...props, [name]: valueAsNumber });
     }}
+    type="number"
     value={props[name]}
   />
 );
