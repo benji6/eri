@@ -35,9 +35,9 @@ export default function ColumnChart({
   let range: [number, number];
   if (maxRange === undefined) {
     const maxY = Math.max(
-      ...data.filter(({ y }) => y !== undefined).map(({ y }) => y as number),
+      ...(data.map(({ y }) => y).filter((y) => y !== undefined) as number[]),
     );
-    range = [0, maxY];
+    range = [0, maxY <= 7 ? Math.ceil(maxY + 1) : Math.ceil(maxY / 10) * 10];
   } else range = [0, maxRange];
   const yLabels: number[] =
     range[1] <= 10
