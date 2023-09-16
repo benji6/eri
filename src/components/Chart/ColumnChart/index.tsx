@@ -85,10 +85,14 @@ export default function ColumnChart({
               title={title}
               style={
                 {
-                  "--column-height":
-                    y === undefined ? 0 : `${(100 * y) / range[1]}%`,
+                  "--column-height": `${(100 * (y ?? 0)) / range[1]}%`,
                   "--column-number": i,
-                  color: color ?? "var(--color-theme)",
+                  color:
+                    // This is a hack to fix a bug that seems specific to Chrome
+                    // where the bar appears visible during the rendering animation
+                    y === undefined
+                      ? "transparent"
+                      : color ?? "var(--color-theme)",
                 } as CSSProperties
               }
             />
