@@ -26,8 +26,8 @@ export default function ColumnChart({
   data,
   maxRange,
   rotateXLabels = false,
-  xAxisTitle: xTitle,
-  yAxisTitle: yTitle,
+  xAxisTitle,
+  yAxisTitle,
   ...rest
 }: Props) {
   if (!data.length) return;
@@ -55,8 +55,8 @@ export default function ColumnChart({
           <div key={x} />
         ))}
       </div>
-      <div className="column-chart__y-title fade-in nowrap">{yTitle}</div>
-      <div className="column-chart__x-title fade-in nowrap">{xTitle}</div>
+      <div className="column-chart__y-title fade-in nowrap">{yAxisTitle}</div>
+      <div className="column-chart__x-title fade-in nowrap">{xAxisTitle}</div>
       <div className="column-chart__x-label" />
       <div
         className="column-chart__y-axis"

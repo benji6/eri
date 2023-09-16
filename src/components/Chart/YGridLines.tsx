@@ -2,12 +2,13 @@ import {
   CHART_ASPECT_RATIO,
   LINE_WIDTH_0,
   LINE_WIDTH_2,
+  MARGIN_LEFT,
   MARGIN_RIGHT,
   MARGIN_TOP,
 } from "./constants";
-import { useMarginLeft, usePlotAreaHeight } from "./hooks";
 import { RangeContext } from "./contexts";
 import { useContext } from "react";
+import { usePlotAreaHeight } from "./hooks";
 
 interface IProps {
   lines: number[];
@@ -15,7 +16,6 @@ interface IProps {
 
 export default function YGridLines({ lines }: IProps) {
   const range = useContext(RangeContext);
-  const marginLeft = useMarginLeft();
   const plotAreaHeight = usePlotAreaHeight();
 
   return (
@@ -31,7 +31,7 @@ export default function YGridLines({ lines }: IProps) {
             stroke="var(--color-balance)"
             strokeDasharray={LINE_WIDTH_2}
             strokeWidth={LINE_WIDTH_0}
-            x1={marginLeft}
+            x1={MARGIN_LEFT}
             x2={CHART_ASPECT_RATIO - MARGIN_RIGHT}
             y1={y}
             y2={y}

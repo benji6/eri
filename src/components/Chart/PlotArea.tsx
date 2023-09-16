@@ -1,13 +1,12 @@
 import * as React from "react";
-import { useMarginLeft, usePlotAreaHeight, usePlotAreaWidth } from "./hooks";
-import { MARGIN_TOP } from "./constants";
+import { MARGIN_LEFT, MARGIN_TOP } from "./constants";
+import { usePlotAreaHeight, usePlotAreaWidth } from "./hooks";
 
 interface Props {
   children: React.ReactNode;
 }
 
 export default function PlotArea({ children }: Props) {
-  const marginLeft = useMarginLeft();
   const height = usePlotAreaHeight();
   const width = usePlotAreaWidth();
 
@@ -15,7 +14,7 @@ export default function PlotArea({ children }: Props) {
     <>
       <defs>
         <clipPath id="plot-area-clip-path">
-          <rect x={marginLeft} y={MARGIN_TOP} height={height} width={width} />
+          <rect x={MARGIN_LEFT} y={MARGIN_TOP} height={height} width={width} />
         </clipPath>
       </defs>
       <g clipPath="url(#plot-area-clip-path)">{children}</g>

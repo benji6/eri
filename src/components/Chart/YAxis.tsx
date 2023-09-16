@@ -2,12 +2,13 @@ import {
   AXIS_MARKER_LENGTH,
   FONT_SIZE,
   LINE_WIDTH_2,
+  MARGIN_LEFT,
   MARGIN_TOP,
 } from "./constants";
-import { useMarginLeft, usePlotAreaHeight } from "./hooks";
 import { RangeContext } from "./contexts";
 import { TLabel } from "./types";
 import { useContext } from "react";
+import { usePlotAreaHeight } from "./hooks";
 
 const transformY = (
   range: [number, number],
@@ -24,7 +25,6 @@ interface IProps {
 
 export default function YAxis({ labels, markers }: IProps) {
   const range = useContext(RangeContext);
-  const marginLeft = useMarginLeft();
   const plotAreaHeight = usePlotAreaHeight();
   const markerCoordinates =
     markers === true ? labels.map(([labelY]) => labelY) : markers;
@@ -39,8 +39,8 @@ export default function YAxis({ labels, markers }: IProps) {
             key={y}
             stroke="currentColor"
             strokeWidth={LINE_WIDTH_2}
-            x1={marginLeft - AXIS_MARKER_LENGTH}
-            x2={marginLeft + LINE_WIDTH_2 / 2}
+            x1={MARGIN_LEFT - AXIS_MARKER_LENGTH}
+            x2={MARGIN_LEFT + LINE_WIDTH_2 / 2}
             y1={y}
             y2={y}
           />
@@ -56,7 +56,7 @@ export default function YAxis({ labels, markers }: IProps) {
             dy={FONT_SIZE * 0.3}
             fill="currentColor"
             textAnchor="end"
-            x={marginLeft - 2 * AXIS_MARKER_LENGTH}
+            x={MARGIN_LEFT - 2 * AXIS_MARKER_LENGTH}
             y={y}
           >
             {labelText}
