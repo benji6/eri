@@ -9,15 +9,6 @@ const RANGE: [number, number] = [0, 100];
 const TRENDLINE_POINTS_COUNT = POINTS_COUNT / 2;
 
 export default function LineChartDocs() {
-  const xlabels = Array.from({ length: 5 }, (_, n): [number, string] => {
-    const x = (n / 4) * (DOMAIN[1] - DOMAIN[0]) + DOMAIN[0];
-    return [x, String(x)];
-  });
-  const ylabels = Array.from({ length: 5 }, (_, n): [number, string] => {
-    const y = (n / 4) * (RANGE[1] - RANGE[0]) + RANGE[0];
-    return [y, String(y)];
-  });
-
   const [props, setProps] = useState<{
     data: TPoint[];
     trendlinePoints: TPoint[];
@@ -40,13 +31,6 @@ export default function LineChartDocs() {
     <Paper.Group>
       <Paper>
         <h2>Chart.LineChart</h2>
-        <p>
-          <code>XAxis</code> and <code>YAxis</code> have a <code>markers</code>{" "}
-          property. If you specify the value <code>true</code> then markers will
-          be automatically inserted. If you want fine control over the positions
-          of these markers you can instead pass an array of numbers representing
-          the co-ordinates for the markers.
-        </p>
       </Paper>
       <ConfigurableExample
         example={
@@ -57,19 +41,13 @@ export default function LineChartDocs() {
             xAxisTitle={props.xAxisTitle}
             yAxisTitle={props.yAxisTitle}
           >
-            <Chart.XGridLines lines={xlabels.map(([x]) => x)} />
-            <Chart.YGridLines lines={ylabels.map(([y]) => y)} />
-            <Chart.PlotArea>
-              <Chart.Line
-                color="var(--color-balance-less)"
-                data={props.trendlinePoints}
-                thickness={2}
-              />
-              <Chart.Line data={props.data} />
-              <Chart.Points data={props.data} />
-            </Chart.PlotArea>
-            <Chart.XAxis labels={xlabels} markers />
-            <Chart.YAxis labels={ylabels} markers />
+            <Chart.Line
+              color="var(--color-balance-less)"
+              data={props.trendlinePoints}
+              thickness={2}
+            />
+            <Chart.Line data={props.data} />
+            <Chart.Points data={props.data} />
           </Chart.LineChart>
         }
       >

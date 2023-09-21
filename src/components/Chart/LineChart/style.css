@@ -1,31 +1,66 @@
 .line-chart {
   display: grid;
-  grid-template-columns: 1em 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-columns: 1em auto 1fr;
+  grid-template-rows: 1fr auto auto;
+
+  /* mitigation for x axis labels that are translated
+  outside of line chart bounding box */
+  margin-inline-end: 0.5em;
   margin-block: var(--space-3);
   min-height: 18em;
-  row-gap: var(--space-1);
+  gap: var(--space-1);
   user-select: none;
-}
-
-.base-chart {
-  /* If you change this property then update FONT_SIZE in script */
-  font-size: 0.05px;
-  grid-row: 1;
 }
 
 .line-chart__x-title {
   font-weight: var(--font-weight-bold);
-  grid-column: 2;
-  grid-row: 2;
+  grid-column: 3;
   justify-self: center;
+}
+
+.line-chart__x-label {
+  animation-delay: calc(
+    var(--label-number) / max((var(--label-count) - 1), 1) * var(--time-2)
+  );
+  text-align: center;
+  translate: calc(
+      var(--label-number) / max((var(--label-count) - 1), 1) * 100% - 50%
+    )
+    0;
+  width: 1em;
+}
+
+.line-chart__y-label {
+  animation-delay: calc(
+    var(--label-number) / max((var(--label-count) - 1), 1) * var(--time-2)
+  );
+  translate: 0
+    calc(var(--label-number) / max((var(--label-count) - 1), 1) * -100% + 50%);
 }
 
 .line-chart__y-title {
   align-self: center;
   font-weight: var(--font-weight-bold);
-  grid-row: 1;
-  grid-column: 1;
   justify-self: center;
   rotate: 0.75turn;
+}
+
+.line-chart__plot-area {
+  border-bottom: var(--border-width-1) solid var(--color-figure);
+  border-left: var(--border-width-1) solid var(--color-figure);
+}
+
+.line-chart__x-axis {
+  font-size: var(--font-size-0);
+  display: flex;
+  grid-column: 3;
+  justify-content: space-between;
+}
+
+.line-chart__y-axis {
+  align-items: end;
+  font-size: var(--font-size-0);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
 }
