@@ -1,13 +1,12 @@
 .line-chart {
   display: grid;
   grid-template-columns: 1em auto 1fr;
-  grid-template-rows: 1fr auto auto;
+  grid-template-rows: min-content auto auto;
 
   /* mitigation for x axis labels that are translated
   outside of line chart bounding box */
   margin-inline-end: 0.5em;
   margin-block: var(--space-3);
-  min-height: 18em;
   gap: var(--space-1);
   user-select: none;
 }
