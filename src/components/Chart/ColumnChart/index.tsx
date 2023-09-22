@@ -72,7 +72,7 @@ export default function ColumnChart({
           </div>
         ))}
       </div>
-      <div className="column-chart__x-label" />
+      <div className="column-chart__x-label fade-in" />
       {data.map(({ color, key, label, onClick, title, y }, i) => {
         return (
           <Fragment key={key}>
