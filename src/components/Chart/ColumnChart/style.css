@@ -66,6 +66,9 @@
 .column-chart__x-label {
   align-items: center;
   align-self: start;
+  animation-delay: calc(
+    var(--x-label-number) / max((var(--column-count) - 1), 1) * var(--time-2)
+  );
   display: flex;
   font-size: var(--font-size-0);
   gap: var(--space-0);
@@ -76,12 +79,9 @@
 .column-chart__x-label--rotate {
   writing-mode: vertical-lr;
 }
-
 /* useful if there are icons in the label */
-.column-chart__x-label .icon {
-  animation-delay: calc(
-    var(--x-label-number) / max((var(--column-count) - 1), 1) * var(--time-2)
-  );
+.column-chart__x-label * {
+  animation-delay: inherit;
 }
 
 .column-chart__y-axis {
