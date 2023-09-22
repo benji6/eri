@@ -72,7 +72,7 @@ export default function ColumnChart({
           </div>
         ))}
       </div>
-      <div className="column-chart__x-label fade-in" />
+      <div className="column-chart__x-label" />
       {data.map(({ color, key, label, onClick, title, y }, i) => {
         return (
           <Fragment key={key}>
@@ -97,7 +97,7 @@ export default function ColumnChart({
               }
             />
             <div
-              className={`column-chart__x-label${
+              className={`column-chart__x-label fade-in${
                 rotateXLabels ? " column-chart__x-label--rotate" : ""
               }`}
               style={
