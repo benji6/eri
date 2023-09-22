@@ -80,7 +80,7 @@
   writing-mode: vertical-lr;
 }
 /* useful if there are icons in the label */
-.column-chart__x-label * {
+.column-chart__x-label .icon {
   animation-delay: inherit;
 }
 
