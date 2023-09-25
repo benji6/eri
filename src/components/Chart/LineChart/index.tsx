@@ -1,42 +1,52 @@
 import "./style.css";
 import { CHART_ASPECT_RATIO, LINE_WIDTH_0, LINE_WIDTH_2 } from "../constants";
+import { CSSProperties, HTMLAttributes } from "react";
 import { DomainContext, RangeContext } from "../contexts";
-import { CSSProperties } from "react";
 
 const AXIS_LABEL_COUNT = 6;
 
-interface IProps extends React.SVGProps<SVGSVGElement> {
+interface IProps extends HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   domain: [number, number];
   range: [number, number];
   xAxisTitle?: string;
+  xAxisLabels?: string[];
   yAxisTitle?: string;
+  yAxisLabels?: string[];
 }
 
 export default function LineChart({
   children,
   domain,
   range,
+  xAxisLabels = [...Array(AXIS_LABEL_COUNT).keys()].map((n) =>
+    String(
+      Math.round(
+        (n / (AXIS_LABEL_COUNT - 1)) * (domain[1] - domain[0]) + domain[0],
+      ),
+    ),
+  ),
   xAxisTitle,
+  yAxisLabels = [...Array(AXIS_LABEL_COUNT).keys()].map((n) =>
+    String(
+      Math.round(
+        (n / (AXIS_LABEL_COUNT - 1)) * (range[1] - range[0]) + range[0],
+      ),
+    ),
+  ),
   yAxisTitle,
   ...rest
 }: IProps) {
-  const xLabels = [...Array(AXIS_LABEL_COUNT).keys()].map((n) =>
-    Math.round((n / (AXIS_LABEL_COUNT - 1)) * domain[1] + domain[0]),
-  );
-  const yLabels = [...Array(AXIS_LABEL_COUNT).keys()].map((n) =>
-    Math.round((n / (AXIS_LABEL_COUNT - 1)) * range[1] + range[0]),
-  );
   return (
-    <div className="line-chart">
+    <div {...rest} className="line-chart">
       <div className="line-chart__y-title fade-in nowrap">{yAxisTitle}</div>
 
       {/* y axis */}
       <div
         className="line-chart__y-axis"
-        style={{ "--label-count": yLabels.length } as CSSProperties}
+        style={{ "--label-count": yAxisLabels.length } as CSSProperties}
       >
-        {yLabels.map((yLabel, i) => (
+        {yAxisLabels.map((yLabel, i) => (
           <div
             className="line-chart__y-label fade-in"
             key={yLabel}
@@ -47,16 +57,12 @@ export default function LineChart({
         ))}
       </div>
       <svg
-        {...rest}
         className="line-chart__plot-area"
         viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
       >
         {/* x axis grid lines */}
-        {xLabels
-          .map(
-            (x) =>
-              ((x - domain[0]) / (domain[1] - domain[0])) * CHART_ASPECT_RATIO,
-          )
+        {xAxisLabels
+          .map((_, i) => (i * CHART_ASPECT_RATIO) / (xAxisLabels.length - 1))
           .map((x) => (
             <line
               key={x}
@@ -71,8 +77,8 @@ export default function LineChart({
           ))}
 
         {/* y axis grid lines */}
-        {yLabels
-          .map((y) => 1 - (y - range[0]) / (range[1] - range[0]))
+        {yAxisLabels
+          .map((_, i) => i / (yAxisLabels.length - 1))
           .map((y) => (
             <line
               key={y}
@@ -100,9 +106,9 @@ export default function LineChart({
       {/* x axis */}
       <div
         className="line-chart__x-axis"
-        style={{ "--label-count": xLabels.length } as CSSProperties}
+        style={{ "--label-count": xAxisLabels.length } as CSSProperties}
       >
-        {xLabels.map((xLabel, i) => (
+        {xAxisLabels.map((xLabel, i) => (
           <div
             className="line-chart__x-label fade-in"
             key={xLabel}

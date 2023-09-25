@@ -4,8 +4,8 @@
   grid-template-rows: min-content auto auto;
 
   /* mitigation for x axis labels that are translated
-  outside of line chart bounding box */
-  margin-inline-end: 0.5em;
+  outside of chart bounding box */
+  margin-inline-end: var(--space-1);
   margin-block: var(--space-3);
   gap: var(--space-1);
   user-select: none;
@@ -21,12 +21,13 @@
   animation-delay: calc(
     var(--label-number) / max((var(--label-count) - 1), 1) * var(--time-2)
   );
+  flex-basis: 0;
+  flex-grow: 1;
   text-align: center;
   translate: calc(
       var(--label-number) / max((var(--label-count) - 1), 1) * 100% - 50%
     )
     0;
-  width: 1em;
 }
 
 .line-chart__y-label {

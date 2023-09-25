@@ -1,5 +1,6 @@
-import { Chart, Paper } from "../../../src";
+import { Chart, Paper, Select } from "../../../src";
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
+import { POKEMON_NAMES } from "../../constants";
 import { TPoint } from "../../../src/components/Chart/LineChart/types";
 import { useState } from "react";
 
@@ -26,6 +27,9 @@ export default function LineChartDocs() {
     xAxisTitle: "X axis title",
     yAxisTitle: "Y axis title",
   });
+  const [labelType, setLabelType] = useState("default");
+  const xAxisLabels =
+    labelType === "default" ? undefined : POKEMON_NAMES.slice(0, 5);
 
   return (
     <Paper.Group>
@@ -38,6 +42,7 @@ export default function LineChartDocs() {
             aria-label="Example line chart"
             domain={DOMAIN}
             range={RANGE}
+            xAxisLabels={xAxisLabels}
             xAxisTitle={props.xAxisTitle}
             yAxisTitle={props.yAxisTitle}
           >
@@ -61,6 +66,14 @@ export default function LineChartDocs() {
           props={props}
           setProps={setProps}
         />
+        <Select
+          onChange={(e) => setLabelType(e.target.value)}
+          label="Axis labels"
+          value={labelType}
+        >
+          <option value="default">Default labels</option>
+          <option value="custom-x-axis-labels">Custom X axis labels</option>
+        </Select>
       </ConfigurableExample>
     </Paper.Group>
   );
