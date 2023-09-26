@@ -29,6 +29,9 @@
     )
     0;
 }
+.line-chart__x-label--centered {
+  translate: none;
+}
 
 .line-chart__y-label {
   animation-delay: calc(
@@ -54,7 +57,6 @@
   font-size: var(--font-size-0);
   display: flex;
   grid-column: 3;
-  justify-content: space-between;
 }
 
 .line-chart__y-axis {

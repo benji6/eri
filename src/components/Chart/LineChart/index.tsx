@@ -6,6 +6,7 @@ import { DomainContext, RangeContext } from "../contexts";
 const AXIS_LABEL_COUNT = 6;
 
 interface IProps extends HTMLAttributes<HTMLDivElement> {
+  centerXAxisLabels?: boolean;
   children?: React.ReactNode;
   domain: [number, number];
   range: [number, number];
@@ -16,6 +17,7 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export default function LineChart({
+  centerXAxisLabels = false,
   children,
   domain,
   range,
@@ -61,8 +63,12 @@ export default function LineChart({
         viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
       >
         {/* x axis grid lines */}
-        {xAxisLabels
-          .map((_, i) => (i * CHART_ASPECT_RATIO) / (xAxisLabels.length - 1))
+        {[...Array(xAxisLabels.length + Number(centerXAxisLabels)).keys()]
+          .map(
+            (i) =>
+              (i * CHART_ASPECT_RATIO) /
+              (xAxisLabels.length - Number(!centerXAxisLabels)),
+          )
           .map((x) => (
             <line
               key={x}
@@ -110,7 +116,9 @@ export default function LineChart({
       >
         {xAxisLabels.map((xLabel, i) => (
           <div
-            className="line-chart__x-label fade-in"
+            className={`line-chart__x-label fade-in${
+              centerXAxisLabels ? " line-chart__x-label--centered" : ""
+            }`}
             key={xLabel}
             style={{ "--label-number": i } as CSSProperties}
           >

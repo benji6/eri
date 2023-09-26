@@ -40,6 +40,7 @@ export default function LineChartDocs() {
         example={
           <Chart.LineChart
             aria-label="Example line chart"
+            centerXAxisLabels={labelType === "centered-x-axis-labels"}
             domain={DOMAIN}
             range={RANGE}
             xAxisLabels={xAxisLabels}
@@ -73,6 +74,9 @@ export default function LineChartDocs() {
         >
           <option value="default">Default labels</option>
           <option value="custom-x-axis-labels">Custom X axis labels</option>
+          <option value="centered-x-axis-labels">
+            Centered custom X axis labels
+          </option>
         </Select>
       </ConfigurableExample>
     </Paper.Group>
