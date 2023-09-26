@@ -40,7 +40,12 @@ export default function LineChart({
   ...rest
 }: IProps) {
   return (
-    <div {...rest} className="line-chart">
+    <div
+      {...rest}
+      className={`line-chart${
+        centerXAxisLabels ? " line-chart--centered" : ""
+      }`}
+    >
       <div className="line-chart__y-title fade-in nowrap">{yAxisTitle}</div>
 
       {/* y axis */}

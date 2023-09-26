@@ -10,6 +10,9 @@
   gap: var(--space-1);
   user-select: none;
 }
+.line-chart--centered {
+  margin-inline-end: 0;
+}
 
 .line-chart__x-title {
   font-weight: var(--font-weight-bold);
