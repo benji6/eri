@@ -124,7 +124,7 @@ export default function LineChart({
             className={`line-chart__x-label fade-in${
               centerXAxisLabels ? " line-chart__x-label--centered" : ""
             }`}
-            key={xLabel}
+            key={xLabel + i}
             style={{ "--label-number": i } as CSSProperties}
           >
             {xLabel}
