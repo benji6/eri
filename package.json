@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && run-p build:*",
-    "build:css": "parcel build --no-content-hash --no-optimize --no-source-maps --target css && sed -i.bak 's/Mona-Sans.8d75f120.woff2/Mona-Sans.woff2/g' css-build/*.css && mkdir -p dist && mv css-build/*.css dist && mv css-build/Mona-Sans.8d75f120.woff2 dist/Mona-Sans.woff2 && rm -r css-build",
+    "build:css": "parcel build --no-content-hash --no-optimize --no-source-maps --target css && sed -i.bak 's/Mona-Sans.5bb498ab.woff2/Mona-Sans.woff2/g' css-build/*.css && mkdir -p dist && mv css-build/*.css dist && mv css-build/Mona-Sans.5bb498ab.woff2 dist/Mona-Sans.woff2 && rm -r css-build",
     "build:js": "tsc && node scripts/processBuiltFiles",
     "fmt": "npm run test:lint:css --fix && npm run test:lint:scripts --fix && prettier -u --write '**/*'",
     "start": "parcel --open -p 1235 --target styleguide",
