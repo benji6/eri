@@ -30,7 +30,7 @@
     "url": "https://github.com/benji6/eri/issues"
   },
   "homepage": "https://github.com/benji6/eri#readme",
-  "browserslist": "cover 80%",
+  "browserslist": "cover 86%",
   "targets": {
     "css": {
       "distDir": "css-build",
