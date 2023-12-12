@@ -67,8 +67,8 @@
     "react-element-to-jsx-string": "^15.0.0",
     "react-router-dom": "^6.2.2",
     "semantic-release": "^22.0.5",
-    "stylelint": "^15.1.0",
-    "stylelint-config-recommended": "^13.0.0",
+    "stylelint": "^16.0.2",
+    "stylelint-config-recommended": "^14.0.0",
     "typescript": "^5.0.2"
   },
   "peerDependencies": {
