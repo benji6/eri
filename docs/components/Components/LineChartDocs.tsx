@@ -11,6 +11,7 @@ const TRENDLINE_POINTS_COUNT = POINTS_COUNT / 2;
 
 export default function LineChartDocs() {
   const [props, setProps] = useState<{
+    pointColor: string | undefined;
     data: TPoint[];
     trendlinePoints: TPoint[];
     xAxisTitle?: string;
@@ -20,6 +21,7 @@ export default function LineChartDocs() {
       (n / (POINTS_COUNT - 1)) * (DOMAIN[1] - DOMAIN[0]) + DOMAIN[0],
       Math.round(Math.random() * (RANGE[1] - RANGE[0]) + RANGE[0]),
     ]),
+    pointColor: undefined,
     trendlinePoints: Array.from({ length: TRENDLINE_POINTS_COUNT }, (_, n) => [
       (n / (TRENDLINE_POINTS_COUNT - 1)) * (DOMAIN[1] - DOMAIN[0]) + DOMAIN[0],
       Math.round((Math.random() / 2 + 0.25) * (RANGE[1] - RANGE[0]) + RANGE[0]),
@@ -42,6 +44,11 @@ export default function LineChartDocs() {
             aria-label="Example line chart"
             centerXAxisLabels={labelType === "centered-x-axis-labels"}
             domain={DOMAIN}
+            points={props.data.map(([x, y]) => ({
+              color: props.pointColor,
+              x,
+              y,
+            }))}
             range={RANGE}
             xAxisLabels={xAxisLabels}
             xAxisTitle={props.xAxisTitle}
@@ -53,7 +60,6 @@ export default function LineChartDocs() {
               thickness={2}
             />
             <Chart.Line data={props.data} />
-            <Chart.Points data={props.data} />
           </Chart.LineChart>
         }
       >
@@ -78,6 +84,11 @@ export default function LineChartDocs() {
             Centered custom X axis labels
           </option>
         </Select>
+        <PropControlString
+          name="pointColor"
+          props={props}
+          setProps={setProps}
+        />
       </ConfigurableExample>
     </Paper.Group>
   );

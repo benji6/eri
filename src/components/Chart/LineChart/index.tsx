@@ -2,6 +2,7 @@ import "./style.css";
 import { CHART_ASPECT_RATIO, LINE_WIDTH_0, LINE_WIDTH_2 } from "../constants";
 import { CSSProperties, HTMLAttributes } from "react";
 import { DomainContext, RangeContext } from "../contexts";
+import Points from "../Points";
 
 const AXIS_LABEL_COUNT = 6;
 
@@ -9,17 +10,19 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
   centerXAxisLabels?: boolean;
   children?: React.ReactNode;
   domain: [number, number];
+  points?: { color?: string; x: number; y: number }[];
   range: [number, number];
-  xAxisTitle?: string;
   xAxisLabels?: string[];
-  yAxisTitle?: string;
+  xAxisTitle?: string;
   yAxisLabels?: string[];
+  yAxisTitle?: string;
 }
 
 export default function LineChart({
   centerXAxisLabels = false,
   children,
   domain,
+  points,
   range,
   xAxisLabels = [...Array(AXIS_LABEL_COUNT).keys()].map((n) =>
     String(
@@ -109,7 +112,10 @@ export default function LineChart({
                 <rect x={0} y={0} height={1} width={CHART_ASPECT_RATIO} />
               </clipPath>
             </defs>
-            <g clipPath="url(#plot-area-clip-path)">{children}</g>
+            <g clipPath="url(#plot-area-clip-path)">
+              {children}
+              {points && <Points data={points} />}
+            </g>
           </RangeContext.Provider>
         </DomainContext.Provider>
       </svg>
