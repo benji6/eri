@@ -128,13 +128,13 @@ export default function LineChart({
                 y2={y}
               />
             ))}
+          <defs>
+            <clipPath id="plot-area-clip-path">
+              <rect x={0} y={0} height={1} width={CHART_ASPECT_RATIO} />
+            </clipPath>
+          </defs>
           <DomainContext.Provider value={domain}>
             <RangeContext.Provider value={range}>
-              <defs>
-                <clipPath id="plot-area-clip-path">
-                  <rect x={0} y={0} height={1} width={CHART_ASPECT_RATIO} />
-                </clipPath>
-              </defs>
               <g clipPath="url(#plot-area-clip-path)">{children}</g>
             </RangeContext.Provider>
           </DomainContext.Provider>
