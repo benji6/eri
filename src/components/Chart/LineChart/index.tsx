@@ -2,7 +2,6 @@ import "./style.css";
 import { CHART_ASPECT_RATIO, LINE_WIDTH_0, LINE_WIDTH_2 } from "../constants";
 import { CSSProperties, HTMLAttributes } from "react";
 import { DomainContext, RangeContext } from "../contexts";
-import Points from "../Points";
 
 const AXIS_LABEL_COUNT = 6;
 
@@ -66,59 +65,81 @@ export default function LineChart({
           </div>
         ))}
       </div>
-      <svg
-        className="line-chart__plot-area"
-        viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
-      >
-        {/* x axis grid lines */}
-        {[...Array(xAxisLabels.length + Number(centerXAxisLabels)).keys()]
-          .map(
-            (i) =>
-              (i * CHART_ASPECT_RATIO) /
-              (xAxisLabels.length - Number(!centerXAxisLabels)),
-          )
-          .map((x) => (
-            <line
-              key={x}
-              stroke="var(--color-balance)"
-              strokeDasharray={LINE_WIDTH_2}
-              strokeWidth={LINE_WIDTH_0}
-              x1={x}
-              x2={x}
-              y1={0}
-              y2={1}
-            />
-          ))}
+      <div className="line-chart__plot-area">
+        {points && (
+          <>
+            {points.map(({ color = "var(--color-theme)", x, y }, i) => (
+              <div
+                className="line-chart__point"
+                key={[x, y].join(":")}
+                style={
+                  {
+                    "--point-index": i,
+                    "--total-points": points.length,
+                    backgroundColor: color,
+                    bottom: `calc(${
+                      (y - range[0]) / (range[1] - range[0])
+                    } * (100% - var(--border-width-1)) - var(--point-diameter) / 2 + var(--border-width-1))`,
+                    left: `calc(${
+                      (x - domain[0]) / (domain[1] - domain[0])
+                    } * (100% - var(--border-width-1)) - var(--point-diameter) / 2 + var(--border-width-1))`,
+                  } as CSSProperties
+                }
+              />
+            ))}
+          </>
+        )}
+        <svg
+          className="line-chart__svg"
+          viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
+        >
+          {/* x axis grid lines */}
+          {[...Array(xAxisLabels.length + Number(centerXAxisLabels)).keys()]
+            .map(
+              (i) =>
+                (i * CHART_ASPECT_RATIO) /
+                (xAxisLabels.length - Number(!centerXAxisLabels)),
+            )
+            .map((x) => (
+              <line
+                key={x}
+                stroke="var(--color-balance)"
+                strokeDasharray={LINE_WIDTH_2}
+                strokeWidth={LINE_WIDTH_0}
+                x1={x}
+                x2={x}
+                y1={0}
+                y2={1}
+              />
+            ))}
 
-        {/* y axis grid lines */}
-        {yAxisLabels
-          .map((_, i) => i / (yAxisLabels.length - 1))
-          .map((y) => (
-            <line
-              key={y}
-              stroke="var(--color-balance)"
-              strokeDasharray={LINE_WIDTH_2}
-              strokeWidth={LINE_WIDTH_0}
-              x1={0}
-              x2={CHART_ASPECT_RATIO}
-              y1={y}
-              y2={y}
-            />
-          ))}
-        <DomainContext.Provider value={domain}>
-          <RangeContext.Provider value={range}>
-            <defs>
-              <clipPath id="plot-area-clip-path">
-                <rect x={0} y={0} height={1} width={CHART_ASPECT_RATIO} />
-              </clipPath>
-            </defs>
-            <g clipPath="url(#plot-area-clip-path)">
-              {children}
-              {points && <Points data={points} />}
-            </g>
-          </RangeContext.Provider>
-        </DomainContext.Provider>
-      </svg>
+          {/* y axis grid lines */}
+          {yAxisLabels
+            .map((_, i) => i / (yAxisLabels.length - 1))
+            .map((y) => (
+              <line
+                key={y}
+                stroke="var(--color-balance)"
+                strokeDasharray={LINE_WIDTH_2}
+                strokeWidth={LINE_WIDTH_0}
+                x1={0}
+                x2={CHART_ASPECT_RATIO}
+                y1={y}
+                y2={y}
+              />
+            ))}
+          <DomainContext.Provider value={domain}>
+            <RangeContext.Provider value={range}>
+              <defs>
+                <clipPath id="plot-area-clip-path">
+                  <rect x={0} y={0} height={1} width={CHART_ASPECT_RATIO} />
+                </clipPath>
+              </defs>
+              <g clipPath="url(#plot-area-clip-path)">{children}</g>
+            </RangeContext.Provider>
+          </DomainContext.Provider>
+        </svg>
+      </div>
 
       {/* x axis */}
       <div

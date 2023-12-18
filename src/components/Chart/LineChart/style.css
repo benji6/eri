@@ -52,8 +52,37 @@
 }
 
 .line-chart__plot-area {
+  display: flex;
+  position: relative;
+}
+
+.line-chart__svg {
   border-bottom: var(--border-width-1) solid var(--color-figure);
   border-left: var(--border-width-1) solid var(--color-figure);
+}
+
+.line-chart__point {
+  --point-diameter: 0.275em;
+  animation: point-appear var(--time-2) var(--easing-standard) forwards;
+
+  /* --point-index and --total-points set by JS */
+  animation-delay: calc(
+    var(--point-index) / (var(--total-points) - 1) *
+      (var(--time-3) - var(--time-2) / 2)
+  );
+  border-radius: 100%;
+  height: var(--point-diameter);
+  opacity: 1;
+  position: absolute;
+  scale: 0;
+  width: var(--point-diameter);
+}
+
+@keyframes point-appear {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 .line-chart__x-axis {
