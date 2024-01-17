@@ -54,3 +54,4 @@ export { default as VerifyPage } from "./components/VerifyPage";
 export { default as WordCloud } from "./components/WordCloud";
 
 export { default as getCssVar } from "./utils/getCssVar";
+export { default as shuffleBackgroundMesh } from "./utils/shuffleBackgroundMesh";

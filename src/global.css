@@ -11,13 +11,57 @@
 }
 
 html {
-  background: linear-gradient(
-    calc(21turn / 32),
-    var(--color-theme-least) 0%,
-    var(--color-ground) 33%,
-    var(--color-ground) 100%
-  );
-  background-color: var(--color-ground);
+  --mesh-0-x: 6%;
+  --mesh-0-y: 84%;
+  --mesh-1-x: 38%;
+  --mesh-1-y: 95%;
+  --mesh-2-x: 54%;
+  --mesh-2-y: 3%;
+  --mesh-3-x: 59%;
+  --mesh-3-y: 91%;
+  --mesh-4-x: 41%;
+  --mesh-4-y: 56%;
+  --mesh-5-x: 98%;
+  --mesh-5-y: 2%;
+  --mesh-6-x: 72%;
+  --mesh-6-y: 62%;
+
+  background-color: var(--color-theme-least);
+  background-image: radial-gradient(
+      at var(--mesh-0-x) var(--mesh-0-y),
+      var(--color-highlight-0) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--mesh-1-x) var(--mesh-1-y),
+      var(--color-highlight-1) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--mesh-2-x) var(--mesh-2-y),
+      var(--color-highlight-2) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--mesh-3-x) var(--mesh-3-y),
+      var(--color-highlight-3) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--mesh-4-x) var(--mesh-4-y),
+      var(--color-highlight-4) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--mesh-5-x) var(--mesh-5-y),
+      var(--color-highlight-5) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--mesh-6-x) var(--mesh-6-y),
+      var(--color-theme-less) 0,
+      transparent 50%
+    );
   border-color: var(--color-figure-more);
   color: var(--color-figure);
   font-family: "Mona Sans", sans-serif;
