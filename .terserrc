@@ -1,3 +1,5 @@
 {
-  "mangle": false
+  "mangle": {
+    "keep_fnames": true
+  }
 }
