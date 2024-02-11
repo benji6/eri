@@ -33,6 +33,11 @@
   content: "";
   display: block;
   left: 10%;
+
+  /* HACK: sometimes, in Chromium browsers, a column with zero height appears to take the full height.
+  I assume there is something going wrong with the parent expanding to 100% whilst this pseudo-element is set to 0%.
+  This hack makes columns with zero height transparent as a mitigation against the browser rendering them incorrectly. */
+  opacity: calc(min(var(--column-height), 1%) * 100);
   pointer-events: auto;
   position: absolute;
   right: 10%;
