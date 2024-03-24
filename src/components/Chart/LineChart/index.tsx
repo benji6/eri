@@ -41,6 +41,9 @@ export default function LineChart({
   yAxisTitle,
   ...rest
 }: IProps) {
+  const pointsWithinDomain = points?.filter(
+    ({ x }) => x >= domain[0] && x <= domain[1],
+  );
   return (
     <div
       {...rest}
@@ -66,29 +69,31 @@ export default function LineChart({
         ))}
       </div>
       <div className="line-chart__plot-area">
-        {points && (
+        {pointsWithinDomain?.length ? (
           <>
-            {points.map(({ color = "var(--color-theme)", x, y }, i) => (
-              <div
-                className="line-chart__point"
-                key={[x, y].join(":")}
-                style={
-                  {
-                    "--point-index": i,
-                    "--total-points": points.length,
-                    backgroundColor: color,
-                    bottom: `calc(${
-                      (y - range[0]) / (range[1] - range[0])
-                    } * (100% - var(--border-width-1)) - var(--point-diameter) / 2 + var(--border-width-1))`,
-                    left: `calc(${
-                      (x - domain[0]) / (domain[1] - domain[0])
-                    } * (100% - var(--border-width-1)) - var(--point-diameter) / 2 + var(--border-width-1))`,
-                  } as CSSProperties
-                }
-              />
-            ))}
+            {pointsWithinDomain.map(
+              ({ color = "var(--color-theme)", x, y }, i) => (
+                <div
+                  className="line-chart__point"
+                  key={[x, y].join(":")}
+                  style={
+                    {
+                      "--point-index": i,
+                      "--total-points": pointsWithinDomain.length,
+                      backgroundColor: color,
+                      bottom: `calc(${
+                        (y - range[0]) / (range[1] - range[0])
+                      } * (100% - var(--border-width-1)) - var(--point-diameter) / 2 + var(--border-width-1))`,
+                      left: `calc(${
+                        (x - domain[0]) / (domain[1] - domain[0])
+                      } * (100% - var(--border-width-1)) - var(--point-diameter) / 2 + var(--border-width-1))`,
+                    } as CSSProperties
+                  }
+                />
+              ),
+            )}
           </>
-        )}
+        ) : undefined}
         <svg
           className="line-chart__svg"
           viewBox={`0 0 ${CHART_ASPECT_RATIO} 1`}
