@@ -4,7 +4,10 @@ import { useState } from "react";
 
 export default function DialogDocs() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const handleDialogClose = () => setIsDialogOpen(false);
+  const handleDialogClose = () => {
+    console.log("Dialog `onClose` invoked");
+    setIsDialogOpen(false);
+  };
   const handleDialogOpen = () => setIsDialogOpen(true);
 
   return (

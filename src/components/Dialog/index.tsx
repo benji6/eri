@@ -22,6 +22,11 @@ export default function Dialog({
 }: IProps) {
   const dialogRef = React.useRef<HTMLDialogElement>(null);
 
+  React.useEffect(() => {
+    if (!dialogRef.current) throw Error("`dialogRef.current` not defined");
+    dialogRef.current.onclose = onClose;
+  }, [onClose]);
+
   const closeDialog = React.useCallback(() => {
     if (!dialogRef.current) return;
     dialogRef.current.setAttribute("data-closing", "");
@@ -32,11 +37,10 @@ export default function Dialog({
         if (!dialogRef.current) return;
         dialogRef.current.removeAttribute("data-closing");
         dialogRef.current.close();
-        onClose();
       },
       { once: true },
     );
-  }, [onClose]);
+  }, []);
 
   React.useEffect(() => {
     if (!dialogRef.current || dialogRef.current.open === open) return;
