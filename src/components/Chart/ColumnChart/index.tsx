@@ -92,7 +92,7 @@ export default function ColumnChart({
                     // where the bar appears visible during the rendering animation
                     y === undefined
                       ? "transparent"
-                      : color ?? "var(--color-theme)",
+                      : (color ?? "var(--color-theme)"),
                 } as CSSProperties
               }
             />
