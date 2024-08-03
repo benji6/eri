@@ -7,11 +7,11 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf dist && run-p build:*",
-    "build:css": "parcel build --no-content-hash --no-optimize --no-source-maps --target css && sed -i.bak 's/Mona-Sans.f08e3f6b.woff2/Mona-Sans.woff2/g' css-build/*.css && mkdir -p dist && mv css-build/*.css dist && mv css-build/Mona-Sans.f08e3f6b.woff2 dist/Mona-Sans.woff2 && rm -r css-build",
+    "build:css": "parcel build --no-content-hash --target css && sed -i.bak 's/Mona-Sans.f08e3f6b.woff2/Mona-Sans.woff2/g' css-build/*.css && mkdir -p dist && mv css-build/*.css dist && mv css-build/Mona-Sans.f08e3f6b.woff2 dist/Mona-Sans.woff2 && rm -r css-build",
     "build:js": "tsc && node scripts/processBuiltFiles",
     "fmt": "npm run test:lint:css --fix && npm run test:lint:scripts --fix && prettier -u --write '**/*'",
     "start": "parcel --open -p 1235 --target styleguide",
-    "style-guide:build": "rm -rf build && parcel build --no-source-maps --target styleguide",
+    "style-guide:build": "rm -rf build && parcel build --target styleguide",
     "test": "run-p test:*",
     "test:audit": "npm audit --audit-level=low",
     "test:fmt": "prettier --check -u '**/*'",
@@ -34,10 +34,13 @@
   "targets": {
     "css": {
       "distDir": "css-build",
-      "source": "src/index.ts"
+      "optimize": false,
+      "source": "src/index.ts",
+      "sourceMap": false
     },
     "styleguide": {
       "distDir": "build",
+      "scopeHoist": false,
       "source": "docs/index.html"
     }
   },
