@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-export default function _404() {
+export default function _404(): undefined {
   const location = useLocation();
   const navigate = useNavigate();
 

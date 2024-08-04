@@ -4,10 +4,10 @@ import ConfigurableExample from "./_ConfigurableExample";
 import { POKEMON_NAMES } from "../../constants";
 
 export default function WordCloudDocs() {
-  const [words, setWords] = useState({});
+  const [words, setWords] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    const newWords = {};
+    const newWords: Record<string, number> = {};
     for (const name of POKEMON_NAMES)
       newWords[name] = Math.ceil(Math.random() ** 2 * 128);
     setWords(newWords);

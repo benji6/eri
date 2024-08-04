@@ -28,12 +28,15 @@ export default function ConfigurableExample({
   );
 }
 
-export const PropControlBoolean = <Props extends { [k: string]: any }>({
+export const PropControlBoolean = <
+  Name extends string,
+  Props extends Record<string, any>,
+>({
   name,
   props,
   setProps,
 }: {
-  name: keyof Props;
+  name: Name;
   props: Props;
   setProps: React.Dispatch<React.SetStateAction<typeof props>>;
 }) => (
@@ -44,14 +47,17 @@ export const PropControlBoolean = <Props extends { [k: string]: any }>({
   />
 );
 
-export const PropControlEnum = <Props extends { [k: string]: any }>({
+export const PropControlEnum = <
+  Name extends string,
+  Props extends Record<string, any>,
+>({
   name,
   options,
   props,
   setProps,
 }: {
-  name: keyof Props;
-  options: string[];
+  name: Name;
+  options: (string | undefined)[];
   props: Props;
   setProps: React.Dispatch<React.SetStateAction<typeof props>>;
 }) => (
@@ -73,14 +79,17 @@ export const PropControlEnum = <Props extends { [k: string]: any }>({
   </Select>
 );
 
-export const PropControlNumber = <Props extends { [k: string]: any }>({
+export const PropControlNumber = <
+  Name extends string,
+  Props extends Record<string, any>,
+>({
   max = Infinity,
   name,
   props,
   setProps,
 }: {
   max?: number;
-  name: keyof Props;
+  name: Name;
   props: Props;
   setProps: React.Dispatch<React.SetStateAction<typeof props>>;
 }) => (
@@ -95,12 +104,15 @@ export const PropControlNumber = <Props extends { [k: string]: any }>({
   />
 );
 
-export const PropControlString = <Props extends { [k: string]: any }>({
+export const PropControlString = <
+  Name extends string,
+  Props extends Record<string, any>,
+>({
   name,
   props,
   setProps,
 }: {
-  name: keyof Props;
+  name: Name;
   props: Props;
   setProps: React.Dispatch<React.SetStateAction<typeof props>>;
 }) => (
