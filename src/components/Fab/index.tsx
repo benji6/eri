@@ -1,13 +1,13 @@
 import "./style.css";
-import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { CSSTransition } from "react-transition-group";
+import { ButtonHTMLAttributes, useEffect } from "react";
 import { PORTAL_CONTAINERS } from "../../constants";
 import { getCssTime0 } from "../../utils/getCssVar";
+import useTransition from "react-transition-state";
 
 const PORTAL_EL = PORTAL_CONTAINERS.fab;
 
-export interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   hide?: boolean;
 }
 
@@ -16,18 +16,25 @@ export default function Fab({
   type = "submit", // Formik gets grumpy if you don't specify this
   ...rest
 }: IProps) {
+  const [transitionState, toggle] = useTransition({
+    initialEntered: true,
+    mountOnEnter: true,
+    preEnter: true,
+    timeout: getCssTime0() + 100,
+    unmountOnExit: true,
+  });
+  useEffect(() => toggle(!hide), [hide]);
+
   if (!PORTAL_EL) return;
 
   return ReactDOM.createPortal(
-    <CSSTransition
-      classNames="fab-"
-      in={!hide}
-      mountOnEnter
-      timeout={{ exit: getCssTime0() + 100 }}
-      unmountOnExit
-    >
-      <button {...rest} className="fab br-max p-3 z-1" type={type} />
-    </CSSTransition>,
+    transitionState.isMounted && (
+      <button
+        {...rest}
+        className={`fab br-max p-3 z-1 fab--${transitionState.status}`}
+        type={type}
+      />
+    ),
     PORTAL_EL,
   );
 }

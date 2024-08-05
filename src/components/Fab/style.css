@@ -17,8 +17,8 @@
   box-shadow: var(--box-shadow-0);
 }
 
-.fab--enter,
-.fab--exit-active {
+.fab--exiting,
+.fab--preEnter {
   opacity: 0;
   scale: 0;
   transition-timing-function: var(--easing-accelerate);

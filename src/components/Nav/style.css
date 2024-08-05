@@ -32,8 +32,8 @@
   }
 }
 
-.nav--enter,
-.nav--exit-active {
+.nav--exiting,
+.nav--preEnter {
   translate: var(--nav-width);
   transition-timing-function: var(--easing-accelerate);
 }

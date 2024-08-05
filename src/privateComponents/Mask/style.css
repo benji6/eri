@@ -15,8 +15,8 @@
   transition: opacity var(--time-1) var(--easing-decelerate);
 }
 
-.mask__mask--enter,
-.mask__mask--exit-active {
+.mask__mask--exiting,
+.mask__mask--preEnter {
   opacity: 0;
   transition-duration: var(--time-2);
 }
