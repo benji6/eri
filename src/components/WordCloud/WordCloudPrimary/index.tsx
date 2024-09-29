@@ -12,7 +12,7 @@ interface WordToRender {
 }
 
 export interface IProps extends SVGProps<SVGSVGElement> {
-  words: { [word: string]: number };
+  words: Record<string, number>;
 }
 
 export default function WordCloudPrimary({ words, ...rest }: IProps) {
@@ -31,7 +31,6 @@ export default function WordCloudPrimary({ words, ...rest }: IProps) {
 
   useEffect(() => {
     if (!workerRef.current) {
-      // eslint-disable-next-line no-console
       console.error("workerRef.current is not set in Eri WordCloud");
       return;
     }
@@ -43,7 +42,7 @@ export default function WordCloudPrimary({ words, ...rest }: IProps) {
     const wordsNotRenderedCount = wordCount - wordsToRender.length;
     if (wordsNotRenderedCount) {
       const textToRender = new Set(wordsToRender.map(({ text }) => text));
-      // eslint-disable-next-line no-console
+
       console.debug(
         `Eri WordCloud only rendered ${(
           (wordsToRender.length / wordCount) *

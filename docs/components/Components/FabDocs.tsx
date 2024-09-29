@@ -7,11 +7,11 @@ import { IProps } from "../../../src/components/Fab";
 import { useState } from "react";
 
 export default function FabDocs() {
-  const [props, setProps] = useState<IProps>({
+  const [demoProps, setDemoProps] = useState<IProps>({
     children: "Add widget",
     hide: false,
   });
-  const { children, ...rest } = props;
+  const { children, ...rest } = demoProps;
 
   return (
     <Paper.Group>
@@ -38,8 +38,16 @@ export default function FabDocs() {
         }
         rendersInPortal
       >
-        <PropControlString name="children" props={props} setProps={setProps} />
-        <PropControlBoolean name="hide" props={props} setProps={setProps} />
+        <PropControlString
+          name="children"
+          props={demoProps}
+          setProps={setDemoProps}
+        />
+        <PropControlBoolean
+          name="hide"
+          props={demoProps}
+          setProps={setDemoProps}
+        />
       </ConfigurableExample>
     </Paper.Group>
   );

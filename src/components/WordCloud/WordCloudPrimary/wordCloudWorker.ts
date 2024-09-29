@@ -63,13 +63,12 @@ onmessage = async (e) => {
   const canvas = new OffscreenCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
   const context = canvas.getContext("2d", {
     willReadFrequently: true,
-  })!;
+  });
+  if (!context) throw Error("failed to get context");
   context.fillStyle = context.strokeStyle = "red";
   context.textAlign = "center";
 
-  const sortedMeasuredWords = Object.entries(
-    e.data as { [word: string]: number },
-  )
+  const sortedMeasuredWords = Object.entries(e.data as Record<string, number>)
     .sort((a, b) => {
       const weightingDifference = b[1] - a[1];
       if (weightingDifference) return weightingDifference;
@@ -240,6 +239,7 @@ onmessage = async (e) => {
           for (let i = 0; i <= w; i++) {
             if (
               ((last << msx) |
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                 (i < w ? (last = d.sprite![j * w + i]) >>> sx : 0)) &
               board[x + i]
             )
@@ -265,6 +265,7 @@ onmessage = async (e) => {
           for (let i = 0; i <= w; i++) {
             board[x + i] |=
               (last << msx) |
+              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
               (i < w ? (last = d.sprite![j * w + i]) >>> sx : 0);
           }
           x += SVG_WIDTH;

@@ -20,7 +20,7 @@ export default function NavDocs() {
       </Paper>
       <Paper>
         <ReactCodeSnippet>
-          <Nav onClose={() => {}} open={false}>
+          <Nav onClose={() => void 0} open={false}>
             <Nav.List>
               <Nav.Link to="/a">Link A</Nav.Link>
               <Nav.Link to="/b">Link B</Nav.Link>

@@ -69,6 +69,7 @@ export default function SignInPage({ onSubmit, ...rest }: Props) {
         >
           <TextField
             autoComplete="email"
+            // eslint-disable-next-line jsx-a11y/no-autofocus
             autoFocus={!hasDefaultEmailAddress}
             defaultValue={defaultEmailAddress || undefined}
             error={emailError}
@@ -78,6 +79,7 @@ export default function SignInPage({ onSubmit, ...rest }: Props) {
           />
           <TextField
             autoComplete="current-password"
+            // eslint-disable-next-line jsx-a11y/no-autofocus
             autoFocus={hasDefaultEmailAddress}
             error={passwordError}
             label="Password"

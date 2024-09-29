@@ -55,6 +55,7 @@ export default function ForgotPasswordPage({ onSubmit, ...rest }: Props) {
         >
           <TextField
             autoComplete="email"
+            // eslint-disable-next-line jsx-a11y/no-autofocus
             autoFocus
             error={emailError}
             label="Email"

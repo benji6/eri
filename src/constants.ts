@@ -8,11 +8,10 @@ function createPortalContainer(id?: string): HTMLDivElement | undefined {
 }
 
 // Order is important here so that things are layered correctly
-/* eslint-disable sort-keys */
+
 export const PORTAL_CONTAINERS = {
   fab: createPortalContainer(),
   quickNav: createPortalContainer("quick-nav"),
   nav: createPortalContainer(),
   dialog: createPortalContainer(),
 } as const;
-/* eslint-enable sort-keys */

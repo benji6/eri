@@ -10,7 +10,7 @@ const RANGE: [number, number] = [0, 100];
 const TRENDLINE_POINTS_COUNT = POINTS_COUNT / 2;
 
 export default function LineChartDocs() {
-  const [props, setProps] = useState<{
+  const [demoProps, setDemoProps] = useState<{
     pointColor: string | undefined;
     data: TPoint[];
     trendlinePoints: TPoint[];
@@ -44,34 +44,34 @@ export default function LineChartDocs() {
             aria-label="Example line chart"
             centerXAxisLabels={labelType === "centered-x-axis-labels"}
             domain={DOMAIN}
-            points={props.data.map(([x, y]) => ({
-              color: props.pointColor,
+            points={demoProps.data.map(([x, y]) => ({
+              color: demoProps.pointColor,
               x,
               y,
             }))}
             range={RANGE}
             xAxisLabels={xAxisLabels}
-            xAxisTitle={props.xAxisTitle}
-            yAxisTitle={props.yAxisTitle}
+            xAxisTitle={demoProps.xAxisTitle}
+            yAxisTitle={demoProps.yAxisTitle}
           >
             <Chart.Line
               color="var(--color-balance-less)"
-              data={props.trendlinePoints}
+              data={demoProps.trendlinePoints}
               thickness={2}
             />
-            <Chart.Line data={props.data} />
+            <Chart.Line data={demoProps.data} />
           </Chart.LineChart>
         }
       >
         <PropControlString
           name="xAxisTitle"
-          props={props}
-          setProps={setProps}
+          props={demoProps}
+          setProps={setDemoProps}
         />
         <PropControlString
           name="yAxisTitle"
-          props={props}
-          setProps={setProps}
+          props={demoProps}
+          setProps={setDemoProps}
         />
         <Select
           onChange={(e) => setLabelType(e.target.value)}
@@ -86,8 +86,8 @@ export default function LineChartDocs() {
         </Select>
         <PropControlString
           name="pointColor"
-          props={props}
-          setProps={setProps}
+          props={demoProps}
+          setProps={setDemoProps}
         />
       </ConfigurableExample>
     </Paper.Group>

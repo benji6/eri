@@ -3,7 +3,7 @@ import WordCloudPrimary from "./WordCloudPrimary";
 import WordCloudSecondary from "./WordCloudSecondary";
 
 export interface IProps extends SVGProps<SVGSVGElement> {
-  words: { [word: string]: number };
+  words: Record<string, number>;
 }
 
 export default memo(function WordCloud({ ...props }: IProps) {

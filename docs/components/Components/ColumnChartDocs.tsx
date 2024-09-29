@@ -7,7 +7,7 @@ import ConfigurableExample, {
 import { useState } from "react";
 
 export default function ColumnChartDocs() {
-  const [props, setProps] = useState<{
+  const [demoProps, setDemoProps] = useState<{
     maxRange?: number;
     rotateXLabels: boolean;
     xAxisTitle: string;
@@ -63,30 +63,34 @@ export default function ColumnChartDocs() {
                 y: 133,
               },
             ]}
-            maxRange={props.maxRange}
-            rotateXLabels={props.rotateXLabels}
-            xAxisTitle={props.xAxisTitle}
-            yAxisTitle={props.yAxisTitle}
+            maxRange={demoProps.maxRange}
+            rotateXLabels={demoProps.rotateXLabels}
+            xAxisTitle={demoProps.xAxisTitle}
+            yAxisTitle={demoProps.yAxisTitle}
           />
         }
         // disabled because JSX element in `data` creates infinite loop in react-element-to-jsx-string
         showCodeSnippet={false}
       >
-        <PropControlNumber name="maxRange" props={props} setProps={setProps} />
+        <PropControlNumber
+          name="maxRange"
+          props={demoProps}
+          setProps={setDemoProps}
+        />
         <PropControlBoolean
           name="rotateXLabels"
-          props={props}
-          setProps={setProps}
+          props={demoProps}
+          setProps={setDemoProps}
         />
         <PropControlString
           name="xAxisTitle"
-          props={props}
-          setProps={setProps}
+          props={demoProps}
+          setProps={setDemoProps}
         />
         <PropControlString
           name="yAxisTitle"
-          props={props}
-          setProps={setProps}
+          props={demoProps}
+          setProps={setDemoProps}
         />
       </ConfigurableExample>
     </Paper.Group>

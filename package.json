@@ -8,8 +8,8 @@
   "scripts": {
     "build": "rm -rf dist && run-p build:*",
     "build:css": "parcel build --no-content-hash --target css && sed -i.bak 's/Mona-Sans.f08e3f6b.woff2/Mona-Sans.woff2/g' css-build/*.css && mkdir -p dist && mv css-build/*.css dist && mv css-build/Mona-Sans.f08e3f6b.woff2 dist/Mona-Sans.woff2 && rm -r css-build",
-    "build:js": "tsc --project tsconfig.build.json && node scripts/processBuiltFiles",
-    "fmt": "npm run test:lint:css --fix && npm run test:lint:scripts --fix && prettier -u --write '**/*'",
+    "build:js": "tsc --project tsconfig.build.json && node scripts/processBuiltFiles.mjs",
+    "fmt": "npm run test:lint:css -- --fix && npm run test:lint:scripts -- --fix && prettier -u --write '**/*'",
     "start": "parcel --open -p 1235 --target styleguide",
     "style-guide:build": "rm -rf build && parcel build --target styleguide",
     "test": "run-p test:*",
@@ -17,7 +17,7 @@
     "test:fmt": "prettier --check -u '**/*'",
     "test:lint": "run-p test:lint:*",
     "test:lint:css": "stylelint '**/*.css'",
-    "test:lint:scripts": "eslint --ext js,ts,tsx .",
+    "test:lint:scripts": "eslint",
     "test:types": "tsc --noEmit"
   },
   "repository": {
@@ -48,17 +48,16 @@
     "react-transition-state": "^2.1.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.0.2",
     "@types/offscreencanvas": "^2019.7.0",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
-    "@typescript-eslint/eslint-plugin": "^7.1.0",
-    "@typescript-eslint/parser": "^7.1.0",
-    "eslint": "^8.16.0",
+    "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
     "highlight.js": "^11.5.0",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.3.2",
@@ -71,7 +70,8 @@
     "semantic-release": "^24.0.0",
     "stylelint": "^16.0.2",
     "stylelint-config-recommended": "^14.0.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0"
   },
   "peerDependencies": {
     "react": "^18.1.0",

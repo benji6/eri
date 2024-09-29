@@ -7,11 +7,11 @@ import { IProps } from "../../../src/components/Spinner";
 import { useState } from "react";
 
 export default function SpinnerDocs() {
-  const [props, setProps] = useState<IProps>({
+  const [demoProps, setDemoProps] = useState<IProps>({
     inline: false,
     margin: undefined,
   });
-  const spinnerEl = <Spinner {...props} />;
+  const spinnerEl = <Spinner {...demoProps} />;
   return (
     <Paper.Group>
       <Paper>
@@ -19,9 +19,9 @@ export default function SpinnerDocs() {
       </Paper>
       <ConfigurableExample
         example={
-          props.inline ? (
+          demoProps.inline ? (
             <p className="center">
-              {props.margin === "end" ? (
+              {demoProps.margin === "end" ? (
                 <>{spinnerEl}An inline example</>
               ) : (
                 <>An inline example{spinnerEl}</>
@@ -32,12 +32,16 @@ export default function SpinnerDocs() {
           )
         }
       >
-        <PropControlBoolean name="inline" props={props} setProps={setProps} />
+        <PropControlBoolean
+          name="inline"
+          props={demoProps}
+          setProps={setDemoProps}
+        />
         <PropControlEnum
           name="margin"
           options={[undefined, "start", "end"]}
-          props={props}
-          setProps={setProps}
+          props={demoProps}
+          setProps={setDemoProps}
         />
       </ConfigurableExample>
     </Paper.Group>

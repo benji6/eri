@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function HeaderDocs() {
-  const [props, setProps] = useState({
+  const [demoProps, setDemoProps] = useState({
     title: "Eri",
   });
 
@@ -17,13 +17,17 @@ export default function HeaderDocs() {
         example={
           <Header>
             <h1>
-              <Link to="#">{props.title}</Link>
+              <Link to="#">{demoProps.title}</Link>
             </h1>
             <Nav.Button />
           </Header>
         }
       >
-        <PropControlString name="title" props={props} setProps={setProps} />
+        <PropControlString
+          name="title"
+          props={demoProps}
+          setProps={setDemoProps}
+        />
       </ConfigurableExample>
     </Paper.Group>
   );

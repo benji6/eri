@@ -2,7 +2,9 @@ import * as ReactDOM from "react-dom/client";
 import App from "./components/App";
 import { shuffleBackgroundMesh } from "../src";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
+const rootEl = document.getElementById("root");
+if (!rootEl) throw Error("no root element");
+ReactDOM.createRoot(rootEl).render(<App />);
 
 onload = () => {
   let { href } = document.location;

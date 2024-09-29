@@ -67,6 +67,7 @@ export default function ChangePasswordPage({ onSubmit, ...rest }: Props) {
           >
             <TextField
               autoComplete="current-password"
+              // eslint-disable-next-line jsx-a11y/no-autofocus
               autoFocus
               error={currentPasswordError}
               label="Current password"

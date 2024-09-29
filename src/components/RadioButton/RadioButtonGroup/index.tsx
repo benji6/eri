@@ -7,7 +7,7 @@ import RadioButton from "..";
 
 export interface IProps
   extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
-  children: Array<React.ReactElement<typeof RadioButton>>;
+  children: React.ReactElement<typeof RadioButton>[];
   disabled?: boolean;
   error?: React.ReactNode;
   label: React.ReactNode;

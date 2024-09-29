@@ -48,6 +48,8 @@ export default function Dialog({
     closeDialog();
   }, [closeDialog, open]);
 
+  if (!PORTAL_CONTAINERS.dialog)
+    throw Error("no dialog portal container element");
   return ReactDOM.createPortal(
     /*eslint-disable-next-line jsx-a11y/click-events-have-key-events*/
     <dialog
@@ -79,6 +81,6 @@ export default function Dialog({
         <div id="dialog-desc">{children}</div>
       </div>
     </dialog>,
-    PORTAL_CONTAINERS.dialog!,
+    PORTAL_CONTAINERS.dialog,
   );
 }

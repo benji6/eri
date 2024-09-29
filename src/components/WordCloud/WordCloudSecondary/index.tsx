@@ -24,8 +24,7 @@ interface IRect {
 const getRange = (xs: number[]): [min: number, max: number] => {
   let min = Infinity;
   let max = -Infinity;
-  for (let i = 0; i < xs.length; i++) {
-    const x = xs[i];
+  for (const x of xs) {
     if (x < min) min = x;
     if (x > max) max = x;
   }
@@ -50,7 +49,7 @@ const archimedeanSpiral = (theta: number): [x: number, y: number] => {
 };
 
 export interface IProps extends React.SVGProps<SVGSVGElement> {
-  words: { [word: string]: number };
+  words: Record<string, number>;
 }
 
 interface IUnplacedWord {
@@ -68,7 +67,7 @@ export default function WordCloudSecondary({ words, ...rest }: IProps) {
   const [renderData, setRenderData] = React.useState<IPlacedWord[]>([]);
 
   React.useEffect(() => {
-    const svgEl = svgRef.current!;
+    const svgEl = svgRef.current;
     const weightings = Object.values(words);
     if (!weightings.length || !svgEl) return;
 
@@ -82,8 +81,7 @@ export default function WordCloudSecondary({ words, ...rest }: IProps) {
       return b[0].length - a[0].length;
     });
 
-    for (let i = 0; i < sortedWordEntries.length; i++) {
-      const [word, weighting] = sortedWordEntries[i];
+    for (const [word, weighting] of sortedWordEntries) {
       const textEl = document.createElementNS(XMLNS, "text");
       const fontSize = weightingRange
         ? ((weighting - minWeighting) / weightingRange) * FONT_SIZE_RANGE +
@@ -107,18 +105,14 @@ export default function WordCloudSecondary({ words, ...rest }: IProps) {
     }
 
     let totalArea = 0;
-    for (let i = 0; i < unplacedWords.length; i++) {
-      const { height, width } = unplacedWords[i];
-      totalArea += height * width;
-    }
+    for (const { height, width } of unplacedWords) totalArea += height * width;
 
     const wordSpaceUsage = totalArea / SVG_ASPECT_RATIO;
     const adjustmentRatio = Math.sqrt(
       OPTIMAL_WORD_SPACE_USAGE / wordSpaceUsage,
     );
 
-    for (let i = 0; i < unplacedWords.length; i++) {
-      const word = unplacedWords[i];
+    for (const word of unplacedWords) {
       word.fontSize *= adjustmentRatio;
       word.height *= adjustmentRatio;
       word.width *= adjustmentRatio;
@@ -126,9 +120,8 @@ export default function WordCloudSecondary({ words, ...rest }: IProps) {
 
     const placedWords: IPlacedWord[] = [];
 
-    for (let i = 0; i < unplacedWords.length; i++) {
+    for (const word of unplacedWords as IPlacedWord[]) {
       let theta = 0;
-      const word = unplacedWords[i] as IPlacedWord;
       let shouldPlaceWord = true;
       do {
         const [x, y] = archimedeanSpiral(theta);

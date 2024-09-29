@@ -1,7 +1,12 @@
-const fs = require("fs").promises;
-const path = require("path");
+import { promises as fs } from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const distPath = path.join(__dirname, "..", "dist");
+const distPath = path.join(
+  path.dirname(fileURLToPath(import.meta.url)),
+  "..",
+  "dist",
+);
 
 const recursiveMapOverFilesByExtension =
   (extension) => (f) => async (pathToCheck) => {
