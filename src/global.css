@@ -5,7 +5,9 @@
   src: url("Mona-Sans.woff2") format("woff2-variations");
 }
 
-* {
+*,
+*::before,
+*::after {
   transition-duration: var(--time-0);
   transition-timing-function: var(--easing-standard);
 }
