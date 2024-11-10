@@ -2,18 +2,18 @@
   --blur-radius-0: 4px;
   --blur-radius-1: 5px;
   --blur-radius-2: 6px;
-
-  --box-shadow-0-no-color: 0 2px var(--blur-radius-0);
-  --box-shadow-1-no-color: 0 3px var(--blur-radius-1);
-  --box-shadow-2-no-color: 0 4px var(--blur-radius-2);
+  --color-box-shadow: var(--color-figure);
 
   --box-shadow-even-0-no-color: 0 0 var(--blur-radius-0);
   --box-shadow-even-1-no-color: 0 0 var(--blur-radius-1);
   --box-shadow-even-2-no-color: 0 0 var(--blur-radius-2);
 
-  --box-shadow-0: var(--box-shadow-0-no-color) hsla(var(--figure-hsl), 0.4);
-  --box-shadow-1: var(--box-shadow-1-no-color) hsla(var(--figure-hsl), 0.6);
-  --box-shadow-2: var(--box-shadow-2-no-color) hsla(var(--figure-hsl), 0.8);
+  --box-shadow-0: 0 2px var(--blur-radius-0)
+    hsla(from var(--color-box-shadow) h s l / 0.4);
+  --box-shadow-1: 0 3px var(--blur-radius-1)
+    hsla(from var(--color-box-shadow) h s l / 0.6);
+  --box-shadow-2: 0 4px var(--blur-radius-2)
+    hsla(from var(--color-box-shadow) h s l / 0.8);
 
   --box-shadow-input-focus: var(--box-shadow-even-0-no-color)
     var(--color-theme-less);
@@ -28,8 +28,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --box-shadow-0: 0;
-    --box-shadow-1: 0;
-    --box-shadow-2: 0;
+    --color-box-shadow: var(--color-ground-less);
   }
 }
