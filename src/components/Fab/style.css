@@ -1,10 +1,6 @@
 .fab {
   align-items: center;
-  background: linear-gradient(
-    45deg,
-    var(--color-theme-more),
-    var(--color-theme-less)
-  );
+  background: var(--color-gradient);
   bottom: var(--space-2);
   box-shadow: var(--box-shadow-1);
   color: var(--color-ground);

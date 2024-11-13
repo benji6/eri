@@ -28,7 +28,7 @@ html {
   --mesh-6-x: 72%;
   --mesh-6-y: 62%;
 
-  background-color: var(--color-theme-least);
+  background-color: var(--color-theme-less);
   background-image: radial-gradient(
       at var(--mesh-0-x) var(--mesh-0-y),
       var(--color-highlight-0) 0,
@@ -73,6 +73,12 @@ html {
   transition-property: background-color, color;
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--color-ground);
+  }
+}
+
 ::selection {
   background-color: var(--color-highlight-default);
   color: var(--color-figure-more);
@@ -97,7 +103,7 @@ main {
 
 a {
   color: var(--color-theme);
-  transition-property: color, text-decoration-color;
+  transition-property: filter, text-decoration-color;
 }
 
 a,
@@ -109,33 +115,29 @@ button {
   /* Includes transition properties used by other buttons */
   transition-property: box-shadow, filter, opacity, scale;
 }
-button:active:not(:disabled) {
-  filter: brightness(0.8) saturate(1.2);
-}
+
 button:disabled:not(.pagination__button) {
   filter: grayscale(0.5);
   opacity: 0.75;
 }
 @media (hover: hover) {
-  button:not(:disabled):not(:active):hover {
-    filter: brightness(1.2) saturate(1.2);
+  :where(a, button:not(:disabled):not(:active)):hover {
+    filter: brightness(1.25) saturate(1.25) contrast(1.25);
   }
-}
-
-a::-moz-focus-inner {
-  border: none;
-}
-
-@media (hover: hover) {
   a:hover {
-    color: var(--color-theme-less);
     text-decoration-color: transparent;
   }
 }
 
+:where(a, button:not(:disabled)):active {
+  filter: brightness(0.9) saturate(0.9) contrast(1.5);
+}
 a:active {
-  color: var(--color-theme-more);
   text-decoration-color: transparent;
+}
+
+a::-moz-focus-inner {
+  border: none;
 }
 
 blockquote {
@@ -210,7 +212,7 @@ h3 + h4 {
 
 hr {
   border-bottom: none;
-  border-color: var(--color-balance-less);
+  border-color: var(--color-balance);
   border-inline: none;
   border-width: var(--border-width-2);
   margin: var(--space-3) 0;

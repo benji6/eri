@@ -13,7 +13,6 @@
 }
 
 .quick-nav-link:active {
-  background-color: var(--color-theme-more);
   color: var(--color-ground);
 }
 

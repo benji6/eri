@@ -11,7 +11,7 @@
   flex-shrink: 0;
   height: var(--toggle-button-diameter);
   padding: var(--border-width-2);
-  transition-property: background-color, border-color;
+  transition-property: background-color, border-color, filter;
   width: var(--toggle-width);
 }
 
@@ -50,7 +50,7 @@
 }
 
 .toggle__input:disabled ~ .toggle__appearance {
-  background: var(--color-balance-less);
+  background: var(--color-balance);
 }
 .toggle__input:disabled ~ .toggle__appearance::after {
   background: var(--color-ground-less);
@@ -58,10 +58,11 @@
 
 @media (hover: hover) {
   .toggle__input:hover:not(:disabled) ~ .toggle__appearance {
-    background: var(--color-balance-less);
+    background: var(--color-balance);
   }
   .toggle__input:checked:hover:not(:disabled) ~ .toggle__appearance {
-    background: var(--color-positive-less);
+    background: var(--color-positive);
+    filter: brightness(1.1);
   }
 }
 

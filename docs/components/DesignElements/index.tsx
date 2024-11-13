@@ -119,9 +119,7 @@ export default function DesignElements() {
         </DisplayGroup>
         <h4>Balance</h4>
         <DisplayGroup>
-          <Color varName="--color-balance-more" />
           <Color varName="--color-balance" />
-          <Color varName="--color-balance-less" />
         </DisplayGroup>
         <h4>Ground</h4>
         <DisplayGroup>
@@ -140,21 +138,16 @@ export default function DesignElements() {
         </p>
         <DisplayGroup>
           <Color varName="--color-theme-app" />
-          <Color varName="--color-theme-more" />
           <Color varName="--color-theme" />
           <Color varName="--color-theme-less" />
-          <Color varName="--color-theme-least" />
         </DisplayGroup>
         <h4>Negative</h4>
         <DisplayGroup>
-          <Color varName="--color-negative-more" />
           <Color varName="--color-negative" />
-          <Color varName="--color-negative-less" />
         </DisplayGroup>
         <h4>Positive</h4>
         <DisplayGroup>
           <Color varName="--color-positive" />
-          <Color varName="--color-positive-less" />
         </DisplayGroup>
         <h4>Highlight</h4>
         <DisplayGroup>

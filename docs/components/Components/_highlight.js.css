@@ -15,5 +15,5 @@
 .hljs-attribute,
 .hljs-name,
 .hljs-tag {
-  color: var(--color-theme-less);
+  color: var(--color-theme);
 }

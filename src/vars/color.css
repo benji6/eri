@@ -19,57 +19,21 @@
     var(--color-min) 10%
   );
 
-  --color-balance-more: color-mix(
-    in oklab,
-    var(--color-min),
-    var(--color-max) 37%
-  );
   --color-balance: color-mix(in oklab, var(--color-min), var(--color-max));
-  --color-balance-less: color-mix(
-    in oklab,
-    var(--color-min),
-    var(--color-max) 63%
-  );
 
   --color-theme-app: color-mix(
     in hsl,
     var(--color-theme),
     var(--color-min) 30%
   );
-  --color-theme-more: color-mix(
-    in hsl,
-    var(--color-theme),
-    var(--color-min) 15%
-  );
   --color-theme-less: color-mix(
     in hsl,
     var(--color-theme),
     var(--color-max) 15%
   );
-  --color-theme-least: color-mix(
-    in hsl,
-    var(--color-theme),
-    var(--color-max) 80%
-  );
 
-  --color-negative-more: hsl(345, 90%, 43%);
-  --color-negative: color-mix(
-    in hsl,
-    var(--color-negative-more),
-    var(--color-max) 8%
-  );
-  --color-negative-less: color-mix(
-    in hsl,
-    var(--color-negative-more),
-    var(--color-max) 16%
-  );
-
+  --color-negative: hsl(345, 90%, 45%);
   --color-positive: hsl(150, 75%, 44%);
-  --color-positive-less: color-mix(
-    in hsl,
-    var(--color-positive),
-    var(--color-max) 8%
-  );
 
   --color-highlight-0: hsl(184, 100%, 48%);
   --color-highlight-1: hsl(270, 100%, 67%);
@@ -82,8 +46,14 @@
   --color-mask: color-mix(in oklab, var(--color-min), #0000 25%);
 
   /* components may override this prop
-  currenlty it is used by the ripple utility class */
+  currently it is used by the ripple utility class */
   --color: var(--color-theme);
+
+  --color-gradient: linear-gradient(
+    45deg,
+    color-mix(in hsl, var(--color), var(--color-min) 20%),
+    color-mix(in hsl, var(--color), var(--color-max) 20%)
+  );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -100,7 +70,7 @@
     --color-ground: color-mix(in oklab, var(--color-max), var(--color-min) 7%);
     --color-ground-less: var(--color-max);
 
-    --color-negative-more: hsl(310, 100%, 43%);
+    --color-negative: hsl(320, 100%, 47%);
 
     --color-highlight-0: hsl(184, 100%, 50%);
     --color-highlight-1: hsl(270, 100%, 70%);

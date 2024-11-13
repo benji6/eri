@@ -55,7 +55,7 @@ export default function LineChartDocs() {
             yAxisTitle={demoProps.yAxisTitle}
           >
             <Chart.Line
-              color="var(--color-balance-less)"
+              color="var(--color-balance)"
               data={demoProps.trendlinePoints}
               thickness={2}
             />

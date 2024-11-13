@@ -17,13 +17,6 @@ header a {
   transition: text-shadow var(--time-1) var(--easing-standard);
 }
 
-@media (hover: hover) {
-  header a:hover {
-    text-shadow: currentColor 0 0 0.2em;
-    color: var(--color-ground);
-  }
-}
-
 .header__container {
   align-items: center;
   display: flex;

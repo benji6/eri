@@ -3,13 +3,10 @@ import CodeSnippet from "../../Components/_CodeSnippet";
 
 interface IProps {
   varName:
-    | "--color-balance-less"
-    | "--color-balance-more"
     | "--color-balance"
     | "--color-figure-less"
     | "--color-figure-more"
     | "--color-figure"
-    | "--color-theme-least"
     | "--color-ground-less"
     | "--color-ground-more"
     | "--color-ground"
@@ -20,14 +17,10 @@ interface IProps {
     | "--color-highlight-4"
     | "--color-highlight-5"
     | "--color-mask"
-    | "--color-negative-less"
-    | "--color-negative-more"
     | "--color-negative"
-    | "--color-positive-less"
     | "--color-positive"
     | "--color-theme-app"
     | "--color-theme-less"
-    | "--color-theme-more"
     | "--color-theme";
 }
 

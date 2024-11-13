@@ -1,6 +1,6 @@
 .column-chart {
   --axis-border: var(--color-figure) var(--border-width-1) solid;
-  --grid-border: var(--border-width-0) var(--color-balance-less) dotted;
+  --grid-border: var(--border-width-0) var(--color-balance) dotted;
 
   display: grid;
   grid-template-columns: 1em min-content;

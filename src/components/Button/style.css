@@ -1,16 +1,9 @@
-.button {
-  --color: var(--color-theme);
-}
 .button:where(:active, :disabled, :focus) {
   box-shadow: none;
 }
 
 .button--primary {
-  background: linear-gradient(
-    45deg,
-    var(--color-theme-more),
-    var(--color-theme-less)
-  );
+  background: var(--color-gradient);
   color: var(--color-ground);
   padding: calc(var(--space-1) + 2 * var(--border-width-1))
     calc(var(--space-3) + 2 * var(--border-width-1));
@@ -43,7 +36,7 @@
 .button--danger.button--primary {
   background: linear-gradient(
     45deg,
-    var(--color-negative-more),
-    var(--color-negative-less)
+    color-mix(in hsl, var(--color), var(--color-min) 20%),
+    color-mix(in hsl, var(--color), var(--color-max) 20%)
   );
 }
