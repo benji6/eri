@@ -21,6 +21,7 @@ export default function WordCloudDocs() {
       <ConfigurableExample
         example={
           <WordCloud
+            onWordClick={console.log}
             words={Object.fromEntries(Object.entries(words).slice(0, 150))}
           />
         }

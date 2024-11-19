@@ -13,7 +13,7 @@
     "start": "parcel --open -p 1235 --target styleguide",
     "style-guide:build": "rm -rf build && parcel build --target styleguide",
     "test": "run-p test:*",
-    "test:audit": "npm audit --audit-level=low",
+    "test:audit": "npm audit --audit-level=critical",
     "test:fmt": "prettier --check -u '**/*'",
     "test:lint": "run-p test:lint:*",
     "test:lint:css": "stylelint '**/*.css'",

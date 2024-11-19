@@ -20,9 +20,14 @@ interface WordToRender {
 
 export interface IProps extends SVGProps<SVGSVGElement> {
   words: Record<string, number>;
+  onWordClick?(word: string, weighting: number): void;
 }
 
-export default memo(function WordCloud({ words, ...rest }: IProps) {
+export default memo(function WordCloud({
+  onWordClick,
+  words,
+  ...rest
+}: IProps) {
   const [wordsToRender, setWordsToRender] = useState<WordToRender[]>([]);
   const workerRef = useRef<Worker>();
 
@@ -73,6 +78,7 @@ export default memo(function WordCloud({ words, ...rest }: IProps) {
         >
           <text
             className="word-cloud__word"
+            onClick={onWordClick && (() => onWordClick(text, weighting))}
             style={
               {
                 "--word-from-x": `${x - SVG_WIDTH / 2}px`,
