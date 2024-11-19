@@ -1,7 +1,7 @@
 // Inspired by https://github.com/jasondavies/d3-cloud
 // Heavily modified for Eri usecase
 
-import { SVG_ASPECT_RATIO, SVG_HEIGHT, SVG_WIDTH } from "../constants";
+import { SVG_ASPECT_RATIO, SVG_HEIGHT, SVG_WIDTH } from "./constants";
 
 type Bounds = [{ x: number; y: number }, { x: number; y: number }];
 
@@ -27,7 +27,7 @@ interface Word {
 const fontFace = new FontFace(
   "Mona sans",
   `url(${new URL(
-    "../../../Mona-Sans.woff2",
+    "../../Mona-Sans.woff2",
     import.meta.url,
   )}) format("woff2-variations")`,
 );
