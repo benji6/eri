@@ -77,7 +77,7 @@ export default memo(function WordCloud({
           transform={`rotate(${(rotate / Math.PI) * 180} ${x} ${y})`}
         >
           <text
-            className="word-cloud__word"
+            className={`word-cloud__word${onWordClick ? " word-cloud__word--clickable" : ""}`}
             onClick={onWordClick && (() => onWordClick(text, weighting))}
             style={
               {

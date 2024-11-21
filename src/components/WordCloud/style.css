@@ -4,6 +4,10 @@
   animation-timing-function: var(--easing-standard);
 }
 
+.word-cloud__word--clickable {
+  cursor: pointer;
+}
+
 @keyframes word-slide {
   from {
     translate: var(--word-from-x) var(--word-from-y);
