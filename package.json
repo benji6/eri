@@ -9,6 +9,7 @@
     "build": "rm -rf dist && run-p build:*",
     "build:css": "parcel build --no-content-hash --target css && sed -i.bak 's/Mona-Sans.11400c5b.woff2/Mona-Sans.woff2/g' css-build/*.css && mkdir -p dist && mv css-build/*.css dist && mv css-build/Mona-Sans.11400c5b.woff2 dist/Mona-Sans.woff2 && rm -r css-build",
     "build:js": "tsc --project tsconfig.build.json && node scripts/processBuiltFiles.mjs",
+    "build:robots": "echo 'User-agent: GPTBot\nDisallow: /\n\nUser-agent: ChatGPT-User\nDisallow: /\n\nUser-agent: anthropic-ai\nDisallow: /\n\nUser-agent: Claude-Web\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /' > dist/robots.txt",
     "fmt": "npm run test:lint:css -- --fix && npm run test:lint:scripts -- --fix && prettier -u --write '**/*'",
     "start": "parcel --open -p 1235 --target styleguide",
     "style-guide:build": "rm -rf build && parcel build --target styleguide",
