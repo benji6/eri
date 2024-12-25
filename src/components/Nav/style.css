@@ -5,6 +5,7 @@
   box-sizing: border-box;
   max-width: calc(200vw / 3);
   overflow: auto;
+  overscroll-behavior: contain;
   padding-bottom: var(--space-2);
   position: fixed;
   right: 0;
