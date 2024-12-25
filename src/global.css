@@ -314,13 +314,10 @@ tr:not(:last-child) td {
   border-bottom: var(--border-width-0) solid var(--color-figure-more);
 }
 
-/* TODO update hardcoded values to CSS custom properties.
-Values shared by ::backdrop have been hardcoded as CSS custom properties
-did not work in ::backdrop when I originally wrote this */
 dialog {
-  animation-duration: 0.3s;
+  animation-duration: var(--time-1);
   animation-name: fade-in, scale-in;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  animation-timing-function: var(--easing-decelerate);
   background-color: var(--color-ground);
   border: none;
   color: inherit;
@@ -332,16 +329,15 @@ dialog[data-closing] {
 }
 
 dialog::backdrop {
-  animation-duration: 0.3s;
+  animation-duration: var(--time-1);
   animation-name: fade-in;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  backdrop-filter: blur(calc(1em / 3));
+  animation-timing-function: var(--easing-decelerate);
+  backdrop-filter: blur(var(--space-0));
   background: linear-gradient(
     calc(21turn / 32),
     hsla(210, 25%, 15%, 0.75),
     hsla(210, 25%, 10%, 0.75)
   );
-  transition: opacity 0.3s var(--easing-decelerate);
 }
 dialog[data-closing]::backdrop {
   animation-name: fade-out;
