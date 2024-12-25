@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75" viewBox="0 0 8 8" >
   <style>
-    :root { stroke: #000; }
-    @media (prefers-color-scheme: dark) {
-      :root { stroke: #fff; }
+    :root {
+      color-scheme: light dark;
+      stroke: light-dark(#000, #fff);
     }
   </style>
   <!-- E -->

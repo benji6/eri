@@ -28,7 +28,7 @@ html {
   --mesh-6-x: 72%;
   --mesh-6-y: 62%;
 
-  background-color: var(--color-theme-less);
+  background-color: light-dark(var(--color-theme-less), var(--color-ground));
   background-image: radial-gradient(
       at var(--mesh-0-x) var(--mesh-0-y),
       var(--color-highlight-0) 0,
@@ -71,12 +71,6 @@ html {
   line-height: var(--line-height);
   min-height: 100%;
   transition-property: background-color, color;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: var(--color-ground);
-  }
 }
 
 ::selection {
@@ -333,21 +327,19 @@ dialog::backdrop {
   animation-name: fade-in;
   animation-timing-function: var(--easing-decelerate);
   backdrop-filter: blur(var(--space-0));
-  background: linear-gradient(
-    calc(21turn / 32),
-    hsla(210, 25%, 15%, 0.75),
-    hsla(210, 25%, 10%, 0.75)
+  background: light-dark(
+    linear-gradient(
+      calc(21turn / 32),
+      hsla(210, 25%, 15%, 0.75),
+      hsla(210, 25%, 10%, 0.75)
+    ),
+    linear-gradient(
+      calc(21turn / 32),
+      hsla(210, 25%, 25%, 0.75),
+      hsla(210, 25%, 20%, 0.75)
+    )
   );
 }
 dialog[data-closing]::backdrop {
   animation-name: fade-out;
-}
-@media (prefers-color-scheme: dark) {
-  dialog::backdrop {
-    background: linear-gradient(
-      calc(21turn / 32),
-      hsla(210, 25%, 25%, 0.75),
-      hsla(210, 25%, 20%, 0.75)
-    );
-  }
 }

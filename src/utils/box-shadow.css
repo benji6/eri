@@ -2,7 +2,7 @@
   --blur-radius-0: 4px;
   --blur-radius-1: 5px;
   --blur-radius-2: 6px;
-  --color-box-shadow: var(--color-figure);
+  --color-box-shadow: light-dark(var(--color-figure), var(--color-ground-less));
 
   --box-shadow-even-0-no-color: 0 0 var(--blur-radius-0);
   --box-shadow-even-1-no-color: 0 0 var(--blur-radius-1);
@@ -24,10 +24,4 @@
 }
 .bs-1 {
   box-shadow: var(--box-shadow-1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-box-shadow: var(--color-ground-less);
-  }
 }

@@ -100,17 +100,7 @@ export default function DesignElements() {
       </Paper>
       <Paper>
         <h3>Color</h3>
-        <p>
-          Eri uses the{" "}
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <code>prefers-color-scheme</code>
-          </a>{" "}
-          media feature to display a dark theme to users who prefer it.
-        </p>
+        <p>Eri matches your system light and dark modes automatically.</p>
         <h4>Figure</h4>
         <DisplayGroup>
           <Color varName="--color-figure-more" />

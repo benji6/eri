@@ -1,7 +1,15 @@
 :root {
-  --color-theme: hsl(210, 90%, 20%);
-  --color-min: hsl(from var(--color-theme) h 25% 5%);
-  --color-max: hsl(from var(--color-min) h s 100%);
+  color-scheme: light dark;
+
+  --color-theme: light-dark(hsl(210, 90%, 20%), hsl(210, 90%, 50%));
+  --color-min: light-dark(
+    hsl(from var(--color-theme) h 25% 5%),
+    hsl(from var(--color-theme) h 50% 90%)
+  );
+  --color-max: light-dark(
+    hsl(from var(--color-min) h s 100%),
+    hsl(from var(--color-min) h s 1%)
+  );
 
   --color-figure-more: var(--color-min);
   --color-figure: color-mix(in oklab, var(--color-min), var(--color-max) 13%);
@@ -11,14 +19,18 @@
     var(--color-max) 26%
   );
 
-  --color-ground-more: var(--color-max);
-  --color-ground: color-mix(in oklab, var(--color-max), var(--color-min) 5%);
-  --color-ground-less: color-mix(
-    in oklab,
+  --color-ground-more: light-dark(
     var(--color-max),
-    var(--color-min) 10%
+    color-mix(in oklab, var(--color-max), var(--color-min) 14%)
   );
-
+  --color-ground: light-dark(
+    color-mix(in oklab, var(--color-max), var(--color-min) 5%),
+    color-mix(in oklab, var(--color-max), var(--color-min) 7%)
+  );
+  --color-ground-less: light-dark(
+    color-mix(in oklab, var(--color-max), var(--color-min) 10%),
+    var(--color-max)
+  );
   --color-balance: color-mix(in oklab, var(--color-min), var(--color-max));
 
   --color-theme-app: color-mix(
@@ -32,18 +44,24 @@
     var(--color-max) 15%
   );
 
-  --color-negative: hsl(345, 90%, 45%);
+  --color-negative: light-dark(hsl(345, 90%, 45%), hsl(320, 100%, 47%));
   --color-positive: hsl(150, 75%, 44%);
 
-  --color-highlight-0: hsl(184, 100%, 48%);
-  --color-highlight-1: hsl(270, 100%, 67%);
-  --color-highlight-2: hsl(300, 90%, 65%);
-  --color-highlight-3: hsl(32, 100%, 55%);
-  --color-highlight-4: hsl(70, 100%, 45%);
-  --color-highlight-5: hsl(148, 100%, 45%);
-  --color-highlight-default: var(--color-highlight-3);
+  --color-highlight-0: light-dark(hsl(184, 100%, 48%), hsl(184, 100%, 50%));
+  --color-highlight-1: light-dark(hsl(270, 100%, 67%), hsl(270, 100%, 70%));
+  --color-highlight-2: light-dark(hsl(300, 90%, 65%), hsl(300, 100%, 68%));
+  --color-highlight-3: light-dark(hsl(32, 100%, 55%), hsl(32, 100%, 64%));
+  --color-highlight-4: light-dark(hsl(70, 100%, 45%), hsl(70, 100%, 50%));
+  --color-highlight-5: light-dark(hsl(148, 100%, 45%), hsl(145, 100%, 45%));
+  --color-highlight-default: light-dark(
+    var(--color-highlight-3),
+    var(--color-highlight-2)
+  );
 
-  --color-mask: color-mix(in oklab, var(--color-min), #0000 25%);
+  --color-mask: light-dark(
+    color-mix(in oklab, var(--color-min), #0000 25%),
+    color-mix(in oklab, var(--ground), #0000 50%)
+  );
 
   /* components may override this prop
   currently it is used by the ripple utility class */
@@ -54,32 +72,4 @@
     color-mix(in hsl, var(--color), var(--color-min) 20%),
     color-mix(in hsl, var(--color), var(--color-max) 20%)
   );
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-theme: hsl(210, 90%, 50%);
-    --color-min: hsl(from var(--color-theme) h 50% 90%);
-    --color-max: hsl(from var(--color-min) h s 1%);
-
-    --color-ground-more: color-mix(
-      in oklab,
-      var(--color-max),
-      var(--color-min) 14%
-    );
-    --color-ground: color-mix(in oklab, var(--color-max), var(--color-min) 7%);
-    --color-ground-less: var(--color-max);
-
-    --color-negative: hsl(320, 100%, 47%);
-
-    --color-highlight-0: hsl(184, 100%, 50%);
-    --color-highlight-1: hsl(270, 100%, 70%);
-    --color-highlight-2: hsl(300, 100%, 68%);
-    --color-highlight-3: hsl(32, 100%, 64%);
-    --color-highlight-4: hsl(70, 100%, 50%);
-    --color-highlight-5: hsl(145, 100%, 45%);
-    --color-highlight-default: var(--color-highlight-2);
-
-    --color-mask: color-mix(in oklab, var(--ground), #0000 50%);
-  }
 }

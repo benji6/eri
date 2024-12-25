@@ -17,19 +17,13 @@
 
 @media (min-width: 66rem) {
   .nav {
-    background: var(--color-ground);
+    background: light-dark(var(--color-ground), var(--color-ground-more));
     box-shadow: var(--box-shadow-0);
     left: 0;
     padding-bottom: var(--space-3);
     right: initial;
     top: var(--header-height);
     translate: 0 !important;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .nav {
-      background: var(--color-ground-more);
-    }
   }
 }
 
