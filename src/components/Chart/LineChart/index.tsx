@@ -138,11 +138,11 @@ export default function LineChart({
               <rect x={0} y={0} height={1} width={CHART_ASPECT_RATIO} />
             </clipPath>
           </defs>
-          <DomainContext.Provider value={domain}>
-            <RangeContext.Provider value={range}>
+          <DomainContext value={domain}>
+            <RangeContext value={range}>
               <g clipPath="url(#plot-area-clip-path)">{children}</g>
-            </RangeContext.Provider>
-          </DomainContext.Provider>
+            </RangeContext>
+          </DomainContext>
         </svg>
       </div>
 

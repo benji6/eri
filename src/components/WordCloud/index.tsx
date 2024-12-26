@@ -29,7 +29,7 @@ export default memo(function WordCloud({
   ...rest
 }: IProps) {
   const [wordsToRender, setWordsToRender] = useState<WordToRender[]>([]);
-  const workerRef = useRef<Worker>();
+  const workerRef = useRef<Worker>(undefined);
 
   useEffect(() => {
     const wordCloudWorker = new Worker(
