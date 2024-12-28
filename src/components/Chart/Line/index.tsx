@@ -8,11 +8,11 @@ import {
 } from "../constants";
 import { DomainContext, RangeContext } from "../contexts";
 import { TPoint } from "../LineChart/types";
-import { useContext } from "react";
+import { use } from "react";
 
 const useTransformPointsToPlotArea = (data: TPoint[]): TPoint[] => {
-  const domain = useContext(DomainContext);
-  const range = useContext(RangeContext);
+  const domain = use(DomainContext);
+  const range = use(RangeContext);
 
   return data.map(
     ([x, y]): TPoint => [
