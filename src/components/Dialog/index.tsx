@@ -1,14 +1,14 @@
 import "./style.css";
-import * as React from "react";
 import * as ReactDOM from "react-dom";
 import CloseButton from "../../privateComponents/CloseButton";
 import { PORTAL_CONTAINERS } from "../../constants";
+import { ReactNode, useCallback, useEffect, useRef } from "react";
 
 interface IProps {
-  children: React.ReactNode;
+  children: ReactNode;
   disableClose?: boolean;
   open: boolean;
-  title: React.ReactNode;
+  title: ReactNode;
   onClose(): void;
 }
 
@@ -20,14 +20,14 @@ export default function Dialog({
   title,
   ...rest
 }: IProps) {
-  const dialogRef = React.useRef<HTMLDialogElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!dialogRef.current) throw Error("`dialogRef.current` not defined");
     dialogRef.current.onclose = onClose;
   }, [onClose]);
 
-  const closeDialog = React.useCallback(() => {
+  const closeDialog = useCallback(() => {
     if (!dialogRef.current) return;
     dialogRef.current.setAttribute("data-closing", "");
 
@@ -42,7 +42,7 @@ export default function Dialog({
     );
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!dialogRef.current || dialogRef.current.open === open) return;
     if (open) return dialogRef.current.showModal();
     closeDialog();
