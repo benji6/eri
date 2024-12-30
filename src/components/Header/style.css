@@ -1,5 +1,9 @@
 header {
-  background: var(--color-theme);
+  background: linear-gradient(
+    0.125turn,
+    var(--color-theme-app),
+    var(--color-theme-less)
+  );
   color: var(--color-ground);
   display: flex;
   height: var(--header-height);
