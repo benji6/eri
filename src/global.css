@@ -45,7 +45,7 @@ html::after {
   left: 0;
   position: fixed;
   right: 0;
-  top: 0;
+  top: var(--header-height);
   z-index: var(--z-index--1);
 }
 @media (min-width: 66rem) {
