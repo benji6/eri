@@ -28,42 +28,6 @@ html {
   --mesh-6-x: 72%;
   --mesh-6-y: 62%;
 
-  background-color: light-dark(var(--color-theme-less), var(--color-ground));
-  background-image: radial-gradient(
-      at var(--mesh-0-x) var(--mesh-0-y),
-      var(--color-highlight-0) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      at var(--mesh-1-x) var(--mesh-1-y),
-      var(--color-highlight-1) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      at var(--mesh-2-x) var(--mesh-2-y),
-      var(--color-highlight-2) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      at var(--mesh-3-x) var(--mesh-3-y),
-      var(--color-highlight-3) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      at var(--mesh-4-x) var(--mesh-4-y),
-      var(--color-highlight-4) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      at var(--mesh-5-x) var(--mesh-5-y),
-      var(--color-highlight-5) 0,
-      transparent 50%
-    ),
-    radial-gradient(
-      at var(--mesh-6-x) var(--mesh-6-y),
-      var(--color-theme-less) 0,
-      transparent 50%
-    );
   border-color: var(--color-figure-more);
   color: var(--color-figure);
   font-family: "Mona Sans", sans-serif;
@@ -71,6 +35,101 @@ html {
   line-height: var(--line-height);
   min-height: 100%;
   transition-property: background-color, color;
+}
+
+/* Inspired by https://frontendmasters.com/blog/pure-css-halftone-effect-in-3-declarations/ */
+html::before,
+html::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: var(--z-index--1);
+}
+@media (min-width: 66rem) {
+  html::before,
+  html::after {
+    left: var(--nav-width);
+  }
+}
+html::before {
+  --dim: var(--space-3);
+  --dif: calc(0.5 * var(--dim));
+  --rad: radial-gradient(closest-side, #999, #000 67%);
+
+  background:
+    var(--rad) 0 0 / var(--dim) var(--dim),
+    var(--rad) var(--dif) var(--dif) / var(--dim) var(--dim),
+    linear-gradient(0.25turn, #000, #888, #000);
+  background-blend-mode: screen, difference;
+  filter: contrast(20);
+}
+html::after {
+  background: repeating-radial-gradient(
+    circle,
+    var(--color-ground),
+    var(--color-theme-less),
+    var(--color-ground) 50%
+  );
+  background: radial-gradient(
+    circle,
+    var(--color-theme-less),
+    var(--color-theme-less) 10%,
+    var(--color-ground) 49.75%,
+    var(--color-theme-less) 50%,
+    var(--color-ground) 100%
+  );
+  mix-blend-mode: lighten;
+}
+@media (prefers-color-scheme: dark) {
+  html::before {
+    background: repeating-linear-gradient(0.125turn, #000, #666, #000 10%),
+      repeating-radial-gradient(circle, #eee, #000, #eee 2%),
+      repeating-conic-gradient(#eee, #000, #eee 10%);
+    mix-blend-mode: lighten;
+    filter: contrast(6);
+  }
+  html::after {
+    background-image: radial-gradient(
+        at var(--mesh-0-x) var(--mesh-0-y),
+        var(--color-highlight-0) 0,
+        transparent 50%
+      ),
+      radial-gradient(
+        at var(--mesh-1-x) var(--mesh-1-y),
+        var(--color-highlight-1) 0,
+        transparent 50%
+      ),
+      radial-gradient(
+        at var(--mesh-2-x) var(--mesh-2-y),
+        var(--color-highlight-2) 0,
+        transparent 50%
+      ),
+      radial-gradient(
+        at var(--mesh-3-x) var(--mesh-3-y),
+        var(--color-highlight-3) 0,
+        transparent 50%
+      ),
+      radial-gradient(
+        at var(--mesh-4-x) var(--mesh-4-y),
+        var(--color-highlight-4) 0,
+        transparent 50%
+      ),
+      radial-gradient(
+        at var(--mesh-5-x) var(--mesh-5-y),
+        var(--color-highlight-5) 0,
+        transparent 50%
+      ),
+      radial-gradient(
+        at var(--mesh-6-x) var(--mesh-6-y),
+        var(--color-theme-less) 0,
+        transparent 50%
+      );
+    background-color: var(--color-ground);
+    mix-blend-mode: darken;
+  }
 }
 
 ::selection {
