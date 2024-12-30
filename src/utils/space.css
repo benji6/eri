@@ -1,7 +1,7 @@
 :root {
   --break-point: 100vw;
   --header-height: 3.93em;
-  --nav-width: 16em;
+  --nav-width: 17rem;
   --quick-nav-height: 0;
   --space-scale-ratio: 1.61803;
   --space-0: calc(1em / 3);
