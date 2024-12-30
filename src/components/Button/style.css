@@ -35,7 +35,7 @@
 }
 .button--danger.button--primary {
   background: linear-gradient(
-    45deg,
+    var(--linear-gradient-angle),
     color-mix(in hsl, var(--color), var(--color-min) 20%),
     color-mix(in hsl, var(--color), var(--color-max) 20%)
   );

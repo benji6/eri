@@ -388,12 +388,12 @@ dialog::backdrop {
   backdrop-filter: blur(var(--space-0));
   background: light-dark(
     linear-gradient(
-      calc(21turn / 32),
+      var(--linear-gradient-angle),
       hsla(210, 25%, 15%, 0.75),
       hsla(210, 25%, 10%, 0.75)
     ),
     linear-gradient(
-      calc(21turn / 32),
+      var(--linear-gradient-angle),
       hsla(210, 25%, 25%, 0.75),
       hsla(210, 25%, 20%, 0.75)
     )

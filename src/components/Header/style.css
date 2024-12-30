@@ -1,6 +1,6 @@
 header {
   background: linear-gradient(
-    0.125turn,
+    var(--linear-gradient-angle),
     var(--color-theme-app),
     var(--color-theme-less)
   );

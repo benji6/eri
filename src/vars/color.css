@@ -67,8 +67,9 @@
   currently it is used by the ripple utility class */
   --color: var(--color-theme);
 
+  --linear-gradient-angle: calc(3turn / 32);
   --color-gradient: linear-gradient(
-    45deg,
+    var(--linear-gradient-angle),
     color-mix(in hsl, var(--color), var(--color-min) 20%),
     color-mix(in hsl, var(--color), var(--color-max) 20%)
   );
