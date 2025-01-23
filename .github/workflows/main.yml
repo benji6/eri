@@ -15,7 +15,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: npm i --legacy-peer-deps
+      - run: npm i
       - run: npm t
   release:
     if: github.ref == 'refs/heads/master'
@@ -34,7 +34,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: npm i --legacy-peer-deps
+      - run: npm i
       - run: npm run build
       - env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
