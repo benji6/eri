@@ -1,6 +1,7 @@
 :root {
   --animation-fade-in: fade-in var(--time-2) var(--easing-standard) forwards;
-  --animation-slide-in: var(--animation-fade-in),
+  --animation-slide-in:
+    var(--animation-fade-in),
     slide-in var(--time-1) var(--easing-decelerate) forwards;
   --animation-spin: rotate var(--time-2) linear infinite;
 }

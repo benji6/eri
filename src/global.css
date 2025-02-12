@@ -85,14 +85,16 @@ html::after {
 }
 @media (prefers-color-scheme: dark) {
   html::before {
-    background: repeating-linear-gradient(0.125turn, #000, #666, #000 10%),
+    background:
+      repeating-linear-gradient(0.125turn, #000, #666, #000 10%),
       repeating-radial-gradient(circle, #eee, #000, #eee 2%),
       repeating-conic-gradient(#eee, #000, #eee 10%);
     mix-blend-mode: lighten;
     filter: contrast(6);
   }
   html::after {
-    background-image: radial-gradient(
+    background-image:
+      radial-gradient(
         at var(--mesh-0-x) var(--mesh-0-y),
         var(--color-highlight-0) 0,
         transparent 50%
