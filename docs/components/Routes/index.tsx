@@ -1,4 +1,4 @@
-import { Routes as ReactRouterRoutes, Route } from "react-router-dom";
+import { Routes as ReactRouterRoutes, Route } from "react-router";
 import ButtonDocs from "../Components/ButtonDocs";
 import CardDocs from "../Components/CardDocs";
 import ChangePasswordPageDocs from "../Components/ChangePasswordPageDocs";

@@ -1,5 +1,5 @@
 import "./style.css";
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router";
 import { Header, Nav } from "../../../src";
 import { StrictMode, useState } from "react";
 import Routes from "../Routes";

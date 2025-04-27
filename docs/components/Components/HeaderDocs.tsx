@@ -1,6 +1,6 @@
 import ConfigurableExample, { PropControlString } from "./_ConfigurableExample";
 import { Header, Nav, Paper } from "../../../src";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useState } from "react";
 
 export default function HeaderDocs() {

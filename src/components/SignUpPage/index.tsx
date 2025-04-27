@@ -4,7 +4,7 @@ import {
   validateEmailField,
   validatePasswordField,
 } from "../../utils/validators";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { PaperGroupProps } from "../Paper/PaperGroup";
 
 interface Props extends Omit<PaperGroupProps, "onSubmit"> {

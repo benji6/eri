@@ -1,6 +1,6 @@
 import { Icon, Paper, QuickNav, RadioButton } from "../../../src";
 import { ICON_NAMES } from "../../constants";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useState } from "react";
 
 const MAX_LINKS = 4;

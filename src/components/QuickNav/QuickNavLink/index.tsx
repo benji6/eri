@@ -1,5 +1,5 @@
 import "./style.css";
-import { NavLink, NavLinkProps } from "react-router-dom";
+import { NavLink, NavLinkProps } from "react-router";
 
 export default function QuickNavLink(props: NavLinkProps) {
   return (

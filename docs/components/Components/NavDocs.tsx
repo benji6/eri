@@ -1,5 +1,5 @@
 import { Nav, Paper } from "../../../src";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import ReactCodeSnippet from "./_ReactCodeSnippet";
 
 export default function NavDocs() {

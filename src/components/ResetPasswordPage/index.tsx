@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Button, Paper, TextField } from "../..";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router";
 import {
   requiredValidator,
   validateEmailField,
