@@ -404,3 +404,7 @@ dialog::backdrop {
 dialog[data-closing]::backdrop {
   animation-name: fade-out;
 }
+
+textarea {
+  resize: vertical;
+}
