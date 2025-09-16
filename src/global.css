@@ -327,6 +327,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   box-shadow: none;
 }
 
+input[type="range"] {
+  accent-color: var(--color-theme);
+}
+
 small {
   color: var(--color-figure-less);
   font-size: var(--font-size-0);
