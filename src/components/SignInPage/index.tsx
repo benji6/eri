@@ -75,6 +75,7 @@ export default function SignInPage({ onSubmit, ...rest }: Props) {
             error={emailError}
             label="Email"
             name="email"
+            stretch
             type="email"
           />
           <TextField
@@ -84,6 +85,7 @@ export default function SignInPage({ onSubmit, ...rest }: Props) {
             error={passwordError}
             label="Password"
             name="password"
+            stretch
             type="password"
           />
           {submitError && (

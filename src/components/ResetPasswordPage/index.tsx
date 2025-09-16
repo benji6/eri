@@ -83,6 +83,7 @@ export default function ResetPasswordPage({ onSubmit, ...rest }: Props) {
             error={emailError}
             label="Email"
             name="email"
+            stretch
             supportiveText="Take care to type your address correctly"
             type="email"
           />
@@ -99,6 +100,7 @@ export default function ResetPasswordPage({ onSubmit, ...rest }: Props) {
             error={passwordError}
             label="Password"
             name="password"
+            stretch
             type="password"
           />
           {submitError && (

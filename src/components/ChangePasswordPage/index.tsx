@@ -72,6 +72,7 @@ export default function ChangePasswordPage({ onSubmit, ...rest }: Props) {
               error={currentPasswordError}
               label="Current password"
               name="currentPassword"
+              stretch
               type="password"
             />
             <TextField
@@ -79,6 +80,7 @@ export default function ChangePasswordPage({ onSubmit, ...rest }: Props) {
               error={newPasswordError}
               label="New password"
               name="newPassword"
+              stretch
               type="password"
             />
             {submitError && (

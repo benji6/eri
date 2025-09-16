@@ -47,6 +47,7 @@ export default function ResendVerificationPage({ onSubmit, ...rest }: Props) {
             error={emailError}
             label="Email"
             name="email"
+            stretch
             supportiveText="Take care to type your address correctly"
             type="email"
           />
