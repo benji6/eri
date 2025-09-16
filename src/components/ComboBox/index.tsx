@@ -11,6 +11,7 @@ export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   optional?: boolean;
   options: string[];
   supportiveText?: React.ReactNode;
+  stretch?: boolean;
 }
 
 export default function ComboBox({
@@ -19,6 +20,7 @@ export default function ComboBox({
   optional = false,
   options,
   supportiveText,
+  stretch,
   ...rest
 }: IProps) {
   const dataListIdRef = React.useRef<string>(
@@ -27,7 +29,7 @@ export default function ComboBox({
 
   return (
     <Field>
-      <Label>
+      <Label stretch={stretch}>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <input

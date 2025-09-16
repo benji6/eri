@@ -10,18 +10,20 @@ export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: React.ReactNode;
   optional?: boolean;
   supportiveText?: React.ReactNode;
+  stretch?: boolean;
 }
 
 export default function TextField({
   label,
   error,
   optional = false,
+  stretch,
   supportiveText,
   ...rest
 }: IProps) {
   return (
     <Field>
-      <Label>
+      <Label stretch={stretch}>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <input

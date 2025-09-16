@@ -7,12 +7,20 @@ import { IProps } from "../../../src/components/Select";
 import { useState } from "react";
 
 export default function SelectDocs() {
-  const [props, setProps] = useState<IProps>({
+  const [props, setProps] = useState<
+    IProps & { includeVeryLongOption: boolean; width: string }
+  >({
     error: "",
+    includeVeryLongOption: false,
     label: "Field label",
     optional: false,
+    stretch: false,
     supportiveText: "Some supportive text",
+    width: "",
   });
+
+  // eslint-disable-next-line react/prop-types
+  const { includeVeryLongOption, width, ...rest } = props;
 
   return (
     <Paper.Group>
@@ -25,24 +33,34 @@ export default function SelectDocs() {
       </Paper>
       <ConfigurableExample
         example={
-          <Select {...props}>
+          <Select {...rest} style={{ width: width || undefined }}>
             <option hidden>Please select</option>
             <option>An option</option>
-            <option>
-              A very very very long option to see what happens when the option
-              is very very very long
-            </option>
+            <option>Another option</option>
+            {includeVeryLongOption && (
+              <option>
+                A very very very long option to see what happens when the option
+                is very very very long
+              </option>
+            )}
           </Select>
         }
       >
         <PropControlString name="error" props={props} setProps={setProps} />
+        <PropControlBoolean
+          name="includeVeryLongOption"
+          props={props}
+          setProps={setProps}
+        />
         <PropControlString name="label" props={props} setProps={setProps} />
         <PropControlBoolean name="optional" props={props} setProps={setProps} />
+        <PropControlBoolean name="stretch" props={props} setProps={setProps} />
         <PropControlString
           name="supportiveText"
           props={props}
           setProps={setProps}
         />
+        <PropControlString name="width" props={props} setProps={setProps} />
       </ConfigurableExample>
     </Paper.Group>
   );

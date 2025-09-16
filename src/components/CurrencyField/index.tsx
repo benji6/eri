@@ -11,6 +11,7 @@ export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   integer?: boolean;
   label: React.ReactNode;
   optional?: boolean;
+  stretch?: boolean;
   supportiveText?: React.ReactNode;
 }
 
@@ -20,11 +21,12 @@ export default function CurrencyField({
   label,
   optional = false,
   supportiveText,
+  stretch,
   ...rest
 }: IProps) {
   return (
     <Field>
-      <Label>
+      <Label stretch={stretch}>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <span className="currency-field__input-container">

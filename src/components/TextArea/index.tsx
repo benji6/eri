@@ -11,6 +11,7 @@ export interface IProps
   label: React.ReactNode;
   optional?: boolean;
   supportiveText?: React.ReactNode;
+  stretch?: boolean;
 }
 
 export default function TextArea({
@@ -18,11 +19,12 @@ export default function TextArea({
   error,
   optional = false,
   supportiveText,
+  stretch,
   ...rest
 }: IProps) {
   return (
     <Field>
-      <Label>
+      <Label stretch={stretch}>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <textarea

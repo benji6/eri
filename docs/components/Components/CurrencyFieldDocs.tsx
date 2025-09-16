@@ -12,6 +12,7 @@ export default function CurrencyFieldDocs() {
     integer: false,
     label: "Field label",
     optional: false,
+    stretch: false,
     supportiveText: "Some supportive text",
   });
 
@@ -30,6 +31,7 @@ export default function CurrencyFieldDocs() {
         <PropControlBoolean name="integer" props={props} setProps={setProps} />
         <PropControlString name="label" props={props} setProps={setProps} />
         <PropControlBoolean name="optional" props={props} setProps={setProps} />
+        <PropControlBoolean name="stretch" props={props} setProps={setProps} />
         <PropControlString
           name="supportiveText"
           props={props}

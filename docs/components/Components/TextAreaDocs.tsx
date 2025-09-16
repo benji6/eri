@@ -11,6 +11,7 @@ export default function TextAreaDocs() {
     error: "",
     label: "Field label",
     optional: false,
+    stretch: false,
     supportiveText: "Some supportive text",
   });
 
@@ -27,6 +28,7 @@ export default function TextAreaDocs() {
         <PropControlString name="error" props={props} setProps={setProps} />
         <PropControlString name="label" props={props} setProps={setProps} />
         <PropControlBoolean name="optional" props={props} setProps={setProps} />
+        <PropControlBoolean name="stretch" props={props} setProps={setProps} />
         <PropControlString
           name="supportiveText"
           props={props}

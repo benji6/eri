@@ -11,6 +11,7 @@ export interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: React.ReactNode;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   optional?: boolean;
+  stretch?: boolean;
   supportiveText?: React.ReactNode;
 }
 
@@ -27,6 +28,7 @@ export default function ImageUpload({
   label,
   onChange,
   optional = false,
+  stretch,
   supportiveText,
   ...rest
 }: IProps) {
@@ -54,7 +56,7 @@ export default function ImageUpload({
 
   return (
     <Field>
-      <Label>
+      <Label stretch={stretch}>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         {imageUrl && (

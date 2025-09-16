@@ -11,6 +11,7 @@ export interface IProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
   error?: React.ReactNode;
   label: React.ReactNode;
   optional?: boolean;
+  stretch?: boolean;
   supportiveText?: React.ReactNode;
 }
 
@@ -18,12 +19,13 @@ export default function Select({
   error,
   label,
   optional = false,
+  stretch,
   supportiveText,
   ...rest
 }: IProps) {
   return (
     <Field>
-      <Label>
+      <Label stretch={stretch}>
         <FieldLabelText optional={optional}>{label}</FieldLabelText>
         <SupportiveText>{supportiveText}</SupportiveText>
         <span className="select__select-container">
@@ -36,7 +38,7 @@ export default function Select({
             aria-invalid={Boolean(error)}
             className="select__select"
           />
-          <span className="select__icon">
+          <span className="select__icon" aria-hidden="true">
             <Icon name="down" size="2" />
           </span>
         </span>

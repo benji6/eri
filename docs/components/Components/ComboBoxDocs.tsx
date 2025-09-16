@@ -14,6 +14,7 @@ export default function ComboBoxDocs() {
     optional: false,
     options: POKEMON_NAMES,
     supportiveText: "Some supportive text",
+    stretch: false,
   });
 
   return (
@@ -29,6 +30,7 @@ export default function ComboBoxDocs() {
         <PropControlString name="error" props={props} setProps={setProps} />
         <PropControlString name="label" props={props} setProps={setProps} />
         <PropControlBoolean name="optional" props={props} setProps={setProps} />
+        <PropControlBoolean name="stretch" props={props} setProps={setProps} />
         <PropControlString
           name="supportiveText"
           props={props}
