@@ -30,7 +30,7 @@
     "url": "https://github.com/benji6/eri/issues"
   },
   "homepage": "https://github.com/benji6/eri#readme",
-  "browserslist": "defaults and since 2023",
+  "browserslist": "baseline 2023",
   "targets": {
     "css": {
       "distDir": "css-build",
