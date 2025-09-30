@@ -267,6 +267,12 @@ export const iconNameMap = {
       <line x1="14" y1="11" x2="14" y2="17" />
     </>
   ),
+  sortable: (
+    <>
+      <polyline points="18 8 12 2 6 8" />
+      <polyline points="6 16 12 22 18 16" />
+    </>
+  ),
   up: <polyline points="18 15 12 9 6 15" />,
   weight: (
     <>
