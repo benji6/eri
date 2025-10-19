@@ -63,7 +63,7 @@
 
 .line-chart__point {
   --point-diameter: 0.275em;
-  animation: point-appear var(--time-2) var(--easing-standard) forwards;
+  animation: point-appear var(--time-2) var(--easing-standard) both;
 
   /* --point-index and --total-points set by JS */
   animation-delay: calc(
@@ -72,15 +72,15 @@
   );
   border-radius: 100%;
   height: var(--point-diameter);
-  opacity: 1;
   position: absolute;
-  scale: 0;
   width: var(--point-diameter);
 }
 
 @keyframes point-appear {
+  from {
+    scale: 0;
+  }
   to {
-    opacity: 1;
     scale: 1;
   }
 }

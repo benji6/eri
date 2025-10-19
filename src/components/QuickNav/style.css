@@ -1,8 +1,7 @@
 .quick-nav {
   --animation-delay: calc(var(--time-0) / 2);
 
-  animation: animate-quick-nav-in var(--time-1) var(--easing-decelerate)
-    forwards;
+  animation: animate-quick-nav-in var(--time-1) var(--easing-decelerate) both;
   background: var(--color-theme);
   bottom: 0;
   display: flex;
@@ -13,8 +12,7 @@
 
 .quick-nav > * {
   animation: animate-quick-nav-link-in var(--time-1) var(--easing-decelerate)
-    forwards;
-  opacity: 0;
+    both;
   scale: 0;
 }
 .quick-nav > :nth-child(2) {

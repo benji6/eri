@@ -26,7 +26,7 @@
     var(--column-number) / max((var(--column-count) - 1), 1) * var(--time-1)
   );
   animation-duration: var(--time-2);
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
   animation-name: column-chart__grow-column-y;
   background: currentColor;
   bottom: 0;
@@ -41,7 +41,6 @@
   pointer-events: auto;
   position: absolute;
   right: 10%;
-  scale: 100% 0%;
   top: 0;
   transform-origin: bottom;
   transition: scale var(--time-1);

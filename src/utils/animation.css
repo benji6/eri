@@ -1,8 +1,8 @@
 :root {
-  --animation-fade-in: fade-in var(--time-2) var(--easing-standard) forwards;
+  --animation-fade-in: fade-in var(--time-2) var(--easing-standard) both;
   --animation-slide-in:
     var(--animation-fade-in),
-    slide-in var(--time-1) var(--easing-decelerate) forwards;
+    slide-in var(--time-1) var(--easing-decelerate) both;
   --animation-spin: rotate var(--time-2) linear infinite;
 }
 
@@ -69,7 +69,6 @@
 
 .slide-children-in > * {
   animation: var(--animation-slide-in);
-  opacity: 0;
 }
 .slide-children-in > :nth-child(2) {
   animation-delay: var(--time-0);
