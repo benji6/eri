@@ -19,11 +19,13 @@ export default function LineChartDocs() {
   }>({
     data: Array.from({ length: POINTS_COUNT }, (_, n) => [
       (n / (POINTS_COUNT - 1)) * (DOMAIN[1] - DOMAIN[0]) + DOMAIN[0],
+      // eslint-disable-next-line react-hooks/purity
       Math.round(Math.random() * (RANGE[1] - RANGE[0]) + RANGE[0]),
     ]),
     pointColor: undefined,
     trendlinePoints: Array.from({ length: TRENDLINE_POINTS_COUNT }, (_, n) => [
       (n / (TRENDLINE_POINTS_COUNT - 1)) * (DOMAIN[1] - DOMAIN[0]) + DOMAIN[0],
+      // eslint-disable-next-line react-hooks/purity
       Math.round((Math.random() / 2 + 0.25) * (RANGE[1] - RANGE[0]) + RANGE[0]),
     ]),
     xAxisTitle: "X axis title",

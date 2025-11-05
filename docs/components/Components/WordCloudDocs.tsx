@@ -10,6 +10,7 @@ export default function WordCloudDocs() {
     const newWords: Record<string, number> = {};
     for (const name of POKEMON_NAMES)
       newWords[name] = Math.ceil(Math.random() ** 2 * 128);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setWords(newWords);
   }, []);
 

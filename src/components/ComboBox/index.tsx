@@ -24,6 +24,7 @@ export default function ComboBox({
   ...rest
 }: IProps) {
   const dataListIdRef = React.useRef<string>(
+    // eslint-disable-next-line react-hooks/purity
     `combo-box-auto-generated-id-${Math.random().toString(36)}`,
   );
 

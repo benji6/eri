@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useLocation, useNavigate } from "react-router";
 import { useEffect } from "react";
 
