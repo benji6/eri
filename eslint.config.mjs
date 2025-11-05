@@ -16,4 +16,5 @@ export default [
   // TODO: add react-hooks here when it is supported https://github.com/facebook/react/issues/28313
   jsxA11y.flatConfigs.recommended,
   eslintConfigPrettier,
+  { settings: { react: { version: "detect" } } },
 ];
