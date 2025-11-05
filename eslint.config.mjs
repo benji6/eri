@@ -6,7 +6,7 @@ import reactPlugin from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import eslintConfigPrettier from "eslint-config-prettier";
 
-export default tseslint.config(
+export default [
   { ignores: ["build", "dist"] },
   js.configs.recommended,
   ...tseslint.configs.strict,
@@ -16,4 +16,4 @@ export default tseslint.config(
   // TODO: add react-hooks here when it is supported https://github.com/facebook/react/issues/28313
   jsxA11y.flatConfigs.recommended,
   eslintConfigPrettier,
-);
+];
