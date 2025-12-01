@@ -5,8 +5,7 @@ import FieldError from "../../../privateComponents/FieldError";
 import FieldLabelText from "../../../privateComponents/FieldLabelText";
 import RadioButton from "..";
 
-export interface IProps
-  extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
+export interface IProps extends React.FieldsetHTMLAttributes<HTMLFieldSetElement> {
   children: React.ReactElement<typeof RadioButton>[];
   disabled?: boolean;
   error?: React.ReactNode;

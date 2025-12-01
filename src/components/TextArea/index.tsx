@@ -5,8 +5,7 @@ import FieldLabelText from "../../privateComponents/FieldLabelText";
 import Label from "../../privateComponents/Label";
 import SupportiveText from "../../privateComponents/SupportiveText";
 
-export interface IProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface IProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   error?: React.ReactNode;
   label: React.ReactNode;
   optional?: boolean;
