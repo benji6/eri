@@ -4,6 +4,7 @@
 [![CI/CD](https://github.com/benji6/eri/actions/workflows/main.yml/badge.svg)](https://github.com/benji6/eri/actions/workflows/main.yml)
 ![NPM](https://img.shields.io/npm/l/eri)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/20f658d0-9029-4e25-a7e1-02ef3d9fa74c/deploy-status)](https://app.netlify.com/sites/eri/deploys)
+[![dependencies](https://depx.co/api/badge/eri)](https://depx.co/pkg/eri)
 
 A minimal design system
 
