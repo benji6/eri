@@ -1,3 +1,7 @@
+:root {
+  --golden-ratio: 1.618; /* golden ratio (φ) */
+}
+
 a,
 .ripple {
   overflow: hidden;

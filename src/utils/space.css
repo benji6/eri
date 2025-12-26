@@ -3,12 +3,12 @@
   --header-height: 3.93em;
   --nav-width: 17rem;
   --quick-nav-height: 0;
-  --space-scale-ratio: 1.61803;
   --space-0: calc(1em / 3);
-  --space-1: calc(var(--space-0) * var(--space-scale-ratio));
-  --space-2: calc(var(--space-1) * var(--space-scale-ratio));
-  --space-3: calc(var(--space-2) * var(--space-scale-ratio));
-  --space-4: calc(var(--space-3) * var(--space-scale-ratio));
+  --space-1: calc(var(--space-0) * var(--golden-ratio));
+  --space-2: calc(var(--space-1) * var(--golden-ratio));
+  --space-3: calc(var(--space-2) * var(--golden-ratio));
+  --space-4: calc(var(--space-3) * var(--golden-ratio));
+  --space-5: calc(var(--space-4) * var(--golden-ratio));
 }
 
 @media (min-width: 38rem) {
