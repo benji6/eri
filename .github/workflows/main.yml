@@ -3,6 +3,9 @@ on: push
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+permissions:
+  id-token: write
+  contents: write
 jobs:
   test:
     runs-on: ubuntu-latest
