@@ -1,8 +1,6 @@
 import { Paper, SubHeading } from "../../../src";
 import { LOREM_IPSUM } from "../../constants";
-
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const treeSrc = require("./tree.jpg");
+import treeSrc from "./tree.jpg";
 
 export default function Typography() {
   return (
