@@ -33,6 +33,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts",
+      cssFileName: "style",
       formats: ["es"],
       fileName: "eri",
     },

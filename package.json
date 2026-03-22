@@ -5,6 +5,13 @@
   "main": "dist",
   "module": "dist",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
   "scripts": {
     "build": "rm -rf dist && run-p build:*",
     "build:css": "vite build -c vite.config.css.ts && rm -rf dist/eri.mjs dist/assets",

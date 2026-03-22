@@ -46,9 +46,10 @@ export default function Home() {
           supported out the box!
         </p>
         <p>
-          To get the styles working you will need to include the CSS in your app
-          which can be found at <code>eri/dist/index.css</code>.
+          To get the styles working you will need to include the CSS in your
+          app:
         </p>
+        <CodeSnippet language="jsx">{`import "eri/style.css";`}</CodeSnippet>
         <p>
           To preload the font and reduce CLS you should include the following
           tag in the <code>head</code> of your HTML page:
