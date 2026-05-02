@@ -23,10 +23,7 @@ export default function ComboBox({
   stretch,
   ...rest
 }: IProps) {
-  const dataListIdRef = React.useRef<string>(
-    // eslint-disable-next-line react-hooks/purity
-    `combo-box-auto-generated-id-${Math.random().toString(36)}`,
-  );
+  const dataListId = React.useId();
 
   return (
     <Field>
@@ -40,9 +37,9 @@ export default function ComboBox({
           required={!optional}
           {...rest}
           aria-invalid={Boolean(error)}
-          list={dataListIdRef.current}
+          list={dataListId}
         />
-        <datalist id={dataListIdRef.current}>
+        <datalist id={dataListId}>
           {options.map((option) => (
             <option key={option} value={option} />
           ))}
