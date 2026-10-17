@@ -27,6 +27,8 @@ Use the Node version in `.nvmrc` and npm with the committed `package-lock.json`.
 - `vite.config.css.ts` builds the library stylesheet, while
   `tsconfig.build.json` and `scripts/processBuiltFiles.mjs` build and postprocess
   the JavaScript and type declarations. `vite.config.ts` builds the docs site.
+  The library build explicitly sets `src` as its source root and loads Node
+  and Vite ambient types for TypeScript 6.
 - `dist/` and `build/` are generated artifacts; do not edit them manually.
 
 ## Component and styling conventions

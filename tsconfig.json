@@ -2,13 +2,9 @@
   "compilerOptions": {
     "allowUnreachableCode": false,
     "declaration": true,
-    "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
-    "module": "ES2022",
-    "moduleResolution": "bundler",
     "noUnusedLocals": true,
     "outDir": "dist",
-    "strict": true,
     "target": "ES2023"
   }
 }
