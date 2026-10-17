@@ -63,7 +63,8 @@ npm ci                    # install exact dependencies
 npm start                 # run docs Vite server on port 1235
 npm run build             # build the library into dist/
 npm run style-guide:build # build docs site into build/
-npm test                  # formatting, lint, type checks, and npm audit
+npm test                  # formatting, lint, type checks, and production dependency audit
+npm run audit             # audit all dependencies, including development tools
 npm run test:fmt          # Prettier check
 npm run test:lint         # CSS and script linting
 npm run test:types        # TypeScript check without emitting files
@@ -74,6 +75,10 @@ There is currently no unit-test runner or committed test suite. For source
 changes, run the narrowest relevant command(s), then `npm test` before
 submitting when practical. Run `npm run build` for changes that affect library
 exports or its build pipeline, and `npm run style-guide:build` for docs changes.
+
+The audit in `npm test` excludes development dependencies. Run `npm run audit`
+separately to check development tools; it can fail on advisories linked to existing dependencies with no available
+fix.
 
 ## Formatting and CI
 
