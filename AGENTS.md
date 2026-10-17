@@ -2,7 +2,8 @@
 
 ## Project overview
 
-Eri is a React 19 and TypeScript design-system package. It produces:
+Eri is a React 19 and TypeScript design-system package. It uses React Router 8
+(8.4.0+) and requires React and React DOM 19.2.7 or newer within React 19. It produces:
 
 - a publishable ES module and declaration files in `dist/`;
 - a bundled stylesheet at `dist/style.css`;

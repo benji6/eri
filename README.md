@@ -8,4 +8,7 @@
 
 A minimal design system
 
+Requires React and React DOM 19.2.7 or newer within React 19, and React Router 8.4.0
+or newer within React Router 8.
+
 [Take a look here](https://eri.netlify.app)
