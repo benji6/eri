@@ -58,7 +58,7 @@
     "prettier": "^3.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-element-to-jsx-string": "^17.0.0",
+    "react-element-to-jsx-string": "^18.0.0",
     "react-router": "^7.5.2",
     "semantic-release": "^25.0.2",
     "stylelint": "^17.1.1",
